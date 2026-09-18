@@ -1,0 +1,291 @@
+{
+  "schema": "historical_fee_followup_evidence_v1",
+  "researched_on": "2026-09-18",
+  "status": "partial_evidence_only",
+  "coverage_complete": false,
+  "executable_rules": false,
+  "target_window_utc": {
+    "start": "2022-01-01T00:00:00Z",
+    "end_exclusive": "2026-09-01T00:00:00Z"
+  },
+  "profile": {
+    "vip_level": 0,
+    "bnb_fee_payment": false,
+    "referral_discount": false,
+    "special_liquidity_or_taker_program": false,
+    "markets": [
+      "spot",
+      "usdt_m_perpetual"
+    ],
+    "symbols": [
+      "BTCUSDT",
+      "ETHUSDT"
+    ]
+  },
+  "prior_report": "docs/research/historical_fees.md",
+  "local_archive_manifest": "data/research/fee-archive-followup-20260918/manifest.json",
+  "conclusion": {
+    "exact_usdt_m_vip0_taker_transition_found": false,
+    "current_to_past_extrapolation_used": false,
+    "new_operational_fee_intervals": [],
+    "new_observation": "The official fee table archived on 2023-05-31 still shows Regular USDT maker 0.0002 and taker 0.0004. The archived FAQ uses 0.0004 on 2023-06-02 and 0.0005 on 2024-02-20 in its BTCUSDT example.",
+    "interpretation": "These are historical observations of published documentation. The FAQ examples are not a fee-change notice or a timestamped account execution. Capture timestamps must not become effective timestamps. Unobserved intermediate changes and documentation lag remain possible.",
+    "user_input_required_now": false
+  },
+  "time_semantics": {
+    "publication_display": "Transcribed from the document header; timezone unstated, not assigned Z. The same FAQ showed different header dates across captures.",
+    "captured_at_utc": "Internet Archive Memento capture time; distinct from publication and effective time.",
+    "effective_at_utc": "Only explicit effective UTC statements can populate this field; null means unestablished.",
+    "advertised_end_utc": "Transcription of a promotion end, without assuming second-level inclusivity."
+  },
+  "archival_sources": [
+    {
+      "id": "A1",
+      "title": "Binance USD-M Futures fee table",
+      "original_url": "https://www.binance.com/en/fee/futureFee",
+      "archive_url": "https://web.archive.org/web/20230531224744id_/https://www.binance.com/en/fee/futureFee",
+      "captured_at_utc": "2023-05-31T22:47:44Z",
+      "origin_http_date": "Wed, 31 May 2023 22:47:44 GMT",
+      "publication_display": null,
+      "effective_at_utc": null,
+      "evidence_type": "archived_primary_fee_table",
+      "rate_unit": "fraction_of_executed_notional_per_fill",
+      "observed_regular_usdt_rate": {
+        "maker": 0.0002,
+        "taker": 0.0004
+      },
+      "short_excerpt": "Regular User ... 0.0200% / 0.0400%",
+      "extraction": "Visible row under USDT Maker / Taker; corroborated by SSR futureFee entry level=0, makerCommission=0.0002, takerCommission=0.0004.",
+      "ssr_level0_fields": {
+        "level": 0,
+        "makerCommission": 0.0002,
+        "takerCommission": 0.0004,
+        "busdMakerCommission": 0.00012,
+        "busdTakerCommission": 0.0003
+      },
+      "sha256_decoded_html_utf8": "9c9719d5f9344af2b1f519a2d4207632fb745bc2f816b1671184245cd59d19c0",
+      "retrieved_raw_content_length": 846790,
+      "cdx_digest": "IEYRKIICHJ65FU4AETSOPMG2ZS7BRSCW",
+      "limit": "Point observation of the public base table. Does not certify all intervening dates, symbol promotions, or the next effective change."
+    },
+    {
+      "id": "A2",
+      "title": "Binance Futures Fee Structure & Fee Calculations",
+      "original_url": "https://www.binance.com/en/support/faq/binance-futures-fee-structure-fee-calculations-360033544231",
+      "archive_url": "https://web.archive.org/web/20230602173120id_/https://www.binance.com/en/support/faq/binance-futures-fee-structure-fee-calculations-360033544231",
+      "captured_at_utc": "2023-06-02T17:31:20Z",
+      "origin_http_date": "Fri, 02 Jun 2023 17:31:21 GMT",
+      "publication_display": "2020-06-11 07:01",
+      "effective_at_utc": null,
+      "evidence_type": "archived_primary_faq_example",
+      "example_market": "usd_m_futures",
+      "example_symbol": "BTCUSDT",
+      "rate_unit": "fraction_of_executed_notional_per_fill",
+      "example_regular_rate": {
+        "maker": 0.0002,
+        "taker": 0.0004
+      },
+      "short_excerpt": "regular maker commission: 0.02%; taker commission: 0.040%",
+      "extraction": "USD-margined section, followed by a market buy of 1 BTC BTCUSDT and example fee 4.0416 USDT on notional 10104.",
+      "sha256_decoded_html_utf8": "e262a8f07876e3d4282bd9fe6497d83ea5ec60f43578d011b5b5999a42b92a9a",
+      "retrieved_raw_content_length": 413920,
+      "cdx_digest": "M6YNA2UNSEHHVRYQNWWQF4MHJCBBSBD3",
+      "limit": "Illustrative FAQ, not a change notice. Do not use the header or capture as a fee effective date."
+    },
+    {
+      "id": "A3",
+      "title": "Binance Futures Fee Structure & Fee Calculations",
+      "original_url": "https://www.binance.com/en/support/faq/binance-futures-fee-structure-fee-calculations-360033544231",
+      "archive_url": "https://web.archive.org/web/20240220064115id_/https://www.binance.com/en/support/faq/binance-futures-fee-structure-fee-calculations-360033544231",
+      "captured_at_utc": "2024-02-20T06:41:15Z",
+      "origin_http_date": "Tue, 20 Feb 2024 06:41:16 GMT",
+      "publication_display": "2019-09-09 13:39",
+      "effective_at_utc": null,
+      "evidence_type": "archived_primary_faq_example",
+      "example_market": "usd_m_futures",
+      "example_symbol": "BTCUSDT",
+      "rate_unit": "fraction_of_executed_notional_per_fill",
+      "example_regular_rate": {
+        "maker": 0.0002,
+        "taker": 0.0005
+      },
+      "short_excerpt": "regular user's maker commission: 0.02%; taker commission: 0.05%",
+      "extraction": "USD-margined section, followed by a market buy of 1 BTC worth of BTCUSDT and example fee 5.052 USDT on notional 10104. Kept separate from the preceding COIN-M example.",
+      "sha256_decoded_html_utf8": "c046ab84892a2093de0d16c8ad1eab0278089600ee9f7186c58e1a54bcd45cbe",
+      "retrieved_raw_content_length": 440516,
+      "cdx_digest": "IPY57RGCK6PMXIXSECQ75C4RHPKWUDZG",
+      "limit": "Confirms that the official documentation contained the 0.05% BTCUSDT example by this capture, earlier than the previously found November 2025 blog. Does not identify actual fee rollout time or prove continuous application."
+    }
+  ],
+  "new_scope_checks": [
+    {
+      "id": "X1",
+      "title": "Binance Introduces Taker Fee Promotion for Spot and Margin Altcoin Trading Pairs",
+      "source_url": "https://www.binance.com/en/support/announcement/detail/8fbe902e90ec477780c18b98a5544acb",
+      "publication_display": "2024-05-14 07:00",
+      "effective_at_utc": "2024-05-21T00:00:00Z",
+      "advertised_end_utc": null,
+      "listed_pairs": [
+        "PEPEUSDT",
+        "STRKUSDT",
+        "ENAUSDT",
+        "SUIUSDT",
+        "WIFUSDT",
+        "NEARUSDT",
+        "OPUSDT",
+        "BONKUSDT",
+        "LTCUSDT",
+        "FETUSDT",
+        "ORDIUSDT",
+        "BCHUSDT",
+        "WUSDT",
+        "ARBUSDT",
+        "LINKUSDT",
+        "TIAUSDT",
+        "ETCUSDT",
+        "APTUSDT",
+        "RNDRUSDT",
+        "WLDUSDT"
+      ],
+      "short_excerpt": "all users will be eligible to enjoy discounted taker fees on the following spot and margin trading pairs.",
+      "initial_list_contains_target_symbols": false,
+      "initial_regular_taker_fraction": 0.000975,
+      "conclusion": "Initial announced list excludes BTCUSDT and ETHUSDT. ETCUSDT is not ETHUSDT.",
+      "limit": "List was explicitly mutable and the announcement promised only best-effort notice. Initial exclusion does not certify that no target pair was added later.",
+      "linked_mutable_list": "https://www.binance.com/en/fee/tradingPromote",
+      "linked_list_retrieval": "Current public web extraction contained no pair table."
+    },
+    {
+      "id": "X2",
+      "title": "Binance Launches BTC/U Zero Trading Fees Promotion (2026-04-17)",
+      "source_url": "https://www.binance.com/en-AE/support/announcement/detail/fe2b0d2853004943aba45f2e87a4081c",
+      "canonical_english_url": "https://www.binance.com/en/support/announcement/detail/fe2b0d2853004943aba45f2e87a4081c",
+      "publication_display": "2026-04-10 09:00",
+      "effective_at_utc": "2026-04-17T00:00:00Z",
+      "advertised_end_utc": "2026-07-16T23:59:00Z",
+      "end_precision": "minute; exclusive end not inferred",
+      "pair": "BTCU",
+      "quote_asset": "United Stables (U)",
+      "short_excerpt": "zero maker and taker fees exclusively for the BTC/U spot and margin trading pair",
+      "conclusion": "Excluded: the promotion concerns U, not USDT. Third-party Square claims describing this as BTCUSDT are not accepted.",
+      "retrieval_limit": "Canonical /en/ open redirected to announcement index; official en-AE page returned English article directly."
+    },
+    {
+      "id": "X3",
+      "title": "Binance Updates VIP Program Eligibility Thresholds",
+      "source_url": "https://www.binance.com/en/support/announcement/detail/4f379b9ab6314eff8fe02babfe255825",
+      "publication_display": "2026-03-18 08:00",
+      "updated_display": "2026-09-10 03:53",
+      "program_timeline_at_utc": "2026-03-19T23:59:00Z",
+      "vip0_effective_at_utc": null,
+      "short_excerpt": "VIP 1-2 trading fees have been slightly adjusted",
+      "vip1_usdt_taker_change_fraction": {
+        "before": 0.0004,
+        "after": 0.0005
+      },
+      "conclusion": "Excluded from VIP0. This exact numeric change is for VIP1, with VIP2 also adjusted; it does not date the Regular 0.04% to 0.05% change.",
+      "limit": "Retrieved page has a later declared revision about VIP3 holder thresholds; do not silently treat all live content as the March publication."
+    },
+    {
+      "id": "X4",
+      "title": "Binance Introduces Limited-Time Zero Maker Fee for VIP 6 to VIP 8 on USD-Margined Futures (2024-08-07)",
+      "source_url": "https://www.binance.com/en/support/announcement/detail/2c161ebe662a41edbd1233f76fcc7c08",
+      "publication_display": "2024-08-05 10:31",
+      "effective_at_utc": "2024-08-07T10:30:00Z",
+      "advertised_end_utc": "2024-10-16T10:30:00Z",
+      "short_excerpt": "All Binance VIP 6 to VIP 8 users",
+      "conclusion": "Excluded from fixed VIP0; zero maker promotion is restricted to VIP6-8."
+    },
+    {
+      "id": "X5",
+      "title": "Binance Futures Updates Taker Program (2025-08-12)",
+      "source_url": "https://www.binance.com/en/support/announcement/detail/bec831262e4b4a49b021e6f4030921be",
+      "publication_display": "2025-07-31 07:00",
+      "updated_display": "2026-02-04 03:00",
+      "effective_at_utc": "2025-08-12T07:00:00Z",
+      "effective_precision": "Body also states approximately; program eligibility reviewed weekly.",
+      "short_excerpt": "100,000,000 USDT equivalent in the last 30 days",
+      "conclusion": "Excluded: application and program eligibility required. Volume-share thresholds 0.05%, 0.2%, 1% are not commission rates.",
+      "limit": "Does not publish the base Regular taker fee or its change date."
+    }
+  ],
+  "rejected_rate_anchors": [
+    {
+      "id": "R1",
+      "source_url": "https://www.binance.com/en/blog/futures/421499824684902446",
+      "publication_display": "2021-07-29",
+      "observation": "Live page says standard taker 0.05% but computes 20 USDT on 50000 USDT notional; 0.05% would be 25 USDT. Header is not a contemporaneous immutable observation.",
+      "conclusion": "Do not date 0.05% to 2021 or use this inconsistent example as a rate schedule."
+    },
+    {
+      "id": "R2",
+      "source_url": "https://www.binance.com/en/blog/futures/421499824684902239",
+      "publication_display": "2025-04-09",
+      "observation": "Live blog quotes discounted-looking USDT 0.045% and mixes USDC examples with USDT amounts and inconsistent totals.",
+      "conclusion": "Not used as a historical base fee transition anchor."
+    }
+  ],
+  "unsuccessful_checks": [
+    {
+      "id": "N1",
+      "urls": [
+        "https://web.archive.org/web/20240305055351id_/https://www.binance.com/en/fee/futureFee",
+        "https://web.archive.org/web/20240529013302id_/https://www.binance.com/en/fee/futureFee"
+      ],
+      "result": "Both archived HTML pages returned HTTP 200 but visible content said No records found; no makerCommission/takerCommission or numeric Regular row found.",
+      "first_sha256_decoded_html_utf8": "8dd522177249af101be3707bec74685fb4967c240741e04d953148b47a80593b",
+      "conclusion": "Successful retrieval is not successful fee coverage."
+    },
+    {
+      "id": "N2",
+      "url": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.binance.com%2Fen%2Ffee%2FfutureFee&timestamp=20230101",
+      "result": "HTTP 429; switched to CDX and obtained useful captures through that endpoint."
+    },
+    {
+      "id": "N3",
+      "queries": [
+        "https://web.archive.org/cdx/search/cdx?url=www.binance.com/en/fee/futureFee&matchType=prefix&output=json&filter=statuscode:200&collapse=timestamp:6&from=2023&to=2023&fl=timestamp,original,digest&limit=50",
+        "https://web.archive.org/cdx/search/cdx?url=www.binance.com/en/support/faq/binance-futures-fee-structure-fee-calculations-360033544231&output=json&filter=statuscode:200&collapse=timestamp:6&from=2023&to=2024&fl=timestamp,original,digest&limit=15"
+      ],
+      "result": "Table prefix query returned January-May 2023 captures and one March query-string variant, no later 2023 capture. FAQ monthly query returned latest 2023 month June and earliest 2024 month February. Absence is index/query-specific, not proof no other archive or URL exists."
+    },
+    {
+      "id": "N4",
+      "url_patterns": [
+        "binance.com/*/fee/futureFee",
+        "www.binance.com/es/fee/futureFee",
+        "www.binance.com/en/blog/futures/421499824684902239",
+        "www.binance.com/en/fee/schedule"
+      ],
+      "result": "Bounded CDX requests for additional locales/blog and 2025-2026 spot captures timed out or returned 503. No rates inferred."
+    },
+    {
+      "id": "N5",
+      "representative_web_queries": [
+        "site:binance.com/en/support/announcement Futures fee 0.04% 0.05%",
+        "Binance futures taker fee increase 0.04 0.05 when",
+        "site:binance.com/en/support/announcement Regular 0.0500% Futures before:2024-01-01",
+        "Binance USDT futures trading fee change 2023 regular user",
+        "币安 合约 手续费 2023 0.05 调整",
+        "site:binance.com/en/support/announcement ETH/USDT fee 2025",
+        "site:binance.com/en/support/announcement BTC/USDT fee 2026"
+      ],
+      "result": "No primary announcement establishing VIP0 USDT-M effective transition UTC found. Search results heavily mixed special programs, COIN-M/USDC/BUSD, P2P, and third-party Square posts.",
+      "limit": "Search was bounded, not an exhaustive proof of absence."
+    }
+  ],
+  "archival_method": {
+    "transport": "PowerShell Invoke-WebRequest -UseBasicParsing to public CDX and id_ replay URLs; no login or API key.",
+    "extraction": "Removed scripts/styles and HTML tags for visible text; independently read A1 SSR futureFee level0.",
+    "sha256_scope": "UTF-8 encoding of the decoded Invoke-WebRequest Content string, not raw HTTP wire bytes or CDX digest.",
+    "raw_html_persisted": false,
+    "preservation_limit": "Only these two permitted research files were written. URLs, capture metadata, short excerpts, numeric fields and selected hashes permit later re-retrieval; this is not a local full snapshot archive."
+  },
+  "remaining_gaps": [
+    "Exact effective UTC of Regular USDT-M taker 0.0004 to 0.0005, ideally a primary change notice or authenticated historical schedule.",
+    "Complete continuity and promotion membership for BTCUSDT/ETHUSDT across the full target window, including mutable altcoin promotion list revisions after May 2024.",
+    "Spot 2025-2026 historical base-rate anchors and full promotion coverage remain unclosed in this bounded follow-up."
+  ],
+  "next_step": "Seek a contemporaneous primary fee-change notice or dated historical schedule around the observed documentation change; archived public JSON/table payloads may help. Keep strict historical coverage blocked rather than assigning an invented transition.",
+  "user_decision": "None required to preserve evidence or continue bounded research. A constant rate, assumed cutoff, or sensitivity-only history would require an explicit methodology decision and would not certify the factual history."
+}

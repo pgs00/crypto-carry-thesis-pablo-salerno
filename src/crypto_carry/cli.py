@@ -38,7 +38,15 @@ def parser() -> argparse.ArgumentParser:
     )
     p.add_argument("--root", default=".", help="Project directory (default: current directory)")
     commands = p.add_subparsers(dest="command", required=True)
-    for name in ("doctor", "download", "validate-data", "backtest", "robustness", "demo"):
+    for name in (
+        "doctor",
+        "preflight",
+        "download",
+        "validate-data",
+        "backtest",
+        "robustness",
+        "demo",
+    ):
         sub = commands.add_parser(name)
         sub.add_argument(
             "--config",
@@ -108,6 +116,12 @@ def main(argv: list[str] | None = None) -> int:
         config = Config.load(config_path) if config_path.exists() else Config()
         if not config_path.exists() and args.command != "demo":
             raise FileNotFoundError(config_path)
+        if args.command == "preflight":
+            from .preflight import preflight
+
+            result = preflight(config, root)
+            print(json.dumps(result, ensure_ascii=False, indent=2))
+            return 0 if result["status"] == "ready_for_validation" else 2
         if args.command == "doctor":
             import nautilus_trader
 

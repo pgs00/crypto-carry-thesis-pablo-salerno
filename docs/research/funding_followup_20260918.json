@@ -1,0 +1,556 @@
+{
+  "schema": "funding-settlement-mark-research-v1",
+  "researched_on": "2026-09-18",
+  "historical_certified": false,
+  "economic_window_ms": [
+    1640995200000,
+    1788220800000
+  ],
+  "symbol_counts": {
+    "BTCUSDT": {
+      "history_rows": 6684,
+      "history_missing_marks": 3577,
+      "economic_missing_marks": 2005,
+      "first_missing_utc": "2022-01-01T00:00:00.006Z",
+      "last_missing_utc": "2023-10-31T00:00:00.001Z"
+    },
+    "ETHUSDT": {
+      "history_rows": 6684,
+      "history_missing_marks": 3577,
+      "economic_missing_marks": 2005,
+      "first_missing_utc": "2022-01-01T00:00:00.006Z",
+      "last_missing_utc": "2023-10-31T00:00:00.001Z"
+    }
+  },
+  "missing_event_manifest": {
+    "path": "data/research/funding-followup-20260918/missing-economic-settlement-marks.json",
+    "bytes": 1047440,
+    "sha256": "5c095e30baf65156be116814ba39e646263381720ba6681e4b7a439e1ebc9922"
+  },
+  "input_provenance": [
+    {
+      "path": "data/research/funding-20260918T132612Z/page-000.json",
+      "sha256": "2768edb478d4a38c9ae0d0053f70680e6ee9ffadeb73539471632b230d0d04af",
+      "bytes": 112071,
+      "source_url": "https://fapi.binance.com/fapi/v1/fundingRate?symbol=BTCUSDT&startTime=1595721600000&endTime=1788220799999&limit=1000"
+    },
+    {
+      "path": "data/research/funding-20260918T132612Z/page-001.json",
+      "sha256": "abfb5d2ad8f11b38068dca2ddd6d407bd0a8681a7ea75da45306913def385368",
+      "bytes": 112169,
+      "source_url": "https://fapi.binance.com/fapi/v1/fundingRate?symbol=BTCUSDT&startTime=1624492800010&endTime=1788220799999&limit=1000"
+    },
+    {
+      "path": "data/research/funding-20260918T132612Z/page-002.json",
+      "sha256": "ef242b1ea27828add549e570f6d5363c19d37c17441b2396fcf98b3f301e3301",
+      "bytes": 112162,
+      "source_url": "https://fapi.binance.com/fapi/v1/fundingRate?symbol=BTCUSDT&startTime=1653292800001&endTime=1788220799999&limit=1000"
+    },
+    {
+      "path": "data/research/funding-20260918T132612Z/page-003.json",
+      "sha256": "da5939b3cac2099d2333a081dc53f4aa70be11e5156fca80d8f7d207ce62b480",
+      "bytes": 118004,
+      "source_url": "https://fapi.binance.com/fapi/v1/fundingRate?symbol=BTCUSDT&startTime=1682092800004&endTime=1788220799999&limit=1000"
+    },
+    {
+      "path": "data/research/funding-20260918T132612Z/page-004.json",
+      "sha256": "ac079faf252c7cb2c3af5673f3459b71d55ba2f35482fe8035d666a43d0f4803",
+      "bytes": 126178,
+      "source_url": "https://fapi.binance.com/fapi/v1/fundingRate?symbol=BTCUSDT&startTime=1710892800001&endTime=1788220799999&limit=1000"
+    },
+    {
+      "path": "data/research/funding-20260918T132612Z/page-005.json",
+      "sha256": "3f8e4efc2d428ffd9a8f94f2b930583668f1d1455e0ee9a2824cd43d5d3fb872",
+      "bytes": 126705,
+      "source_url": "https://fapi.binance.com/fapi/v1/fundingRate?symbol=BTCUSDT&startTime=1739692800001&endTime=1788220799999&limit=1000"
+    },
+    {
+      "path": "data/research/funding-20260918T132612Z/page-006.json",
+      "sha256": "b710d1132e9c37d7cb5cb2244b57d1954027838a6e9e0ac224b32f024b7bf9d5",
+      "bytes": 86390,
+      "source_url": "https://fapi.binance.com/fapi/v1/fundingRate?symbol=BTCUSDT&startTime=1768492800003&endTime=1788220799999&limit=1000"
+    },
+    {
+      "path": "data/research/funding-20260918T132612Z/page-007.json",
+      "sha256": "cfa116fa4f99756cb2c67ec3b842863bb7e95c4d18600343285c2e5aa7e0e040",
+      "bytes": 112026,
+      "source_url": "https://fapi.binance.com/fapi/v1/fundingRate?symbol=ETHUSDT&startTime=1595721600000&endTime=1788220799999&limit=1000"
+    },
+    {
+      "path": "data/research/funding-20260918T132612Z/page-008.json",
+      "sha256": "95af7d7a4e4d07bbc1b112b64222de7aca478f524ce0e969910c4f1e1bd94e63",
+      "bytes": 112165,
+      "source_url": "https://fapi.binance.com/fapi/v1/fundingRate?symbol=ETHUSDT&startTime=1624492800010&endTime=1788220799999&limit=1000"
+    },
+    {
+      "path": "data/research/funding-20260918T132612Z/page-009.json",
+      "sha256": "93efc98235b9c0b7630d4da3f85b01c5fed95c42be6b6233f535f13867ee014c",
+      "bytes": 112264,
+      "source_url": "https://fapi.binance.com/fapi/v1/fundingRate?symbol=ETHUSDT&startTime=1653292800001&endTime=1788220799999&limit=1000"
+    },
+    {
+      "path": "data/research/funding-20260918T132612Z/page-010.json",
+      "sha256": "a1ac3d794deb5731778e8f7effd140732a0d9f8725d7e39ee60fb348b156b9d5",
+      "bytes": 117581,
+      "source_url": "https://fapi.binance.com/fapi/v1/fundingRate?symbol=ETHUSDT&startTime=1682092800004&endTime=1788220799999&limit=1000"
+    },
+    {
+      "path": "data/research/funding-20260918T132612Z/page-011.json",
+      "sha256": "0df147cbb30b2d3997350a22f86113b5876855654286e91d91302d136f471bcd",
+      "bytes": 125061,
+      "source_url": "https://fapi.binance.com/fapi/v1/fundingRate?symbol=ETHUSDT&startTime=1710892800001&endTime=1788220799999&limit=1000"
+    },
+    {
+      "path": "data/research/funding-20260918T132612Z/page-012.json",
+      "sha256": "a4dcd0fc2825168404d7ede567e18f9b7bcea9989c80e6ca6305ed68d2f13278",
+      "bytes": 125165,
+      "source_url": "https://fapi.binance.com/fapi/v1/fundingRate?symbol=ETHUSDT&startTime=1739692800001&endTime=1788220799999&limit=1000"
+    },
+    {
+      "path": "data/research/funding-20260918T132612Z/page-013.json",
+      "sha256": "cc5884099ad1a6548404ca3be79b3559805bb725c7cba6c4bc1d5f90d6258e07",
+      "bytes": 85739,
+      "source_url": "https://fapi.binance.com/fapi/v1/fundingRate?symbol=ETHUSDT&startTime=1768492800003&endTime=1788220799999&limit=1000"
+    },
+    {
+      "path": "data/raw/futures/markPriceKlines/BTCUSDT/BTCUSDT-1m-2023-12-31.zip",
+      "sha256": "f661c66083455875d9b8ee5d70bd41c0badabd5b9d067b4c2043acf000ca61cf",
+      "source_url": "https://data.binance.vision/data/futures/um/daily/markPriceKlines/BTCUSDT/1m/BTCUSDT-1m-2023-12-31.zip"
+    },
+    {
+      "path": "data/raw/futures/markPriceKlines/BTCUSDT/BTCUSDT-1m-2024-01-01.zip",
+      "sha256": "660efeefdc875f052051b94c2976babd013f64c6633bf58ba030764771747b90",
+      "source_url": "https://data.binance.vision/data/futures/um/daily/markPriceKlines/BTCUSDT/1m/BTCUSDT-1m-2024-01-01.zip"
+    },
+    {
+      "path": "data/raw/futures/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2023-12.zip",
+      "sha256": "8f02fdd2a2da261bbf13ab301c74bdb57fae005f19d5088e9ece5f8824c1a2a7",
+      "source_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2023-12.zip"
+    },
+    {
+      "path": "data/raw/futures/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2024-01.zip",
+      "sha256": "3e0d30870672aa8f0f937881056e3cfd55913ae5c780cd50b33f2763aa0ba58e",
+      "source_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2024-01.zip"
+    },
+    {
+      "path": "data/raw/futures/markPriceKlines/ETHUSDT/ETHUSDT-1m-2023-12-31.zip",
+      "sha256": "2bdb1938d8b6d97874778a9e39820c7e2fc8617d64c5bded3c54ce84b7e660a0",
+      "source_url": "https://data.binance.vision/data/futures/um/daily/markPriceKlines/ETHUSDT/1m/ETHUSDT-1m-2023-12-31.zip"
+    },
+    {
+      "path": "data/raw/futures/markPriceKlines/ETHUSDT/ETHUSDT-1m-2024-01-01.zip",
+      "sha256": "28fe8ccc692246e65dbd0b8128eb6417ad57a989acbfd575e4e141b01005a7dc",
+      "source_url": "https://data.binance.vision/data/futures/um/daily/markPriceKlines/ETHUSDT/1m/ETHUSDT-1m-2024-01-01.zip"
+    },
+    {
+      "path": "data/raw/futures/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2023-12.zip",
+      "sha256": "91bdf41566cebb86c6f0e3646b0037de9c22e14ee2f592c5722c7e4a19c91119",
+      "source_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2023-12.zip"
+    },
+    {
+      "path": "data/raw/futures/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2024-01.zip",
+      "sha256": "5a71469b0b363886df904e784dddefc484dd943334b1fb7454713ce4ed715a4b",
+      "source_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2024-01.zip"
+    }
+  ],
+  "calendar_archive_headers": [
+    {
+      "path": "data/raw/futures/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2023-12.zip",
+      "header": [
+        "calc_time",
+        "funding_interval_hours",
+        "last_funding_rate"
+      ]
+    },
+    {
+      "path": "data/raw/futures/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2024-01.zip",
+      "header": [
+        "calc_time",
+        "funding_interval_hours",
+        "last_funding_rate"
+      ]
+    },
+    {
+      "path": "data/raw/futures/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2023-12.zip",
+      "header": [
+        "calc_time",
+        "funding_interval_hours",
+        "last_funding_rate"
+      ]
+    },
+    {
+      "path": "data/raw/futures/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2024-01.zip",
+      "header": [
+        "calc_time",
+        "funding_interval_hours",
+        "last_funding_rate"
+      ]
+    }
+  ],
+  "live_api_probes": [
+    {
+      "path": "data/research/funding-followup-20260918/BTCUSDT-2022-01-01.json",
+      "bytes": 337,
+      "sha256": "eb79d657bee604bcdaf862807df309cfd24bfffe69dc142fef07c8ddba4234d9",
+      "source_url": "https://fapi.binance.com/fapi/v1/fundingRate?symbol=BTCUSDT&startTime=1640995200000&endTime=1641081599999&limit=100",
+      "retrieved_at": "2026-09-18T14:43:29.312677Z",
+      "rows": 3,
+      "missing_marks": 3,
+      "marks": [
+        {
+          "fundingTime": 1640995200006,
+          "markPrice": ""
+        },
+        {
+          "fundingTime": 1641024000009,
+          "markPrice": ""
+        },
+        {
+          "fundingTime": 1641052800000,
+          "markPrice": ""
+        }
+      ]
+    },
+    {
+      "path": "data/research/funding-followup-20260918/BTCUSDT-2023-10-31.json",
+      "bytes": 365,
+      "sha256": "51033f36395622815b16ea0781f1b29cf6ae73b7bbd285f3d560615c67385f80",
+      "source_url": "https://fapi.binance.com/fapi/v1/fundingRate?symbol=BTCUSDT&startTime=1698710400000&endTime=1698796799999&limit=100",
+      "retrieved_at": "2026-09-18T14:43:29.695641Z",
+      "rows": 3,
+      "missing_marks": 1,
+      "marks": [
+        {
+          "fundingTime": 1698710400001,
+          "markPrice": ""
+        },
+        {
+          "fundingTime": 1698739200000,
+          "markPrice": "34149.46365245"
+        },
+        {
+          "fundingTime": 1698768000000,
+          "markPrice": "34287.54619963"
+        }
+      ]
+    },
+    {
+      "path": "data/research/funding-followup-20260918/ETHUSDT-2022-01-01.json",
+      "bytes": 337,
+      "sha256": "c47a4dc4b895bcd01acfbf86c19583aee93de4f392dbb234420433dcc3001ebe",
+      "source_url": "https://fapi.binance.com/fapi/v1/fundingRate?symbol=ETHUSDT&startTime=1640995200000&endTime=1641081599999&limit=100",
+      "retrieved_at": "2026-09-18T14:43:30.055628Z",
+      "rows": 3,
+      "missing_marks": 3,
+      "marks": [
+        {
+          "fundingTime": 1640995200006,
+          "markPrice": ""
+        },
+        {
+          "fundingTime": 1641024000009,
+          "markPrice": ""
+        },
+        {
+          "fundingTime": 1641052800000,
+          "markPrice": ""
+        }
+      ]
+    },
+    {
+      "path": "data/research/funding-followup-20260918/ETHUSDT-2023-10-31.json",
+      "bytes": 363,
+      "sha256": "424c4cba8a1e446da19c8c30825b9dfd4fdd197a5a42bc9944fff43f134c2460",
+      "source_url": "https://fapi.binance.com/fapi/v1/fundingRate?symbol=ETHUSDT&startTime=1698710400000&endTime=1698796799999&limit=100",
+      "retrieved_at": "2026-09-18T14:43:30.425306Z",
+      "rows": 3,
+      "missing_marks": 1,
+      "marks": [
+        {
+          "fundingTime": 1698710400001,
+          "markPrice": ""
+        },
+        {
+          "fundingTime": 1698739200000,
+          "markPrice": "1791.03990329"
+        },
+        {
+          "fundingTime": 1698768000000,
+          "markPrice": "1792.26000000"
+        }
+      ]
+    }
+  ],
+  "comparison": {
+    "events": 12,
+    "open_mismatches": 2,
+    "close_mismatches": 12,
+    "events_with_previous_close": 10,
+    "previous_close_mismatches": 6,
+    "rows": [
+      {
+        "symbol": "BTCUSDT",
+        "funding_time_ms": 1703980800000,
+        "funding_time_utc": "2023-12-31T00:00:00.000Z",
+        "settlement_mark": "42173.49474823",
+        "minute_open": "42173.50049291",
+        "minute_close": "42194.52972953",
+        "previous_minute_close": null,
+        "open_equal": false,
+        "close_equal": false,
+        "previous_close_equal": null,
+        "open_error_usdt": "0.00574468",
+        "funding_page": "data/research/funding-20260918T132612Z/page-003.json",
+        "mark_archive": "data/raw/futures/markPriceKlines/BTCUSDT/BTCUSDT-1m-2023-12-31.zip"
+      },
+      {
+        "symbol": "BTCUSDT",
+        "funding_time_ms": 1704009600001,
+        "funding_time_utc": "2023-12-31T08:00:00.001Z",
+        "settlement_mark": "42564.00000000",
+        "minute_open": "42564",
+        "minute_close": "42585.90000000",
+        "previous_minute_close": "42564",
+        "open_equal": true,
+        "close_equal": false,
+        "previous_close_equal": true,
+        "open_error_usdt": "0E-8",
+        "funding_page": "data/research/funding-20260918T132612Z/page-003.json",
+        "mark_archive": "data/raw/futures/markPriceKlines/BTCUSDT/BTCUSDT-1m-2023-12-31.zip"
+      },
+      {
+        "symbol": "BTCUSDT",
+        "funding_time_ms": 1704038400000,
+        "funding_time_utc": "2023-12-31T16:00:00.000Z",
+        "settlement_mark": "42489.70000000",
+        "minute_open": "42489.70000000",
+        "minute_close": "42515.41601418",
+        "previous_minute_close": "42489.60000000",
+        "open_equal": true,
+        "close_equal": false,
+        "previous_close_equal": false,
+        "open_error_usdt": "0E-8",
+        "funding_page": "data/research/funding-20260918T132612Z/page-003.json",
+        "mark_archive": "data/raw/futures/markPriceKlines/BTCUSDT/BTCUSDT-1m-2023-12-31.zip"
+      },
+      {
+        "symbol": "BTCUSDT",
+        "funding_time_ms": 1704067200000,
+        "funding_time_utc": "2024-01-01T00:00:00.000Z",
+        "settlement_mark": "42313.90000000",
+        "minute_open": "42313.90000000",
+        "minute_close": "42326.90000000",
+        "previous_minute_close": "42310",
+        "open_equal": true,
+        "close_equal": false,
+        "previous_close_equal": false,
+        "open_error_usdt": "0E-8",
+        "funding_page": "data/research/funding-20260918T132612Z/page-003.json",
+        "mark_archive": "data/raw/futures/markPriceKlines/BTCUSDT/BTCUSDT-1m-2024-01-01.zip"
+      },
+      {
+        "symbol": "BTCUSDT",
+        "funding_time_ms": 1704096000000,
+        "funding_time_utc": "2024-01-01T08:00:00.000Z",
+        "settlement_mark": "42525.11019858",
+        "minute_open": "42525.11019858",
+        "minute_close": "42527.16619149",
+        "previous_minute_close": "42522.57785816",
+        "open_equal": true,
+        "close_equal": false,
+        "previous_close_equal": false,
+        "open_error_usdt": "0E-8",
+        "funding_page": "data/research/funding-20260918T132612Z/page-003.json",
+        "mark_archive": "data/raw/futures/markPriceKlines/BTCUSDT/BTCUSDT-1m-2024-01-01.zip"
+      },
+      {
+        "symbol": "BTCUSDT",
+        "funding_time_ms": 1704124800000,
+        "funding_time_utc": "2024-01-01T16:00:00.000Z",
+        "settlement_mark": "42811.29637234",
+        "minute_open": "42811.29637234",
+        "minute_close": "42838.73330851",
+        "previous_minute_close": "42810.73722340",
+        "open_equal": true,
+        "close_equal": false,
+        "previous_close_equal": false,
+        "open_error_usdt": "0E-8",
+        "funding_page": "data/research/funding-20260918T132612Z/page-003.json",
+        "mark_archive": "data/raw/futures/markPriceKlines/BTCUSDT/BTCUSDT-1m-2024-01-01.zip"
+      },
+      {
+        "symbol": "ETHUSDT",
+        "funding_time_ms": 1703980800000,
+        "funding_time_utc": "2023-12-31T00:00:00.000Z",
+        "settlement_mark": "2293.07001515",
+        "minute_open": "2293.07796970",
+        "minute_close": "2294.39565485",
+        "previous_minute_close": null,
+        "open_equal": false,
+        "close_equal": false,
+        "previous_close_equal": null,
+        "open_error_usdt": "0.00795455",
+        "funding_page": "data/research/funding-20260918T132612Z/page-010.json",
+        "mark_archive": "data/raw/futures/markPriceKlines/ETHUSDT/ETHUSDT-1m-2023-12-31.zip"
+      },
+      {
+        "symbol": "ETHUSDT",
+        "funding_time_ms": 1704009600001,
+        "funding_time_utc": "2023-12-31T08:00:00.001Z",
+        "settlement_mark": "2296.94000000",
+        "minute_open": "2296.94000000",
+        "minute_close": "2297.46000000",
+        "previous_minute_close": "2296.94000000",
+        "open_equal": true,
+        "close_equal": false,
+        "previous_close_equal": true,
+        "open_error_usdt": "0E-8",
+        "funding_page": "data/research/funding-20260918T132612Z/page-010.json",
+        "mark_archive": "data/raw/futures/markPriceKlines/ETHUSDT/ETHUSDT-1m-2023-12-31.zip"
+      },
+      {
+        "symbol": "ETHUSDT",
+        "funding_time_ms": 1704038400000,
+        "funding_time_utc": "2023-12-31T16:00:00.000Z",
+        "settlement_mark": "2300.60000000",
+        "minute_open": "2300.60000000",
+        "minute_close": "2302.16000000",
+        "previous_minute_close": "2300.60000000",
+        "open_equal": true,
+        "close_equal": false,
+        "previous_close_equal": true,
+        "open_error_usdt": "0E-8",
+        "funding_page": "data/research/funding-20260918T132612Z/page-010.json",
+        "mark_archive": "data/raw/futures/markPriceKlines/ETHUSDT/ETHUSDT-1m-2023-12-31.zip"
+      },
+      {
+        "symbol": "ETHUSDT",
+        "funding_time_ms": 1704067200000,
+        "funding_time_utc": "2024-01-01T00:00:00.000Z",
+        "settlement_mark": "2283.75151515",
+        "minute_open": "2283.75151515",
+        "minute_close": "2283.89000000",
+        "previous_minute_close": "2283.75151515",
+        "open_equal": true,
+        "close_equal": false,
+        "previous_close_equal": true,
+        "open_error_usdt": "0E-8",
+        "funding_page": "data/research/funding-20260918T132612Z/page-010.json",
+        "mark_archive": "data/raw/futures/markPriceKlines/ETHUSDT/ETHUSDT-1m-2024-01-01.zip"
+      },
+      {
+        "symbol": "ETHUSDT",
+        "funding_time_ms": 1704096000000,
+        "funding_time_utc": "2024-01-01T08:00:00.000Z",
+        "settlement_mark": "2286.35660167",
+        "minute_open": "2286.35660167",
+        "minute_close": "2286.83203389",
+        "previous_minute_close": "2286.33682895",
+        "open_equal": true,
+        "close_equal": false,
+        "previous_close_equal": false,
+        "open_error_usdt": "0E-8",
+        "funding_page": "data/research/funding-20260918T132612Z/page-010.json",
+        "mark_archive": "data/raw/futures/markPriceKlines/ETHUSDT/ETHUSDT-1m-2024-01-01.zip"
+      },
+      {
+        "symbol": "ETHUSDT",
+        "funding_time_ms": 1704124800000,
+        "funding_time_utc": "2024-01-01T16:00:00.000Z",
+        "settlement_mark": "2316.73945076",
+        "minute_open": "2316.73945076",
+        "minute_close": "2317.09000000",
+        "previous_minute_close": "2316.72581439",
+        "open_equal": true,
+        "close_equal": false,
+        "previous_close_equal": false,
+        "open_error_usdt": "0E-8",
+        "funding_page": "data/research/funding-20260918T132612Z/page-010.json",
+        "mark_archive": "data/raw/futures/markPriceKlines/ETHUSDT/ETHUSDT-1m-2024-01-01.zip"
+      }
+    ]
+  },
+  "limitation": "Comparison is a small counterexample, not a statistical error estimate. Missing settlement marks were not filled. No executable inputs or D files changed.",
+  "missing_window_requery": {
+    "start_ms": 1640995200000,
+    "end_ms_inclusive": 1698739199999,
+    "pages": [
+      {
+        "symbol": "BTCUSDT",
+        "source_url": "https://fapi.binance.com/fapi/v1/fundingRate?symbol=BTCUSDT&startTime=1640995200000&endTime=1698739199999&limit=1000",
+        "retrieved_at": "2026-09-18T14:48:03.093559Z",
+        "path": "data/research/funding-followup-20260918/BTCUSDT-missing-window-page-00.json",
+        "sha256": "09773726a2f50a3187fa6d843f109f4efb9e84c38e12a6d57b9c98a991db8cb8",
+        "bytes": 112232,
+        "rows": 1000,
+        "missing_marks": 1000
+      },
+      {
+        "symbol": "BTCUSDT",
+        "source_url": "https://fapi.binance.com/fapi/v1/fundingRate?symbol=BTCUSDT&startTime=1669766400008&endTime=1698739199999&limit=1000",
+        "retrieved_at": "2026-09-18T14:48:03.476860Z",
+        "path": "data/research/funding-followup-20260918/BTCUSDT-missing-window-page-01.json",
+        "sha256": "2ff7c9ced92147faa76e88c8becf01704af67442390f28b7991d6ffc46015ee5",
+        "bytes": 112123,
+        "rows": 1000,
+        "missing_marks": 1000
+      },
+      {
+        "symbol": "BTCUSDT",
+        "source_url": "https://fapi.binance.com/fapi/v1/fundingRate?symbol=BTCUSDT&startTime=1698566400001&endTime=1698739199999&limit=1000",
+        "retrieved_at": "2026-09-18T14:48:03.841530Z",
+        "path": "data/research/funding-followup-20260918/BTCUSDT-missing-window-page-02.json",
+        "sha256": "f26e641a36dbc90dfa15335b36d947e52fe49b7a9570af5a55770c6c8362c430",
+        "bytes": 561,
+        "rows": 5,
+        "missing_marks": 5
+      },
+      {
+        "symbol": "ETHUSDT",
+        "source_url": "https://fapi.binance.com/fapi/v1/fundingRate?symbol=ETHUSDT&startTime=1640995200000&endTime=1698739199999&limit=1000",
+        "retrieved_at": "2026-09-18T14:48:04.490203Z",
+        "path": "data/research/funding-followup-20260918/ETHUSDT-missing-window-page-00.json",
+        "sha256": "27afd8784f0dd75f49ee6ae54233fb33b31b2b944a08627ad40f0e791f8478f7",
+        "bytes": 112354,
+        "rows": 1000,
+        "missing_marks": 1000
+      },
+      {
+        "symbol": "ETHUSDT",
+        "source_url": "https://fapi.binance.com/fapi/v1/fundingRate?symbol=ETHUSDT&startTime=1669766400008&endTime=1698739199999&limit=1000",
+        "retrieved_at": "2026-09-18T14:48:05.574922Z",
+        "path": "data/research/funding-followup-20260918/ETHUSDT-missing-window-page-01.json",
+        "sha256": "bd6718d65f326f2406aff036bc434440757f4473b51882ad445df68ce4a158a1",
+        "bytes": 112122,
+        "rows": 1000,
+        "missing_marks": 1000
+      },
+      {
+        "symbol": "ETHUSDT",
+        "source_url": "https://fapi.binance.com/fapi/v1/fundingRate?symbol=ETHUSDT&startTime=1698566400001&endTime=1698739199999&limit=1000",
+        "retrieved_at": "2026-09-18T14:48:06.532320Z",
+        "path": "data/research/funding-followup-20260918/ETHUSDT-missing-window-page-02.json",
+        "sha256": "16ef3cabd3b9208633872c6cbeaf80ea71a0db108c99e198a9763529e28d6d09",
+        "bytes": 561,
+        "rows": 5,
+        "missing_marks": 5
+      }
+    ],
+    "symbols": [
+      {
+        "symbol": "BTCUSDT",
+        "rows": 2005,
+        "missing_marks": 2005,
+        "nonempty_marks": 0,
+        "timestamps_and_rates_match_previous_audit": true
+      },
+      {
+        "symbol": "ETHUSDT",
+        "rows": 2005,
+        "missing_marks": 2005,
+        "nonempty_marks": 0,
+        "timestamps_and_rates_match_previous_audit": true
+      }
+    ]
+  }
+}

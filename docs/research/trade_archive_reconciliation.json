@@ -1,0 +1,412 @@
+{
+  "retrieved_at": "2026-09-18T13:28:11.583625Z",
+  "method": "Raw individual trades aggregated by UTC minute; exact Decimal comparison of counts, base/quote volume and OHLC against separately published official klines. Diagnostic, not automatic historical certification.",
+  "symbols": [
+    {
+      "symbol": "BTCUSDT",
+      "date": "2024-01-01",
+      "trade_source": "data/raw/futures/trades/BTCUSDT/BTCUSDT-trades-2024-01-01.zip",
+      "trade_source_sha256": "4405958f7bc5fa3483adb46d694a24afdde631dba95cda95c2c3b65ceec32537",
+      "kline_source_url": "https://data.binance.vision/data/futures/um/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2024-01-01.zip",
+      "kline_path": "data/research/trades-2024-01-01/BTCUSDT-1m-2024-01-01.zip",
+      "kline_sha256": "19bb9f0d6b88db48e787ae2aaec04f19295c366fadb2e02abaa000529ac93d89",
+      "checksum_path": "data/research/trades-2024-01-01/BTCUSDT-1m-2024-01-01.zip.CHECKSUM",
+      "checksum_sha256": "f84af848dd91ab3967a14fbd744ce5c9cd0fa612ae775f03e6d2c65ba13fffd1",
+      "trade_count": 2197331,
+      "klines_trade_count": 2197331,
+      "trades_minutes": 1440,
+      "klines_minutes": 1440,
+      "timestamp_regressions": 0,
+      "id_gap_count": 34,
+      "absent_id_count": 34,
+      "id_gaps": [
+        {
+          "previous_id": 4426838728,
+          "next_id": 4426838730,
+          "absent_ids": 1,
+          "previous_time_ms": 1704068781596,
+          "next_time_ms": 1704068781769
+        },
+        {
+          "previous_id": 4426840201,
+          "next_id": 4426840203,
+          "absent_ids": 1,
+          "previous_time_ms": 1704068842252,
+          "next_time_ms": 1704068842329
+        },
+        {
+          "previous_id": 4426882862,
+          "next_id": 4426882864,
+          "absent_ids": 1,
+          "previous_time_ms": 1704071590778,
+          "next_time_ms": 1704071590898
+        },
+        {
+          "previous_id": 4426969715,
+          "next_id": 4426969717,
+          "absent_ids": 1,
+          "previous_time_ms": 1704074640385,
+          "next_time_ms": 1704074640963
+        },
+        {
+          "previous_id": 4426969728,
+          "next_id": 4426969730,
+          "absent_ids": 1,
+          "previous_time_ms": 1704074641266,
+          "next_time_ms": 1704074641317
+        },
+        {
+          "previous_id": 4426969732,
+          "next_id": 4426969734,
+          "absent_ids": 1,
+          "previous_time_ms": 1704074641776,
+          "next_time_ms": 1704074641960
+        },
+        {
+          "previous_id": 4426970050,
+          "next_id": 4426970052,
+          "absent_ids": 1,
+          "previous_time_ms": 1704074657443,
+          "next_time_ms": 1704074657503
+        },
+        {
+          "previous_id": 4426997434,
+          "next_id": 4426997436,
+          "absent_ids": 1,
+          "previous_time_ms": 1704076791880,
+          "next_time_ms": 1704076792163
+        },
+        {
+          "previous_id": 4426997647,
+          "next_id": 4426997649,
+          "absent_ids": 1,
+          "previous_time_ms": 1704076815068,
+          "next_time_ms": 1704076815133
+        },
+        {
+          "previous_id": 4426998251,
+          "next_id": 4426998253,
+          "absent_ids": 1,
+          "previous_time_ms": 1704076864400,
+          "next_time_ms": 1704076864489
+        },
+        {
+          "previous_id": 4426998296,
+          "next_id": 4426998298,
+          "absent_ids": 1,
+          "previous_time_ms": 1704076865027,
+          "next_time_ms": 1704076865104
+        },
+        {
+          "previous_id": 4427026477,
+          "next_id": 4427026479,
+          "absent_ids": 1,
+          "previous_time_ms": 1704078838730,
+          "next_time_ms": 1704078839135
+        },
+        {
+          "previous_id": 4427082360,
+          "next_id": 4427082362,
+          "absent_ids": 1,
+          "previous_time_ms": 1704080783912,
+          "next_time_ms": 1704080784265
+        },
+        {
+          "previous_id": 4427108835,
+          "next_id": 4427108837,
+          "absent_ids": 1,
+          "previous_time_ms": 1704082196032,
+          "next_time_ms": 1704082196110
+        },
+        {
+          "previous_id": 4427111601,
+          "next_id": 4427111603,
+          "absent_ids": 1,
+          "previous_time_ms": 1704082378938,
+          "next_time_ms": 1704082379145
+        },
+        {
+          "previous_id": 4427112041,
+          "next_id": 4427112043,
+          "absent_ids": 1,
+          "previous_time_ms": 1704082390025,
+          "next_time_ms": 1704082390078
+        },
+        {
+          "previous_id": 4427112058,
+          "next_id": 4427112060,
+          "absent_ids": 1,
+          "previous_time_ms": 1704082391281,
+          "next_time_ms": 1704082391354
+        },
+        {
+          "previous_id": 4427118046,
+          "next_id": 4427118048,
+          "absent_ids": 1,
+          "previous_time_ms": 1704082554470,
+          "next_time_ms": 1704082554615
+        },
+        {
+          "previous_id": 4427192685,
+          "next_id": 4427192687,
+          "absent_ids": 1,
+          "previous_time_ms": 1704087060409,
+          "next_time_ms": 1704087060431
+        },
+        {
+          "previous_id": 4427195433,
+          "next_id": 4427195435,
+          "absent_ids": 1,
+          "previous_time_ms": 1704087175956,
+          "next_time_ms": 1704087176540
+        },
+        {
+          "previous_id": 4427591823,
+          "next_id": 4427591825,
+          "absent_ids": 1,
+          "previous_time_ms": 1704111591979,
+          "next_time_ms": 1704111592073
+        },
+        {
+          "previous_id": 4427666444,
+          "next_id": 4427666446,
+          "absent_ids": 1,
+          "previous_time_ms": 1704116161494,
+          "next_time_ms": 1704116161979
+        },
+        {
+          "previous_id": 4427666501,
+          "next_id": 4427666503,
+          "absent_ids": 1,
+          "previous_time_ms": 1704116164439,
+          "next_time_ms": 1704116165635
+        },
+        {
+          "previous_id": 4427666506,
+          "next_id": 4427666508,
+          "absent_ids": 1,
+          "previous_time_ms": 1704116166307,
+          "next_time_ms": 1704116166317
+        },
+        {
+          "previous_id": 4427875581,
+          "next_id": 4427875583,
+          "absent_ids": 1,
+          "previous_time_ms": 1704125994088,
+          "next_time_ms": 1704125994183
+        },
+        {
+          "previous_id": 4427875629,
+          "next_id": 4427875631,
+          "absent_ids": 1,
+          "previous_time_ms": 1704125995885,
+          "next_time_ms": 1704125995987
+        },
+        {
+          "previous_id": 4427875635,
+          "next_id": 4427875637,
+          "absent_ids": 1,
+          "previous_time_ms": 1704125996017,
+          "next_time_ms": 1704125996059
+        },
+        {
+          "previous_id": 4427875773,
+          "next_id": 4427875775,
+          "absent_ids": 1,
+          "previous_time_ms": 1704125997198,
+          "next_time_ms": 1704125997264
+        },
+        {
+          "previous_id": 4427879695,
+          "next_id": 4427879697,
+          "absent_ids": 1,
+          "previous_time_ms": 1704126072315,
+          "next_time_ms": 1704126072321
+        },
+        {
+          "previous_id": 4428084651,
+          "next_id": 4428084653,
+          "absent_ids": 1,
+          "previous_time_ms": 1704133268025,
+          "next_time_ms": 1704133268053
+        },
+        {
+          "previous_id": 4428523809,
+          "next_id": 4428523811,
+          "absent_ids": 1,
+          "previous_time_ms": 1704142068044,
+          "next_time_ms": 1704142068078
+        },
+        {
+          "previous_id": 4428702722,
+          "next_id": 4428702724,
+          "absent_ids": 1,
+          "previous_time_ms": 1704147759121,
+          "next_time_ms": 1704147759272
+        },
+        {
+          "previous_id": 4428730837,
+          "next_id": 4428730839,
+          "absent_ids": 1,
+          "previous_time_ms": 1704149257603,
+          "next_time_ms": 1704149257786
+        },
+        {
+          "previous_id": 4428844543,
+          "next_id": 4428844545,
+          "absent_ids": 1,
+          "previous_time_ms": 1704151669197,
+          "next_time_ms": 1704151669198
+        }
+      ],
+      "mismatching_minutes": 1,
+      "mismatches": [
+        {
+          "minute_ms": 1704141840000,
+          "differences": {
+            "quote": {
+              "trades": "102633584.1924068",
+              "klines": "113338551.55191"
+            }
+          }
+        }
+      ],
+      "all_count_volume_ohlc_match": false
+    },
+    {
+      "symbol": "ETHUSDT",
+      "date": "2024-01-01",
+      "trade_source": "data/raw/futures/trades/ETHUSDT/ETHUSDT-trades-2024-01-01.zip",
+      "trade_source_sha256": "f333a8cee3c4b00f8251a294238918eaf1be6d9c222f2652c7159b61c663182d",
+      "kline_source_url": "https://data.binance.vision/data/futures/um/daily/klines/ETHUSDT/1m/ETHUSDT-1m-2024-01-01.zip",
+      "kline_path": "data/research/trades-2024-01-01/ETHUSDT-1m-2024-01-01.zip",
+      "kline_sha256": "db143263ed9be478acb69a3290318d20cee518dd930c8372857818642d50fe98",
+      "checksum_path": "data/research/trades-2024-01-01/ETHUSDT-1m-2024-01-01.zip.CHECKSUM",
+      "checksum_sha256": "eb00ebceedfbce231afb9bd2caa6bb3d07f9e0607473a2d6ac62dac02e388544",
+      "trade_count": 1694881,
+      "klines_trade_count": 1694881,
+      "trades_minutes": 1440,
+      "klines_minutes": 1440,
+      "timestamp_regressions": 0,
+      "id_gap_count": 16,
+      "absent_id_count": 16,
+      "id_gaps": [
+        {
+          "previous_id": 3478542319,
+          "next_id": 3478542321,
+          "absent_ids": 1,
+          "previous_time_ms": 1704068787201,
+          "next_time_ms": 1704068787587
+        },
+        {
+          "previous_id": 3478542569,
+          "next_id": 3478542571,
+          "absent_ids": 1,
+          "previous_time_ms": 1704068815268,
+          "next_time_ms": 1704068815525
+        },
+        {
+          "previous_id": 3478777611,
+          "next_id": 3478777613,
+          "absent_ids": 1,
+          "previous_time_ms": 1704082195634,
+          "next_time_ms": 1704082195725
+        },
+        {
+          "previous_id": 3478777681,
+          "next_id": 3478777683,
+          "absent_ids": 1,
+          "previous_time_ms": 1704082197634,
+          "next_time_ms": 1704082198148
+        },
+        {
+          "previous_id": 3478795125,
+          "next_id": 3478795127,
+          "absent_ids": 1,
+          "previous_time_ms": 1704082790494,
+          "next_time_ms": 1704082790587
+        },
+        {
+          "previous_id": 3478882053,
+          "next_id": 3478882055,
+          "absent_ids": 1,
+          "previous_time_ms": 1704086937803,
+          "next_time_ms": 1704086938153
+        },
+        {
+          "previous_id": 3478883210,
+          "next_id": 3478883212,
+          "absent_ids": 1,
+          "previous_time_ms": 1704087045554,
+          "next_time_ms": 1704087045695
+        },
+        {
+          "previous_id": 3478883348,
+          "next_id": 3478883350,
+          "absent_ids": 1,
+          "previous_time_ms": 1704087056868,
+          "next_time_ms": 1704087057288
+        },
+        {
+          "previous_id": 3478934760,
+          "next_id": 3478934762,
+          "absent_ids": 1,
+          "previous_time_ms": 1704091117068,
+          "next_time_ms": 1704091117219
+        },
+        {
+          "previous_id": 3479040917,
+          "next_id": 3479040919,
+          "absent_ids": 1,
+          "previous_time_ms": 1704100111758,
+          "next_time_ms": 1704100112605
+        },
+        {
+          "previous_id": 3479494964,
+          "next_id": 3479494966,
+          "absent_ids": 1,
+          "previous_time_ms": 1704125377171,
+          "next_time_ms": 1704125377193
+        },
+        {
+          "previous_id": 3479515048,
+          "next_id": 3479515050,
+          "absent_ids": 1,
+          "previous_time_ms": 1704125998006,
+          "next_time_ms": 1704125998130
+        },
+        {
+          "previous_id": 3479973054,
+          "next_id": 3479973056,
+          "absent_ids": 1,
+          "previous_time_ms": 1704143392418,
+          "next_time_ms": 1704143392483
+        },
+        {
+          "previous_id": 3480051459,
+          "next_id": 3480051461,
+          "absent_ids": 1,
+          "previous_time_ms": 1704147590261,
+          "next_time_ms": 1704147590393
+        },
+        {
+          "previous_id": 3480060002,
+          "next_id": 3480060004,
+          "absent_ids": 1,
+          "previous_time_ms": 1704147759167,
+          "next_time_ms": 1704147760343
+        },
+        {
+          "previous_id": 3480129640,
+          "next_id": 3480129642,
+          "absent_ids": 1,
+          "previous_time_ms": 1704151539179,
+          "next_time_ms": 1704151539338
+        }
+      ],
+      "mismatching_minutes": 0,
+      "mismatches": [],
+      "all_count_volume_ohlc_match": true
+    }
+  ]
+}

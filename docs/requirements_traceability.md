@@ -9,7 +9,9 @@ Fuente contractual: `sources/Prompt_Codex_Backtesting.md`, secciones indicadas. 
 | Un solo código para dos carteras | §§2,7 | strategy.Backtest, flag | test_equal_filter_disabled; test_demo | tablas por strategy |
 | Trades individuales, UTC ms/us, sin agregados | §4 | data/normalize.py | test_source_timestamp | Parquet trades |
 | Descarga/reanudación/checksum/budget | §4 | data/download.py | test_download_rejects_budget; test_verified_raw_cache; paginación/conflictos | download.json |
+| Preparación de descarga completa, sin certificar economía | Solicitud de puesta en marcha 18/09/2026 | preflight.py, CLI preflight | test_preflight: plan, archivos faltantes, reglas, rutas y fechas | diagnóstico JSON de sólo lectura |
 | Duplicados, gaps, intervalos reales | §§4,5 | normalize.py, validate.py | test_identical_duplicates; missing_funding; matching_omissions; real_interval_change | processed.json, coverage.json |
+| Ventana solicitada y antecedentes; calendario independiente | §§4,5,12 | validate.py, replay.py | test_validation_scope; test_replay_window | cobertura por intervalo; stream cronológico acotado |
 | Reglas por vigencia/conocimiento | §4 | data/rules.py | test_rulebook; test_validation_checks_requested_days_and_interior_rule_gaps | history.json, quality report |
 | EWMA temporal/antecedente/no-change | §5 | forecast.py | test_finance: constante, pesos, borde, gap | signals, forecast_evaluation |
 | Costo ilustrativo 0,34%, multipliers | §§5,11 | costs.py | test_finance; test_transaction_cost_multiplier | signals, ledger, robustez |

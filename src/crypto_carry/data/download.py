@@ -139,7 +139,9 @@ def download_verified_archive(
                 _ensure_budget(data_root, budget_limit, content_length)
                 mode = "ab" if offset else "wb"
                 with part.open(mode) as stream:
-                    for chunk in response.iter_bytes():
+                    # Coalesce network fragments: scan the data tree once per MiB,
+                    # retaining the aggregate budget check before every disk write.
+                    for chunk in response.iter_bytes(chunk_size=1024 * 1024):
                         _ensure_budget(data_root, budget_limit, len(chunk))
                         stream.write(chunk)
             actual = _sha256(part)
@@ -148,9 +150,9 @@ def download_verified_archive(
                 raise ValueError(f"SHA-256 mismatch for {url}: {actual} != {expected_sha256}")
             with zipfile.ZipFile(part) as archive:
                 broken = archive.testzip()
-                if broken is not None:
-                    part.unlink()
-                    raise ValueError(f"ZIP integrity failure in {broken}")
+            if broken is not None:
+                part.unlink()
+                raise ValueError(f"ZIP integrity failure in {broken}")
             part.replace(destination)
             return {"status": "downloaded", "sha256": actual, "bytes": destination.stat().st_size}
         except DataBudgetExceeded:

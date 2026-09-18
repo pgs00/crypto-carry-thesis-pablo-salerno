@@ -65,9 +65,90 @@ def _records(path: Path, dataset: str) -> Iterator[Trade | Funding | Mark | Data
                 )
 
 
+def _partition_bounds(entry: dict) -> tuple[int, int] | None:
+    """Manifest bounds are inclusive; legacy entries may omit them."""
+    if entry.get("start") is None or entry.get("end") is None:
+        return None
+    first, last = int(entry["start"]), int(entry["end"])
+    if first > last:
+        raise ValueError(f"Invalid partition bounds: {entry['path']}")
+    return first, last
+
+
+def _select_partitions(entries: list[dict], lower: int, end: int) -> list[dict]:
+    bounded = [(entry, _partition_bounds(entry)) for entry in entries]
+    prior_end = max(
+        (bounds[1] for _, bounds in bounded if bounds is not None and bounds[1] < lower),
+        default=None,
+    )
+    crossing_start = max(
+        (
+            bounds[0]
+            for _, bounds in bounded
+            if bounds is not None and bounds[0] < lower <= bounds[1]
+        ),
+        default=None,
+    )
+    # A crossing partition proves a newer antecedent exists. Equal timestamps
+    # must still be merged to select the last observation by the full event key.
+    if prior_end is not None and crossing_start is not None and prior_end < crossing_start:
+        prior_end = None
+    return [
+        entry
+        for entry, bounds in bounded
+        if bounds is None or (bounds[0] < end and (bounds[1] >= lower or bounds[1] == prior_end))
+    ]
+
+
+def _ordered_records(root: Path, entry: dict, bounds: tuple[int, int] | None) -> Iterator:
+    previous = None
+    first = None
+    count = 0
+    for record in _records(root / entry["path"], entry["dataset"]):
+        key = event_key(record)
+        if previous is not None and key < previous:
+            raise ValueError(f"Partition is not chronologically ordered: {entry['path']}")
+        if bounds is not None and not bounds[0] <= key[0] <= bounds[1]:
+            raise ValueError(f"Record outside partition bounds: {entry['path']}")
+        first = key[0] if first is None else first
+        previous = key
+        count += 1
+        yield key, record
+    if bounds is not None and (first, previous[0] if previous else None) != bounds:
+        raise ValueError(f"Records differ from partition bounds: {entry['path']}")
+    if entry.get("rows") is not None and count != int(entry["rows"]):
+        raise ValueError(f"Records differ from partition rows: {entry['path']}")
+
+
 def _partition_chain(root: Path, entries: list[dict]) -> Iterator:
-    for entry in sorted(entries, key=lambda value: (int(value.get("start", 0)), value["path"])):
-        yield from _records(root / entry["path"], entry["dataset"])
+    """Merge overlaps, opening only partitions that can supply the next event."""
+    ordered = sorted(
+        ((_partition_bounds(entry), entry) for entry in entries),
+        key=lambda item: (
+            item[0] is not None,
+            item[0][0] if item[0] is not None else 0,
+            item[1]["path"],
+        ),
+    )
+    active = []
+    index = 0
+    while index < len(ordered) or active:
+        if index < len(ordered):
+            bounds, entry = ordered[index]
+            if not active or bounds is None or bounds[0] <= active[0][0][0]:
+                records = _ordered_records(root, entry, bounds)
+                item = next(records, None)
+                if item is not None:
+                    key, record = item
+                    heapq.heappush(active, (key, index, record, records))
+                index += 1
+                continue
+        _, partition_index, record, records = heapq.heappop(active)
+        yield record
+        item = next(records, None)
+        if item is not None:
+            key, record = item
+            heapq.heappush(active, (key, partition_index, record, records))
 
 
 def _windowed(records: Iterable, lower: int, end: int) -> Iterator:
@@ -84,6 +165,8 @@ def _windowed(records: Iterable, lower: int, end: int) -> Iterator:
         if value >= end:
             return
         yield record
+    if antecedent is not None:
+        yield antecedent
 
 
 def iter_records(
@@ -103,7 +186,8 @@ def iter_records(
     streams = []
     for (dataset, _symbol, _market), entries in grouped.items():
         lower = start - warmup_hours * HOUR if dataset == "funding" else start
-        streams.append(_windowed(_partition_chain(root, entries), lower, end))
+        selected = _select_partitions(entries, lower, end)
+        streams.append(_windowed(_partition_chain(root, selected), lower, end))
     yield from heapq.merge(*streams, key=event_key)
 
 

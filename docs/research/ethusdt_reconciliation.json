@@ -1,0 +1,129 @@
+{
+  "version": 1,
+  "scope": "USD-M minute aggregates; does not prove exhaustive public-market history",
+  "historical_certified": false,
+  "inputs": [
+    {
+      "path": "data/raw/futures/trades/ETHUSDT/ETHUSDT-trades-2024-01-01.zip",
+      "bytes": 16793812,
+      "sha256": "f333a8cee3c4b00f8251a294238918eaf1be6d9c222f2652c7159b61c663182d"
+    },
+    {
+      "path": "data/research/trades-2024-01-01/ETHUSDT-1m-2024-01-01.zip",
+      "bytes": 61611,
+      "sha256": "db143263ed9be478acb69a3290318d20cee518dd930c8372857818642d50fe98"
+    }
+  ],
+  "market_values_match": true,
+  "start_ms": 1704067200000,
+  "end_ms_exclusive": 1704153600000,
+  "trade_count": 1694881,
+  "kline_trade_count": 1694881,
+  "kline_minutes": 1440,
+  "missing_kline_minutes": 0,
+  "mismatching_minutes": 0,
+  "mismatch_examples": [],
+  "id_gap_count": 16,
+  "absent_id_count": 16,
+  "id_gap_examples": [
+    {
+      "previous_id": "3478542319",
+      "next_id": "3478542321",
+      "previous_time_ms": 1704068787201,
+      "next_time_ms": 1704068787587
+    },
+    {
+      "previous_id": "3478542569",
+      "next_id": "3478542571",
+      "previous_time_ms": 1704068815268,
+      "next_time_ms": 1704068815525
+    },
+    {
+      "previous_id": "3478777611",
+      "next_id": "3478777613",
+      "previous_time_ms": 1704082195634,
+      "next_time_ms": 1704082195725
+    },
+    {
+      "previous_id": "3478777681",
+      "next_id": "3478777683",
+      "previous_time_ms": 1704082197634,
+      "next_time_ms": 1704082198148
+    },
+    {
+      "previous_id": "3478795125",
+      "next_id": "3478795127",
+      "previous_time_ms": 1704082790494,
+      "next_time_ms": 1704082790587
+    },
+    {
+      "previous_id": "3478882053",
+      "next_id": "3478882055",
+      "previous_time_ms": 1704086937803,
+      "next_time_ms": 1704086938153
+    },
+    {
+      "previous_id": "3478883210",
+      "next_id": "3478883212",
+      "previous_time_ms": 1704087045554,
+      "next_time_ms": 1704087045695
+    },
+    {
+      "previous_id": "3478883348",
+      "next_id": "3478883350",
+      "previous_time_ms": 1704087056868,
+      "next_time_ms": 1704087057288
+    },
+    {
+      "previous_id": "3478934760",
+      "next_id": "3478934762",
+      "previous_time_ms": 1704091117068,
+      "next_time_ms": 1704091117219
+    },
+    {
+      "previous_id": "3479040917",
+      "next_id": "3479040919",
+      "previous_time_ms": 1704100111758,
+      "next_time_ms": 1704100112605
+    },
+    {
+      "previous_id": "3479494964",
+      "next_id": "3479494966",
+      "previous_time_ms": 1704125377171,
+      "next_time_ms": 1704125377193
+    },
+    {
+      "previous_id": "3479515048",
+      "next_id": "3479515050",
+      "previous_time_ms": 1704125998006,
+      "next_time_ms": 1704125998130
+    },
+    {
+      "previous_id": "3479973054",
+      "next_id": "3479973056",
+      "previous_time_ms": 1704143392418,
+      "next_time_ms": 1704143392483
+    },
+    {
+      "previous_id": "3480051459",
+      "next_id": "3480051461",
+      "previous_time_ms": 1704147590261,
+      "next_time_ms": 1704147590393
+    },
+    {
+      "previous_id": "3480060002",
+      "next_id": "3480060004",
+      "previous_time_ms": 1704147759167,
+      "next_time_ms": 1704147760343
+    },
+    {
+      "previous_id": "3480129640",
+      "next_id": "3480129642",
+      "previous_time_ms": 1704151539179,
+      "next_time_ms": 1704151539338
+    }
+  ],
+  "quote_field_mismatch_count": 0,
+  "quote_field_examples": [],
+  "example_limit": 20
+}

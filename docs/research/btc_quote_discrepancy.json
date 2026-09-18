@@ -1,0 +1,37 @@
+{
+  "retrieved_at": "2026-09-18T13:30:01.476293+00:00",
+  "minute_utc": "2024-01-01T20:44:00+00:00",
+  "trade_count": 13649,
+  "base_quantity": "2585.435",
+  "reported_quote": "102633584.1924068",
+  "computed_quote": "113338551.55191",
+  "trade_quote_mismatches": [
+    {
+      "id": "4428495241",
+      "price": "43815.0",
+      "qty": "244.322",
+      "quote_qty": "1.0704968",
+      "computed": "10704968.4300",
+      "time": 1704141863751
+    }
+  ],
+  "api_source": "https://fapi.binance.com/fapi/v1/klines?symbol=BTCUSDT&interval=1m&startTime=1704141840000&endTime=1704141899999&limit=1",
+  "api_response_path": "data/research/trades-2024-01-01/BTCUSDT-kline-quote-discrepancy-api.json",
+  "api_response_sha256": "a6fc450a5f8fa106f269784d2027124774c8aee551247bc4e9c8bf84107aa61b",
+  "api_rows": [
+    [
+      1704141840000,
+      "43781.90",
+      "43888.00",
+      "43770.10",
+      "43868.50",
+      "2585.435",
+      1704141899999,
+      "113338551.55191",
+      13649,
+      "1806.745",
+      "79204773.11601",
+      "0"
+    ]
+  ]
+}

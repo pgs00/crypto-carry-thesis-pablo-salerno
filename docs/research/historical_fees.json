@@ -1,0 +1,108 @@
+{
+  "schema": "historical_fee_research_evidence_v1",
+  "researched_on": "2026-09-18",
+  "intended_use": "Research evidence only; not an executable rules history or a historical snapshot.",
+  "coverage_complete": false,
+  "target_window_utc": {"start": "2022-01-01T00:00:00Z", "end_exclusive": "2026-09-01T00:00:00Z"},
+  "preparation_start_utc": "2020-08-11T00:00:00Z",
+  "profile": {"vip_level": 0, "bnb_fee_payment": false, "referral_discount": false, "special_liquidity_or_taker_program": false},
+  "rate_unit": "fraction_of_executed_notional_per_fill",
+  "publication_timezone": "Not explicit in retrieved page headers; display values are not normalized as UTC.",
+  "null_end_semantics": "Unknown or not established by this review; never interpret as verified through the target end.",
+  "confirmed_exact_promotion_intervals": [
+    {
+      "market": "spot", "symbol": "BTCUSDT", "maker": 0.0, "taker": 0.0,
+      "start_utc": "2022-07-08T14:00:00Z", "end_exclusive_utc": "2023-03-22T00:00:00Z",
+      "source_ids": ["S3", "S5"]
+    }
+  ],
+  "rate_evidence": [
+    {
+      "id": "F1", "market": "futures", "profile": "Regular/VIP0",
+      "published_display": "2019-12-18 09:51", "effective_start_utc": "2019-12-20T08:00:00Z", "verified_end_utc": null,
+      "maker": 0.0002, "taker": 0.0004, "evidence_type": "announced_fee_schedule",
+      "source_url": "https://www.binance.com/en/support/announcement/detail/360037673592"
+    },
+    {
+      "id": "S1", "published_display": "2021-12-15 08:04", "effective_start_utc": "2021-12-21T06:00:00Z", "verified_end_utc": null,
+      "spot": {"maker": 0.001, "taker": 0.001}, "usd_m_futures": {"maker": 0.0002, "taker": 0.0004},
+      "evidence_type": "announced_fee_schedule",
+      "source_url": "https://www.binance.com/en/support/announcement/detail/88ee9834fef947de96e01b77e888414e",
+      "corroborating_official_url": "https://www.binance.com/es/support/announcement/detail/88ee9834fef947de96e01b77e888414e",
+      "retrieval_limit": "English search result returned article; English direct open redirected to index; Spanish official page directly accessible.",
+      "declared_revision": "2022-03-14: VIP0 renamed Regular."
+    },
+    {
+      "id": "S2", "market": "spot", "published_display": "2022-05-31 10:13",
+      "effective_start_utc": "2022-06-01T08:00:00Z", "verified_end_utc": null,
+      "maker": 0.001, "taker": 0.001, "evidence_type": "regular_fee_unchanged_in_vip4plus_update",
+      "source_url": "https://www.binance.com/en/support/announcement/detail/40669f3da342426c87b083b659673316"
+    },
+    {
+      "id": "S3", "market": "spot", "symbol": "BTCUSDT", "published_display": "2022-07-06 14:00",
+      "effective_start_utc": "2022-07-08T14:00:00Z", "maker": 0.0, "taker": 0.0,
+      "evidence_type": "all_users_zero_fee_promotion",
+      "source_url": "https://www.binance.com/en/support/announcement/detail/10435147c55d4a40b64fcbf43cb46329",
+      "declared_revision": "2023-03-23: zero maker/taker after 2023-03-22T00:00Z applies to BTC/TUSD only."
+    },
+    {
+      "id": "S5", "market": "spot", "symbol": "BTCUSDT", "published_display": "2023-03-15 06:10",
+      "effective_start_utc": "2023-03-22T00:00:00Z", "verified_end_utc": null,
+      "maker": null, "taker": null, "evidence_type": "return_to_standard_vip_fees_without_numeric_rate",
+      "source_url": "https://www.binance.com/en/support/announcement/detail/be13a645cca643d28eab5b9b34f2dc36",
+      "declared_revision": "2023-11-22: changes to other pairs; BTCUSDT standard-fee return remains stated."
+    },
+    {
+      "id": "S6", "market": "spot", "published_display": "2023-05-31 08:00",
+      "effective_rollout_window_utc": ["2023-06-29T02:00:00Z", "2023-06-29T06:00:00Z"],
+      "verified_end_utc": null, "maker": 0.001, "taker": 0.001,
+      "evidence_type": "regular_fee_unchanged_in_vip3plus_update",
+      "source_url": "https://www.binance.com/en/support/announcement/detail/28356ec3f2e241eeb8aa0d9c5c524df5"
+    },
+    {
+      "id": "S7", "market": "spot", "published_display": "2024-10-07 09:00",
+      "effective_completion_before_utc": "2024-10-14T06:00:00Z", "effective_start_utc": null, "verified_end_utc": null,
+      "maker": 0.001, "taker": 0.001, "evidence_type": "regular_fee_in_vip3plus_update",
+      "source_url": "https://www.binance.com/en/support/announcement/detail/024a848244a84511a70e6e6f60ba4c85"
+    },
+    {
+      "id": "F2", "market": "futures", "published_display": "2025-11-14",
+      "reference_month": "2025-11", "effective_start_utc": null, "verified_end_utc": null,
+      "maker": 0.0002, "taker": 0.0005, "evidence_type": "official_blog_explicit_month_reference_not_transition_notice",
+      "source_url": "https://www.binance.com/en/blog/tech/3611863022773164727"
+    },
+    {
+      "id": "F3", "market": "usdt_m_futures", "published_display": "2026-02-02 06:00",
+      "effective_start_utc": null, "verified_end_utc": null, "maker": null, "taker": 0.0005,
+      "evidence_type": "inference_from_tradfi_discount_relative_to_standard_usdt_fee",
+      "inference": "TradFi regular taker 0.00025 with 50% off standard USDT implies 0.00025 / 0.5 = 0.0005; does not identify original standard-fee transition.",
+      "source_url": "https://www.binance.com/en/support/announcement/detail/48edba3e6d0d465faaf9576067270514"
+    }
+  ],
+  "confirmed_scope_exclusions": [
+    {
+      "id": "S4", "market": "spot", "symbol": "ETHBUSD", "excluded_from": ["ETHUSDT"],
+      "published_display": "2022-08-23 14:00", "start_utc": "2022-08-26T00:00:00Z", "end_exclusive_utc": "2022-09-26T00:00:00Z",
+      "maker": 0.0, "taker": 0.0,
+      "source_url": "https://www.binance.com/en/support/announcement/detail/5d8f9c0a68e24b82bff743a342dfa9b9"
+    }
+  ],
+  "mutable_or_inaccessible_current_pages": [
+    {
+      "id": "F4", "source_url": "https://www.binance.com/en/support/faq/detail/360033544231",
+      "published_display": "2019-09-09 13:39", "updated_display": "2026-05-01 11:51",
+      "limitation": "Current 0.02%/0.05% examples are described as hypothetical; initial publication date is not fee effective date."
+    },
+    {
+      "source_url": "https://www.binance.com/en/fee/futureFee",
+      "limitation": "Public extraction returned No records found; no numeric schedule captured."
+    }
+  ],
+  "unverified_gaps": [
+    "Exact UTC transition from Regular USDT-M taker 0.0004 to 0.0005.",
+    "Exhaustive absence or presence of other BTCUSDT/ETHUSDT general promotions through 2026-09-01 exclusive.",
+    "Contemporaneous numeric spot schedule for preparation in 2020 through 2021-12-21T06:00:00Z.",
+    "Full continuity between rate observations; no observation is silently extended to target end.",
+    "Historical original versions of mutable official pages and explicit timezone of publication headers."
+  ]
+}

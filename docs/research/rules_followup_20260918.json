@@ -1,0 +1,280 @@
+{
+  "schema": "research_rules_followup_partial_v1",
+  "generated_at": "2026-09-18T14:46:15Z",
+  "scope": {
+    "symbols": ["BTCUSDT", "ETHUSDT"],
+    "markets": ["spot", "futures_usdm_perpetual"],
+    "economic_start": "2022-01-01T00:00:00Z",
+    "economic_end_exclusive": "2026-09-01T00:00:00Z",
+    "preparation_from_year": 2020,
+    "topics": ["order_filters", "margin_brackets", "liquidation_clearance"],
+    "excluded_topics": ["ordinary_trading_fees", "funding"]
+  },
+  "supplements": ["historical_market_rules.md", "historical_market_rules.json"],
+  "loadable_by_rulebook": false,
+  "complete_snapshots_added": 0,
+  "new_confirmed_rule_change_events_in_economic_period": 0,
+  "historical_interval_coverage_complete": false,
+  "policies": {
+    "null_until_means": "Unknown; never open-ended validity.",
+    "continuity": "No persistence inferred from matching before/after values or failed searches.",
+    "knowledge_time": "Displayed current publication labels do not prove unchanged original contents. Do not equate known_from and effective_at.",
+    "publication_timezone": "Not explicitly stated in displayed headers; publication_utc is left null.",
+    "source_policy": "Official Binance authored pages and directly linked official assets. User-generated Binance Square content is excluded."
+  },
+  "sources": [
+    {
+      "id": "futures_overview_asof_20200101",
+      "title": "Leverage and Derivatives: Overview of Binance Futures in 2019",
+      "url": "https://www.binance.com/en/blog/all/421499824684900356",
+      "type": "official_blog_with_dated_specification_table",
+      "publication_label": "2020-01-16",
+      "publication_precision": "date",
+      "publication_utc": null,
+      "as_of_label": "January 1st, 2020",
+      "as_of_precision": "date",
+      "as_of_timezone": null,
+      "access": "article_body_opened_and_table_image_visually_inspected",
+      "original_version_archived": false,
+      "asset": {
+        "table": "Table 1 - Specifications of Binance Perpetual Futures Contracts",
+        "url": "https://public.bnbstatic.com/image/cms/blog/20200113/39784528-f9cc-4388-aff4-5f6a872c60a9.png",
+        "http_status": 200,
+        "bytes": 42069,
+        "sha256": "7f3d37dceccf5fdf218f32a7fc7b150a1c55cf23c28df6bdfb4fa6fcc5f0cbc5",
+        "persisted_locally": false
+      }
+    },
+    {
+      "id": "clearance_20210111",
+      "title": "Binance Futures Launches BTCBUSD Perpetual Contracts",
+      "url": "https://www.binance.com/en-PH/support/announcement/detail/3d974ead7acf447bab862e795ee832bb",
+      "type": "official_announcement",
+      "publication_label": "2021-01-11 04:58",
+      "publication_precision": "minute",
+      "publication_utc": null,
+      "access": "english_article_body_opened_on_regional_path",
+      "original_version_archived": false,
+      "note": "Use the explicit additional USD-M clearance table, not the BTCBUSD launch date."
+    },
+    {
+      "id": "clearance_20210207",
+      "title": "Updates to Insurance Clearance Fees of Binance Futures Contracts (2021-02-07)",
+      "url": "https://www.binance.com/en/support/announcement/detail/aeeccb6d332a4e74a51c2ac05f9078e5",
+      "type": "official_announcement",
+      "publication_label": "2021-02-07 03:50",
+      "publication_precision": "minute",
+      "publication_utc": null,
+      "access": "article_body_opened",
+      "original_version_archived": false
+    },
+    {
+      "id": "usdm_min_notional_20210224",
+      "title": "Updates to USD-M Futures Trading Rules",
+      "url": "https://www.binance.com/en/support/announcement/detail/1d762daf60dd417f9d8a05d44b06a25c",
+      "type": "official_announcement",
+      "publication_label": "2021-02-23 14:11",
+      "publication_precision": "minute",
+      "publication_utc": null,
+      "access": "article_body_opened",
+      "original_version_archived": false
+    },
+    {
+      "id": "liquidation_nominal_blog_20221223",
+      "title": "Three Misconceptions About Liquidations in Binance Futures",
+      "url": "https://www.binance.com/en/blog/futures/5845477141003990750",
+      "type": "official_blog_current_body_with_historical_date_label",
+      "publication_label": "2022-12-23",
+      "publication_precision": "date",
+      "publication_utc": null,
+      "access": "article_body_opened",
+      "original_version_archived": false,
+      "section": "3. Insurance Clearance Fees"
+    },
+    {
+      "id": "clearance_20210610_lead",
+      "title": "Updates to Insurance Clearance Fees of USD-M Futures Contracts (2021-06-10)",
+      "url": "https://www.binance.com/en/support/announcement/detail/6bd7a166980648469ab771b5835847c3",
+      "type": "official_announcement_search_index_only",
+      "publication_label_in_index": "2021-06-10 02:21",
+      "publication_utc": null,
+      "access": "search_index_text_only_direct_open_not_verified",
+      "original_version_archived": false,
+      "promoted_to_confirmed_event": false
+    }
+  ],
+  "preparation_specification_observations": [
+    {
+      "source_id": "futures_overview_asof_20200101",
+      "symbol": "BTCUSDT",
+      "market": "futures_usdm_perpetual",
+      "as_of_date_label": "2020-01-01",
+      "as_of_instant_utc": null,
+      "contract_unit_base_asset": "1",
+      "base_asset": "BTC",
+      "quote_asset": "USDT",
+      "settlement_asset": "USDT",
+      "tick_size_usdt": "0.01",
+      "minimum_granularity_contract_units": "0.001",
+      "initial_margin_base_rate_decimal": "0.008",
+      "maintenance_margin_base_rate_decimal": "0.004",
+      "lot_size_api_field_mapping_verified": false,
+      "complete_margin_brackets": false,
+      "known_from": null,
+      "valid_until": null,
+      "continuity_proven": false
+    },
+    {
+      "source_id": "futures_overview_asof_20200101",
+      "symbol": "ETHUSDT",
+      "market": "futures_usdm_perpetual",
+      "as_of_date_label": "2020-01-01",
+      "as_of_instant_utc": null,
+      "contract_unit_base_asset": "1",
+      "base_asset": "ETH",
+      "quote_asset": "USDT",
+      "settlement_asset": "USDT",
+      "tick_size_usdt": "0.01",
+      "minimum_granularity_contract_units": "0.001",
+      "initial_margin_base_rate_decimal": "0.013",
+      "maintenance_margin_base_rate_decimal": "0.0065",
+      "lot_size_api_field_mapping_verified": false,
+      "complete_margin_brackets": false,
+      "known_from": null,
+      "valid_until": null,
+      "continuity_proven": false
+    }
+  ],
+  "preparation_partial_events": [
+    {
+      "id": "clearance_change_20210111",
+      "source_id": "clearance_20210111",
+      "market": "futures_usdm_perpetual",
+      "effective_at": "2021-01-11T05:00:00Z",
+      "known_from": null,
+      "effective_until": null,
+      "field": "liquidation_clearance_rate_decimal",
+      "changes": [
+        {"symbol": "BTCUSDT", "before": "0.005", "after": "0.01"},
+        {"symbol": "ETHUSDT", "before": "0.0075", "after": "0.015"}
+      ],
+      "status": "confirmed_partial_historical_change",
+      "fee_basis": null,
+      "existing_positions_affected": null,
+      "continuity_proven": false,
+      "economic_period_applicability_proven": false
+    },
+    {
+      "id": "clearance_change_20210207",
+      "source_id": "clearance_20210207",
+      "market": "futures_usdm_perpetual",
+      "effective_at": "2021-02-07T04:00:00Z",
+      "known_from": null,
+      "effective_until": null,
+      "field": "liquidation_clearance_rate_decimal",
+      "changes": [
+        {"symbol": "BTCUSDT", "before": "0.01", "after": "0.02"},
+        {"symbol": "ETHUSDT", "before": "0.015", "after": "0.03"}
+      ],
+      "status": "confirmed_partial_historical_change",
+      "fee_basis": null,
+      "existing_positions_affected": null,
+      "continuity_proven": false,
+      "economic_period_applicability_proven": false
+    },
+    {
+      "id": "min_notional_20210224",
+      "source_id": "usdm_min_notional_20210224",
+      "market": "futures_usdm_perpetual",
+      "symbol_scope_as_published": "USD-M Futures",
+      "relevant_symbols": ["BTCUSDT", "ETHUSDT"],
+      "effective_at": "2021-02-24T03:00:00Z",
+      "known_from": null,
+      "effective_until": null,
+      "field": "minimum_order_notional_usdt",
+      "value": "5",
+      "reduce_only_exempt": true,
+      "changes_without_prior_announcement_explicitly_allowed": true,
+      "historical_api_filter_flags": null,
+      "status": "confirmed_partial_historical_change",
+      "continuity_proven": false,
+      "economic_period_applicability_proven": false
+    }
+  ],
+  "economic_period_document_observations": [
+    {
+      "source_id": "liquidation_nominal_blog_20221223",
+      "document_date_label": "2022-12-23",
+      "market": "futures_usdm_perpetual",
+      "relevant_symbols": ["BTCUSDT", "ETHUSDT"],
+      "formula_paraphrase": "Insurance clearance charge equals position notional value multiplied by the liquidation rate.",
+      "formula_scope_as_published": "Binance Futures",
+      "notional_price_definition": null,
+      "symbol_specific_rates": null,
+      "known_from": null,
+      "effective_at": null,
+      "effective_until": null,
+      "original_2022_body_verified": false,
+      "status": "dated_explanatory_document_not_historical_rule_snapshot",
+      "supports_execution_notional_specifically": false
+    }
+  ],
+  "unconfirmed_leads": [
+    {
+      "source_id": "clearance_20210610_lead",
+      "claimed_effective_at_in_index": "2021-06-10T04:00:00Z",
+      "claimed_symbol_scope": "BTCUSDT perpetual and quarterly; BTCBUSD perpetual",
+      "claimed_before_decimal": "0.006",
+      "claimed_after_decimal": "0.012",
+      "reason_not_promoted": "Search index exposed the table; article body was not recovered by direct opens. English path redirected to announcement index; regional opens failed; direct HTTP returned 202 with zero bytes.",
+      "does_not_close_2021_change_chain": true,
+      "does_not_close_economic_period": true
+    }
+  ],
+  "access_attempts": [
+    {
+      "target": "Wayback CDX futures exchangeInfo",
+      "url": "https://web.archive.org/cdx/search/cdx?url=fapi.binance.com%2Ffapi%2Fv1%2FexchangeInfo%2A&output=json&filter=statuscode%3A200&from=2022&to=2026&collapse=timestamp%3A6&limit=20",
+      "result": "HTTP 503 Service Unavailable",
+      "captures_recovered": 0,
+      "absence_of_captures_proven": false
+    },
+    {
+      "target": "Wayback CDX liquidation FAQ",
+      "url": "https://web.archive.org/cdx/search/cdx?url=www.binance.com%2Fen%2Fsupport%2Ffaq%2F360033525271&output=json&filter=statuscode%3A200&from=2022&to=2025&collapse=timestamp%3A6&limit=20",
+      "result": "HTTP 503 Service Unavailable",
+      "captures_recovered": 0,
+      "absence_of_captures_proven": false
+    },
+    {
+      "target": "Public CMS article route for publication metadata",
+      "url": "https://www.binance.com/bapi/composite/v1/public/cms/article/detail?articleCode=aeeccb6d332a4e74a51c2ac05f9078e5",
+      "result": "HTTP 404 Not Found",
+      "publication_timezone_resolved": false
+    }
+  ],
+  "excluded_search_results": [
+    {
+      "url": "https://www.binance.com/en/support/announcement/detail/be7fc4800bd54aac8f77501300aeb728",
+      "reason": "2024 Spot Margin liquidation fee update concerns lending, not USD-M isolated perpetuals."
+    },
+    {
+      "url": "https://www.binance.com/en-PH/support/announcement/detail/5d0f60e2ac3e447db8792f0502fb6aa3",
+      "reason": "2025 quarterly delivery contract specifications do not prove perpetual filters."
+    },
+    {
+      "category": "user_generated_Binance_Square_and_third_party_calculators",
+      "reason": "Not an official exchange rule; no numeric rates adopted."
+    }
+  ],
+  "remaining_economic_period_gaps": [
+    "No verified continuous BTCUSDT/ETHUSDT clearance rate schedule for 2022-01-01 through 2026-09-01; 0.5 percent BTC and 1 percent ETH are not certified.",
+    "No historical fee-basis price definition or complete liquidation exceptions and simultaneous regular-fee rule.",
+    "No complete Spot or Futures exchangeInfo capture with MARKET applicability, minQty, maxQty, stepSize, tickSize and order notional fields.",
+    "ETH first margin bracket cap change from 50000 to 300000 USDT remains undated; full bracket chains and directly published historical deductions remain incomplete.",
+    "Publication UTC, original versions, amendments and knowledge-time availability remain unresolved."
+  ],
+  "execution_rule_changes_made": false,
+  "data_or_download_changes_made": false,
+  "api_credentials_requested": false
+}

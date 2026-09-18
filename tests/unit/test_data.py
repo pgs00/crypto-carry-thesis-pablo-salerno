@@ -268,6 +268,8 @@ def test_missing_funding_is_not_reclassified_as_a_long_interval():
 
 
 def _write_complete_sample_manifest(root: Path, config: Config, *, omit: str | None = None):
+    from datetime import datetime, timezone
+
     data_dir = root / "data"
     manifests = data_dir / "manifests"
     processed = data_dir / "processed"
@@ -275,8 +277,34 @@ def _write_complete_sample_manifest(root: Path, config: Config, *, omit: str | N
     processed.mkdir(parents=True)
     start = timestamp(config.sample_start)
     end = timestamp(config.sample_end)
+    funding_start = start - (config.window_hours + 24) * HOUR
     entries = []
+    calendar_entries = []
     for symbol in config.symbols:
+        months = {}
+        for funding_time in range(funding_start - 32 * 24 * HOUR, end + 32 * 24 * HOUR, 8 * HOUR):
+            month = datetime.fromtimestamp(funding_time // SECOND, timezone.utc).strftime("%Y-%m")
+            months.setdefault(month, []).append(f"{funding_time // 1_000_000},8,0.001\n")
+        for month, calendar_rows in months.items():
+            path = data_dir / "raw" / f"{symbol}-fundingRate-{month}.zip"
+            path.parent.mkdir(parents=True, exist_ok=True)
+            with zipfile.ZipFile(path, "w") as archive:
+                archive.writestr(
+                    f"{symbol}-fundingRate-{month}.csv",
+                    "calc_time,funding_interval_hours,last_funding_rate\n" + "".join(calendar_rows),
+                )
+            calendar_entries.append(
+                {
+                    "dataset": "funding_calendar",
+                    "symbol": symbol,
+                    "market": "futures",
+                    "path": str(path.relative_to(root)).replace("\\", "/"),
+                    "start": f"{month}-01T00:00:00Z",
+                    "end": None,
+                    "status": "downloaded",
+                    "sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
+                }
+            )
         for dataset, market in (
             ("trades", "spot"),
             ("trades", "futures"),
@@ -319,19 +347,22 @@ def _write_complete_sample_manifest(root: Path, config: Config, *, omit: str | N
                 parquet_rows = [
                     {
                         "symbol": symbol,
-                        "funding_time": start,
-                        "available_at": start + 60 * SECOND,
+                        "funding_time": funding_time,
+                        "available_at": funding_time + 60 * SECOND,
                         "funding_rate": "0.001",
                         "interval_hours": "8",
                         "settlement_mark_price": "100",
                         "source_file": "fixture.json",
                         "interval_verified": True,
                     }
+                    for funding_time in range(funding_start - 8 * HOUR, end, 8 * HOUR)
                 ]
             pq.write_table(pa.Table.from_pylist(parquet_rows), path)
-            observed_start = (
-                start - (config.window_hours + 24) * HOUR if dataset == "funding" else start
-            )
+            time_field = {
+                "trades": "event_time",
+                "marks": "available_at",
+                "funding": "funding_time",
+            }[dataset]
             entries.append(
                 {
                     "dataset": dataset,
@@ -341,9 +372,9 @@ def _write_complete_sample_manifest(root: Path, config: Config, *, omit: str | N
                     "path": str(path.relative_to(root)).replace("\\", "/"),
                     "sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
                     "bytes": path.stat().st_size,
-                    "rows": 1,
-                    "start": observed_start,
-                    "end": end,
+                    "rows": len(parquet_rows),
+                    "start": parquet_rows[0][time_field],
+                    "end": parquet_rows[-1][time_field],
                     "schema": {},
                     "duplicate_count": 0,
                     "conflict_count": 0,
@@ -355,6 +386,9 @@ def _write_complete_sample_manifest(root: Path, config: Config, *, omit: str | N
                 }
             )
     (manifests / "processed.json").write_text(json.dumps({"entries": entries}), encoding="utf-8")
+    (manifests / "download.json").write_text(
+        json.dumps({"entries": calendar_entries}), encoding="utf-8"
+    )
     rules_path = root / config.rules_file
     rules_path.parent.mkdir(parents=True, exist_ok=True)
     rules = []

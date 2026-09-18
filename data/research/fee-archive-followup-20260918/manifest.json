@@ -1,0 +1,35 @@
+[
+  {
+    "source_id": "A1",
+    "source_url": "https://web.archive.org/web/20230531224744id_/https://www.binance.com/en/fee/futureFee",
+    "sha256_decoded_html_utf8": "9c9719d5f9344af2b1f519a2d4207632fb745bc2f816b1671184245cd59d19c0",
+    "bytes_decoded_html_utf8": 846790,
+    "memento_datetime": "Wed, 31 May 2023 22:47:44 GMT",
+    "retrieved_at": "2026-09-18T14:54:26.142746Z",
+    "matches_prior_hash": true,
+    "path": "data/research/fee-archive-followup-20260918/A1.html",
+    "status": "verified_and_saved"
+  },
+  {
+    "source_id": "A2",
+    "source_url": "https://web.archive.org/web/20230602173120id_/https://www.binance.com/en/support/faq/binance-futures-fee-structure-fee-calculations-360033544231",
+    "sha256_decoded_html_utf8": "e262a8f07876e3d4282bd9fe6497d83ea5ec60f43578d011b5b5999a42b92a9a",
+    "bytes_decoded_html_utf8": 413920,
+    "memento_datetime": "Fri, 02 Jun 2023 17:31:20 GMT",
+    "retrieved_at": "2026-09-18T14:54:37.828988Z",
+    "matches_prior_hash": true,
+    "path": "data/research/fee-archive-followup-20260918/A2.html",
+    "status": "verified_and_saved"
+  },
+  {
+    "source_id": "A3",
+    "source_url": "https://web.archive.org/web/20240220064115id_/https://www.binance.com/en/support/faq/binance-futures-fee-structure-fee-calculations-360033544231",
+    "sha256_decoded_html_utf8": "c046ab84892a2093de0d16c8ad1eab0278089600ee9f7186c58e1a54bcd45cbe",
+    "bytes_decoded_html_utf8": 440516,
+    "memento_datetime": "Tue, 20 Feb 2024 06:41:15 GMT",
+    "retrieved_at": "2026-09-18T14:54:44.342289Z",
+    "matches_prior_hash": true,
+    "path": "data/research/fee-archive-followup-20260918/A3.html",
+    "status": "verified_and_saved"
+  }
+]

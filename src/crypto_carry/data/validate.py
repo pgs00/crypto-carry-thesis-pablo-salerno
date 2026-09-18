@@ -5,13 +5,17 @@ from __future__ import annotations
 import csv
 import hashlib
 import json
+import zipfile
+from bisect import bisect_left
+from decimal import Decimal, InvalidOperation
 from itertools import pairwise
 from pathlib import Path
 
 import pyarrow as pa
 import pyarrow.parquet as pq
 
-from ..config import DAY, HOUR, Config, iso, timestamp
+from ..config import DAY, HOUR, SECOND, Config, iso, timestamp
+from .normalize import _funding_calendar_times
 from .rules import RuleBook
 
 _REQUIRED_SCHEMAS = {
@@ -65,6 +69,168 @@ def _required_keys(config: Config):
         yield "funding", symbol, "futures"
 
 
+def _scoped_parts(parts: list[dict], start: int, end: int, *, antecedent: bool) -> list[dict]:
+    """Partition bounds are inclusive; replay also consumes one prior observation."""
+    selected = [
+        entry for entry in parts if int(entry["end"]) >= start and int(entry["start"]) < end
+    ]
+    if antecedent:
+        prior = [entry for entry in parts if int(entry["end"]) < start]
+        latest = max((int(entry["end"]) for entry in prior), default=None)
+        known_prior = max(
+            (int(entry["start"]) for entry in selected if int(entry["start"]) < start),
+            default=None,
+        )
+        if latest is not None and (known_prior is None or latest >= known_prior):
+            selected.extend(entry for entry in prior if int(entry["end"]) == latest)
+    return selected
+
+
+def _adjacent_month(month: str, offset: int) -> str:
+    year, number = map(int, month.split("-"))
+    year, zero_based_month = divmod(year * 12 + number - 1 + offset, 12)
+    return f"{year:04d}-{zero_based_month + 1:02d}"
+
+
+def _funding_calendar(
+    config: Config, root: Path, symbol: str, start: int, end: int
+) -> dict[int, tuple[Decimal, Decimal]]:
+    """Read independently hashed monthly schedules, including interval antecedents."""
+    manifest_path = root / config.data_dir / "manifests" / "download.json"
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    by_month: dict[str, list[dict]] = {}
+    for entry in manifest.get("entries", []):
+        if entry.get("dataset") == "funding_calendar" and entry.get("symbol") == symbol:
+            month = iso(timestamp(entry["start"]))[:7]
+            by_month.setdefault(month, []).append(entry)
+    calendar: dict[int, tuple[Decimal, Decimal]] = {}
+
+    def read_month(month: str):
+        entries = by_month.get(month, [])
+        if not entries:
+            raise ValueError(f"missing independent funding calendar month: {month}")
+        month_start = timestamp(f"{month}-01T00:00:00Z")
+        month_end = timestamp(f"{_adjacent_month(month, 1)}-01T00:00:00Z")
+        for entry in entries:
+            if entry.get("status") not in {"cached", "downloaded"}:
+                raise ValueError(f"unverified independent funding calendar: {entry['path']}")
+            path = root / entry["path"]
+            if _hash(path) != entry.get("sha256"):
+                raise ValueError(f"independent funding calendar hash mismatch: {entry['path']}")
+            for time_ms, value in _funding_calendar_times(path).items():
+                time_ns = time_ms * 1_000_000
+                if not month_start <= time_ns < month_end:
+                    raise ValueError(f"funding calendar timestamp outside archive month: {month}")
+                interval, rate = value
+                if not interval.is_finite() or interval <= 0 or not rate.is_finite():
+                    raise ValueError(f"invalid independent funding calendar value: {month}")
+                previous = calendar.get(time_ns)
+                if previous is not None and previous != value:
+                    raise ValueError(f"conflicting independent funding calendar at {time_ns}")
+                calendar[time_ns] = value
+
+    first_month = month = iso(start)[:7]
+    last_month = iso(end - 1)[:7]
+    while month <= last_month:
+        read_month(month)
+        month = _adjacent_month(month, 1)
+    # The first consumed funding observation precedes the warmup boundary; its
+    # own interval also needs the preceding independently published settlement.
+    while sum(time_ns < start for time_ns in calendar) < 2:
+        first_month = _adjacent_month(first_month, -1)
+        read_month(first_month)
+    return calendar
+
+
+def _validate_funding(
+    config: Config,
+    root: Path,
+    symbol: str,
+    parts: list[dict],
+    start: int,
+    end: int,
+    coverage: dict,
+    issues: list[str],
+):
+    records: list[dict] = []
+    antecedents: list[dict] = []
+    try:
+        for entry in parts:
+            for batch in pq.ParquetFile(root / entry["path"]).iter_batches():
+                for record in batch.to_pylist():
+                    time_ns = int(record["funding_time"])
+                    if start <= time_ns < end:
+                        records.append(record)
+                    elif time_ns < start:
+                        if not antecedents or time_ns > int(antecedents[0]["funding_time"]):
+                            antecedents = [record]
+                        elif time_ns == int(antecedents[0]["funding_time"]):
+                            antecedents.append(record)
+    except (KeyError, OSError, TypeError, ValueError, pa.ArrowException) as exc:
+        coverage["status"] = "invalid"
+        issues.append(f"unreadable funding rows: {symbol}: {exc}")
+    records = antecedents + records
+    times = [int(record["funding_time"]) for record in records]
+    coverage["observed_start"] = min(times, default=None)
+    coverage["observed_end"] = max(times, default=None)
+    if not antecedents:
+        coverage["status"] = "unknown"
+        issues.append(f"funding warmup or antecedent missing: {symbol}")
+    if any(
+        record["available_at"] != int(record["funding_time"]) + 60 * SECOND for record in records
+    ):
+        coverage["status"] = "invalid"
+        issues.append(f"funding availability mismatch: {symbol}")
+
+    marks_complete = bool(records)
+    for record in records:
+        try:
+            mark = Decimal(str(record["settlement_mark_price"]))
+            marks_complete &= mark.is_finite() and mark > 0
+        except KeyError, InvalidOperation:
+            marks_complete = False
+    if not marks_complete:
+        coverage["status"] = "unknown"
+        issues.append(f"funding settlement mark missing: {symbol}")
+
+    try:
+        calendar = _funding_calendar(config, root, symbol, start, end)
+        ordered_times = sorted(calendar)
+        antecedent = max(time_ns for time_ns in ordered_times if time_ns < start)
+        expected = {antecedent, *(time_ns for time_ns in ordered_times if start <= time_ns < end)}
+        verified = len(times) == len(set(times)) and set(times) == expected
+        for record in records:
+            time_ns = int(record["funding_time"])
+            index = bisect_left(ordered_times, time_ns)
+            if index == 0 or time_ns not in calendar:
+                verified = False
+                continue
+            previous = ordered_times[index - 1]
+            scheduled_interval, rate = calendar[time_ns]
+            verified &= (
+                record["symbol"] == symbol
+                and record["interval_verified"] is True
+                and Decimal(record["funding_rate"]) == rate
+                and Decimal(record["interval_hours"]) == Decimal(time_ns - previous) / Decimal(HOUR)
+                and scheduled_interval == Decimal(time_ns // HOUR - previous // HOUR)
+            )
+        if not verified:
+            raise ValueError("settlement rows differ from the independent calendar or intervals")
+        coverage["checks"].append("independent_funding_calendar")
+    except (
+        csv.Error,
+        KeyError,
+        OSError,
+        TypeError,
+        UnicodeError,
+        ValueError,
+        InvalidOperation,
+        zipfile.BadZipFile,
+    ) as exc:
+        coverage["status"] = "unknown"
+        issues.append(f"funding calendar unverified: {symbol}: {exc}")
+
+
 def validate_data(config: Config, root: Path, scope: str = "sample") -> dict:
     """Validate the requested range, retaining unknown data as explicit incompleteness."""
     if scope not in {"sample", "full"}:
@@ -86,12 +252,16 @@ def validate_data(config: Config, root: Path, scope: str = "sample") -> dict:
 
     grouped: dict[tuple[str, str, str], list[dict]] = {}
     for entry in entries:
+        if int(entry["start"]) > int(entry["end"]):
+            issues.append(f"invalid partition bounds: {entry['path']}")
+            continue
         grouped.setdefault((entry["dataset"], entry["symbol"], entry["market"]), []).append(entry)
 
     coverage: list[dict] = []
     for dataset, symbol, market in _required_keys(config):
         key = (dataset, symbol, market)
-        parts = grouped.get(key, [])
+        lower = funding_start if dataset == "funding" else start
+        parts = _scoped_parts(grouped.get(key, []), lower, end, antecedent=True)
         row = {
             "dataset": dataset,
             "symbol": symbol,
@@ -121,6 +291,7 @@ def validate_data(config: Config, root: Path, scope: str = "sample") -> dict:
                 issues.append(
                     f"missing archive date: {dataset}/{symbol}/{market}: {len(missing)} days, first {missing[0]}"
                 )
+        verified_parts: list[dict] = []
         for entry in parts:
             path = root / entry["path"]
             if not path.exists():
@@ -147,6 +318,7 @@ def validate_data(config: Config, root: Path, scope: str = "sample") -> dict:
                         issues.append(f"manifest schema mismatch: {entry['path']}")
                     else:
                         row["checks"].append(f"schema:{entry['path']}")
+                        verified_parts.append(entry)
                 except (KeyError, OSError, pa.ArrowException) as exc:
                     row["status"] = "invalid"
                     issues.append(f"unreadable parquet schema: {entry['path']}: {exc}")
@@ -211,15 +383,7 @@ def validate_data(config: Config, root: Path, scope: str = "sample") -> dict:
                     f"missing closed mark minute or initial antecedent: {symbol}, {expected_count - present_count} minutes"
                 )
         if dataset == "funding" and parts:
-            if row["observed_start"] is None or row["observed_start"] > funding_start:
-                row["status"] = "unknown"
-                issues.append(f"funding warmup or antecedent missing: {symbol}")
-            if not all(entry.get("funding_calendar_complete") is True for entry in parts):
-                row["status"] = "unknown"
-                issues.append(f"funding calendar unverified: {symbol}")
-            if not all(entry.get("settlement_marks_complete") is True for entry in parts):
-                row["status"] = "unknown"
-                issues.append(f"funding settlement mark missing: {symbol}")
+            _validate_funding(config, root, symbol, verified_parts, funding_start, end, row, issues)
         coverage.append(row)
 
     rules_path = root / config.rules_file

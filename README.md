@@ -2,7 +2,7 @@
 
 Implementación de `docs/sources/Prompt_Codex_Backtesting.md`: BTCUSDT/ETHUSDT spot y perpetuos USD-M, dos carteras independientes y una sola estrategia con filtro de funding activado/desactivado. Usa **NautilusTrader 1.231.0** para replay, órdenes y fills nativos, más un ledger Decimal conciliado para la economía del estudio.
 
-**Estado:** software ejecutable con demo sintética y controles financieros/temporales. La evaluación histórica estricta está bloqueada por reglas históricas sin evidencia completa y discontinuidades de IDs en los archivos oficiales de Futures. No hay rentabilidad histórica certificada para 2022–2026. Los informes incompletos no contienen una curva ficticia de capital sin invertir.
+**Estado:** software ejecutable con demo sintética y controles financieros/temporales. La evaluación histórica estricta está bloqueada por reglas históricas sin evidencia completa, marks de cobro ausentes en el tramo inicial y discontinuidades de IDs pendientes de resolver. La conciliación de la muestra con velas oficiales coincide en precios, cantidades y conteos; no certifica por sí sola cobertura completa. No hay rentabilidad histórica certificada para 2022–2026. Los informes incompletos no contienen una curva ficticia de capital sin invertir.
 
 ## Instalación y comandos
 
@@ -28,9 +28,11 @@ uv run python -m crypto_carry backtest --config configs/base.toml --strategy bot
 uv run python -m crypto_carry robustness --config configs/robustness.toml
 ```
 
-`download` y `validate-data` usan la **muestra del 01/01/2024 UTC** por defecto. Incluye trades individuales de ese día, marks antecedentes y funding de calentamiento. Se verificaron ZIP, checksums, schemas, fechas y continuidad. El límite inicial es **20.000.000.000 bytes** bajo `data/`; el tamaño observado está en `doctor` y `docs/progress.md`. D: está disponible para una futura ampliación, pero la muestra sigue aquí. No se descargó la historia completa. `download --scope full` implementa esa opción desde `history_start`; no forma parte de los comandos ejecutados para esta entrega y mantiene el límite vigente.
+`download` y `validate-data` usan la **muestra del 01/01/2024 UTC** por defecto. Incluye trades individuales de ese día, marks antecedentes y funding de calentamiento. Se verificaron ZIP, checksums, schemas, fechas y continuidad, con los faltantes documentados. El límite inicial es **20.000.000.000 bytes** bajo `data/`; el tamaño observado está en `doctor` y `docs/progress.md`. La muestra permanece aquí. El usuario inició por separado la descarga completa en D: el 18/09/2026; su finalización y validación quedan pendientes. `download --scope full` descarga desde `history_start` y respeta el presupuesto de la configuración seleccionada.
 
 `validate-data --skip-normalize` vuelve a comprobar hashes/cobertura del Parquet existente. Los datos crudos nunca se rellenan ni sobrescriben con respuestas diferentes. Los archivos normalizados que cambian se versionan por hash.
+
+Para descargar personalmente la historia completa en D:, ver [instrucciones de descarga](docs/descarga_d.md). `configs/download_full_d.toml` admite hasta 800 GB bajo la nueva raíz; la configuración de la muestra conserva su límite de 20 GB. Crear esa configuración no inicia una descarga; el comando debe ejecutarse explícitamente.
 
 El backtest imprime JSON con `run_id`, `status`, `data_kind` y `report`. Código de salida del programa: 0 para ejecución terminada (incluye resultado económico insolvente), 2 para evidencia incompleta y 1 para fallo. Que se genere un informe no implica `complete` histórico.
 
@@ -46,9 +48,12 @@ Abrir [demo sintética](outputs/run_4af4a649dc7f816177638a13/report.md), [diagn�
 
 - [Metodología](docs/methodology.md): calendario, fórmulas, ejecución, riesgo, ledger y H1–H3.
 - [Decisiones](docs/decisions.md): perfil VIP 0 confirmado, adaptación real de Nautilus y convenciones conservadoras.
+- [Fiabilidad](docs/fiabilidad.md): evidencia exigida, límites de ejecución y validaciones pendientes antes de considerar capital propio.
+- [Puesta en marcha en D:](docs/puesta_en_marcha.md): comprobación previa, normalización, validación, corridas y ajustes separados.
 - [Diccionario](docs/data_dictionary.md): unidades, disponibilidad y schemas de fuentes.
 - [Trazabilidad](docs/requirements_traceability.md): requisitos → módulos → pruebas → resultados.
 - [Avance y verificaciones](docs/progress.md): comandos reales, IDs y bloqueos vigentes.
+- [Investigación histórica y auditorías](docs/research/README.md): cronologías de reglas, cobertura real de funding y conciliación reproducible de trades contra velas oficiales.
 - `data/manifests/`: URLs exactas, checksums, hashes, filas, conflictos y cobertura.
 - `outputs/<run_id>/`: configuración, manifiesto, snapshots de procedencia, Parquet, resúmenes CSV, PNG/SVG e informe.
 
@@ -66,4 +71,4 @@ Cuando los datos históricos requeridos estén verificados, la CLI admite `backt
 
 Fills completos sin modelo de impacto, mark cerrado por minuto, liquidación total sin ADL, USDT a la par, transferencias instantáneas/gratuitas, sin impuestos ni insolvencia del exchange. Las órdenes nativas son portadoras del modelo de ejecución explícito; la cuenta nativa congelada no es el equity reportado. Un resultado parecido al aumentar AUM no demuestra liquidez ni escalabilidad real.
 
-Para avanzar históricamente faltan snapshots fechados de fees, filtros, tramos, deducciones, cargos de liquidación y operatividad, además de resolver las discontinuidades de trades oficiales. La descarga de un checksum válido acredita integridad del archivo, no completitud del mercado. No se usarán reglas actuales como si fueran históricas.
+Para avanzar históricamente faltan snapshots fechados de fees, filtros, tramos, deducciones, cargos de liquidación y operatividad, además de los marks de cobro ausentes y de resolver las discontinuidades de trades oficiales. La descarga de un checksum válido acredita integridad del archivo, no completitud del mercado. No se usarán reglas actuales como si fueran históricas.

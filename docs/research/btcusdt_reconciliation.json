@@ -1,0 +1,162 @@
+{
+  "version": 1,
+  "scope": "USD-M minute aggregates; does not prove exhaustive public-market history",
+  "historical_certified": false,
+  "inputs": [
+    {
+      "path": "data/raw/futures/trades/BTCUSDT/BTCUSDT-trades-2024-01-01.zip",
+      "bytes": 18413934,
+      "sha256": "4405958f7bc5fa3483adb46d694a24afdde631dba95cda95c2c3b65ceec32537"
+    },
+    {
+      "path": "data/research/trades-2024-01-01/BTCUSDT-1m-2024-01-01.zip",
+      "bytes": 60977,
+      "sha256": "19bb9f0d6b88db48e787ae2aaec04f19295c366fadb2e02abaa000529ac93d89"
+    }
+  ],
+  "market_values_match": true,
+  "start_ms": 1704067200000,
+  "end_ms_exclusive": 1704153600000,
+  "trade_count": 2197331,
+  "kline_trade_count": 2197331,
+  "kline_minutes": 1440,
+  "missing_kline_minutes": 0,
+  "mismatching_minutes": 0,
+  "mismatch_examples": [],
+  "id_gap_count": 34,
+  "absent_id_count": 34,
+  "id_gap_examples": [
+    {
+      "previous_id": "4426838728",
+      "next_id": "4426838730",
+      "previous_time_ms": 1704068781596,
+      "next_time_ms": 1704068781769
+    },
+    {
+      "previous_id": "4426840201",
+      "next_id": "4426840203",
+      "previous_time_ms": 1704068842252,
+      "next_time_ms": 1704068842329
+    },
+    {
+      "previous_id": "4426882862",
+      "next_id": "4426882864",
+      "previous_time_ms": 1704071590778,
+      "next_time_ms": 1704071590898
+    },
+    {
+      "previous_id": "4426969715",
+      "next_id": "4426969717",
+      "previous_time_ms": 1704074640385,
+      "next_time_ms": 1704074640963
+    },
+    {
+      "previous_id": "4426969728",
+      "next_id": "4426969730",
+      "previous_time_ms": 1704074641266,
+      "next_time_ms": 1704074641317
+    },
+    {
+      "previous_id": "4426969732",
+      "next_id": "4426969734",
+      "previous_time_ms": 1704074641776,
+      "next_time_ms": 1704074641960
+    },
+    {
+      "previous_id": "4426970050",
+      "next_id": "4426970052",
+      "previous_time_ms": 1704074657443,
+      "next_time_ms": 1704074657503
+    },
+    {
+      "previous_id": "4426997434",
+      "next_id": "4426997436",
+      "previous_time_ms": 1704076791880,
+      "next_time_ms": 1704076792163
+    },
+    {
+      "previous_id": "4426997647",
+      "next_id": "4426997649",
+      "previous_time_ms": 1704076815068,
+      "next_time_ms": 1704076815133
+    },
+    {
+      "previous_id": "4426998251",
+      "next_id": "4426998253",
+      "previous_time_ms": 1704076864400,
+      "next_time_ms": 1704076864489
+    },
+    {
+      "previous_id": "4426998296",
+      "next_id": "4426998298",
+      "previous_time_ms": 1704076865027,
+      "next_time_ms": 1704076865104
+    },
+    {
+      "previous_id": "4427026477",
+      "next_id": "4427026479",
+      "previous_time_ms": 1704078838730,
+      "next_time_ms": 1704078839135
+    },
+    {
+      "previous_id": "4427082360",
+      "next_id": "4427082362",
+      "previous_time_ms": 1704080783912,
+      "next_time_ms": 1704080784265
+    },
+    {
+      "previous_id": "4427108835",
+      "next_id": "4427108837",
+      "previous_time_ms": 1704082196032,
+      "next_time_ms": 1704082196110
+    },
+    {
+      "previous_id": "4427111601",
+      "next_id": "4427111603",
+      "previous_time_ms": 1704082378938,
+      "next_time_ms": 1704082379145
+    },
+    {
+      "previous_id": "4427112041",
+      "next_id": "4427112043",
+      "previous_time_ms": 1704082390025,
+      "next_time_ms": 1704082390078
+    },
+    {
+      "previous_id": "4427112058",
+      "next_id": "4427112060",
+      "previous_time_ms": 1704082391281,
+      "next_time_ms": 1704082391354
+    },
+    {
+      "previous_id": "4427118046",
+      "next_id": "4427118048",
+      "previous_time_ms": 1704082554470,
+      "next_time_ms": 1704082554615
+    },
+    {
+      "previous_id": "4427192685",
+      "next_id": "4427192687",
+      "previous_time_ms": 1704087060409,
+      "next_time_ms": 1704087060431
+    },
+    {
+      "previous_id": "4427195433",
+      "next_id": "4427195435",
+      "previous_time_ms": 1704087175956,
+      "next_time_ms": 1704087176540
+    }
+  ],
+  "quote_field_mismatch_count": 1,
+  "quote_field_examples": [
+    {
+      "trade_id": "4428495241",
+      "time_ms": 1704141863751,
+      "price": "43815.0",
+      "quantity": "244.322",
+      "reported_quote": "1.0704968",
+      "computed_quote": "10704968.4300"
+    }
+  ],
+  "example_limit": 20
+}

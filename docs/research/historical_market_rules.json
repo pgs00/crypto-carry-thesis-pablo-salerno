@@ -1,0 +1,1123 @@
+{
+  "schema": "research_evidence_partial_v1",
+  "generated_at": "2026-09-18T13:30:20Z",
+  "scope": {
+    "symbols": [
+      "BTCUSDT",
+      "ETHUSDT"
+    ],
+    "markets": [
+      "spot",
+      "futures_usdm_perpetual"
+    ],
+    "start": "2022-01-01T00:00:00Z",
+    "end_exclusive": "2026-09-01T00:00:00Z",
+    "priority_sample": "2024-01-01",
+    "spot_mode": "unleveraged",
+    "futures_mode": "isolated",
+    "futures_leverage": 2
+  },
+  "loadable_by_rulebook": false,
+  "warning": "Partial research facts. Unknown means unknown, never an open-ended validity guarantee. Not production market-rule snapshots.",
+  "sources": [
+    {
+      "id": "spot_step_2021",
+      "url": "https://www.binance.com/en/support/announcement/detail/6925d618ab6b47e2936cc4614eaad64b",
+      "publication_label": "2021-08-12 15:57",
+      "last_update_label": null,
+      "type": "announcement",
+      "access": "article_or_document_body_opened",
+      "publication_timezone": "not_explicit_in_displayed_publication_header"
+    },
+    {
+      "id": "btc_tick_2022",
+      "url": "https://www.binance.com/en-AU/support/announcement/detail/81e6795b0bae49828cbd52479094a987",
+      "publication_label": "2021-12-31 06:45",
+      "last_update_label": null,
+      "type": "announcement",
+      "access": "article_or_document_body_opened",
+      "publication_timezone": "not_explicit_in_displayed_publication_header"
+    },
+    {
+      "id": "eth_tiers_2022",
+      "url": "https://www.binance.com/en/support/announcement/detail/56ba139dd19249acb4f9470c3d98020d",
+      "publication_label": "2022-09-13 03:05",
+      "last_update_label": null,
+      "type": "announcement",
+      "access": "article_or_document_body_opened",
+      "publication_timezone": "not_explicit_in_displayed_publication_header"
+    },
+    {
+      "id": "spot_min_2023",
+      "url": "https://www.binance.com/en-AE/support/announcement/detail/c4706c73b805423a8d36be948e297603",
+      "publication_label": "2023-08-24 02:05",
+      "last_update_label": null,
+      "type": "announcement",
+      "access": "article_or_document_body_opened",
+      "publication_timezone": "not_explicit_in_displayed_publication_header"
+    },
+    {
+      "id": "futures_min_2023",
+      "url": "https://www.binance.com/en/support/announcement/detail/e4384cba297a4bd2a154be644d5d76f9",
+      "publication_label": "2023-10-27 12:40",
+      "last_update_label": "2023-10-30",
+      "type": "announcement",
+      "access": "article_or_document_body_opened",
+      "publication_timezone": "not_explicit_in_displayed_publication_header"
+    },
+    {
+      "id": "tiers_dec_2023",
+      "url": "https://www.binance.com/en/support/announcement/detail/d75c5ca94f704e96a6a4e55ffddfd65d",
+      "publication_label": "2024-01-02 13:50",
+      "last_update_label": null,
+      "type": "announcement",
+      "access": "article_or_document_body_opened",
+      "publication_timezone": "not_explicit_in_displayed_publication_header"
+    },
+    {
+      "id": "tiers_may_2024",
+      "url": "https://www.binance.com/en/support/announcement/detail/aa735cd2d8bd4e7bb092179cf086e486",
+      "publication_label": "2024-05-27 06:00",
+      "last_update_label": null,
+      "type": "announcement",
+      "access": "article_or_document_body_opened",
+      "publication_timezone": "not_explicit_in_displayed_publication_header"
+    },
+    {
+      "id": "btc_tiers_june_2025",
+      "url": "https://www.binance.com/en-PH/support/announcement/detail/e778988edec446038ad536bcb0c8d460",
+      "publication_label": "2025-06-14 14:08",
+      "last_update_label": null,
+      "type": "announcement",
+      "access": "article_or_document_body_opened",
+      "publication_timezone": "not_explicit_in_displayed_publication_header"
+    },
+    {
+      "id": "tiers_aug_2025",
+      "url": "https://www.binance.com/en/support/announcement/detail/8e428625ebeb4cc7ae8678026846095c",
+      "publication_label": "2025-08-17 03:31",
+      "last_update_label": "2025-08-25",
+      "type": "announcement",
+      "access": "article_or_document_body_opened",
+      "publication_timezone": "not_explicit_in_displayed_publication_header"
+    },
+    {
+      "id": "btc_min_2026",
+      "url": "https://www.binance.com/en-KZ/support/announcement/detail/10999fd17dc045de801c0c78ab29e6fc",
+      "publication_label": "2026-04-09 06:14",
+      "last_update_label": null,
+      "type": "announcement",
+      "access": "article_or_document_body_opened",
+      "publication_timezone": "not_explicit_in_displayed_publication_header"
+    },
+    {
+      "id": "liquidation_fee_2020",
+      "url": "https://www.binance.com/en/support/announcement/detail/41d8a353103c4fe18bf25c403bf7af3b",
+      "publication_label": "2020-11-23 06:42",
+      "last_update_label": null,
+      "type": "announcement",
+      "access": "article_or_document_body_opened",
+      "publication_timezone": "not_explicit_in_displayed_publication_header"
+    },
+    {
+      "id": "spot_halt_2023",
+      "url": "https://www.binance.com/en/blog/from-our-ceo/6789340645608890113",
+      "publication_label": "2023-03-24",
+      "last_update_label": null,
+      "type": "official_blog",
+      "access": "article_or_document_body_opened",
+      "publication_timezone": "not_explicit_in_displayed_publication_header"
+    },
+    {
+      "id": "spot_resume_2023",
+      "url": "https://www.binance.com/en/support/announcement/detail/813a31506e9f478ea8c1058b425df87a",
+      "publication_label": "2023-03-24 13:38",
+      "last_update_label": "2023-05-16",
+      "type": "announcement",
+      "access": "article_or_document_body_opened",
+      "publication_timezone": "not_explicit_in_displayed_publication_header"
+    },
+    {
+      "id": "margin_formula_current",
+      "url": "https://www.binance.com/en/support/faq/detail/360033162192",
+      "publication_label": "2019-09-09 02:32",
+      "last_update_label": "2026-03-27 12:58",
+      "type": "current_faq",
+      "access": "article_or_document_body_opened",
+      "publication_timezone": "not_explicit_in_displayed_publication_header"
+    },
+    {
+      "id": "liquidation_formula_current",
+      "url": "https://www.binance.com/en/support/faq/detail/b3c689c1f50a44cabb3a84e663b81d93",
+      "publication_label": "2020-06-11 09:01",
+      "last_update_label": "2025-12-31 05:00",
+      "type": "current_faq",
+      "access": "article_or_document_body_opened",
+      "publication_timezone": "not_explicit_in_displayed_publication_header"
+    },
+    {
+      "id": "liquidation_protocol_current",
+      "url": "https://www.binance.com/en/support/faq/detail/360033525271",
+      "publication_label": "2019-09-09 02:47",
+      "last_update_label": "2026-01-04 05:00",
+      "type": "current_faq",
+      "access": "article_or_document_body_opened",
+      "publication_timezone": "not_explicit_in_displayed_publication_header"
+    },
+    {
+      "id": "fee_basis_current",
+      "url": "https://www.binance.com/en/support/faq/detail/98488a516eb84e3eb34605683dffd554",
+      "publication_label": "2024-05-29 14:55",
+      "last_update_label": "2026-01-05 05:00",
+      "type": "current_faq",
+      "access": "article_or_document_body_opened",
+      "publication_timezone": "not_explicit_in_displayed_publication_header"
+    },
+    {
+      "id": "spot_filter_schema_current",
+      "url": "https://developers.binance.com/en/docs/products/spot/filters",
+      "publication_label": null,
+      "last_update_label": "2026-09-18",
+      "type": "current_api_documentation",
+      "access": "article_or_document_body_opened",
+      "publication_timezone": "not_explicit_in_displayed_publication_header"
+    },
+    {
+      "id": "futures_bracket_schema_current",
+      "url": "https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/rest-api/account",
+      "publication_label": null,
+      "last_update_label": null,
+      "type": "current_api_documentation",
+      "access": "article_or_document_body_opened",
+      "publication_timezone": "not_explicit_in_displayed_publication_header"
+    },
+    {
+      "id": "futures_exchange_schema_current",
+      "url": "https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/Exchange-Information",
+      "publication_label": null,
+      "last_update_label": null,
+      "type": "current_api_documentation",
+      "access": "article_or_document_body_opened",
+      "publication_timezone": "not_explicit_in_displayed_publication_header"
+    }
+  ],
+  "events": [
+    {
+      "id": "spot_step_2021",
+      "source_id": "spot_step_2021",
+      "market": "spot",
+      "effective_at": "2021-08-26T06:00:00Z",
+      "field": "step",
+      "values": [
+        {
+          "symbol": "BTCUSDT",
+          "before": "0.000001",
+          "after": "0.00001"
+        },
+        {
+          "symbol": "ETHUSDT",
+          "before": "0.00001",
+          "after": "0.0001"
+        }
+      ],
+      "scope_caveat": "Pre-period event only; no historical minQty/maxQty or MARKET_LOT_SIZE proved.",
+      "existing_orders_affected": false
+    },
+    {
+      "id": "btc_tick_2022",
+      "source_id": "btc_tick_2022",
+      "market": "futures_usdm_perpetual",
+      "effective_at": "2022-02-15T03:30:00Z",
+      "field": "tick",
+      "values": [
+        {
+          "symbol": "BTCUSDT",
+          "before": "0.01",
+          "after": "0.1"
+        }
+      ],
+      "existing_orders_affected": false
+    },
+    {
+      "id": "spot_min_2023",
+      "source_id": "spot_min_2023",
+      "market": "spot",
+      "effective_deadline": "2023-08-31T03:00:00Z",
+      "time_precision": "by_deadline_not_atomic_effective_time",
+      "field": "min_notional",
+      "unit": "USDT",
+      "values": [
+        {
+          "symbol": "BTCUSDT",
+          "before": "10",
+          "after": "5"
+        },
+        {
+          "symbol": "ETHUSDT",
+          "before": "10",
+          "after": "5"
+        }
+      ],
+      "existing_orders_affected": false
+    },
+    {
+      "id": "futures_min_2023",
+      "source_id": "futures_min_2023",
+      "market": "futures_usdm_perpetual",
+      "effective_deadline": "2023-11-02T10:00:00Z",
+      "time_precision": "by_deadline_not_atomic_effective_time",
+      "field": "min_notional",
+      "unit": "USDT",
+      "values": [
+        {
+          "symbol": "BTCUSDT",
+          "before": "5",
+          "after": "100"
+        },
+        {
+          "symbol": "ETHUSDT",
+          "before": "5",
+          "after": "20"
+        }
+      ],
+      "existing_orders_affected": false
+    },
+    {
+      "id": "btc_min_2026",
+      "source_id": "btc_min_2026",
+      "market": "futures_usdm_perpetual",
+      "effective_start": "2026-04-14T06:30:00Z",
+      "rollout_duration_approx_minutes": 240,
+      "field": "min_notional",
+      "unit": "USDT",
+      "values": [
+        {
+          "symbol": "BTCUSDT",
+          "before": "100",
+          "after": "50"
+        }
+      ],
+      "existing_orders_affected": false
+    },
+    {
+      "id": "liquidation_fee_2020",
+      "source_id": "liquidation_fee_2020",
+      "market": "futures_usdm_perpetual",
+      "effective_at": "2020-11-23T07:00:00Z",
+      "field": "liquidation_fee",
+      "values": [
+        {
+          "symbol": "BTCUSDT",
+          "before": "0.003",
+          "after": "0.005"
+        },
+        {
+          "symbol": "ETHUSDT",
+          "before": "0.005",
+          "after": "0.0075"
+        }
+      ],
+      "scope_caveat": "Pre-period event only. Persistence through 2022-2026 is not established."
+    },
+    {
+      "id": "spot_halt_20230324",
+      "source_id": "spot_halt_2023",
+      "corroboration_source_id": "spot_resume_2023",
+      "market": "spot",
+      "symbols": [
+        "BTCUSDT",
+        "ETHUSDT"
+      ],
+      "effective_start": "2023-03-24T11:27:00Z",
+      "effective_end_exclusive": "2023-03-24T14:00:00Z",
+      "field": "operational",
+      "value": false,
+      "knowledge_caveat": "Retrospective event; no contemporaneous start notice with exact publication time recovered. Does not certify operations outside this interval."
+    }
+  ],
+  "tier_columns": [
+    "floor_usdt_exclusive",
+    "cap_usdt_inclusive",
+    "rate_decimal",
+    "deduction_usdt_derived",
+    "max_initial_leverage"
+  ],
+  "tier_deduction_method": {
+    "formula": "deduction[0]=0; deduction[i]=deduction[i-1]+floor[i]*(rate[i]-rate[i-1])",
+    "status": "analytical_reconstruction_with_continuous_bracket_assumption",
+    "source_ids": [
+      "margin_formula_current",
+      "liquidation_formula_current"
+    ],
+    "historical_version_verified": false
+  },
+  "tier_tables": [
+    {
+      "id": "eth_after_20220913",
+      "source_id": "eth_tiers_2022",
+      "symbol": "ETHUSDT",
+      "effective_at": "2022-09-13T07:00:00Z",
+      "existing_positions_affected": true,
+      "rows": [
+        [
+          "0",
+          "250000",
+          "0.0065",
+          "0",
+          75
+        ],
+        [
+          "250000",
+          "1000000",
+          "0.01",
+          "875",
+          50
+        ],
+        [
+          "1000000",
+          "5000000",
+          "0.02",
+          "10875",
+          25
+        ],
+        [
+          "5000000",
+          "10000000",
+          "0.05",
+          "160875",
+          10
+        ],
+        [
+          "10000000",
+          "20000000",
+          "0.1",
+          "660875",
+          5
+        ],
+        [
+          "20000000",
+          "40000000",
+          "0.125",
+          "1160875",
+          4
+        ],
+        [
+          "40000000",
+          "80000000",
+          "0.15",
+          "2160875",
+          3
+        ],
+        [
+          "80000000",
+          "150000000",
+          "0.25",
+          "10160875",
+          2
+        ],
+        [
+          "150000000",
+          "300000000",
+          "0.5",
+          "47660875",
+          1
+        ]
+      ],
+      "market": "futures_usdm_perpetual",
+      "effective_until": null,
+      "continuity_to_next_event_proven": false,
+      "known_from": null,
+      "announcement_fields_status": "confirmed_partial",
+      "deduction_status": "derived_not_directly_published"
+    },
+    {
+      "id": "btc_after_20231224",
+      "source_id": "tiers_dec_2023",
+      "symbol": "BTCUSDT",
+      "effective_at": "2023-12-24T09:35:00Z",
+      "existing_positions_affected": false,
+      "rows": [
+        [
+          "0",
+          "50000",
+          "0.004",
+          "0",
+          125
+        ],
+        [
+          "50000",
+          "500000",
+          "0.005",
+          "50",
+          100
+        ],
+        [
+          "500000",
+          "10000000",
+          "0.01",
+          "2550",
+          50
+        ],
+        [
+          "10000000",
+          "80000000",
+          "0.025",
+          "152550",
+          20
+        ],
+        [
+          "80000000",
+          "150000000",
+          "0.05",
+          "2152550",
+          10
+        ],
+        [
+          "150000000",
+          "300000000",
+          "0.1",
+          "9652550",
+          5
+        ],
+        [
+          "300000000",
+          "450000000",
+          "0.125",
+          "17152550",
+          4
+        ],
+        [
+          "450000000",
+          "600000000",
+          "0.15",
+          "28402550",
+          3
+        ],
+        [
+          "600000000",
+          "800000000",
+          "0.25",
+          "88402550",
+          2
+        ],
+        [
+          "800000000",
+          "1000000000",
+          "0.5",
+          "288402550",
+          1
+        ]
+      ],
+      "market": "futures_usdm_perpetual",
+      "effective_until": null,
+      "continuity_to_next_event_proven": false,
+      "known_from": null,
+      "announcement_fields_status": "confirmed_partial",
+      "deduction_status": "derived_not_directly_published"
+    },
+    {
+      "id": "eth_after_20231224",
+      "source_id": "tiers_dec_2023",
+      "symbol": "ETHUSDT",
+      "effective_at": "2023-12-24T09:35:00Z",
+      "existing_positions_affected": false,
+      "rows": [
+        [
+          "0",
+          "50000",
+          "0.004",
+          "0",
+          125
+        ],
+        [
+          "50000",
+          "500000",
+          "0.005",
+          "50",
+          100
+        ],
+        [
+          "500000",
+          "1000000",
+          "0.0065",
+          "800",
+          75
+        ],
+        [
+          "1000000",
+          "5000000",
+          "0.01",
+          "4300",
+          50
+        ],
+        [
+          "5000000",
+          "50000000",
+          "0.02",
+          "54300",
+          20
+        ],
+        [
+          "50000000",
+          "100000000",
+          "0.05",
+          "1554300",
+          10
+        ],
+        [
+          "100000000",
+          "150000000",
+          "0.1",
+          "6554300",
+          5
+        ],
+        [
+          "150000000",
+          "300000000",
+          "0.125",
+          "10304300",
+          4
+        ],
+        [
+          "300000000",
+          "400000000",
+          "0.15",
+          "17804300",
+          3
+        ],
+        [
+          "400000000",
+          "500000000",
+          "0.25",
+          "57804300",
+          2
+        ],
+        [
+          "500000000",
+          "800000000",
+          "0.5",
+          "182804300",
+          1
+        ]
+      ],
+      "market": "futures_usdm_perpetual",
+      "effective_until": null,
+      "continuity_to_next_event_proven": false,
+      "known_from": null,
+      "announcement_fields_status": "confirmed_partial",
+      "deduction_status": "derived_not_directly_published"
+    },
+    {
+      "id": "btc_after_20240528",
+      "source_id": "tiers_may_2024",
+      "symbol": "BTCUSDT",
+      "effective_at": "2024-05-28T10:30:00Z",
+      "rollout_duration_approx_minutes": 30,
+      "existing_positions_affected": false,
+      "rows": [
+        [
+          "0",
+          "50000",
+          "0.004",
+          "0",
+          125
+        ],
+        [
+          "50000",
+          "600000",
+          "0.005",
+          "50",
+          100
+        ],
+        [
+          "600000",
+          "3000000",
+          "0.0065",
+          "950",
+          75
+        ],
+        [
+          "3000000",
+          "12000000",
+          "0.01",
+          "11450",
+          50
+        ],
+        [
+          "12000000",
+          "70000000",
+          "0.02",
+          "131450",
+          25
+        ],
+        [
+          "70000000",
+          "100000000",
+          "0.025",
+          "481450",
+          20
+        ],
+        [
+          "100000000",
+          "230000000",
+          "0.05",
+          "2981450",
+          10
+        ],
+        [
+          "230000000",
+          "480000000",
+          "0.1",
+          "14481450",
+          5
+        ],
+        [
+          "480000000",
+          "600000000",
+          "0.125",
+          "26481450",
+          4
+        ],
+        [
+          "600000000",
+          "800000000",
+          "0.15",
+          "41481450",
+          3
+        ],
+        [
+          "800000000",
+          "1200000000",
+          "0.25",
+          "121481450",
+          2
+        ],
+        [
+          "1200000000",
+          "1800000000",
+          "0.5",
+          "421481450",
+          1
+        ]
+      ],
+      "market": "futures_usdm_perpetual",
+      "effective_until": null,
+      "continuity_to_next_event_proven": false,
+      "known_from": null,
+      "announcement_fields_status": "confirmed_partial",
+      "deduction_status": "derived_not_directly_published"
+    },
+    {
+      "id": "eth_after_20240528",
+      "source_id": "tiers_may_2024",
+      "symbol": "ETHUSDT",
+      "effective_at": "2024-05-28T10:30:00Z",
+      "rollout_duration_approx_minutes": 30,
+      "existing_positions_affected": false,
+      "rows": [
+        [
+          "0",
+          "50000",
+          "0.004",
+          "0",
+          125
+        ],
+        [
+          "50000",
+          "600000",
+          "0.005",
+          "50",
+          100
+        ],
+        [
+          "600000",
+          "3000000",
+          "0.0065",
+          "950",
+          75
+        ],
+        [
+          "3000000",
+          "12000000",
+          "0.01",
+          "11450",
+          50
+        ],
+        [
+          "12000000",
+          "50000000",
+          "0.02",
+          "131450",
+          25
+        ],
+        [
+          "50000000",
+          "65000000",
+          "0.025",
+          "381450",
+          20
+        ],
+        [
+          "65000000",
+          "150000000",
+          "0.05",
+          "2006450",
+          10
+        ],
+        [
+          "150000000",
+          "320000000",
+          "0.1",
+          "9506450",
+          5
+        ],
+        [
+          "320000000",
+          "400000000",
+          "0.125",
+          "17506450",
+          4
+        ],
+        [
+          "400000000",
+          "530000000",
+          "0.15",
+          "27506450",
+          3
+        ],
+        [
+          "530000000",
+          "800000000",
+          "0.25",
+          "80506450",
+          2
+        ],
+        [
+          "800000000",
+          "1200000000",
+          "0.5",
+          "280506450",
+          1
+        ]
+      ],
+      "market": "futures_usdm_perpetual",
+      "effective_until": null,
+      "continuity_to_next_event_proven": false,
+      "known_from": null,
+      "announcement_fields_status": "confirmed_partial",
+      "deduction_status": "derived_not_directly_published"
+    },
+    {
+      "id": "btc_after_20250617",
+      "source_id": "btc_tiers_june_2025",
+      "symbol": "BTCUSDT",
+      "effective_at": "2025-06-17T06:30:00Z",
+      "rollout_duration_approx_minutes": 60,
+      "existing_positions_affected": true,
+      "rows": [
+        [
+          "0",
+          "300000",
+          "0.004",
+          "0",
+          125
+        ],
+        [
+          "300000",
+          "800000",
+          "0.005",
+          "300",
+          100
+        ],
+        [
+          "800000",
+          "3000000",
+          "0.0065",
+          "1500",
+          75
+        ],
+        [
+          "3000000",
+          "12000000",
+          "0.01",
+          "12000",
+          50
+        ],
+        [
+          "12000000",
+          "70000000",
+          "0.02",
+          "132000",
+          25
+        ],
+        [
+          "70000000",
+          "100000000",
+          "0.025",
+          "482000",
+          20
+        ],
+        [
+          "100000000",
+          "230000000",
+          "0.05",
+          "2982000",
+          10
+        ],
+        [
+          "230000000",
+          "480000000",
+          "0.1",
+          "14482000",
+          5
+        ],
+        [
+          "480000000",
+          "600000000",
+          "0.125",
+          "26482000",
+          4
+        ],
+        [
+          "600000000",
+          "800000000",
+          "0.15",
+          "41482000",
+          3
+        ],
+        [
+          "800000000",
+          "1200000000",
+          "0.25",
+          "121482000",
+          2
+        ],
+        [
+          "1200000000",
+          "1800000000",
+          "0.5",
+          "421482000",
+          1
+        ]
+      ],
+      "market": "futures_usdm_perpetual",
+      "effective_until": null,
+      "continuity_to_next_event_proven": false,
+      "known_from": null,
+      "announcement_fields_status": "confirmed_partial",
+      "deduction_status": "derived_not_directly_published"
+    },
+    {
+      "id": "btc_after_20250819",
+      "source_id": "tiers_aug_2025",
+      "symbol": "BTCUSDT",
+      "effective_at": "2025-08-19T06:30:00Z",
+      "rollout_duration_approx_minutes": 60,
+      "existing_positions_affected": true,
+      "rows": [
+        [
+          "0",
+          "300000",
+          "0.004",
+          "0",
+          150
+        ],
+        [
+          "300000",
+          "800000",
+          "0.005",
+          "300",
+          100
+        ],
+        [
+          "800000",
+          "3000000",
+          "0.0065",
+          "1500",
+          75
+        ],
+        [
+          "3000000",
+          "12000000",
+          "0.01",
+          "12000",
+          50
+        ],
+        [
+          "12000000",
+          "70000000",
+          "0.02",
+          "132000",
+          25
+        ],
+        [
+          "70000000",
+          "100000000",
+          "0.025",
+          "482000",
+          20
+        ],
+        [
+          "100000000",
+          "230000000",
+          "0.05",
+          "2982000",
+          10
+        ],
+        [
+          "230000000",
+          "480000000",
+          "0.1",
+          "14482000",
+          5
+        ],
+        [
+          "480000000",
+          "600000000",
+          "0.125",
+          "26482000",
+          4
+        ],
+        [
+          "600000000",
+          "800000000",
+          "0.15",
+          "41482000",
+          3
+        ],
+        [
+          "800000000",
+          "1200000000",
+          "0.25",
+          "121482000",
+          2
+        ],
+        [
+          "1200000000",
+          "1800000000",
+          "0.5",
+          "421482000",
+          1
+        ]
+      ],
+      "market": "futures_usdm_perpetual",
+      "effective_until": null,
+      "continuity_to_next_event_proven": false,
+      "known_from": null,
+      "announcement_fields_status": "confirmed_partial",
+      "deduction_status": "derived_not_directly_published"
+    },
+    {
+      "id": "eth_after_20250819",
+      "source_id": "tiers_aug_2025",
+      "symbol": "ETHUSDT",
+      "effective_at": "2025-08-19T06:30:00Z",
+      "rollout_duration_approx_minutes": 60,
+      "existing_positions_affected": true,
+      "rows": [
+        [
+          "0",
+          "300000",
+          "0.004",
+          "0",
+          150
+        ],
+        [
+          "300000",
+          "800000",
+          "0.005",
+          "300",
+          100
+        ],
+        [
+          "800000",
+          "3000000",
+          "0.0065",
+          "1500",
+          75
+        ],
+        [
+          "3000000",
+          "12000000",
+          "0.01",
+          "12000",
+          50
+        ],
+        [
+          "12000000",
+          "50000000",
+          "0.02",
+          "132000",
+          25
+        ],
+        [
+          "50000000",
+          "65000000",
+          "0.025",
+          "382000",
+          20
+        ],
+        [
+          "65000000",
+          "150000000",
+          "0.05",
+          "2007000",
+          10
+        ],
+        [
+          "150000000",
+          "320000000",
+          "0.1",
+          "9507000",
+          5
+        ],
+        [
+          "320000000",
+          "400000000",
+          "0.125",
+          "17507000",
+          4
+        ],
+        [
+          "400000000",
+          "530000000",
+          "0.15",
+          "27507000",
+          3
+        ],
+        [
+          "530000000",
+          "800000000",
+          "0.25",
+          "80507000",
+          2
+        ],
+        [
+          "800000000",
+          "1200000000",
+          "0.5",
+          "280507000",
+          1
+        ]
+      ],
+      "market": "futures_usdm_perpetual",
+      "effective_until": null,
+      "continuity_to_next_event_proven": false,
+      "known_from": null,
+      "announcement_fields_status": "confirmed_partial",
+      "deduction_status": "derived_not_directly_published"
+    }
+  ],
+  "missing_for_complete_snapshots": [
+    "dated baseline as of 2022-01-01 and 2024-01-01 for all fields",
+    "historical MARKET_LOT_SIZE and LOT_SIZE minQty/maxQty/step distinctions",
+    "spot tick and ETHUSDT futures tick continuity",
+    "historical maxNotional including applicability to MARKET",
+    "complete maintenance tier change chain and directly published historical deductions",
+    "historical liquidation fee continuity, fee basis and simultaneous regular fee rule",
+    "exhaustive operational calendar",
+    "publication timezone and amendment histories where not explicit"
+  ],
+  "known_from_policy": "Do not set known_from=effective_at from retrospective announcements. Original publication labels do not prove unchanged article contents at that time; archive evidence is still needed.",
+  "user_confirmation_needed_for_research": false
+}
