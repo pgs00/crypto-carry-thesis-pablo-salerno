@@ -70,6 +70,11 @@ class Config:
     data_dir: str = "data"
     rules_file: str = "data/rules/history.json"
     fee_profile: str = "VIP0_no_BNB_no_referral_documented_public_promotions"
+    analysis_mode: str = "strict_historical"
+    funding_proxy_stress_bps: Decimal = Decimal("0")
+    research_futures_taker_fee: Decimal = Decimal("0.0005")
+    research_maintenance_multiplier: Decimal = Decimal("1")
+    research_liquidation_fee: Decimal = Decimal("0.0125")
     sample_start: str = "2024-01-01T00:00:00Z"
     sample_end: str = "2024-01-02T00:00:00Z"
     accounting_tolerance: Decimal = Decimal("0.00000001")
@@ -114,6 +119,27 @@ class Config:
             raise ValueError("Funding availability cannot precede the 60 second convention")
         if self.execution_model not in ("first_trade", "vwap"):
             raise ValueError("Unknown execution model")
+        if self.analysis_mode not in ("strict_historical", "prescribed_research"):
+            raise ValueError("Unknown analysis mode")
+        if (
+            self.analysis_mode == "prescribed_research"
+            and self.fee_profile != "prescribed_fixed_no_discounts"
+        ):
+            raise ValueError("Research fee_profile must be prescribed_fixed_no_discounts")
+        if abs(self.funding_proxy_stress_bps) >= Decimal("10000"):
+            raise ValueError("funding_proxy_stress_bps magnitude must be less than 10000")
+        for key in ("research_futures_taker_fee", "research_liquidation_fee"):
+            if not 0 <= getattr(self, key) < 1:
+                raise ValueError(f"{key} must be non-negative and less than one")
+        if self.research_maintenance_multiplier <= 0:
+            raise ValueError("research_maintenance_multiplier must be positive")
+        if self.analysis_mode == "strict_historical" and (
+            self.funding_proxy_stress_bps != 0
+            or self.research_futures_taker_fee != Decimal("0.0005")
+            or self.research_maintenance_multiplier != 1
+            or self.research_liquidation_fee != Decimal("0.0125")
+        ):
+            raise ValueError("Research parameters require prescribed_research analysis mode")
         if not 0 < self.target_fraction < Decimal("0.5"):
             raise ValueError("Invalid per-asset target")
         if not 0 <= self.hedge_tolerance < self.hedge_trigger < 1:

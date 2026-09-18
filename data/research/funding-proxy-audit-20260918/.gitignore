@@ -1,0 +1,4 @@
+# Downloaded public archives stay local; manifests preserve URLs and checksums.
+*.zip
+*.CHECKSUM
+

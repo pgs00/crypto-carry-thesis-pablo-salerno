@@ -12,6 +12,7 @@ from pathlib import Path
 from .config import Config, timestamp
 from .data.download import download
 from .data.normalize import normalize
+from .data.prescribed import prescribed_rules
 from .data.replay import input_hashes, iter_records
 from .data.rules import RuleBook, synthetic_rules
 from .data.validate import validate_data
@@ -171,6 +172,10 @@ def main(argv: list[str] | None = None) -> int:
             print(json.dumps(dict(run_id=path.name, status=status, report=str(path / "report.md"))))
             return 0 if status == "complete" else 2
         synthetic = args.command == "demo"
+        if synthetic and config.analysis_mode == "prescribed_research":
+            raise ValueError(
+                "Use backtest with research configuration; demo requires its synthetic configuration"
+            )
         if synthetic:
             config = demo_config(config)
             quality = dict(
@@ -192,7 +197,9 @@ def main(argv: list[str] | None = None) -> int:
                 quality = validate_data(config, root, scope="full")
             inputs = input_hashes(root, config)
             rules = (
-                RuleBook.load(root / config.rules_file)
+                prescribed_rules(config)
+                if config.analysis_mode == "prescribed_research"
+                else RuleBook.load(root / config.rules_file)
                 if (root / config.rules_file).exists()
                 else RuleBook([])
             )
@@ -238,12 +245,19 @@ def main(argv: list[str] | None = None) -> int:
                     )
                     label = "checkpoint-prefix"
                 results.append(b)
+        data_kind = (
+            "synthetic"
+            if synthetic
+            else "historical_assumptions"
+            if config.analysis_mode == "prescribed_research"
+            else "historical"
+        )
         path = write_run(
             root,
             config,
             results,
             quality,
-            data_kind="synthetic" if synthetic else "historical",
+            data_kind=data_kind,
             label=label,
             inputs=inputs,
         )
@@ -261,7 +275,7 @@ def main(argv: list[str] | None = None) -> int:
                 dict(
                     run_id=path.name,
                     status=status,
-                    data_kind="synthetic" if synthetic else "historical",
+                    data_kind=data_kind,
                     report=str(path / "report.md"),
                 ),
                 ensure_ascii=False,

@@ -1,0 +1,63 @@
+{
+  "utc": "2026-09-18T17:00:40.937720+00:00",
+  "epoch": 1789750840.9377384,
+  "totals": {
+    "files": 3200,
+    "bytes": 30614420184,
+    "zip_files": 1599,
+    "zip_bytes": 30593297614,
+    "partial_bytes": 20971520
+  },
+  "groups": {
+    "raw/futures/markPriceKlines/BTCUSDT": {
+      "count": 500,
+      "bytes": 19765998,
+      "first": "BTCUSDT-1m-2020-08-10.zip",
+      "last": "BTCUSDT-1m-2022-02-10.zip"
+    },
+    "raw/futures/trades/BTCUSDT": {
+      "count": 549,
+      "bytes": 16171449881,
+      "first": "BTCUSDT-trades-2020-08-11.zip",
+      "last": "BTCUSDT-trades-2022-02-10.zip"
+    },
+    "raw/spot/trades/BTCUSDT": {
+      "count": 550,
+      "bytes": 14402081735,
+      "first": "BTCUSDT-trades-2020-08-11.zip",
+      "last": "BTCUSDT-trades-2022-02-11.zip"
+    }
+  },
+  "recent": [
+    {
+      "utc": "2026-09-18T17:00:40.733228+00:00",
+      "file": "D:\\Backtesting\\data\\raw\\futures\\trades\\BTCUSDT\\BTCUSDT-trades-2022-02-11.zip.part",
+      "bytes": 20971520
+    },
+    {
+      "utc": "2026-09-18T17:00:34.801565+00:00",
+      "file": "D:\\Backtesting\\data\\raw\\futures\\trades\\BTCUSDT\\BTCUSDT-trades-2022-02-11.zip.CHECKSUM",
+      "bytes": 96
+    },
+    {
+      "utc": "2026-09-18T17:00:33.521974+00:00",
+      "file": "D:\\Backtesting\\data\\raw\\spot\\trades\\BTCUSDT\\BTCUSDT-trades-2022-02-11.zip",
+      "bytes": 18124820
+    },
+    {
+      "utc": "2026-09-18T17:00:28.072587+00:00",
+      "file": "D:\\Backtesting\\data\\raw\\spot\\trades\\BTCUSDT\\BTCUSDT-trades-2022-02-11.zip.CHECKSUM",
+      "bytes": 95
+    },
+    {
+      "utc": "2026-09-18T17:00:26.976859+00:00",
+      "file": "D:\\Backtesting\\data\\raw\\futures\\markPriceKlines\\BTCUSDT\\BTCUSDT-1m-2022-02-10.zip",
+      "bytes": 40910
+    },
+    {
+      "utc": "2026-09-18T17:00:25.563271+00:00",
+      "file": "D:\\Backtesting\\data\\raw\\futures\\markPriceKlines\\BTCUSDT\\BTCUSDT-1m-2022-02-10.zip.CHECKSUM",
+      "bytes": 92
+    }
+  ]
+}

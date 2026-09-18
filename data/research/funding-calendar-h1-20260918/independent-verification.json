@@ -1,0 +1,34 @@
+{
+  "hashes_verified": 253,
+  "calendar_archives": 114,
+  "signals_independently_recalculated": 10224,
+  "valid_horizons_independently_recalculated": 10180,
+  "max_forecast_difference": 6.938893903907228e-18,
+  "max_realized_difference": 3.469446951953614e-18,
+  "summary": [
+    {
+      "period": "full",
+      "observations": 10180,
+      "excluded": 44,
+      "mae_ewma_bps": 6.29897768581,
+      "mae_no_change_bps": 8.70332211448,
+      "relative_mae_reduction": 0.27625593963365025
+    },
+    {
+      "period": "2022-2023",
+      "observations": 4380,
+      "excluded": 0,
+      "mae_ewma_bps": 7.38423023864,
+      "mae_no_change_bps": 10.276483307489999,
+      "relative_mae_reduction": 0.2814438541190434
+    },
+    {
+      "period": "2024+",
+      "observations": 5800,
+      "excluded": 44,
+      "mae_ewma_bps": 5.47942489592,
+      "mae_no_change_bps": 7.51531417906,
+      "relative_mae_reduction": 0.27089875880540293
+    }
+  ]
+}

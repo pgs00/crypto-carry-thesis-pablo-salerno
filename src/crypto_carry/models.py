@@ -29,6 +29,12 @@ class Funding:
     settlement_mark_price: Decimal | None
     source_file: str = "synthetic"
     interval_verified: bool = False
+    settlement_mark_method: str = "exact"
+    settlement_mark_source_file: str = ""
+    settlement_mark_close_time: int | None = None
+    settlement_mark_available_at: int | None = None
+    settlement_mark_proxy_base: Decimal | None = None
+    settlement_mark_stress_bps: Decimal = D(0)
 
 
 @dataclass(frozen=True)

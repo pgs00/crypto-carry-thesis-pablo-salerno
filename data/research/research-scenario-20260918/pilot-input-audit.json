@@ -1,0 +1,92 @@
+{
+  "purpose": "Observed execution pilot, not full-window evidence or parameter selection",
+  "start": "2024-01-01T00:00:00Z",
+  "end": "2024-01-01T00:10:00Z",
+  "source_manifest_sha256": "bdb56d66b54335978d2f1bc5515ee67feacea72a0406f545f15e210a069233f0",
+  "sources": [
+    {
+      "path": "data/processed/dataset=trades/symbol=BTCUSDT/market=spot/date=2024-01-01/part-00000.parquet",
+      "sha256": "96f4dfd420d04a9a7e2a3dec6cbc48403adef63f89df387d7a86b61388e32926"
+    },
+    {
+      "path": "data/processed/dataset=trades/symbol=BTCUSDT/market=futures/date=2024-01-01/part-00000.parquet",
+      "sha256": "560963feb933884f0264a1214a86b67c8c18ee4026958bc375a0c7d3c7c6670e"
+    },
+    {
+      "path": "data/processed/dataset=marks/symbol=BTCUSDT/market=futures/date=2023-12-31/part-00000.parquet",
+      "sha256": "f8ee9b581f08fb17c6f525708e4790fcd843f3bded1c4d0c158aa1fe20d50724"
+    },
+    {
+      "path": "data/processed/dataset=marks/symbol=BTCUSDT/market=futures/date=2024-01-01/part-00000.parquet",
+      "sha256": "6c15af776d1aa60b7a1d3fdf148477c97405c5488362d186abf8e7b1b4b8a4cf"
+    },
+    {
+      "path": "data/processed/dataset=trades/symbol=ETHUSDT/market=spot/date=2024-01-01/part-00000.parquet",
+      "sha256": "136bb9e4f1cabd5dadbc12d87237a185fef5a0854d89aebb70fe5536d7511ce3"
+    },
+    {
+      "path": "data/processed/dataset=trades/symbol=ETHUSDT/market=futures/date=2024-01-01/part-00000.parquet",
+      "sha256": "8cf38dc04c20608698a28476835eded4e0790d2ff96c46e11379ce5d8dc78dcb"
+    },
+    {
+      "path": "data/processed/dataset=marks/symbol=ETHUSDT/market=futures/date=2023-12-31/part-00000.parquet",
+      "sha256": "1d2fab643be13b41d66e94390f6dd8f2f923e56de3662a7f405b2a8920e3ebf5"
+    },
+    {
+      "path": "data/processed/dataset=marks/symbol=ETHUSDT/market=futures/date=2024-01-01/part-00000.parquet",
+      "sha256": "5584b27912147ec6fc936610c5475eae612792a845c62400ed4e7bba85f26319"
+    }
+  ],
+  "streams": [
+    {
+      "symbol": "BTCUSDT",
+      "dataset": "trades",
+      "market": "spot",
+      "rows": 11484,
+      "first_trade_id": "3344774379",
+      "last_trade_id": "3344785862"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "dataset": "trades",
+      "market": "futures",
+      "rows": 24994,
+      "first_trade_id": "4426785098",
+      "last_trade_id": "4426810091"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "dataset": "marks",
+      "market": "futures",
+      "rows": 10,
+      "first_trade_id": null,
+      "last_trade_id": null
+    },
+    {
+      "symbol": "ETHUSDT",
+      "dataset": "trades",
+      "market": "spot",
+      "rows": 5947,
+      "first_trade_id": "1266393092",
+      "last_trade_id": "1266399038"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "dataset": "trades",
+      "market": "futures",
+      "rows": 18968,
+      "first_trade_id": "3478498074",
+      "last_trade_id": "3478517041"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "dataset": "marks",
+      "market": "futures",
+      "rows": 10,
+      "first_trade_id": null,
+      "last_trade_id": null
+    }
+  ],
+  "validation_status": "complete",
+  "issues": []
+}

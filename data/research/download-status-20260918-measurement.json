@@ -1,0 +1,74 @@
+{
+  "utc": "2026-09-18T17:03:27.624369+00:00",
+  "elapsed_sample_seconds": 166.53248977661133,
+  "downloaded_bytes": 31023240213,
+  "completed_zip_count": 1629,
+  "completed_zip_bytes": 31006309117,
+  "partial_files": [
+    {
+      "path": "D:\\Backtesting\\data\\raw\\futures\\trades\\BTCUSDT\\BTCUSDT-trades-2022-02-21.zip.part",
+      "bytes": 16777216
+    }
+  ],
+  "sample_growth_bytes": 408820029,
+  "sample_speed_mb_s": 2.454896516279773,
+  "sample_speed_gb_hour": 8.837627458607182,
+  "available_archive_bytes": 261668747330,
+  "remaining_zip_bytes": 230645660997,
+  "byte_progress_pct": 11.855862287549249,
+  "sample_estimated_remaining_hours": 26.098142524933944,
+  "sample_estimated_finish_argentina": "2026-09-19T16:09:20.937444-03:00",
+  "rolling_completion_rates": {
+    "5": {
+      "zip_bytes": 795076150,
+      "zip_files": 51,
+      "largest_zip": 49485599,
+      "gb_per_hour": 9.5409138,
+      "rough_remaining_hours": 24.17437845387514
+    },
+    "10": {
+      "zip_bytes": 1745608413,
+      "zip_files": 100,
+      "largest_zip": 68831618,
+      "gb_per_hour": 10.473650478,
+      "rough_remaining_hours": 22.021515944366612
+    },
+    "30": {
+      "zip_bytes": 5376086725,
+      "zip_files": 333,
+      "largest_zip": 68831618,
+      "gb_per_hour": 10.752173450000003,
+      "rough_remaining_hours": 21.451073317367293
+    },
+    "60": {
+      "zip_bytes": 12044831999,
+      "zip_files": 678,
+      "largest_zip": 83748646,
+      "gb_per_hour": 12.044831999,
+      "rough_remaining_hours": 19.14893134384514
+    }
+  },
+  "latest_complete": [
+    {
+      "utc": "2026-09-18T17:03:22.009041+00:00",
+      "path": "D:\\Backtesting\\data\\raw\\spot\\trades\\BTCUSDT\\BTCUSDT-trades-2022-02-21.zip",
+      "bytes": 21193011
+    },
+    {
+      "utc": "2026-09-18T17:03:15.397815+00:00",
+      "path": "D:\\Backtesting\\data\\raw\\futures\\markPriceKlines\\BTCUSDT\\BTCUSDT-1m-2022-02-20.zip",
+      "bytes": 37189
+    },
+    {
+      "utc": "2026-09-18T17:03:12.631778+00:00",
+      "path": "D:\\Backtesting\\data\\raw\\futures\\trades\\BTCUSDT\\BTCUSDT-trades-2022-02-20.zip",
+      "bytes": 26498332
+    }
+  ],
+  "limitations": [
+    "ETA assumes current throughput remains constant; includes completed files plus partial progress.",
+    "Rolling ZIP-completion rates include whole files finished in the window, so start-boundary files bias the estimate.",
+    "Remote total includes only currently listed planned archives, excluding checksums, funding API responses and normalization.",
+    "77 planned daily mark archives absent from the remote catalog are a completeness issue separate from download completion."
+  ]
+}

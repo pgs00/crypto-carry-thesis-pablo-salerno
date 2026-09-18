@@ -7,6 +7,7 @@ import hashlib
 import json
 import zipfile
 from bisect import bisect_left
+from dataclasses import asdict
 from decimal import Decimal, InvalidOperation
 from itertools import pairwise
 from pathlib import Path
@@ -15,7 +16,10 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 
 from ..config import DAY, HOUR, SECOND, Config, iso, timestamp
+from ..models import Funding, Mark
+from .funding_proxy import MINUTE, resolve_funding_mark
 from .normalize import _funding_calendar_times
+from .prescribed import prescribed_rules, research_assumptions
 from .rules import RuleBook
 
 _REQUIRED_SCHEMAS = {
@@ -151,6 +155,9 @@ def _validate_funding(
     end: int,
     coverage: dict,
     issues: list[str],
+    *,
+    mark_parts: list[dict] | None = None,
+    audit: list[dict] | None = None,
 ):
     records: list[dict] = []
     antecedents: list[dict] = []
@@ -183,12 +190,51 @@ def _validate_funding(
         issues.append(f"funding availability mismatch: {symbol}")
 
     marks_complete = bool(records)
-    for record in records:
+    if config.analysis_mode == "prescribed_research":
         try:
-            mark = Decimal(str(record["settlement_mark_price"]))
-            marks_complete &= mark.is_finite() and mark > 0
-        except KeyError, InvalidOperation:
+            candidates = _proxy_candidates(config, root, records, mark_parts or [])
+            for raw in records:
+                event = Funding(
+                    symbol=raw["symbol"],
+                    funding_time=int(raw["funding_time"]),
+                    available_at=int(raw["available_at"]),
+                    funding_rate=Decimal(raw["funding_rate"]),
+                    interval_hours=Decimal(raw["interval_hours"]),
+                    settlement_mark_price=(
+                        Decimal(raw["settlement_mark_price"])
+                        if raw["settlement_mark_price"] is not None
+                        else None
+                    ),
+                    source_file=raw["source_file"],
+                    interval_verified=raw["interval_verified"],
+                )
+                boundary = event.funding_time // MINUTE * MINUTE
+                resolved = resolve_funding_mark(event, candidates.get(boundary), config)
+                if audit is not None:
+                    audit.append(
+                        {
+                            k: str(v) if isinstance(v, Decimal) else v
+                            for k, v in asdict(resolved).items()
+                        }
+                    )
+            coverage["checks"].append("causal_funding_mark_assumptions")
+        except (
+            KeyError,
+            OSError,
+            TypeError,
+            ValueError,
+            ArithmeticError,
+            pa.ArrowException,
+        ) as exc:
             marks_complete = False
+            issues.append(f"funding proxy unavailable: {symbol}: {exc}")
+    else:
+        for record in records:
+            try:
+                mark = Decimal(str(record["settlement_mark_price"]))
+                marks_complete &= mark.is_finite() and mark > 0
+            except KeyError, InvalidOperation:
+                marks_complete = False
     if not marks_complete:
         coverage["status"] = "unknown"
         issues.append(f"funding settlement mark missing: {symbol}")
@@ -231,6 +277,38 @@ def _validate_funding(
         issues.append(f"funding calendar unverified: {symbol}: {exc}")
 
 
+def _proxy_candidates(
+    config: Config, root: Path, funding: list[dict], parts: list[dict]
+) -> dict[int, Mark]:
+    """Sparse lookup from already hash/schema-checked one-minute partitions."""
+    required = {
+        int(row["funding_time"]) // MINUTE * MINUTE
+        for row in funding
+        if row["settlement_mark_price"] is None
+        and int(row["funding_time"]) >= timestamp(config.start)
+    }
+    result = {}
+    for part in parts:
+        if not any(int(part["start"]) <= t <= int(part["end"]) for t in required):
+            continue
+        for batch in pq.ParquetFile(root / part["path"]).iter_batches():
+            for raw in batch.to_pylist():
+                boundary = int(raw["open_time"]) + MINUTE
+                if boundary not in required:
+                    continue
+                mark = Mark(
+                    **{
+                        k: Decimal(v) if k in {"open", "high", "low", "close"} else v
+                        for k, v in raw.items()
+                        if k in _REQUIRED_SCHEMAS["marks"]
+                    }
+                )
+                if boundary in result and result[boundary] != mark:
+                    raise ValueError(f"Conflicting proxy candles at {iso(boundary)}")
+                result[boundary] = mark
+    return result
+
+
 def validate_data(config: Config, root: Path, scope: str = "sample") -> dict:
     """Validate the requested range, retaining unknown data as explicit incompleteness."""
     if scope not in {"sample", "full"}:
@@ -258,6 +336,9 @@ def validate_data(config: Config, root: Path, scope: str = "sample") -> dict:
         grouped.setdefault((entry["dataset"], entry["symbol"], entry["market"]), []).append(entry)
 
     coverage: list[dict] = []
+    verified_marks = {}
+    funding_mark_audit = []
+    effective = config.changed(start=iso(start), end=iso(end))
     for dataset, symbol, market in _required_keys(config):
         key = (dataset, symbol, market)
         lower = funding_start if dataset == "funding" else start
@@ -382,16 +463,30 @@ def validate_data(config: Config, root: Path, scope: str = "sample") -> dict:
                 issues.append(
                     f"missing closed mark minute or initial antecedent: {symbol}, {expected_count - present_count} minutes"
                 )
+        if dataset == "marks":
+            verified_marks[symbol] = verified_parts
         if dataset == "funding" and parts:
-            _validate_funding(config, root, symbol, verified_parts, funding_start, end, row, issues)
+            _validate_funding(
+                effective,
+                root,
+                symbol,
+                verified_parts,
+                funding_start,
+                end,
+                row,
+                issues,
+                mark_parts=verified_marks.get(symbol, []),
+                audit=funding_mark_audit,
+            )
         coverage.append(row)
 
     rules_path = root / config.rules_file
-    if not rules_path.exists():
+    research = config.analysis_mode == "prescribed_research"
+    if not research and not rules_path.exists():
         issues.append("missing historical market rules")
     else:
         try:
-            rulebook = RuleBook.load(rules_path)
+            rulebook = prescribed_rules(effective) if research else RuleBook.load(rules_path)
             for symbol in config.symbols:
                 for market in ("spot", "futures"):
                     if (
@@ -416,6 +511,7 @@ def validate_data(config: Config, root: Path, scope: str = "sample") -> dict:
     )
     full_baseline = (
         status == "complete"
+        and not research
         and scope == "full"
         and start == timestamp(config.start)
         and end == timestamp(config.end)
@@ -423,6 +519,8 @@ def validate_data(config: Config, root: Path, scope: str = "sample") -> dict:
     result = {
         "status": status,
         "historical": True,
+        "analysis_mode": config.analysis_mode,
+        "historical_certified": status == "complete" and not research,
         "scope": scope,
         "start": start,
         "end": end,
@@ -431,6 +529,9 @@ def validate_data(config: Config, root: Path, scope: str = "sample") -> dict:
         "issues": sorted(set(issues)),
         "coverage": coverage,
     }
+    if research:
+        result["research_assumptions"] = research_assumptions(effective)
+        result["funding_mark_audit"] = funding_mark_audit
 
     manifests = data_root / "manifests"
     manifests.mkdir(parents=True, exist_ok=True)
@@ -464,6 +565,7 @@ def validate_data(config: Config, root: Path, scope: str = "sample") -> dict:
         "# Informe de calidad de datos",
         "",
         f"Estado: **{status}**. Datos históricos: **sí**.",
+        f"Modo de análisis: **{config.analysis_mode}**. Las reglas prescritas no certifican reglas históricas.",
         f"Rango solicitado: `{iso(start)}` hasta antes de `{iso(end)}`.",
         f"Inicio exigido para funding: `{iso(funding_start)}` (ventana más 24 horas y antecedente).",
         f"Cobertura completa del baseline: **{'sí' if full_baseline else 'no'}**.",

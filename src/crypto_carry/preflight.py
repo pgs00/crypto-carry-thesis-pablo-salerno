@@ -10,6 +10,7 @@ from pathlib import Path
 
 from .config import HOUR, Config, iso, timestamp
 from .data.download import _archive_descriptors
+from .data.prescribed import prescribed_rules
 from .data.rules import RuleBook
 
 
@@ -96,13 +97,14 @@ def _download_check(config: Config, root: Path) -> dict:
 
 
 def _rules_check(config: Config, root: Path) -> dict:
-    result = {"ready": False, "issues": []}
+    result = {"ready": False, "issues": [], "analysis_mode": config.analysis_mode}
     try:
         path = _local(root, config.rules_file)
-        if not path.is_file():
+        research = config.analysis_mode == "prescribed_research"
+        if not research and not path.is_file():
             result["issues"].append(f"Missing historical rules: {config.rules_file}")
             return result
-        rulebook = RuleBook.load(path)
+        rulebook = prescribed_rules(config) if research else RuleBook.load(path)
         start, end = timestamp(config.start), timestamp(config.end)
         boundaries = sorted({start, end - 1, *rulebook.transition_times(start, end - 1)})
         result["records"] = len(rulebook.records)

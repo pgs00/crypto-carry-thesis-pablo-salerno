@@ -1,0 +1,13 @@
+{
+  "symbol": "BTCUSDT",
+  "month": "2023-09",
+  "file": "data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2023-09.zip",
+  "source_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/BTCUSDT/1m/BTCUSDT-1m-2023-09.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/BTCUSDT/1m/BTCUSDT-1m-2023-09.zip.CHECKSUM",
+  "sha256": "230cfd0e4356a816a4190428509ae938c47598985a39a55bc8f6149280304bc9",
+  "official_sha256": "230cfd0e4356a816a4190428509ae938c47598985a39a55bc8f6149280304bc9",
+  "bytes": 942916,
+  "retrieved_at": "2026-09-18T15:25:47.374076+00:00",
+  "status": 200,
+  "checksum_file_sha256": "3bc606576b661d090c7de0ec85490690b8b30f22bf7307624c3c06830fc49162"
+}

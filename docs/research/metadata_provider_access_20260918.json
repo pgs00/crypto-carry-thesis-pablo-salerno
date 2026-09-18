@@ -1,0 +1,150 @@
+{
+  "schema": "research_metadata_provider_access_v1",
+  "reviewed_on": "2026-09-18",
+  "scope": {
+    "symbols": ["BTCUSDT", "ETHUSDT"],
+    "markets": ["Binance Spot", "Binance USD-M perpetual"],
+    "period_start_inclusive": "2022-01-01T00:00:00Z",
+    "period_end_exclusive": "2026-09-01T00:00:00Z",
+    "not_rulebook_input": true
+  },
+  "decision": {
+    "provider_to_evaluate": "Tardis",
+    "request_access": [
+      "Data API key, RAW binance-futures, !contractInfo, including 2023-12-24",
+      "Instruments Metadata API for binance and binance-futures"
+    ],
+    "historical_target_payload_retrieved": false,
+    "purchase_authorized_or_performed": false,
+    "account_created": false,
+    "messages_sent_to_providers": false,
+    "do_not_request_for_this_gap_without_new_evidence": ["CoinAPI", "Amberdata", "Kaiko", "CoinDesk Data / CCData"],
+    "reason": "Only Tardis documents a replayable Binance bracket-change stream; complete historical trading rules remain unverified."
+  },
+  "tardis_raw": {
+    "documentation": "https://docs.tardis.dev/historical-data-details/binance-futures",
+    "http_documentation": "https://docs.tardis.dev/api/http-api-reference",
+    "exchange": "binance-futures",
+    "channel": "!contractInfo",
+    "channel_available_since_claim": "2023-07-24",
+    "availability_kind": "provider documentation, not target data completeness verification",
+    "endpoint": "https://api.tardis.dev/v1/data-feeds/binance-futures",
+    "request_granularity": "one minute per GET; records retain native event granularity",
+    "auth_header": "Authorization: Bearer <TARDIS_DATA_API_KEY>",
+    "other_required_header": "Accept-Encoding: gzip",
+    "free_access": "first UTC day of each month",
+    "exchange_schema_source": "https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/ws-streams/market#contract-info-stream",
+    "schema_observed_current_not_historical_payload": true,
+    "fields": {
+      "E": "exchange event timestamp",
+      "s": "symbol",
+      "ct": "contract type",
+      "cs": "contract status",
+      "bks[].bs": "bracket number",
+      "bks[].bnf": "notional floor",
+      "bks[].bnc": "notional cap",
+      "bks[].mmr": "maintenance margin ratio",
+      "bks[].cf": "auxiliary calculation number; validate mapping to required cum",
+      "bks[].mi": "minimum leverage",
+      "bks[].ma": "maximum leverage",
+      "localTimestamp": "Tardis capture timestamp prepended to native messages"
+    },
+    "bks_only_on_bracket_update": true,
+    "baseline_guaranteed": false,
+    "missing": ["2022 and pre-2023-07-24 history", "guaranteed complete baseline and change chain", "order filters", "VIP0 fee history", "liquidation fee", "liquidation fee basis/exceptions", "grandfathered position cohorts"],
+    "acceptance": {
+      "known_event_source": "https://www.binance.com/en/support/announcement/detail/d75c5ca94f704e96a6a4e55ffddfd65d",
+      "center_utc": "2023-12-24T09:35:00Z",
+      "window_start_inclusive": "2023-12-24T09:20:00Z",
+      "window_end_exclusive": "2023-12-24T09:51:00Z",
+      "filters": [{"channel": "!contractInfo"}],
+      "target_symbols_filter_after_retrieval": ["BTCUSDT", "ETHUSDT"],
+      "criteria": ["key-info entitlements include dates and exchange", "native bks event for a target contract", "compare complete bracket array against official announcement", "record E, capture timestamp, retrieval timestamp, payload hash", "do not infer unchanged state from an empty minute"]
+    }
+  },
+  "tardis_metadata": {
+    "documentation": "https://docs.tardis.dev/api/instruments-metadata-api",
+    "endpoints": [
+      "https://api.tardis.dev/v1/instruments/binance/BTCUSDT",
+      "https://api.tardis.dev/v1/instruments/binance/ETHUSDT",
+      "https://api.tardis.dev/v1/instruments/binance-futures/BTCUSDT",
+      "https://api.tardis.dev/v1/instruments/binance-futures/ETHUSDT"
+    ],
+    "fields_of_interest": ["priceIncrement", "amountIncrement", "minTradeAmount", "minNotional", "makerFee", "takerFee", "changes[].until"],
+    "changes_semantics": "values valid before until; sparse changes in chronological order",
+    "complete_change_guarantee_only": ["contractMultiplier"],
+    "other_changes": "best effort; may be incomplete",
+    "fee_semantics": "illustrative, not certified VIP0 history",
+    "target_instrument_first_change_date_verified": false,
+    "not_documented": ["maxQty", "maxNotional", "MARKET application flags", "risk brackets", "liquidation fee"],
+    "public_sample": "https://api.tardis.dev/v1/instruments/bitmex/XBTUSD",
+    "sample_is_not_binance_evidence": true
+  },
+  "tardis_access_terms": {
+    "source": "https://docs.tardis.dev/faq/billing-and-subscriptions",
+    "raw_and_metadata_subscription_types": ["Pro", "Business"],
+    "academic_and_solo": "CSV only",
+    "trial": {"active_days": 30, "historical_days": "7-14 recent days selected randomly", "payment_details_required": false, "auto_converts_to_paid": false, "binance_metadata_entitlement_verified": false},
+    "historical_access_yearly": {"Pro": "4 years", "Business": "all available"},
+    "historical_access_monthly": "4 months",
+    "pro_full_2022_period_inference": "A new annual Pro beginning 2026-09-18 would not include January 2022 under the published four-year rule; !contractInfo itself starts only 2023-07-24.",
+    "numeric_price_verified": false,
+    "key_info_endpoint": "https://api.tardis.dev/v1/api-key-info"
+  },
+  "other_providers": [
+    {
+      "provider": "CoinAPI",
+      "sources": ["https://www.coinapi.io/products/market-data-api/docs/rest-api/metadata/symbols/exchange_id/active/get", "https://www.coinapi.io/products/market-data-api/docs/rest-api/metadata/symbols/exchange_id/history/get"],
+      "auth": "X-CoinAPI-Key",
+      "endpoints": ["/v1/symbols/{exchange_id}/active", "/v1/symbols/{exchange_id}/history"],
+      "candidate_fields": ["price_precision", "size_precision"],
+      "limitation": "Provider explicitly distinguishes data precision from trading precision for Binance; history endpoint lists inactive symbols, not rule versions.",
+      "historical_rule_start_and_change_granularity_verified": false
+    },
+    {
+      "provider": "Amberdata",
+      "sources": ["https://docs.amberdata.io/http/market/spot-exchanges-reference", "https://docs.amberdata.io/http/market/futures-exchanges-reference"],
+      "auth": "x-api-key",
+      "endpoints": ["/markets/spot/exchanges/reference", "/markets/futures/exchanges/reference"],
+      "candidate_fields": ["precisionPrice", "precisionVolume", "limitsVolumeMin", "limitsVolumeMax", "limitsMarketMin", "limitsMarketMax", "limitsCostMin", "limitsCostMax", "originalReference"],
+      "limitation": "No documented historical version selector; futures startDate/endDate filter expiry, and includeInactive includes delisted instruments.",
+      "historical_rule_start_and_change_granularity_verified": false
+    },
+    {
+      "provider": "Kaiko",
+      "sources": ["https://docs.kaiko.com/rest-api/reference-data/derivatives-contract-details", "https://docs.kaiko.com/rest-api/misc-custom-and-legacy-endpoints/derivatives-contract-details-v3"],
+      "auth": "X-Api-Key",
+      "endpoints": ["https://us.market-api.kaiko.io/v2/data/derivatives.v2/reference", "https://us.market-api.kaiko.io/v3/data/derivatives/reference"],
+      "candidate_fields": ["contract_size", "contract_size_unit", "listing_timestamp", "funding_rate_frequency", "status", "last_updated"],
+      "limitation": "Examined schemas do not expose target trading filters, fees or risk brackets; temporal parameters filter contract lifecycle, not Binance perpetual rule versions.",
+      "v3_status": "beta, according to current docs",
+      "historical_rule_start_and_change_granularity_verified": false
+    },
+    {
+      "provider": "CoinDesk Data / CCData",
+      "source": "https://developers.coindesk.com/documentation/data-api/futures",
+      "endpoint": "https://data-api.coindesk.com/futures/v1/latest/instrument/metadata",
+      "limitation": "Latest metadata documented; historical trading-rule endpoint not verified. Historical market data endpoints do not establish rule history.",
+      "historical_rule_start_and_change_granularity_verified": false
+    }
+  ],
+  "unauthenticated_get_probes": [
+    {"url": "https://api.tardis.dev/v1/instruments/binance/BTCUSDT", "status": 401, "bytes": 126, "sha256": "a01b54ffabc2509de51150491a5dc03d98e7d698b9b960959ae121a5bd68738e", "result": "Instruments metadata API requires active pro/business"},
+    {"url": "https://api.tardis.dev/v1/instruments/binance-futures/BTCUSDT", "status": 401, "bytes": 126, "sha256": "a01b54ffabc2509de51150491a5dc03d98e7d698b9b960959ae121a5bd68738e", "result": "Instruments metadata API requires active pro/business"},
+    {"url": "https://api.tardis.dev/v1/instruments/bitmex/XBTUSD", "status": 200, "bytes": 703, "sha256": "a8b6ef50be8ce6e06b5345587e091cd0bc747c8c350f688556a69648b0c49b29", "sample_changes": [{"until": "2021-06-08T04:30:00.000Z", "amountIncrement": 1, "minTradeAmount": 1}, {"until": "2024-07-31T04:00:00.000Z", "priceIncrement": 0.5}, {"until": "2024-10-22T00:00:00.000Z", "makerFee": 0.0002, "takerFee": 0.00075}], "is_binance_rule_evidence": false},
+    {"url": "https://api.tardis.dev/v1/data-feeds/binance-futures?from=2024-01-01&filters=%5B%7B%22channel%22%3A%22%21contractInfo%22%7D%5D&offset=0", "status": 200, "compressed_bytes": 20, "decoded_bytes": 0, "sha256_compressed": "59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2", "result": "empty minute, not a rule snapshot"},
+    {"url": "https://api.tardis.dev/v1/data-feeds/binance-futures?from=2023-12-24T09%3A35%3A00.000Z&filters=%5B%7B%22channel%22%3A%22%21contractInfo%22%7D%5D&offset=0", "status": 401, "bytes": 190, "sha256": "db2713a737bb8253469071d540551e4a7b9c35ecf3645b03efc7888d4298049c", "result": "Unauthorized requests only permit first day of each month"},
+    {"endpoint": "https://api.tardis.dev/v1/data-feeds/binance-futures", "from_values": ["2024-10-01T12:29:00.000Z", "2024-10-01T12:30:00.000Z", "2024-10-01T12:31:00.000Z"], "filters": [{"channel": "!contractInfo"}], "offset": 0, "status_each": 200, "compressed_bytes_each": 20, "decoded_bytes_each": 0, "sha256_compressed_each": "59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2", "result": "bounded exploratory minutes; all empty; no known target event inferred"},
+    {"url": "https://api.amberdata.com/markets/futures/exchanges/reference?exchange=binance&instrument=BTCUSDT&includeOriginalReference=true", "status": 403, "bytes": 23, "result": "Forbidden"},
+    {"url": "https://rest.coinapi.io/v1/symbols/BINANCE/active?filter_symbol_id=BINANCE_SPOT_BTC_USDT", "status": 401, "bytes": 291, "result": "API key absent"},
+    {"url": "https://data-api.coindesk.com/futures/v1/latest/instrument/metadata?market=binance&instruments=BTCUSDT,ETHUSDT&groups=GENERAL,STATUS&apply_mapping=false", "status": 401, "bytes": 273, "result": "API key required"}
+  ],
+  "verification_limits": {
+    "credentials_used": false,
+    "target_historical_rule_values_added": false,
+    "max_direct_response_body_read_cap_bytes": 500001,
+    "largest_actual_direct_response_bytes": 33217,
+    "raw_downloads_persisted": false,
+    "only_research_artifacts_written": ["docs/research/metadata_provider_access_20260918.md", "docs/research/metadata_provider_access_20260918.json"]
+  }
+}

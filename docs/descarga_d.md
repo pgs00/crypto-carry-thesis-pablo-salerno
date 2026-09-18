@@ -57,3 +57,5 @@ Si el resumen contiene `failed`, esos archivos o respuestas quedaron pendientes;
 Fuente publica oficial, sin API key: [Binance Public Data](https://github.com/binance/binance-public-data).
 
 Los pasos posteriores y la comprobación `preflight`, que puede consultarse sin interrumpir esta descarga, están en [puesta en marcha](puesta_en_marcha.md).
+
+Con las aproximaciones aprobadas el 18/09/2026, los comandos de validación, backtest y sensibilidades están en [escenario de investigación](escenario_investigacion.md). Ese modo usa precios observados y reglas prescritas, sin exigir el archivo de reglas históricas completas. Los controles de integridad y cobertura siguen activos.

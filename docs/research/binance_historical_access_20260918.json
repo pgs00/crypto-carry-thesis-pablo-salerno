@@ -1,0 +1,86 @@
+{
+  "report_type": "documented_access_research_not_backtest_input",
+  "checked_date": "2026-09-18",
+  "symbols": ["BTCUSDT", "ETHUSDT"],
+  "markets": ["spot", "usdm_perpetual"],
+  "economic_window_utc": {"start_inclusive": "2022-01-01T00:00:00Z", "end_exclusive": "2026-09-01T00:00:00Z"},
+  "baseline": {
+    "source_files": ["docs/research/funding_followup_20260918.md", "docs/research/historical_market_rules.md"],
+    "missing_settlement_marks_per_symbol": 2005,
+    "missing_settlement_marks_total": 4010,
+    "first_missing_event_ms": 1640995200006,
+    "last_missing_event_ms": 1698710400001,
+    "inventory": "data/research/funding-followup-20260918/missing-economic-settlement-marks.json",
+    "funding_api_requeried_in_this_investigation": false
+  },
+  "result": {
+    "exact_settlement_marks_recovered": 0,
+    "complete_historical_rule_snapshots_recovered": 0,
+    "ordinary_api_key_demonstrated_to_close_target_gaps": false,
+    "ordinary_api_key_requested": false,
+    "authenticated_requests_made": false,
+    "support_request_sent": false,
+    "purchases_or_accounts_created": false,
+    "methodology_changed": false,
+    "conclusion": "No reviewed official contract documents authenticated backfill of the missing settlement marks or historical rule versions. Private exports and a legacy depth-data service exist in documentation but do not establish the requested market-wide fields.",
+    "negative_claim_scope": "Reviewed published documentation only; not proof that Binance has no internal or custom export."
+  },
+  "sources": [
+    {"id": "public_archive", "url": "https://github.com/binance/binance-public-data", "kind": "official_repository", "use": "Public market-data archive access and issue channel"},
+    {"id": "um_market", "url": "https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/rest-api/market-data", "kind": "official_current_documentation", "sections": ["Get Funding Rate History", "Exchange Information"]},
+    {"id": "um_account", "url": "https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/rest-api/account", "kind": "official_current_documentation", "sections": ["Get Income History", "Get Download Id For Futures Transaction History", "Get Futures Transaction History Download Link by Id", "Get Download Id For Futures Order History", "Notional and Leverage Brackets", "User Commission Rate"]},
+    {"id": "account_trades_academy", "url": "https://www.binance.com/en/academy/articles/how-to-get-account-trade-history-via-api", "kind": "official_tutorial", "use": "Private Futures trade history beyond six months"},
+    {"id": "report_center", "url": "https://www.binance.com/en/support/faq/detail/efe336a96f704afdb939905ad3adba21", "kind": "official_faq", "published_displayed": "2022-09-28 09:01", "use": "Funding Fee CSV and non-VIP whitelist application; schema not supplied"},
+    {"id": "spot_rest", "url": "https://github.com/binance/binance-spot-api-docs/blob/master/rest-api.md", "raw_url": "https://raw.githubusercontent.com/binance/binance-spot-api-docs/master/rest-api.md", "kind": "official_current_repository", "sections": ["Exchange information", "Old trade lookup", "Account trade list", "Query Commission Rates"]},
+    {"id": "wallet_snapshot", "url": "https://developers.binance.com/en/docs/catalog/core-trading-wallet/api/rest-api/account", "kind": "official_current_documentation", "section": "Daily Account Snapshot"},
+    {"id": "legacy_depth_readme", "url": "https://raw.githubusercontent.com/binance/binance-public-data/e8cdb38250d443e8b948f6cf7e37207614a7ad43/Futures_Order_Book_Download/README.md", "kind": "official_pinned_historical_document", "commit": "e8cdb38250d443e8b948f6cf7e37207614a7ad43", "commit_time_utc": "2023-08-09T04:10:58Z", "current_service_status": "unconfirmed"},
+    {"id": "legacy_depth_script", "url": "https://raw.githubusercontent.com/binance/binance-public-data/e8cdb38250d443e8b948f6cf7e37207614a7ad43/Futures_Order_Book_Download/Futures-order-book-Level2-data-download.py", "kind": "official_pinned_historical_code", "sha256_retrieved_bytes": "8ea429a1f3745cbca6b3fea4d4ad5f4d35c8104828e9a7a444a1de6c1504ee93"},
+    {"id": "legacy_depth_deleted", "url": "https://github.com/binance/binance-public-data/commit/fdc72a94b481536dee32ed394585939326630fd4", "kind": "official_repository_commit", "commit_time_utc": "2024-07-25T17:16:12Z", "date_verified_via": "https://api.github.com/repos/binance/binance-public-data/commits?path=Futures_Order_Book_Download&per_page=3", "meaning": "Guide and example deleted; not proof that server service was terminated"},
+    {"id": "legacy_swagger", "url": "https://github.com/binance/binance-api-swagger/blob/b6efbd19f529f1fbcdb9a4f5a042ce69a641cfb9/spot_api.yaml", "retrieved_source_url": "https://raw.githubusercontent.com/binance/binance-api-swagger/master/spot_api.yaml", "kind": "official_legacy_schema", "last_path_commit": "b6efbd19f529f1fbcdb9a4f5a042ce69a641cfb9", "last_path_commit_time_utc": "2024-10-08T08:26:23Z", "date_verified_via": "https://api.github.com/repos/binance/binance-api-swagger/commits?path=spot_api.yaml&per_page=1"},
+    {"id": "old_market_trades_cutoff", "url": "https://www.binance.com/en/support/announcement/detail/f04e986e02464015b3e85d5ef76cbb2a", "kind": "official_announcement", "published_displayed": "2025-02-26 09:00", "effective_utc": "2025-03-03T08:00:00Z"},
+    {"id": "order_history_announcement", "url": "https://www.binance.com/en/support/announcement/detail/6811b3e0da104d77b6fb178e053b887c", "kind": "official_announcement", "published_displayed": "2023-07-19 12:00", "updated_displayed": "2024-10-08"},
+    {"id": "futures_ui_export", "url": "https://www.binance.com/en/support/faq/detail/e21b95dc590e4c13b8f8bdcc9bbc4f82", "kind": "official_faq", "updated_displayed": "2026-01-21 10:38"},
+    {"id": "spot_ui_export", "url": "https://www.binance.com/en/support/faq/detail/990afa0a0a9341f78e7a9298a9575163", "kind": "official_faq"},
+    {"id": "support_chat", "url": "https://www.binance.com/en/chat", "kind": "official_support_route", "contacted": false}
+  ],
+  "access_matrix": [
+    {"route": "data.binance.vision", "auth": "none", "scope": "market_archive", "sources": ["public_archive"], "closes_target_gap": false, "reason": "No authenticated expansion documented; baseline sampled funding ZIPs omit settlement mark"},
+    {"route": "GET /fapi/v1/fundingRate", "auth": "none", "scope": "market", "documented_fields": ["symbol", "fundingTime", "fundingRate", "markPrice"], "sources": ["um_market"], "authenticated_enhancement_documented": false},
+    {"route": "GET /fapi/v1/income", "auth": "signed_user_data", "scope": "own_account", "retention": "last_three_months", "settlement_mark_field_documented": false, "sources": ["um_account"]},
+    {"route": ["GET /fapi/v1/income/asyn", "GET /fapi/v1/income/asyn/id"], "auth": "signed_user_data", "scope": "own_account", "max_request_span_years": 1, "requests_per_month_shared_with_ui": 5, "download_link_expiry_days": 7, "earliest_retained_date": null, "export_columns_verified": false, "sources": ["um_account"]},
+    {"route": ["GET /fapi/v1/trade/asyn", "GET /fapi/v1/trade/asyn/id"], "auth": "signed_user_data", "scope": "own_account", "supports_older_than_six_months": true, "max_request_span_years": 1, "requests_per_month_shared_with_ui": 5, "is_global_mark_history": false, "sources": ["account_trades_academy"]},
+    {"route": ["GET /fapi/v1/order/asyn", "GET /fapi/v1/order/asyn/id"], "auth": "signed_user_data", "scope": "own_account", "max_request_span_years": 1, "requests_per_month_shared_with_ui": 10, "is_historical_rules_registry": false, "sources": ["um_account", "order_history_announcement"]},
+    {"route": "VIP Report Center / Funding Fee / USD-M Futures / CSV", "auth": "web_account_login", "scope": "own_master_or_subaccount", "earliest_supported_date": "2019-09-08", "eligibility": "VIP or Customer Service approved whitelist", "non_vip_application_documented": true, "sync_delay_documented": "two_working_days", "requires_actual_historical_account_activity": true, "exact_settlement_mark_column": "unverified", "api_key_needed_for_web_export": false, "sources": ["report_center"]},
+    {"route": "GET /sapi/v1/accountSnapshot", "auth": "signed_user_data", "scope": "own_account_daily", "retention": "last_one_month", "max_request_span": "less_than_30_days", "position_markPrice_field": true, "funding_event_semantics": false, "sources": ["wallet_snapshot"]},
+    {"route": ["GET /fapi/v1/leverageBracket", "GET /fapi/v1/commissionRate"], "auth": "signed_user_data", "scope": "user_current_configuration", "historical_date_selector": false, "timestamp_is_signature_time": true, "sources": ["um_account"]},
+    {"route": "GET /api/v3/account/commission", "auth": "signed_user_data", "scope": "account_current_commission", "historical_date_selector": false, "sources": ["spot_rest"]},
+    {"route": "GET /api/v3/myTrades", "auth": "signed_user_data", "scope": "own_executions", "is_global_fee_schedule": false, "sources": ["spot_rest"]},
+    {"route": ["GET /api/v3/exchangeInfo", "GET /fapi/v1/exchangeInfo"], "auth": "none", "scope": "current_market_rules", "historical_date_selector": false, "um_liquidationFee_field": true, "sources": ["spot_rest", "um_market"]},
+    {"route": "GET /sapi/v1/futures/histDataLink", "auth": "signed_user_data_in_legacy_schema", "scope": "market_depth", "documented_data_types": ["T_DEPTH", "S_DEPTH"], "target_fields_documented": false, "current_availability": "unconfirmed", "current_vip_threshold": null, "sources": ["legacy_swagger"]},
+    {"route": ["POST /sapi/v1/futuresHistDataId", "GET /sapi/v1/downloadLink"], "auth": "signed_whitelisted_key_in_2023_guide", "scope": "market_depth", "futures_account_required_in_guide": true, "max_request_span": "less_than_seven_days", "current_availability": "unconfirmed", "target_fields_documented": false, "sources": ["legacy_depth_readme", "legacy_depth_script", "legacy_depth_deleted"]}
+  ],
+  "unavailable_legacy_documentation_observations": [
+    {"url": "https://www.binance.com/en/support/faq/detail/5810ae42176b4770b880ce1f14932262", "observed": "Article not present in rendered page"},
+    {"url": "https://www.binance.com/en/support/faq/detail/e707685b4e0f408fa7c1b9ccd8ea7aa9", "observed": "Article not present in rendered page"},
+    {"url": "https://www.binance.com/en/landing/data", "observed": "Web fetch returned 404", "inference_limit": "Tool observation; does not establish global service closure"}
+  ],
+  "support_request": {
+    "status": "draft_only_not_sent",
+    "draft_file": "docs/research/binance_historical_access_20260918.md",
+    "target_team": "Binance Futures Market Data / API",
+    "market_wide_data_requested": true,
+    "private_third_party_data_requested": false,
+    "required_settlement_fields": ["symbol", "original_fundingTime_ms", "fundingRate_decimal", "internal_settlement_markPrice_decimal", "precision", "provenance"],
+    "required_rule_history": ["spot_and_um_exchangeInfo_filters", "market_order_applicability_flags", "leverage_maintenance_brackets", "ordinary_vip0_commissions_and_symbol_exceptions", "liquidation_fee_rate_basis_and_regular_fee_interaction", "effective_time", "publication_or_availability_time", "grandfathering", "operational_suspensions"],
+    "access_questions": ["exact_endpoint_or_export", "earliest_date", "schema", "sample", "VIP_or_whitelist", "price_and_license_if_any", "report_center_funding_columns"],
+    "control_events_from_existing_local_evidence": [
+      {"symbol": "BTCUSDT", "funding_time_utc": "2023-12-31T00:00:00.000Z", "funding_mark": "42173.49474823", "minute_open": "42173.50049291"},
+      {"symbol": "ETHUSDT", "funding_time_utc": "2023-12-31T00:00:00.000Z", "funding_mark": "2293.07001515", "minute_open": "2293.07796970"}
+    ]
+  },
+  "next_steps": [
+    "Obtain an explicit official export/schema answer for market-wide settlement marks and rule history before requesting a key.",
+    "If existing account activity covers relevant events, inspect an authorized Funding Fee CSV sample; require explicit settlement-mark semantics and precision.",
+    "Validate any candidate against known post-2023 events and preserve raw original timestamps before considering integration."
+  ]
+}

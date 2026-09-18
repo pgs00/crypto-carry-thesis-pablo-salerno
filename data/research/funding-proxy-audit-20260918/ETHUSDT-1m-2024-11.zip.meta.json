@@ -1,0 +1,13 @@
+{
+  "symbol": "ETHUSDT",
+  "month": "2024-11",
+  "file": "data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2024-11.zip",
+  "source_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/ETHUSDT/1m/ETHUSDT-1m-2024-11.zip",
+  "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/ETHUSDT/1m/ETHUSDT-1m-2024-11.zip.CHECKSUM",
+  "sha256": "e60f9df9063cdb54387d700bf1bfb2322d30b9510615bc462951f1c98f8c72d5",
+  "official_sha256": "e60f9df9063cdb54387d700bf1bfb2322d30b9510615bc462951f1c98f8c72d5",
+  "bytes": 1003502,
+  "retrieved_at": "2026-09-18T15:26:50.944855+00:00",
+  "status": 200,
+  "checksum_file_sha256": "90966fac5c7735c3e0875074549b1c4e8b1d290c92040b232415a40cbe94c5d3"
+}

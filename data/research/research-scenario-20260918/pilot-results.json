@@ -1,0 +1,28 @@
+{
+  "window": [
+    "2024-01-01T00:00:00Z",
+    "2024-01-01T00:10:00Z"
+  ],
+  "trades_per_portfolio": 61393,
+  "results": [
+    {
+      "strategy": "conditional",
+      "status": "complete",
+      "replay_wall_seconds": 3.2763622000056785,
+      "native_fills": 6,
+      "equity": "9985.5135427842000000",
+      "funding_events": 94,
+      "reconciliation": "0E-16"
+    },
+    {
+      "strategy": "permanent",
+      "status": "complete",
+      "replay_wall_seconds": 3.0088770000147633,
+      "native_fills": 6,
+      "equity": "9985.5135427842000000",
+      "funding_events": 94,
+      "reconciliation": "0E-16"
+    }
+  ],
+  "purpose": "Short real-data execution and accounting pilot; not a profitability conclusion or reliable full-window runtime estimate"
+}

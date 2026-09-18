@@ -1,0 +1,23 @@
+{
+  "url": "https://api.tardis.dev/v1/data-feeds/binance-futures?from=2023-11-01T07%3A59%3A00.000Z&sliceSize=2&filters=%5B%7B%22channel%22%3A%22markPrice%22%2C%22symbols%22%3A%5B%22btcusdt%22%2C%22ethusdt%22%5D%7D%5D",
+  "status": 200,
+  "retrieved_at": "2026-09-18T15:10:15.802212+00:00",
+  "headers": {
+    "date": "Fri, 18 Sep 2026 15:10:15 GMT",
+    "content-type": "application/json",
+    "content-length": "5995",
+    "connection": "keep-alive",
+    "content-encoding": "gzip",
+    "vary": "Accept-Encoding",
+    "x-name": "binance-futures/2023/11/01/07/59",
+    "x-ratelimit-limit": "2000",
+    "x-ratelimit-remaining": "1997",
+    "x-ratelimit-reset-after": "45",
+    "x-slice-size": "2",
+    "x-suggested-slice-size": "10",
+    "server": "cloudflare",
+    "cf-ray": "a3d146bdf8b61e78-EZE"
+  },
+  "bytes": 53400,
+  "sha256": "3f83bcb28c218ab02ad77b2be06348187c7239bb8c838a95cdb2df72f818712a"
+}

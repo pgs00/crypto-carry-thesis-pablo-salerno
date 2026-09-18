@@ -48,8 +48,14 @@ def _time_ns(value: str | int | None) -> int | None:
 class RuleBook:
     """Select rules that were both effective and knowable at a point in time."""
 
-    def __init__(self, records: list[dict], allow_synthetic: bool = False):
+    def __init__(
+        self,
+        records: list[dict],
+        allow_synthetic: bool = False,
+        allow_prescribed: bool = False,
+    ):
         self.allow_synthetic = allow_synthetic
+        self.allow_prescribed = allow_prescribed
         self.records = [self._validate_record(record) for record in records]
         self.records.sort(key=lambda row: (row["symbol"], row["market"], row["valid_from"]))
         self._reject_overlaps()
@@ -66,7 +72,13 @@ class RuleBook:
         if missing_values:
             raise ValueError(f"Market-rule values missing: {sorted(missing_values)}")
         status = raw["evidence_status"]
-        if status not in {"verified", "synthetic", "unverified", "current_snapshot"}:
+        if status not in {
+            "verified",
+            "synthetic",
+            "prescribed",
+            "unverified",
+            "current_snapshot",
+        }:
             raise ValueError(f"Unknown evidence status: {status}")
         record = dict(raw)
         record["valid_from"] = _time_ns(raw["valid_from"])
@@ -133,22 +145,37 @@ class RuleBook:
         for record in self.records:
             if record["symbol"] != symbol or record["market"] != market:
                 continue
-            if time_ns < record["valid_from"] or time_ns < record["known_from"]:
+            status = record["evidence_status"]
+            if time_ns < record["valid_from"]:
+                continue
+            if status != "prescribed" and (
+                record["known_from"] is None or time_ns < record["known_from"]
+            ):
                 continue
             if record["valid_to"] is not None and time_ns >= record["valid_to"]:
                 continue
-            status = record["evidence_status"]
-            if status in {"verified", "current_snapshot"} or (
-                status == "synthetic" and self.allow_synthetic
+            if (
+                status in {"verified", "current_snapshot"}
+                or (status == "synthetic" and self.allow_synthetic)
+                or (status == "prescribed" and self.allow_prescribed)
             ):
                 return self._market_rule(record)
         return None
 
     @classmethod
-    def load(cls, path: str | Path, allow_synthetic: bool = False) -> RuleBook:
+    def load(
+        cls,
+        path: str | Path,
+        allow_synthetic: bool = False,
+        allow_prescribed: bool = False,
+    ) -> RuleBook:
         payload = json.loads(Path(path).read_text(encoding="utf-8"))
         records = payload["records"] if isinstance(payload, dict) else payload
-        return cls(records, allow_synthetic=allow_synthetic)
+        return cls(
+            records,
+            allow_synthetic=allow_synthetic,
+            allow_prescribed=allow_prescribed,
+        )
 
     def transition_times(self, start: int, end: int) -> list[int]:
         boundaries: set[int] = set()

@@ -10,6 +10,7 @@ from pathlib import Path
 
 from .config import DAY, HOUR, SECOND, Config, iso, timestamp
 from .costs import cycle_cost, execution_price, floor_step, valid_quantity
+from .data.funding_proxy import resolve_funding_mark
 from .events import DataGap, event_time, group_events
 from .execution import eligible_trade, observe_vwap
 from .forecast import forecast
@@ -653,6 +654,18 @@ class Backtest:
             elif isinstance(r, Mark):
                 self.marks[r.symbol] = r
             elif isinstance(r, Funding):
+                if self.config.analysis_mode == "prescribed_research":
+                    # Funding sorts before Mark at equal timestamps. The candle
+                    # just closed at this boundary is nevertheless available.
+                    candidate = next(
+                        (m for m in records if isinstance(m, Mark) and m.symbol == r.symbol),
+                        self.marks.get(r.symbol),
+                    )
+                    try:
+                        r = resolve_funding_mark(r, candidate, self.config)
+                    except ValueError as exc:
+                        self._halt(str(exc))
+                        return
                 key = (r.symbol, r.funding_time)
                 economic = (r.funding_rate, r.interval_hours, r.settlement_mark_price)
                 if key in self.funding_seen:
@@ -953,6 +966,7 @@ class Backtest:
         payload = {
             "records": encode(records),
             "allow_synthetic": getattr(rules, "allow_synthetic", False),
+            "allow_prescribed": getattr(rules, "allow_prescribed", False),
         }
         return hashlib.sha256(json.dumps(payload, sort_keys=True).encode()).hexdigest()
 

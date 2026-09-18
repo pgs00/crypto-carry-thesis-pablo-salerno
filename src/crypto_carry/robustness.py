@@ -12,6 +12,7 @@ import numpy as np
 import pandas as pd
 
 from .config import Config, timestamp
+from .data.prescribed import prescribed_rules
 from .data.replay import input_hashes, iter_records
 from .data.rules import RuleBook, synthetic_rules
 from .data.validate import validate_data
@@ -55,15 +56,37 @@ def scenario_configs(base: Config) -> list[Scenario]:
             result.append(
                 Scenario(f"{dimension}-{token}", dimension, str(value), changed, tuple(changes))
             )
+    if base.analysis_mode == "prescribed_research":
+        research = (
+            ("funding-proxy-plus-10", "funding_proxy", "funding_proxy_stress_bps", D("10")),
+            ("funding-proxy-minus-10", "funding_proxy", "funding_proxy_stress_bps", D("-10")),
+            ("futures-fee-0p0004", "futures_fee", "research_futures_taker_fee", D("0.0004")),
+            ("maintenance-2", "maintenance", "research_maintenance_multiplier", D("2")),
+            ("liquidation-fee-0p03", "liquidation_fee", "research_liquidation_fee", D("0.03")),
+        )
+        result.extend(
+            Scenario(name, dimension, str(value), base.changed(**{field: value}), (field,))
+            for name, dimension, field, value in research
+        )
     return result
 
 
 def run_robustness(
-    root: Path, base: Config, *, selected: list[str] | None = None, data_kind: str = "historical"
+    root: Path, base: Config, *, selected: list[str] | None = None, data_kind: str | None = None
 ) -> Path:
     from .reporting import write_run
 
     root = Path(root).resolve()
+    inferred = (
+        "historical_assumptions" if base.analysis_mode == "prescribed_research" else "historical"
+    )
+    data_kind = inferred if data_kind is None else data_kind
+    if base.analysis_mode == "prescribed_research" and data_kind != "historical_assumptions":
+        raise ValueError("prescribed_research robustness requires historical_assumptions data_kind")
+    if base.analysis_mode != "prescribed_research" and data_kind == "historical_assumptions":
+        raise ValueError(
+            "historical_assumptions data_kind requires prescribed_research analysis_mode"
+        )
     scenarios = scenario_configs(base)
     if selected:
         unknown = set(selected) - {s.name for s in scenarios}
@@ -105,6 +128,8 @@ def run_robustness(
             rules = (
                 synthetic_rules(config)
                 if data_kind == "synthetic"
+                else prescribed_rules(config)
+                if data_kind == "historical_assumptions"
                 else RuleBook.load(root / config.rules_file)
             )
             for strategy, enabled in (("conditional", True), ("permanent", False)):
@@ -253,6 +278,8 @@ def _cost_plot(destination: Path, data_kind: str, source: Path | None = None) ->
                     0.5,
                     "Sin escenarios históricos evaluables"
                     if data_kind == "historical"
+                    else "Sin métricas evaluables del escenario prescrito"
+                    if data_kind == "historical_assumptions"
                     else "Sin métricas sintéticas evaluables",
                     ha="center",
                     va="center",
@@ -260,7 +287,12 @@ def _cost_plot(destination: Path, data_kind: str, source: Path | None = None) ->
                 )
             else:
                 ax.legend()
-        fig.suptitle("Sensibilidad a costos · " + data_kind)
+        kind_label = (
+            "precios observados + supuestos prescriptos"
+            if data_kind == "historical_assumptions"
+            else data_kind
+        )
+        fig.suptitle("Sensibilidad a costos · " + kind_label)
         fig.savefig(
             figures / "cost_sensitivity.png", dpi=150, metadata={"Software": "crypto-carry"}
         )
@@ -280,9 +312,14 @@ def _index_report(run: Path, data_kind: str, baseline_verified: bool) -> str:
         f"- [{r.scenario}](../{r.run_id}/report.md): {r.dimension} = {r.value}; {r.status}"
         for r in rows.drop_duplicates("run_id").itertuples()
     )
+    kind_label = (
+        "precios observados con supuestos prescriptos; no histórico certificado"
+        if data_kind == "historical_assumptions"
+        else data_kind
+    )
     return (
         "# Robustez predefinida\n\n"
-        f"Datos: **{data_kind}**. Baseline verificado: **{baseline_verified}**.\n\n"
+        f"Datos: **{kind_label}**. Baseline verificado: **{baseline_verified}**.\n\n"
         "Cada escenario usa ambas estrategias; no se selecciona retrospectivamente el mejor. "
         "Los horizontes cambian conjuntamente forecast, target H1 y permanencia. Las fechas "
         "iniciales reinician sólo sus corridas separadas, nunca la cartera del H3 principal. "

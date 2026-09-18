@@ -1,0 +1,97 @@
+{
+  "generated_at": "2026-09-18T15:12:23.791263+00:00",
+  "report": "data/research/funding-provider-access-20260918/sample-comparison.json",
+  "report_sha256": "51eb25090bda2e8b9e9e002b47eaa4667a5ea1a1955ae1fa85778914ca36e1bf",
+  "summary": {
+    "known_settlements": 12,
+    "missing_settlement_examples": 4,
+    "exact_price_anywhere_in_two_minute_window": 11,
+    "last_at_or_before_exact": 9,
+    "first_at_or_after_exact": 9,
+    "raw_response_bytes": 427200
+  },
+  "missing_marks_recovered": 0,
+  "acceptance": "Rejected as an exact settlement-mark replacement: one known settlement price is absent from all captured markPrice@1s messages in its two-minute sample. Earlier broadcast marks were obtained but remain unverified for settlement.",
+  "documentation": [
+    {
+      "name": "tardis-binance-futures",
+      "requested_url": "https://docs.tardis.dev/historical-data-details/binance-futures.md",
+      "final_url": "https://docs.tardis.dev/historical-data-details/binance-futures.md",
+      "status": 200,
+      "retrieved_at": "2026-09-18T15:12:20.460577+00:00",
+      "file": "data/research/funding-provider-access-20260918/tardis-binance-futures.md",
+      "bytes": 14945,
+      "sha256": "0b8c6d51153359bb5062f876339c5943e64d52b7cb6bddac6524ef5cf75003f2"
+    },
+    {
+      "name": "tardis-http-api",
+      "requested_url": "https://docs.tardis.dev/api/http-api-reference.md",
+      "final_url": "https://docs.tardis.dev/api/http-api-reference.md",
+      "status": 200,
+      "retrieved_at": "2026-09-18T15:12:20.725061+00:00",
+      "file": "data/research/funding-provider-access-20260918/tardis-http-api.md",
+      "bytes": 28945,
+      "sha256": "490f2207c4859a7e8d423d3ba4b2debfefc0af52b11a646273ff4868c2d18a50"
+    },
+    {
+      "name": "tardis-billing",
+      "requested_url": "https://docs.tardis.dev/faq/billing-and-subscriptions.md",
+      "final_url": "https://docs.tardis.dev/faq/billing-and-subscriptions.md",
+      "status": 200,
+      "retrieved_at": "2026-09-18T15:12:21.128261+00:00",
+      "file": "data/research/funding-provider-access-20260918/tardis-billing.md",
+      "bytes": 28634,
+      "sha256": "29003ae5a5a212d0516e793f7acbe39e2bcc49bb61e99611267b80fb0638ff4d"
+    },
+    {
+      "name": "tardis-metadata",
+      "requested_url": "https://docs.tardis.dev/api/instruments-metadata-api.md",
+      "final_url": "https://docs.tardis.dev/api/instruments-metadata-api.md",
+      "status": 200,
+      "retrieved_at": "2026-09-18T15:12:21.805678+00:00",
+      "file": "data/research/funding-provider-access-20260918/tardis-metadata.md",
+      "bytes": 19384,
+      "sha256": "391ab2d4e2814404a14629f0c6f0731180c82445e805e3ee57fd7d418db6f78f"
+    },
+    {
+      "name": "amberdata-funding-rates",
+      "requested_url": "https://docs.amberdata.io/http/market/futures-funding-rates.md",
+      "final_url": "https://docs.amberdata.io/http/market/futures-funding-rates.md",
+      "status": 200,
+      "retrieved_at": "2026-09-18T15:12:22.673622+00:00",
+      "file": "data/research/funding-provider-access-20260918/amberdata-funding-rates.md",
+      "bytes": 7453,
+      "sha256": "ce15459731688add1268735b60a4d7a4a61dd3b20f3bd37ba7c276d82c986f8a"
+    },
+    {
+      "name": "amberdata-realized-definition",
+      "requested_url": "https://docs.amberdata.io/data-dictionary/analytics/derivatives/fundingrealized.md",
+      "final_url": "https://docs.amberdata.io/data-dictionary/analytics/derivatives/fundingrealized.md",
+      "status": 200,
+      "retrieved_at": "2026-09-18T15:12:22.953124+00:00",
+      "file": "data/research/funding-provider-access-20260918/amberdata-realized-definition.md",
+      "bytes": 2116,
+      "sha256": "2d90778e3e9c60b74237ec0af27f50ad71b04546dc1744e9edbfdc964625338a"
+    },
+    {
+      "name": "coinmetrics-funding",
+      "requested_url": "https://gitbook-docs.coinmetrics.io/market-data/market-data-overview/market-funding-rates.md",
+      "final_url": "https://gitbook-docs.coinmetrics.io/market-data/market-data-overview/market-funding-rates.md",
+      "status": 200,
+      "retrieved_at": "2026-09-18T15:12:23.368331+00:00",
+      "file": "data/research/funding-provider-access-20260918/coinmetrics-funding.md",
+      "bytes": 21420,
+      "sha256": "165def4883f33421923b5e512469bf01be1eedbd8488120336b74048e511b0d3"
+    },
+    {
+      "name": "kaiko-exchange-metrics",
+      "requested_url": "https://docs.kaiko.com/rest-api/analytics/derivatives-risk-indicators/exchange-provided-metrics.md",
+      "final_url": "https://docs.kaiko.com/rest-api/analytics/derivatives-risk-indicators/exchange-provided-metrics.md",
+      "status": 200,
+      "retrieved_at": "2026-09-18T15:12:23.768363+00:00",
+      "file": "data/research/funding-provider-access-20260918/kaiko-exchange-metrics.md",
+      "bytes": 13157,
+      "sha256": "78f314aac45657c2dc73c1c5e1f7269fdf6468be2198a7afd667a829762074a7"
+    }
+  ]
+}

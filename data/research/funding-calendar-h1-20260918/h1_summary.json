@@ -1,0 +1,101 @@
+[
+  {
+    "period": "full",
+    "symbol": "BTCUSDT",
+    "observations": 5090,
+    "excluded": 22,
+    "mae_ewma": 0.000573867368755,
+    "mae_no_change": 0.000788368866106,
+    "mae_ewma_bps": 5.7386736875499995,
+    "mae_no_change_bps": 7.88368866106,
+    "relative_mae_reduction": 0.2720826589848605
+  },
+  {
+    "period": "full",
+    "symbol": "ETHUSDT",
+    "observations": 5090,
+    "excluded": 22,
+    "mae_ewma": 0.000685928168408,
+    "mae_no_change": 0.000952295556789,
+    "mae_ewma_bps": 6.859281684080001,
+    "mae_no_change_bps": 9.52295556789,
+    "relative_mae_reduction": 0.2797108381762816
+  },
+  {
+    "period": "full",
+    "symbol": "EQUAL_WEIGHT",
+    "observations": 10180,
+    "excluded": 44,
+    "mae_ewma": 0.000629897768581,
+    "mae_no_change": 0.000870332211448,
+    "mae_ewma_bps": 6.29897768581,
+    "mae_no_change_bps": 8.70332211448,
+    "relative_mae_reduction": 0.27625593963365025
+  },
+  {
+    "period": "2022-2023",
+    "symbol": "BTCUSDT",
+    "observations": 2190,
+    "excluded": 0,
+    "mae_ewma": 0.000628953594075,
+    "mae_no_change": 0.000878198252265,
+    "mae_ewma_bps": 6.28953594075,
+    "mae_no_change_bps": 8.781982522649999,
+    "relative_mae_reduction": 0.28381365773293443
+  },
+  {
+    "period": "2022-2023",
+    "symbol": "ETHUSDT",
+    "observations": 2190,
+    "excluded": 0,
+    "mae_ewma": 0.000847892453653,
+    "mae_no_change": 0.001177098409233,
+    "mae_ewma_bps": 8.47892453653,
+    "mae_no_change_bps": 11.77098409233,
+    "relative_mae_reduction": 0.2796758138467891
+  },
+  {
+    "period": "2022-2023",
+    "symbol": "EQUAL_WEIGHT",
+    "observations": 4380,
+    "excluded": 0,
+    "mae_ewma": 0.000738423023864,
+    "mae_no_change": 0.001027648330749,
+    "mae_ewma_bps": 7.38423023864,
+    "mae_no_change_bps": 10.276483307489999,
+    "relative_mae_reduction": 0.2814438541190434
+  },
+  {
+    "period": "2024+",
+    "symbol": "BTCUSDT",
+    "observations": 2900,
+    "excluded": 22,
+    "mae_ewma": 0.000532267771014,
+    "mae_no_change": 0.000720532191731,
+    "mae_ewma_bps": 5.322677710140001,
+    "mae_no_change_bps": 7.20532191731,
+    "relative_mae_reduction": 0.26128523177391305
+  },
+  {
+    "period": "2024+",
+    "symbol": "ETHUSDT",
+    "observations": 2900,
+    "excluded": 22,
+    "mae_ewma": 0.000563617208171,
+    "mae_no_change": 0.000782530644081,
+    "mae_ewma_bps": 5.63617208171,
+    "mae_no_change_bps": 7.82530644081,
+    "relative_mae_reduction": 0.27975062390954786
+  },
+  {
+    "period": "2024+",
+    "symbol": "EQUAL_WEIGHT",
+    "observations": 5800,
+    "excluded": 44,
+    "mae_ewma": 0.000547942489592,
+    "mae_no_change": 0.000751531417906,
+    "mae_ewma_bps": 5.47942489592,
+    "mae_no_change_bps": 7.51531417906,
+    "relative_mae_reduction": 0.27089875880540293
+  }
+]

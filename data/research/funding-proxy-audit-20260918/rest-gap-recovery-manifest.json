@@ -1,0 +1,69 @@
+[
+  {
+    "symbol": "BTCUSDT",
+    "day": "2024-08-12",
+    "url": "https://fapi.binance.com/fapi/v1/markPriceKlines?symbol=BTCUSDT&interval=1m&startTime=1723456920000&endTime=1723457039999&limit=1500",
+    "status": 200,
+    "requested_missing_open_times_ms": [
+      1723456920000,
+      1723456980000
+    ],
+    "recovered_missing_open_times_ms": [],
+    "file": "data/research/funding-proxy-audit-20260918/BTCUSDT-mark-kline-gap-2024-08-12.json",
+    "bytes": 2,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "retrieved_at": "2026-09-18T15:35:47.811988+00:00"
+  },
+  {
+    "symbol": "ETHUSDT",
+    "day": "2022-07-12",
+    "url": "https://fapi.binance.com/fapi/v1/markPriceKlines?symbol=ETHUSDT&interval=1m&startTime=1657630620000&endTime=1657633979999&limit=1500",
+    "status": 200,
+    "requested_missing_open_times_ms": [
+      1657630620000,
+      1657631220000,
+      1657631700000,
+      1657631760000,
+      1657631820000,
+      1657631880000,
+      1657631940000,
+      1657632000000,
+      1657632060000,
+      1657633920000
+    ],
+    "recovered_missing_open_times_ms": [],
+    "file": "data/research/funding-proxy-audit-20260918/ETHUSDT-mark-kline-gap-2022-07-12.json",
+    "bytes": 5361,
+    "sha256": "3c4f150017fb2d0611bb57380000c99339b66c6806d0b4c4801573a80b2acd3e",
+    "retrieved_at": "2026-09-18T15:35:48.164476+00:00"
+  },
+  {
+    "symbol": "ETHUSDT",
+    "day": "2022-07-13",
+    "url": "https://fapi.binance.com/fapi/v1/markPriceKlines?symbol=ETHUSDT&interval=1m&startTime=1657695540000&endTime=1657695599999&limit=1500",
+    "status": 200,
+    "requested_missing_open_times_ms": [
+      1657695540000
+    ],
+    "recovered_missing_open_times_ms": [],
+    "file": "data/research/funding-proxy-audit-20260918/ETHUSDT-mark-kline-gap-2022-07-13.json",
+    "bytes": 2,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "retrieved_at": "2026-09-18T15:35:48.498627+00:00"
+  },
+  {
+    "symbol": "ETHUSDT",
+    "day": "2024-08-12",
+    "url": "https://fapi.binance.com/fapi/v1/markPriceKlines?symbol=ETHUSDT&interval=1m&startTime=1723456920000&endTime=1723457039999&limit=1500",
+    "status": 200,
+    "requested_missing_open_times_ms": [
+      1723456920000,
+      1723456980000
+    ],
+    "recovered_missing_open_times_ms": [],
+    "file": "data/research/funding-proxy-audit-20260918/ETHUSDT-mark-kline-gap-2024-08-12.json",
+    "bytes": 2,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "retrieved_at": "2026-09-18T15:35:48.840985+00:00"
+  }
+]

@@ -1,0 +1,723 @@
+{
+  "generated_at": "2026-09-18T15:10:19.458369+00:00",
+  "method": "Public first-day-of-month Tardis raw markPrice@1s samples, compared with saved Binance /fapi/v1/fundingRate responses. No imputation. Event times used for matching; local timestamps retained. Equality uses Decimal. Small purposive sample, not statistical error estimate.",
+  "requests": [
+    {
+      "file": "data/research/funding-provider-access-20260918/tardis-20220101-0759.txt",
+      "url": "https://api.tardis.dev/v1/data-feeds/binance-futures?from=2022-01-01T07%3A59%3A00.000Z&sliceSize=2&filters=%5B%7B%22channel%22%3A%22markPrice%22%2C%22symbols%22%3A%5B%22btcusdt%22%2C%22ethusdt%22%5D%7D%5D",
+      "status": 200,
+      "retrieved_at": "2026-09-18T15:10:13.713419+00:00",
+      "headers": {
+        "date": "Fri, 18 Sep 2026 15:10:13 GMT",
+        "content-type": "application/json",
+        "content-length": "7199",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "x-name": "binance-futures/2022/01/01/07/59",
+        "x-ratelimit-limit": "2000",
+        "x-ratelimit-remaining": "1999",
+        "x-ratelimit-reset-after": "47",
+        "x-slice-size": "2",
+        "x-suggested-slice-size": "10",
+        "server": "cloudflare",
+        "cf-ray": "a3d146b24cb51e78-EZE"
+      },
+      "bytes": 53400,
+      "sha256": "b3080d558e838dec563738a04c0c8f80f381633e18c6d6ed3db191f77e2fcc66"
+    },
+    {
+      "file": "data/research/funding-provider-access-20260918/tardis-20220101-1559.txt",
+      "url": "https://api.tardis.dev/v1/data-feeds/binance-futures?from=2022-01-01T15%3A59%3A00.000Z&sliceSize=2&filters=%5B%7B%22channel%22%3A%22markPrice%22%2C%22symbols%22%3A%5B%22btcusdt%22%2C%22ethusdt%22%5D%7D%5D",
+      "status": 200,
+      "retrieved_at": "2026-09-18T15:10:14.846970+00:00",
+      "headers": {
+        "date": "Fri, 18 Sep 2026 15:10:14 GMT",
+        "content-type": "application/json",
+        "content-length": "6790",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "x-name": "binance-futures/2022/01/01/15/59",
+        "x-ratelimit-limit": "2000",
+        "x-ratelimit-remaining": "1998",
+        "x-ratelimit-reset-after": "47",
+        "x-slice-size": "2",
+        "x-suggested-slice-size": "10",
+        "server": "cloudflare",
+        "cf-ray": "a3d146b6f9011e78-EZE"
+      },
+      "bytes": 53400,
+      "sha256": "5f2accdfd31a468327e2f11ae44e58d3f2c190dd12cc6a78f6c071d22cf75b6f"
+    },
+    {
+      "file": "data/research/funding-provider-access-20260918/tardis-20231101-0759.txt",
+      "url": "https://api.tardis.dev/v1/data-feeds/binance-futures?from=2023-11-01T07%3A59%3A00.000Z&sliceSize=2&filters=%5B%7B%22channel%22%3A%22markPrice%22%2C%22symbols%22%3A%5B%22btcusdt%22%2C%22ethusdt%22%5D%7D%5D",
+      "status": 200,
+      "retrieved_at": "2026-09-18T15:10:15.802212+00:00",
+      "headers": {
+        "date": "Fri, 18 Sep 2026 15:10:15 GMT",
+        "content-type": "application/json",
+        "content-length": "5995",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "x-name": "binance-futures/2023/11/01/07/59",
+        "x-ratelimit-limit": "2000",
+        "x-ratelimit-remaining": "1997",
+        "x-ratelimit-reset-after": "45",
+        "x-slice-size": "2",
+        "x-suggested-slice-size": "10",
+        "server": "cloudflare",
+        "cf-ray": "a3d146bdf8b61e78-EZE"
+      },
+      "bytes": 53400,
+      "sha256": "3f83bcb28c218ab02ad77b2be06348187c7239bb8c838a95cdb2df72f818712a"
+    },
+    {
+      "file": "data/research/funding-provider-access-20260918/tardis-20231101-1559.txt",
+      "url": "https://api.tardis.dev/v1/data-feeds/binance-futures?from=2023-11-01T15%3A59%3A00.000Z&sliceSize=2&filters=%5B%7B%22channel%22%3A%22markPrice%22%2C%22symbols%22%3A%5B%22btcusdt%22%2C%22ethusdt%22%5D%7D%5D",
+      "status": 200,
+      "retrieved_at": "2026-09-18T15:10:16.506199+00:00",
+      "headers": {
+        "date": "Fri, 18 Sep 2026 15:10:16 GMT",
+        "content-type": "application/json",
+        "content-length": "5787",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "x-name": "binance-futures/2023/11/01/15/59",
+        "x-ratelimit-limit": "2000",
+        "x-ratelimit-remaining": "1996",
+        "x-ratelimit-reset-after": "45",
+        "x-slice-size": "2",
+        "x-suggested-slice-size": "10",
+        "server": "cloudflare",
+        "cf-ray": "a3d146c3eeff1e78-EZE"
+      },
+      "bytes": 53400,
+      "sha256": "77ed37c9c8487cedf2b459c81688c7c736476cdc98ae9916eeb49fcbc987d540"
+    },
+    {
+      "file": "data/research/funding-provider-access-20260918/tardis-20240101-0759.txt",
+      "url": "https://api.tardis.dev/v1/data-feeds/binance-futures?from=2024-01-01T07%3A59%3A00.000Z&sliceSize=2&filters=%5B%7B%22channel%22%3A%22markPrice%22%2C%22symbols%22%3A%5B%22btcusdt%22%2C%22ethusdt%22%5D%7D%5D",
+      "status": 200,
+      "retrieved_at": "2026-09-18T15:09:14.493561+00:00",
+      "headers": {
+        "date": "Fri, 18 Sep 2026 15:09:14 GMT",
+        "content-type": "application/json",
+        "content-length": "6142",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "x-name": "binance-futures/2024/01/01/07/59",
+        "x-ratelimit-limit": "2000",
+        "x-ratelimit-remaining": "1999",
+        "x-ratelimit-reset-after": "47",
+        "x-slice-size": "2",
+        "x-suggested-slice-size": "10",
+        "server": "cloudflare",
+        "cf-ray": "a3d1453cce29de5e-EZE"
+      },
+      "bytes": 53400,
+      "sha256": "9ff413619aa99942aa961f4c014ce6f033154e3f777d2450d74cc035456d7cde"
+    },
+    {
+      "file": "data/research/funding-provider-access-20260918/tardis-20240101-1559.txt",
+      "url": "https://api.tardis.dev/v1/data-feeds/binance-futures?from=2024-01-01T15%3A59%3A00.000Z&sliceSize=2&filters=%5B%7B%22channel%22%3A%22markPrice%22%2C%22symbols%22%3A%5B%22btcusdt%22%2C%22ethusdt%22%5D%7D%5D",
+      "status": 200,
+      "retrieved_at": "2026-09-18T15:10:17.282918+00:00",
+      "headers": {
+        "date": "Fri, 18 Sep 2026 15:10:17 GMT",
+        "content-type": "application/json",
+        "content-length": "6213",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "x-name": "binance-futures/2024/01/01/15/59",
+        "x-ratelimit-limit": "2000",
+        "x-ratelimit-remaining": "1995",
+        "x-ratelimit-reset-after": "44",
+        "x-slice-size": "2",
+        "x-suggested-slice-size": "10",
+        "server": "cloudflare",
+        "cf-ray": "a3d146c89b9a1e78-EZE"
+      },
+      "bytes": 53400,
+      "sha256": "929f672bbce64ebe5c0ce366e390a2ff519d9a7f801fa0e560180fcc3390401f"
+    },
+    {
+      "file": "data/research/funding-provider-access-20260918/tardis-20240201-0759.txt",
+      "url": "https://api.tardis.dev/v1/data-feeds/binance-futures?from=2024-02-01T07%3A59%3A00.000Z&sliceSize=2&filters=%5B%7B%22channel%22%3A%22markPrice%22%2C%22symbols%22%3A%5B%22btcusdt%22%2C%22ethusdt%22%5D%7D%5D",
+      "status": 200,
+      "retrieved_at": "2026-09-18T15:10:18.080977+00:00",
+      "headers": {
+        "date": "Fri, 18 Sep 2026 15:10:17 GMT",
+        "content-type": "application/json",
+        "content-length": "5634",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "x-name": "binance-futures/2024/02/01/07/59",
+        "x-ratelimit-limit": "2000",
+        "x-ratelimit-remaining": "1994",
+        "x-ratelimit-reset-after": "43",
+        "x-slice-size": "2",
+        "x-suggested-slice-size": "10",
+        "server": "cloudflare",
+        "cf-ray": "a3d146cd2fa51e78-EZE"
+      },
+      "bytes": 53400,
+      "sha256": "efae0fedd2c54e383fa735f9b4c9d1ccf65e4dcc4b228510a84269972edd279d"
+    },
+    {
+      "file": "data/research/funding-provider-access-20260918/tardis-20240201-1559.txt",
+      "url": "https://api.tardis.dev/v1/data-feeds/binance-futures?from=2024-02-01T15%3A59%3A00.000Z&sliceSize=2&filters=%5B%7B%22channel%22%3A%22markPrice%22%2C%22symbols%22%3A%5B%22btcusdt%22%2C%22ethusdt%22%5D%7D%5D",
+      "status": 200,
+      "retrieved_at": "2026-09-18T15:10:19.440909+00:00",
+      "headers": {
+        "date": "Fri, 18 Sep 2026 15:10:19 GMT",
+        "content-type": "application/json",
+        "content-length": "6143",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "x-name": "binance-futures/2024/02/01/15/59",
+        "x-ratelimit-limit": "2000",
+        "x-ratelimit-remaining": "1993",
+        "x-ratelimit-reset-after": "42",
+        "x-slice-size": "2",
+        "x-suggested-slice-size": "10",
+        "server": "cloudflare",
+        "cf-ray": "a3d146d22b941e78-EZE"
+      },
+      "bytes": 53400,
+      "sha256": "673fc391317cfffcc3c7026a64b1866e7b99f77d68507cfcfe4e523bcb7744a7"
+    }
+  ],
+  "comparisons": [
+    {
+      "symbol": "BTCUSDT",
+      "nominal_time": "2022-01-01T08:00:00Z",
+      "funding_event": {
+        "symbol": "BTCUSDT",
+        "fundingTime": 1641024000009,
+        "fundingRate": "0.00010000",
+        "markPrice": "",
+        "rateType": "Regular"
+      },
+      "sample_file": "data/research/funding-provider-access-20260918/tardis-20220101-0759.txt",
+      "sample_event_count": 120,
+      "candidates": {
+        "last_at_or_before_charge": {
+          "event_time_ms": 1641024000006,
+          "local_timestamp": "2022-01-01T08:00:00.2207614Z",
+          "mark_price": "47190.84948535",
+          "event_offset_ms": -3,
+          "equal_to_settlement": null,
+          "signed_error_bps": null
+        },
+        "first_at_or_after_charge": {
+          "event_time_ms": 1641024001000,
+          "local_timestamp": "2022-01-01T08:00:01.0553005Z",
+          "mark_price": "47190.68504334",
+          "event_offset_ms": 991,
+          "equal_to_settlement": null,
+          "signed_error_bps": null
+        }
+      },
+      "settlement_price_found_anywhere_in_sample": null
+    },
+    {
+      "symbol": "ETHUSDT",
+      "nominal_time": "2022-01-01T08:00:00Z",
+      "funding_event": {
+        "symbol": "ETHUSDT",
+        "fundingTime": 1641024000009,
+        "fundingRate": "0.00010000",
+        "markPrice": "",
+        "rateType": "Regular"
+      },
+      "sample_file": "data/research/funding-provider-access-20260918/tardis-20220101-0759.txt",
+      "sample_event_count": 120,
+      "candidates": {
+        "last_at_or_before_charge": {
+          "event_time_ms": 1641024000006,
+          "local_timestamp": "2022-01-01T08:00:00.2207184Z",
+          "mark_price": "3715.14029259",
+          "event_offset_ms": -3,
+          "equal_to_settlement": null,
+          "signed_error_bps": null
+        },
+        "first_at_or_after_charge": {
+          "event_time_ms": 1641024001000,
+          "local_timestamp": "2022-01-01T08:00:01.0592070Z",
+          "mark_price": "3715.11791490",
+          "event_offset_ms": 991,
+          "equal_to_settlement": null,
+          "signed_error_bps": null
+        }
+      },
+      "settlement_price_found_anywhere_in_sample": null
+    },
+    {
+      "symbol": "BTCUSDT",
+      "nominal_time": "2022-01-01T16:00:00Z",
+      "funding_event": {
+        "symbol": "BTCUSDT",
+        "fundingTime": 1641052800000,
+        "fundingRate": "0.00010000",
+        "markPrice": "",
+        "rateType": "Regular"
+      },
+      "sample_file": "data/research/funding-provider-access-20260918/tardis-20220101-1559.txt",
+      "sample_event_count": 120,
+      "candidates": {
+        "last_at_or_before_charge": {
+          "event_time_ms": 1641052799000,
+          "local_timestamp": "2022-01-01T15:59:59.2228906Z",
+          "mark_price": "47196.91691248",
+          "event_offset_ms": -1000,
+          "equal_to_settlement": null,
+          "signed_error_bps": null
+        },
+        "first_at_or_after_charge": {
+          "event_time_ms": 1641052800001,
+          "local_timestamp": "2022-01-01T16:00:00.2062428Z",
+          "mark_price": "47197.06643600",
+          "event_offset_ms": 1,
+          "equal_to_settlement": null,
+          "signed_error_bps": null
+        }
+      },
+      "settlement_price_found_anywhere_in_sample": null
+    },
+    {
+      "symbol": "ETHUSDT",
+      "nominal_time": "2022-01-01T16:00:00Z",
+      "funding_event": {
+        "symbol": "ETHUSDT",
+        "fundingTime": 1641052800000,
+        "fundingRate": "0.00010000",
+        "markPrice": "",
+        "rateType": "Regular"
+      },
+      "sample_file": "data/research/funding-provider-access-20260918/tardis-20220101-1559.txt",
+      "sample_event_count": 120,
+      "candidates": {
+        "last_at_or_before_charge": {
+          "event_time_ms": 1641052799000,
+          "local_timestamp": "2022-01-01T15:59:59.2263809Z",
+          "mark_price": "3724.27000000",
+          "event_offset_ms": -1000,
+          "equal_to_settlement": null,
+          "signed_error_bps": null
+        },
+        "first_at_or_after_charge": {
+          "event_time_ms": 1641052800001,
+          "local_timestamp": "2022-01-01T16:00:00.2069591Z",
+          "mark_price": "3723.98000000",
+          "event_offset_ms": 1,
+          "equal_to_settlement": null,
+          "signed_error_bps": null
+        }
+      },
+      "settlement_price_found_anywhere_in_sample": null
+    },
+    {
+      "symbol": "BTCUSDT",
+      "nominal_time": "2023-11-01T08:00:00Z",
+      "funding_event": {
+        "symbol": "BTCUSDT",
+        "fundingTime": 1698825600000,
+        "fundingRate": "0.00010000",
+        "markPrice": "34462.70000000",
+        "rateType": "Regular"
+      },
+      "sample_file": "data/research/funding-provider-access-20260918/tardis-20231101-0759.txt",
+      "sample_event_count": 120,
+      "candidates": {
+        "last_at_or_before_charge": {
+          "event_time_ms": 1698825599000,
+          "local_timestamp": "2023-11-01T07:59:59.0219922Z",
+          "mark_price": "34461.50000000",
+          "event_offset_ms": -1000,
+          "equal_to_settlement": false,
+          "signed_error_bps": "-0.3482025494229993587269710000"
+        },
+        "first_at_or_after_charge": {
+          "event_time_ms": 1698825600001,
+          "local_timestamp": "2023-11-01T08:00:00.0411627Z",
+          "mark_price": "34462.70000000",
+          "event_offset_ms": 1,
+          "equal_to_settlement": true,
+          "signed_error_bps": "0"
+        }
+      },
+      "settlement_price_found_anywhere_in_sample": true
+    },
+    {
+      "symbol": "ETHUSDT",
+      "nominal_time": "2023-11-01T08:00:00Z",
+      "funding_event": {
+        "symbol": "ETHUSDT",
+        "fundingTime": 1698825600000,
+        "fundingRate": "0.00010000",
+        "markPrice": "1805.10087255",
+        "rateType": "Regular"
+      },
+      "sample_file": "data/research/funding-provider-access-20260918/tardis-20231101-0759.txt",
+      "sample_event_count": 120,
+      "candidates": {
+        "last_at_or_before_charge": {
+          "event_time_ms": 1698825599000,
+          "local_timestamp": "2023-11-01T07:59:59.0238066Z",
+          "mark_price": "1804.89000000",
+          "event_offset_ms": -1000,
+          "equal_to_settlement": false,
+          "signed_error_bps": "-1.168203689925140078565744000"
+        },
+        "first_at_or_after_charge": {
+          "event_time_ms": 1698825600001,
+          "local_timestamp": "2023-11-01T08:00:00.0415055Z",
+          "mark_price": "1805.10087255",
+          "event_offset_ms": 1,
+          "equal_to_settlement": true,
+          "signed_error_bps": "0"
+        }
+      },
+      "settlement_price_found_anywhere_in_sample": true
+    },
+    {
+      "symbol": "BTCUSDT",
+      "nominal_time": "2023-11-01T16:00:00Z",
+      "funding_event": {
+        "symbol": "BTCUSDT",
+        "fundingTime": 1698854400000,
+        "fundingRate": "0.00010000",
+        "markPrice": "34297.00000000",
+        "rateType": "Regular"
+      },
+      "sample_file": "data/research/funding-provider-access-20260918/tardis-20231101-1559.txt",
+      "sample_event_count": 120,
+      "candidates": {
+        "last_at_or_before_charge": {
+          "event_time_ms": 1698854400000,
+          "local_timestamp": "2023-11-01T16:00:00.0266994Z",
+          "mark_price": "34297.00000000",
+          "event_offset_ms": 0,
+          "equal_to_settlement": true,
+          "signed_error_bps": "0"
+        },
+        "first_at_or_after_charge": {
+          "event_time_ms": 1698854400000,
+          "local_timestamp": "2023-11-01T16:00:00.0266994Z",
+          "mark_price": "34297.00000000",
+          "event_offset_ms": 0,
+          "equal_to_settlement": true,
+          "signed_error_bps": "0"
+        }
+      },
+      "settlement_price_found_anywhere_in_sample": true
+    },
+    {
+      "symbol": "ETHUSDT",
+      "nominal_time": "2023-11-01T16:00:00Z",
+      "funding_event": {
+        "symbol": "ETHUSDT",
+        "fundingTime": 1698854400000,
+        "fundingRate": "0.00010000",
+        "markPrice": "1792.96543725",
+        "rateType": "Regular"
+      },
+      "sample_file": "data/research/funding-provider-access-20260918/tardis-20231101-1559.txt",
+      "sample_event_count": 120,
+      "candidates": {
+        "last_at_or_before_charge": {
+          "event_time_ms": 1698854400000,
+          "local_timestamp": "2023-11-01T16:00:00.0284924Z",
+          "mark_price": "1792.96073137",
+          "event_offset_ms": 0,
+          "equal_to_settlement": false,
+          "signed_error_bps": "-0.0262463508901640987279440000"
+        },
+        "first_at_or_after_charge": {
+          "event_time_ms": 1698854400000,
+          "local_timestamp": "2023-11-01T16:00:00.0284924Z",
+          "mark_price": "1792.96073137",
+          "event_offset_ms": 0,
+          "equal_to_settlement": false,
+          "signed_error_bps": "-0.0262463508901640987279440000"
+        }
+      },
+      "settlement_price_found_anywhere_in_sample": false
+    },
+    {
+      "symbol": "BTCUSDT",
+      "nominal_time": "2024-01-01T08:00:00Z",
+      "funding_event": {
+        "symbol": "BTCUSDT",
+        "fundingTime": 1704096000000,
+        "fundingRate": "0.00027213",
+        "markPrice": "42525.11019858",
+        "rateType": "Regular"
+      },
+      "sample_file": "data/research/funding-provider-access-20260918/tardis-20240101-0759.txt",
+      "sample_event_count": 120,
+      "candidates": {
+        "last_at_or_before_charge": {
+          "event_time_ms": 1704096000000,
+          "local_timestamp": "2024-01-01T08:00:00.0230545Z",
+          "mark_price": "42525.11019858",
+          "event_offset_ms": 0,
+          "equal_to_settlement": true,
+          "signed_error_bps": "0"
+        },
+        "first_at_or_after_charge": {
+          "event_time_ms": 1704096000000,
+          "local_timestamp": "2024-01-01T08:00:00.0230545Z",
+          "mark_price": "42525.11019858",
+          "event_offset_ms": 0,
+          "equal_to_settlement": true,
+          "signed_error_bps": "0"
+        }
+      },
+      "settlement_price_found_anywhere_in_sample": true
+    },
+    {
+      "symbol": "ETHUSDT",
+      "nominal_time": "2024-01-01T08:00:00Z",
+      "funding_event": {
+        "symbol": "ETHUSDT",
+        "fundingTime": 1704096000000,
+        "fundingRate": "0.00031096",
+        "markPrice": "2286.35660167",
+        "rateType": "Regular"
+      },
+      "sample_file": "data/research/funding-provider-access-20260918/tardis-20240101-0759.txt",
+      "sample_event_count": 120,
+      "candidates": {
+        "last_at_or_before_charge": {
+          "event_time_ms": 1704096000000,
+          "local_timestamp": "2024-01-01T08:00:00.0234443Z",
+          "mark_price": "2286.35660167",
+          "event_offset_ms": 0,
+          "equal_to_settlement": true,
+          "signed_error_bps": "0"
+        },
+        "first_at_or_after_charge": {
+          "event_time_ms": 1704096000000,
+          "local_timestamp": "2024-01-01T08:00:00.0234443Z",
+          "mark_price": "2286.35660167",
+          "event_offset_ms": 0,
+          "equal_to_settlement": true,
+          "signed_error_bps": "0"
+        }
+      },
+      "settlement_price_found_anywhere_in_sample": true
+    },
+    {
+      "symbol": "BTCUSDT",
+      "nominal_time": "2024-01-01T16:00:00Z",
+      "funding_event": {
+        "symbol": "BTCUSDT",
+        "fundingTime": 1704124800000,
+        "fundingRate": "0.00033601",
+        "markPrice": "42811.29637234",
+        "rateType": "Regular"
+      },
+      "sample_file": "data/research/funding-provider-access-20260918/tardis-20240101-1559.txt",
+      "sample_event_count": 120,
+      "candidates": {
+        "last_at_or_before_charge": {
+          "event_time_ms": 1704124800000,
+          "local_timestamp": "2024-01-01T16:00:00.0390154Z",
+          "mark_price": "42811.29637234",
+          "event_offset_ms": 0,
+          "equal_to_settlement": true,
+          "signed_error_bps": "0"
+        },
+        "first_at_or_after_charge": {
+          "event_time_ms": 1704124800000,
+          "local_timestamp": "2024-01-01T16:00:00.0390154Z",
+          "mark_price": "42811.29637234",
+          "event_offset_ms": 0,
+          "equal_to_settlement": true,
+          "signed_error_bps": "0"
+        }
+      },
+      "settlement_price_found_anywhere_in_sample": true
+    },
+    {
+      "symbol": "ETHUSDT",
+      "nominal_time": "2024-01-01T16:00:00Z",
+      "funding_event": {
+        "symbol": "ETHUSDT",
+        "fundingTime": 1704124800000,
+        "fundingRate": "0.00043011",
+        "markPrice": "2316.73945076",
+        "rateType": "Regular"
+      },
+      "sample_file": "data/research/funding-provider-access-20260918/tardis-20240101-1559.txt",
+      "sample_event_count": 120,
+      "candidates": {
+        "last_at_or_before_charge": {
+          "event_time_ms": 1704124800000,
+          "local_timestamp": "2024-01-01T16:00:00.0390880Z",
+          "mark_price": "2316.73945076",
+          "event_offset_ms": 0,
+          "equal_to_settlement": true,
+          "signed_error_bps": "0"
+        },
+        "first_at_or_after_charge": {
+          "event_time_ms": 1704124800000,
+          "local_timestamp": "2024-01-01T16:00:00.0390880Z",
+          "mark_price": "2316.73945076",
+          "event_offset_ms": 0,
+          "equal_to_settlement": true,
+          "signed_error_bps": "0"
+        }
+      },
+      "settlement_price_found_anywhere_in_sample": true
+    },
+    {
+      "symbol": "BTCUSDT",
+      "nominal_time": "2024-02-01T08:00:00Z",
+      "funding_event": {
+        "symbol": "BTCUSDT",
+        "fundingTime": 1706774400000,
+        "fundingRate": "0.00010000",
+        "markPrice": "42182.20000000",
+        "rateType": "Regular"
+      },
+      "sample_file": "data/research/funding-provider-access-20260918/tardis-20240201-0759.txt",
+      "sample_event_count": 120,
+      "candidates": {
+        "last_at_or_before_charge": {
+          "event_time_ms": 1706774400000,
+          "local_timestamp": "2024-02-01T08:00:00.0307960Z",
+          "mark_price": "42182.20000000",
+          "event_offset_ms": 0,
+          "equal_to_settlement": true,
+          "signed_error_bps": "0"
+        },
+        "first_at_or_after_charge": {
+          "event_time_ms": 1706774400000,
+          "local_timestamp": "2024-02-01T08:00:00.0307960Z",
+          "mark_price": "42182.20000000",
+          "event_offset_ms": 0,
+          "equal_to_settlement": true,
+          "signed_error_bps": "0"
+        }
+      },
+      "settlement_price_found_anywhere_in_sample": true
+    },
+    {
+      "symbol": "ETHUSDT",
+      "nominal_time": "2024-02-01T08:00:00Z",
+      "funding_event": {
+        "symbol": "ETHUSDT",
+        "fundingTime": 1706774400000,
+        "fundingRate": "0.00007871",
+        "markPrice": "2270.91404545",
+        "rateType": "Regular"
+      },
+      "sample_file": "data/research/funding-provider-access-20260918/tardis-20240201-0759.txt",
+      "sample_event_count": 120,
+      "candidates": {
+        "last_at_or_before_charge": {
+          "event_time_ms": 1706774400000,
+          "local_timestamp": "2024-02-01T08:00:00.0329816Z",
+          "mark_price": "2270.91404545",
+          "event_offset_ms": 0,
+          "equal_to_settlement": true,
+          "signed_error_bps": "0"
+        },
+        "first_at_or_after_charge": {
+          "event_time_ms": 1706774400000,
+          "local_timestamp": "2024-02-01T08:00:00.0329816Z",
+          "mark_price": "2270.91404545",
+          "event_offset_ms": 0,
+          "equal_to_settlement": true,
+          "signed_error_bps": "0"
+        }
+      },
+      "settlement_price_found_anywhere_in_sample": true
+    },
+    {
+      "symbol": "BTCUSDT",
+      "nominal_time": "2024-02-01T16:00:00Z",
+      "funding_event": {
+        "symbol": "BTCUSDT",
+        "fundingTime": 1706803200002,
+        "fundingRate": "0.00010000",
+        "markPrice": "42500.13148936",
+        "rateType": "Regular"
+      },
+      "sample_file": "data/research/funding-provider-access-20260918/tardis-20240201-1559.txt",
+      "sample_event_count": 120,
+      "candidates": {
+        "last_at_or_before_charge": {
+          "event_time_ms": 1706803200000,
+          "local_timestamp": "2024-02-01T16:00:00.0388724Z",
+          "mark_price": "42500.13148936",
+          "event_offset_ms": -2,
+          "equal_to_settlement": true,
+          "signed_error_bps": "0"
+        },
+        "first_at_or_after_charge": {
+          "event_time_ms": 1706803201000,
+          "local_timestamp": "2024-02-01T16:00:01.0545180Z",
+          "mark_price": "42500.00000000",
+          "event_offset_ms": 998,
+          "equal_to_settlement": false,
+          "signed_error_bps": "-0.0309385772213242789998170000"
+        }
+      },
+      "settlement_price_found_anywhere_in_sample": true
+    },
+    {
+      "symbol": "ETHUSDT",
+      "nominal_time": "2024-02-01T16:00:00Z",
+      "funding_event": {
+        "symbol": "ETHUSDT",
+        "fundingTime": 1706803200002,
+        "fundingRate": "0.00010000",
+        "markPrice": "2288.28000000",
+        "rateType": "Regular"
+      },
+      "sample_file": "data/research/funding-provider-access-20260918/tardis-20240201-1559.txt",
+      "sample_event_count": 120,
+      "candidates": {
+        "last_at_or_before_charge": {
+          "event_time_ms": 1706803200000,
+          "local_timestamp": "2024-02-01T16:00:00.0407066Z",
+          "mark_price": "2288.28000000",
+          "event_offset_ms": -2,
+          "equal_to_settlement": true,
+          "signed_error_bps": "0"
+        },
+        "first_at_or_after_charge": {
+          "event_time_ms": 1706803201000,
+          "local_timestamp": "2024-02-01T16:00:01.0551700Z",
+          "mark_price": "2288.37000000",
+          "event_offset_ms": 998,
+          "equal_to_settlement": false,
+          "signed_error_bps": "0.393308511196182285384660000"
+        }
+      },
+      "settlement_price_found_anywhere_in_sample": true
+    }
+  ],
+  "documentation_manifest": "data/research/funding-provider-access-20260918/documentation-manifest.json",
+  "missing_marks_recovered": 0,
+  "acceptance": "Rejected as an exact settlement-mark replacement: one known settlement price is absent from all captured markPrice@1s messages in its two-minute sample. Earlier broadcast marks were obtained but remain unverified for settlement.",
+  "summary": {
+    "known_settlements": 12,
+    "missing_settlement_examples": 4,
+    "exact_price_anywhere_in_two_minute_window": 11,
+    "last_at_or_before_exact": 9,
+    "first_at_or_after_exact": 9,
+    "raw_response_bytes": 427200
+  }
+}

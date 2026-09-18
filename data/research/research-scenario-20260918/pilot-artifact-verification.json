@@ -1,0 +1,63 @@
+{
+  "index": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\outputs\\robustness-95178f7896fa4926",
+  "verification": {
+    "valid": true,
+    "status": "complete",
+    "run_id": "robustness-95178f7896fa4926",
+    "mismatches": []
+  },
+  "scenarios": [
+    {
+      "run_id": "run_bb55e1a0eaa2055b9d777bd4",
+      "scenario": "baseline",
+      "status": "complete",
+      "data_kind": "historical_assumptions"
+    },
+    {
+      "run_id": "run_976058cb54f5db4652cfcea8",
+      "scenario": "cost-2",
+      "status": "complete",
+      "data_kind": "historical_assumptions"
+    },
+    {
+      "run_id": "run_aa7a6c5fd31e4471e1c2117f",
+      "scenario": "cost-3",
+      "status": "complete",
+      "data_kind": "historical_assumptions"
+    },
+    {
+      "run_id": "run_052e499c4c0009ac72947f86",
+      "scenario": "funding-proxy-plus-10",
+      "status": "complete",
+      "data_kind": "historical_assumptions"
+    },
+    {
+      "run_id": "run_b05249303526ca14bcb805fc",
+      "scenario": "funding-proxy-minus-10",
+      "status": "complete",
+      "data_kind": "historical_assumptions"
+    },
+    {
+      "run_id": "run_9500db2d0039023739dc2d96",
+      "scenario": "futures-fee-0p0004",
+      "status": "complete",
+      "data_kind": "historical_assumptions"
+    },
+    {
+      "run_id": "run_5b39382e7f65be3772d2b44b",
+      "scenario": "maintenance-2",
+      "status": "complete",
+      "data_kind": "historical_assumptions"
+    },
+    {
+      "run_id": "run_a17aca1a2b9e6b6affbb2c08",
+      "scenario": "liquidation-fee-0p03",
+      "status": "complete",
+      "data_kind": "historical_assumptions"
+    }
+  ],
+  "baseline_report": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\outputs\\run_bb55e1a0eaa2055b9d777bd4\\report.md",
+  "baseline_report_regeneration": "identical",
+  "corrected_empty_plot_label": "verified",
+  "limitation": "10-minute observed pilot; exact settlement marks only; proxy and liquidation sensitivity need longer economic runs"
+}

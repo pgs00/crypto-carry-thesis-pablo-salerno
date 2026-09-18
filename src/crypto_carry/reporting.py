@@ -34,6 +34,7 @@ import pyarrow.parquet as pq
 
 from .config import SECOND, Config, iso, timestamp
 from .costs import floor_step, valid_quantity
+from .data.prescribed import research_assumptions
 from .evaluation import (
     daily_opportunity,
     forecast_evaluation,
@@ -934,9 +935,12 @@ def _quality_text(run: Path) -> str:
 def _report_text(run: Path) -> str:
     context = _read(run, "run_context").iloc[0]
     synthetic = context.data_kind == "synthetic"
+    research = context.data_kind == "historical_assumptions"
     label = (
         "SINTÉTICO — validación del pipeline" if synthetic else "HISTÓRICO — cobertura observada"
     )
+    if research:
+        label = "PRECIOS OBSERVADOS CON SUPUESTOS PRESCRIPTOS"
     summary, metrics = _read(run, "run_summary"), _read(run, "metrics")
     params = _read(run, "parameters")
     h1, h2, h3 = _judgments(run)
@@ -1227,7 +1231,27 @@ def _report_text(run: Path) -> str:
             ),
         ]
     )
-    return "\n\n".join(report) + "\n"
+    if research:
+        audit = json.loads((run / "funding_mark_audit.json").read_text(encoding="utf-8"))
+        report.extend(
+            [
+                "### Declaración del escenario de investigación",
+                "Los precios y tasas son observados; los marks sustituidos y las reglas de mercado "
+                "son supuestos prescriptos declarados en 2026. Esta corrida no certifica una "
+                "reconstrucción histórica. H2 y H3 se evalúan dentro de ese escenario, por separado "
+                "de la cobertura histórica estricta. `research_assumptions.json` declara las reglas y "
+                "`funding_mark_audit.json` separa los marks validados de los usados, con conteos exactos "
+                "y sustituidos. El motor consumió "
+                f"{audit['exact_consumed_count']} exactos, {audit['proxy_consumed_count']} proxies "
+                f"causales y {audit['warmup_not_required_count']} observaciones de precalentamiento "
+                "sin imputación. Son observaciones entregadas al motor y no implican, por sí solas, "
+                "pagos de funding en efectivo.",
+            ]
+        )
+    text = "\n\n".join(report) + "\n"
+    if research:
+        text = text.replace("reglas históricas", "reglas prescriptas declaradas")
+    return text
 
 
 def _render_figures(run: Path, destination: Path, manifest: dict) -> None:
@@ -1239,6 +1263,8 @@ def _render_figures(run: Path, destination: Path, manifest: dict) -> None:
         if context.data_kind == "synthetic"
         else "HISTÓRICO · cobertura observada"
     )
+    if context.data_kind == "historical_assumptions":
+        label = "OBSERVADO + SUPUESTOS PRESCRIPTOS"
     daily, summary = _read(run, "equity_daily"), _read(run, "run_summary")
     palettes = ["#2563a6", "#dc741c", "#487b3a", "#884b8d"]
     strategy_labels = {"conditional": "Condicional", "permanent": "Permanente"}
@@ -1509,8 +1535,11 @@ def write_run(
     inputs: dict | None = None,
 ) -> Path:
     """Create a run once, or reuse it only after checking identity and all hashes."""
-    if data_kind not in {"synthetic", "historical"}:
-        raise ValueError("data_kind must be synthetic or historical")
+    if data_kind not in {"synthetic", "historical", "historical_assumptions"}:
+        raise ValueError("data_kind must be synthetic, historical or historical_assumptions")
+    research = config.analysis_mode == "prescribed_research"
+    if research != (data_kind == "historical_assumptions"):
+        raise ValueError("analysis_mode and data_kind describe different research provenance")
     if len({b.strategy for b in backtests}) != len(backtests):
         raise ValueError("Each strategy must have a unique name within a run")
     if any(b.config.to_dict() != config.to_dict() for b in backtests):
@@ -1584,12 +1613,51 @@ def write_run(
     try:
         for name in ("download.json", "processed.json", "coverage.json"):
             source = Path(root).resolve() / config.data_dir / "manifests" / name
-            if data_kind == "historical" and source.is_file():
+            if data_kind in {"historical", "historical_assumptions"} and source.is_file():
                 destination = run / "source_manifests" / name
                 destination.parent.mkdir(exist_ok=True)
                 destination.write_bytes(source.read_bytes())
         (run / "effective_config.toml").write_text(config.to_toml(), encoding="utf-8")
         (run / "data_quality.json").write_text(_json(quality) + "\n", encoding="utf-8")
+        if data_kind == "historical_assumptions":
+            validated = list(quality.get("funding_mark_audit", []))
+            consumed = [
+                {
+                    **asdict(item),
+                    "strategy": b.strategy,
+                    "funding_filter_enabled": b.funding_filter_enabled,
+                    "economic_window": item.funding_time >= timestamp(config.start),
+                }
+                for b in backtests
+                for item in b.all_funding
+            ]
+            methods = Counter(row.get("settlement_mark_method", "exact") for row in consumed)
+            counts_by_strategy = {
+                b.strategy: dict(
+                    sorted(Counter(item.settlement_mark_method for item in b.all_funding).items())
+                )
+                for b in backtests
+            }
+            audit = {
+                "validated_count": len(validated),
+                "engine_consumed_count": len(consumed),
+                "exact_consumed_count": methods["exact"],
+                "proxy_consumed_count": methods["previous_closed_1m"],
+                "warmup_not_required_count": methods["not_required_before_start"],
+                "counts_by_strategy": counts_by_strategy,
+                "validated": validated,
+                "consumed": consumed,
+                "limitations": [
+                    "Validated records may cover the whole requested window even when a run stops early.",
+                    "Consumed observations do not necessarily produce cash funding payments.",
+                    "Warmup not_required_before_start observations are not mark substitutions.",
+                    "Proxy marks are causal approximations and do not certify historical rules.",
+                ],
+            }
+            (run / "research_assumptions.json").write_text(
+                _json(research_assumptions(config)) + "\n", encoding="utf-8"
+            )
+            (run / "funding_mark_audit.json").write_text(_json(audit) + "\n", encoding="utf-8")
         _persist_tables(run, config, backtests, quality, manifest)
         (run / "data_quality_report.md").write_text(_quality_text(run), encoding="utf-8")
         _render_figures(run, run / "figures", manifest)
