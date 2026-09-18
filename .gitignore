@@ -1,0 +1,14 @@
+.venv/
+.uv-cache/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+data/raw/**
+data/processed/**
+outputs/**
+.superpowers/
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!outputs/.gitkeep
+
