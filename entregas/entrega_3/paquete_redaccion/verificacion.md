@@ -1,5 +1,10 @@
 # Verificación de esta preparación
 
+Las secciones originales conservan los controles de la preparación v1. La
+[revisión documental v2](#revisión-documental-v2-integridad-git-y-h3) registra
+por separado las correcciones y validaciones posteriores; no sustituye los
+resultados de las pruebas históricas por los nuevos.
+
 Fecha: 19/09/2026. Alcance: preparar un paquete de redacción a partir de artefactos
 persistidos. No se descargaron datos de mercado, no se ejecutaron nuevos backtests,
 no se optimizaron parámetros y no se modificaron los resultados originales.
@@ -156,3 +161,75 @@ la integridad del contenedor. Excluye cachés, entornos y datos de mercado.
 El inventario final está en `manifiesto_paquete.json`; su hash figura en
 `manifiesto_paquete.sha256`. Junto al ZIP se entrega también su SHA-256. Esos
 archivos permiten detectar cambios posteriores sin acceder a las rutas originales.
+
+## Revisión documental v2: integridad Git y H3
+
+Se conservó el ZIP original `paquete_redaccion_entrega_3.zip`, SHA-256
+`f7174d49214e954ee66620dbb36f800a9d9bc22cb45633a19c2755782b0be1ba`, como referencia.
+Su manifiesto y sus 138 archivos declarados pasan los hashes. La copia local
+coincidía con el ZIP, pero **78 archivos de HEAD** habían sido convertidos de
+CRLF a LF por Git. Se reprodujo el fallo exportando HEAD: el verificador rechazó
+`evidencia/corridas/run_f4151cc97937f3704d77fb14/metrics.csv` por checksum distinto.
+
+Se restauraron los bytes del ZIP y se añadió `.gitattributes` con `-text` para
+todo el árbol del paquete y los ZIP/checksums de la entrega. La regla preserva
+tanto fuentes LF como CRLF; no homogeneiza terminadores ni cambia sus hashes.
+El diff de Git puede mostrar muchas líneas reemplazadas por esa restauración;
+`git diff --ignore-space-at-eol` permite separar esos cambios de las ediciones
+de documentación. No se aplicó conversión global al motor o a la evidencia histórica.
+
+`fuentes_originales.json` y sus **101 fuentes** siguen idénticos al ZIP original.
+También se conservaron las tablas económicas, configuraciones, datos diarios,
+figuras, manifiestos de corridas y auditorías. Sólo se revisaron LEEME,
+convenciones y este registro, además del manifiesto del paquete y su sidecar.
+La nueva versión se entrega en `paquete_redaccion_entrega_3_v2.zip`; v1 se conserva.
+El manifiesto v2 incorpora el hash del ZIP y del manifiesto originales como referencia.
+
+La corrección de H3 describe `valor = forecast` cuando el minuto es elegible y
+cero en caso contrario. Los costos sólo intervienen en la elegibilidad. La
+agregación conserva todos los minutos del día, incluidos ceros, y excluye días
+incompletos. Se contrastó con `_opportunity` y `daily_opportunity`: no se cambió
+ninguna fórmula, parámetro, resultado ni evidencia económica.
+
+En README, avance y guía de auditoría se reemplazaron enlaces de lectura a D:
+y outputs no publicados por las copias incluidas. Las rutas históricas dentro
+de fuentes/manifiestos permanecen como procedencia. Los comandos que requieren
+datos completos locales están separados de la reproducción portátil.
+
+### Validaciones de esta revisión
+
+- **Pytest completo: 418 passed in 41.85s**, sin repetir los backtests anuales.
+  Incluye cuatro regresiones nuevas de empaquetado: revisión documental sin
+  discos originales, cambio CRLF/LF rechazado, sustitución de hashes rechazada
+  y checksum de ZIP inválido rechazado.
+- **Ruff `check src tests entregas`: aprobado**; `format --check` informa
+  **104 archivos ya formateados**. El chequeo global `ruff check .` detectó seis
+  avisos preexistentes en `data/research/funding-calendar-h1-20260918/run_h1.py`:
+  F401, I001 y cuatro E402. Ese script histórico permanece intacto. El resultado
+  global no se presenta como aprobado ni se añadieron exclusiones para ocultarlo.
+- Reproducción del subconjunto: **81 controles numéricos aprobados**, cuatro
+  carteras y 1.460 filas diarias. Las tablas y figuras no se sobrescribieron:
+  las salidas se generaron en `.superpowers/entrega3/reproduccion`, fuera del paquete.
+- Exportación de la propuesta Git con un índice temporal, sin commit ni staging
+  en el índice real: el verificador pasa con `core.autocrlf=false` y `true`;
+  los **138 archivos declarados** conservan exactamente sus bytes en ambos casos.
+- Los datos masivos y outputs completos continúan excluidos de Git; las copias
+  públicas se limitan al subconjunto compacto. El motor, configuraciones y
+  archivos de dependencia no se modificaron.
+
+Comandos de revisión desde la raíz del repositorio:
+
+```powershell
+& '.\.venv\Scripts\python.exe' -m pytest -q
+& '.\.venv\Scripts\python.exe' -m ruff check .
+& '.\.venv\Scripts\python.exe' -m ruff check src tests entregas
+& '.\.venv\Scripts\python.exe' -m ruff format --check src tests entregas
+& '.\.venv\Scripts\python.exe' entregas/entrega_3/paquete_redaccion/scripts/reproducir.py --destino '.\.superpowers\entrega3\reproduccion'
+& '.\.venv\Scripts\python.exe' entregas/entrega_3/paquete_redaccion/scripts/diccionario.py --destino '.\.superpowers\entrega3\reproduccion'
+& '.\.venv\Scripts\python.exe' entregas/entrega_3/empaquetar.py --reference-zip entregas/entrega_3/paquete_redaccion_entrega_3.zip --output entregas/entrega_3/paquete_redaccion_entrega_3_v2.zip
+& '.\.venv\Scripts\python.exe' entregas/entrega_3/paquete_redaccion/scripts/verificar_paquete.py
+```
+
+El empaquetador rechaza un destino existente: para una revisión posterior,
+usar un nombre nuevo. `--reference-zip` verifica la referencia y exige que las
+fuentes originales y su registro sigan intactos; no requiere los datasets de D:.

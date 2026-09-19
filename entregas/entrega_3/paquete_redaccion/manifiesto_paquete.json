@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "creado_utc": "2026-09-19T18:50:29.280415+00:00",
+  "version": 2,
+  "creado_utc": "2026-09-19T20:41:03.505673+00:00",
   "revision": "revision_eb5ed744b30836a39fd694fa",
   "auditoria": "basis_audit_afd512e8a542f331ffa9ac3f",
   "escenario_principal": "vwap_joint",
@@ -59,8 +59,8 @@
     },
     {
       "archivo": "convenciones.md",
-      "bytes": 4338,
-      "sha256": "01b592937c747c34bcdf803c38fd2e531227ce02c28d5726a81ef7f1abd9e3bd"
+      "bytes": 4850,
+      "sha256": "ac337aa052ed14411365d1b9e01fcb172cda188119446119d5737d2f3dc6f388"
     },
     {
       "archivo": "datos/equity_diaria.csv",
@@ -609,8 +609,8 @@
     },
     {
       "archivo": "LEEME.md",
-      "bytes": 7476,
-      "sha256": "512447a058c362b7e3bb82abc8c963a46574a2a919473742367590c9d6e87070"
+      "bytes": 8565,
+      "sha256": "2bbc53ed4bd4c69459ff24b606d52bbc6331ce166d7a3f33d91d90ddcdd558a6"
     },
     {
       "archivo": "scripts/diccionario.py",
@@ -699,13 +699,18 @@
     },
     {
       "archivo": "verificacion.md",
-      "bytes": 9480,
-      "sha256": "5b177ce7b9857103ddb3e94dc1b6cc3c71f6b7d55db4b122a763b61a292d9226"
+      "bytes": 14489,
+      "sha256": "e1f5097f72abfde8e66f52de094912a74f3fcca4f964cd1e478f484c945feea9"
     },
     {
       "archivo": "verificaciones_numericas.csv",
       "bytes": 5847,
       "sha256": "5fcde2c5c53a61b0367670a5bb3e7fbf9209b437620ec653c3642ca9815d1b7b"
     }
-  ]
+  ],
+  "referencia_zip_original": {
+    "archivo": "paquete_redaccion_entrega_3.zip",
+    "sha256": "f7174d49214e954ee66620dbb36f800a9d9bc22cb45633a19c2755782b0be1ba",
+    "manifiesto_sha256": "dbfe4027bbaa0063a4d0ebe2b2c16623e7507f0c403c4e240bd4d3441e3aa439"
+  }
 }

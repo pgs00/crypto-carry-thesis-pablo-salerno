@@ -26,17 +26,42 @@ Las aproximaciones históricas de funding y reglas continúan explícitas en la
 
 ## Empezar
 
-1. Seguir la [única guía de descarga en D:](docs/descarga_d.md).
-2. Consultar los [supuestos y comandos de auditoría](docs/escenario_investigacion.md).
-3. Usar [avance y evidencia](docs/progress.md) para distinguir resultados
-   verificados de trabajo pendiente.
+1. Leer el [paquete vigente de la Entrega 3](entregas/entrega_3/paquete_redaccion/LEEME.md)
+   o descargar su [ZIP revisado](entregas/entrega_3/paquete_redaccion_entrega_3_v2.zip).
+2. Consultar el [informe corregido](entregas/entrega_3/paquete_redaccion/evidencia/execution_revision_report.md)
+   y la [auditoría del basis](entregas/entrega_3/paquete_redaccion/evidencia/basis_audit_report.md).
+3. Reproducir las tablas y figuras con el subconjunto incluido, siguiendo el bloque siguiente.
+4. La [guía de descarga local](docs/descarga_d.md) y los
+   [comandos de auditoría completa](docs/escenario_investigacion.md) sólo hacen falta
+   para reconstruir datos o contrastar las fuentes de mercado locales.
+
+## Reproducir tablas y figuras
+
+Desde la raíz del repositorio, con el entorno instalado como se indica en
+[Entorno y pruebas](#entorno-y-pruebas):
+
+```powershell
+& '.\.venv\Scripts\python.exe' entregas/entrega_3/paquete_redaccion/scripts/verificar_paquete.py
+& '.\.venv\Scripts\python.exe' entregas/entrega_3/paquete_redaccion/scripts/reproducir.py --destino '.\.superpowers\entrega3\reproduccion'
+& '.\.venv\Scripts\python.exe' entregas/entrega_3/paquete_redaccion/scripts/diccionario.py --destino '.\.superpowers\entrega3\reproduccion'
+```
+
+Estos comandos no requieren el disco D, acceso a Binance ni una nueva simulación.
+Las salidas regeneradas quedan en una carpeta excluida de Git. El paquete conserva
+los resultados verificados de `vwap_joint`, sus configuraciones y hashes originales.
+Para usar sólo el ZIP, seguir su [LEEME](entregas/entrega_3/paquete_redaccion/LEEME.md).
+
+`.gitattributes` conserva los bytes del paquete, incluidos los saltos CRLF/LF;
+no se normalizan las fuentes para hacer coincidir sus hashes. El
+[ZIP original verificado](entregas/entrega_3/paquete_redaccion_entrega_3.zip)
+se conserva como referencia histórica; la revisión vigente es `v2`.
+
+## Repetir la comparación anual con datos locales
 
 Los TOML `download_minutes_*` conservan la configuración de la referencia
 `minute_open`. La comparación deriva de ellos los escenarios nuevos y valida
 la cobertura antes del replay. Los ZIP se leen sin extraerlos, y las barras
 completas se comparten entre escenarios.
-
-## Reproducir la comparación
 
 Desde esta carpeta, con los datos preparados en `D:\Backtesting`:
 
@@ -48,6 +73,7 @@ Desde esta carpeta, con los datos preparados en `D:\Backtesting`:
 
 El comando conserva y verifica las referencias anteriores, ejecuta las variantes
 pendientes y reutiliza resultados que coincidan en configuración, código y datos.
+Puede volver a simular escenarios; no es el comando para reproducir las tablas del paquete.
 La salida principal es `outputs/revision_<id>/execution_revision_report.md`.
 Compara `legacy_reference`, `joint_sizing_only`, `vwap_only` y `vwap_joint`, más
 el control `alignment_only` que identifica por separado la alineación de precios.
@@ -56,7 +82,7 @@ señales y riesgo. Los diagnósticos distinguen causas simultáneas, secuencia d
 filtros y datos no evaluables; los resultados de las ventanas no se concatenan.
 
 La comparación ya ejecutada está en el
-[informe vigente](D:/Backtesting/outputs/revision_eb5ed744b30836a39fd694fa/execution_revision_report.md).
+[informe vigente publicado](entregas/entrega_3/paquete_redaccion/evidencia/execution_revision_report.md).
 Para verificar y regenerar ese informe desde las mismas corridas guardadas:
 
 ```powershell
@@ -105,8 +131,10 @@ riesgo, cortes y conciliación. No usan red ni trades descargados.
 - `data/raw/`, `data/processed/` y `data/manifests/` en C: conservan la muestra.
 - `data/research/` y [auditorías](docs/research/README.md): fuentes, hashes,
   calibraciones y evidencia que respaldan los supuestos.
-- `outputs/<run_id>/`: configuración, procedencia, tablas, figuras e informe
-  de cada corrida. `report --run-id <id>` verifica y regenera sus artefactos.
+- `outputs/<run_id>/`: artefactos completos locales, excluidos de GitHub.
+  `report --run-id <id>` verifica y regenera sus informes con los datos locales.
+- `entregas/entrega_3/`: subconjunto publicado, ZIP original y ZIP revisado;
+  permite leer y reproducir tablas/figuras sin publicar los datasets masivos.
 
 La [metodología del motor](docs/methodology.md), las
 [decisiones](docs/decisions.md), el [diccionario de datos](docs/data_dictionary.md)

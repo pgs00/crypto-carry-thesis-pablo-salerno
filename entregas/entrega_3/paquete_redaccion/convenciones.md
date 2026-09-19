@@ -9,10 +9,17 @@ Sharpe nulo es explícito; en el anexo las convenciones se heredan de las métri
 
 `1 = 100% = 10.000 bps`; los retornos, basis, MAE y pronósticos son proporciones,
 no porcentajes impresos. El funding pronosticado y el costo del ciclo se comparan
-sobre el mismo horizonte acumulado. La oportunidad de H3 es el exceso positivo
-del forecast sobre costo, resumido diariamente y entre activos; no es beneficio
-realizado ni una tasa anualizada. Su construcción consta en
-[evaluation.py](evidencia/codigo/evaluation.py) y los `opportunity_daily.csv` incluidos.
+sobre el mismo horizonte acumulado. La oportunidad de H3 toma el **forecast
+completo cuando es elegible, y cero cuando no lo es**: `valor = forecast` si hay
+datos y reglas válidos, el basis cumple el intervalo inclusivo y `forecast > costo`;
+en otro caso, `valor = 0`. El costo determina elegibilidad, pero no se resta del
+forecast. Se promedian los 1.440 minutos de cada activo —incluidos los ceros—,
+después ambos activos con igual peso, y los días completos de cada ventana.
+Un día sin cobertura completa no se convierte en cero: queda excluido.
+No es beneficio realizado ni una tasa anualizada. La asignación consta en
+[`_opportunity`, strategy.py](evidencia/codigo/strategy.py); la agregación en
+[`daily_opportunity`, evaluation.py](evidencia/codigo/evaluation.py) y los
+`opportunity_daily.csv` incluidos.
 
 En P&L, comisiones y cargos tienen signo negativo. Sólo la tabla del episodio
 informa `fees_costo_positivo_usdt` como magnitud positiva. La suma contable es

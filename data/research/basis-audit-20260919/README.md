@@ -21,14 +21,25 @@ permanente estaba rotulada y agregada como rechazo aunque esa estrategia omite
 el filtro. Ahora se informa como `diagnostic_fail_not_applied`, fuera de la
 unión de rechazos. Las decisiones reales, operaciones y resultados no cambian.
 
-- [Reporte completo](../../../outputs/basis_audit_afd512e8a542f331ffa9ac3f/basis_audit_report.md).
-- [Todas las observaciones](../../../outputs/basis_audit_afd512e8a542f331ffa9ac3f/basis_audit_all.csv).
-- [80 observaciones de muestra](../../../outputs/basis_audit_afd512e8a542f331ffa9ac3f/basis_audit_sample.csv).
-- [Estadísticas por ventana y activo](../../../outputs/basis_audit_afd512e8a542f331ffa9ac3f/basis_audit_summary.csv).
-- [Manifiesto y checksums](../../../outputs/basis_audit_afd512e8a542f331ffa9ac3f/basis_audit_manifest.json).
-- [Comparación económica con presentación corregida](D:/Backtesting/outputs/revision_eb5ed744b30836a39fd694fa/execution_revision_report.md).
+- [Reporte completo](../../../entregas/entrega_3/paquete_redaccion/evidencia/basis_audit_report.md).
+- [80 observaciones de muestra](../../../entregas/entrega_3/paquete_redaccion/evidencia/basis/basis_audit_sample.csv).
+- [Estadísticas por ventana y activo](../../../entregas/entrega_3/paquete_redaccion/evidencia/basis/basis_audit_summary.csv).
+- [Manifiesto y checksums de todas las observaciones](../../../entregas/entrega_3/paquete_redaccion/evidencia/basis/basis_audit_manifest.json).
+- [Comparación económica con presentación corregida](../../../entregas/entrega_3/paquete_redaccion/evidencia/execution_revision_report.md).
 
-## Reproducir
+El CSV completo `outputs/basis_audit_afd512e8a542f331ffa9ac3f/basis_audit_all.csv`
+y los ZIP de mercado quedan locales. El paquete publica la muestra, el resumen
+y los hashes del conjunto completo; no requiere esos datos para leer el reporte.
+
+## Verificar la copia publicada
+
+Desde la raíz del repositorio, sin datos de mercado:
+
+```powershell
+& '.\.venv\Scripts\python.exe' entregas/entrega_3/paquete_redaccion/scripts/verificar_paquete.py
+```
+
+## Repetir el contraste con las fuentes locales
 
 Desde la raíz de `Backtesting`, con los datos locales de D: disponibles:
 
@@ -42,8 +53,9 @@ Desde la raíz de `Backtesting`, con los datos locales de D: disponibles:
 El comando vuelve a leer las fuentes, contrasta los resultados, verifica hashes
 y conserva las auditorías ya existentes. Los nuevos artefactos quedan en
 `outputs/basis_audit_<identificador>/` dentro del proyecto; esa carpeta está
-excluida de Git por la regla existente. Para compartir la evidencia hay que
-incluir esa carpeta además del código del auditor.
+excluida de Git por la regla existente. La evidencia compacta publicada es la
+enlazada arriba; repetir todos los contrastes requiere los artefactos completos
+y fuentes originales locales, sin ejecutar otra simulación anual.
 
 ```powershell
 & '.\.venv\Scripts\python.exe' -m pytest tests/unit/test_basis_audit.py tests/unit/test_execution_revision.py -q --tb=short

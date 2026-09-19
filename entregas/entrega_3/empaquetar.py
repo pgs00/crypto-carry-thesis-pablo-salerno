@@ -1,5 +1,6 @@
 """Seal the compact delivery, validate its contents, and verify the ZIP entries."""
 
+import argparse
 import hashlib
 import json
 import subprocess
@@ -18,12 +19,37 @@ def digest(path):
         return hashlib.file_digest(stream, "sha256").hexdigest()
 
 
-def deliver():
-    if TARGET.exists():
-        raise FileExistsError(f"Refusing to overwrite a previous delivery: {TARGET}")
+def verify_reference_sources(package, reference):
+    """Anchor unchanged source bytes to a verified archive, without original drives."""
+    checksum = digest(reference)
+    if checksum != reference.with_suffix(reference.suffix + ".sha256").read_text().strip():
+        raise ValueError("Reference ZIP checksum mismatch")
+    prefix = "paquete_redaccion/"
+    with zipfile.ZipFile(reference) as archive:
+        manifest_bytes = archive.read(prefix + "manifiesto_paquete.json")
+        manifest_hash = hashlib.sha256(manifest_bytes).hexdigest()
+        if manifest_hash != archive.read(prefix + "manifiesto_paquete.sha256").decode().strip():
+            raise ValueError("Reference manifest checksum mismatch")
+        for item in json.loads(manifest_bytes)["archivos"]:
+            if hashlib.sha256(archive.read(prefix + item["archivo"])).hexdigest() != item["sha256"]:
+                raise ValueError(f"Reference artifact checksum mismatch: {item['archivo']}")
+        original = archive.read(prefix + "fuentes_originales.json")
+        if (package / "fuentes_originales.json").read_bytes() != original:
+            raise ValueError("Original provenance changed")
+        for item in json.loads(original)["files"]:
+            if digest(package / item["archivo"]) != item["sha256"]:
+                raise ValueError(f"Original source changed: {item['archivo']}")
+    return dict(archivo=reference.name, sha256=checksum, manifiesto_sha256=manifest_hash)
+
+
+def deliver(target=TARGET, reference=None):
+    if target.exists():
+        raise FileExistsError(f"Refusing to overwrite a previous delivery: {target}")
     provenance = json.loads((PACKAGE / "fuentes_originales.json").read_text(encoding="utf-8"))
-    for item in provenance["files"]:
-        assert digest(Path(item["original"])) == item["sha256"], item["original"]
+    anchor = verify_reference_sources(PACKAGE, reference) if reference else None
+    if not reference:
+        for item in provenance["files"]:
+            assert digest(Path(item["original"])) == item["sha256"], item["original"]
     paths = sorted(
         path
         for path in PACKAGE.rglob("*")
@@ -33,7 +59,7 @@ def deliver():
         and path.name not in {"manifiesto_paquete.json", "manifiesto_paquete.sha256"}
     )
     manifest = dict(
-        version=1,
+        version=2 if reference else 1,
         creado_utc=datetime.now(UTC).isoformat(),
         revision=provenance["revision"],
         auditoria=provenance["basis_audit"],
@@ -59,6 +85,8 @@ def deliver():
             for path in paths
         ],
     )
+    if anchor:
+        manifest["referencia_zip_original"] = anchor
     path = PACKAGE / "manifiesto_paquete.json"
     path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (PACKAGE / "manifiesto_paquete.sha256").write_text(digest(path) + "\n", encoding="ascii")
@@ -71,10 +99,10 @@ def deliver():
     )
     print(check.stdout)
     paths += [path, PACKAGE / "manifiesto_paquete.sha256"]
-    with zipfile.ZipFile(TARGET, "x", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
+    with zipfile.ZipFile(target, "x", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
         for path in paths:
             archive.write(path, "paquete_redaccion/" + path.relative_to(PACKAGE).as_posix())
-    with zipfile.ZipFile(TARGET) as archive:
+    with zipfile.ZipFile(target) as archive:
         assert archive.testzip() is None
         assert len(archive.namelist()) == len(paths)
         for path in paths:
@@ -85,14 +113,16 @@ def deliver():
             for name in archive.namelist()
             for part in Path(name).parts
         )
-    TARGET.with_suffix(".zip.sha256").write_text(digest(TARGET) + "\n", encoding="ascii")
+    target.with_suffix(target.suffix + ".sha256").write_text(
+        digest(target) + "\n", encoding="ascii"
+    )
     print(
         json.dumps(
             dict(
-                zip=str(TARGET),
-                bytes=TARGET.stat().st_size,
+                zip=str(target),
+                bytes=target.stat().st_size,
                 archivos=len(paths),
-                sha256=digest(TARGET),
+                sha256=digest(target),
             ),
             indent=2,
         )
@@ -100,4 +130,8 @@ def deliver():
 
 
 if __name__ == "__main__":
-    deliver()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--output", type=Path, default=TARGET)
+    parser.add_argument("--reference-zip", type=Path)
+    args = parser.parse_args()
+    deliver(args.output, args.reference_zip)

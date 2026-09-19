@@ -1,8 +1,18 @@
 # Avance y evidencia — 19/09/2026
 
+## Paquete publicado
+
+La [Entrega 3 vigente](../entregas/entrega_3/paquete_redaccion/LEEME.md) reúne
+resultados, figuras y fuentes compactas. Su
+[ZIP v2](../entregas/entrega_3/paquete_redaccion_entrega_3_v2.zip) corrige documentación
+y preservación de bytes al pasar por Git; conserva parámetros y resultados.
+La [reproducción de tablas y figuras](../README.md#reproducir-tablas-y-figuras)
+no requiere datos masivos ni repetir los backtests. Los conteos de pruebas de
+las secciones siguientes corresponden a sus respectivas revisiones históricas.
+
 ## Auditoría del basis
 
-La [auditoría independiente](../outputs/basis_audit_afd512e8a542f331ffa9ac3f/basis_audit_report.md)
+La [auditoría independiente](../entregas/entrega_3/paquete_redaccion/evidencia/basis_audit_report.md)
 confirmó las 4.380 observaciones de mercado contra 96 ZIP originales: cero
 discrepancias en precios, intervalos, disponibilidad y clasificación. Se revisaron
 8.760 decisiones sin duplicar observaciones de mercado. El basis tardío es
@@ -11,7 +21,7 @@ aproximadamente `4,971e-28`, frente a la tolerancia fija `1e-12`.
 
 Se demostró y corrigió un defecto de presentación: funding omitido por la
 permanente se contaba como rechazo simultáneo. El
-[informe corregido](D:/Backtesting/outputs/revision_eb5ed744b30836a39fd694fa/execution_revision_report.md)
+[informe corregido](../entregas/entrega_3/paquete_redaccion/evidencia/execution_revision_report.md)
 se regeneró desde las mismas diez corridas, sin volver a simular ni alterar
 resultados económicos. El anterior permanece conservado. **414 pruebas pasaron**
 en 41,04 s. [Auditor, alcance y reproducción](../data/research/basis-audit-20260919/README.md).
@@ -19,7 +29,7 @@ en 41,04 s. [Auditor, alcance y reproducción](../data/research/basis-audit-2026
 ## Revisión vigente de ejecución
 
 Se implementó y ejecutó el [instructivo de ajuste 1m](sources/Prompt_Codex_Ajuste_Backtesting_1m.md).
-El [informe de la revisión](D:/Backtesting/outputs/revision_eb5ed744b30836a39fd694fa/execution_revision_report.md)
+El [informe de la revisión](../entregas/entrega_3/paquete_redaccion/evidencia/execution_revision_report.md)
 es la comparación vigente: cinco escenarios, dos ventanas y dos carteras por
 escenario. Las ocho corridas nuevas y las dos referencias conservadas tienen
 estado `complete`; las referencias originales no se sobrescribieron.
@@ -88,10 +98,13 @@ para fabricar otro backtest anual.
 Para verificar y regenerar la comparación guardada, sin repetir simulaciones:
 
 ```powershell
-& '.\.venv\Scripts\python.exe' -m crypto_carry --root 'D:\Backtesting' report --run-id revision_dcf7d66e69aaf51cea4590ff
+& '.\.venv\Scripts\python.exe' -m crypto_carry --root 'D:\Backtesting' report --run-id revision_eb5ed744b30836a39fd694fa
 ```
 
-El comando para ejecutar de nuevo toda la matriz está en el [README](../README.md#reproducir-la-comparación).
+Ese comando necesita las corridas completas locales. Para el subconjunto publicado,
+usar la [reproducción portátil](../README.md#reproducir-tablas-y-figuras).
+El comando para ejecutar de nuevo toda la matriz está en el
+[README](../README.md#repetir-la-comparación-anual-con-datos-locales).
 Las reglas históricas prescritas, el proxy de mark temprano y las limitaciones
 de ejecución siguen explícitos; `complete` describe la corrida bajo esos
 supuestos, no una reconstrucción exacta del mercado.
@@ -128,10 +141,14 @@ supuestos y pendientes; la [guía de descarga](descarga_d.md) contiene el comand
 
 ## Resultados base
 
-El [informe comparativo final](D:/Backtesting/outputs/study_655500e757a0c745e8332605/report.md)
+El informe comparativo de la referencia anterior
+(`D:\Backtesting\outputs\study_655500e757a0c745e8332605\report.md`, sólo local)
 reúne las cuatro carteras, hipótesis, siete sensibilidades por ventana y la
 discusión crítica de ejecución. Su carpeta incluye CSV, JSON y el gráfico de
 costos en PNG/SVG, con inventario y hashes verificados.
+El resumen publicado de esa referencia se conserva en esta sección; la
+[comparación vigente](../entregas/entrega_3/paquete_redaccion/evidencia/execution_revision_report.md)
+está disponible en el paquete. Los artefactos completos anteriores no se publican.
 
 Cada fila parte de 10.000 USDT. Son precios observados con reglas y ejecución
 prescritas; no una reconstrucción exacta del mercado histórico.

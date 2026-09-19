@@ -4,6 +4,12 @@ Preparado el 19/09/2026 para reunir implementación, metodología y resultados
 preliminares. No es el informe académico maquetado ni la Entrega 4. Se utilizaron
 corridas guardadas: no se cambió ningún parámetro ni se ejecutaron nuevos backtests.
 
+**Revisión documental v2:** corrige la definición de H3 y las instrucciones de
+reproducción. El ZIP original verificado se conserva como referencia histórica;
+este árbol corresponde a `paquete_redaccion_entrega_3_v2.zip`. Las 101 fuentes y
+`fuentes_originales.json` mantienen sus bytes y hashes originales. El manifiesto
+del paquete cambia únicamente para registrar esta revisión.
+
 ## Orden de lectura
 
 1. [Base factual breve](base_para_redaccion.md): seis secciones para redactar.
@@ -79,16 +85,18 @@ python -m venv .venv
 & '.\.venv\Scripts\python.exe' -m pip install -r '.\scripts\requirements.txt'
 ```
 
-Con ese entorno, o con el Python del proyecto que ya posee las dependencias:
+Con ese entorno:
 
 ```powershell
-python .\scripts\verificar_paquete.py
-python .\scripts\reproducir.py --destino ..\reproduccion_entrega_3
-python .\scripts\diccionario.py --destino ..\reproduccion_entrega_3
+& '.\.venv\Scripts\python.exe' .\scripts\verificar_paquete.py
+& '.\.venv\Scripts\python.exe' .\scripts\reproducir.py --destino ..\reproduccion_entrega_3
+& '.\.venv\Scripts\python.exe' .\scripts\diccionario.py --destino ..\reproduccion_entrega_3
 ```
 
-Al usar un entorno virtual, reemplazar `python` por su ejecutable como en el
-primer bloque. `reproducir.py` verifica las fuentes y regenera las tablas numéricas,
+También se puede usar el ejecutable del entorno del proyecto, indicando su ruta.
+En una clonación del repositorio, ejecutar los comandos de su README desde la raíz;
+no es necesario instalar otro entorno dentro del paquete. `reproducir.py` verifica
+las fuentes y regenera las tablas numéricas,
 series, trazas, controles y dos figuras. `diccionario.py` regenera el diccionario.
 La matriz metodológica y la bibliografía son documentos editoriales contrastados
 con los originales; no son cálculos económicos. Los scripts leen únicamente
@@ -100,6 +108,14 @@ originales, excluidos del ZIP. `scripts/preparar_paquete.py` es el snapshot de
 preparación para ese proyecto completo, no el comando de reproducción portátil.
 Los manifiestos originales conservan hashes de entradas y salidas omitidas del
 subconjunto; su ausencia aquí es deliberada y no invalida la lectura del paquete.
+
+La regla `.gitattributes` del repositorio usa `-text` en este árbol para conservar
+los saltos de línea originales al guardar y descargar archivos con Git. Los hashes
+se calculan sobre bytes exactos, no sobre texto normalizado. Si el verificador
+rechaza una fuente, no modificar su hash: contrastarla con el ZIP original.
+El empaquetador del proyecto acepta `--reference-zip` y un destino nuevo mediante
+`--output`; verifica la referencia y rechaza cambios en las fuentes antes de
+actualizar el manifiesto. No necesita volver a leer los datos masivos.
 
 ## Antecedentes y faltantes para la redacción
 
