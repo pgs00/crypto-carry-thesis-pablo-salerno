@@ -35,6 +35,25 @@ def funding(time_ns, rate="0.001"):
     }
 
 
+def minute_bar(open_time, *, symbol="BTCUSDT", market="spot"):
+    end_time = open_time + 60 * SECOND
+    return {
+        "symbol": symbol,
+        "market": market,
+        "open_time": open_time,
+        "end_time": end_time,
+        "available_at": end_time,
+        "open": "99",
+        "high": "101",
+        "low": "98",
+        "close": "100",
+        "base_volume": "2",
+        "quote_volume": "200",
+        "trade_count": 3,
+        "source_file": "fixture.zip",
+    }
+
+
 def partition(root, name, rows, *, dataset="trades", bounds=True):
     path = root / f"{name}.parquet"
     pq.write_table(pa.Table.from_pylist(rows), path)
@@ -55,6 +74,95 @@ def manifest(root, entries, *, data_dir="data"):
     destination = root / data_dir / "manifests" / "processed.json"
     destination.parent.mkdir(parents=True)
     destination.write_text(json.dumps({"entries": entries}), encoding="utf-8")
+
+
+def test_input_identity_includes_daily_supplement_and_checksum(tmp_path):
+    from crypto_carry.data.replay import input_hashes
+
+    for name, content in (
+        ("monthly.zip", b"monthly"),
+        ("daily.zip", b"daily"),
+        ("daily.zip.CHECKSUM", b"official checksum"),
+    ):
+        (tmp_path / name).write_bytes(content)
+    path = tmp_path / "data/manifests/download.json"
+    path.parent.mkdir(parents=True)
+    path.write_text(
+        json.dumps(
+            {
+                "entries": [
+                    {
+                        "status": "downloaded",
+                        "path": "monthly.zip",
+                        "supplements": [
+                            {"path": "daily.zip", "checksum_path": "daily.zip.CHECKSUM"}
+                        ],
+                    }
+                ]
+            }
+        )
+    )
+    before = input_hashes(tmp_path)
+    assert "daily.zip" in before and "daily.zip.CHECKSUM" in before
+    (tmp_path / "daily.zip").write_bytes(b"changed daily source")
+    assert input_hashes(tmp_path)["daily.zip"] != before["daily.zip"]
+
+
+def test_next_minute_vwap_replay_uses_only_closed_bars_and_retains_initial_antecedent(
+    tmp_path,
+):
+    minute = 60 * SECOND
+    legacy = partition(tmp_path, "legacy", [trade(minute, 1)], dataset="trades")
+    bars = partition(
+        tmp_path,
+        "bars",
+        [minute_bar(0), minute_bar(minute), minute_bar(2 * minute)],
+        dataset="minute_bars",
+    )
+    manifest(tmp_path, [legacy, bars])
+
+    records = list(
+        iter_records(
+            tmp_path,
+            2 * minute,
+            4 * minute,
+            warmup_hours=0,
+            execution_model="next_minute_vwap",
+        )
+    )
+
+    assert [record.open_time for record in records] == [minute, 2 * minute]
+    assert all(record.available_at == record.end_time for record in records)
+
+
+def test_legacy_replay_does_not_receive_closed_bar_events(tmp_path):
+    minute = 60 * SECOND
+    legacy = partition(tmp_path, "legacy", [trade(minute, 1)], dataset="trades")
+    bars = partition(tmp_path, "bars", [minute_bar(0)], dataset="minute_bars")
+    manifest(tmp_path, [legacy, bars])
+
+    records = list(iter_records(tmp_path, minute, 2 * minute, warmup_hours=0))
+
+    assert [record.trade_id for record in records] == ["1"]
+
+
+def test_alignment_only_replay_adds_closed_bars_to_legacy_events(tmp_path):
+    minute = 60 * SECOND
+    legacy = partition(tmp_path, "legacy", [trade(minute, 1)], dataset="trades")
+    bars = partition(tmp_path, "bars", [minute_bar(0)], dataset="minute_bars")
+    manifest(tmp_path, [legacy, bars])
+
+    records = list(
+        iter_records(
+            tmp_path,
+            minute,
+            2 * minute,
+            warmup_hours=0,
+            include_closed_bars=True,
+        )
+    )
+
+    assert {type(record).__name__ for record in records} == {"Trade", "MinuteBar"}
 
 
 def test_window_does_not_open_obsolete_or_future_partitions(tmp_path):

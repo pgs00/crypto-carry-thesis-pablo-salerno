@@ -1,0 +1,82 @@
+control,contexto,obtenido,esperado,diferencia,tolerancia,aprobado
+Cuatro carteras principales,,4,4,0,0,True
+Corrida corresponde a ventana,,True,True,0,0,True
+Duración de la ventana,,365,365,0,0,True
+Días completos,early/conditional,365,365,0,0,True
+Fechas únicas,early/conditional,365,365,0,0,True
+Cierres diarios consecutivos,early/conditional,True,True,0,0,True
+Equity final,early/conditional,10073.63631770096690445460000,10073.63631770096690445460000,0E-23,0,True
+Fecha inicial,early/conditional,True,True,0,0,True
+Métrica diaria: net_return,early/conditional,0.00736363177009669,0.00736363177009669,0E-17,1E-12,True
+Métrica diaria: cagr,early/conditional,0.00736363177009669,0.00736363177009669,0E-17,1E-12,True
+Métrica diaria: max_drawdown,early/conditional,-0.0012238200504499641,-0.0012238200504499641,0E-19,1E-12,True
+Métrica diaria: annual_volatility,early/conditional,0.0038286526918263593,0.0038286526918263593,0E-19,1E-12,True
+Métrica diaria: sharpe,early/conditional,1.9181736175616881,1.9181736175616881,0E-16,1E-12,True
+Conciliación equity y componentes,early/conditional,73.63631770096690445460000,73.6363177009669044546000012,1.2E-24,1E-8,True
+Comisión prescrita,,0.001,0.001,0.000,0,True
+Comisión prescrita,,0.001,0.001,0.000,0,True
+Comisión prescrita,,0.0005,0.0005,0.0000,0,True
+Comisión prescrita,,0.0005,0.0005,0.0000,0,True
+Costo del ciclo,early,0.0034,0.0034,0.0000,0,True
+Corrida corresponde a ventana,,True,True,0,0,True
+Duración de la ventana,,365,365,0,0,True
+Días completos,early/permanent,365,365,0,0,True
+Fechas únicas,early/permanent,365,365,0,0,True
+Cierres diarios consecutivos,early/permanent,True,True,0,0,True
+Equity final,early/permanent,10334.39901597150466630770000,10334.39901597150466630770000,0E-23,0,True
+Fecha inicial,early/permanent,True,True,0,0,True
+Métrica diaria: net_return,early/permanent,0.03343990159715049,0.03343990159715049,0E-17,1E-12,True
+Métrica diaria: cagr,early/permanent,0.03343990159715049,0.03343990159715049,0E-17,1E-12,True
+Métrica diaria: max_drawdown,early/permanent,-0.0013593578430675102,-0.0013593578430675102,0E-19,1E-12,True
+Métrica diaria: annual_volatility,early/permanent,0.008011118132304833,0.008011118132304833,0E-18,1E-12,True
+Métrica diaria: sharpe,early/permanent,4.110076292959999,4.110076292959999,0E-15,1E-12,True
+Conciliación equity y componentes,early/permanent,334.39901597150466630770000,334.399015971504666307700002,2E-24,1E-8,True
+Corrida corresponde a ventana,,True,True,0,0,True
+Duración de la ventana,,365,365,0,0,True
+Días completos,late/conditional,365,365,0,0,True
+Fechas únicas,late/conditional,365,365,0,0,True
+Cierres diarios consecutivos,late/conditional,True,True,0,0,True
+Equity final,late/conditional,10000,10000,0,0,True
+Fecha inicial,late/conditional,True,True,0,0,True
+Sharpe nulo por volatilidad nula,late/conditional,True,True,0,0,True
+Métrica diaria: net_return,late/conditional,0.0,0.0,0.0,1E-12,True
+Métrica diaria: cagr,late/conditional,0.0,0.0,0.0,1E-12,True
+Métrica diaria: max_drawdown,late/conditional,0.0,0.0,0.0,1E-12,True
+Métrica diaria: annual_volatility,late/conditional,0.0,0.0,0.0,1E-12,True
+Conciliación equity y componentes,late/conditional,0,0,0,1E-8,True
+Comisión prescrita,,0.001,0.001,0.000,0,True
+Comisión prescrita,,0.001,0.001,0.000,0,True
+Comisión prescrita,,0.0005,0.0005,0.0000,0,True
+Comisión prescrita,,0.0005,0.0005,0.0000,0,True
+Costo del ciclo,late,0.0034,0.0034,0.0000,0,True
+Corrida corresponde a ventana,,True,True,0,0,True
+Duración de la ventana,,365,365,0,0,True
+Días completos,late/permanent,365,365,0,0,True
+Fechas únicas,late/permanent,365,365,0,0,True
+Cierres diarios consecutivos,late/permanent,True,True,0,0,True
+Equity final,late/permanent,10008.5990064113315053282,10008.5990064113315053282,0E-19,0,True
+Fecha inicial,late/permanent,True,True,0,0,True
+Métrica diaria: net_return,late/permanent,0.0008599006411331711,0.0008599006411331711,0E-19,1E-12,True
+Métrica diaria: cagr,late/permanent,0.0008599006411331711,0.0008599006411331711,0E-19,1E-12,True
+Métrica diaria: max_drawdown,late/permanent,-9.509951783193138e-05,-9.509951783193138e-05,0E-20,1E-12,True
+Métrica diaria: annual_volatility,late/permanent,0.0004385185736492393,0.0004385185736492393,0E-19,1E-12,True
+Métrica diaria: sharpe,late/permanent,1.960300143675152,1.960300143675152,0E-15,1E-12,True
+Conciliación equity y componentes,late/permanent,8.5990064113315053282,8.5990064113315053282,0E-19,1E-8,True
+Permanente sin rechazo operativo de funding,early/filter_funding:reject,0,0,0,0,True
+Permanente sin rechazo operativo de funding,early/ordered_reject:funding,0,0,0,0,True
+Permanente sin rechazo operativo de funding,late/filter_funding:reject,0,0,0,0,True
+Permanente sin rechazo operativo de funding,late/ordered_reject:funding,0,0,0,0,True
+Hipótesis H1: value,early,0.0007300562247555909,0.0007300562247555909,0E-19,1E-15,True
+Hipótesis H1: comparator,early,0.0009827721208583969,0.0009827721208583969,0E-19,1E-15,True
+Hipótesis H1: observations,early,2146,2146,0,1E-15,True
+Hipótesis H1: excluded,early,44,44,0,1E-15,True
+Hipótesis H1: value,late,0.00043679029460157,0.00043679029460157,0E-17,1E-15,True
+Hipótesis H1: comparator,late,0.0006750831784208901,0.0006750831784208901,0E-19,1E-15,True
+Hipótesis H1: observations,late,2146,2146,0,1E-15,True
+Hipótesis H1: excluded,late,44,44,0,1E-15,True
+Basis cero incluido en elegible,,51,51,0,0,True
+Basis cero incluido en elegible,,89,89,0,0,True
+Basis cero incluido en elegible,,5,5,0,0,True
+Basis cero incluido en elegible,,0,0,0,0,True
+PnL diario episodio,conditional,35.90887557500000000000000,35.90887557500000000000000,0E-23,1E-8,True
+PnL diario episodio,permanent,72.96391150798000000000000,72.96391150798000000000000,0E-23,1E-8,True

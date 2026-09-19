@@ -1754,7 +1754,7 @@
         "valid_from": "2024-01-01T00:00:00.000000000Z",
         "valid_to": "2024-01-01T00:10:00.000000000Z",
         "values": {
-          "liquidation_fee": "0.03",
+          "liquidation_fee": "0.0125",
           "liquidation_fee_basis": "execution_notional",
           "liquidation_regular_fee": true,
           "max_notional": "100000000",
@@ -1793,7 +1793,7 @@
         "valid_from": "2024-01-01T00:00:00.000000000Z",
         "valid_to": "2024-01-01T00:10:00.000000000Z",
         "values": {
-          "liquidation_fee": "0.03",
+          "liquidation_fee": "0.0125",
           "liquidation_fee_basis": "execution_notional",
           "liquidation_regular_fee": true,
           "max_notional": "100000000",

@@ -1,0 +1,639 @@
+{
+  "audit": "independent annual minute financial reconstruction",
+  "interpretation_limit": "A pass establishes artifact-level arithmetic, timing, source-open, and reporting consistency within the declared tolerance. It does not establish live profitability or fitness for investment.",
+  "issues": [],
+  "method": {
+    "arithmetic": "Decimal replay of persisted artifacts; no engine Ledger or cost helper imports",
+    "fill_price": "reference open moved adversely by configured 1 bp and rounded adversely to prescribed tick",
+    "funding": "short before observed funding_time * settlement mark * rate; funding precedes fills at equal time",
+    "futures": "weighted short entry; reductions realize quantity * (average - fill price); taker fee on every fill",
+    "spot_buy": "cash -= quantity * fill price; inventory += quantity * (1 - fee rate)",
+    "spot_sell": "cash += quantity * fill price * (1 - fee rate)",
+    "terminal_equity": "cash + spot inventory at terminal spot price + short * (average - terminal mark)"
+  },
+  "runs": {
+    "early_2022_2023": {
+      "completion_risk_checks": {
+        "checks": [
+          {
+            "floor_spot_to_futures_step": "0.127",
+            "hedge_error": "0.00690839871642519553152569288274708216785171687943719387658155",
+            "hedge_tolerance": "0.005",
+            "prescribed_futures_step": "0.001",
+            "quantization_exceeds_tolerance": true,
+            "short_after_futures_fill": "0.127",
+            "spot_after_base_fee": "0.12788347",
+            "strategy": "permanent",
+            "symbol": "BTCUSDT",
+            "time_ns": 1675008180000000000
+          },
+          {
+            "floor_spot_to_futures_step": "0.122",
+            "hedge_error": "0.00759644250981788093207192875909045725888701452960152719519260",
+            "hedge_tolerance": "0.005",
+            "prescribed_futures_step": "0.001",
+            "quantization_exceeds_tolerance": true,
+            "short_after_futures_fill": "0.122",
+            "spot_after_base_fee": "0.12293386",
+            "strategy": "permanent",
+            "symbol": "BTCUSDT",
+            "time_ns": 1678953900000000000
+          },
+          {
+            "floor_spot_to_futures_step": "0.098",
+            "hedge_error": "0.00954895870243636806858610688260385940365549202070406515469936",
+            "hedge_tolerance": "0.005",
+            "prescribed_futures_step": "0.001",
+            "quantization_exceeds_tolerance": true,
+            "short_after_futures_fill": "0.098",
+            "spot_after_base_fee": "0.09894482",
+            "strategy": "permanent",
+            "symbol": "BTCUSDT",
+            "time_ns": 1681459380000000000
+          },
+          {
+            "floor_spot_to_futures_step": "0.104",
+            "hedge_error": "0.00923837581779512669126105377977941264030827928998592451634876",
+            "hedge_tolerance": "0.005",
+            "prescribed_futures_step": "0.001",
+            "quantization_exceeds_tolerance": true,
+            "short_after_futures_fill": "0.104",
+            "spot_after_base_fee": "0.10496975",
+            "strategy": "permanent",
+            "symbol": "BTCUSDT",
+            "time_ns": 1690531500000000000
+          }
+        ],
+        "completion_failure_count": 4,
+        "explanation": "Persisted risk events forced an unwind after the completed opening hedge. Each listed short equals spot floored to the prescribed futures step, while the remaining base-fee/step mismatch exceeds hedge_tolerance."
+      },
+      "exceptional_event": {
+        "classification": "documented spot-halt forced unwind with sequential leg execution",
+        "date": "2023-03-24",
+        "interpretation": "Source-backed and arithmetically reconciled, but exceptional outage/legging P&L; not ordinary carry, live-profit evidence, or investment fitness.",
+        "strategies": {
+          "conditional": {
+            "component_changes_usdt": {
+              "fees": "-4.424499308",
+              "funding": "0.6027104600000000000",
+              "futures_pnl": "110.506329999999999999999999975",
+              "liquidation_fees": "0",
+              "spot_pnl": "-41.8265144000000000000000000"
+            },
+            "component_sum_usdt": "64.858026751999999999999999975",
+            "daily_equity_change_usdt": "64.85802675200000000000000",
+            "expired_spot_close_orders": 60,
+            "final_profit_usdt": "111.81548970869890572370000",
+            "forced_inactivity": {
+              "cause": "real_market_inactivity",
+              "symbol": "ETHUSDT",
+              "time_ns": 1679659080000000000,
+              "timestamp_utc": "2023-03-24T11:58:00.000000000Z"
+            },
+            "fraction_of_final_profit": "0.580045098590255893427161659227780551709181226585366907445704",
+            "futures_close": {
+              "fill_id": "fill-conditional-00000015",
+              "order_id": "conditional-00000015",
+              "price": "1747.56",
+              "quantity": "1.661",
+              "reference_price": "1747.38",
+              "time_ns": 1679659140000000000,
+              "timestamp_utc": "2023-03-24T11:59:00.000000000Z",
+              "trade_id": "bar:ETHUSDT:futures:1679659140000000000"
+            },
+            "post_close_position": {
+              "closed_to_dust": true,
+              "short": "0.000",
+              "spot": "0.0000620",
+              "spot_step": "0.0001",
+              "state": "COOLDOWN"
+            },
+            "spot_close": {
+              "fill_id": "fill-conditional-00000076",
+              "order_id": "conditional-00000076",
+              "price": "1789.33",
+              "quantity": "1.6616",
+              "reference_price": "1789.51000000",
+              "time_ns": 1679666400000000000,
+              "timestamp_utc": "2023-03-24T14:00:00.000000000Z",
+              "trade_id": "bar:ETHUSDT:spot:1679666400000000000"
+            },
+            "timeout_risk_events": 60,
+            "unhedged_minutes": "121",
+            "unhedged_seconds": "7260"
+          },
+          "permanent": {
+            "component_changes_usdt": {
+              "fees": "-4.5363499280",
+              "funding": "0.6179505800000000000",
+              "futures_pnl": "113.300590000000000000000000033",
+              "liquidation_fees": "0",
+              "spot_pnl": "-42.8847387186000000000000000"
+            },
+            "component_sum_usdt": "66.497451933400000000000000033",
+            "daily_equity_change_usdt": "66.49745193340000000000000",
+            "expired_spot_close_orders": 60,
+            "final_profit_usdt": "205.43965712264900217360000",
+            "forced_inactivity": {
+              "cause": "real_market_inactivity",
+              "symbol": "ETHUSDT",
+              "time_ns": 1679659080000000000,
+              "timestamp_utc": "2023-03-24T11:58:00.000000000Z"
+            },
+            "fraction_of_final_profit": "0.323683620118682961841709737293354498598910137006833750952270",
+            "futures_close": {
+              "fill_id": "fill-permanent-00000053",
+              "order_id": "permanent-00000053",
+              "price": "1747.56",
+              "quantity": "1.703",
+              "reference_price": "1747.38",
+              "time_ns": 1679659140000000000,
+              "timestamp_utc": "2023-03-24T11:59:00.000000000Z",
+              "trade_id": "bar:ETHUSDT:futures:1679659140000000000"
+            },
+            "post_close_position": {
+              "closed_to_dust": true,
+              "short": "0.000",
+              "spot": "0.0000289",
+              "spot_step": "0.0001",
+              "state": "COOLDOWN"
+            },
+            "spot_close": {
+              "fill_id": "fill-permanent-00000114",
+              "order_id": "permanent-00000114",
+              "price": "1789.33",
+              "quantity": "1.7036",
+              "reference_price": "1789.51000000",
+              "time_ns": 1679666400000000000,
+              "timestamp_utc": "2023-03-24T14:00:00.000000000Z",
+              "trade_id": "bar:ETHUSDT:spot:1679666400000000000"
+            },
+            "timeout_risk_events": 60,
+            "unhedged_minutes": "121",
+            "unhedged_seconds": "7260"
+          }
+        }
+      },
+      "fill_checks": {
+        "adverse_tick_rounding_mismatches": 0,
+        "fills_checked": 98,
+        "maximum_realized_adverse_bps": "1.06499297104639109381878079604674609147579625974468568507000",
+        "minimum_realized_adverse_bps": "1.00005000250012500625031251562578128906445322266113305670000",
+        "prescribed_fee_rate_mismatches": 0,
+        "source_file_hashes_matched": 38,
+        "source_files_checked": 38,
+        "source_fill_rows_checked": 98,
+        "strict_order_timing_mismatches": 0
+      },
+      "funding_audit_native_counts": {
+        "consumed_rows": 4564,
+        "counts_by_strategy": {
+          "conditional": {
+            "not_required_before_start": 92,
+            "previous_closed_1m": 2190
+          },
+          "permanent": {
+            "not_required_before_start": 92,
+            "previous_closed_1m": 2190
+          }
+        },
+        "engine_consumed_count": 4564,
+        "exact_consumed_count": 0,
+        "proxy_consumed_count": 4380,
+        "validated_count": 2282,
+        "warmup_not_required_count": 184
+      },
+      "issues": [],
+      "label": "early_2022_2023",
+      "path": "D:/Backtesting/outputs/run_8fb22fa8b377466cff981b99",
+      "run_id": "run_8fb22fa8b377466cff981b99",
+      "status": "passed",
+      "strategies": {
+        "conditional": {
+          "counts": {
+            "fill_ledger_rows": 16,
+            "fills": 16,
+            "funding_ledger_rows": 207,
+            "funding_payments": 207,
+            "native_fill_count": 16,
+            "native_reconciliation_count": 16,
+            "orders": 76,
+            "recomputed_nonzero_funding_payments": 207,
+            "reported_fills": 16,
+            "reported_orders": 76
+          },
+          "differences": {
+            "cash_usdt": "1.0000000000000000000000000000000E-24",
+            "pnl_components_usdt": {
+              "fees": "0E-9",
+              "funding": "0E-19",
+              "futures_pnl": "1.99999999999999999999999999999996E-25",
+              "spot_pnl": "1.00000000000000000000000000000005E-25"
+            },
+            "terminal_equity_usdt": "0E-55",
+            "terminal_positions": {
+              "BTCUSDT": {
+                "average": "0",
+                "fees": "0",
+                "funding": "0",
+                "realized_futures": "0",
+                "realized_spot": "0",
+                "short": "0",
+                "spot": "0",
+                "spot_cost": "0"
+              },
+              "ETHUSDT": {
+                "average": "0",
+                "fees": "0E-9",
+                "funding": "0E-19",
+                "realized_futures": "1.99999999999999999999999999999996E-25",
+                "realized_spot": "-3.06358821495578961375631053083485E-25",
+                "short": "0.000",
+                "spot": "0E-7",
+                "spot_cost": "-4.0635882149557896137563105308349E-25"
+              }
+            }
+          },
+          "first_fill_payoff": {
+            "cash_effect_usdt": "-3000.102375",
+            "fee_usdt": "3.000102375",
+            "fill_id": "fill-conditional-00000001",
+            "market": "spot",
+            "price": "1553.25",
+            "quantity": "1.9315",
+            "side": "BUY",
+            "symbol": "ETHUSDT",
+            "time_ns": 1673683320000000000
+          },
+          "first_funding_payment": {
+            "funding_rate": "0.00045951",
+            "recomputed_amount_usdt": "1.3529841435081000000",
+            "reported_amount_usdt": "1.3529841435081000000",
+            "settlement_mark": "1526.39000000",
+            "short_before_settlement": "1.929",
+            "symbol": "ETHUSDT",
+            "time_ns": 1673712000000000000
+          },
+          "last_fill_payoff": {
+            "cash_effect_usdt": "2970.177577272",
+            "fee_usdt": "2.973150728",
+            "fill_id": "fill-conditional-00000076",
+            "market": "spot",
+            "price": "1789.33",
+            "quantity": "1.6616",
+            "side": "SELL",
+            "symbol": "ETHUSDT",
+            "time_ns": 1679666400000000000
+          },
+          "last_funding_payment": {
+            "funding_rate": "0.00010000",
+            "recomputed_amount_usdt": "0.3014681780000000000",
+            "reported_amount_usdt": "0.3014681780000000000",
+            "settlement_mark": "1814.98000000",
+            "short_before_settlement": "1.661",
+            "symbol": "ETHUSDT",
+            "time_ns": 1679644800012000000
+          },
+          "recomputed": {
+            "cash_after_realized_flows_usdt": "10111.7134525886989057237000000000000000000000000000000000000",
+            "fees_usdt": "12.094010171",
+            "funding_usdt": "53.5876120526989057237",
+            "futures_pnl_usdt": "-517.141560000000000000000000000000000000000000000000000000004",
+            "spot_pnl_usdt": "587.463447827000000000000000000000000000000000000000000000005",
+            "terminal_equity_usdt": "10111.8154897086989057237000000000000000000000000000000000000",
+            "terminal_futures_unrealized_usdt": "0E-11",
+            "terminal_spot_value_usdt": "0.102037120000000"
+          },
+          "reported": {
+            "cash_plus_collateral_less_debt_usdt": "10111.71345258869890572369999900",
+            "status": "complete",
+            "terminal_equity_usdt": "10111.81548970869890572370000"
+          },
+          "same_time_funding_and_fill_events": 0
+        },
+        "permanent": {
+          "counts": {
+            "fill_ledger_rows": 82,
+            "fills": 82,
+            "funding_ledger_rows": 1308,
+            "funding_payments": 1308,
+            "native_fill_count": 82,
+            "native_reconciliation_count": 82,
+            "orders": 142,
+            "recomputed_nonzero_funding_payments": 1308,
+            "reported_fills": 82,
+            "reported_orders": 142
+          },
+          "differences": {
+            "cash_usdt": "2.41295546558704453441295546558704E-24",
+            "pnl_components_usdt": {
+              "fees": "0E-10",
+              "funding": "0E-19",
+              "futures_pnl": "-4.99999999999999999999999999999997E-25",
+              "spot_pnl": "2.00000000000000000000000000000000E-24"
+            },
+            "terminal_equity_usdt": "0E-55",
+            "terminal_positions": {
+              "BTCUSDT": {
+                "average": "0",
+                "fees": "0E-10",
+                "funding": "0E-19",
+                "realized_futures": "1E-56",
+                "realized_spot": "-1.8029953113321524710006542555332E-25",
+                "short": "0.000",
+                "spot": "0E-8",
+                "spot_cost": "-1.8029953113321524710006542555333E-25"
+              },
+              "ETHUSDT": {
+                "average": "-1.22195221733133326030533156575762E-24",
+                "fees": "0E-9",
+                "funding": "0E-19",
+                "realized_futures": "1.712955465587044534412955465587043E-24",
+                "realized_spot": "3.59372933650297708046344671469741E-25",
+                "short": "0.000",
+                "spot": "0E-7",
+                "spot_cost": "-1.14062706634970229195365532853025E-24"
+              }
+            }
+          },
+          "first_fill_payoff": {
+            "cash_effect_usdt": "-3007.773744",
+            "fee_usdt": "3.007773744",
+            "fill_id": "fill-permanent-00000001",
+            "market": "spot",
+            "price": "1630.76",
+            "quantity": "1.8444",
+            "side": "BUY",
+            "symbol": "ETHUSDT",
+            "time_ns": 1663228920000000000
+          },
+          "first_funding_payment": {
+            "funding_rate": "-0.00010393",
+            "recomputed_amount_usdt": "-0.2856231329200830906",
+            "reported_amount_usdt": "-0.2856231329200830906",
+            "settlement_mark": "1491.97939501",
+            "short_before_settlement": "1.842",
+            "symbol": "ETHUSDT",
+            "time_ns": 1663257600007000000
+          },
+          "last_fill_payoff": {
+            "cash_effect_usdt": "-0.163214310",
+            "fee_usdt": "0.163214310",
+            "fill_id": "fill-permanent-00000142",
+            "market": "futures",
+            "price": "1691.34",
+            "quantity": "0.193",
+            "side": "SELL",
+            "symbol": "ETHUSDT",
+            "time_ns": 1692345900000000000
+          },
+          "last_funding_payment": {
+            "funding_rate": "0.00002375",
+            "recomputed_amount_usdt": "0.0725774294304808375",
+            "reported_amount_usdt": "0.0725774294304808375",
+            "settlement_mark": "1687.40572363",
+            "short_before_settlement": "1.811",
+            "symbol": "ETHUSDT",
+            "time_ns": 1693497600000000000
+          },
+          "recomputed": {
+            "cash_after_realized_flows_usdt": "6619.13287777834446776064453441295546558704453441295546558704",
+            "fees_usdt": "81.8448272645",
+            "funding_usdt": "210.0754531735890021736",
+            "futures_pnl_usdt": "-923.063875072739999999999999999999999999999999999999999999997",
+            "spot_pnl_usdt": "1000.27290628630000000000000000000000000000000000000000000000",
+            "terminal_equity_usdt": "10205.4396571226490021736000000000000000000000000000000000000",
+            "terminal_futures_unrealized_usdt": "604.906940826804534412955465587044534412955465587044534412950",
+            "terminal_spot_value_usdt": "2981.3998385175000000"
+          },
+          "reported": {
+            "cash_plus_collateral_less_debt_usdt": "6619.132877778344467760644532000",
+            "status": "complete",
+            "terminal_equity_usdt": "10205.43965712264900217360000"
+          },
+          "same_time_funding_and_fill_events": 0
+        }
+      }
+    },
+    "late_2025_2026": {
+      "completion_risk_checks": {
+        "checks": [
+          {
+            "floor_spot_to_futures_step": "0.039",
+            "hedge_error": "0.00638740038078292086945688370987429271980048258999646121051059",
+            "hedge_tolerance": "0.005",
+            "prescribed_futures_step": "0.001",
+            "quantization_exceeds_tolerance": true,
+            "short_after_futures_fill": "0.039",
+            "spot_after_base_fee": "0.03925071",
+            "strategy": "permanent",
+            "symbol": "BTCUSDT",
+            "time_ns": 1787299380000000000
+          },
+          {
+            "floor_spot_to_futures_step": "0.038",
+            "hedge_error": "0.0224275696005844854110177558024068862260044556722353994412402",
+            "hedge_tolerance": "0.005",
+            "prescribed_futures_step": "0.001",
+            "quantization_exceeds_tolerance": true,
+            "short_after_futures_fill": "0.038",
+            "spot_after_base_fee": "0.03887180",
+            "strategy": "permanent",
+            "symbol": "BTCUSDT",
+            "time_ns": 1787414580000000000
+          }
+        ],
+        "completion_failure_count": 2,
+        "explanation": "Persisted risk events forced an unwind after the completed opening hedge. Each listed short equals spot floored to the prescribed futures step, while the remaining base-fee/step mismatch exceeds hedge_tolerance."
+      },
+      "fill_checks": {
+        "adverse_tick_rounding_mismatches": 0,
+        "fills_checked": 8,
+        "maximum_realized_adverse_bps": "1.01259644007441285633982736528897295458764606379097932356000",
+        "minimum_realized_adverse_bps": "1.00038196402262682114989359573655395696538678404481711200000",
+        "prescribed_fee_rate_mismatches": 0,
+        "source_file_hashes_matched": 2,
+        "source_files_checked": 2,
+        "source_fill_rows_checked": 8,
+        "strict_order_timing_mismatches": 0
+      },
+      "funding_audit_native_counts": {
+        "consumed_rows": 4564,
+        "counts_by_strategy": {
+          "conditional": {
+            "exact": 2282
+          },
+          "permanent": {
+            "exact": 2282
+          }
+        },
+        "engine_consumed_count": 4564,
+        "exact_consumed_count": 4564,
+        "proxy_consumed_count": 0,
+        "validated_count": 2282,
+        "warmup_not_required_count": 0
+      },
+      "issues": [],
+      "label": "late_2025_2026",
+      "path": "D:/Backtesting/outputs/run_0cb21afbec7cdba1e5848df6",
+      "run_id": "run_0cb21afbec7cdba1e5848df6",
+      "status": "passed",
+      "strategies": {
+        "conditional": {
+          "counts": {
+            "fill_ledger_rows": 0,
+            "fills": 0,
+            "funding_ledger_rows": 0,
+            "funding_payments": 0,
+            "native_fill_count": 0,
+            "native_reconciliation_count": 0,
+            "orders": 0,
+            "recomputed_nonzero_funding_payments": 0,
+            "reported_fills": 0,
+            "reported_orders": 0
+          },
+          "differences": {
+            "cash_usdt": "0",
+            "pnl_components_usdt": {
+              "fees": "0",
+              "funding": "0",
+              "futures_pnl": "0E-8",
+              "spot_pnl": "0E-8"
+            },
+            "terminal_equity_usdt": "0E-8",
+            "terminal_positions": {
+              "BTCUSDT": {
+                "average": "0",
+                "fees": "0",
+                "funding": "0",
+                "realized_futures": "0",
+                "realized_spot": "0",
+                "short": "0",
+                "spot": "0",
+                "spot_cost": "0"
+              },
+              "ETHUSDT": {
+                "average": "0",
+                "fees": "0",
+                "funding": "0",
+                "realized_futures": "0",
+                "realized_spot": "0",
+                "short": "0",
+                "spot": "0",
+                "spot_cost": "0"
+              }
+            }
+          },
+          "first_fill_payoff": null,
+          "first_funding_payment": null,
+          "last_fill_payoff": null,
+          "last_funding_payment": null,
+          "recomputed": {
+            "cash_after_realized_flows_usdt": "10000",
+            "fees_usdt": "0",
+            "funding_usdt": "0",
+            "futures_pnl_usdt": "0E-8",
+            "spot_pnl_usdt": "0E-8",
+            "terminal_equity_usdt": "10000.00000000",
+            "terminal_futures_unrealized_usdt": "0E-8",
+            "terminal_spot_value_usdt": "0E-8"
+          },
+          "reported": {
+            "cash_plus_collateral_less_debt_usdt": "10000",
+            "status": "complete",
+            "terminal_equity_usdt": "10000"
+          },
+          "same_time_funding_and_fill_events": 0
+        },
+        "permanent": {
+          "counts": {
+            "fill_ledger_rows": 8,
+            "fills": 8,
+            "funding_ledger_rows": 0,
+            "funding_payments": 0,
+            "native_fill_count": 8,
+            "native_reconciliation_count": 8,
+            "orders": 8,
+            "recomputed_nonzero_funding_payments": 0,
+            "reported_fills": 8,
+            "reported_orders": 8
+          },
+          "differences": {
+            "cash_usdt": "0E-11",
+            "pnl_components_usdt": {
+              "fees": "0E-10",
+              "funding": "0",
+              "futures_pnl": "0E-11",
+              "spot_pnl": "0E-56"
+            },
+            "terminal_equity_usdt": "0E-16",
+            "terminal_positions": {
+              "BTCUSDT": {
+                "average": "0",
+                "fees": "0E-10",
+                "funding": "0",
+                "realized_futures": "0.0000",
+                "realized_spot": "1.5402425408651001497229353927526E-25",
+                "short": "0.000",
+                "spot": "0E-8",
+                "spot_cost": "1.5402425408651001497229353927526E-25"
+              },
+              "ETHUSDT": {
+                "average": "0",
+                "fees": "0",
+                "funding": "0",
+                "realized_futures": "0",
+                "realized_spot": "0",
+                "short": "0",
+                "spot": "0",
+                "spot_cost": "0"
+              }
+            }
+          },
+          "first_fill_payoff": {
+            "cash_effect_usdt": "-3004.2572014",
+            "fee_usdt": "3.0042572014",
+            "fill_id": "fill-permanent-00000001",
+            "market": "spot",
+            "price": "76463.66",
+            "quantity": "0.03929",
+            "side": "BUY",
+            "symbol": "BTCUSDT",
+            "time_ns": 1787299320000000000
+          },
+          "first_funding_payment": null,
+          "last_fill_payoff": {
+            "cash_effect_usdt": "2992.2212571264",
+            "fee_usdt": "2.9952164736",
+            "fill_id": "fill-permanent-00000008",
+            "market": "spot",
+            "price": "77057.28",
+            "quantity": "0.03887",
+            "side": "SELL",
+            "symbol": "BTCUSDT",
+            "time_ns": 1787414700000000000
+          },
+          "last_funding_payment": null,
+          "recomputed": {
+            "cash_after_realized_flows_usdt": "9979.5288786314",
+            "fees_usdt": "17.9176684230",
+            "funding_usdt": "0",
+            "futures_pnl_usdt": "-11.79190000000",
+            "spot_pnl_usdt": "9.37986225440000000000000000000000000000000000000000000000",
+            "terminal_equity_usdt": "9979.6702938314000000",
+            "terminal_futures_unrealized_usdt": "0E-11",
+            "terminal_spot_value_usdt": "0.1414152000000000"
+          },
+          "reported": {
+            "cash_plus_collateral_less_debt_usdt": "9979.52887863140",
+            "status": "complete",
+            "terminal_equity_usdt": "9979.6702938314000000"
+          },
+          "same_time_funding_and_fill_events": 0
+        }
+      }
+    }
+  },
+  "status": "passed",
+  "tolerance": "1E-8"
+}

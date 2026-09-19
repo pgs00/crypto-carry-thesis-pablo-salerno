@@ -1,0 +1,287 @@
+# Párrafos fuente de las Entregas 1 y 2
+
+Extracción de solo lectura de los elementos w:p de word/document.xml, en orden documental. Los párrafos dentro de tablas se incluyen en la misma secuencia. El texto combina w:t y m:t; [BR] marca un salto de línea, [TAB] una tabulación y <VACÍO> un párrafo sin texto visible. Los destinos de hipervínculos se agregan al final para reproducir la bibliografía.
+
+## E1
+archivo=entregas/entrega_3/paquete_redaccion/antecedentes/Entrega 1 - Crypto Carry Binance (Salerno Pablo & Rodriguez Facundo).docx
+sha256=D4663CE5FC5D010A8E1B851A7BF26198E27455086AF761C4EAF2BC83C108C8BE
+total_parrafos=87
+
+E1-P001 | estilo=(sin estilo) | <VACÍO>
+E1-P002 | estilo=(sin estilo) | <VACÍO>
+E1-P003 | estilo=Title | Entrega #1[BR]IDEA, HIPÓTESIS Y RESEARCH INICIAL
+E1-P004 | estilo=Subtitle | Estrategia delta-neutral condicional en perpetuos de BTC y ETH en Binance
+E1-P005 | estilo=(sin estilo) | Programa: Maestría en Finanzas
+E1-P006 | estilo=(sin estilo) | Track: Finanzas Computacionales
+E1-P007 | estilo=(sin estilo) | Institución: Universidad del CEMA (UCEMA)
+E1-P008 | estilo=(sin estilo) | Integrantes: Pablo Salerno · Facundo Rodriguez
+E1-P009 | estilo=(sin estilo) | Fecha: Agosto de 2026
+E1-P010 | estilo=(sin estilo) | <VACÍO>
+E1-P011 | estilo=(sin estilo) | <VACÍO>
+E1-P012 | estilo=Heading1 | Ficha del proyecto
+E1-P013 | estilo=(sin estilo) | <VACÍO>
+E1-P014 | estilo=(sin estilo) | Idea central
+E1-P015 | estilo=(sin estilo) | Capturar funding positivo de forma condicional mediante una posición long spot y short perpetual de igual nocional.
+E1-P016 | estilo=(sin estilo) | Pregunta
+E1-P017 | estilo=(sin estilo) | ¿La información de funding ya observada permite anticipar ex ante cuándo el funding acumulado esperado para un horizonte temporal fijo superará los costos, y esa capacidad se comprimió desde 2024?
+E1-P018 | estilo=(sin estilo) | Universo
+E1-P019 | estilo=(sin estilo) | BTCUSDT y ETHUSDT spot, junto con sus perpetuos USDⓈ-M en Binance.
+E1-P020 | estilo=(sin estilo) | Naturaleza
+E1-P021 | estilo=(sin estilo) | Trading delta-neutral en Binance, sin exposición direccional deliberada y con riesgo de contraparte, custodia y regulación concentrado en una única plataforma.
+E1-P022 | estilo=(sin estilo) | Frecuencia
+E1-P023 | estilo=(sin estilo) | Decisiones asociadas a los eventos efectivos de funding; pronósticos sobre horizontes temporales fijos y datos de trades o aggTrades para aproximar la ejecución.
+E1-P024 | estilo=(sin estilo) | Horizonte preliminar
+E1-P025 | estilo=(sin estilo) | 11/08/2020 al último mes completo disponible. Separación temporal antes y después de 2024.
+E1-P026 | estilo=(sin estilo) | <VACÍO>
+E1-P027 | estilo=Heading1 | 1. Idea inicial
+E1-P028 | estilo=(sin estilo) | Los futuros perpetuos permiten mantener una posición sin fecha de vencimiento. Para evitar que su precio se separe persistentemente del mercado spot, Binance transfiere pagos periódicos entre posiciones largas y cortas mediante el funding rate. Cuando el funding es positivo, los traders largos pagan a los traders cortos. Esto crea la posibilidad de mantener una posición comprada en el activo spot y vendida por el mismo nocional en el futuro perpetuo, reduciendo la exposición al movimiento direccional del activo y recibiendo funding.
+E1-P029 | estilo=(sin estilo) | La observación que motiva este trabajo es que el funding no es constante: alterna entre períodos positivos, negativos y cercanos a cero, y suele exhibir persistencia de corto plazo. Una estrategia que permanezca invertida de manera permanente puede cobrar funding durante algunos regímenes, pero también pagar funding o incurrir en costos sin compensación durante otros. La idea consiste en investigar si un modelo predictivo parsimonioso, estimado únicamente con información disponible hasta cada decisión, permite pronosticar el funding acumulado de un horizonte temporal fijo y alimentar una regla de entrada determinística.
+E1-P030 | estilo=(sin estilo) | La estrategia preliminar mantendría posiciones long en BTC o ETH spot y short en sus respectivos futuros perpetuos USD-M de Binance, con nocionales equivalentes. La señal estadística estimará ex ante el funding acumulado para un horizonte fijo mediante tasas ya liquidadas. La regla de decisión será determinística: solo ingresará cuando ese pronóstico supere el costo total esperado de entrada, salida y ejecución. En caso contrario permanecerá en USDT. Como orden de magnitud preliminar, se considerará un piso de 24 a 30 puntos básicos de comisiones por ciclo completo de apertura y cierre de ambas patas, antes de incorporar slippage. La definición exacta de ventanas, umbrales, reglas de permanencia, costos y análisis de sensibilidad corresponderá a la Entrega #2.
+E1-P031 | estilo=Heading1 | 2. Motivación
+E1-P032 | estilo=(sin estilo) | La propuesta es relevante por tres razones. Primero, estudia una fuente de retorno propia de la microestructura de los mercados cripto, en lugar de depender exclusivamente de predecir la dirección de BTC o ETH. Esto permite evaluar una estrategia cuyo objetivo económico es generar carry con beta reducida, no superar necesariamente a buy-and-hold durante mercados alcistas.
+E1-P033 | estilo=(sin estilo) | Segundo, existe evidencia reciente de que el carry incondicional perdió fuerza desde 2024. Borri, Liu, Tsyvinski y Wu (2026) reportan que el Sharpe anualizado de una estrategia sobre BTC en Binance cayó de 6,45 en la muestra 2020-2025 a 4,06 desde 2024, y fue negativo en el tramo de 2025 incluido en la muestra. Lejos de invalidar el tema, esta compresión vuelve más interesante la pregunta: ¿una regla condicional puede evitar parte de los períodos desfavorables o el edge desapareció incluso después de filtrar por régimen?
+E1-P034 | estilo=(sin estilo) | Tercero, el proyecto tiene valor práctico. Binance ofrece precios spot, precios de perpetuos, funding liquidado, premium index y datos de mercado mediante archivos públicos y API. El mismo proceso de señal, control de costos, sizing y gestión de margen podría convertirse posteriormente en un bot de monitoreo y ejecución. Un resultado negativo también sería útil: permitiría establecer en qué condiciones el bot debería permanecer inactivo.
+E1-P035 | estilo=Heading1 | 3. Hipótesis económica o financiera
+E1-P036 | estilo=Heading2 | 3.1. Lógica económica
+E1-P037 | estilo=(sin estilo) | La hipótesis parte de la interacción entre demanda por apalancamiento y límites al arbitraje. Los inversores que buscan exposición alcista apalancada tienden a utilizar futuros perpetuos, generando presión compradora sobre esos contratos. Cuando el perpetuo opera con prima respecto del spot, el mecanismo de funding incrementa el pago de los largos a los cortos para acercar ambos precios. Del otro lado, los arbitrajistas que compran spot y venden futuros aportan capital que tiende a reducir esa prima.
+E1-P038 | estilo=(sin estilo) | Ese capital no es ilimitado. Los requerimientos de margen, el riesgo de liquidación de la pata short, la falta de compensación perfecta entre spot y futuros, el riesgo de contraparte del exchange, la custodia y los costos de transacción restringen el tamaño de las posiciones. Por ello, el funding puede permanecer positivo durante varios períodos antes de revertir. Al mismo tiempo, una mayor participación de capital especializado puede comprimir progresivamente la prima.
+E1-P039 | estilo=Heading2 | La combinación long spot y short perpetual reduce la exposición al movimiento general del activo, pero mantiene el riesgo de que aumente la diferencia de precio entre ambos mercados. Si el perpetuo sube más que el spot, la posición puede registrar pérdidas temporales, consumir margen y verse obligada a cerrar. Para controlar este riesgo, se medirá la mayor ampliación adversa del basis, se mantendrá un margen de seguridad y se establecerá un límite máximo para la prima del perpetuo al momento de entrar.
+E1-P040 | estilo=Heading2 | 3.2. Hipótesis contrastables
+E1-P041 | estilo=(sin estilo) | H1. Persistencia: las tasas de funding ya observadas permiten pronosticar el funding acumulado futuro mejor que un modelo que simplemente mantiene la última tasa observada, comparando horizontes de igual duración real.
+E1-P042 | estilo=(sin estilo) | H2. Valor de la condición: entrar únicamente cuando el funding esperado supera los costos produce un mejor rendimiento neto ajustado por riesgo que mantener permanentemente la posición de carry.
+E1-P043 | estilo=(sin estilo) | H3. Compresión: desde 2024, la magnitud y la rentabilidad neta de las oportunidades de carry condicional son menores que en el período anterior.
+E1-P044 | estilo=(sin estilo) | Beneficio neto = funding recibido − Δ(perpetuo − spot) − comisiones − slippage
+E1-P045 | estilo=(sin estilo) | Restricción point-in-time:
+E1-P046 | estilo=(sin estilo) | Para cada decisión se utilizará únicamente información que ya estuviera disponible en ese momento. Si la decisión se toma después del evento de funding t, podrá utilizarse la tasa liquidada en ese evento, pero no la del evento siguiente. Así se evita incorporar información futura en el backtest.
+E1-P047 | estilo=Heading2 | 3.3. Criterio de falsación
+E1-P048 | estilo=Heading1 | H1 será rechazada si el modelo no mejora de manera estadísticamente robusta el pronóstico fuera de muestra frente a asumir que la última tasa de funding se mantiene. H2 será rechazada si la estrategia condicional no obtiene rentabilidad neta positiva o no mejora significativamente el Sharpe neto del carry permanente. H3 será rechazada si no se observa una reducción relevante de las oportunidades de carry desde 2024, después de considerar los cambios en los intervalos de funding y en las reglas de Binance.
+E1-P049 | estilo=Heading1 | La estrategia tampoco se considerará explotable si sus ventajas desaparecen al incorporar costos y riesgos realistas. Los horizontes, umbrales y métodos de evaluación se definirán en la Entrega #2 antes de analizar la muestra final, para evitar seleccionar retrospectivamente los resultados más favorables.
+E1-P050 | estilo=Heading1 | 4. Research inicial y evidencia previa
+E1-P051 | estilo=Heading2 | 4.1. Fundamentos teóricos
+E1-P052 | estilo=(sin estilo) | Ackerer, Hugonnier y Jermann (2026) desarrollan una teoría de valuación para futuros perpetuos lineales, inversos y quanto. Su análisis formaliza que el funding es el mecanismo que vincula el precio del perpetuo con el activo subyacente. Esto brinda el fundamento para estudiar conjuntamente el pago de funding y la evolución del basis, en lugar de interpretar el funding como una renta aislada.
+E1-P053 | estilo=(sin estilo) | Shleifer y Vishny (1997) muestran que el arbitraje requiere capital y puede volverse ineficaz cuando las pérdidas transitorias provocan restricciones o retiros de fondos. Este marco de límites al arbitraje sustenta la importancia del margen, la liquidación y el riesgo de que una divergencia del basis persista antes de converger.
+E1-P054 | estilo=(sin estilo) | Schmeling, Schrimpf y Todorov (2026) explican el elevado crypto carry por dos fuerzas: demanda de exposición apalancada por parte de inversores más pequeños y escasez relativa de capital dispuesto a tomar la posición contraria debido a fricciones regulatorias y de margen. Su evidencia muestra que el carry puede alcanzar niveles excepcionalmente altos, pero también que no constituye un arbitraje libre de riesgo.
+E1-P055 | estilo=Heading2 | 4.2. Evidencia empírica y evolución reciente
+E1-P056 | estilo=(sin estilo) | Christin, Routledge, Soska y Zetlin-Jones (2023) estudian el carry con perpetuos de Binance a frecuencia de ocho horas. Para BTC denominado en USDT reportan un Sharpe anualizado elevado durante 2020-2023, aunque menor en los tramos más recientes de la muestra y sensible a políticas de apalancamiento, liquidaciones y riesgo del exchange. También muestran que el retorno combina funding y cambios del basis.
+E1-P057 | estilo=(sin estilo) | La evidencia más reciente introduce una advertencia central. Borri et al. (2026) documentan una fuerte reducción de la rentabilidad desde 2024 y un resultado negativo durante 2025 para el carry incondicional en BTC. Por su parte, Inan (2025) encuentra que modelos autorregresivos pueden mejorar el pronóstico out-of-sample del próximo funding de BTC en Binance y Bybit, aunque la estabilidad de esa capacidad predictiva cambia a lo largo del tiempo. En conjunto, ambos trabajos justifican estudiar la persistencia y el cambio de régimen, sin asumir rentabilidad. El aporte del proyecto no será descubrir esa persistencia, sino replicarla y actualizarla para BTC y ETH en Binance, evaluar su estabilidad antes y después de 2024 y transformarla en una regla operable.
+E1-P058 | estilo=Heading2 | 4.3. Fuentes técnicas y datos
+E1-P059 | estilo=Heading1 | Binance proporciona los datos históricos y en vivo necesarios para el proyecto, incluyendo tasas de funding, precios, velas y operaciones de spot y futuros. Esto permitirá construir una base reproducible utilizando inicialmente fuentes oficiales y gratuitas.
+E1-P060 | estilo=Heading1 | Se utilizarán los horarios y las tasas correspondientes a cobros de funding efectivamente realizados. Como Binance modificó históricamente la frecuencia de liquidación y otras reglas, el backtest aplicará en cada fecha las condiciones que estuvieran vigentes en ese momento. Cuando alguna regla histórica no pueda reconstruirse, se utilizará un supuesto conservador y se informará como limitación.
+E1-P061 | estilo=Heading1 | NautilusTrader se utilizará para el backtest y una posible ejecución en vivo. Las operaciones se simularán utilizando precios de trades, comisiones taker, slippage y una demora conservadora entre la compra del spot y la venta del perpetuo. Los costos también se evaluarán en escenarios normal, doble y triple. La falta de datos históricos completos del libro de órdenes se informará como una limitación.
+E1-P062 | estilo=Heading1 | 5. Aporte esperado
+E1-P063 | estilo=(sin estilo) | El trabajo no busca proponer un nuevo mecanismo de funding. Su contribución será una adaptación y extensión empírica de la literatura de crypto carry a una regla operable, point-in-time y específica de Binance. El aporte esperado tiene cuatro componentes:
+E1-P064 | estilo=ListBullet | Replicar correctamente el P&L delta-neutral, separando funding, variación del basis, costos y consumo de margen.
+E1-P065 | estilo=ListBullet | Convertir la evidencia de persistencia en un pronóstico parsimonioso point-in-time y una regla de decisión determinística.
+E1-P066 | estilo=ListBullet | Comparar la estrategia condicional con el carry permanente y evaluar explícitamente la compresión desde 2024.
+E1-P067 | estilo=ListBullet | Incorporar restricciones operativas relevantes para un futuro bot: doble ejecución, basis, margen, liquidación, slippage, latencia, cambios de reglas y disponibilidad de datos.
+E1-P068 | estilo=(sin estilo) | El resultado final podrá ser favorable, débil o negativo. En cualquiera de los casos, se espera identificar qué parte del retorno proviene del funding, cuánto se pierde por costos y bajo qué regímenes resulta racional mantener la estrategia apagada.
+E1-P069 | estilo=Heading1 | 6. Pitch preliminar
+E1-P070 | estilo=(sin estilo) | Pitch:
+E1-P071 | estilo=(sin estilo) | Los futuros perpetuos de Binance transfieren funding entre largos y cortos para mantener su precio cercano al spot. Históricamente, la demanda de exposición alcista apalancada generó funding positivo y una prima aprovechable mediante una posición long spot y short perpetual. Sin embargo, evidencia reciente muestra que ese carry se comprimió desde 2024. Este trabajo combinará un modelo predictivo parsimonioso, estimado solo con información disponible en cada fecha, con una regla determinística que abrirá la posición delta-neutral cuando el funding acumulado pronosticado para un horizonte fijo supere los costos. Se evaluarán BTC y ETH en Binance incorporando variación del basis, reglas point-in-time, ejecución, comisiones, slippage y margen. El objetivo no es demostrar una rentabilidad predeterminada, sino establecer si el edge continúa siendo explotable y convertir la conclusión en reglas aptas para un futuro bot.
+E1-P072 | estilo=Heading1 | Referencias
+E1-P073 | estilo=(sin estilo) | Ackerer, D., Hugonnier, J., & Jermann, U. (2026). Perpetual Futures Pricing. Mathematical Finance, 36(3), 481-499. https://doi.org/10.1111/mafi.70018 | enlaces=https://doi.org/10.1111/mafi.70018
+E1-P074 | estilo=(sin estilo) | Binance. (s. f.). Introduction to Binance Futures Funding Rates. https://www.binance.com/en/support/faq/detail/360033525031 | enlaces=https://www.binance.com/en/support/faq/detail/360033525031
+E1-P075 | estilo=(sin estilo) | Binance. (2025a). Important Updates on Funding Rate Settlement Frequency of USDⓈ-M Perpetual Contracts. https://www.binance.com/en/support/announcement/detail/3243c81a35bd4f0c86a37315c3dc96cc | enlaces=https://www.binance.com/en/support/announcement/detail/3243c81a35bd4f0c86a37315c3dc96cc
+E1-P076 | estilo=(sin estilo) | Binance. (2025b). Important Updates on Funding Rate Formula and Mark Price Calculations. https://www.binance.com/en/support/announcement/detail/c00588a7e8504b3eb28d02a2da00530b | enlaces=https://www.binance.com/en/support/announcement/detail/c00588a7e8504b3eb28d02a2da00530b
+E1-P077 | estilo=(sin estilo) | Binance Developers. (2026a). Market Data, Futures USDⓈ-M REST API. https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/rest-api/market-data | enlaces=https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/rest-api/market-data
+E1-P078 | estilo=(sin estilo) | Binance Developers. (2026b). Mark Price Stream, Futures USDⓈ-M WebSocket Market Streams. https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/ws-streams/market | enlaces=https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/ws-streams/market
+E1-P079 | estilo=(sin estilo) | Binance Data Vision. (2026). Public market data archive. https://data.binance.vision/ | enlaces=https://data.binance.vision/
+E1-P080 | estilo=(sin estilo) | Borri, N., Liu, Y., Tsyvinski, A., & Wu, X. (2026). Cryptocurrency as an Investable Asset Class: Coming of Age. Annual Review of Financial Economics, 18, forthcoming. https://arxiv.org/abs/2510.14435 | enlaces=https://arxiv.org/abs/2510.14435
+E1-P081 | estilo=(sin estilo) | Christin, N., Routledge, B. R., Soska, K., & Zetlin-Jones, A. (2023). The Crypto Carry Trade. Working paper. https://gerbil.life/papers/CarryTrade.v1.2.pdf | enlaces=https://gerbil.life/papers/CarryTrade.v1.2.pdf
+E1-P082 | estilo=(sin estilo) | Inan, E. (2025). Predictability of Funding Rates. SSRN Working Paper 5576424. https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5576424 | enlaces=https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5576424
+E1-P083 | estilo=(sin estilo) | NautilusTrader. (2026a). Binance integration. https://nautilustrader.io/docs/latest/integrations/binance/ | enlaces=https://nautilustrader.io/docs/latest/integrations/binance/
+E1-P084 | estilo=(sin estilo) | NautilusTrader. (2026b). Backtest accounts and margin: funding. https://nautilustrader.io/docs/latest/concepts/backtesting/accounts-and-margin/ | enlaces=https://nautilustrader.io/docs/latest/concepts/backtesting/accounts-and-margin/
+E1-P085 | estilo=(sin estilo) | Schmeling, M., Schrimpf, A., & Todorov, K. (2026). Crypto Carry. Management Science, Articles in Advance. https://doi.org/10.1287/mnsc.2024.05069 | enlaces=https://doi.org/10.1287/mnsc.2024.05069
+E1-P086 | estilo=(sin estilo) | Shleifer, A., & Vishny, R. W. (1997). The Limits of Arbitrage. The Journal of Finance, 52(1), 35-55. https://doi.org/10.1111/j.1540-6261.1997.tb03807.x | enlaces=https://doi.org/10.1111/j.1540-6261.1997.tb03807.x
+E1-P087 | estilo=(sin estilo) | <VACÍO>
+
+## E2
+archivo=entregas/entrega_3/paquete_redaccion/antecedentes/Entrega 2 Crypto Carry Binance Pablo Salerno.docx
+sha256=9AC21B427598A82181F93F81FED8846953B6134EBA21D7473DD5A8AE1FD28F28
+total_parrafos=185
+
+E2-P001 | estilo=CoverInstitution | UNIVERSIDAD DEL CEMA
+E2-P002 | estilo=CoverProgram | Maestría en Finanzas
+E2-P003 | estilo=CoverTrack | Track Finanzas Computacionales
+E2-P004 | estilo=CoverKicker | TESINA · ENTREGA 2
+E2-P005 | estilo=CoverTitle | Persistencia y[BR]compresión del
+E2-P006 | estilo=CoverTitleAccent | crypto carry
+E2-P007 | estilo=CoverSubtitle | Estrategia de carry condicional[BR]con futuros perpetuos de Binance
+E2-P008 | estilo=CoverScope | Idea, hipótesis, research inicial y diseño algorítmico
+E2-P009 | estilo=CoverAuthorLabel | PRESENTADO POR
+E2-P010 | estilo=CoverAuthor | Pablo Salerno
+E2-P011 | estilo=CoverDate | Septiembre de 2026
+E2-P012 | estilo=(sin estilo) | <VACÍO>
+E2-P013 | estilo=Heading1 | 1. Idea inicial
+E2-P014 | estilo=(sin estilo) | El trabajo estudia una estrategia de crypto carry que combina la compra spot de una criptomoneda con una posición corta en su futuro perpetuo. La cobertura busca reducir la exposición al precio y concentrar el resultado en el funding y en la diferencia de precios entre ambos mercados.
+E2-P015 | estilo=(sin estilo) | El funding es un pago periódico entre posiciones compradas y vendidas del perpetuo. Con tasa positiva, los compradores pagan a los vendedores; con tasa negativa ocurre lo contrario. La estrategia operará solo cuando el funding esperado justifique los costos de entrada y salida.
+E2-P016 | estilo=Heading1 | 2. Motivación
+E2-P017 | estilo=(sin estilo) | Mantener el carry de forma permanente puede alternar períodos de cobro y pago de funding. La pregunta es si seleccionar las entradas mejora el resultado neto una vez considerados los costos de operar.
+E2-P018 | estilo=Heading1 | 3. Hipótesis económica y financiera
+E2-P019 | estilo=(sin estilo) | La demanda de exposición apalancada puede sostener funding positivo, mientras que los costos, las garantías y el riesgo del exchange limitan el arbitraje. Esto motiva estudiar si la oportunidad persiste varios días y si se redujo con el tiempo.
+E2-P020 | estilo=(sin estilo) | H1. Predicción: una media que pondera más el funding reciente pronostica las tasas de las próximas 168 horas con menor error que proyectar únicamente la última tasa.
+E2-P021 | estilo=(sin estilo) | H2. Resultado económico: condicionar las entradas y renovaciones al funding esperado permite obtener rentabilidad neta positiva y un Sharpe superior al de un carry sin ese filtro.
+E2-P022 | estilo=(sin estilo) | H3. Compresión: las oportunidades y la rentabilidad disminuyen desde 2024 respecto de 2022-2023. Estas hipótesis serán evaluadas, no se presentan como resultados.
+E2-P023 | estilo=Heading1 | 4. Investigación inicial y evidencia previa
+E2-P024 | estilo=(sin estilo) | 4.1. Fundamentos teóricos 
+E2-P025 | estilo=(sin estilo) | Ackerer, Hugonnier y Jermann (2026) desarrollan una teoría de valuación para futuros perpetuos lineales, inversos y quanto. Su análisis formaliza que el funding es el mecanismo que vincula el precio del perpetuo con el activo subyacente. Esto brinda el fundamento para estudiar conjuntamente el pago de funding y la evolución del basis, en lugar de interpretar el funding como una renta aislada.
+E2-P026 | estilo=(sin estilo) | Shleifer y Vishny (1997) muestran que el arbitraje requiere capital y puede volverse ineficaz cuando las pérdidas transitorias provocan restricciones o retiros de fondos. Este marco de límites al arbitraje sustenta la importancia del margen, la liquidación y el riesgo de que una divergencia del basis persista antes de converger. 
+E2-P027 | estilo=(sin estilo) | Schmeling, Schrimpf y Todorov (2026) explican el elevado crypto carry por dos fuerzas: demanda de exposición apalancada por parte de inversores más pequeños y escasez relativa de capital dispuesto a tomar la posición contraria debido a fricciones regulatorias y de margen. Su evidencia muestra que el carry puede alcanzar niveles excepcionalmente altos, pero también que no constituye un arbitraje libre de riesgo.
+E2-P028 | estilo=(sin estilo) | 4.2. Evidencia empírica y evolución reciente
+E2-P029 | estilo=(sin estilo) | Christin, Routledge, Soska y Zetlin-Jones (2023) estudian el carry con perpetuos de Binance a frecuencia de ocho horas. Para BTC denominado en USDT reportan un Sharpe anualizado elevado durante 2020-2023, aunque menor en los tramos más recientes de la muestra y sensible a políticas de apalancamiento, liquidaciones y riesgo del exchange. También muestran que el retorno combina funding y cambios del basis.
+E2-P030 | estilo=(sin estilo) | La evidencia más reciente introduce una advertencia central. Borri et al. (2026) documentan una fuerte reducción de la rentabilidad desde 2024 y un Sharpe negativo en el tramo de 2025 analizado, cuya muestra termina el 31 de mayo para el carry incondicional en BTC. Por su parte, Inan (2025) encuentra que modelos autorregresivos pueden mejorar el pronóstico out-of-sample del próximo funding de BTC en Binance y Bybit, aunque la estabilidad de esa capacidad predictiva cambia a lo largo del tiempo. En conjunto, ambos trabajos justifican estudiar la persistencia y el cambio de régimen, sin asumir rentabilidad. El aporte del proyecto no será descubrir esa persistencia, sino replicarla y actualizarla para BTC y ETH en Binance, evaluar su estabilidad antes y después de 2024 y transformarla en una regla operable.
+E2-P031 | estilo=Heading1 | 5. Aporte esperado
+E2-P032 | estilo=Heading1 | El trabajo no busca proponer un nuevo mecanismo de funding. Su contribución será una adaptación y extensión empírica de la literatura de crypto carry a una regla operable, point-in-time y específica de Binance. El aporte esperado tiene cuatro componentes:
+E2-P033 | estilo=Heading1 | Replicar correctamente el P&L delta-neutral, separando funding, variación del basis, costos y consumo de margen.
+E2-P034 | estilo=Heading1 | Convertir la evidencia de persistencia en un pronóstico parsimonioso point-in-time y una regla de decisión determinística.
+E2-P035 | estilo=Heading1 | Comparar la estrategia condicional con el carry permanente y evaluar explícitamente la compresión desde 2024.
+E2-P036 | estilo=Heading1 | Incorporar restricciones operativas relevantes para un futuro bot: doble ejecución, basis, margen, liquidación, slippage, latencia, cambios de reglas y disponibilidad de datos.
+E2-P037 | estilo=Heading1 | El resultado final podrá ser favorable, débil o negativo. En cualquiera de los casos, se espera identificar qué parte del retorno proviene del funding, cuánto se pierde por costos y bajo qué regímenes resulta racional mantener la estrategia apagada.
+E2-P038 | estilo=Heading1 | 6. Pitch preliminar
+E2-P039 | estilo=(sin estilo) | Los futuros perpetuos de Binance transfieren funding entre largos y cortos para mantener su precio cercano al spot. Históricamente, la demanda de exposición alcista apalancada generó funding positivo y una prima aprovechable mediante una posición long spot y short perpetual. Sin embargo, evidencia reciente muestra que ese carry se comprimió desde 2024. Este trabajo combinará un modelo predictivo parsimonioso, estimado solo con información disponible en cada fecha, con una regla determinística que abrirá la posición delta-neutral cuando el funding acumulado pronosticado para un horizonte fijo supere los costos. Se evaluarán BTC y ETH en Binance incorporando variación del basis, reglas point-in-time, ejecución, comisiones, slippage y margen. El objetivo no es demostrar una rentabilidad predeterminada, sino establecer si el edge continúa siendo explotable y convertir la conclusión en reglas aptas para un futuro bot.
+E2-P040 | estilo=Heading1 | 7. Diseño de la estrategia
+E2-P041 | estilo=Heading2 | 7.1. Tipo de estrategia, universo y período
+E2-P042 | estilo=(sin estilo) | La propuesta es una estrategia de trading sistemático de carry. El universo será fijo y estará compuesto por BTCUSDT y ETHUSDT, en spot y perpetuos lineales USD-M de Binance, con resultados y garantías expresados en USDT. Se eligen por su liquidez, antigüedad y disponibilidad de datos. Los resultados no se generalizan a todo el mercado cripto.
+E2-P043 | estilo=(sin estilo) | La simulación será automática, sin decisiones humanas. La muestra prevista va del 11/08/2020 al 31/08/2026: 2020-2021 se usarán para preparación y la evaluación comenzará el 01/01/2022 con 10.000 USDT y sin posiciones. Los 14 días previos alimentarán el primer pronóstico.
+E2-P044 | estilo=(sin estilo) | <VACÍO>
+E2-P045 | estilo=(sin estilo) | <VACÍO>
+E2-P046 | estilo=(sin estilo) | <VACÍO>
+E2-P047 | estilo=Heading2 | 7.2. Datos y fuentes
+E2-P048 | estilo=(sin estilo) | Datos necesarios
+E2-P049 | estilo=(sin estilo) | Para qué se utilizan
+E2-P050 | estilo=(sin estilo) | Observación
+E2-P051 | estilo=(sin estilo) | Tasa final de funding y precio asociado
+E2-P052 | estilo=(sin estilo) | Pronóstico y registro del cobro o pago.
+E2-P053 | estilo=(sin estilo) | Cada liquidación
+E2-P054 | estilo=(sin estilo) | Operaciones de spot y perpetuos 
+E2-P055 | estilo=(sin estilo) | Precios de referencia y ejecución de órdenes.
+E2-P056 | estilo=(sin estilo) | Cada operación
+E2-P057 | estilo=(sin estilo) | Mark price
+E2-P058 | estilo=(sin estilo) | Valuar el contrato y controlar las garantías.
+E2-P059 | estilo=(sin estilo) | Cada minuto cerrado
+E2-P060 | estilo=(sin estilo) | Reglas, límites y cargos de Binance
+E2-P061 | estilo=(sin estilo) | Validar cantidades, horarios y margen.
+E2-P062 | estilo=(sin estilo) | Según su vigencia
+E2-P063 | estilo=(sin estilo) | <VACÍO>
+E2-P064 | estilo=(sin estilo) | Binance Data Vision será la fuente histórica principal y la API oficial se utilizará para completar o verificar datos. Las reglas y cargos se aplicarán según su vigencia histórica, evitando usar condiciones actuales para períodos anteriores.
+E2-P065 | estilo=(sin estilo) | Se construirá un registro histórico por activo de comisiones, restricciones de cantidades, márgenes y cargos de liquidación, respaldado por documentación o anuncios oficiales fechados. Cada registro incluirá el valor, la fuente, la fecha de publicación y el período de vigencia. Antes de ejecutar el backtest se documentarán la cobertura verificada y los faltantes, que se tratarán según la política de datos incompletos.
+E2-P066 | estilo=(sin estilo) | Los horarios se normalizarán a UTC y los eventos simultáneos se ordenarán de manera determinista. Para generar una señal se exigirán 14 días completos de funding, el último mark price cerrado y operaciones recientes de ambos mercados.
+E2-P067 | estilo=(sin estilo) | Para generar señales y controlar el basis se utilizará la última operación de cada mercado conocida al momento de evaluar, con una antigüedad máxima de 60 segundos. Si no hay operaciones recientes, se bloquearán entradas, aumentos y renovaciones, pero continuarán los demás controles de riesgo y las órdenes de cierre. El control del basis se reanudará cuando ambos precios sean válidos. La ausencia real de operaciones se distinguirá de los faltantes en los archivos históricos, sujetos a la política de datos incompletos.
+E2-P068 | estilo=(sin estilo) | Los datos faltantes relevantes invalidarán la ventana analizada hasta reunir nuevamente 14 días válidos de funding y contar con los demás datos requeridos. Si faltan datos indispensables con una posición abierta, la corrida se considerará incompleta y se repetirá una vez corregida la base. No se reemplazará funding faltante por cero ni se eliminarán operaciones.
+E2-P069 | estilo=(sin estilo) | El backtest supondrá ejecuciones completas, transferencias internas inmediatas y gratuitas y USDT a la par del dólar. No se modelarán impuestos, insolvencia del exchange ni las restricciones de liquidez que podrían afectar la ejecución de las órdenes.
+E2-P070 | estilo=(sin estilo) | <VACÍO>
+E2-P071 | estilo=(sin estilo) | <VACÍO>
+E2-P072 | estilo=(sin estilo) | <VACÍO>
+E2-P073 | estilo=(sin estilo) | <VACÍO>
+E2-P074 | estilo=(sin estilo) | <VACÍO>
+E2-P075 | estilo=(sin estilo) | <VACÍO>
+E2-P076 | estilo=(sin estilo) | <VACÍO>
+E2-P077 | estilo=(sin estilo) | <VACÍO>
+E2-P078 | estilo=(sin estilo) | <VACÍO>
+E2-P079 | estilo=(sin estilo) | <VACÍO>
+E2-P080 | estilo=(sin estilo) | <VACÍO>
+E2-P081 | estilo=(sin estilo) | <VACÍO>
+E2-P082 | estilo=(sin estilo) | 7.3. Pronóstico del funding
+E2-P083 | estilo=(sin estilo) | El pronóstico tendrá un horizonte de 168 horas, equivalente a siete días. Después de cada liquidación de funding se esperarán 60 segundos antes de calcular la señal, suponiendo que la tasa final ya está disponible.
+E2-P084 | estilo=(sin estilo) | Se utilizarán los datos de los últimos 14 días con una ponderación exponencial (EWMA), que asigna mayor peso a la información reciente. Una observación de hace 24 horas pesa la mitad que la actual; una de hace 48 horas, un cuarto. Para una antigüedad (a) medida en horas:
+E2-P085 | estilo=(sin estilo) | w = 2-a24
+E2-P086 | estilo=(sin estilo) | Se adopta una vida media de 24 horas como parámetro inicial para captar cambios relativamente rápidos en el funding, manteniendo el aporte de observaciones anteriores. Este valor se fija antes del backtest y no surge de una optimización sobre los resultados de la muestra.
+E2-P087 | estilo=(sin estilo) | Se calcula una tasa media por hora a partir del funding observado y la duración de cada intervalo, dando mayor peso a los datos recientes. Luego se multiplica por 168 para obtener el pronóstico semanal:
+E2-P088 | estilo=(sin estilo) | f = 168 · jwj fjjwj Δj
+E2-P089 | estilo=(sin estilo) | En esta fórmula, fj es cada tasa de funding liquidada, Δj son las horas desde la liquidación anterior y wj es su peso. El símbolo ∑ indica sumar las observaciones de la ventana.
+E2-P090 | estilo=(sin estilo) | La ventana incluye el funding recién observado y excluye el de exactamente 14 días antes. El pronóstico se actualiza también cuando hay una posición abierta y las tasas se almacenan en formato decimal.
+E2-P091 | estilo=Heading2 | 7.4. Entrada, permanencia y salida
+E2-P092 | estilo=Heading3 | Cuándo entrar
+E2-P093 | estilo=(sin estilo) | Se abre un par solo si no existe una posición previa en el activo, el pronóstico semanal de funding supera el costo porcentual estimado de entrada y salida, el basis está entre 0% y 0,50%, hay fondos suficientes y los datos y mercados son válidos. El costo se estima considerando las cuatro órdenes del ciclo, con las comisiones conocidas al momento de decidir y el supuesto de deslizamiento.
+E2-P094 | estilo=(sin estilo) | El basis porcentual mide cuánto más caro o barato está el perpetuo respecto del spot. Con S como precio spot y F como precio del perpetuo, ambos en USDT por unidad del activo:
+E2-P095 | estilo=(sin estilo) | b = FS – 1
+E2-P096 | estilo=Heading3 | Cómo se ejecuta
+E2-P097 | estilo=(sin estilo) | Se compra spot y, un segundo después de su ejecución, se vende el perpetuo por la cantidad neta cubierta. Cada orden usa la primera operación posterior disponible, con ejecución total y un ajuste adverso de precio.
+E2-P098 | estilo=(sin estilo) | Cada orden dispone de 30 segundos. Si falla la compra inicial, se cancela el intento; si falla la venta del perpetuo después de comprar spot, se vende el spot para desarmarlo. Los costos incurridos permanecen registrados.
+E2-P099 | estilo=(sin estilo) | Las órdenes de salida vencidas se reenvían hasta cerrar la posición. Mientras tanto, la posición continúa expuesta a ganancias, pérdidas, funding y riesgo de liquidación.
+E2-P100 | estilo=Heading3 | Cuándo mantener y cerrar
+E2-P101 | estilo=(sin estilo) | La posición se mantiene inicialmente durante 168 horas. Al vencimiento se renueva por otras 168 horas si el último pronóstico es positivo, los datos siguen válidos y no existe una salida de riesgo pendiente.
+E2-P102 | estilo=(sin estilo) | En una renovación no se exige nuevamente el umbral de entrada, porque el costo de apertura ya fue incurrido. Si no se renueva, se cierra primero el perpetuo y luego se vende el spot.
+E2-P103 | estilo=(sin estilo) | Motivo de salida anticipada
+E2-P104 | estilo=(sin estilo) | Regla
+E2-P105 | estilo=(sin estilo) | Ampliación del basis
+E2-P106 | estilo=(sin estilo) | Aumento de al menos 2 puntos porcentuales desde la referencia del par.
+E2-P107 | estilo=(sin estilo) | Garantía insuficiente
+E2-P108 | estilo=(sin estilo) | Mantenimiento / saldo de margen ≥ 50%, o distancia a liquidación < 15%.
+E2-P109 | estilo=(sin estilo) | Diferencia de cantidades
+E2-P110 | estilo=(sin estilo) | Descalce > 2%: corregir; si no baja a ≤ 0,5% en 60 segundos, cerrar.
+E2-P111 | estilo=(sin estilo) | Problema operativo
+E2-P112 | estilo=(sin estilo) | Mercado suspendido o más de 30 minutos sin operaciones.
+E2-P113 | estilo=(sin estilo) | <VACÍO>
+E2-P114 | estilo=(sin estilo) | El basis se controlará al cierre de cada minuto con los precios definidos en la sección 7.2. Su referencia se fijará al completar ambas patas de la entrada y se actualizará al finalizar cada rebalanceo que modifique el tamaño del par, utilizando el basis observado en ese instante. Las renovaciones sin cambios de cantidad y las correcciones de descalce conservarán la referencia anterior.
+E2-P115 | estilo=(sin estilo) | El descalce se calcula como la diferencia absoluta entre las cantidades de spot y perpetuo, dividida por la cantidad spot y expresada en porcentaje. Si el descalce supera el 2%, se intentará corregir modificando únicamente la posición en perpetuos. Su cantidad objetivo será la cantidad spot neta, redondeada hacia abajo al incremento permitido por Binance. El ajuste respetará los fondos disponibles, los mínimos y las reglas de ejecución. Si el descalce no se reduce a 0,5% o menos dentro de los 60 segundos posteriores a su detección, se ordenará el cierre del par.
+E2-P116 | estilo=(sin estilo) | Después de una salida por riesgo, liquidación o intento fallido, el activo queda bloqueado durante 24 horas. Las salidas de riesgo tienen prioridad sobre renovaciones y nuevas entradas.
+E2-P117 | estilo=Heading2 | 7.5. Capital, cantidades y rebalanceo
+E2-P118 | estilo=(sin estilo) | La estrategia parte de 10.000 USDT. Cada activo tiene como objetivo una posición spot equivalente al 30 % del patrimonio. Con ambos pares abiertos, la asignación inicial aproximada es 60 % spot, 30 % garantías y 10 % efectivo libre.
+E2-P119 | estilo=(sin estilo) | La cantidad spot se calcula con el precio conocido y se redondea según las reglas de Binance. La venta del perpetuo cubre la cantidad neta recibida después de comisiones. Se exige un descalce no mayor a 0,5 % tanto al ingresar como al finalizar un rebalanceo.
+E2-P120 | estilo=(sin estilo) | Al salir se vende toda cantidad negociable. Los remanentes por debajo del mínimo conservan su valor en el patrimonio y se incorporan a una futura entrada.
+E2-P121 | estilo=(sin estilo) | El rebalanceo solo se realiza al renovar si el valor spot se aparta más de 5 % del nuevo objetivo de capital.
+E2-P122 | estilo=(sin estilo) | Los aumentos siguen la secuencia de entrada de la sección 7.4 y las reducciones, la de salida. En ambos casos se espera un segundo entre ejecuciones.
+E2-P123 | estilo=(sin estilo) | Si un aumento no puede financiarse, se omite. Si falla la segunda pata del ajuste, se cierra el par.
+E2-P124 | estilo=Heading2 | 7.6. Garantías
+E2-P125 | estilo=Heading3 | Garantía inicial y movimientos posteriores
+E2-P126 | estilo=(sin estilo) | Se utiliza apalancamiento de 2x, por lo que la garantía inicial base equivale a la mitad del valor del contrato vendido. Al abrir o aumentar el perpetuo, se agrega garantía adicional si la diferencia entre el precio ejecutado y el mark price genera una pérdida inicial. La posición spot se paga en su totalidad y sus ganancias no se transfieren automáticamente a la garantía aislada.
+E2-P127 | estilo=(sin estilo) | Al aumentar la posición se recalcula el precio medio de venta. En un cierre parcial se libera la misma proporción de garantía y se reconoce el resultado correspondiente, neto de comisión.
+E2-P128 | estilo=(sin estilo) | El funding positivo aumenta el efectivo Futures. El negativo se descuenta primero de ese efectivo y luego de la garantía del contrato.
+E2-P129 | estilo=(sin estilo) | Si una obligación realizada no puede cubrirse con los fondos utilizables, el faltante se registra como deuda. Esto bloquea nuevas entradas y obliga a cerrar posiciones hasta cancelarla. Si el patrimonio final no es positivo, se declara insolvencia.
+E2-P130 | estilo=Heading3 | Control del margen y liquidación
+E2-P131 | estilo=(sin estilo) | Binance exige un margen de mantenimiento, una garantía mínima que depende del tamaño del contrato. Con q como cantidad vendida, P0 como precio medio de venta, M como mark price e I como garantía, el saldo disponible para absorber pérdidas es:
+E2-P132 | estilo=(sin estilo) | Saldo = I + qP0 - M
+E2-P133 | estilo=(sin estilo) | El mantenimiento se calcula como cantidad × mark price × tasa de mantenimiento, menos la deducción del tramo correspondiente. La tasa m y la deducción A se toman de las reglas históricas de Binance. El precio que iguala ese mínimo con el saldo anterior es:
+E2-P134 | estilo=(sin estilo) | Pliq = I + q P0 + Aq1 + m
+E2-P135 | estilo=(sin estilo) | La distancia a liquidación se calcula respecto del mark price y se actualiza cuando cambian la cantidad, la garantía, el funding, el precio o las reglas aplicables.
+E2-P136 | estilo=(sin estilo) | Las salidas preventivas por garantía insuficiente siguen los umbrales establecidos en la sección 7.4. Si el saldo ya no cubre el mantenimiento, se registra una liquidación forzosa.
+E2-P137 | estilo=(sin estilo) | En la simulación, la liquidación cierra todo el perpetuo con el criterio de precio definido y aplica el cargo histórico correspondiente. El remanente de garantía vuelve a Futures y luego se vende el spot.
+E2-P138 | estilo=(sin estilo) | El backtest simplifica el funcionamiento del exchange ya que simula liquidaciones totales y omite las liquidaciones parciales y las reducciones automáticas de posiciones. Los controles basados en el mark price al cierre de cada minuto pueden pasar por alto variaciones de precio dentro de ese minuto. Si faltan reglas históricas indispensables, no se abren nuevas posiciones. Si ya existe una posición abierta, el backtest se considera incompleto y debe repetirse una vez corregida la información.
+E2-P139 | estilo=Heading2 | 7.7. Funding, resultado y costos
+E2-P140 | estilo=(sin estilo) | En cada evento, el funding en USDT se calcula como cantidad del perpetuo × mark price × tasa final. Para un tramo sin cambios de cantidad, el resultado neto se descompone así:
+E2-P141 | estilo=(sin estilo) | Resultado = Funding + qS ΔS - qF ΔF - Costos
+E2-P142 | estilo=(sin estilo) | qS y qF son las cantidades comprada en spot y vendida en perpetuos. Δ significa precio final menos inicial. El signo negativo del perpetuo refleja que una suba de su precio perjudica a la posición corta.
+E2-P143 | estilo=(sin estilo) | El resultado por precios depende de cómo cambia la diferencia entre el precio del perpetuo y el del spot. Esta diferencia se mide en USDT por unidad del activo, mientras que para decidir la entrada se utiliza el basis porcentual. Cuando ambas posiciones tienen la misma cantidad, una ampliación de esa diferencia genera una pérdida y una reducción genera una ganancia, antes de funding y costos. Si las cantidades son distintas, el resultado se calcula por separado para cada posición.
+E2-P144 | estilo=(sin estilo) | Los costos incluyen comisiones y cargos, aplicados según su vigencia histórica. La comisión de compra spot reduce las unidades del activo y se valúa al precio de ejecución; las demás comisiones se pagan en USDT. Cada comisión se contabiliza una sola vez. Se supone un deslizamiento adverso del 0,01% por orden, incorporado en los precios ejecutados y sin descontarlo nuevamente como costo separado. A modo ilustrativo, con comisiones del 0,10% por orden spot y del 0,05% por orden de perpetuos, el costo total aproximado es del 0,34% por ciclo completo de cuatro órdenes, dos de spot y dos de perpetuos. El costo estimado para decidir cada entrada se calculará con las tarifas conocidas en ese momento y el deslizamiento supuesto.
+E2-P145 | estilo=Heading2 | 7.8. Estrategias de comparación
+E2-P146 | estilo=Heading2 | El comparador principal será un carry permanente sin filtro de funding. Abrirá posiciones cuando se cumplan las demás condiciones de entrada y las renovará cada 168 horas, independientemente del funding esperado, siempre que los datos sean válidos y no corresponda una salida por riesgo.
+E2-P147 | estilo=Heading2 | Conservará el filtro de basis para ingresar y utilizará los mismos activos, momentos de decisión, reglas de tamaño, rebalanceo y ejecución, controles de riesgo y supuestos de costos que la estrategia condicional. Ambas carteras partirán de 10.000 USDT y el efectivo no invertido no generará rendimiento.
+E2-P148 | estilo=Heading2 | 7.9. Implementación prevista en NautilusTrader
+E2-P149 | estilo=(sin estilo) | La implementación utilizará Python 3.14 y NautilusTrader por su simulación mediante eventos, adecuada para representar la secuencia de órdenes, los vencimientos y los pagos de funding. Pandas organizará las series, NumPy realizará los cálculos y Matplotlib mostrará los resultados. Se conservarán las versiones de código, datos y librerías para asegurar reproducibilidad.
+E2-P150 | estilo=(sin estilo) | Se incorporará un registro propio para garantías y funding, evitando duplicar pagos que pudiera generar el motor. Cada evento se reconocerá una sola vez por activo y horario efectivo.
+E2-P151 | estilo=(sin estilo) | Ante eventos simultáneos, el orden será: actualizar datos y reglas; registrar funding; controlar liquidación e insolvencia; atender riesgos y vencimientos; decidir renovaciones y entradas; y ejecutar órdenes previamente enviadas.
+E2-P152 | estilo=(sin estilo) | Cada activo tendrá un estado explícito para aplicar las reglas de entrada, permanencia y salida de la sección 7.4. El patrimonio se valuará diariamente con el último precio spot y mark price disponibles; al final de la muestra no se simulará un cierre inexistente.
+E2-P153 | estilo=Heading1 | 8. Evaluación prevista
+E2-P154 | estilo=(sin estilo) | La evaluación será descriptiva y los parámetros se fijarán antes de implementar. Se informarán la cobertura de datos, los intentos fallidos, las pérdidas y los períodos sin inversión.
+E2-P155 | estilo=Heading2 | 8.1. H1: ¿el pronóstico agrega información?
+E2-P156 | estilo=(sin estilo) | H1 comparará el pronóstico semanal con la suma del funding efectivamente liquidado en las 168 horas siguientes. Se evaluará la tasa acumulada, ya que el cobro en USDT también depende del precio y de la cantidad mantenida.
+E2-P157 | estilo=(sin estilo) | Como referencia se utilizará un modelo no-change, que proyecta durante 168 horas la última tasa observada por hora. Para ambos métodos se calculará el error absoluto medio (MAE), con igual peso para BTC y ETH.
+E2-P158 | estilo=(sin estilo) | Un MAE menor para la EWMA será evidencia descriptiva favorable a H1; uno mayor será contrario. Esta comparación evalúa capacidad predictiva, no rentabilidad.
+E2-P159 | estilo=Heading2 | 8.2. H2: ¿mejora el resultado económico?
+E2-P160 | estilo=(sin estilo) | H2 comparará el retorno neto y el Sharpe del carry condicional, que utiliza el funding esperado para decidir entradas y renovaciones, con los del carry permanente definido en la sección 7.8. Se utilizarán rendimientos diarios, incluidos los días inactivos. El Sharpe se anualizará con la raíz cuadrada de 365 y una tasa libre de riesgo de cero.
+E2-P161 | estilo=(sin estilo) | También se calcularán la rentabilidad anual compuesta, la caída máxima, los costos, el tiempo invertido y las fallas de ejecución. Habrá evidencia descriptiva favorable a H2 si la rentabilidad anual compuesta del carry condicional es positiva y su Sharpe supera al del comparador.
+E2-P162 | estilo=Heading2 | 8.3. H3: ¿se redujo la oportunidad desde 2024?
+E2-P163 | estilo=(sin estilo) | H3 comparará el período 2022-2023 con el comprendido entre el 1 de enero de 2024 y el 31 de agosto de 2026, sin reiniciar las carteras. En cada minuto válido se verificará el cumplimiento de los filtros de funding, basis y operatividad definidos en la sección 7.4.
+E2-P164 | estilo=(sin estilo) | Para cada activo se construirá un indicador diario de oportunidad. En los minutos que cumplan los filtros se tomará el pronóstico semanal de funding; en los minutos con datos válidos que no los cumplan se asignará cero. Luego se promediarán los valores de todos los minutos del día y se combinarán los resultados de BTC y ETH con igual peso.
+E2-P165 | estilo=(sin estilo) | Un día completo sin minutos elegibles tendrá un indicador igual a cero. Los días con datos incompletos en cualquiera de los dos activos se excluirán del cálculo. El indicador considera tanto el funding esperado como el tiempo durante el cual se cumplen los filtros.
+E2-P166 | estilo=(sin estilo) | Se compararán el promedio del indicador diario y la rentabilidad anual compuesta del carry condicional, calculada para cada subperíodo. Si ambos disminuyen, habrá evidencia descriptiva favorable a H3; si ambos aumentan, será contraria; en los demás casos, será mixta. La comparación no identifica por sí sola la causa del cambio.
+E2-P167 | estilo=(sin estilo) | <VACÍO>
+E2-P168 | estilo=Heading1 | Referencias
+E2-P169 | estilo=ReferenceEntry | Ackerer, D., Hugonnier, J. y Jermann, U. (2026). Perpetual Futures Pricing. Mathematical Finance, 36(3), 481-499. Artículo | enlaces=https://doi.org/10.1111/mafi.70018
+E2-P170 | estilo=ReferenceEntry | Borri, N., Liu, Y., Tsyvinski, A. y Wu, X. (2026). Cryptocurrency as an Investable Asset Class: Coming of Age. Annual Review of Financial Economics, 18, en prensa. Manuscrito | enlaces=https://arxiv.org/abs/2510.14435
+E2-P171 | estilo=ReferenceEntry | Christin, N., Routledge, B. R., Soska, K. y Zetlin-Jones, A. (2023). The Crypto Carry Trade. Working paper. Manuscrito | enlaces=https://gerbil.life/papers/CarryTrade.v1.2.pdf
+E2-P172 | estilo=ReferenceEntry | Inan, E. (2025). Predictability of Funding Rates. SSRN 5576424. Registro | enlaces=https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5576424
+E2-P173 | estilo=ReferenceEntry | Inan, E. (2025). Predictability of funding rates. CFE-CMStatistics, resumen A1301. Resumen consultado | enlaces=https://www.cmstatistics.org/RegistrationsV2/CFECMStatistics2025/viewSubmission.php?in=1301&token=o1n4r30pp8r239sq1o0os653591o7nn1
+E2-P174 | estilo=ReferenceEntry | Schmeling, M., Schrimpf, A. y Todorov, K. (2026). Crypto Carry. Management Science, publicación anticipada. Artículo | enlaces=https://doi.org/10.1287/mnsc.2024.05069
+E2-P175 | estilo=ReferenceEntry | Shleifer, A. y Vishny, R. W. (1997). The Limits of Arbitrage. The Journal of Finance, 52(1), 35-55. Artículo | enlaces=https://doi.org/10.1111/j.1540-6261.1997.tb03807.x
+E2-P176 | estilo=ReferenceEntry | Binance. Archivo público y esquemas de timestamps. Binance Public Data | enlaces=https://github.com/binance/binance-public-data
+E2-P177 | estilo=ReferenceEntry | Binance Developers. Documentación REST y streams de Spot y Futures USD-M. Datos de mercado | enlaces=https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/rest-api/market-data
+E2-P178 | estilo=ReferenceEntry | Binance. Introducción al funding; periodicidad y liquidación. Funding | enlaces=https://www.binance.com/en/support/faq/detail/360033525031
+E2-P179 | estilo=ReferenceEntry | Binance. Available Balance, Margin Balance and Total Balance in Binance Futures. Saldos | enlaces=https://www.binance.com/pt/blog/futures/457299340443288694
+E2-P180 | estilo=ReferenceEntry | Binance. Cost Required to Open a Position in Perpetual Futures Contracts. Margen inicial y open loss | enlaces=https://www.binance.com/en/support/faq/detail/87fa7ee33b574f7084d42bd2ce2e463b
+E2-P181 | estilo=ReferenceEntry | Binance. Liquidation Price of USD-M Futures Contracts. Precio de liquidación | enlaces=https://www.binance.com/en-AE/support/faq/detail/b3c689c1f50a44cabb3a84e663b81d93
+E2-P182 | estilo=ReferenceEntry | Binance. Futures Liquidation Protocols. Protocolo de liquidación | enlaces=https://www.binance.com/en/support/faq/detail/360033525271
+E2-P183 | estilo=ReferenceEntry | Binance. Futures Fee Structure and Fee Calculations. Comisiones | enlaces=https://www.binance.com/en/support/faq/detail/360033544231
+E2-P184 | estilo=ReferenceEntry | NautilusTrader. Binance integration. Integración | enlaces=https://nautilustrader.io/docs/latest/integrations/binance/
+E2-P185 | estilo=ReferenceEntry | NautilusTrader. Backtest accounts and margin: funding. Contabilidad | enlaces=https://nautilustrader.io/docs/latest/concepts/backtesting/accounts-and-margin/

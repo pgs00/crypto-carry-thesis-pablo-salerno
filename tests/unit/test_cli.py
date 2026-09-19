@@ -1,6 +1,6 @@
 import json
 
-from crypto_carry.cli import main
+from crypto_carry.cli import main, parser
 from crypto_carry.config import Config
 from crypto_carry.robustness import scenario_configs
 
@@ -84,3 +84,58 @@ def test_short_range_does_not_fail_because_of_unrequested_future_start_scenarios
     scenarios = scenario_configs(base)
     assert any(s.name == "cost-2" for s in scenarios)
     assert not any(s.dimension == "start" for s in scenarios)
+
+
+def test_execution_revision_cli_exposes_both_window_configs():
+    args = parser().parse_args(
+        ["execution-revision", "--early-config", "early.toml", "--late-config", "late.toml"]
+    )
+    assert args.early_config == "early.toml"
+    assert args.late_config == "late.toml"
+    assert not args.sample
+
+
+def test_cli_report_rebuilds_revision_without_simulating(tmp_path, monkeypatch, capsys):
+    from crypto_carry import execution_revision as revision
+
+    source = tmp_path / "outputs/revision_source"
+    source.mkdir(parents=True)
+    (source / "revision_manifest.json").write_text("{}")
+    target = tmp_path / "outputs/revision_new"
+    monkeypatch.setattr(revision, "rebuild_execution_revision", lambda root, path: target)
+    monkeypatch.setattr(
+        revision, "verify_execution_revision", lambda path: {"valid": True, "status": "complete"}
+    )
+
+    assert main(["--root", str(tmp_path), "report", "--run-id", source.name]) == 0
+    assert json.loads(capsys.readouterr().out)["report"] == str(
+        target / "execution_revision_report.md"
+    )
+
+
+def test_minute_download_command_never_routes_to_trade_downloader(tmp_path, monkeypatch, capsys):
+    from crypto_carry import cli
+    from crypto_carry.data import minute_download
+
+    cfg = Config(
+        analysis_mode="prescribed_research",
+        fee_profile="prescribed_fixed_no_discounts",
+        execution_model="next_minute_vwap",
+    )
+    path = tmp_path / "minute.toml"
+    path.write_text(cfg.to_toml(), encoding="utf-8")
+    called = []
+
+    def minute(config, root, **kwargs):
+        called.append(config.execution_model)
+        return {"entries": [], "bytes_used": 0}
+
+    def forbidden(*args, **kwargs):
+        raise AssertionError("Trade downloader must never run for a minute policy")
+
+    monkeypatch.setattr(minute_download, "download_minutes", minute)
+    monkeypatch.setattr(cli, "download", forbidden)
+    assert (
+        main(["--root", str(tmp_path), "download", "--config", str(path), "--scope", "full"]) == 0
+    )
+    assert called == ["next_minute_vwap"]

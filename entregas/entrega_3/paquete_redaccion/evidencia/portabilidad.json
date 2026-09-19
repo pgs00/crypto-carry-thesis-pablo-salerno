@@ -1,0 +1,92 @@
+{
+  "carpeta_aislada": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.superpowers\\entrega3\\portabilidad_20260919_154623",
+  "python_isolated": true,
+  "comandos": [
+    {
+      "script": "reproducir.py",
+      "exit_code": 0,
+      "stdout": "{\n  \"carteras\": 4,\n  \"filas_diarias\": 1460,\n  \"comprobaciones\": 81,\n  \"cifras_trazadas\": 1229,\n  \"fracciones_episodio\": [\n    \"0.487651700901503490010949711566999854490405658814409658558080\",\n    \"0.218194157348230699708004062670993900110681106824045415380003\"\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "script": "diccionario.py",
+      "exit_code": 0,
+      "stdout": "Dictionary: 194 fields\n",
+      "stderr": ""
+    }
+  ],
+  "archivos_identicos": [
+    {
+      "archivo": "datos/equity_diaria.csv",
+      "sha256": "de1f258c372a0f6bdc8a33c2d782fa5221d1fc60d6dae23beaa4c902145f132e"
+    },
+    {
+      "archivo": "diccionario_campos.csv",
+      "sha256": "f792a78c8ca2c583f06801a7a6b2018ee2d1a8112977420eec8818e52e7368f5"
+    },
+    {
+      "archivo": "figuras/equity_comparativa.png",
+      "sha256": "26cdedf22b90e0a40eceb05495a8d1f1bc42b0feec207d922d24c05998351be2"
+    },
+    {
+      "archivo": "figuras/equity_comparativa.svg",
+      "sha256": "bd2a36b5ca45d402ed0d4dcaa99b13eb878f0fc67d1a8b7c138c85b74fc0b217"
+    },
+    {
+      "archivo": "figuras/pnl_comparativo.png",
+      "sha256": "c82f4f81c93bb27a7d2f48a8806341136525720cc63aa8e4aced031fb5c332d9"
+    },
+    {
+      "archivo": "figuras/pnl_comparativo.svg",
+      "sha256": "531caf35103d4395e4e661a8eb6fb32c2d10ccc085f309b254921634c8ab7802"
+    },
+    {
+      "archivo": "fuentes_de_cifras.csv",
+      "sha256": "f77edbb1927eabe6ea0b56b10a4a3ab268c178d0954770b573a8a273d8efad57"
+    },
+    {
+      "archivo": "tablas/actividad_y_rechazos.csv",
+      "sha256": "d836aa44e09b0bc2129d3d66a03384cac7a8c3a6c9fbf8bd886a43919bdbaa0b"
+    },
+    {
+      "archivo": "tablas/anexo_variantes_ejecucion.csv",
+      "sha256": "ca7f37294eebe1d9c7205f0d794701aacac0681d0ba6a4c1030c91714d2f1f37"
+    },
+    {
+      "archivo": "tablas/basis_audit_summary.csv",
+      "sha256": "abec08ef890195b619773aa742f1e005f063a13f3993249b40a8c77f214ee213"
+    },
+    {
+      "archivo": "tablas/cobertura_funding.csv",
+      "sha256": "02076885b24b77f1def4167d8b035bb9b224af729e0827f49317a2d1b01a4886"
+    },
+    {
+      "archivo": "tablas/episodio_2023_03_24.csv",
+      "sha256": "6ab974e3280e9658a3fadbdff4ca73c3a37748d4e6157004db78ff93d310bbbd"
+    },
+    {
+      "archivo": "tablas/hipotesis.csv",
+      "sha256": "66808cc37b455c25fe281beb68c34eef472787c4244df3dfe5237156a4f2a394"
+    },
+    {
+      "archivo": "tablas/parametros_vigentes.csv",
+      "sha256": "a37ed3104a8f7200a03cc2f14762149b49c8abe8752294e00be367ae47198295"
+    },
+    {
+      "archivo": "tablas/pnl_componentes.csv",
+      "sha256": "d95420cf88751e55e2d0bf90e647272e989fff00b6a7f7e7639405636a14c68d"
+    },
+    {
+      "archivo": "tablas/resultados_principales.csv",
+      "sha256": "b37ac8c7f8d4ff2e0d8a2dad17dd8e1d659c68bfc09c780a54a62f20652fa10d"
+    },
+    {
+      "archivo": "tablas/versiones.csv",
+      "sha256": "d532a22354c767167334d1c45abd75efdb6d3c0e82c6329b5cc180f614bcebc8"
+    },
+    {
+      "archivo": "verificaciones_numericas.csv",
+      "sha256": "5fcde2c5c53a61b0367670a5bb3e7fbf9209b437620ec653c3642ca9815d1b7b"
+    }
+  ]
+}

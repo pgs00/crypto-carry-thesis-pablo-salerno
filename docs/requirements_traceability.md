@@ -1,6 +1,40 @@
 # Trazabilidad de requisitos
 
-Fuente contractual: `sources/Prompt_Codex_Backtesting.md`, secciones indicadas. Las pruebas son offline; fuentes públicas y muestra se verifican aparte. `complete` en una demo no certifica cobertura histórica.
+Fuente original: `sources/Prompt_Codex_Backtesting.md`, secciones indicadas. Las decisiones posteriores del usuario fijan el alcance vigente en el [protocolo](escenario_investigacion.md): dos ventanas anuales independientes, ejecución por minuto y reglas prescritas. Las pruebas son offline; fuentes públicas y muestra se verifican aparte. `complete` en una demo no certifica cobertura histórica.
+
+## Cambios del estudio por minuto
+
+La revisión vigente es [Prompt_Codex_Ajuste_Backtesting_1m.md](sources/Prompt_Codex_Ajuste_Backtesting_1m.md).
+
+| Requisito de la revisión | Implementación | Pruebas |
+|---|---|---|
+| OHLC y volúmenes completos, UTC y cobertura | MinuteBar, normalize, replay, validate | test_minute_data, test_minute_validation, test_replay_window |
+| Ventana causal, VWAP, capacidad y parciales | execution, strategy, nautilus_adapter | test_minute_window, test_next_minute_vwap, test_native_adapter |
+| Sizing total, fee base, presupuesto y colateral propio | portfolio, strategy | test_joint_sizing, test_revision_review |
+| Todos los filtros y renovaciones sin duplicar H1 | diagnostics, reporting | test_diagnostics, test_minute_reporting |
+| Matriz, exposición sin polvo, ciclos e hipótesis | execution_revision, CLI | test_execution_revision, test_cli |
+
+La tabla siguiente corresponde a la referencia anterior; el contraste con trades
+queda conservado como investigación previa y no es una dependencia nueva.
+
+| Requisito vigente | Implementación | Evidencia | Salida |
+|---|---|---|---|
+| Dos ventanas con capital reiniciado | Dos TOML `download_minutes_*`, config.py | test_minute_reporting; manifiestos anuales | Informe de cada ventana y comparación conjunta |
+| Adquisición pública acotada en D: | data/minute_download.py | test_minute_download; preparation.json | ZIP, respuestas y checksums bajo data/minutes |
+| Precio de apertura separado del volumen cerrado | models.py, events.py, data/normalize.py | test_minute_data; test_minute_execution | minute_prices y minute_volumes en Parquet |
+| Fill posterior al envío, timeout de 120 s y checkpoints | execution.py, strategy.py, serialization.py | test_minute_execution | Referencia de vela, tiempos y órdenes nativas conciliadas |
+| Cobertura anual, suplementos y cierre documentado | data/validate.py, market_calendar.py, repair_sources.py | test_minute_validation; annual-data-validation.json | Fuentes originales y auditoría de cobertura |
+| Modelo contrastado con trades reales | compare_tick_minute.py | tick-minute-comparison.json | Muestra de diez minutos; límite de representatividad explícito |
+| Economía anual reconstruida independientemente | verify_annual_economics.py | annual-economic-audit.json | Cuatro carteras y 106 fills auditados |
+| Comparación sin unir carteras entre años omitidos | build_study_report.py | Baselines y escenarios verificados por hashes | outputs/study_*/report.md y summary.json |
+
+## Motor y especificación original
+
+Los requisitos siguientes conservan su implementación para el motor de trades
+y las partes compartidas. VWAP de cinco segundos requiere trades reales y no
+se aplica a las barras anuales; los siete escenarios priorizados del estudio
+por minuto están enumerados en el protocolo. Las demás dimensiones del motor
+no se presentan como sensibilidades anuales ya evaluadas.
 
 | Requisito | Fuente | Implementación | Evidencia automatizada | Salida |
 |---|---|---|---|---|
@@ -36,4 +70,4 @@ Fuente contractual: `sources/Prompt_Codex_Backtesting.md`, secciones indicadas. 
 | Manifiestos, estados, no overwrite, reportes desde tablas | §12 | reporting.py | test_reporting | outputs/run_id/* |
 | CLI, instalación y demo | §15 | cli.py, __main__.py | test_cli, test_demo + comandos registrados | README, progress |
 
-La lista de pruebas exacta y completa se obtiene con `uv run pytest --collect-only -q`. Los informes de tareas conservan evidencia intermedia; `progress.md` identifica la verificación final y las limitaciones vigentes.
+La lista de pruebas exacta y completa se obtiene con `uv run pytest --collect-only -q`. [Avance y evidencia](progress.md) identifica la verificación final y las limitaciones vigentes; `data/research/` conserva las auditorías reproducibles.

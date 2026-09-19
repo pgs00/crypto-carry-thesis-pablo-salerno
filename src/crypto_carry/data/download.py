@@ -119,6 +119,15 @@ def download_verified_archive(
 
     destination.parent.mkdir(parents=True, exist_ok=True)
     part = destination.with_suffix(destination.suffix + ".part")
+    # A process can stop after the last byte but before validation/rename. A Range
+    # request at EOF would then return 416 forever; verify that completed part first.
+    if part.exists() and _sha256(part) == expected_sha256:
+        with zipfile.ZipFile(part) as archive:
+            broken = archive.testzip()
+        if broken is not None:
+            raise ValueError(f"ZIP integrity failure in {broken}")
+        part.replace(destination)
+        return {"status": "cached", "sha256": expected_sha256, "bytes": destination.stat().st_size}
     offset = part.stat().st_size if part.exists() else 0
     error: Exception | None = None
     for attempt in range(retries):

@@ -8,16 +8,47 @@ import io
 import json
 import zipfile
 from collections.abc import Iterable, Iterator
-from decimal import Decimal
+from decimal import Decimal, InvalidOperation
+from heapq import merge
 from itertools import chain
 from pathlib import Path
 
 import pyarrow as pa
 import pyarrow.parquet as pq
 
-from ..config import HOUR, SECOND, Config
+from ..config import HOUR, SECOND, Config, iso, timestamp
 from ..models import Funding
-from .download import DataBudgetExceeded, _data_bytes
+from .download import DataBudgetExceeded, _checksum_value, _data_bytes
+from .market_calendar import closed_minute_count, closure_for_minute
+
+MINUTE = 60 * SECOND
+VWAP_OHLC_REL_TOLERANCE = Decimal("1e-8")
+_KLINE_HEADER = (
+    "open_time",
+    "open",
+    "high",
+    "low",
+    "close",
+    "volume",
+    "close_time",
+    "quote_volume",
+    "count",
+    "taker_buy_volume",
+    "taker_buy_quote_volume",
+    "ignore",
+)
+_FUNDING_SCHEMA = pa.schema(
+    [
+        pa.field("symbol", pa.string()),
+        pa.field("funding_time", pa.int64()),
+        pa.field("available_at", pa.int64()),
+        pa.field("funding_rate", pa.string()),
+        pa.field("interval_hours", pa.string()),
+        pa.field("settlement_mark_price", pa.string()),
+        pa.field("source_file", pa.string()),
+        pa.field("interval_verified", pa.bool_()),
+    ]
+)
 
 
 def source_timestamp_ns(value: int | str, market: str, source_date: str) -> int:
@@ -126,6 +157,147 @@ def _archive_date(path: Path) -> str:
     return path.stem[-10:]
 
 
+def _kline_records(
+    path: Path,
+    symbol: str,
+    market: str,
+    *,
+    timestamp_unit: str,
+    source_start: str,
+    stats: dict,
+) -> Iterator[tuple[dict | None, dict, dict]]:
+    """Yield causal open-price and closed-volume records from Binance 1m klines."""
+    expected_unit = "us" if market == "spot" and source_start[:4] >= "2025" else "ms"
+    if timestamp_unit != expected_unit:
+        raise ValueError(
+            f"Incorrect timestamp unit for {market} {source_start[:7]}: "
+            f"expected {expected_unit}, got {timestamp_unit}"
+        )
+    unit_ns = 1_000 if timestamp_unit == "us" else 1_000_000
+    minute_units = 60_000_000 if timestamp_unit == "us" else 60_000
+    rows = _csv_rows(path)
+    first = next(rows, None)
+    stats.update(
+        minute_coverage_complete=True,
+        source_row_count=0,
+        documented_missing_minutes=0,
+        first_open_time=None,
+        last_open_time=None,
+    )
+    if first is None:
+        stats["minute_coverage_complete"] = False
+        return
+    has_header = _has_header(first)
+    iterator = rows if has_header else chain([first], rows)
+    if len(first) != 12:
+        raise ValueError(f"Expected Binance 12-field kline schema in {path}")
+    if has_header:
+        normalized_header = tuple(value.strip().lower().replace(" ", "_") for value in first)
+        if normalized_header != _KLINE_HEADER:
+            raise ValueError(f"Expected Binance 12-field kline header in {path}")
+    previous_open: int | None = None
+    for values in iterator:
+        if len(values) != 12:
+            raise ValueError(f"Expected Binance 12-field kline schema in {path}")
+        try:
+            open_raw = int(values[0])
+            close_raw = int(values[6])
+            prices = tuple(Decimal(values[index]) for index in (1, 2, 3, 4))
+            quantity = Decimal(values[5])
+            quote_quantity = Decimal(values[7])
+            trade_count = int(values[8])
+        except (InvalidOperation, TypeError, ValueError) as exc:
+            raise ValueError(f"Malformed kline value in {path}") from exc
+        open_price, high, low, close_price = prices
+        if any(not value.is_finite() or value <= 0 for value in prices):
+            raise ValueError(f"Kline requires finite positive OHLC in {path}")
+        if not low <= open_price <= high or not low <= close_price <= high or low > high:
+            raise ValueError(f"Invalid OHLC ordering in {path}")
+        if not quantity.is_finite() or quantity < 0:
+            raise ValueError(f"Kline requires non-negative volume in {path}")
+        if not quote_quantity.is_finite() or quote_quantity < 0:
+            raise ValueError(f"Kline requires non-negative quote volume in {path}")
+        if trade_count < 0:
+            raise ValueError(f"Kline requires non-negative trade count in {path}")
+        if trade_count == 0 and quantity != 0:
+            raise ValueError(f"Kline zero trades require zero volume in {path}")
+        if quantity == 0 and quote_quantity != 0:
+            raise ValueError(f"Kline base and quote volumes must both be zero in {path}")
+        if quantity > 0 and quote_quantity <= 0:
+            raise ValueError(f"Kline positive base volume requires positive quote volume in {path}")
+        if quantity > 0:
+            vwap = quote_quantity / quantity
+            tolerance = max(abs(low), abs(high), Decimal(1)) * VWAP_OHLC_REL_TOLERANCE
+            if not low - tolerance <= vwap <= high + tolerance:
+                raise ValueError(f"Kline VWAP must lie within OHLC tolerance in {path}")
+        open_ns = open_raw * unit_ns
+        closure = closure_for_minute(symbol, market, open_ns)
+        if closure is not None and trade_count > 0:
+            raise ValueError(f"Kline has positive trades during documented closure in {path}")
+        normal_close = open_raw + minute_units - 1
+        early_closed_zero = (
+            closure is not None
+            and trade_count == 0
+            and quantity == 0
+            and open_raw <= close_raw < normal_close
+        )
+        if open_raw % minute_units or (close_raw != normal_close and not early_closed_zero):
+            raise ValueError(f"Kline requires an aligned exact one-minute interval in {path}")
+        if previous_open is not None:
+            if open_raw <= previous_open:
+                raise ValueError(f"Klines must be strictly chronological and unique in {path}")
+            if open_raw != previous_open + minute_units:
+                missing = (open_raw - previous_open) // minute_units - 1
+                lower = (previous_open + minute_units) * unit_ns
+                documented = closed_minute_count(symbol, market, lower, open_ns)
+                stats["documented_missing_minutes"] += documented
+                if documented != missing:
+                    stats["minute_coverage_complete"] = False
+        close_ns = close_raw * unit_ns
+        price = None
+        if trade_count > 0:
+            price = {
+                "symbol": symbol,
+                "market": market,
+                "reference_id": f"bar:{symbol}:{market}:{open_ns}",
+                "event_time": open_ns,
+                "available_at": open_ns,
+                "price": values[1],
+                "source_file": path.name,
+            }
+        volume = {
+            "symbol": symbol,
+            "market": market,
+            "open_time": open_ns,
+            "close_time": close_ns,
+            "available_at": close_ns + unit_ns,
+            "quantity": values[5],
+            "trade_count": trade_count,
+            "source_file": path.name,
+        }
+        bar = {
+            "symbol": symbol,
+            "market": market,
+            "open_time": open_ns,
+            "end_time": open_ns + MINUTE,
+            "available_at": open_ns + MINUTE,
+            "open": values[1],
+            "high": values[2],
+            "low": values[3],
+            "close": values[4],
+            "base_volume": values[5],
+            "quote_volume": values[7],
+            "trade_count": trade_count,
+            "source_file": path.name,
+        }
+        if stats["first_open_time"] is None:
+            stats["first_open_time"] = open_ns
+        stats["last_open_time"] = open_ns
+        stats["source_row_count"] += 1
+        previous_open = open_raw
+        yield price, volume, bar
+
+
 def _trade_rows(path: Path, symbol: str, market: str, stats: dict) -> Iterator[dict]:
     rows = _csv_rows(path)
     first = next(rows, None)
@@ -202,9 +374,15 @@ def _mark_rows(path: Path, symbol: str, stats: dict) -> Iterator[dict]:
         iterator = chain([first], rows)
     names = {name.strip().lower().replace(" ", "_"): index for index, name in enumerate(header)}
     previous_open: int | None = None
-    count = 0
-    stats["minute_coverage_complete"] = True
+    stats.update(
+        minute_coverage_complete=True,
+        source_row_count=0,
+        first_open_time=None,
+        last_open_time=None,
+    )
     for values in iterator:
+        if len(values) != 12:
+            raise ValueError(f"Expected Binance 12-field mark kline schema in {path}")
         open_ms = int(values[names["open_time"]])
         close_ms = int(values[names["close_time"]])
         record = {
@@ -218,15 +396,73 @@ def _mark_rows(path: Path, symbol: str, stats: dict) -> Iterator[dict]:
             "close": values[names["close"]],
             "source_file": path.name,
         }
-        if any(Decimal(record[key]) <= 0 for key in ("open", "high", "low", "close")):
-            raise ValueError(f"Non-positive mark value in {path}")
-        if previous_open is not None and open_ms != previous_open + 60_000:
-            stats["minute_coverage_complete"] = False
+        prices = tuple(Decimal(record[key]) for key in ("open", "high", "low", "close"))
+        if any(not value.is_finite() or value <= 0 for value in prices):
+            raise ValueError(f"Non-positive or non-finite mark value in {path}")
+        open_price, high, low, close_price = prices
+        if not low <= open_price <= high or not low <= close_price <= high or low > high:
+            raise ValueError(f"Invalid mark OHLC ordering in {path}")
+        if open_ms % 60_000 or close_ms != open_ms + 59_999:
+            raise ValueError(f"Mark kline requires an aligned exact one-minute interval in {path}")
+        if previous_open is not None:
+            if open_ms <= previous_open:
+                raise ValueError(f"Mark klines must be strictly chronological and unique in {path}")
+            if open_ms != previous_open + 60_000:
+                stats["minute_coverage_complete"] = False
+        if stats["first_open_time"] is None:
+            stats["first_open_time"] = record["open_time"]
+        stats["last_open_time"] = record["open_time"]
         previous_open = open_ms
-        count += 1
+        stats["source_row_count"] += 1
         yield record
-    if count != 1440:
+    if stats["source_row_count"] == 0:
         stats["minute_coverage_complete"] = False
+
+
+def _merge_mark_rows(paths: list[Path], symbol: str, stats: dict) -> Iterator[dict]:
+    """Merge observed mark sources, preferring the monthly row on identical overlap."""
+    iterators = [_mark_rows(path, symbol, {}) for path in paths]
+    rows = merge(*iterators, key=lambda row: int(row["open_time"]))
+    stats.update(
+        duplicate_count=0,
+        conflict_count=0,
+        minute_coverage_complete=True,
+        source_row_count=0,
+        first_open_time=None,
+        last_open_time=None,
+    )
+    previous: dict | None = None
+    for record in rows:
+        if previous is not None and record["open_time"] == previous["open_time"]:
+            same_observation = (
+                record["symbol"] == previous["symbol"]
+                and all(
+                    int(record[field]) == int(previous[field])
+                    for field in ("open_time", "close_time", "available_at")
+                )
+                and all(
+                    Decimal(record[field]) == Decimal(previous[field])
+                    for field in ("open", "high", "low", "close")
+                )
+            )
+            if not same_observation:
+                stats["conflict_count"] += 1
+                raise ValueError(f"Conflicting mark overlap at {record['open_time']}")
+            stats["duplicate_count"] += 1
+            continue
+        if previous is not None:
+            if int(record["open_time"]) != int(previous["open_time"]) + MINUTE:
+                stats["minute_coverage_complete"] = False
+            yield previous
+        else:
+            stats["first_open_time"] = int(record["open_time"])
+        previous = record
+        stats["last_open_time"] = int(record["open_time"])
+        stats["source_row_count"] += 1
+    if previous is None:
+        stats["minute_coverage_complete"] = False
+    else:
+        yield previous
 
 
 def _funding_calendar_times(path: Path) -> dict[int, tuple[Decimal, Decimal]]:
@@ -267,6 +503,47 @@ def _hash(path: Path) -> str:
     return digest.hexdigest()
 
 
+def _manifest_time_ns(value: int | str) -> int:
+    return timestamp(value) if isinstance(value, str) else int(value)
+
+
+def _verified_mark_supplement(root: Path, parent: dict, supplement: dict) -> Path:
+    """Bind an immutable daily mark archive to its declared monthly parent."""
+    if supplement.get("status") not in {"cached", "downloaded"}:
+        raise ValueError("Supplement status is not successful")
+    if supplement.get("dataset") != "marks":
+        raise ValueError("Supplement dataset mismatch")
+    if supplement.get("symbol") != parent["symbol"]:
+        raise ValueError("Supplement symbol mismatch")
+    if supplement.get("market") != parent["market"]:
+        raise ValueError("Supplement market mismatch")
+    if supplement.get("timestamp_unit") != "ms":
+        raise ValueError("Supplement timestamp unit mismatch")
+    parent_start = _manifest_time_ns(parent["start"])
+    parent_end = _manifest_time_ns(parent["end"])
+    supplement_start = _manifest_time_ns(supplement["start"])
+    supplement_end = _manifest_time_ns(supplement["end"])
+    if not parent_start <= supplement_start <= supplement_end <= parent_end:
+        raise ValueError("Supplement time bounds escape parent archive")
+
+    path = root / supplement["path"]
+    if _hash(path) != supplement["sha256"]:
+        raise ValueError(f"Supplement raw hash mismatch: {supplement['path']}")
+    checksum_path = root / supplement["checksum_path"]
+    checksum_content = checksum_path.read_bytes()
+    if hashlib.sha256(checksum_content).hexdigest() != supplement["checksum_file_sha256"]:
+        raise ValueError(f"Supplement checksum hash mismatch: {supplement['checksum_path']}")
+    checksum_source = supplement.get("checksum_url", supplement["checksum_path"])
+    official_digest = _checksum_value(checksum_content, checksum_source)
+    if official_digest != supplement["sha256"].lower():
+        raise ValueError(f"Official supplement checksum mismatch: {supplement['path']}")
+    fields = checksum_content.decode("ascii", errors="strict").split()
+    listed_name = Path(fields[1].lstrip("*")).name if len(fields) >= 2 else ""
+    if listed_name != path.name:
+        raise ValueError(f"Supplement checksum filename mismatch: {supplement['path']}")
+    return path
+
+
 def _write_partition(
     rows: Iterable[dict],
     destination: Path,
@@ -274,6 +551,7 @@ def _write_partition(
     data_root: Path,
     budget: int,
     chunk_size: int = 100_000,
+    schema: pa.Schema | None = None,
 ) -> list[dict]:
     destination.mkdir(parents=True, exist_ok=True)
     entries = []
@@ -286,7 +564,8 @@ def _write_partition(
         target = destination / f"part-{number:05d}.parquet"
         temporary = destination / f".part-{number:05d}.parquet.tmp"
         buffer = pa.BufferOutputStream()
-        pq.write_table(pa.Table.from_pylist(values), buffer, compression="zstd")
+        table = pa.Table.from_pylist(values, schema=schema)
+        pq.write_table(table, buffer, compression="zstd")
         encoded = buffer.getvalue()
         digest = hashlib.sha256(encoded).hexdigest()
         cached = target.exists() and _hash(target) == digest
@@ -316,9 +595,7 @@ def _write_partition(
                 "rows": len(values),
                 "start": min(_physical_time(row) for row in values),
                 "end": max(_physical_time(row) for row in values),
-                "schema": {
-                    field.name: str(field.type) for field in pa.Table.from_pylist(values).schema
-                },
+                "schema": {field.name: str(field.type) for field in table.schema},
                 "first_trade_id": values[0].get("trade_id"),
                 "last_trade_id": values[-1].get("trade_id"),
             }
@@ -362,6 +639,8 @@ def normalize(config: Config, root: Path) -> dict:
     data_root = root / config.data_dir
     download_path = data_root / "manifests" / "download.json"
     manifest = json.loads(download_path.read_text(encoding="utf-8"))
+    manifest_kind = manifest.get("kind", "trade_market_data")
+    budget_root = root / "data" / "minutes" if manifest_kind == "minute_market_data" else data_root
     successful = [
         entry for entry in manifest["entries"] if entry["status"] in {"cached", "downloaded"}
     ]
@@ -402,6 +681,87 @@ def normalize(config: Config, root: Path) -> dict:
         try:
             if _hash(raw_path) != entry["sha256"]:
                 raise ValueError("Raw input hash mismatch")
+            if dataset == "klines" and manifest_kind == "minute_market_data":
+                source_start = (
+                    entry["start"] if isinstance(entry["start"], str) else iso(int(entry["start"]))
+                )
+                date = source_start[:7]
+                for output_dataset, position in (
+                    ("minute_volumes", 1),
+                    ("minute_prices", 0),
+                    ("minute_bars", 2),
+                ):
+                    output_stats: dict = {"duplicate_count": 0, "conflict_count": 0}
+                    pairs = _kline_records(
+                        raw_path,
+                        symbol,
+                        market,
+                        timestamp_unit=entry["timestamp_unit"],
+                        source_start=source_start,
+                        stats=output_stats,
+                    )
+                    rows = (pair[position] for pair in pairs if pair[position] is not None)
+                    destination = (
+                        data_root
+                        / "processed"
+                        / f"dataset={output_dataset}"
+                        / f"symbol={symbol}"
+                        / f"market={market}"
+                        / f"month={date}"
+                    )
+                    outputs = _write_partition(
+                        rows,
+                        destination,
+                        data_root=budget_root,
+                        budget=config.data_budget_bytes,
+                    )
+                    source_end = (
+                        timestamp(entry["end"])
+                        if isinstance(entry["end"], str)
+                        else int(entry["end"])
+                    )
+                    source_start_ns = timestamp(source_start)
+                    expected_rows = (source_end - source_start_ns) // MINUTE + 1
+                    complete = (
+                        output_stats.get("minute_coverage_complete") is True
+                        and output_stats.get("source_row_count", 0)
+                        + output_stats.get("documented_missing_minutes", 0)
+                        == expected_rows
+                        and output_stats.get("first_open_time") == source_start_ns
+                        and output_stats.get("last_open_time")
+                        == source_start_ns + (expected_rows - 1) * MINUTE
+                    )
+                    for output in outputs:
+                        processed_entries.append(
+                            {
+                                "dataset": output_dataset,
+                                "symbol": symbol,
+                                "market": market,
+                                "date": date,
+                                "path": str(output["path"].relative_to(root)).replace("\\", "/"),
+                                "sha256": output["sha256"],
+                                "bytes": output["bytes"],
+                                "rows": output["rows"],
+                                "start": output["start"],
+                                "end": output["end"],
+                                "schema": output["schema"],
+                                "duplicate_count": 0,
+                                "conflict_count": 0,
+                                "complete": complete,
+                                "minute_coverage_complete": complete,
+                                "source_rows": output_stats.get("source_row_count", 0),
+                                "documented_missing_minutes": output_stats.get(
+                                    "documented_missing_minutes", 0
+                                ),
+                                "source_dataset": "klines",
+                                "source_path": entry["path"],
+                                "source_sha256": entry["sha256"],
+                                "timestamp_unit": entry["timestamp_unit"],
+                                "first_trade_id": None,
+                                "last_trade_id": None,
+                            }
+                        )
+                continue
             if dataset == "trades":
                 date = _archive_date(raw_path)
                 rows = _trade_rows(raw_path, symbol, market, stats)
@@ -414,15 +774,22 @@ def normalize(config: Config, root: Path) -> dict:
                     / f"date={date}"
                 )
             elif dataset == "marks":
-                date = _archive_date(raw_path)
-                rows = _mark_rows(raw_path, symbol, stats)
+                date = (
+                    str(entry["start"])[:7]
+                    if manifest_kind == "minute_market_data"
+                    else _archive_date(raw_path)
+                )
+                mark_paths = [raw_path]
+                for supplement in entry.get("supplements", []):
+                    mark_paths.append(_verified_mark_supplement(root, entry, supplement))
+                rows = _merge_mark_rows(mark_paths, symbol, stats)
                 destination = (
                     data_root
                     / "processed"
                     / "dataset=marks"
                     / f"symbol={symbol}"
                     / "market=futures"
-                    / f"date={date}"
+                    / (f"month={date}" if manifest_kind == "minute_market_data" else f"date={date}")
                 )
             elif dataset == "funding":
                 api_rows = json.loads(raw_path.read_text(encoding="utf-8"))
@@ -463,8 +830,30 @@ def normalize(config: Config, root: Path) -> dict:
             else:
                 continue
             outputs = _write_partition(
-                rows, destination, data_root=data_root, budget=config.data_budget_bytes
+                rows,
+                destination,
+                data_root=budget_root,
+                budget=config.data_budget_bytes,
+                schema=_FUNDING_SCHEMA if dataset == "funding" else None,
             )
+            mark_complete = None
+            if dataset == "marks":
+                source_start_ns = (
+                    timestamp(entry["start"])
+                    if isinstance(entry["start"], str)
+                    else int(entry["start"])
+                )
+                source_end_ns = (
+                    timestamp(entry["end"]) if isinstance(entry["end"], str) else int(entry["end"])
+                )
+                expected_rows = (source_end_ns - source_start_ns) // MINUTE + 1
+                mark_complete = (
+                    stats.get("minute_coverage_complete") is True
+                    and stats.get("source_row_count") == expected_rows
+                    and stats.get("first_open_time") == source_start_ns
+                    and stats.get("last_open_time")
+                    == source_start_ns + (expected_rows - 1) * MINUTE
+                )
             for output_index, output in enumerate(outputs):
                 processed_entries.append(
                     {
@@ -485,11 +874,14 @@ def normalize(config: Config, root: Path) -> dict:
                         "conflict_count": stats.get("conflict_count", 0)
                         if output_index == 0
                         else 0,
-                        "complete": True,
+                        "complete": mark_complete if dataset == "marks" else True,
                         "trade_id_continuous": stats.get("trade_id_continuous")
                         if dataset == "trades"
                         else None,
-                        "minute_coverage_complete": stats.get("minute_coverage_complete")
+                        "minute_coverage_complete": mark_complete if dataset == "marks" else None,
+                        "source_path": entry["path"],
+                        "source_sha256": entry["sha256"],
+                        "source_supplements": entry.get("supplements", [])
                         if dataset == "marks"
                         else None,
                         "funding_calendar_complete": (
@@ -511,6 +903,7 @@ def normalize(config: Config, root: Path) -> dict:
             TypeError,
             UnicodeError,
             ValueError,
+            InvalidOperation,
             zipfile.BadZipFile,
             pa.ArrowException,
         ) as exc:
@@ -518,13 +911,14 @@ def normalize(config: Config, root: Path) -> dict:
 
     result = {
         "version": 1,
+        "kind": manifest_kind,
         "source_manifest_sha256": _hash(download_path),
         "entries": processed_entries,
         "errors": errors,
     }
     output_path = data_root / "manifests" / "processed.json"
     encoded = json.dumps(result, indent=2, sort_keys=True).encode()
-    if _data_bytes(data_root) + len(encoded) > config.data_budget_bytes:
+    if _data_bytes(budget_root) + len(encoded) > config.data_budget_bytes:
         raise DataBudgetExceeded("Processed manifest would exceed data budget")
     temporary = output_path.with_suffix(".json.part")
     temporary.write_bytes(encoded)

@@ -20,6 +20,64 @@ class Trade:
 
 
 @dataclass(frozen=True)
+class MinutePrice:
+    """Bar opening price under an explicit aggregate execution convention."""
+
+    symbol: str
+    market: str
+    reference_id: str
+    event_time: int
+    available_at: int
+    price: Decimal
+    source_file: str = "synthetic"
+
+
+@dataclass(frozen=True)
+class MinuteVolume:
+    """Completed candle volume, available only after the candle closes."""
+
+    symbol: str
+    market: str
+    open_time: int
+    close_time: int
+    available_at: int
+    quantity: Decimal
+    trade_count: int
+    source_file: str = "synthetic"
+
+
+@dataclass(frozen=True)
+class MinuteBar:
+    """A complete one-minute interval, observable only at its exclusive end."""
+
+    symbol: str
+    market: str
+    open_time: int
+    end_time: int
+    available_at: int
+    open: Decimal
+    high: Decimal
+    low: Decimal
+    close: Decimal
+    base_volume: Decimal
+    quote_volume: Decimal
+    trade_count: int
+    source_file: str = "synthetic"
+
+    @property
+    def price(self) -> Decimal:
+        return self.close
+
+    @property
+    def event_time(self) -> int:
+        return self.end_time
+
+    @property
+    def reference_id(self) -> str:
+        return f"bar:{self.symbol}:{self.market}:{self.open_time}"
+
+
+@dataclass(frozen=True)
 class Funding:
     symbol: str
     funding_time: int
@@ -104,6 +162,14 @@ class Order:
     vwap_quantity: Decimal = D("0")
     reference_ids: list[str] = field(default_factory=list)
     recent_volume_quantity: Decimal = D("0")
+    filled_quantity: Decimal = D("0")
+    window_start: int | None = None
+    window_end: int | None = None
+    cancel_requested_at: int | None = None
+
+    @property
+    def remaining_quantity(self) -> Decimal:
+        return self.quantity - self.filled_quantity
 
 
 @dataclass(frozen=True)
@@ -136,3 +202,4 @@ class Pair:
     correction_deadline: int | None = None
     opened_at: int | None = None
     liquidation_pending: bool = False
+    planned_short: Decimal | None = None

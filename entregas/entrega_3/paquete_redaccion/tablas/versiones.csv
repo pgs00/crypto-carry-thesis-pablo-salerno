@@ -1,0 +1,15 @@
+ventana,run_id,herramienta,version
+early,run_f4151cc97937f3704d77fb14,python,3.14.3
+early,run_f4151cc97937f3704d77fb14,httpx,0.28.1
+early,run_f4151cc97937f3704d77fb14,matplotlib,3.11.2
+early,run_f4151cc97937f3704d77fb14,nautilus_trader,1.231.0
+early,run_f4151cc97937f3704d77fb14,numpy,2.3.5
+early,run_f4151cc97937f3704d77fb14,pandas,2.3.3
+early,run_f4151cc97937f3704d77fb14,pyarrow,25.0.1
+late,run_519a165818e2cadce24bc873,python,3.14.3
+late,run_519a165818e2cadce24bc873,httpx,0.28.1
+late,run_519a165818e2cadce24bc873,matplotlib,3.11.2
+late,run_519a165818e2cadce24bc873,nautilus_trader,1.231.0
+late,run_519a165818e2cadce24bc873,numpy,2.3.5
+late,run_519a165818e2cadce24bc873,pandas,2.3.3
+late,run_519a165818e2cadce24bc873,pyarrow,25.0.1

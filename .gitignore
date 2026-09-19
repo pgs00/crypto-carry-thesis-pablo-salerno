@@ -6,9 +6,9 @@ __pycache__/
 *.egg-info/
 data/raw/**
 data/processed/**
+data/minutes/**
 outputs/**
 .superpowers/
 !data/raw/.gitkeep
 !data/processed/.gitkeep
 !outputs/.gitkeep
-

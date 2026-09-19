@@ -251,6 +251,26 @@ def test_rulebook_rejects_overlapping_snapshots_and_reports_boundaries():
     assert book.transition_times(50, 350) == [100, 200, 300]
 
 
+def test_rulebook_snapshot_is_independent_of_mutable_input_values():
+    record = _rule_record(valid_from=100, valid_to=300, known_from=200)
+    book = RuleBook([record])
+    record["values"]["taker_fee"] = "0.25"
+
+    assert book.get("BTCUSDT", "spot", 200).taker_fee == Decimal("0.001")
+    assert book.records[0]["values"]["taker_fee"] == "0.001"
+
+
+def test_rulebook_queries_do_not_reuse_future_or_expired_snapshots():
+    first = _rule_record(valid_from=100, valid_to=300, known_from=200)
+    second = _rule_record(valid_from=300, valid_to=500, known_from=350)
+    second["values"]["taker_fee"] = "0.002"
+    book = RuleBook([first, second])
+
+    for at, expected in ((400, "0.002"), (200, "0.001"), (300, None), (199, None), (500, None)):
+        rule = book.get("BTCUSDT", "spot", at)
+        assert (rule.taker_fee if rule else None) == (Decimal(expected) if expected else None)
+
+
 def test_missing_funding_is_not_reclassified_as_a_long_interval():
     rows = [
         {"fundingTime": 0, "fundingRate": "0.0001", "markPrice": "100"},

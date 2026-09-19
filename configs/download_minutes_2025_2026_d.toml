@@ -1,0 +1,13 @@
+# Shared minute acquisition and execution profile; validation is mandatory before replay.
+# The 20 GB budget is shared by all folders under D:/Backtesting/data/minutes.
+analysis_mode = "prescribed_research"
+fee_profile = "prescribed_fixed_no_discounts"
+execution_model = "minute_open"
+order_timeout_seconds = 120
+history_start = "2025-09-01T00:00:00Z"
+start = "2025-09-01T00:00:00Z"
+end = "2026-09-01T00:00:00Z"
+sample_start = "2025-09-01T00:00:00Z"
+sample_end = "2025-09-02T00:00:00Z"
+data_dir = "data/minutes/2025_2026"
+data_budget_bytes = 20000000000

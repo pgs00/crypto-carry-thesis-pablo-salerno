@@ -20,7 +20,7 @@ def event_time(record) -> int:
 
 
 def event_key(record) -> tuple:
-    trade_id = str(getattr(record, "trade_id", ""))
+    trade_id = str(getattr(record, "trade_id", getattr(record, "reference_id", "")))
     ordered_id = trade_id.zfill(30) if trade_id.isdecimal() else trade_id
     return event_time(record), record.symbol, type(record).__name__, ordered_id
 

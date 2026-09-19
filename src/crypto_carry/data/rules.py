@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+from copy import deepcopy
 from decimal import Decimal
 from pathlib import Path
 from typing import Any
@@ -56,9 +57,22 @@ class RuleBook:
     ):
         self.allow_synthetic = allow_synthetic
         self.allow_prescribed = allow_prescribed
-        self.records = [self._validate_record(record) for record in records]
-        self.records.sort(key=lambda row: (row["symbol"], row["market"], row["valid_from"]))
+        self._records = [self._validate_record(deepcopy(record)) for record in records]
+        self._records.sort(key=lambda row: (row["symbol"], row["market"], row["valid_from"]))
         self._reject_overlaps()
+        # Immutable Decimal values are compiled once per snapshot, not per tick.
+        # Validity, knowledge time and evidence permission are still checked on
+        # every query, including queries made out of chronological order.
+        self._by_market: dict[tuple[str, str], list[tuple[dict, MarketRule]]] = {}
+        for record in self._records:
+            self._by_market.setdefault((record["symbol"], record["market"]), []).append(
+                (record, self._market_rule(record))
+            )
+
+    @property
+    def records(self) -> list[dict]:
+        """Return provenance without exposing the live rulebook to mutation."""
+        return deepcopy(self._records)
 
     @staticmethod
     def _validate_record(raw: dict[str, Any]) -> dict[str, Any]:
@@ -103,7 +117,7 @@ class RuleBook:
 
     def _reject_overlaps(self) -> None:
         by_key: dict[tuple[str, str], list[dict]] = {}
-        for record in self.records:
+        for record in self._records:
             by_key.setdefault((record["symbol"], record["market"]), []).append(record)
         for key, records in by_key.items():
             previous_end = None
@@ -142,9 +156,7 @@ class RuleBook:
         )
 
     def get(self, symbol: str, market: str, time_ns: int) -> MarketRule | None:
-        for record in self.records:
-            if record["symbol"] != symbol or record["market"] != market:
-                continue
+        for record, rule in self._by_market.get((symbol, market), ()):
             status = record["evidence_status"]
             if time_ns < record["valid_from"]:
                 continue
@@ -159,7 +171,7 @@ class RuleBook:
                 or (status == "synthetic" and self.allow_synthetic)
                 or (status == "prescribed" and self.allow_prescribed)
             ):
-                return self._market_rule(record)
+                return rule
         return None
 
     @classmethod
@@ -179,7 +191,7 @@ class RuleBook:
 
     def transition_times(self, start: int, end: int) -> list[int]:
         boundaries: set[int] = set()
-        for record in self.records:
+        for record in self._records:
             for value in (record["valid_from"], record["valid_to"], record["known_from"]):
                 if value is not None and start <= value <= end:
                     boundaries.add(value)

@@ -25,20 +25,29 @@ def _local(root: Path, relative: str) -> Path:
 def _download_check(config: Config, root: Path) -> dict:
     start, end = timestamp(config.history_start), timestamp(config.end)
     funding_start = start - (config.window_hours + 48) * HOUR
-    expected = {
-        f"{config.data_dir}/{item['relative']}": True
-        for item in _archive_descriptors(
-            config,
-            datetime.fromtimestamp(start / 1_000_000_000, UTC),
-            datetime.fromtimestamp(end / 1_000_000_000, UTC),
-            datetime.fromtimestamp(funding_start / 1_000_000_000, UTC),
-        )
-    }
-    for symbol in config.symbols:
-        expected[
-            f"{config.data_dir}/raw/futures/funding_api/{symbol}/"
-            f"funding-{funding_start // 1_000_000}-{(end - 1) // 1_000_000}.json"
-        ] = False
+    minute_model = config.execution_model in ("minute_open", "next_minute_vwap")
+    if minute_model:
+        from .data.minute_download import _bounds, minute_descriptors
+
+        start, end, funding_start = _bounds(config)
+        expected = {
+            item["path"]: item["dataset"] != "funding" for item in minute_descriptors(config)
+        }
+    else:
+        expected = {
+            f"{config.data_dir}/{item['relative']}": True
+            for item in _archive_descriptors(
+                config,
+                datetime.fromtimestamp(start / 1_000_000_000, UTC),
+                datetime.fromtimestamp(end / 1_000_000_000, UTC),
+                datetime.fromtimestamp(funding_start / 1_000_000_000, UTC),
+            )
+        }
+        for symbol in config.symbols:
+            expected[
+                f"{config.data_dir}/raw/futures/funding_api/{symbol}/"
+                f"funding-{funding_start // 1_000_000}-{(end - 1) // 1_000_000}.json"
+            ] = False
     result = {"ready": False, "expected_files": len(expected), "issues": []}
     issues = result["issues"]
     try:
@@ -51,7 +60,8 @@ def _download_check(config: Config, root: Path) -> dict:
         if not isinstance(payload, dict) or not isinstance(payload.get("entries"), list):
             raise ValueError("Invalid download manifest")
         if (
-            payload.get("scope") != "full"
+            (not minute_model and payload.get("scope") != "full")
+            or (minute_model and payload.get("kind") != "minute_market_data")
             or payload.get("requested_start") != start
             or payload.get("requested_end") != end
             or payload.get("funding_request_start") != funding_start

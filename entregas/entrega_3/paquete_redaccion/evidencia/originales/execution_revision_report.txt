@@ -1,0 +1,294 @@
+# Revision de ejecucion
+
+El analisis principal preespecificado es `vwap_joint`: observaciones cerradas, VWAP del siguiente minuto elegible, limite de volumen y sizing conjunto. Los otros cuatro escenarios son controles de atribucion.
+Cada ventana es independiente y reinicia 10,000 USDT. `alignment_only` separa el cambio de observacion. Drawdown es diario; Sharpe es una razon; `ND` indica valor no definido.
+
+## Resultados comparativos
+
+| Ventana | Escenario | Estrategia | Estado | Fechas UTC | Capital | Retorno | CAGR | Sharpe | DD diario |
+|---|---|---|---|---|---|---|---|---|---|
+| early | alignment_only | conditional | complete | [2022-09-01, 2023-09-01) | 10000 USDT | 1.1182% | 1.1182% | 1.70 | -0.0414% |
+| early | alignment_only | permanent | complete | [2022-09-01, 2023-09-01) | 10000 USDT | 2.0195% | 2.0195% | 2.68 | -0.1993% |
+| early | joint_sizing_only | conditional | complete | [2022-09-01, 2023-09-01) | 10000 USDT | 1.1186% | 1.1186% | 1.70 | -0.0414% |
+| early | joint_sizing_only | permanent | complete | [2022-09-01, 2023-09-01) | 10000 USDT | 3.5016% | 3.5016% | 2.96 | -0.1377% |
+| early | legacy_reference | conditional | complete | [2022-09-01, 2023-09-01) | 10000 USDT | 1.1182% | 1.1182% | 1.70 | -0.0414% |
+| early | legacy_reference | permanent | complete | [2022-09-01, 2023-09-01) | 10000 USDT | 2.0544% | 2.0544% | 2.80 | -0.1396% |
+| early | vwap_joint | conditional | complete | [2022-09-01, 2023-09-01) | 10000 USDT | 0.7364% | 0.7364% | 1.92 | -0.1224% |
+| early | vwap_joint | permanent | complete | [2022-09-01, 2023-09-01) | 10000 USDT | 3.3440% | 3.3440% | 4.11 | -0.1359% |
+| early | vwap_only | conditional | complete | [2022-09-01, 2023-09-01) | 10000 USDT | 0.7369% | 0.7369% | 1.92 | -0.1223% |
+| early | vwap_only | permanent | complete | [2022-09-01, 2023-09-01) | 10000 USDT | 2.3344% | 2.3344% | 2.75 | -0.2017% |
+| late | alignment_only | conditional | complete | [2025-09-01, 2026-09-01) | 10000 USDT | 0.0000% | 0.0000% | ND | 0.0000% |
+| late | alignment_only | permanent | complete | [2025-09-01, 2026-09-01) | 10000 USDT | -0.2033% | -0.2033% | -1.34 | -0.2033% |
+| late | joint_sizing_only | conditional | complete | [2025-09-01, 2026-09-01) | 10000 USDT | 0.0000% | 0.0000% | ND | 0.0000% |
+| late | joint_sizing_only | permanent | complete | [2025-09-01, 2026-09-01) | 10000 USDT | 0.0590% | 0.0590% | 1.17 | -0.0289% |
+| late | legacy_reference | conditional | complete | [2025-09-01, 2026-09-01) | 10000 USDT | 0.0000% | 0.0000% | ND | 0.0000% |
+| late | legacy_reference | permanent | complete | [2025-09-01, 2026-09-01) | 10000 USDT | -0.2033% | -0.2033% | -1.34 | -0.2033% |
+| late | vwap_joint | conditional | complete | [2025-09-01, 2026-09-01) | 10000 USDT | 0.0000% | 0.0000% | ND | 0.0000% |
+| late | vwap_joint | permanent | complete | [2025-09-01, 2026-09-01) | 10000 USDT | 0.0860% | 0.0860% | 1.96 | -0.0095% |
+| late | vwap_only | conditional | complete | [2025-09-01, 2026-09-01) | 10000 USDT | 0.0000% | 0.0000% | ND | 0.0000% |
+| late | vwap_only | permanent | complete | [2025-09-01, 2026-09-01) | 10000 USDT | -0.1043% | -0.1043% | -1.42 | -0.1044% |
+
+- early / conditional: 18 fills, 1 aperturas completas. Principales rechazos secuenciales: BTCUSDT funding = 1095; ETHUSDT funding = 884; ETHUSDT state_active = 203.
+- early / permanent: 72 fills, 6 aperturas completas. Principales rechazos secuenciales: ETHUSDT state_active = 984; BTCUSDT state_active = 713; BTCUSDT basis_negative = 373.
+- late / conditional: 0 fills, 0 aperturas completas. Principales rechazos secuenciales: BTCUSDT funding = 1095; ETHUSDT funding = 1095.
+- late / permanent: 2 fills, 1 aperturas completas. Principales rechazos secuenciales: ETHUSDT basis_negative = 1095; BTCUSDT basis_negative = 1063; BTCUSDT state_active = 31.
+
+La permanente omite únicamente el filtro de funding. El sizing conjunto no cambia los umbrales de funding o basis. Cero operaciones no demuestra rentabilidad; su Sharpe permanece indefinido.
+
+## PnL y ejecucion
+
+Componentes en USDT. Fees y liquidaciones tienen signo de costo. El slippage es informativo y ya está incorporado en los precios: no se resta otra vez. Un ciclo completo requiere apertura completa y cierre terminal del mismo cycle_id; intentos fallidos se informan por separado.
+
+| Ventana | Escenario | Estrategia | Spot | Futuros | Funding | Fees | Liquidación | Slippage informativo | Ciclos | Fallidos | Intentos | Parciales |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| early | alignment_only | conditional | 587.46 | -517.14 | 53.59 | -12.09 | 0.00 | 1.66 | 1 | 0 | 60 | 0 |
+| early | alignment_only | permanent | 1245.16 | -1171.44 | 219.42 | -91.18 | 0.00 | 12.37 | 6 | 2 | 60 | 0 |
+| early | joint_sizing_only | conditional | 587.68 | -517.31 | 53.60 | -12.11 | 0.00 | 1.66 | 1 | 0 | 60 | 0 |
+| early | joint_sizing_only | permanent | 1246.11 | -1116.83 | 281.59 | -60.72 | 0.00 | 8.25 | 4 | 0 | 120 | 0 |
+| early | legacy_reference | conditional | 587.46 | -517.14 | 53.59 | -12.09 | 0.00 | 1.66 | 1 | 0 | 60 | 0 |
+| early | legacy_reference | permanent | 1000.27 | -923.06 | 210.08 | -81.84 | 0.00 | 11.09 | 5 | 2 | 60 | 0 |
+| early | vwap_joint | conditional | 511.77 | -472.31 | 51.27 | -17.10 | 0.00 | 2.16 | 1 | 1 | 121 | 1 |
+| early | vwap_joint | permanent | 1214.82 | -1107.73 | 286.46 | -59.15 | 0.00 | 8.05 | 4 | 0 | 240 | 0 |
+| early | vwap_only | conditional | 511.40 | -471.88 | 51.26 | -17.09 | 0.00 | 2.16 | 1 | 1 | 121 | 1 |
+| early | vwap_only | permanent | 819.52 | -714.70 | 229.63 | -101.01 | 0.00 | 13.69 | 6 | 3 | 240 | 0 |
+| late | alignment_only | conditional | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
+| late | alignment_only | permanent | 9.38 | -11.79 | 0.00 | -17.92 | 0.00 | 2.39 | 0 | 2 | 0 | 0 |
+| late | joint_sizing_only | conditional | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
+| late | joint_sizing_only | permanent | 81.92 | -79.86 | 8.31 | -4.48 | 0.00 | 0.60 | 0 | 0 | 0 | 0 |
+| late | legacy_reference | conditional | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
+| late | legacy_reference | permanent | 9.38 | -11.79 | 0.00 | -17.92 | 0.00 | 2.39 | 0 | 2 | 0 | 0 |
+| late | vwap_joint | conditional | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
+| late | vwap_joint | permanent | 84.53 | -79.77 | 8.31 | -4.47 | 0.00 | 0.60 | 0 | 0 | 0 | 0 |
+| late | vwap_only | conditional | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0 | 0 | 0 | 0 |
+| late | vwap_only | permanent | 10.74 | -6.60 | 0.00 | -14.58 | 0.00 | 1.76 | 0 | 2 | 1 | 1 |
+
+Máximo residuo de conciliación entre equity final menos capital inicial y componentes: 2E-24 USDT (tolerancia 1e-8). Los conteos de fills nativos y económicos quedan en scenario_summary.csv y execution_summary.csv de cada corrida.
+
+## Capital y cobertura
+
+Capital desplegado = valor spot persistido mas collateral. Duraciones en horas-activo por simbolo; polvo se excluye de exposicion activa sin cobertura.
+
+| Ventana | Escenario | Estrategia | Capital prom. | Capital max. | Cubierto h | Sin cobertura h | Polvo h |
+|---|---|---|---|---|---|---|---|
+| early | alignment_only | conditional | 846.44 | 5438.42 | 1659.83 | 2.13 | 3850.00 |
+| early | alignment_only | permanent | 5629.35 | 10150.92 | 10646.17 | 2.82 | 4022.95 |
+| early | joint_sizing_only | conditional | 846.51 | 5438.32 | 1659.83 | 2.13 | 3850.00 |
+| early | joint_sizing_only | permanent | 7137.31 | 11052.50 | 13441.93 | 4.63 | 1225.37 |
+| early | legacy_reference | conditional | 846.44 | 5438.42 | 1659.83 | 2.13 | 3850.00 |
+| early | legacy_reference | permanent | 5538.05 | 10184.14 | 10478.15 | 2.75 | 4191.03 |
+| early | vwap_joint | conditional | 842.51 | 5298.49 | 1627.85 | 2.15 | 3881.95 |
+| early | vwap_joint | permanent | 7187.87 | 10536.71 | 13601.90 | 4.60 | 1065.40 |
+| early | vwap_only | conditional | 842.42 | 5297.23 | 1627.85 | 2.15 | 3881.95 |
+| early | vwap_only | permanent | 5989.86 | 10217.45 | 11354.02 | 4.85 | 3313.03 |
+| late | alignment_only | conditional | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
+| late | alignment_only | permanent | 0.00 | 0.14 | 0.00 | 0.10 | 255.87 |
+| late | joint_sizing_only | conditional | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
+| late | joint_sizing_only | permanent | 137.11 | 4622.30 | 255.95 | 0.02 | 0.00 |
+| late | legacy_reference | conditional | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
+| late | legacy_reference | permanent | 0.00 | 0.14 | 0.00 | 0.10 | 255.87 |
+| late | vwap_joint | conditional | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
+| late | vwap_joint | permanent | 137.11 | 4622.26 | 255.95 | 0.02 | 0.00 |
+| late | vwap_only | conditional | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
+| late | vwap_only | permanent | 0.01 | 0.36 | 0.00 | 0.07 | 255.90 |
+
+## H1, H2 y H3
+
+H1 compara MAE EWMA con no-change. H2 exige cobertura comparable, CAGR condicional positivo y ambos Sharpes definidos, con el condicional mayor. H3 exige que disminuyan tanto opportunity_mean como CAGR condicional entre ventanas independientes, con 365 días válidos en ambas. Una métrica ausente produce no_concluyente; resultados mixtos no se convierten en favorables. Son contrastes descriptivos, sin atribución causal.
+
+| H | Ventana | Escenario | Resultado | Medida | Valor | Comparador | Obs. | Excl. |
+|---|---|---|---|---|---|---|---|---|
+| H1 | early | alignment_only | favorable | forecast_mae | 0.000730 | 0.000983 | 2146 | 44 |
+| H2 | early | alignment_only | contraria | conditional_cagr_and_relative_sharpe | 0.011182 | 0.020195 | 365 |  |
+| H1 | early | joint_sizing_only | favorable | forecast_mae | 0.000730 | 0.000983 | 2146 | 44 |
+| H2 | early | joint_sizing_only | contraria | conditional_cagr_and_relative_sharpe | 0.011186 | 0.035016 | 365 |  |
+| H1 | early | legacy_reference | favorable | forecast_mae | 0.000730 | 0.000983 | 2146 | 44 |
+| H2 | early | legacy_reference | contraria | conditional_cagr_and_relative_sharpe | 0.011182 | 0.020544 | 365 |  |
+| H1 | early | vwap_joint | favorable | forecast_mae | 0.000730 | 0.000983 | 2146 | 44 |
+| H2 | early | vwap_joint | contraria | conditional_cagr_and_relative_sharpe | 0.007364 | 0.033440 | 365 |  |
+| H1 | early | vwap_only | favorable | forecast_mae | 0.000730 | 0.000983 | 2146 | 44 |
+| H2 | early | vwap_only | contraria | conditional_cagr_and_relative_sharpe | 0.007369 | 0.023344 | 365 |  |
+| H1 | late | alignment_only | favorable | forecast_mae | 0.000437 | 0.000675 | 2146 | 44 |
+| H2 | late | alignment_only | no_concluyente | conditional_cagr_and_relative_sharpe | 0.000000 | -0.002033 | 365 |  |
+| H1 | late | joint_sizing_only | favorable | forecast_mae | 0.000437 | 0.000675 | 2146 | 44 |
+| H2 | late | joint_sizing_only | no_concluyente | conditional_cagr_and_relative_sharpe | 0.000000 | 0.000590 | 365 |  |
+| H1 | late | legacy_reference | favorable | forecast_mae | 0.000437 | 0.000675 | 2146 | 44 |
+| H2 | late | legacy_reference | no_concluyente | conditional_cagr_and_relative_sharpe | 0.000000 | -0.002033 | 365 |  |
+| H1 | late | vwap_joint | favorable | forecast_mae | 0.000437 | 0.000675 | 2146 | 44 |
+| H2 | late | vwap_joint | no_concluyente | conditional_cagr_and_relative_sharpe | 0.000000 | 0.000860 | 365 |  |
+| H1 | late | vwap_only | favorable | forecast_mae | 0.000437 | 0.000675 | 2146 | 44 |
+| H2 | late | vwap_only | no_concluyente | conditional_cagr_and_relative_sharpe | 0.000000 | -0.001043 | 365 |  |
+| H3 | early_vs_late | legacy_reference | favorable | opportunity_mean | 0.000000 | 0.000017 | 365/365 | 0/0 |
+| H3 | early_vs_late | joint_sizing_only | favorable | opportunity_mean | 0.000000 | 0.000017 | 365/365 | 0/0 |
+| H3 | early_vs_late | alignment_only | favorable | opportunity_mean | 0.000000 | 0.000017 | 365/365 | 0/0 |
+| H3 | early_vs_late | vwap_only | favorable | opportunity_mean | 0.000000 | 0.000017 | 365/365 | 0/0 |
+| H3 | early_vs_late | vwap_joint | favorable | opportunity_mean | 0.000000 | 0.000017 | 365/365 | 0/0 |
+
+| Escenario | Oportunidad temprana | Oportunidad tardía | CAGR cond. temprano | CAGR cond. tardío | H3 |
+|---|---|---|---|---|---|
+| legacy_reference | 0.00001668 | 0.00000000 | 1.1182% | 0.0000% | favorable |
+| joint_sizing_only | 0.00001668 | 0.00000000 | 1.1186% | 0.0000% | favorable |
+| alignment_only | 0.00001667 | 0.00000000 | 1.1182% | 0.0000% | favorable |
+| vwap_only | 0.00001667 | 0.00000000 | 0.7369% | 0.0000% | favorable |
+| vwap_joint | 0.00001667 | 0.00000000 | 0.7364% | 0.0000% | favorable |
+
+## Por que no hubo operaciones
+
+Escenario principal por estrategia y símbolo. Las condiciones incumplidas de filtros aplicables se solapan; sólo el primer rechazo secuencial identifica el bloqueo operativo de cada evaluación. `simultaneous_reject` excluye funding cuando la estrategia no lo aplica. Legacy conserva sólo su decisión persistida. Las distribuciones muestran proporciones decimales (0.0034 = 0.34%); la condicional y la permanente comparten forecast y costo ex ante.
+Orden secuencial: `state_active → cooldown → pending_orders → debt → coverage → forecast → rules → operational → mark → price_alignment → freshness → funding → basis_negative → basis_above_max → sizing → budget`. La permanente salta `funding`.
+
+| Ventana | Estrategia | Simbolo | Filtro/decision | Conteo |
+|---|---|---|---|---|
+| early | conditional | BTCUSDT | filter_funding:reject | 1095 |
+| early | conditional | BTCUSDT | ordered_reject:funding | 1095 |
+| early | conditional | BTCUSDT | simultaneous_reject | 1095 |
+| early | conditional | BTCUSDT | filter_basis_negative:reject | 1044 |
+| early | conditional | ETHUSDT | simultaneous_reject | 1093 |
+| early | conditional | ETHUSDT | filter_funding:reject | 1087 |
+| early | conditional | ETHUSDT | filter_basis_negative:reject | 1006 |
+| early | conditional | ETHUSDT | ordered_reject:funding | 884 |
+| early | conditional | ETHUSDT | filter_state_active:reject | 203 |
+| early | conditional | ETHUSDT | ordered_reject:state_active | 203 |
+| early | conditional | ETHUSDT | filter_budget:not_evaluable | 15 |
+| early | conditional | ETHUSDT | filter_sizing:reject | 15 |
+| early | conditional | ETHUSDT | filter_cooldown:reject | 6 |
+| early | conditional | ETHUSDT | ordered_reject:cooldown | 6 |
+| early | permanent | BTCUSDT | simultaneous_reject | 1092 |
+| early | permanent | BTCUSDT | filter_basis_negative:reject | 1044 |
+| early | permanent | BTCUSDT | filter_state_active:reject | 713 |
+| early | permanent | BTCUSDT | ordered_reject:state_active | 713 |
+| early | permanent | BTCUSDT | ordered_reject:basis_negative | 373 |
+| early | permanent | BTCUSDT | filter_budget:not_evaluable | 288 |
+| early | permanent | BTCUSDT | filter_sizing:reject | 288 |
+| early | permanent | BTCUSDT | filter_budget:reject | 16 |
+| early | permanent | BTCUSDT | filter_cooldown:reject | 6 |
+| early | permanent | BTCUSDT | ordered_reject:cooldown | 6 |
+| early | permanent | ETHUSDT | simultaneous_reject | 1092 |
+| early | permanent | ETHUSDT | filter_basis_negative:reject | 1006 |
+| early | permanent | ETHUSDT | filter_state_active:reject | 984 |
+| early | permanent | ETHUSDT | ordered_reject:state_active | 984 |
+| early | permanent | ETHUSDT | filter_budget:reject | 184 |
+| early | permanent | ETHUSDT | ordered_reject:basis_negative | 102 |
+| early | permanent | ETHUSDT | filter_budget:not_evaluable | 51 |
+| early | permanent | ETHUSDT | filter_sizing:reject | 51 |
+| early | permanent | ETHUSDT | filter_cooldown:reject | 6 |
+| early | permanent | ETHUSDT | ordered_reject:cooldown | 6 |
+| late | conditional | BTCUSDT | filter_funding:reject | 1095 |
+| late | conditional | BTCUSDT | ordered_reject:funding | 1095 |
+| late | conditional | BTCUSDT | simultaneous_reject | 1095 |
+| late | conditional | BTCUSDT | filter_basis_negative:reject | 1090 |
+| late | conditional | ETHUSDT | filter_basis_negative:reject | 1095 |
+| late | conditional | ETHUSDT | filter_funding:reject | 1095 |
+| late | conditional | ETHUSDT | ordered_reject:funding | 1095 |
+| late | conditional | ETHUSDT | simultaneous_reject | 1095 |
+| late | permanent | BTCUSDT | simultaneous_reject | 1094 |
+| late | permanent | BTCUSDT | filter_basis_negative:reject | 1090 |
+| late | permanent | BTCUSDT | ordered_reject:basis_negative | 1063 |
+| late | permanent | BTCUSDT | filter_state_active:reject | 31 |
+| late | permanent | BTCUSDT | ordered_reject:state_active | 31 |
+| late | permanent | BTCUSDT | filter_budget:not_evaluable | 1 |
+| late | permanent | BTCUSDT | filter_sizing:reject | 1 |
+| late | permanent | ETHUSDT | filter_basis_negative:reject | 1095 |
+| late | permanent | ETHUSDT | ordered_reject:basis_negative | 1095 |
+| late | permanent | ETHUSDT | simultaneous_reject | 1095 |
+
+Diagnósticos teóricos de filtros omitidos: no bloquean órdenes ni integran `simultaneous_reject`. Un forecast que no cubre costos no es un rechazo operativo de la permanente.
+
+| Ventana | Estrategia | Simbolo | Diagnóstico no aplicado | Conteo |
+|---|---|---|---|---|
+| early | permanent | BTCUSDT | filter_funding:diagnostic_fail_not_applied | 1095 |
+| early | permanent | ETHUSDT | filter_funding:diagnostic_fail_not_applied | 1087 |
+| late | permanent | BTCUSDT | filter_funding:diagnostic_fail_not_applied | 1095 |
+| late | permanent | ETHUSDT | filter_funding:diagnostic_fail_not_applied | 1095 |
+
+| Ventana | Simbolo | Distribucion | N | P10 | P50 | P90 |
+|---|---|---|---|---|---|---|
+| early | BTCUSDT | basis | 1095 | -0.000579 | -0.000430 | -0.000183 |
+| early | BTCUSDT | estimated_cycle_cost | 1095 | 0.003400 | 0.003400 | 0.003400 |
+| early | BTCUSDT | forecast | 1095 | 0.000334 | 0.001142 | 0.002098 |
+| early | BTCUSDT | forecast_minus_cost | 1095 | -0.003066 | -0.002258 | -0.001302 |
+| early | ETHUSDT | basis | 1095 | -0.000623 | -0.000440 | -0.000074 |
+| early | ETHUSDT | estimated_cycle_cost | 1095 | 0.003400 | 0.003400 | 0.003400 |
+| early | ETHUSDT | forecast | 1095 | -0.000583 | 0.001045 | 0.002063 |
+| early | ETHUSDT | forecast_minus_cost | 1095 | -0.003983 | -0.002355 | -0.001337 |
+| late | BTCUSDT | basis | 1095 | -0.000584 | -0.000469 | -0.000346 |
+| late | BTCUSDT | estimated_cycle_cost | 1095 | 0.003400 | 0.003400 | 0.003400 |
+| late | BTCUSDT | forecast | 1095 | -0.000452 | 0.000803 | 0.001503 |
+| late | BTCUSDT | forecast_minus_cost | 1095 | -0.003852 | -0.002597 | -0.001897 |
+| late | ETHUSDT | basis | 1095 | -0.000597 | -0.000477 | -0.000358 |
+| late | ETHUSDT | estimated_cycle_cost | 1095 | 0.003400 | 0.003400 | 0.003400 |
+| late | ETHUSDT | forecast | 1095 | -0.000664 | 0.000620 | 0.001308 |
+| late | ETHUSDT | forecast_minus_cost | 1095 | -0.004064 | -0.002780 | -0.002092 |
+
+## Interrupcion del 24-03-2023
+
+PnL diario por diferencia de equities persistidos; funding y fees provienen del ledger, sin sustitucion manual. Duracion en minuto-activo.
+
+| Escenario | Estrategia | Ordenes | Fills | Cierres | PnL USDT | Funding | Fees | Sin cobertura min |
+|---|---|---|---|---|---|---|---|---|
+| alignment_only | conditional | 62 | 2 | 62 | 64.86 | 0.60 | 4.42 | 121.00 |
+| alignment_only | permanent | 62 | 2 | 62 | 66.49 | 0.62 | 4.54 | 121.00 |
+| joint_sizing_only | conditional | 62 | 2 | 62 | 64.87 | 0.60 | 4.42 | 121.00 |
+| joint_sizing_only | permanent | 124 | 4 | 124 | 114.35 | 1.24 | 9.11 | 242.00 |
+| legacy_reference | conditional | 62 | 2 | 62 | 64.86 | 0.60 | 4.42 | 121.00 |
+| legacy_reference | permanent | 62 | 2 | 62 | 66.50 | 0.62 | 4.54 | 121.00 |
+| vwap_joint | conditional | 122 | 2 | 122 | 35.91 | 0.61 | 4.43 | 121.00 |
+| vwap_joint | permanent | 244 | 4 | 244 | 72.96 | 1.23 | 9.04 | 242.00 |
+| vwap_only | conditional | 122 | 2 | 122 | 35.90 | 0.61 | 4.43 | 121.00 |
+| vwap_only | permanent | 244 | 4 | 244 | 73.76 | 1.25 | 9.16 | 242.00 |
+
+| Escenario | Estrategia | Activo | Último cierre futuro UTC | Precio futuro USDT | Último cierre spot UTC | Precio spot USDT |
+|---|---|---|---|---|---|---|
+| alignment_only | conditional | ETHUSDT | 2023-03-24T11:59:00.000000000Z | 1747.5600 | 2023-03-24T14:00:00.000000000Z | 1789.3300 |
+| alignment_only | permanent | ETHUSDT | 2023-03-24T11:59:00.000000000Z | 1747.5600 | 2023-03-24T14:00:00.000000000Z | 1789.3300 |
+| joint_sizing_only | conditional | ETHUSDT | 2023-03-24T11:59:00.000000000Z | 1747.5600 | 2023-03-24T14:00:00.000000000Z | 1789.3300 |
+| joint_sizing_only | permanent | BTCUSDT | 2023-03-24T11:59:00.000000000Z | 27594.8000 | 2023-03-24T14:00:00.000000000Z | 28077.1800 |
+| joint_sizing_only | permanent | ETHUSDT | 2023-03-24T11:59:00.000000000Z | 1747.5600 | 2023-03-24T14:00:00.000000000Z | 1789.3300 |
+| legacy_reference | conditional | ETHUSDT | 2023-03-24T11:59:00.000000000Z | 1747.5600 | 2023-03-24T14:00:00.000000000Z | 1789.3300 |
+| legacy_reference | permanent | ETHUSDT | 2023-03-24T11:59:00.000000000Z | 1747.5600 | 2023-03-24T14:00:00.000000000Z | 1789.3300 |
+| vwap_joint | conditional | ETHUSDT | 2023-03-24T12:00:00.000000000Z | 1746.8300 | 2023-03-24T14:01:00.000000000Z | 1770.9600 |
+| vwap_joint | permanent | BTCUSDT | 2023-03-24T12:00:00.000000000Z | 27592.2000 | 2023-03-24T14:01:00.000000000Z | 27972.4800 |
+| vwap_joint | permanent | ETHUSDT | 2023-03-24T12:00:00.000000000Z | 1746.8300 | 2023-03-24T14:01:00.000000000Z | 1770.9600 |
+| vwap_only | conditional | ETHUSDT | 2023-03-24T12:00:00.000000000Z | 1746.8300 | 2023-03-24T14:01:00.000000000Z | 1770.9600 |
+| vwap_only | permanent | BTCUSDT | 2023-03-24T12:00:00.000000000Z | 27592.2000 | 2023-03-24T14:01:00.000000000Z | 27972.4800 |
+| vwap_only | permanent | ETHUSDT | 2023-03-24T12:00:00.000000000Z | 1746.8300 | 2023-03-24T14:01:00.000000000Z | 1770.9600 |
+
+Los precios son promedios ponderados de los fills de cierre persistidos del mismo activo, con slippage; los rebalanceos no forman parte de esos promedios. El 58.0045% informado en la referencia corresponde al cambio de equity del día dividido por el beneficio anual; no es una atribución aislada a un fill. El episodio permanece dentro de todas las corridas, sin restar manualmente su P&L.
+
+Detalles: [escenarios](scenario_summary.csv), [hipotesis](hypotheses_by_window.csv), [diagnosticos](diagnostics_summary.csv), [cuantiles](diagnostic_quantiles.csv), [ordenes](outage_2023-03-24_orders.csv), [fills](outage_2023-03-24_fills.csv), [funding](outage_2023-03-24_funding.csv) y [ledger](outage_2023-03-24_ledger.csv).
+
+## Alcance y reproducción
+
+El contrato nuevo incluye precio VWAP, capacidad del 1%, parciales, vencimientos y prioridad temporal. `alignment_only` mide la observación alineada por separado; la diferencia contra legacy no es un efecto puro del VWAP. Se mantienen las reglas y costos prescritos, y los proxies causales de mark de funding temprano: es una simulación de investigación, no una reconstrucción exacta de fills y tarifas históricas. No se consumen trades ni datos subminuto.
+
+Desde la raíz del proyecto, con el entorno y los datos preparados:
+
+```powershell
+& '.\.venv\Scripts\python.exe' -u -m crypto_carry --root 'D:\Backtesting' execution-revision `
+  --early-config (Resolve-Path '.\configs\download_minutes_2022_2023_d.toml').Path `
+  --late-config (Resolve-Path '.\configs\download_minutes_2025_2026_d.toml').Path
+```
+
+El manifiesto de revisión identifica y verifica cada corrida, sus configuraciones, código, datos y artefactos. Las referencias originales se reutilizan si sus hashes coinciden; en una instalación sin esos artefactos puede ejecutarse el modelo anterior con `--no-reuse-references`.
+
+## Corridas y versión del informe
+
+Este informe usa el código `53f3067243393de626053f72b3c12413b54b719428d9c03d3bb24b4441690136`. Cada corrida conserva su versión original: regenerar tablas y presentación no vuelve a simular ni cambia sus saldos.
+
+| Ventana | Escenario | Corrida | Código de simulación |
+|---|---|---|---|
+| early | alignment_only | [run_8e60a7bd388ef9b8d7edb5d4](../run_8e60a7bd388ef9b8d7edb5d4/report.md) | 4e78e13aa1618137f790a0253c43355b31fe184eaa9bfdac12b61ad6d2a129ac |
+| early | joint_sizing_only | [run_705a1462342ca73175ba77ec](../run_705a1462342ca73175ba77ec/report.md) | 4e78e13aa1618137f790a0253c43355b31fe184eaa9bfdac12b61ad6d2a129ac |
+| early | legacy_reference | [run_8fb22fa8b377466cff981b99](../run_8fb22fa8b377466cff981b99/report.md) | 38faac3d532ff9692f724f5bdfd0413aea00acdb2421de21b720914d0237c070 |
+| early | vwap_joint | [run_f4151cc97937f3704d77fb14](../run_f4151cc97937f3704d77fb14/report.md) | 4e78e13aa1618137f790a0253c43355b31fe184eaa9bfdac12b61ad6d2a129ac |
+| early | vwap_only | [run_47cc0b884944c31d9695906c](../run_47cc0b884944c31d9695906c/report.md) | 4e78e13aa1618137f790a0253c43355b31fe184eaa9bfdac12b61ad6d2a129ac |
+| late | alignment_only | [run_497651aa331a8648bf0ed438](../run_497651aa331a8648bf0ed438/report.md) | 4e78e13aa1618137f790a0253c43355b31fe184eaa9bfdac12b61ad6d2a129ac |
+| late | joint_sizing_only | [run_60882c5937ce61428a302648](../run_60882c5937ce61428a302648/report.md) | 4e78e13aa1618137f790a0253c43355b31fe184eaa9bfdac12b61ad6d2a129ac |
+| late | legacy_reference | [run_0cb21afbec7cdba1e5848df6](../run_0cb21afbec7cdba1e5848df6/report.md) | 38faac3d532ff9692f724f5bdfd0413aea00acdb2421de21b720914d0237c070 |
+| late | vwap_joint | [run_519a165818e2cadce24bc873](../run_519a165818e2cadce24bc873/report.md) | 4e78e13aa1618137f790a0253c43355b31fe184eaa9bfdac12b61ad6d2a129ac |
+| late | vwap_only | [run_f80270bad77e25b5752e8e30](../run_f80270bad77e25b5752e8e30/report.md) | 4e78e13aa1618137f790a0253c43355b31fe184eaa9bfdac12b61ad6d2a129ac |
+
+Para verificar y regenerar esta comparación desde sus corridas guardadas:
+
+```powershell
+& '.\.venv\Scripts\python.exe' -m crypto_carry --root 'D:\Backtesting' report --run-id revision_eb5ed744b30836a39fd694fa
+```

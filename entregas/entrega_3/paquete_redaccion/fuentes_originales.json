@@ -1,0 +1,618 @@
+{
+  "revision": "revision_eb5ed744b30836a39fd694fa",
+  "basis_audit": "basis_audit_afd512e8a542f331ffa9ac3f",
+  "preparation_verification": {
+    "valid": true,
+    "status": "complete",
+    "revision_id": "revision_eb5ed744b30836a39fd694fa",
+    "mismatches": []
+  },
+  "files": [
+    {
+      "original": "D:\\Backtesting\\outputs\\revision_eb5ed744b30836a39fd694fa\\diagnostic_quantiles.csv",
+      "archivo": "evidencia/revision/diagnostic_quantiles.csv",
+      "sha256": "f208c7687548706de010d008331daefb7e08f30185731ff6dafeded843033b94",
+      "bytes": 22268
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\revision_eb5ed744b30836a39fd694fa\\diagnostics_summary.csv",
+      "archivo": "evidencia/revision/diagnostics_summary.csv",
+      "sha256": "d5dd2d74973751ce200fac4efda49a2cf16bf35317dc1b6ee36cbf1ea736e813",
+      "bytes": 24453
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\revision_eb5ed744b30836a39fd694fa\\hypotheses_by_window.csv",
+      "archivo": "evidencia/revision/hypotheses_by_window.csv",
+      "sha256": "ffb8d1d5ddf6301bddec00a148bb2abbb56f731bf99b67cde26e9dd0c18f65b5",
+      "bytes": 5351
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\revision_eb5ed744b30836a39fd694fa\\outage_2023-03-24_close_prices.csv",
+      "archivo": "evidencia/revision/outage_2023-03-24_close_prices.csv",
+      "sha256": "706ee5f45457c1ffdb2d543f06591402a2410cb8a51055a22e6211ec03b7cf14",
+      "bytes": 1559
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\revision_eb5ed744b30836a39fd694fa\\outage_2023-03-24_fills.csv",
+      "archivo": "evidencia/revision/outage_2023-03-24_fills.csv",
+      "sha256": "c4f5f218a212d4f49e9748854b14cc37f7b6bebdcc83dece80d0a34fc0564c61",
+      "bytes": 62352
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\revision_eb5ed744b30836a39fd694fa\\outage_2023-03-24_funding.csv",
+      "archivo": "evidencia/revision/outage_2023-03-24_funding.csv",
+      "sha256": "81d765f7fe59e7156376f8c47cd41177494f5646c75b06a9b2ac032481aa96cc",
+      "bytes": 31745
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\revision_eb5ed744b30836a39fd694fa\\outage_2023-03-24_ledger.csv",
+      "archivo": "evidencia/revision/outage_2023-03-24_ledger.csv",
+      "sha256": "e12b5ab40e5d57ea9bb5f0b30811522395cb9704513dbfdb83dee8779ffbcc17",
+      "bytes": 89635
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\revision_eb5ed744b30836a39fd694fa\\outage_2023-03-24_orders.csv",
+      "archivo": "evidencia/revision/outage_2023-03-24_orders.csv",
+      "sha256": "52fd7a09cc1bbed6badb92e42c59de69ca2fa4948286b0f617b24c339ed79e74",
+      "bytes": 4831363
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\revision_eb5ed744b30836a39fd694fa\\outage_2023-03-24_summary.csv",
+      "archivo": "evidencia/revision/outage_2023-03-24_summary.csv",
+      "sha256": "de267adc0ac28c4e92fd0c356f91ca75e3752119d6d7d65ca824efcb288d4eaf",
+      "bytes": 2980
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\revision_eb5ed744b30836a39fd694fa\\revision_manifest.json",
+      "archivo": "evidencia/revision/revision_manifest.json",
+      "sha256": "490de3242e3d9eeef569efa8303a351c8b5f8953a6e4d3e1a2eb612d46cf38e5",
+      "bytes": 319286
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\revision_eb5ed744b30836a39fd694fa\\revision_manifest.sha256",
+      "archivo": "evidencia/revision/revision_manifest.sha256",
+      "sha256": "558d453371a41b67a513faaf791aeae4c022b393b045d7f9c5e1ae1ec9c027d8",
+      "bytes": 66
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\revision_eb5ed744b30836a39fd694fa\\scenario_summary.csv",
+      "archivo": "evidencia/revision/scenario_summary.csv",
+      "sha256": "ca7f37294eebe1d9c7205f0d794701aacac0681d0ba6a4c1030c91714d2f1f37",
+      "bytes": 8385
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\revision_eb5ed744b30836a39fd694fa\\execution_revision_report.md",
+      "archivo": "evidencia/originales/execution_revision_report.txt",
+      "sha256": "0625ee69462fb22f031fdff953b7614e09986d1aa3b0e87c0546610a91175508",
+      "bytes": 25930
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_8e60a7bd388ef9b8d7edb5d4\\run_manifest.json",
+      "archivo": "evidencia/corridas/run_8e60a7bd388ef9b8d7edb5d4/run_manifest.json",
+      "sha256": "3c4201aaf130cdd317cc65138e347331e12938a503c20fa165d0c113f9ddc593",
+      "bytes": 47746
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_8e60a7bd388ef9b8d7edb5d4\\run_manifest.sha256",
+      "archivo": "evidencia/corridas/run_8e60a7bd388ef9b8d7edb5d4/run_manifest.sha256",
+      "sha256": "4b23f4b8ca392bf932a039b630957f459b21460359f3f0614360ece557779e05",
+      "bytes": 66
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_8e60a7bd388ef9b8d7edb5d4\\effective_config.toml",
+      "archivo": "evidencia/corridas/run_8e60a7bd388ef9b8d7edb5d4/effective_config.toml",
+      "sha256": "817044724f5b009704e991614e8e0f363119080f21c4ea4a38734f94e040101a",
+      "bytes": 1327
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_705a1462342ca73175ba77ec\\run_manifest.json",
+      "archivo": "evidencia/corridas/run_705a1462342ca73175ba77ec/run_manifest.json",
+      "sha256": "1d5e81d8d86b2bea4fbe76a9cff34c00802199ecf5ae7be270bfd51da3507679",
+      "bytes": 37855
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_705a1462342ca73175ba77ec\\run_manifest.sha256",
+      "archivo": "evidencia/corridas/run_705a1462342ca73175ba77ec/run_manifest.sha256",
+      "sha256": "a92a555b2233ef7a56acf8e4d2806208b624f214622818e4e532e4edf6dd2b8c",
+      "bytes": 66
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_705a1462342ca73175ba77ec\\effective_config.toml",
+      "archivo": "evidencia/corridas/run_705a1462342ca73175ba77ec/effective_config.toml",
+      "sha256": "d313392e117b85612dbb74665420147f3d3b4d11b86fd5367550fff887d58501",
+      "bytes": 1339
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_8fb22fa8b377466cff981b99\\run_manifest.json",
+      "archivo": "evidencia/corridas/run_8fb22fa8b377466cff981b99/run_manifest.json",
+      "sha256": "966a251bd9ca7af6c908ce9df3698a8b3c14ddbaf282e1a54b79eaeffee94956",
+      "bytes": 72052
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_8fb22fa8b377466cff981b99\\run_manifest.sha256",
+      "archivo": "evidencia/corridas/run_8fb22fa8b377466cff981b99/run_manifest.sha256",
+      "sha256": "acdbd8e1cf966908bfd1982063f42b0744fa4a1e0140758027c5bc9ba0bca092",
+      "bytes": 66
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_8fb22fa8b377466cff981b99\\effective_config.toml",
+      "archivo": "evidencia/corridas/run_8fb22fa8b377466cff981b99/effective_config.toml",
+      "sha256": "296a80f1024f5ffb85d50c53b2b5251376ba7a60697253caa923a3f7407b7ed7",
+      "bytes": 1229
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_f4151cc97937f3704d77fb14\\run_manifest.json",
+      "archivo": "evidencia/corridas/run_f4151cc97937f3704d77fb14/run_manifest.json",
+      "sha256": "f40930c0ce2972333364c831b046152d2f654ba2fa211ced92375427259dd534",
+      "bytes": 27589
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_f4151cc97937f3704d77fb14\\run_manifest.sha256",
+      "archivo": "evidencia/corridas/run_f4151cc97937f3704d77fb14/run_manifest.sha256",
+      "sha256": "bf803a7f965e400296412d16cef227484c58b0647bfe33fb1592b533f2f7ce3a",
+      "bytes": 66
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_f4151cc97937f3704d77fb14\\effective_config.toml",
+      "archivo": "evidencia/corridas/run_f4151cc97937f3704d77fb14/effective_config.toml",
+      "sha256": "911a6fccea631dbaa276a2c9e1f22c0c89f69c5b1f4cc0b20d7566d4a8ac9105",
+      "bytes": 1340
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_f4151cc97937f3704d77fb14\\metrics.csv",
+      "archivo": "evidencia/corridas/run_f4151cc97937f3704d77fb14/metrics.csv",
+      "sha256": "08a125dbdaafd0b271168648a3073dae52bf80c3420ba92950d8911fb7f1130a",
+      "bytes": 13060
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_f4151cc97937f3704d77fb14\\equity_daily.csv",
+      "archivo": "evidencia/corridas/run_f4151cc97937f3704d77fb14/equity_daily.csv",
+      "sha256": "9d32dba2a8a893de66a8485e337df91c17c017a29134be4c55ae279bcfd6d37b",
+      "bytes": 1521082
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_f4151cc97937f3704d77fb14\\pnl_components.csv",
+      "archivo": "evidencia/corridas/run_f4151cc97937f3704d77fb14/pnl_components.csv",
+      "sha256": "933e6d4a4dc6e5eb1eae643832f5c482688a1e63092e8b2bd042f994f3ce7990",
+      "bytes": 8438
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_f4151cc97937f3704d77fb14\\execution_summary.csv",
+      "archivo": "evidencia/corridas/run_f4151cc97937f3704d77fb14/execution_summary.csv",
+      "sha256": "ed2688fc8fb8e7a32e236c4d62400a90ee439107b171ae168630ab489db4ea04",
+      "bytes": 14205
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_f4151cc97937f3704d77fb14\\h1_summary.csv",
+      "archivo": "evidencia/corridas/run_f4151cc97937f3704d77fb14/h1_summary.csv",
+      "sha256": "81ef403e053663a8a55525c5c86a4ab4d147b465c812d47cf1ddd83ac3a03e23",
+      "bytes": 7425
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_f4151cc97937f3704d77fb14\\forecast_evaluation.csv",
+      "archivo": "evidencia/corridas/run_f4151cc97937f3704d77fb14/forecast_evaluation.csv",
+      "sha256": "c3b24970fd0823891c6fe103681015aea0129b89ee23031b8c23f1924c7a4a75",
+      "bytes": 3513445
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_f4151cc97937f3704d77fb14\\opportunity_daily.csv",
+      "archivo": "evidencia/corridas/run_f4151cc97937f3704d77fb14/opportunity_daily.csv",
+      "sha256": "f209200fa333f4fe34e12177d7a05f393b0b91d0cd64706bd299c39a37f307e7",
+      "bytes": 292620
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_f4151cc97937f3704d77fb14\\research_assumptions.json",
+      "archivo": "evidencia/corridas/run_f4151cc97937f3704d77fb14/research_assumptions.json",
+      "sha256": "4cf25a74df50cbaf638270b0b1712ea830e1228758fad14e03b01c4d3881b688",
+      "bytes": 4959
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_f4151cc97937f3704d77fb14\\funding_mark_audit.json",
+      "archivo": "evidencia/corridas/run_f4151cc97937f3704d77fb14/funding_mark_audit.json",
+      "sha256": "8bfc57b74f146a854002bf21b74739d7305b2b4f85e5e16e3c9cb1f34c2c0b5f",
+      "bytes": 4175633
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_f4151cc97937f3704d77fb14\\run_summary.csv",
+      "archivo": "evidencia/corridas/run_f4151cc97937f3704d77fb14/run_summary.csv",
+      "sha256": "2a8dd077c9cde1c3109960e3283d0129c7fa1ea8b18894b6c28101f21f750244",
+      "bytes": 2815
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_47cc0b884944c31d9695906c\\run_manifest.json",
+      "archivo": "evidencia/corridas/run_47cc0b884944c31d9695906c/run_manifest.json",
+      "sha256": "5058e749d8c81783be6ea409fd96d0427439e558f06697494c4d94c5cc8842c9",
+      "bytes": 27580
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_47cc0b884944c31d9695906c\\run_manifest.sha256",
+      "archivo": "evidencia/corridas/run_47cc0b884944c31d9695906c/run_manifest.sha256",
+      "sha256": "3ec649deabd325871fbb008c530431e7caa6a1062f782973eaeadf835f77bb08",
+      "bytes": 66
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_47cc0b884944c31d9695906c\\effective_config.toml",
+      "archivo": "evidencia/corridas/run_47cc0b884944c31d9695906c/effective_config.toml",
+      "sha256": "fb12e48ef142ca613a019134fe90af6a191283a3735ab5573911608e3d76c73f",
+      "bytes": 1332
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_497651aa331a8648bf0ed438\\run_manifest.json",
+      "archivo": "evidencia/corridas/run_497651aa331a8648bf0ed438/run_manifest.json",
+      "sha256": "84533005de09c507ffdede8b937cd47472398194f784cb132a7708691025e8d9",
+      "bytes": 47693
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_497651aa331a8648bf0ed438\\run_manifest.sha256",
+      "archivo": "evidencia/corridas/run_497651aa331a8648bf0ed438/run_manifest.sha256",
+      "sha256": "d512b4e62294c07843d2eb7c9487cdc6bb2bcf66f0248c82ced7772c46f295db",
+      "bytes": 66
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_497651aa331a8648bf0ed438\\effective_config.toml",
+      "archivo": "evidencia/corridas/run_497651aa331a8648bf0ed438/effective_config.toml",
+      "sha256": "15accd2d0ffd84b67f9653a08c00609dd027dcb213d29929abf5cd316c6f4726",
+      "bytes": 1327
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_60882c5937ce61428a302648\\run_manifest.json",
+      "archivo": "evidencia/corridas/run_60882c5937ce61428a302648/run_manifest.json",
+      "sha256": "435b6f2fea50f7181222690f6913d7d034f9291b7723227e4ae6ca52da4bfea9",
+      "bytes": 37802
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_60882c5937ce61428a302648\\run_manifest.sha256",
+      "archivo": "evidencia/corridas/run_60882c5937ce61428a302648/run_manifest.sha256",
+      "sha256": "f9e2bf882194f30e232a0bbcec2fa6dd269ec53279876b0f2e590db15ae168d0",
+      "bytes": 66
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_60882c5937ce61428a302648\\effective_config.toml",
+      "archivo": "evidencia/corridas/run_60882c5937ce61428a302648/effective_config.toml",
+      "sha256": "bb92ce04a6f33977ead2380530e5e0610cca4c3ce609c2cdf53a8023f61995fe",
+      "bytes": 1339
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_0cb21afbec7cdba1e5848df6\\run_manifest.json",
+      "archivo": "evidencia/corridas/run_0cb21afbec7cdba1e5848df6/run_manifest.json",
+      "sha256": "1e48f9962e5a7080d7852aeeab596110afd624b716d190efcfc1c11d6ac7d8ab",
+      "bytes": 71314
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_0cb21afbec7cdba1e5848df6\\run_manifest.sha256",
+      "archivo": "evidencia/corridas/run_0cb21afbec7cdba1e5848df6/run_manifest.sha256",
+      "sha256": "23d7385d5c0427d6fc3b62c874c8f45bcd10af70af910b5ace0e74c488ab939d",
+      "bytes": 66
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_0cb21afbec7cdba1e5848df6\\effective_config.toml",
+      "archivo": "evidencia/corridas/run_0cb21afbec7cdba1e5848df6/effective_config.toml",
+      "sha256": "c476340ad8998e6711afbf56559f6abbaaf12efa53fa8c637c94b4b39912b561",
+      "bytes": 1229
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_519a165818e2cadce24bc873\\run_manifest.json",
+      "archivo": "evidencia/corridas/run_519a165818e2cadce24bc873/run_manifest.json",
+      "sha256": "bb467224e987e1b379b04164e900aabbab3cc84e50c9c55c0001d3b2daaa943e",
+      "bytes": 27536
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_519a165818e2cadce24bc873\\run_manifest.sha256",
+      "archivo": "evidencia/corridas/run_519a165818e2cadce24bc873/run_manifest.sha256",
+      "sha256": "907e99a4e211e6e7f59af9da401cf99a1831c30b1646c54b7ac58b6e95cece74",
+      "bytes": 66
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_519a165818e2cadce24bc873\\effective_config.toml",
+      "archivo": "evidencia/corridas/run_519a165818e2cadce24bc873/effective_config.toml",
+      "sha256": "bf97c02065205fc6e4715e583d4bed5f0d114721abbdd3f42a75ad78817226bb",
+      "bytes": 1340
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_519a165818e2cadce24bc873\\metrics.csv",
+      "archivo": "evidencia/corridas/run_519a165818e2cadce24bc873/metrics.csv",
+      "sha256": "891f32de4b1f77ba95fda40bbcf6db8185e3eaab08e8f813ad372095215ef242",
+      "bytes": 12794
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_519a165818e2cadce24bc873\\equity_daily.csv",
+      "archivo": "evidencia/corridas/run_519a165818e2cadce24bc873/equity_daily.csv",
+      "sha256": "c2431035c1d88fe75e2a4c7b4e0e175d5302d3696a44cd3e92c43a0720f7c01e",
+      "bytes": 1320347
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_519a165818e2cadce24bc873\\pnl_components.csv",
+      "archivo": "evidencia/corridas/run_519a165818e2cadce24bc873/pnl_components.csv",
+      "sha256": "0243a0103a841ab306dbf4addf5d25a52420e59ba18fb4cf665122ec3ad01a1b",
+      "bytes": 8293
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_519a165818e2cadce24bc873\\execution_summary.csv",
+      "archivo": "evidencia/corridas/run_519a165818e2cadce24bc873/execution_summary.csv",
+      "sha256": "b4142b2cbbdf33b77831ec11eb18bd204beae7c62e57b4670b9cdcf83724c7d3",
+      "bytes": 13695
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_519a165818e2cadce24bc873\\h1_summary.csv",
+      "archivo": "evidencia/corridas/run_519a165818e2cadce24bc873/h1_summary.csv",
+      "sha256": "b508855f429c96dd6b2663bd8aa2fc3e0052107a537edb5d84f50ceb7c812db4",
+      "bytes": 7427
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_519a165818e2cadce24bc873\\forecast_evaluation.csv",
+      "archivo": "evidencia/corridas/run_519a165818e2cadce24bc873/forecast_evaluation.csv",
+      "sha256": "20134d9d9caa979a6024f031f70154657e426cdaf2c282d71f907abac11a6d41",
+      "bytes": 3514761
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_519a165818e2cadce24bc873\\opportunity_daily.csv",
+      "archivo": "evidencia/corridas/run_519a165818e2cadce24bc873/opportunity_daily.csv",
+      "sha256": "127f9c4f2445167a0edeab90fdf0dbfdf4aa553ad2fd14cc1042623bd9d55e28",
+      "bytes": 292500
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_519a165818e2cadce24bc873\\research_assumptions.json",
+      "archivo": "evidencia/corridas/run_519a165818e2cadce24bc873/research_assumptions.json",
+      "sha256": "c9a222704c34ed1fef68cc678b8e0cdcbf71ec2692b270a7a9a6b0360b0410e7",
+      "bytes": 4959
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_519a165818e2cadce24bc873\\funding_mark_audit.json",
+      "archivo": "evidencia/corridas/run_519a165818e2cadce24bc873/funding_mark_audit.json",
+      "sha256": "9bf63132ca009dbd98ce09a9c06c13735391b28909f770d1f0fc256034d05e02",
+      "bytes": 3679916
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_519a165818e2cadce24bc873\\run_summary.csv",
+      "archivo": "evidencia/corridas/run_519a165818e2cadce24bc873/run_summary.csv",
+      "sha256": "b3bca7dea1464278908828e769feba45f6da0396f8e3ce4f1a383bc5c69e3479",
+      "bytes": 2699
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_f80270bad77e25b5752e8e30\\run_manifest.json",
+      "archivo": "evidencia/corridas/run_f80270bad77e25b5752e8e30/run_manifest.json",
+      "sha256": "b015b8c74dbe28e70f8e9d34b41445503e90b2bc0d01001f7273934d0558814b",
+      "bytes": 27527
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_f80270bad77e25b5752e8e30\\run_manifest.sha256",
+      "archivo": "evidencia/corridas/run_f80270bad77e25b5752e8e30/run_manifest.sha256",
+      "sha256": "7377957958116dea546ccd941a4f71f370ba88ffc5de4f82f4e9cfb8fbea4c63",
+      "bytes": 66
+    },
+    {
+      "original": "D:\\Backtesting\\outputs\\run_f80270bad77e25b5752e8e30\\effective_config.toml",
+      "archivo": "evidencia/corridas/run_f80270bad77e25b5752e8e30/effective_config.toml",
+      "sha256": "99d995184a280eb259643a201249034f025b9c6167f3d6caf84e1965ff94547f",
+      "bytes": 1332
+    },
+    {
+      "original": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\outputs\\basis_audit_afd512e8a542f331ffa9ac3f\\basis_audit_summary.csv",
+      "archivo": "evidencia/basis/basis_audit_summary.csv",
+      "sha256": "abec08ef890195b619773aa742f1e005f063a13f3993249b40a8c77f214ee213",
+      "bytes": 1507
+    },
+    {
+      "original": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\outputs\\basis_audit_afd512e8a542f331ffa9ac3f\\basis_audit_sample.csv",
+      "archivo": "evidencia/basis/basis_audit_sample.csv",
+      "sha256": "83399e20b75be5f9b4af84e6baf7bc216b579ddcaacd660cf1d4f352e4305186",
+      "bytes": 64097
+    },
+    {
+      "original": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\outputs\\basis_audit_afd512e8a542f331ffa9ac3f\\basis_audit_sources.csv",
+      "archivo": "evidencia/basis/basis_audit_sources.csv",
+      "sha256": "8e24f9918c6772497a3da3168ecc1641197982fbf07e6dc1e276962d1d11048a",
+      "bytes": 60026
+    },
+    {
+      "original": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\outputs\\basis_audit_afd512e8a542f331ffa9ac3f\\basis_report_reconciliation.csv",
+      "archivo": "evidencia/basis/basis_report_reconciliation.csv",
+      "sha256": "b3668d027f24547e2337b1ce656e8ccbb2af9eed599f3b0780e67c40cd53bd5b",
+      "bytes": 23940
+    },
+    {
+      "original": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\outputs\\basis_audit_afd512e8a542f331ffa9ac3f\\report_preservation_comparison.csv",
+      "archivo": "evidencia/basis/report_preservation_comparison.csv",
+      "sha256": "208102cec53313683821ef3e8bc5f545ae7e294e5b9e24e277da3c0e21f8a37a",
+      "bytes": 5603
+    },
+    {
+      "original": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\outputs\\basis_audit_afd512e8a542f331ffa9ac3f\\basis_audit_manifest.json",
+      "archivo": "evidencia/basis/basis_audit_manifest.json",
+      "sha256": "9ef62590d0be3f136664f755d0b3f820c6077962b2c3cc6b14f46b7008b994c4",
+      "bytes": 269649
+    },
+    {
+      "original": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\outputs\\basis_audit_afd512e8a542f331ffa9ac3f\\basis_audit_manifest.sha256",
+      "archivo": "evidencia/basis/basis_audit_manifest.sha256",
+      "sha256": "2f8c5eeac70059c3bf88365fd4c3e38394a33f252a40fb92ec37c3e566c87c87",
+      "bytes": 66
+    },
+    {
+      "original": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\outputs\\basis_audit_afd512e8a542f331ffa9ac3f\\basis_audit_report.md",
+      "archivo": "evidencia/originales/basis_audit_report.txt",
+      "sha256": "1eab4437cb1e06e3b7aa5caf8fc938cf01eab2ed273458f7ecdd9d0eb385a695",
+      "bytes": 13601
+    },
+    {
+      "original": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Informes\\Entrega 1 - Crypto Carry Binance (Salerno Pablo & Rodriguez Facundo).docx",
+      "archivo": "antecedentes/Entrega 1 - Crypto Carry Binance (Salerno Pablo & Rodriguez Facundo).docx",
+      "sha256": "d4663ce5fc5d010a8e1b851a7bf26198e27455086af761c4eaf2bc83c108c8be",
+      "bytes": 42191
+    },
+    {
+      "original": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Informes\\Entrega 1 - Crypto Carry Binance (Salerno Pablo & Rodriguez Facundo).pdf",
+      "archivo": "antecedentes/Entrega 1 - Crypto Carry Binance (Salerno Pablo & Rodriguez Facundo).pdf",
+      "sha256": "9e2d9c1f73d5a3ce90b68ec4ad23ec4ca8a155473b551f7d955d0e7d7b5e5516",
+      "bytes": 250839
+    },
+    {
+      "original": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Informes\\Entrega 2 Crypto Carry Binance Pablo Salerno.docx",
+      "archivo": "antecedentes/Entrega 2 Crypto Carry Binance Pablo Salerno.docx",
+      "sha256": "9ac21b427598a82181f93f81fed8846953b6134eba21d7473dd5a8ae1fd28f28",
+      "bytes": 51882
+    },
+    {
+      "original": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Informes\\Entrega 2 Crypto Carry Binance Pablo Salerno.pdf",
+      "archivo": "antecedentes/Entrega 2 Crypto Carry Binance Pablo Salerno.pdf",
+      "sha256": "af40aaa6fd8068403201de0f160ff4cef77bd7bae7a5de2f63e5e9cea7d1c08d",
+      "bytes": 345186
+    },
+    {
+      "original": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\src\\crypto_carry\\nautilus_adapter.py",
+      "archivo": "evidencia/codigo/nautilus_adapter.py",
+      "sha256": "0e4c24c6ce18a078d0402740556a059add442108de260f14065e2f5370022d79",
+      "bytes": 10556
+    },
+    {
+      "original": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\src\\crypto_carry\\strategy.py",
+      "archivo": "evidencia/codigo/strategy.py",
+      "sha256": "76e2f70cd7053df9d97644a8081540e2a332af30f3327b85d0eda411e7cf6885",
+      "bytes": 60971
+    },
+    {
+      "original": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\src\\crypto_carry\\evaluation.py",
+      "archivo": "evidencia/codigo/evaluation.py",
+      "sha256": "1c98b3d04cf1d5a1d3185192d8f767ca87ab31256ae3f09486e42abb178df53d",
+      "bytes": 11923
+    },
+    {
+      "original": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\src\\crypto_carry\\data\\funding_proxy.py",
+      "archivo": "evidencia/codigo/funding_proxy.py",
+      "sha256": "bad72191e8cb964eab283768424ad909fe316112fef4ca66d246c3d69fd36d00",
+      "bytes": 2273
+    },
+    {
+      "original": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\src\\crypto_carry\\data\\prescribed.py",
+      "archivo": "evidencia/codigo/prescribed.py",
+      "sha256": "97d8e3886115314aa6f23d2115a306e210948275798f3b646df09bab3021a251",
+      "bytes": 7571
+    },
+    {
+      "original": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\src\\crypto_carry\\execution_revision.py",
+      "archivo": "evidencia/codigo/execution_revision.py",
+      "sha256": "e1a739dfa474b7c7f38cbe7a74bbf92bc97e28f79e6d6c75c85fdce7aa3de9bf",
+      "bytes": 59854
+    },
+    {
+      "original": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\docs\\research\\public_rules_alternatives_20260918.json",
+      "archivo": "evidencia/procedencia/public_rules_alternatives_20260918.json",
+      "sha256": "619f2e9f8dbdbc9313cda35c1a6ef5b489e331d7a7e4d1cda94694be699eb500",
+      "bytes": 35353
+    },
+    {
+      "original": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\docs\\research\\public_rules_alternatives_20260918.md",
+      "archivo": "evidencia/procedencia/public_rules_alternatives_20260918.md.txt",
+      "sha256": "e7d1e68a53e5b9af7b91b539ea46c08568929267897e2e0ea8057cd6228d5f2d",
+      "bytes": 10526
+    },
+    {
+      "original": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\docs\\research\\fees_followup_20260918.md",
+      "archivo": "evidencia/procedencia/fees_followup_20260918.md.txt",
+      "sha256": "dea976a955f4595512cb65cab02a7122f14fac3fb4e5fa3aa45e846efd1f167b",
+      "bytes": 8275
+    },
+    {
+      "original": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\docs\\research\\historical_market_rules.md",
+      "archivo": "evidencia/procedencia/historical_market_rules.md.txt",
+      "sha256": "773179d93b5545832de5d2116e380bf033c5993c547173065ee706ad24b9e244",
+      "bytes": 11922
+    },
+    {
+      "original": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\docs\\research\\methodology_two_days_20260918.md",
+      "archivo": "evidencia/procedencia/methodology_two_days_20260918.md.txt",
+      "sha256": "ccc165f67f0b43d2302a18c46afcabbad6dade5ebc267cac7e0b9fe389d905f3",
+      "bytes": 20405
+    },
+    {
+      "original": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\docs\\sources\\Prompt_Codex_Paquete_Entrega_3.md",
+      "archivo": "evidencia/instructivo.md",
+      "sha256": "0933dd108016f1037442c5c99584f53cc5548a387ca331abddc9a907ed174d4a",
+      "bytes": 15795
+    },
+    {
+      "original": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\docs\\methodology.md",
+      "archivo": "evidencia/procedencia/methodology.md.txt",
+      "sha256": "e5060cdc4c4fe05ac99e65fb2d6409f13654cb9e184b162958a4b4cdc2b58b89",
+      "bytes": 15932
+    },
+    {
+      "original": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\docs\\escenario_investigacion.md",
+      "archivo": "evidencia/procedencia/escenario_investigacion.md.txt",
+      "sha256": "c444ba01bfc0b329b7981f850ab1b02d50d914072fd01f63c0671c5c7f7d82ed",
+      "bytes": 8911
+    },
+    {
+      "original": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\docs\\sources\\Prompt_Codex_Backtesting.md",
+      "archivo": "evidencia/procedencia/Prompt_Codex_Backtesting.md.txt",
+      "sha256": "fbb9796987d1fb1ef242308477e59fa4c3863389769974594e61896de44edc37",
+      "bytes": 62005
+    },
+    {
+      "original": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\docs\\sources\\Prompt_Codex_Ajuste_Backtesting_1m.md",
+      "archivo": "evidencia/procedencia/Prompt_Codex_Ajuste_Backtesting_1m.md.txt",
+      "sha256": "d0b267d2c84e9188d0810d2f1c44019a26ec89376595e89eb7fe25a6845fa3ac",
+      "bytes": 23172
+    },
+    {
+      "original": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_3\\preparar_paquete.py",
+      "archivo": "scripts/preparar_paquete.py",
+      "sha256": "3ec6c5a9b325bb953a9f10da5deef6889545ef15276a33e65c4482b4cac1eb92",
+      "bytes": 6858
+    },
+    {
+      "original": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\src\\crypto_carry\\reporting.py",
+      "archivo": "evidencia/codigo/reporting.py",
+      "sha256": "40837cd513fc927df6bd2f3ad5e5a595c0ead7f48c3b322a5963f3e7fb248b13",
+      "bytes": 75845
+    },
+    {
+      "original": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\src\\crypto_carry\\ledger.py",
+      "archivo": "evidencia/codigo/ledger.py",
+      "sha256": "611f43ce0f7aabc0caffb2b0dddab366022f2fd51015a1e9253fd007613f7777",
+      "bytes": 17174
+    },
+    {
+      "original": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\src\\crypto_carry\\risk.py",
+      "archivo": "evidencia/codigo/risk.py",
+      "sha256": "a57d6d2a2ba2e438ad0a3376f583d439ee18ee8ea4e10f5940b99e74123a73a5",
+      "bytes": 902
+    },
+    {
+      "original": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\src\\crypto_carry\\margin.py",
+      "archivo": "evidencia/codigo/margin.py",
+      "sha256": "386e6774b2e6e5ff73eb47c546476f591b21e7dbdcd00a9990b26e4d244ddfbd",
+      "bytes": 2666
+    },
+    {
+      "original": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\src\\crypto_carry\\execution.py",
+      "archivo": "evidencia/codigo/execution.py",
+      "sha256": "25da66375ca68a648e426667434dc74a0c4555e3c202b712cd05ca678c98ac17",
+      "bytes": 1724
+    },
+    {
+      "original": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\src\\crypto_carry\\forecast.py",
+      "archivo": "evidencia/codigo/forecast.py",
+      "sha256": "48789c21ffc636c833bb9bd9dfa4503e98ff2a13a95e577c9dbdb7fcc9eeced3",
+      "bytes": 4355
+    },
+    {
+      "original": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\src\\crypto_carry\\portfolio.py",
+      "archivo": "evidencia/codigo/portfolio.py",
+      "sha256": "468f87f207c7ad7c0c19ee6cf6e855a22ff66ce1fd278c970228d8eb93152c9b",
+      "bytes": 13007
+    },
+    {
+      "original": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\src\\crypto_carry\\config.py",
+      "archivo": "evidencia/codigo/config.py",
+      "sha256": "e9ef41c3fc84ecfaade38287ac583a59d9469c3652356de0acf3aef2ecd550cd",
+      "bytes": 9811
+    },
+    {
+      "original": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\src\\crypto_carry\\costs.py",
+      "archivo": "evidencia/codigo/costs.py",
+      "sha256": "f8ca611e9b0546a42ee1ce59dc07641cf417023bdd27341b4bd20181bd33db9c",
+      "bytes": 1839
+    }
+  ]
+}

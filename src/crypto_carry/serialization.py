@@ -13,6 +13,9 @@ TYPES = {
     cls.__name__: cls
     for cls in (
         models.Trade,
+        models.MinutePrice,
+        models.MinuteVolume,
+        models.MinuteBar,
         models.Funding,
         models.Mark,
         models.Tier,

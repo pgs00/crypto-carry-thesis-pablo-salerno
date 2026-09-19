@@ -1,0 +1,440 @@
+{
+  "baseline": {
+    "futures": {
+      "deadline_utc": "2023-03-24T12:00:00.000000000Z",
+      "fee_rate": "0.0005",
+      "fill_id": "fill-conditional-00000015",
+      "market": "futures",
+      "order_id": "conditional-00000015",
+      "price": "1747.56",
+      "purpose": "close_perp",
+      "quantity": "1.661",
+      "reference_price": "1747.38",
+      "side": "BUY",
+      "submitted_at_utc": "2023-03-24T11:58:00.000000000Z",
+      "submitted_seconds_before_fill": "60.0",
+      "timestamp_utc": "2023-03-24T11:59:00.000000000Z",
+      "trade_id": "bar:ETHUSDT:futures:1679659140000000000"
+    },
+    "run": {
+      "fills_sha256": "e657469ae1c19fcc80df090c011510efe78dcd5756e3dcc55427560936c42db0",
+      "manifest_sha256": "966a251bd9ca7af6c908ce9df3698a8b3c14ddbaf282e1a54b79eaeffee94956",
+      "path": "D:\\Backtesting\\outputs\\run_8fb22fa8b377466cff981b99",
+      "run_id": "run_8fb22fa8b377466cff981b99",
+      "status": "complete"
+    },
+    "spot": {
+      "deadline_utc": "2023-03-24T14:01:01.000000000Z",
+      "fee_rate": "0.001",
+      "fill_id": "fill-conditional-00000076",
+      "market": "spot",
+      "order_id": "conditional-00000076",
+      "price": "1789.33",
+      "purpose": "close_spot",
+      "quantity": "1.6616",
+      "reference_price": "1789.51000000",
+      "side": "SELL",
+      "submitted_at_utc": "2023-03-24T13:59:01.000000000Z",
+      "submitted_seconds_before_fill": "59.0",
+      "timestamp_utc": "2023-03-24T14:00:00.000000000Z",
+      "trade_id": "bar:ETHUSDT:spot:1679666400000000000"
+    }
+  },
+  "definitions": {
+    "ephemeral_under_one_second": "the first subsequent trade at a different price occurs less than 1000 ms after the first trade strictly after the boundary",
+    "gross_pnl_delta_if_vwap_replaced_baseline_fill_usdt": "local price-times-quantity diagnostic before any fee change; positive means the VWAP would improve P&L versus the recorded fill. It is not a portfolio rerun.",
+    "missing_id_count": "sum of positive gaps between consecutive source trade IDs",
+    "strictly_after_boundary": "trade time_ms > boundary time_ms",
+    "vwap_windows": "(boundary, boundary + seconds], weighted by source base quantity"
+  },
+  "findings": {
+    "reference_prices_match_first_strict_source_trade": true,
+    "scope_note": "This validates source representativeness and execution sensitivity only; it is not a rerun or a revised annual return.",
+    "spot": {
+      "first_price_ephemeral_under_one_second": true,
+      "first_trade_quantity_covers_baseline_fill": true,
+      "halt_has_consecutive_boundary_trade_ids": true,
+      "interpretation": "The minute-open reference is an exact source trade and the first print alone is larger than the baseline order. The price changes rapidly and is the high of each restart window, so it is not representative of the subsequent 1/5/60-second average. Trades establish prints and volume, but not resting depth or queue priority."
+    }
+  },
+  "generated_at_utc": "2026-09-18T22:05:33.929813+00:00",
+  "kind": "outage_trade_validation",
+  "limits": {
+    "combined_archive_cap_bytes": 250000000,
+    "combined_archive_head_bytes": 49142908,
+    "minute_data_budget_bytes": 20000000000,
+    "minute_data_tree_bytes_after": 692446272,
+    "minute_data_tree_bytes_before": 692446272,
+    "within_data_budget": true,
+    "within_download_cap": true
+  },
+  "scope": {
+    "date": "2023-03-24",
+    "purpose": "Sensitivity diagnosis of the immutable baseline's outage fills; no engine change, strategy rerun, synthetic continuity, or annual-return recomputation.",
+    "symbol": "ETHUSDT"
+  },
+  "sources": {
+    "futures": {
+      "analysis": {
+        "boundary_gap": {
+          "elapsed_ms": 40,
+          "first_strictly_after_boundary": {
+            "id": 2828084596,
+            "is_buyer_maker": true,
+            "price": "1747.38",
+            "quantity": "0.149",
+            "quote_quantity": "260.35",
+            "time_ms": 1679659140018,
+            "timestamp_utc": "2023-03-24T11:59:00.018Z"
+          },
+          "id_delta": 1,
+          "last_at_or_before_boundary": {
+            "id": 2828084595,
+            "is_buyer_maker": false,
+            "price": "1747.39",
+            "quantity": "0.1",
+            "quote_quantity": "174.73",
+            "time_ms": 1679659139978,
+            "timestamp_utc": "2023-03-24T11:58:59.978Z"
+          },
+          "missing_ids_between": 0
+        },
+        "boundary_utc": "2023-03-24T11:59:00Z",
+        "csv_header_present": true,
+        "day": {
+          "first_trade": {
+            "id": 2826670904,
+            "is_buyer_maker": true,
+            "price": "1813.26",
+            "quantity": "1.528",
+            "quote_quantity": "2770.66",
+            "time_ms": 1679616000025,
+            "timestamp_utc": "2023-03-24T00:00:00.025Z"
+          },
+          "id_audit": {
+            "duplicate_id_count": 0,
+            "missing_id_count": 1348,
+            "nonmonotone_id_count": 0,
+            "timestamp_regression_count": 0
+          },
+          "last_trade": {
+            "id": 2830916674,
+            "is_buyer_maker": false,
+            "price": "1748.77",
+            "quantity": "0.125",
+            "quote_quantity": "218.59",
+            "time_ms": 1679702399095,
+            "timestamp_utc": "2023-03-24T23:59:59.095Z"
+          },
+          "row_count": 4244423
+        },
+        "first_price_persistence": {
+          "baseline_quantity_over_same_price_volume_until_change": "11.14765100671140939597315436241610738255",
+          "ephemeral_under_one_second": true,
+          "first_different_trade": {
+            "id": 2828084597,
+            "is_buyer_maker": false,
+            "price": "1747.39",
+            "quantity": "0.514",
+            "quote_quantity": "898.15",
+            "time_ms": 1679659140048,
+            "timestamp_utc": "2023-03-24T11:59:00.048Z"
+          },
+          "milliseconds_until_different_price": 30,
+          "same_price_base_volume_until_change": "0.149",
+          "same_price_trade_count_until_change": 1
+        },
+        "first_trade_strictly_after_boundary": {
+          "id": 2828084596,
+          "is_buyer_maker": true,
+          "price": "1747.38",
+          "quantity": "0.149",
+          "quote_quantity": "260.35",
+          "time_ms": 1679659140018,
+          "timestamp_utc": "2023-03-24T11:59:00.018Z"
+        },
+        "first_trade_vs_baseline": {
+          "absolute_fill_vs_first_source_bps": "1.030113655873364694571301033547368059609",
+          "fill_minus_first_source": "0.18",
+          "fill_price": "1747.56",
+          "first_source_price": "1747.38",
+          "reference_minus_first_source": "0.00",
+          "reference_price": "1747.38"
+        },
+        "short_window_id_time_audit": {
+          "duplicate_id_count": 0,
+          "first_id": 2828076408,
+          "last_id": 2828091052,
+          "max_intertrade_gap_ms": 581,
+          "missing_id_count": 0,
+          "nonmonotone_id_count": 0,
+          "rows": 14645,
+          "timestamp_regression_count": 0
+        },
+        "windows": {
+          "1": {
+            "base_volume": "87.069",
+            "baseline_fill_adverse_to_vwap_bps": "0.9824333137812448327167182429241740117856",
+            "baseline_quantity_over_at_or_better_volume": "0.01907682412799044436022005535839391746776",
+            "baseline_quantity_over_window_volume": "0.01907682412799044436022005535839391746776",
+            "first_price_base_volume": "32.679",
+            "first_price_is_window_high": false,
+            "first_price_minus_vwap_bps": "-0.04767543098086955767324777213895764110311",
+            "first_price_trade_count": 9,
+            "gross_pnl_delta_if_vwap_replaced_baseline_fill_usdt": "0.285142625618762131183314382845788972536",
+            "high": "1747.4",
+            "interval": "(2023-03-24T11:59:00.000Z, 2023-03-24T11:59:01.000Z]",
+            "low": "1747.38",
+            "quote_notional_from_price_quantity": "152143.35457",
+            "source_volume_at_or_better_than_baseline_fill": "87.069",
+            "trade_count": 108,
+            "vwap": "1747.388330749175940920419437457648531624"
+          },
+          "5": {
+            "base_volume": "969.394",
+            "baseline_fill_adverse_to_vwap_bps": "4.597769057100338772849412819093859325701",
+            "baseline_quantity_over_at_or_better_volume": "0.001713441593407840362123140848818952871588",
+            "baseline_quantity_over_window_volume": "0.001713441593407840362123140848818952871588",
+            "first_price_base_volume": "32.679",
+            "first_price_is_window_high": false,
+            "first_price_minus_vwap_bps": "3.567287930025858891770014747320966323642",
+            "first_price_trade_count": 9,
+            "gross_pnl_delta_if_vwap_replaced_baseline_fill_usdt": "1.333979785340119703649909118480205159581",
+            "high": "1747.4",
+            "interval": "(2023-03-24T11:59:00.000Z, 2023-03-24T11:59:05.000Z]",
+            "low": "1746.25",
+            "quote_notional_from_price_quantity": "1693295.64041",
+            "source_volume_at_or_better_than_baseline_fill": "969.394",
+            "trade_count": 685,
+            "vwap": "1746.756881525984274711830277472317757279"
+          },
+          "60": {
+            "base_volume": "8340.247",
+            "baseline_fill_adverse_to_vwap_bps": "5.202970350021688713107906589442487242625",
+            "baseline_quantity_over_at_or_better_volume": "0.0002519992292859212688259809536524716709476",
+            "baseline_quantity_over_window_volume": "0.0001991547732339341988312816155204995727345",
+            "first_price_base_volume": "53.045",
+            "first_price_is_window_high": false,
+            "first_price_minus_vwap_bps": "4.172426886756905870762945945352384672353",
+            "first_price_trade_count": 16,
+            "gross_pnl_delta_if_vwap_replaced_baseline_fill_usdt": "1.509479348227936175031746661699587554139",
+            "high": "1749.11",
+            "interval": "(2023-03-24T11:59:00.000Z, 2023-03-24T12:00:00.000Z]",
+            "low": "1744.0",
+            "quote_notional_from_price_quantity": "14567502.61890",
+            "source_volume_at_or_better_than_baseline_fill": "6591.290",
+            "trade_count": 6457,
+            "vwap": "1746.651222547725505012021826212101392201"
+          }
+        },
+        "zip_member": {
+          "compressed_bytes": 36913226,
+          "crc32": "da6dcb33",
+          "name": "ETHUSDT-trades-2023-03-24.csv",
+          "uncompressed_bytes": 215926112
+        }
+      },
+      "bytes": 36913434,
+      "checksum_download_status": "reused",
+      "checksum_file_sha256": "594ae97aeb137ddeeb646e1f2fdbd6a02c460ba7f838529b1bd3ba730a91d2ae",
+      "checksum_path": "D:\\Backtesting\\data\\minutes\\validation_20230324\\futures\\ETHUSDT-trades-2023-03-24.zip.CHECKSUM",
+      "checksum_url": "https://data.binance.vision/data/futures/um/daily/trades/ETHUSDT/ETHUSDT-trades-2023-03-24.zip.CHECKSUM",
+      "checksum_verified": true,
+      "dataset": "futures/um/daily/trades",
+      "download_status": "reused",
+      "http": {
+        "content_length": 36913434,
+        "etag": "\"278a22bbc3e62be50b1c99ccd3fdef26-5\"",
+        "last_modified": "Sat, 25 Mar 2023 06:52:29 GMT",
+        "status": 200
+      },
+      "market": "futures",
+      "official_checksum_sha256": "c24d671204fb33bb7b851e36c56e888f8d59c6f2fc5c7edae67dfa7e501d0bc8",
+      "path": "D:\\Backtesting\\data\\minutes\\validation_20230324\\futures\\ETHUSDT-trades-2023-03-24.zip",
+      "sha256": "c24d671204fb33bb7b851e36c56e888f8d59c6f2fc5c7edae67dfa7e501d0bc8",
+      "source_url": "https://data.binance.vision/data/futures/um/daily/trades/ETHUSDT/ETHUSDT-trades-2023-03-24.zip",
+      "zip_crc_verified": true
+    },
+    "spot": {
+      "analysis": {
+        "boundary_gap": {
+          "elapsed_ms": 9157141,
+          "first_strictly_after_boundary": {
+            "id": 1112744098,
+            "is_buyer_maker": true,
+            "price": "1789.51000000",
+            "quantity": "6.73550000",
+            "quote_quantity": "12053.24460500",
+            "time_ms": 1679666400059,
+            "timestamp_utc": "2023-03-24T14:00:00.059Z"
+          },
+          "id_delta": 1,
+          "last_at_or_before_boundary": {
+            "id": 1112744097,
+            "is_buyer_maker": false,
+            "price": "1789.52000000",
+            "quantity": "0.01190000",
+            "quote_quantity": "21.29528800",
+            "time_ms": 1679657242918,
+            "timestamp_utc": "2023-03-24T11:27:22.918Z"
+          },
+          "missing_ids_between": 0
+        },
+        "boundary_utc": "2023-03-24T14:00:00Z",
+        "csv_header_present": false,
+        "day": {
+          "first_trade": {
+            "id": 1112399510,
+            "is_buyer_maker": true,
+            "price": "1813.78000000",
+            "quantity": "0.02490000",
+            "quote_quantity": "45.16312200",
+            "time_ms": 1679616000000,
+            "timestamp_utc": "2023-03-24T00:00:00.000Z"
+          },
+          "id_audit": {
+            "duplicate_id_count": 0,
+            "missing_id_count": 0,
+            "nonmonotone_id_count": 0,
+            "timestamp_regression_count": 0
+          },
+          "last_trade": {
+            "id": 1113255109,
+            "is_buyer_maker": true,
+            "price": "1749.57000000",
+            "quantity": "0.02560000",
+            "quote_quantity": "44.78899200",
+            "time_ms": 1679702399999,
+            "timestamp_utc": "2023-03-24T23:59:59.999Z"
+          },
+          "row_count": 855600
+        },
+        "first_price_persistence": {
+          "baseline_quantity_over_same_price_volume_until_change": "0.02744903690487990220372022334555786830542",
+          "ephemeral_under_one_second": true,
+          "first_different_trade": {
+            "id": 1112744117,
+            "is_buyer_maker": true,
+            "price": "1789.50000000",
+            "quantity": "1.86770000",
+            "quote_quantity": "3342.24915000",
+            "time_ms": 1679666400091,
+            "timestamp_utc": "2023-03-24T14:00:00.091Z"
+          },
+          "milliseconds_until_different_price": 32,
+          "same_price_base_volume_until_change": "60.53400000",
+          "same_price_trade_count_until_change": 19
+        },
+        "first_trade_strictly_after_boundary": {
+          "id": 1112744098,
+          "is_buyer_maker": true,
+          "price": "1789.51000000",
+          "quantity": "6.73550000",
+          "quote_quantity": "12053.24460500",
+          "time_ms": 1679666400059,
+          "timestamp_utc": "2023-03-24T14:00:00.059Z"
+        },
+        "first_trade_vs_baseline": {
+          "absolute_fill_vs_first_source_bps": "1.005861939860632240110421288509144961470",
+          "fill_minus_first_source": "-0.18000000",
+          "fill_price": "1789.33",
+          "first_source_price": "1789.51000000",
+          "reference_minus_first_source": "0.00000000",
+          "reference_price": "1789.51000000"
+        },
+        "short_window_id_time_audit": {
+          "duplicate_id_count": 0,
+          "first_id": 1112744098,
+          "last_id": 1112752349,
+          "max_intertrade_gap_ms": 365,
+          "missing_id_count": 0,
+          "nonmonotone_id_count": 0,
+          "rows": 8252,
+          "timestamp_regression_count": 0
+        },
+        "windows": {
+          "1": {
+            "base_volume": "790.43300000",
+            "baseline_fill_adverse_to_vwap_bps": "-19.19093381178640129369761178790917545592",
+            "baseline_quantity_over_at_or_better_volume": "0.01668750596305167643351762301461763657271",
+            "baseline_quantity_over_window_volume": "0.002102138954218763639675975066830458748559",
+            "first_price_base_volume": "60.53400000",
+            "first_price_is_window_high": true,
+            "first_price_minus_vwap_bps": "20.19882747482570737599258564411335447912",
+            "first_price_trade_count": 19,
+            "gross_pnl_delta_if_vwap_replaced_baseline_fill_usdt": "-5.694824982420521410416822172151213323102",
+            "high": "1789.51000000",
+            "interval": "(2023-03-24T14:00:00.000Z, 2023-03-24T14:00:01.000Z]",
+            "low": "1779.54000000",
+            "quote_notional_from_price_quantity": "1411636.4177840000000000",
+            "source_volume_at_or_better_than_baseline_fill": "99.57150000",
+            "trade_count": 697,
+            "vwap": "1785.902685975914467133836770478965326599"
+          },
+          "5": {
+            "base_volume": "1309.72210000",
+            "baseline_fill_adverse_to_vwap_bps": "-49.17013649980923289126852165577458712291",
+            "baseline_quantity_over_at_or_better_volume": "0.01668750596305167643351762301461763657271",
+            "baseline_quantity_over_window_volume": "0.001268666078093971232523296354241865507194",
+            "first_price_base_volume": "60.53400000",
+            "first_price_is_window_high": true,
+            "first_price_minus_vwap_bps": "50.18104596009323062333607114854452862374",
+            "first_price_trade_count": 19,
+            "gross_pnl_delta_if_vwap_replaced_baseline_fill_usdt": "-14.54749249386140769862553285158737109234",
+            "high": "1789.51000000",
+            "interval": "(2023-03-24T14:00:00.000Z, 2023-03-24T14:00:05.000Z]",
+            "low": "1770.00000000",
+            "quote_notional_from_price_quantity": "2332058.2827840000000000",
+            "source_volume_at_or_better_than_baseline_fill": "99.57150000",
+            "trade_count": 2580,
+            "vwap": "1780.574888966140221654654830975212222501"
+          },
+          "60": {
+            "base_volume": "3635.86510000",
+            "baseline_fill_adverse_to_vwap_bps": "-102.6991649546545821503354739439119832051",
+            "baseline_quantity_over_at_or_better_volume": "0.01668750596305167643351762301461763657271",
+            "baseline_quantity_over_window_volume": "0.0004570026539213459817307303288012528297598",
+            "first_price_base_volume": "60.53400000",
+            "first_price_is_window_high": true,
+            "first_price_minus_vwap_bps": "103.7154592378174631308069690763413864772",
+            "first_price_trade_count": 19,
+            "gross_pnl_delta_if_vwap_replaced_baseline_fill_usdt": "-30.22361569560740853669185911215462861971",
+            "high": "1789.51000000",
+            "interval": "(2023-03-24T14:00:00.000Z, 2023-03-24T14:01:00.000Z]",
+            "low": "1762.76000000",
+            "quote_notional_from_price_quantity": "6439628.0569760000000000",
+            "source_volume_at_or_better_than_baseline_fill": "99.57150000",
+            "trade_count": 8252,
+            "vwap": "1771.140534607843398810368404482333516719"
+          }
+        },
+        "zip_member": {
+          "compressed_bytes": 12229318,
+          "crc32": "fa13a7bc",
+          "name": "ETHUSDT-trades-2023-03-24.csv",
+          "uncompressed_bytes": 62774428
+        }
+      },
+      "bytes": 12229474,
+      "checksum_download_status": "reused",
+      "checksum_file_sha256": "38f9b1cf782f2ea87bddbed21d9bca047592c8eee8d5d6cfa7546bfec3db852a",
+      "checksum_path": "D:\\Backtesting\\data\\minutes\\validation_20230324\\spot\\ETHUSDT-trades-2023-03-24.zip.CHECKSUM",
+      "checksum_url": "https://data.binance.vision/data/spot/daily/trades/ETHUSDT/ETHUSDT-trades-2023-03-24.zip.CHECKSUM",
+      "checksum_verified": true,
+      "dataset": "spot/daily/trades",
+      "download_status": "reused",
+      "http": {
+        "content_length": 12229474,
+        "etag": "\"e9d6c5c8519fc88c2e9261bc5ff0636b-2\"",
+        "last_modified": "Mon, 27 Mar 2023 09:10:06 GMT",
+        "status": 200
+      },
+      "market": "spot",
+      "official_checksum_sha256": "69a25e6df194bc5eab14e831d518af07525a1fb93a6eecdccd4aa67232efb09f",
+      "path": "D:\\Backtesting\\data\\minutes\\validation_20230324\\spot\\ETHUSDT-trades-2023-03-24.zip",
+      "sha256": "69a25e6df194bc5eab14e831d518af07525a1fb93a6eecdccd4aa67232efb09f",
+      "source_url": "https://data.binance.vision/data/spot/daily/trades/ETHUSDT/ETHUSDT-trades-2023-03-24.zip",
+      "zip_crc_verified": true
+    }
+  }
+}

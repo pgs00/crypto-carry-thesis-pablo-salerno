@@ -1,61 +1,154 @@
-# Descargar la historia completa en D:
+# Descarga vigente: dos ventanas por minuto en D:
 
-Preparado el 18/09/2026 a pedido del usuario, quien después inició la descarga en su consola. Estas instrucciones también sirven para reanudarla si se interrumpe; no ejecutar otra copia mientras siga activa.
+BTCUSDT y ETHUSDT, spot y perpetuos USD-M:
+01/09/2022–31/08/2023 y 01/09/2025–31/08/2026, con agosto previo como
+calentamiento. Se usan archivos y consultas públicas de Binance, sin API key.
 
-## Ejecutar en PowerShell
+## Ejecutar o reanudar en PowerShell
 
-Este comando usa el Python ya instalado en el proyecto. El codigo permanece en C: y los datos se guardan en `D:\Backtesting\data`.
+Ejecutar una sola copia. Si ya está descargando, dejarla continuar.
 
 ```powershell
 Set-Location 'C:\Users\pablo\Documentos\UCEMA\Tesina\Backtesting'
-$configDescarga = (Resolve-Path '.\configs\download_full_d.toml').Path
-& '.\.venv\Scripts\python.exe' -u -m crypto_carry --root 'D:\Backtesting' download --config $configDescarga --scope full
+$configsMinuto = @('.\configs\download_minutes_2022_2023_d.toml', '.\configs\download_minutes_2025_2026_d.toml')
+& '.\.venv\Scripts\python.exe' -u -m crypto_carry.data.minute_download --root 'D:\Backtesting' --config $configsMinuto
 ```
 
-La configuracion separada admite hasta **800.000.000.000 bytes (800 GB decimales)** bajo `D:\Backtesting\data`; no reserva ese espacio. El presupuesto incluye archivos crudos, temporales, manifiestos y eventuales procesados. Al prepararla se verificaron 957.918.044.160 bytes libres en D:. `configs/base.toml` conserva el limite de 20 GB de la muestra.
+El comando es el mismo que antes de la limpieza del proyecto. Guarda los datos
+en `D:\Backtesting\data\minutes\2022_2023` y
+`D:\Backtesting\data\minutes\2025_2026`. El límite de **20 GB es compartido**
+por ambas carpetas e incluye crudos, temporales y manifiestos.
 
-## Que descarga
+## Contenido y tamaño
 
-- BTCUSDT y ETHUSDT, spot y futuros perpetuos USD-M: trades individuales en ZIP diarios.
-- Historia desde el 11/08/2020 hasta el 31/08/2026 inclusive.
-- Mark price de futuros de un minuto, incluyendo el dia antecedente.
-- Calendario mensual de funding y consultas publicas de funding, con el calentamiento adicional configurado.
-- Checksums oficiales y, al finalizar, el manifiesto `D:\Backtesting\data\manifests\download.json` con procedencia y errores.
+| Dataset | ZIP mensuales, ambas ventanas y activos |
+|---|---:|
+| Velas de un minuto de spot y futuros | 104 |
+| Mark price de un minuto | 52 |
+| Calendarios de funding | 52 |
+| Total | **208** |
 
-La estimacion anterior de **210,421 GB** correspondia a los 224 ZIP **mensuales de trades de 2022 a agosto de 2026**. Este comando usa ZIP diarios e incluye ademas 2020-2021 y otros datasets; su total sera distinto y mayor. No se debe interpretar 210,421 GB como el espacio total de todos los datos ni del procesamiento posterior.
+Se agregan cuatro respuestas de funding de la API pública y los checksums de
+los ZIP. El funding se consulta desde 30 días antes de cada inicio, para permitir
+28 días de calentamiento más antecedentes. Ese mes extra no cambia las fechas
+de evaluación económica.
 
-## Espacio y Parquet
+Verificación del 18/09/2026: 208/208 ZIP mensuales descargados, **257.252.762 bytes
+(257,25 MB)** comprimidos. Los seis suplementos diarios de mark suman otros
+206.818 bytes. Las dos ventanas completas, incluyendo API, checksums, Parquet
+y manifiestos de cobertura, ocupan aproximadamente **643 MB**.
+[Registro de preparación](../data/research/minute-download-20260918/preparation.json).
 
-El normalizador ya produce **Parquet con compresión ZSTD**. Lee los CSV dentro de los ZIP sin extraerlos al disco y conserva los originales para verificar procedencia e integridad. Convertirlos localmente no reduce los bytes que se deben descargar desde Binance.
+La revisión del 19/09/2026 recuperó OHLC y ambos volúmenes de los ZIP existentes,
+sin descargas adicionales. Agregó 104 particiones compartidas de `minute_bars`,
+con **260.960.966 bytes** de Parquet. Las dos carpetas, incluidos originales,
+formatos de referencia y manifiestos conservados, ocupan **956.984.856 bytes**
+(956,98 MB decimales) en la medición posterior a la migración.
 
-Medición del 18/09/2026 sobre los mismos **5.543.505 trades del 01/01/2024**, BTCUSDT y ETHUSDT, spot y Futures. Para Parquet se cuentan solamente las particiones activas del manifiesto, sin versiones anteriores ni otros datasets:
+## Progreso, finalización e interrupciones
 
-| Representación | Bytes | MB decimales |
-|---|---:|---:|
-| CSV sin comprimir, tamaño declarado dentro de los ZIP | 328.561.923 | 328,56 |
-| ZIP oficiales descargados | 57.062.373 | 57,06 |
-| Parquet/ZSTD normalizado | 55.076.025 | 55,08 |
+La consola muestra el porcentaje de **archivos/respuestas verificados**:
+`[53/212] 25.00% verificado`. No es porcentaje de bytes ni tiempo restante.
+`cached` significa que un archivo existente pasó sus comprobaciones.
 
-En esta muestra, Parquet ahorra **83,24 % frente al CSV**, pero **3,48 % frente al ZIP**. Los porcentajes no se extrapolan al histórico completo. Conservar ZIP y Parquet requiere sumar ambos tamaños; no se eliminan automáticamente los originales. La estimación anterior de más de 200 GB ya correspondía a ZIP comprimidos, no a CSV sin comprimir.
+Terminó correctamente al aparecer:
 
-## Corrección de velocidad del descargador
+```text
+DESCARGA COMPLETA: 212/212 (100%). Integridad verificada; cobertura y normalizacion pendientes.
+```
 
-Se detectó que el control de presupuesto recorría todos los archivos por cada fragmento de red. El descargador ahora agrupa la lectura en bloques de **1 MiB** y mantiene la comprobación de espacio antes de cada escritura, además de SHA-256, CRC del ZIP y reanudación.
+Si aparece `DESCARGA INCOMPLETA`, revisar los errores y repetir el mismo comando.
+Con `Ctrl+C` puede interrumpirse; reanuda parciales cuando el servidor admite
+HTTP Range y verifica los completos mediante SHA-256 y CRC antes de reutilizarlos.
 
-Ensayo local controlado con un ZIP de 1.240.118 bytes, 76 fragmentos de 16 KiB y 462 archivos existentes: **77 → 3 recorridos**, **2,09 → 0,10 segundos**. Este ensayo aísla el costo local; no mide la conexión a Binance ni permite prometer esa mejora en una descarga real. El costo de recorrer la carpeta también crecerá con el número de archivos.
+Los manifiestos `manifests\download.json` de ambas carpetas se actualizan durante
+la descarga. No extraer los ZIP ni convertirlos manualmente. Mantener el equipo
+sin suspensión.
 
-El usuario interrumpió la descarga para este diagnóstico. Si se necesita reanudar, se utiliza el mismo comando de arriba: reutiliza los ZIP verificados y continúa el parcial cuando el servidor admite Range. No iniciar otra copia si ya está descargando.
+## Después de descargar
 
-## Interrupciones y comprobaciones
+La descarga y la validación de ambas ventanas ya terminaron en este equipo.
+Los siguientes comandos permiten reproducirlas en una instalación nueva.
+El motor por minuto usa los mismos TOML. Antes de ejecutar, incorporar los seis
+ZIP diarios de mark que completan omisiones de los mensuales y validar:
 
-Se puede detener con `Ctrl+C` y volver a ejecutar el mismo comando. Los ZIP completos se verifican y reutilizan; los `.part` se intentan continuar mediante HTTP Range. Si el servidor no acepta Range, ese archivo parcial se vuelve a descargar. Se comprueban SHA-256 y la integridad interna del ZIP antes de publicarlo como completo.
+```powershell
+& '.\.venv\Scripts\python.exe' -u '.\data\research\minute-download-20260918\repair_sources.py' --root 'D:\Backtesting'
+if ($LASTEXITCODE -ne 0) { throw 'Falló la recuperación de fuentes diarias' }
+foreach ($perfilMinuto in $configsMinuto) {
+    $rutaPerfilMinuto = (Resolve-Path $perfilMinuto).Path
+    & '.\.venv\Scripts\python.exe' -u -m crypto_carry --root 'D:\Backtesting' validate-data --config $rutaPerfilMinuto --scope full
+    if ($LASTEXITCODE -ne 0) { throw 'La cobertura todavía no está validada' }
+}
+```
 
-El programa imprime su resumen al finalizar; durante la ejecucion van apareciendo archivos bajo `D:\Backtesting\data\raw`. No extraer los ZIP manualmente: el normalizador los lee directamente. Mantener el equipo encendido y sin suspension mientras descarga.
+La recuperación conserva los ZIP mensuales originales y verifica los diarios
+contra sus checksums oficiales. La suspensión spot del 24/03/2023 se documenta
+como período sin negociación; no se inventan precios ni volúmenes.
+El [protocolo vigente](escenario_investigacion.md) declara estas convenciones.
 
-Si el resumen contiene `failed`, esos archivos o respuestas quedaron pendientes; los detalles estaran en `download.json`. Repetir el comando permite reintentar, pero no resuelve archivos ausentes en la fuente. Las reglas historicas siguen requiriendo la investigacion documental indicada en el README: descargar los precios no completa ese requisito.
+## Reproducir las corridas
 
-Fuente publica oficial, sin API key: [Binance Public Data](https://github.com/binance/binance-public-data).
+Para la revisión vigente, que incluye el escenario principal `vwap_joint` y
+los controles sobre ambas ventanas:
 
-Los pasos posteriores y la comprobación `preflight`, que puede consultarse sin interrumpir esta descarga, están en [puesta en marcha](puesta_en_marcha.md).
+```powershell
+& '.\.venv\Scripts\python.exe' -u -m crypto_carry --root 'D:\Backtesting' execution-revision `
+  --early-config (Resolve-Path '.\configs\download_minutes_2022_2023_d.toml').Path `
+  --late-config (Resolve-Path '.\configs\download_minutes_2025_2026_d.toml').Path
+```
 
-Con las aproximaciones aprobadas el 18/09/2026, los comandos de validación, backtest y sensibilidades están en [escenario de investigación](escenario_investigacion.md). Ese modo usa precios observados y reglas prescritas, sin exigir el archivo de reglas históricas completas. Los controles de integridad y cobertura siguen activos.
+La preparación anterior con `validate-data` recupera las barras completas desde
+la caché. La revisión valida cada política de datos antes de simular y escribe
+`outputs/revision_<id>/execution_revision_report.md`.
+
+### Corridas individuales del modelo de referencia
+
+Desde la raíz del proyecto, ejecutar ambas carteras de cada ventana:
+
+```powershell
+$configsMinuto = @('.\configs\download_minutes_2022_2023_d.toml', '.\configs\download_minutes_2025_2026_d.toml')
+foreach ($perfilMinuto in $configsMinuto) {
+    $rutaPerfilMinuto = (Resolve-Path $perfilMinuto).Path
+    & '.\.venv\Scripts\python.exe' -u -m crypto_carry --root 'D:\Backtesting' backtest --config $rutaPerfilMinuto
+    if ($LASTEXITCODE -ne 0) { throw 'Falló una corrida anual; revisar el error' }
+}
+```
+
+Cada ventana base tardó entre cuatro y seis minutos en este equipo, incluyendo
+validación e informes. La consola devuelve su carpeta `outputs\run_<id>` al
+terminar. Los resultados existentes se verifican antes de reutilizarlos.
+
+Para repetir los siete escenarios priorizados, con las mismas configuraciones:
+
+```powershell
+foreach ($perfilMinuto in $configsMinuto) {
+    $rutaPerfilMinuto = (Resolve-Path $perfilMinuto).Path
+    & '.\.venv\Scripts\python.exe' -u -m crypto_carry --root 'D:\Backtesting' robustness --config $rutaPerfilMinuto --scenario cost-2 --scenario cost-3 --scenario futures-fee-0p0004 --scenario funding-proxy-plus-10 --scenario funding-proxy-minus-10 --scenario maintenance-2 --scenario liquidation-fee-0p03
+    if ($LASTEXITCODE -ne 0) { throw 'Falló un conjunto de sensibilidades; revisar el error' }
+}
+```
+
+Este segundo comando vuelve a ejecutar el baseline y luego cada escenario;
+imprime un avance por escenario terminado. Mantiene resultados separados y
+guarda el índice en `outputs\robustness-<id>`. Las tablas, figuras y auditorías
+vigentes se identifican en [avance y evidencia](progress.md).
+
+Para reconstruir el informe conjunto de las corridas verificadas actuales:
+
+```powershell
+& '.\.venv\Scripts\python.exe' '.\data\research\minute-download-20260918\build_study_report.py' --root 'D:\Backtesting' --early run_8fb22fa8b377466cff981b99 --late run_0cb21afbec7cdba1e5848df6 --early-robustness robustness-25034b88ecfa92b9 --late-robustness robustness-c252528c4dd8d7a3
+```
+
+Verifica fuentes de resultados, auditorías e índices antes de guardar el estudio.
+Si se cambian datos, parámetros o código, usar los nuevos identificadores que
+devuelva la ejecución correspondiente; el comparador exige el perfil aprobado
+y una auditoría que corresponda a los baselines seleccionados.
+
+La carpeta antigua `D:\Backtesting\data\raw` ya fue eliminada por el usuario.
+Conservar `D:\Backtesting\data\minutes` y el `data` del proyecto en C:, que
+contiene la muestra, el funding y las auditorías.
+
+Fuente: [Binance Public Data](https://github.com/binance/binance-public-data).
+Los timestamps de spot desde enero de 2025 vienen en microsegundos; el
+normalizador respeta la unidad registrada en cada manifiesto.

@@ -1,114 +1,223 @@
-# Avance y evidencia
+# Avance y evidencia — 19/09/2026
 
-Especificación: `sources/Prompt_Codex_Backtesting.md`, aprobada por el usuario.
+## Auditoría del basis
 
-## Avance actual — 2026-09-18
+La [auditoría independiente](../outputs/basis_audit_afd512e8a542f331ffa9ac3f/basis_audit_report.md)
+confirmó las 4.380 observaciones de mercado contra 96 ZIP originales: cero
+discrepancias en precios, intervalos, disponibilidad y clasificación. Se revisaron
+8.760 decisiones sin duplicar observaciones de mercado. El basis tardío es
+negativo en 1.090/1.095 casos BTC y 1.095/1.095 ETH; el máximo error decimal es
+aproximadamente `4,971e-28`, frente a la tolerancia fija `1e-12`.
 
-**Continúan la investigación y el desarrollo; la evaluación histórica económica sigue pendiente.** Después del diagnóstico de velocidad y de recibir nuevamente el comando, se comprobó la descarga activa hacia `D:\Backtesting`. Conserva `configs/download_full_d.toml` y su presupuesto separado de 800 GB. Esta investigación no inició ni interrumpió la descarga ni modificó sus archivos. La muestra en C: conserva el límite inicial de 20 GB.
+Se demostró y corrigió un defecto de presentación: funding omitido por la
+permanente se contaba como rechazo simultáneo. El
+[informe corregido](D:/Backtesting/outputs/revision_eb5ed744b30836a39fd694fa/execution_revision_report.md)
+se regeneró desde las mismas diez corridas, sin volver a simular ni alterar
+resultados económicos. El anterior permanece conservado. **414 pruebas pasaron**
+en 41,04 s. [Auditor, alcance y reproducción](../data/research/basis-audit-20260919/README.md).
 
-Investigación paralela independiente de la descarga:
+## Revisión vigente de ejecución
 
-- Comisiones: se recuperaron la tabla oficial archivada del 31/05/2023 (Regular USDT maker 0,02 %, taker 0,04 %) y dos versiones de la FAQ BTCUSDT: 0,04 % taker el 02/06/2023 y 0,05 % el 20/02/2024. Acreditan documentación publicada, no la fecha efectiva del cambio ni continuidad. Se documentaron cinco exclusiones de promociones/programas que no corresponden al perfil. [Capturas y límites](research/fees_followup_20260918.md).
-- Se generó el inventario de **4.010 eventos económicos de funding sin mark** (2.005 por activo), con timestamp efectivo, tasa y procedencia. Cuatro consultas públicas puntuales y seis páginas de una nueva consulta completa confirmaron los faltantes. La nueva consulta completa recibió 449.953 bytes, con idénticos timestamps y tasas y cero marks recuperados. No se imputaron valores.
-- Comparación de 12 cobros conocidos con velas oficiales: apertura distinta en 2/12; cierre del minuto distinto en 12/12; cierre del minuto anterior distinto en 6/10 comparables. Son contraejemplos de equivalencia exacta, no una estimación de error económico. [Evidencia y fuentes alternativas](research/funding_followup_20260918.md).
-- Seguimiento de reglas: se documentaron antecedentes de especificaciones 2020, cambios de clearance de enero/febrero de 2021 y el mínimo nocional USD-M con exención Reduce-Only de febrero de 2021. No acreditan continuidad ni cierran reglas del período económico 2022–2026. [Fuentes y límites](research/rules_followup_20260918.md). `data/rules/history.json` conserva cero snapshots completos.
-- Se verificaron los **33 hashes** de los inputs y artefactos del seguimiento de funding y la correspondencia exacta de los 4.010 eventos reconsultados. Las tres capturas de comisiones se recuperaron por segunda vez: hashes y fechas Memento idénticos; se guardaron copias locales (1.701.226 bytes) con manifiesto. Esta continuación añade investigación y evidencia; no modifica el motor ni certifica un resultado histórico.
+Se implementó y ejecutó el [instructivo de ajuste 1m](sources/Prompt_Codex_Ajuste_Backtesting_1m.md).
+El [informe de la revisión](D:/Backtesting/outputs/revision_eb5ed744b30836a39fd694fa/execution_revision_report.md)
+es la comparación vigente: cinco escenarios, dos ventanas y dos carteras por
+escenario. Las ocho corridas nuevas y las dos referencias conservadas tienen
+estado `complete`; las referencias originales no se sobrescribieron.
 
-Diagnóstico de descarga y espacio posterior a la interrupción:
+El principal, fijado antes de observar resultados, es `vwap_joint`: VWAP del
+siguiente minuto elegible, fill al cierre, capacidad del 1%, parciales y sizing
+conjunto. `alignment_only` separa el cambio de observación del resto del contrato.
+Cada cartera comienza con 10.000 USDT, sin arrastrar posiciones entre ventanas.
 
-- Inventario de D: de sólo lectura: 230 ZIP completos, un `.part`, 1.574.494.137 bytes en 462 archivos. Se pueden reutilizar al reanudar con el mismo comando.
-- Parquet/ZSTD ya estaba implementado. Los mismos 5.543.505 trades de la muestra ocupan 328.561.923 bytes como CSV sin comprimir, 57.062.373 en ZIP oficiales y 55.076.025 en Parquet activo: ahorro de 83,24 % frente a CSV y 3,48 % frente a ZIP. Los CSV se leen dentro del ZIP sin extraerlos al disco; conservar originales y procesados suma ambos tamaños. [Medición y alcance](descarga_d.md#espacio-y-parquet).
-- Corregido el recorrido de toda la carpeta por cada fragmento de red: la lectura ahora agrupa bloques de 1 MiB y conserva el control antes de cada escritura, reanudación y SHA/CRC. Ensayo local de 1.240.118 bytes y 462 archivos: 77 → 3 recorridos, 2,09 → 0,10 segundos; no mide la conexión a Binance. También se corrigió la eliminación de ZIP corruptos después de cerrar su lector, necesaria en Windows.
-- Verificación actual: **179 passed in 27.76s**, Ruff y formato sin errores. Las ocho pruebas nuevas reprodujeron los problemas antes del cambio y comprueban frecuencia de recorridos, presupuestos exactos/excedidos, reanudación y rechazo de corrupción. Revisión independiente sin hallazgos materiales. No se certifica la velocidad de la descarga completa.
+| Ventana | Cartera principal | Equity final USDT | Retorno | Sharpe | DD diario | Fills |
+|---|---|---:|---:|---:|---:|---:|
+| 01/09/2022–31/08/2023 | Condicional | 10.073,6363 | 0,7364 % | 1,9182 | −0,1224 % | 18 |
+| 01/09/2022–31/08/2023 | Permanente | 10.334,3990 | 3,3440 % | 4,1101 | −0,1359 % | 72 |
+| 01/09/2025–31/08/2026 | Condicional | 10.000,0000 | 0 % | Indefinido | 0 % | 0 |
+| 01/09/2025–31/08/2026 | Permanente | 10.008,5990 | 0,0860 % | 1,9603 | −0,0095 % | 2 |
 
-Preparación posterior para empezar a evaluar y ajustar:
+En la ventana temprana, la condicional sólo abre carry completo en ETH: BTC
+rechaza sus 1.095 evaluaciones por funding. Hay una apertura parcial fallida
+que se desarma y un ciclo completo posterior. La permanente logra seis aperturas
+completas entre ambos activos: cuatro ciclos cerrados y dos todavía abiertos al
+corte. En la tardía, la condicional rechaza las 2.190 evaluaciones por funding
+insuficiente. La permanente tiene una apertura BTC, con cobertura viable gracias
+al sizing conjunto, y permanece invertida al corte. ETH rechaza sus 1.095
+evaluaciones por basis negativo. Los cierres terminales no se inventan.
 
-- Nuevo comando `preflight`, de sólo lectura: coteja los metadatos de la descarga completa prevista y la cobertura temporal de reglas antes de validar. Plan de 13.424 objetos más checksums. La comprobación en D: encontró ausencia del manifiesto final y del archivo de reglas. Nunca certifica integridad ni economía; `ready_for_validation` no equivale a un backtest válido.
-- Validación acotada al intervalo y antecedentes necesarios. Funding se comprueba por filas contra el calendario mensual independiente, cuyo SHA se verifica, incluyendo tasas, intervalos, cobros de la cola, marks y disponibilidad de 60 segundos. Los flags globales de archivos fuera de ventana no invalidan una muestra válida; la evidencia necesaria desconocida sigue bloqueando.
-- Replay acotado por particiones, con antecedente, solapes ordenados y conservación de empates. Prueba controlada de 120 particiones/24.000 filas: 119 → 1 particiones abiertas y 23.771 → 171 registros recorridos para los mismos 21 eventos. Es una demostración funcional, no una estimación del tiempo del histórico completo. Los hashes de procedencia siguen leyendo todos los inputs.
-- Verificación conjunta de esa preparación: **171 passed in 29.16s**; Ruff y formato sin errores. Incluye 18 pruebas de preflight, 19 de replay y 27 de alcance de validación. Revisión independiente de los tres componentes: todos los hallazgos corregidos y reproducidos con regresiones, incluido el bloqueo de fechas invertidas antes de podar particiones. La muestra real se validó en un directorio temporal con enlaces a los inputs originales: funding completo para ambos activos; permanecen únicamente los bloqueos de reglas y discontinuidades de IDs. No se modificaron sus manifiestos originales ni los datos de D:.
-- [Puesta en marcha](puesta_en_marcha.md) registra comandos y pendientes. Falta medir RAM, duración y espacio del motor/reportes a escala; las tablas de resultados aún se conservan en memoria. Normalizar relee los crudos y cada sensibilidad revalida/calcula hashes, limitaciones que deben medirse antes de lanzar las 30 configuraciones.
+H1 conserva menor MAE del EWMA en ambas ventanas, sobre 2.146 observaciones
+comparables y 44 exclusiones por ventana. H2 es contraria al criterio en la
+temprana y no concluyente en la tardía, donde falta Sharpe condicional. H3 muestra
+menor oportunidad y CAGR condicional en la ventana tardía, con 365 días válidos
+en cada una. Son resultados descriptivos de ventanas independientes.
 
-Investigación y verificaciones de la continuación anterior:
+El 24/03/2023 sigue dentro de la muestra. En el principal, el cierre de futuros
+se registra a las 12:00 y el spot a las 14:01 UTC: 121 minutos sin cobertura por
+activo. El cambio diario de equity condicional es 35,9089 USDT, frente a 64,8580
+de la referencia. Para ETH, los fills principales de cierre son 1.746,83 USDT
+en futuros y 1.770,96 en spot. El informe compara BTC y ETH por separado y conserva
+órdenes, precios fuente, volúmenes, funding, fees y ledger; no se restó el episodio
+para fabricar otro backtest anual.
 
-- Se documentaron fuentes oficiales de comisiones, filtros, tramos de mantenimiento y operatividad. La promoción BTCUSDT spot tiene inicio y final acreditados. Faltan, entre otros puntos, la fecha de transición del taker Futures de 0,04% a 0,05% y snapshots históricos completos; `data/rules/history.json` permanece vacío.
-- Se auditaron 14 respuestas públicas de funding: **13.368 registros y 1.583.680 bytes**, con hashes verificados. Dentro del período económico hay **2.005 cobros por activo sin mark**; el primer mark disponible observado es del 31/10/2023 a las 08:00 UTC. No se sustituyeron los valores ausentes.
-- Se añadió `python -m crypto_carry.data.reconcile`, una auditoría offline de trades Futures contra velas de operaciones de un minuto. La muestra concilia exactamente **2.197.331 trades BTC y 1.694.881 ETH** en sus 1.440 minutos por activo. Identifica una anomalía de `quote_qty` BTC y conserva los 50 saltos de IDs como diagnóstico, sin modificar los crudos ni relajar la validación histórica.
-- Pruebas de esa continuación: `python -m pytest -q --tb=short` → **107 passed in 22.98s**; `ruff check src tests` y `ruff format --check src tests`, sin errores. Las 14 pruebas nuevas cubren conciliación, datos omitidos, valores inválidos, esquemas, cambios del archivo durante la lectura y precisión decimal. Una revisión independiente confirmó las correcciones y repitió esas 14 pruebas. La auditoría de ambos ZIP reales produjo los mismos informes después de las correcciones.
-- Detalle, fuentes, limitaciones y comandos: [Investigación histórica y auditorías](research/README.md). No hacen falta credenciales ni una nueva confirmación para continuar buscando evidencia y probando el software. Cambiar fechas económicas o admitir aproximaciones sigue requiriendo una decisión metodológica explícita.
-- Requisito posterior del usuario: máxima fiabilidad ante una posible prueba futura con capital. Se revisaron las simplificaciones de ejecución y riesgo y se documentaron [criterios y validaciones pendientes](fiabilidad.md), incluidos datos nuevos y simulación en vivo. Es una revisión documental; no habilita operaciones ni modifica la descarga o el motor.
+### Verificación y procedencia
 
-Las corridas de la tabla siguiente se conservan como evidencia de la entrega del 17/09. El nuevo módulo modifica el hash del código para futuras corridas; no se atribuyen los identificadores anteriores a esta versión ni se recalcularon resultados históricos incompletos.
+- **398 pruebas aprobadas** en 41,50 s; Ruff check y format --check limpios.
+- Matriz piloto real completa en `[2023-01-14,2023-01-16)` y
+  `[2026-08-21,2026-08-23)`, con calentamiento y carteras independientes. Son
+  comprobaciones de software elegidas por actividad conocida de la referencia,
+  no calibración de parámetros ni evidencia anual adicional.
+- [Auditoría económica independiente](../data/research/minute-download-20260918/execution-revision-audit.json):
+  diez corridas y **520 fills**, caja, inventario, fees y funding reconstruidos
+  sin importar el ledger del motor. Los VWAP se contrastaron directamente con
+  los ZIP originales: 76 comprobaciones en total, contando las repeticiones
+  entre corridas que comparten fuentes. No hubo discrepancias; máximo residuo de caja de aproximadamente
+  `2,413e-24` USDT, frente a la tolerancia `1e-8`.
+- No hubo descargas adicionales. Se recuperaron OHLC y ambos volúmenes desde
+  la caché; se agregaron 260.960.966 bytes de Parquet compartido. La medición
+  posterior de las dos carpetas de datos fue 956.984.856 bytes.
+- Código de las simulaciones nuevas:
+  `4e78e13aa1618137f790a0253c43355b31fe184eaa9bfdac12b61ad6d2a129ac`.
+  Después se corrigió únicamente la presentación de precios de cierre por activo
+  y se añadió regeneración de la comparación desde sus tablas verificadas. El
+  informe registra por separado su versión y la de cada simulación: no se
+  modificaron fills, equity ni configuraciones para esa regeneración.
+- Los scripts privados, snapshots de código y registro de tiempos permanecen
+  en `.superpowers/execution-revision/`; la auditoría reproducible se publica
+  en [verify_execution_revision.py](../data/research/minute-download-20260918/verify_execution_revision.py).
 
-## Entrega verificada — 2026-09-17 (registro anterior)
-
-**Software implementado y verificado; evaluación histórica estricta pendiente.** No se amplió la descarga de trades después de la muestra. `configs/base.toml` conserva los parámetros confirmados y digest `e1437d00668b6fb1d4a06dcb145d161fadf4e2dc293314aae84d9edb381be07e`.
-
-- `uv sync --frozen`: entorno reproducible, Python 3.14.3 y NautilusTrader 1.231.0. NumPy 2.3.5 evita los avisos de incompatibilidad de unidades temporales encontrados con 2.5.3. Pandas 2.3.3, PyArrow 25.0.1, Matplotlib 3.11.2, HTTPX 0.28.1; versiones completas en `uv.lock` y manifests.
-- `uv run pytest -q --tb=short`: **93 passed in 21.98s**, sin warnings. `ruff check src tests`: sin errores; formato verificado. Incluye prueba integral con apertura de ambas patas, funding, renovación, cierre con retry y conciliación nativa/económica.
-- Revisiones independientes: `tasks/core_review.md` y `tasks/delivery_review.md`; todos sus hallazgos corregidos, reproducidos como regresiones y verificados. La última revisión focalizada de CLI pasó 7/7 sin warnings.
-- Muestra oficial: **14 objetos**. La primera fase descargó 12 y probó su caché; se añadieron dos ZIP de marks del día anterior para disponer de un mark cerrado inicial. Los trades siguen limitados al 01/01/2024 UTC. Funding incluye antecedentes desde el 16/12/2023.
-- Normalización final: **63 particiones, 5.549.365 filas**, cero errores internos: 5.543.505 trades, 5.760 marks (dos días por activo), 100 tasas verificadas con settlement mark presente. Se contrastan timestamps, duración nominal publicada, duración efectiva exacta y tasas entre fuentes. Se preservan los milisegundos reales de liquidación.
-- Almacenamiento medido después de validar: **112.692.905 bytes bajo data/** (0,113 GB), frente al máximo **20.000.000.000**. Crudos: 57.208.419 bytes; procesados incluidos versiones conservadas: 55.374.787. D: mantiene 957.918.044.160 bytes libres. No fue necesario mover ni ampliar.
-- Cobertura estricta `incomplete_data`: faltan reglas históricas verificadas de los cuatro mercados y hay discontinuidades de IDs en ambos archivos de Futures. Spot, marks y funding pasan sus controles propios. **No se ejecutó ningún período histórico económico como completo.** Tampoco se descargó el período completo 2020–2026.
-- Demo: ambas carteras completaron diez días sintéticos con el motor real. Repetirla desde su `effective_config.toml` produjo **el mismo run_id y los mismos resultados**, verificando los 38 artefactos existentes antes de reutilizarlos. Reporte y doce figuras regenerados sin diferencias de bytes.
-- Robustez histórica: las **30 configuraciones / 60 filas de comparación** tienen config/salida propia. Permanecen `incomplete_data`; no se ejecutaron sensibilidades económicas sobre un baseline no verificado. El índice agregado y sus subcorridas pasaron verificación y regeneración.
-
-### Corridas reales generadas por los comandos
-
-| Tipo | ID | Estado | Informe |
-|---|---|---|---|
-| Demo sintética (28/12/2023–06/01/2024) | `run_4af4a649dc7f816177638a13` | complete, sólo software | [Demo](../outputs/run_4af4a649dc7f816177638a13/report.md) |
-| Muestra histórica 01/01/2024 | `run_07777fef933238052ad040ba` | incomplete_data, sin curva inventada | [Calidad e impedimentos](../outputs/run_07777fef933238052ad040ba/report.md) |
-| Baseline histórico solicitado 2022–2026 | `run_c20147bd0400f321b7bf5f50` | incomplete_data, sin resultados económicos | [Baseline](../outputs/run_c20147bd0400f321b7bf5f50/report.md) |
-| Índice de robustez histórica | `robustness-997ddc3ab922a741` | incomplete_data, 30 configuraciones | [Robustez](../outputs/robustness-997ddc3ab922a741/report.md) |
-
-Comandos ejecutados: `doctor`, `download` (sample), `validate-data` (normalización y luego control independiente con `--skip-normalize`), `backtest --sample --strategy both`, `backtest --strategy both`, `robustness`, `demo`, repetición de demo desde config guardada y `report` para la demo y el índice. Los comandos de datos/evaluación histórica devolvieron el estado incompleto previsto; es un resultado del control de cobertura, no una prueba aprobada del backtest económico. Los comandos de reporte verifican integridad aunque el estado económico sea incompleto.
-
-Reproducción comprobada:
+Para verificar y regenerar la comparación guardada, sin repetir simulaciones:
 
 ```powershell
-uv run python -m crypto_carry demo --config outputs/run_4af4a649dc7f816177638a13/effective_config.toml
-uv run python -m crypto_carry report --run-id run_4af4a649dc7f816177638a13
-uv run python -m crypto_carry report --run-id robustness-997ddc3ab922a741
+& '.\.venv\Scripts\python.exe' -m crypto_carry --root 'D:\Backtesting' report --run-id revision_dcf7d66e69aaf51cea4590ff
 ```
 
-Los informes anteriores que aparecen en `outputs/` conservan sus hashes/versiones; no se sobrescribieron. Los enlaces de esta tabla corresponden al código verificado el 17/09/2026.
+El comando para ejecutar de nuevo toda la matriz está en el [README](../README.md#reproducir-la-comparación).
+Las reglas históricas prescritas, el proxy de mark temprano y las limitaciones
+de ejecución siguen explícitos; `complete` describe la corrida bajo esos
+supuestos, no una reconstrucción exacta del mercado.
 
-## Decisiones previas confirmadas
+## Referencia anterior — 18/09/2026
 
-- VIP 0 fijo, sin BNB ni referidos; promociones generales únicamente documentadas.
-- Máximo inicial de datos: 20.000.000.000 bytes. Validar muestra antes de ampliar.
-- Disco D: comprobado con aproximadamente 958 GB libres; la muestra permanece dentro de Backtesting.
-- Python local 3.14.3, Windows 11 x64. Se instaló el wheel Windows CPython 3.14 de NautilusTrader 1.231.0 y se verificaron importación y replay.
-- Carpeta inicialmente vacía y sin repositorio; trabajo en rama local codex/crypto-carry, dentro de la ubicación solicitada.
-- Entregas 1 y 2 leídas en la carpeta vecina Informes. La Entrega 2 local no tiene el sufijo (6); no se afirma identidad de versiones.
-- No se encontraron el DOCX de entregables ni la imagen de feedback; se aplica el texto autocontenido autorizado.
-- Consulta pública BTC del 01/01/2022: tasas disponibles, markPrice vacío. No se sustituirá por un cierre de minuto.
-- La estimación de los 224 ZIP mensuales de trades del período económico fue 210.421 GB comprimidos, medidos por HEAD. La descarga iniciada posteriormente usa archivos diarios e incluye preparación desde 2020; no representa el mismo conjunto ni tamaño total.
+### Estado de la referencia anterior
 
-## Hitos
+Se aprobaron dos ventanas de doce meses con modelo por minuto, para apuntar a
+terminar en 48 horas. El [protocolo](escenario_investigacion.md) fija las fechas,
+supuestos y pendientes; la [guía de descarga](descarga_d.md) contiene el comando.
 
-- [x] 1. Configuración, entorno, CLI e integración efectiva Nautilus.
-- [x] 2. Pipeline, muestra, controles y reglas por vigencia; faltantes históricos identificados.
-- [x] 3. Forecast, contabilidad, sizing y margen, con pruebas numéricas independientes.
-- [x] 4. Estados, riesgos, ejecución, particiones, checkpoints e integración completa.
-- [ ] 5. Evaluación histórica económica: bloqueada por reglas y continuidad de fuentes. Reportes diagnósticos y demo terminados.
-- [ ] 6. Evaluación histórica de robustez: bloqueada por baseline. Infraestructura, 30 configuraciones y motivos de no evaluación entregados.
-- [x] 7. Reproducción del software, revisión, artefactos, documentación y separación histórica/sintética.
+- **Descarga terminada:** ambas ventanas informan `download_complete`, 106/106
+  archivos/respuestas cada una, sin errores: 208 ZIP más cuatro respuestas de
+  funding. Se incorporaron seis ZIP diarios oficiales para completar los marks.
+  Ambas ventanas pasaron la cobertura anual. Crudos, Parquet y manifiestos
+  ocupan aproximadamente 643 MB en D:; el usuario eliminó los datos masivos viejos.
+- **Motor por minuto implementado:** eventos de precio y volumen separados,
+  fills posteriores, vencimiento de 120 segundos, conciliación nativa y
+  reanudación entre patas. Ambas corridas anuales terminaron con cobertura completa.
+- **Piloto de trades:** diez minutos del 01/01/2024, seis fills nativos por
+  cartera y conciliación exacta. Se conservan los cuatro ZIP originales y las
+  auditorías; el día completo no está certificado por discontinuidades de IDs.
+- **Contraste por minuto:** conserva seis fills y diferencia contable cero;
+  equity final de 9.988,4700 frente a 9.985,5135 USDT con trades. El control
+  con trades y timeout de 120 segundos no altera el resultado original.
+- **Pilotos de 14 días:** ambas ventanas terminan sin órdenes, por los filtros
+  de funding/costo y base. El piloto 2022 tarda 22,23 segundos incluyendo
+  validación e informes, con pico de 868 MB. La prueba sintética adicional
+  verifica una renovación a las 168 horas de simulación y funding cobrado.
+- **Funding y reglas:** escenario de supuestos aprobados implementado; fuentes
+  originales conservadas. En la ventana 2022–2023 se usaron 2.190 proxies de
+  cobro y en 2025–2026, 2.190 marks exactos; el calentamiento se cuenta aparte.
 
-Los hitos se cierran solamente con evidencia. Software y cobertura histórica se certifican por separado.
+## Resultados base
 
-## Registro intermedio anterior al cierre
+El [informe comparativo final](D:/Backtesting/outputs/study_655500e757a0c745e8332605/report.md)
+reúne las cuatro carteras, hipótesis, siete sensibilidades por ventana y la
+discusión crítica de ejecución. Su carpeta incluye CSV, JSON y el gráfico de
+costos en PNG/SVG, con inventario y hashes verificados.
 
-Las cifras siguientes documentan pasos previos; el estado vigente es el bloque «Avance actual» de arriba.
+Cada fila parte de 10.000 USDT. Son precios observados con reglas y ejecución
+prescritas; no una reconstrucción exacta del mercado histórico.
 
-- Entorno instalado: Python 3.14.3 + NautilusTrader 1.231.0; uv.lock guardado. PyArrow 25 requerido por Nautilus. Pandas fijado a 2.3.3 para API estable.
-- Adaptador real: replay de CustomData por timestamp, órdenes nativas aceptadas, fills mediante OrderMatchingEngine.fill_order y conciliación de posiciones. Cuenta nativa congelada/comisión cero; ledger económico único. Sin feeds nativos de funding ni matching automático de trades/barras.
-- Pruebas de temporización: datos antes de timers coincidentes, primer trade estrictamente posterior y anterior al deadline, segundo entre patas, conservación de exposición al terminar.
-- Primitivas financieras y regresiones de integración: EWMA, costos 1x/2x/3x, reducción de sizing, funding deduplicado entre fuentes, transferencia de efectivo Futures para spot, margen por tramos, deuda y conciliación.
-- Estado/ejecución: aperturas, desarme, retries, renovación positiva por debajo del costo de entrada, rebalanceo de reducción, riesgo antes de renovación, liquidación total e insolvencia probadas.
-- Checkpoint JSON con hash (sin pickle), restauración de posiciones nativas sin doble movimiento económico, timer pendiente entre patas conservado. Corrida continua y reanudada generan iguales fills, ledger, equity y tiempos de exposición.
-- Último conjunto general ejecutado: 52 pruebas aprobadas, antes de agregar evaluación (3 aprobadas) y escenarios adicionales (12 pruebas de estrategia aprobadas). Hay avisos de deprecación de dependencias NumPy/Pandas; no fallos de negocio.
-- Datos: subagente informa 12/12 objetos oficiales descargados, 57.144.001 bytes, checksum/ZIP verificados; normalización en curso. No constituye todavía una evaluación histórica económica.
-- En ese punto quedaban reportes, CLI, demo/robustez, validación y revisión; se completaron como software en el cierre documentado arriba, manteniendo los bloqueos históricos.
+| Ventana | Cartera | Equity final USDT | Retorno neto | Fills |
+|---|---|---:|---:|---:|
+| 2022–2023 | Condicional | 10.111,8155 | 1,1182 % | 16 |
+| 2022–2023 | Permanente | 10.205,4397 | 2,0544 % | 82 |
+| 2025–2026 | Condicional | 10.000,0000 | 0 % | 0 |
+| 2025–2026 | Permanente | 9.979,6703 | −0,2033 % | 8 |
+
+Corridas verificadas, 43 archivos cada una:
+`D:\Backtesting\outputs\run_8fb22fa8b377466cff981b99` y
+`D:\Backtesting\outputs\run_0cb21afbec7cdba1e5848df6`.
+Tardaron 310,14 y 268,14 segundos, con picos de memoria de aproximadamente
+1,63 GB. Los fills económicos coinciden con los nativos. Los residuos contables
+máximos observados al cierre son del orden de 10⁻²⁴ USDT, inferiores a la
+tolerancia predefinida de 10⁻⁸ USDT.
+
+La cartera permanente mantiene los filtros de base y riesgo; su nombre no
+significa exposición continua. En 2025–2026 la condicional no operó, por lo que
+su Sharpe es indefinido y ese cero no acredita un rendimiento de inversión.
+Las dos aperturas de BTC de la permanente en esa ventana se deshicieron al
+superar la tolerancia de desbalance del 0,5 % por el redondeo de cantidades
+al paso permitido del contrato; no generaron cobros de funding.
+Las siete sensibilidades priorizadas por ventana terminaron con estado
+`complete`: 14 escenarios adicionales, ambos tipos de cartera en cada uno.
+Se verificaron los dos índices y todos sus artefactos vinculados, sin
+discrepancias: `robustness-25034b88ecfa92b9` (2022–2023) y
+`robustness-c252528c4dd8d7a3` (2025–2026), dentro de `D:\Backtesting\outputs`.
+
+En 2022–2023, costos dobles y triples dejan a la condicional sin operaciones;
+la permanente obtiene 1,4747 % y 0,5430 %, respectivamente. Con futuros a
+0,04 %, los retornos son 1,4677 % y 2,3437 %. Ninguna de estas variantes
+respalda una ventaja del filtro frente a la permanente. El resultado no
+monótono de costos de 2025–2026 se explica por cambios de cantidades y
+aceptación de la cobertura; no compara una trayectoria de operaciones fija.
+
+H1 muestra menor error descriptivo del EWMA en ambas ventanas. H2 es contrario
+al criterio predefinido en 2022–2023 y no concluyente en 2025–2026, donde la
+condicional no opera. La oportunidad media y el CAGR condicional son menores
+en la ventana tardía; es una comparación de ventanas independientes, sin
+atribución causal. Las demás sensibilidades del motor —AUM, slippage aislado,
+demoras y parámetros del pronóstico— no se ejecutaron en este conjunto.
+
+La revisión de la curva identificó una concentración relevante: el 24/03/2023,
+durante la suspensión spot, el cambio diario de equity fue de 64,8580 USDT
+para la condicional y 66,4975 para la permanente. Representa el 58,0 % y
+32,4 % de sus respectivas ganancias finales. El cierre de futuros a las
+11:59 dejó spot sin cobertura hasta las 14:00, tras 60 órdenes vencidas por
+cartera. La auditoría reconstruye los 121 minutos de exposición direccional.
+
+El [contraste con trades del episodio](../data/research/minute-download-20260918/outage-trades-validation.json)
+confirma la referencia spot de 1.789,51 USDT a las 14:00:00.059. El precio
+cambió 32 milisegundos después; el VWAP de los primeros cinco segundos fue
+1.780,5749 USDT. Hay volumen observado y continuidad de IDs en las ventanas
+cortas, pero no evidencia de prioridad en cola ni de que una orden real pudiera
+enviarse y mantenerse durante la suspensión. Es un diagnóstico de sensibilidad
+de ejecución: no modifica el baseline ni recalcula una rentabilidad anual.
+
+## Evidencia que se conserva
+
+- [Preparación de la descarga](../data/research/minute-download-20260918/preparation.json).
+- [Recuperación de fuentes diarias](../data/research/minute-download-20260918/source-repair-audit.json).
+- [Cobertura de ambas ventanas y conteos de funding](../data/research/minute-download-20260918/annual-data-validation.json).
+- [Contraste de ejecución](../data/research/research-scenario-20260918/tick-minute-comparison.json).
+- [Tiempo y memoria del piloto](../data/research/minute-download-20260918/runtime-2022-pilot.json).
+- [Tiempo y memoria anual 2022–2023](../data/research/minute-download-20260918/runtime-2022-annual.json).
+- [Tiempo y memoria anual 2025–2026](../data/research/minute-download-20260918/runtime-2025-annual.json).
+- [Auditoría financiera independiente de las cuatro carteras](../data/research/minute-download-20260918/annual-economic-audit.json): equity final reconstruido, 106 fills contrastados con sus precios fuente, comisiones, redondeo adverso y tiempos de orden.
+- [Trades del cierre durante la suspensión](../data/research/minute-download-20260918/outage-trades-validation.json): dos ZIP oficiales adicionales, 49,14 MB, conservados en D: para verificar el episodio que concentra la ganancia.
+- [Verificación del piloto](../data/research/research-scenario-20260918/pilot-artifact-verification.json).
+- [Auditoría de proxies](../data/research/research-scenario-20260918/funding-resolver-verification.json).
+- [H1 preliminar, horizonte original](research/funding_h1_preliminary_20260918.md).
+- [Fuentes y auditorías históricas](research/README.md).
+
+La limpieza retiró las configuraciones de descarga masiva y de ventanas de
+trades, el comando `prepare-window`, las proyecciones de plazos descartadas y
+los borradores internos de implementación. Se consolidaron las guías.
+La muestra, las fuentes que respaldan reglas/proxies, las pruebas del motor
+y las salidas de validación se conservaron.
+
+La última suite completa ejecutada pasó **302 pruebas** y Ruff. La revisión
+independiente comprobó cobertura, causalidad, checkpoints, reglas de ejecución
+y procedencia de los suplementos. Los scripts de auditoría se ejecutaron y
+contrastaron de nuevo con la evidencia guardada; Ruff también aprobó esos
+scripts. El código y el lock de dependencias conservan la identidad usada en
+todos los escenarios. Las pruebas sintéticas permanecen separadas de los
+resultados económicos con supuestos.

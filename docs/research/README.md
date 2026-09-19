@@ -1,8 +1,13 @@
 # Investigación histórica y auditorías — 18/09/2026
 
-Esta continuación se realizó mientras el usuario descargaba la historia completa en `D:\Backtesting`. Las consultas adicionales y auditorías usan una carpeta de investigación separada en C:. No se alteraron la descarga activa, los ZIP originales, la configuración económica ni el registro ejecutable de reglas históricas.
+Este índice conserva la evidencia histórica obtenida durante la investigación. Los rangos y conteos siguientes corresponden al horizonte original, no a las dos ventanas anuales actuales. El [protocolo vigente](../escenario_investigacion.md) registra las aproximaciones ya aprobadas, el modelo por minuto y los pasos pendientes. Las fuentes en C: se mantienen porque justifican esos supuestos.
 
 ## Evidencia obtenida
+
+La [auditoría del basis del 19/09/2026](../../data/research/basis-audit-20260919/README.md)
+corresponde a las ventanas actuales: 4.380 observaciones contrastadas con sus
+velas originales. Confirma el basis y documenta la corrección de presentación
+del funding omitido por la permanente, sin modificar resultados económicos.
 
 | Tema | Resultado | Artefacto |
 | --- | --- | --- |
@@ -32,7 +37,7 @@ El [changelog oficial USD-M](https://developers.binance.com/en/docs/products/der
 
 Las diferencias de hora nominal entre eventos son ocho horas en esta consulta; esto es un diagnóstico, no sustituye la comprobación independiente del calendario publicado ni modifica los timestamps efectivos. No se rellenaron los marks con cero, con el precio actual ni con velas. Una API key no añade un parámetro de reconstrucción de estos precios ausentes.
 
-La evaluación estricta desde 2022 sigue necesitando otra fuente que acredite esos marks. Aceptar una aproximación o cambiar la ventana económica requeriría una decisión metodológica explícita del usuario. Tampoco basta resolver funding para certificar la muestra: siguen pendientes las reglas.
+La evaluación estricta desde 2022 necesitaría otra fuente que acredite esos marks. Para el escenario de investigación el usuario aprobó posteriormente un proxy causal y reglas prescritas; esa aprobación no convierte las aproximaciones en observaciones históricas exactas.
 
 El [seguimiento posterior](funding_followup_20260918.md) deja cada faltante identificado para evaluar otras fuentes y demuestra con contraejemplos que las aperturas de velas de mark price no son un reemplazo exacto general. La investigación pública de funding y reglas no depende de finalizar la descarga de trades. Ningún mark faltante se rellenó en los inputs ejecutables.
 
@@ -64,8 +69,11 @@ El comando es offline y solo lee los ZIP. Emite JSON con hashes, intervalo compa
 
 La auditoría exige el esquema y ancho de columnas esperados, vuelve a comprobar la identidad de los archivos después de leerlos y falla si la aritmética Decimal pierde precisión. Sus 14 pruebas pasaron, junto con la suite completa de 107 pruebas. Los resultados de ambos archivos reales se reprodujeron sin diferencias después de la revisión independiente.
 
-## Próximos pasos y decisiones
+## Uso de esta evidencia
 
-Se puede seguir sin credenciales ni nuevas confirmaciones con la búsqueda de capturas históricas, la fecha de transición de comisiones, conciliaciones adicionales y las pruebas del software. Antes de incorporar reglas parciales al motor falta resolver su vigencia, disponibilidad temporal y efecto sobre posiciones anteriores.
-
-No se adoptaron tarifas constantes supuestas, ausencia de suspensiones por descarte, deducciones históricas ficticias ni sustitutos del mark de cobro. Si la evidencia sigue faltando, las opciones a evaluar con el usuario son conservar el requisito estricto, limitar un estudio adicional a una ventana verificable o definir un escenario de aproximaciones expresamente separado. Ninguna opción convierte esta descarga en una evaluación histórica completa automáticamente.
+Las fuentes sustentan las limitaciones y sensibilidades del escenario aprobado.
+Se conserva su procedencia; no se reclasifican reglas parciales o proxies como
+historia exacta. Las dos ventanas por minuto ya se descargaron, normalizaron,
+validaron y ejecutaron. [Avance y evidencia](../progress.md) registra los baselines,
+las auditorías actuales y el estado de las sensibilidades. Esta ruta usa fuentes
+públicas y no requiere contactar soporte ni contratar proveedores de datos.

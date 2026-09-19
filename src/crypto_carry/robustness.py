@@ -32,7 +32,7 @@ class Scenario:
 
 def scenario_configs(base: Config) -> list[Scenario]:
     result = [Scenario("baseline", "baseline", "base", base, ())]
-    dimensions = (
+    dimensions = [
         ("cost", "cost_multiplier", (D(1), D(2), D(3))),
         ("slippage", "slippage", (D(0), D(".0001"), D(".0002"), D(".0005"))),
         ("half_life", "half_life_hours", (12, 24, 48)),
@@ -40,13 +40,16 @@ def scenario_configs(base: Config) -> list[Scenario]:
         ("signal_delay", "signal_delay_seconds", (60, 120, 300)),
         ("leg_delay", "leg_delay_seconds", (1, 5, 10)),
         ("horizon", "horizon_hours", (72, 168, 336)),
-        ("execution", "execution_model", ("first_trade", "vwap")),
         ("start", "start", ("2023-01-01T00:00:00Z", "2024-01-01T00:00:00Z")),
         ("aum", "capital", (D(10000), D(100000), D(1000000))),
-    )
+    ]
+    if base.execution_model not in ("minute_open", "next_minute_vwap"):
+        dimensions.insert(7, ("execution", "execution_model", ("first_trade", "vwap")))
     for dimension, field, values in dimensions:
         for value in values:
-            if dimension == "start" and timestamp(value) >= timestamp(base.end):
+            if dimension == "start" and not (
+                timestamp(base.start) <= timestamp(value) < timestamp(base.end)
+            ):
                 continue
             changes = {field: value}
             if dimension == "horizon":
@@ -142,6 +145,8 @@ def run_robustness(
                         timestamp(config.end),
                         config.window_hours + 24,
                         data_dir=config.data_dir,
+                        execution_model=config.execution_model,
+                        include_closed_bars=config.signal_price_model == "closed_minute",
                     )
                 )
                 results.append(

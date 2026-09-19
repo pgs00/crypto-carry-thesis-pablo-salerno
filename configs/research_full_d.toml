@@ -1,9 +1,0 @@
-# Explicit research scenario; all strategy defaults are unchanged.
-# Prices and execution remain individual trades. Not certified historical rules.
-analysis_mode = "prescribed_research"
-fee_profile = "prescribed_fixed_no_discounts"
-funding_proxy_stress_bps = "0"
-research_futures_taker_fee = "0.0005"
-research_maintenance_multiplier = "1"
-research_liquidation_fee = "0.0125"
-data_budget_bytes = 800000000000

@@ -83,6 +83,11 @@ def parser() -> argparse.ArgumentParser:
             )
     sub = commands.add_parser("report")
     sub.add_argument("--run-id", required=True)
+    sub = commands.add_parser("execution-revision")
+    sub.add_argument("--early-config", required=True)
+    sub.add_argument("--late-config", required=True)
+    sub.add_argument("--sample", action="store_true", help="Run configured short samples first")
+    sub.add_argument("--no-reuse-references", action="store_true")
     return p
 
 
@@ -90,6 +95,28 @@ def main(argv: list[str] | None = None) -> int:
     args = parser().parse_args(argv)
     root = Path(args.root).resolve()
     try:
+        if args.command == "execution-revision":
+            from .execution_revision import run_execution_revision, verify_execution_revision
+
+            path = run_execution_revision(
+                root,
+                Path(args.early_config).resolve(),
+                Path(args.late_config).resolve(),
+                reuse_references=not args.no_reuse_references,
+                sample=args.sample,
+            )
+            verification = verify_execution_revision(path)
+            print(
+                json.dumps(
+                    {
+                        "revision_id": path.name,
+                        "report": str(path / "execution_revision_report.md"),
+                        "verification": verification,
+                    },
+                    ensure_ascii=False,
+                )
+            )
+            return 0 if verification.get("status") == "complete" else 2
         if args.command == "report":
             if (
                 not args.run_id
@@ -100,6 +127,24 @@ def main(argv: list[str] | None = None) -> int:
             from .reporting import regenerate_report, verify_run
 
             path = _inside(root, "outputs/" + args.run_id)
+            if (path / "revision_manifest.json").is_file():
+                from .execution_revision import (
+                    rebuild_execution_revision,
+                    verify_execution_revision,
+                )
+
+                rebuilt = rebuild_execution_revision(root, path)
+                result = verify_execution_revision(rebuilt)
+                print(
+                    json.dumps(
+                        {
+                            "report": str(rebuilt / "execution_revision_report.md"),
+                            "verification": result,
+                        },
+                        ensure_ascii=False,
+                    )
+                )
+                return 0 if result.get("status") == "complete" else 2
             manifest = json.loads((path / "run_manifest.json").read_text(encoding="utf-8"))
             if isinstance(manifest, dict) and manifest.get("kind") == "robustness_index":
                 from .robustness import regenerate_robustness, verify_robustness
@@ -146,7 +191,18 @@ def main(argv: list[str] | None = None) -> int:
             print(json.dumps(result, ensure_ascii=False, indent=2))
             return 0
         if args.command == "download":
-            result = download(config, root, scope=args.scope)
+            if config.execution_model in ("minute_open", "next_minute_vwap"):
+                from .data.minute_download import download_minutes
+
+                if args.scope == "sample":
+                    config = config.changed(
+                        history_start=config.sample_start,
+                        start=config.sample_start,
+                        end=config.sample_end,
+                    )
+                result = download_minutes(config, root)
+            else:
+                result = download(config, root, scope=args.scope)
             counts = dict(Counter(e["status"] for e in result["entries"]))
             print(
                 json.dumps(dict(counts=counts, bytes_used=result["bytes_used"], scope=args.scope))
@@ -226,6 +282,8 @@ def main(argv: list[str] | None = None) -> int:
                         timestamp(config.end),
                         config.window_hours + 24,
                         data_dir=config.data_dir,
+                        execution_model=config.execution_model,
+                        include_closed_bars=config.signal_price_model == "closed_minute",
                     )
                 )
                 b.run(

@@ -1,0 +1,1226 @@
+{
+  "checked_at": "2026-09-18T20:31:32.368558+00:00",
+  "availability": {
+    "summary": {
+      "archives": 208,
+      "available": 208,
+      "zip_bytes": 257252762,
+      "failures": []
+    },
+    "archives": [
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2022-08.zip",
+        "status": 200,
+        "bytes": 2318381
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2022-08.zip",
+        "status": 200,
+        "bytes": 1897142
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/BTCUSDT/1m/BTCUSDT-1m-2022-08.zip",
+        "status": 200,
+        "bytes": 1122119
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2022-08.zip",
+        "status": 200,
+        "bytes": 997
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2022-08.zip",
+        "status": 200,
+        "bytes": 2107847
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2022-08.zip",
+        "status": 200,
+        "bytes": 1980362
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/ETHUSDT/1m/ETHUSDT-1m-2022-08.zip",
+        "status": 200,
+        "bytes": 1090249
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2022-08.zip",
+        "status": 200,
+        "bytes": 1000
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2022-09.zip",
+        "status": 200,
+        "bytes": 2260540
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2022-09.zip",
+        "status": 200,
+        "bytes": 1842043
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/BTCUSDT/1m/BTCUSDT-1m-2022-09.zip",
+        "status": 200,
+        "bytes": 1086101
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2022-09.zip",
+        "status": 200,
+        "bytes": 960
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2022-09.zip",
+        "status": 200,
+        "bytes": 2020746
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2022-09.zip",
+        "status": 200,
+        "bytes": 1905953
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/ETHUSDT/1m/ETHUSDT-1m-2022-09.zip",
+        "status": 200,
+        "bytes": 1046629
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2022-09.zip",
+        "status": 200,
+        "bytes": 1016
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2022-10.zip",
+        "status": 200,
+        "bytes": 2300603
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2022-10.zip",
+        "status": 200,
+        "bytes": 1847485
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/BTCUSDT/1m/BTCUSDT-1m-2022-10.zip",
+        "status": 200,
+        "bytes": 1055224
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2022-10.zip",
+        "status": 200,
+        "bytes": 950
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2022-10.zip",
+        "status": 200,
+        "bytes": 2020787
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2022-10.zip",
+        "status": 200,
+        "bytes": 1906554
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/ETHUSDT/1m/ETHUSDT-1m-2022-10.zip",
+        "status": 200,
+        "bytes": 1002725
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2022-10.zip",
+        "status": 200,
+        "bytes": 1004
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2022-11.zip",
+        "status": 200,
+        "bytes": 2241831
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2022-11.zip",
+        "status": 200,
+        "bytes": 1801135
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/BTCUSDT/1m/BTCUSDT-1m-2022-11.zip",
+        "status": 200,
+        "bytes": 1076530
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2022-11.zip",
+        "status": 200,
+        "bytes": 1000
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2022-11.zip",
+        "status": 200,
+        "bytes": 1994209
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2022-11.zip",
+        "status": 200,
+        "bytes": 1878009
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/ETHUSDT/1m/ETHUSDT-1m-2022-11.zip",
+        "status": 200,
+        "bytes": 1026947
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2022-11.zip",
+        "status": 200,
+        "bytes": 987
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2022-12.zip",
+        "status": 200,
+        "bytes": 2261860
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2022-12.zip",
+        "status": 200,
+        "bytes": 1765742
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/BTCUSDT/1m/BTCUSDT-1m-2022-12.zip",
+        "status": 200,
+        "bytes": 1062630
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2022-12.zip",
+        "status": 200,
+        "bytes": 982
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2022-12.zip",
+        "status": 200,
+        "bytes": 1955495
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2022-12.zip",
+        "status": 200,
+        "bytes": 1862705
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/ETHUSDT/1m/ETHUSDT-1m-2022-12.zip",
+        "status": 200,
+        "bytes": 1001888
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2022-12.zip",
+        "status": 200,
+        "bytes": 964
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2023-01.zip",
+        "status": 200,
+        "bytes": 2304509
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2023-01.zip",
+        "status": 200,
+        "bytes": 1824474
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/BTCUSDT/1m/BTCUSDT-1m-2023-01.zip",
+        "status": 200,
+        "bytes": 1122553
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2023-01.zip",
+        "status": 200,
+        "bytes": 863
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2023-01.zip",
+        "status": 200,
+        "bytes": 1989184
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2023-01.zip",
+        "status": 200,
+        "bytes": 1886386
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/ETHUSDT/1m/ETHUSDT-1m-2023-01.zip",
+        "status": 200,
+        "bytes": 1049805
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2023-01.zip",
+        "status": 200,
+        "bytes": 819
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2023-02.zip",
+        "status": 200,
+        "bytes": 2109501
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2023-02.zip",
+        "status": 200,
+        "bytes": 1688103
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/BTCUSDT/1m/BTCUSDT-1m-2023-02.zip",
+        "status": 200,
+        "bytes": 996170
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2023-02.zip",
+        "status": 200,
+        "bytes": 808
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2023-02.zip",
+        "status": 200,
+        "bytes": 1828792
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2023-02.zip",
+        "status": 200,
+        "bytes": 1722282
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/ETHUSDT/1m/ETHUSDT-1m-2023-02.zip",
+        "status": 200,
+        "bytes": 935710
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2023-02.zip",
+        "status": 200,
+        "bytes": 821
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2023-03.zip",
+        "status": 200,
+        "bytes": 2300446
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2023-03.zip",
+        "status": 200,
+        "bytes": 1907895
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/BTCUSDT/1m/BTCUSDT-1m-2023-03.zip",
+        "status": 200,
+        "bytes": 1115182
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2023-03.zip",
+        "status": 200,
+        "bytes": 956
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2023-03.zip",
+        "status": 200,
+        "bytes": 2052232
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2023-03.zip",
+        "status": 200,
+        "bytes": 1924989
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/ETHUSDT/1m/ETHUSDT-1m-2023-03.zip",
+        "status": 200,
+        "bytes": 1038814
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2023-03.zip",
+        "status": 200,
+        "bytes": 963
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2023-04.zip",
+        "status": 200,
+        "bytes": 2064504
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2023-04.zip",
+        "status": 200,
+        "bytes": 1810833
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/BTCUSDT/1m/BTCUSDT-1m-2023-04.zip",
+        "status": 200,
+        "bytes": 978108
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2023-04.zip",
+        "status": 200,
+        "bytes": 952
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2023-04.zip",
+        "status": 200,
+        "bytes": 1956086
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2023-04.zip",
+        "status": 200,
+        "bytes": 1840076
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/ETHUSDT/1m/ETHUSDT-1m-2023-04.zip",
+        "status": 200,
+        "bytes": 951398
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2023-04.zip",
+        "status": 200,
+        "bytes": 945
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2023-05.zip",
+        "status": 200,
+        "bytes": 2111728
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2023-05.zip",
+        "status": 200,
+        "bytes": 1859563
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/BTCUSDT/1m/BTCUSDT-1m-2023-05.zip",
+        "status": 200,
+        "bytes": 1007316
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2023-05.zip",
+        "status": 200,
+        "bytes": 983
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2023-05.zip",
+        "status": 200,
+        "bytes": 1980623
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2023-05.zip",
+        "status": 200,
+        "bytes": 1871691
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/ETHUSDT/1m/ETHUSDT-1m-2023-05.zip",
+        "status": 200,
+        "bytes": 941987
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2023-05.zip",
+        "status": 200,
+        "bytes": 990
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2023-06.zip",
+        "status": 200,
+        "bytes": 2043702
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2023-06.zip",
+        "status": 200,
+        "bytes": 1806762
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/BTCUSDT/1m/BTCUSDT-1m-2023-06.zip",
+        "status": 200,
+        "bytes": 985612
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2023-06.zip",
+        "status": 200,
+        "bytes": 845
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2023-06.zip",
+        "status": 200,
+        "bytes": 1907373
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2023-06.zip",
+        "status": 200,
+        "bytes": 1811667
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/ETHUSDT/1m/ETHUSDT-1m-2023-06.zip",
+        "status": 200,
+        "bytes": 911629
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2023-06.zip",
+        "status": 200,
+        "bytes": 888
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2023-07.zip",
+        "status": 200,
+        "bytes": 2033186
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2023-07.zip",
+        "status": 200,
+        "bytes": 1805388
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/BTCUSDT/1m/BTCUSDT-1m-2023-07.zip",
+        "status": 200,
+        "bytes": 974766
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2023-07.zip",
+        "status": 200,
+        "bytes": 861
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2023-07.zip",
+        "status": 200,
+        "bytes": 1920823
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2023-07.zip",
+        "status": 200,
+        "bytes": 1829055
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/ETHUSDT/1m/ETHUSDT-1m-2023-07.zip",
+        "status": 200,
+        "bytes": 924306
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2023-07.zip",
+        "status": 200,
+        "bytes": 861
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2023-08.zip",
+        "status": 200,
+        "bytes": 2018512
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2023-08.zip",
+        "status": 200,
+        "bytes": 1781029
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/BTCUSDT/1m/BTCUSDT-1m-2023-08.zip",
+        "status": 200,
+        "bytes": 967108
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2023-08.zip",
+        "status": 200,
+        "bytes": 846
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2023-08.zip",
+        "status": 200,
+        "bytes": 1884880
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2023-08.zip",
+        "status": 200,
+        "bytes": 1789888
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/ETHUSDT/1m/ETHUSDT-1m-2023-08.zip",
+        "status": 200,
+        "bytes": 896574
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2023-08.zip",
+        "status": 200,
+        "bytes": 897
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2025-08.zip",
+        "status": 200,
+        "bytes": 2150048
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2025-08.zip",
+        "status": 200,
+        "bytes": 1871971
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/BTCUSDT/1m/BTCUSDT-1m-2025-08.zip",
+        "status": 200,
+        "bytes": 1046935
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2025-08.zip",
+        "status": 200,
+        "bytes": 927
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2025-08.zip",
+        "status": 200,
+        "bytes": 2162576
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2025-08.zip",
+        "status": 200,
+        "bytes": 2017496
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/ETHUSDT/1m/ETHUSDT-1m-2025-08.zip",
+        "status": 200,
+        "bytes": 1045618
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2025-08.zip",
+        "status": 200,
+        "bytes": 922
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2025-09.zip",
+        "status": 200,
+        "bytes": 2045189
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2025-09.zip",
+        "status": 200,
+        "bytes": 1782066
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/BTCUSDT/1m/BTCUSDT-1m-2025-09.zip",
+        "status": 200,
+        "bytes": 988213
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2025-09.zip",
+        "status": 200,
+        "bytes": 941
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2025-09.zip",
+        "status": 200,
+        "bytes": 2040217
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2025-09.zip",
+        "status": 200,
+        "bytes": 1900520
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/ETHUSDT/1m/ETHUSDT-1m-2025-09.zip",
+        "status": 200,
+        "bytes": 962417
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2025-09.zip",
+        "status": 200,
+        "bytes": 934
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2025-10.zip",
+        "status": 200,
+        "bytes": 2216628
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2025-10.zip",
+        "status": 200,
+        "bytes": 1913274
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/BTCUSDT/1m/BTCUSDT-1m-2025-10.zip",
+        "status": 200,
+        "bytes": 1066369
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2025-10.zip",
+        "status": 200,
+        "bytes": 944
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2025-10.zip",
+        "status": 200,
+        "bytes": 2145592
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2025-10.zip",
+        "status": 200,
+        "bytes": 1996726
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/ETHUSDT/1m/ETHUSDT-1m-2025-10.zip",
+        "status": 200,
+        "bytes": 1015683
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2025-10.zip",
+        "status": 200,
+        "bytes": 953
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2025-11.zip",
+        "status": 200,
+        "bytes": 2165376
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2025-11.zip",
+        "status": 200,
+        "bytes": 1856815
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/BTCUSDT/1m/BTCUSDT-1m-2025-11.zip",
+        "status": 200,
+        "bytes": 1042753
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2025-11.zip",
+        "status": 200,
+        "bytes": 941
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2025-11.zip",
+        "status": 200,
+        "bytes": 2074392
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2025-11.zip",
+        "status": 200,
+        "bytes": 1931576
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/ETHUSDT/1m/ETHUSDT-1m-2025-11.zip",
+        "status": 200,
+        "bytes": 988311
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2025-11.zip",
+        "status": 200,
+        "bytes": 956
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2025-12.zip",
+        "status": 200,
+        "bytes": 2154846
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2025-12.zip",
+        "status": 200,
+        "bytes": 1868657
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/BTCUSDT/1m/BTCUSDT-1m-2025-12.zip",
+        "status": 200,
+        "bytes": 1047037
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2025-12.zip",
+        "status": 200,
+        "bytes": 963
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2025-12.zip",
+        "status": 200,
+        "bytes": 2079108
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2025-12.zip",
+        "status": 200,
+        "bytes": 1941385
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/ETHUSDT/1m/ETHUSDT-1m-2025-12.zip",
+        "status": 200,
+        "bytes": 983200
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2025-12.zip",
+        "status": 200,
+        "bytes": 985
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2026-01.zip",
+        "status": 200,
+        "bytes": 2127988
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2026-01.zip",
+        "status": 200,
+        "bytes": 1852279
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/BTCUSDT/1m/BTCUSDT-1m-2026-01.zip",
+        "status": 200,
+        "bytes": 1034512
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2026-01.zip",
+        "status": 200,
+        "bytes": 965
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2026-01.zip",
+        "status": 200,
+        "bytes": 2068379
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2026-01.zip",
+        "status": 200,
+        "bytes": 1928094
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/ETHUSDT/1m/ETHUSDT-1m-2026-01.zip",
+        "status": 200,
+        "bytes": 975251
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2026-01.zip",
+        "status": 200,
+        "bytes": 979
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2026-02.zip",
+        "status": 200,
+        "bytes": 2021779
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2026-02.zip",
+        "status": 200,
+        "bytes": 1743792
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/BTCUSDT/1m/BTCUSDT-1m-2026-02.zip",
+        "status": 200,
+        "bytes": 979761
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2026-02.zip",
+        "status": 200,
+        "bytes": 937
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2026-02.zip",
+        "status": 200,
+        "bytes": 1918913
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2026-02.zip",
+        "status": 200,
+        "bytes": 1790010
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/ETHUSDT/1m/ETHUSDT-1m-2026-02.zip",
+        "status": 200,
+        "bytes": 909147
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2026-02.zip",
+        "status": 200,
+        "bytes": 939
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2026-03.zip",
+        "status": 200,
+        "bytes": 2213444
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2026-03.zip",
+        "status": 200,
+        "bytes": 1911731
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/BTCUSDT/1m/BTCUSDT-1m-2026-03.zip",
+        "status": 200,
+        "bytes": 1085521
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2026-03.zip",
+        "status": 200,
+        "bytes": 1008
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2026-03.zip",
+        "status": 200,
+        "bytes": 2086704
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2026-03.zip",
+        "status": 200,
+        "bytes": 1958005
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/ETHUSDT/1m/ETHUSDT-1m-2026-03.zip",
+        "status": 200,
+        "bytes": 1000079
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2026-03.zip",
+        "status": 200,
+        "bytes": 1002
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2026-04.zip",
+        "status": 200,
+        "bytes": 2088776
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2026-04.zip",
+        "status": 200,
+        "bytes": 1810071
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/BTCUSDT/1m/BTCUSDT-1m-2026-04.zip",
+        "status": 200,
+        "bytes": 1020190
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2026-04.zip",
+        "status": 200,
+        "bytes": 960
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2026-04.zip",
+        "status": 200,
+        "bytes": 1980853
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2026-04.zip",
+        "status": 200,
+        "bytes": 1860146
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/ETHUSDT/1m/ETHUSDT-1m-2026-04.zip",
+        "status": 200,
+        "bytes": 942345
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2026-04.zip",
+        "status": 200,
+        "bytes": 963
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2026-05.zip",
+        "status": 200,
+        "bytes": 2120776
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2026-05.zip",
+        "status": 200,
+        "bytes": 1845894
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/BTCUSDT/1m/BTCUSDT-1m-2026-05.zip",
+        "status": 200,
+        "bytes": 1036489
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2026-05.zip",
+        "status": 200,
+        "bytes": 980
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2026-05.zip",
+        "status": 200,
+        "bytes": 2023074
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2026-05.zip",
+        "status": 200,
+        "bytes": 1893623
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/ETHUSDT/1m/ETHUSDT-1m-2026-05.zip",
+        "status": 200,
+        "bytes": 956096
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2026-05.zip",
+        "status": 200,
+        "bytes": 980
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2026-06.zip",
+        "status": 200,
+        "bytes": 2092027
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2026-06.zip",
+        "status": 200,
+        "bytes": 1838455
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/BTCUSDT/1m/BTCUSDT-1m-2026-06.zip",
+        "status": 200,
+        "bytes": 999777
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2026-06.zip",
+        "status": 200,
+        "bytes": 964
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2026-06.zip",
+        "status": 200,
+        "bytes": 1996139
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2026-06.zip",
+        "status": 200,
+        "bytes": 1875936
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/ETHUSDT/1m/ETHUSDT-1m-2026-06.zip",
+        "status": 200,
+        "bytes": 910942
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2026-06.zip",
+        "status": 200,
+        "bytes": 967
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2026-07.zip",
+        "status": 200,
+        "bytes": 2112275
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2026-07.zip",
+        "status": 200,
+        "bytes": 1844583
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/BTCUSDT/1m/BTCUSDT-1m-2026-07.zip",
+        "status": 200,
+        "bytes": 1022569
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2026-07.zip",
+        "status": 200,
+        "bytes": 914
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2026-07.zip",
+        "status": 200,
+        "bytes": 2027161
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2026-07.zip",
+        "status": 200,
+        "bytes": 1905641
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/ETHUSDT/1m/ETHUSDT-1m-2026-07.zip",
+        "status": 200,
+        "bytes": 949603
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2026-07.zip",
+        "status": 200,
+        "bytes": 941
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2026-08.zip",
+        "status": 200,
+        "bytes": 2084946
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2026-08.zip",
+        "status": 200,
+        "bytes": 1817920
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/BTCUSDT/1m/BTCUSDT-1m-2026-08.zip",
+        "status": 200,
+        "bytes": 1011901
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2026-08.zip",
+        "status": 200,
+        "bytes": 896
+      },
+      {
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2026-08.zip",
+        "status": 200,
+        "bytes": 2005311
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2026-08.zip",
+        "status": 200,
+        "bytes": 1881488
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/ETHUSDT/1m/ETHUSDT-1m-2026-08.zip",
+        "status": 200,
+        "bytes": 938757
+      },
+      {
+        "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2026-08.zip",
+        "status": 200,
+        "bytes": 925
+      }
+    ]
+  },
+  "smoke": {
+    "checked_at": "2026-09-18T20:28:09.542794+00:00",
+    "seconds": 50.21805900000618,
+    "archives": [
+      {
+        "window": "2022_2023",
+        "path": "data/minutes/2022_2023/raw/spot/klines/BTCUSDT/BTCUSDT-1m-2022-08.zip",
+        "status": "downloaded",
+        "bytes": 2318381,
+        "sha256": "7517a604803c40cd38b29fb490d7bce83d01e1e4ac9e9ae2bcd52adaea55a291",
+        "errors": []
+      },
+      {
+        "window": "2022_2023",
+        "path": "data/minutes/2022_2023/raw/futures/klines/BTCUSDT/BTCUSDT-1m-2022-08.zip",
+        "status": "downloaded",
+        "bytes": 1897142,
+        "sha256": "806ee1d6efa856984fe79453d17f04c0fb5e447413fe828cbd3ec2df9a1f5fc4",
+        "errors": []
+      },
+      {
+        "window": "2022_2023",
+        "path": "data/minutes/2022_2023/raw/futures/markPriceKlines/BTCUSDT/BTCUSDT-1m-2022-08.zip",
+        "status": "downloaded",
+        "bytes": 1122119,
+        "sha256": "fc15588d80e2fea766ce86906c5b7f1975f00a03637483f6606e26f1769a3675",
+        "errors": []
+      },
+      {
+        "window": "2022_2023",
+        "path": "data/minutes/2022_2023/raw/futures/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2022-08.zip",
+        "status": "downloaded",
+        "bytes": 997,
+        "sha256": "6f4f0c6c84c05694b4b4a5c085776730fd4059723eecd98ee6ffeb3fde4da811",
+        "errors": []
+      },
+      {
+        "window": "2022_2023",
+        "path": "data/minutes/2022_2023/raw/spot/klines/ETHUSDT/ETHUSDT-1m-2022-08.zip",
+        "status": "downloaded",
+        "bytes": 2107847,
+        "sha256": "6d5171bf39094bf479c49d7835bd99e4880b497bfcb3ccd655fc9298a7f508d9",
+        "errors": []
+      },
+      {
+        "window": "2022_2023",
+        "path": "data/minutes/2022_2023/raw/futures/klines/ETHUSDT/ETHUSDT-1m-2022-08.zip",
+        "status": "downloaded",
+        "bytes": 1980362,
+        "sha256": "04e0f53dc0acd9caf96e6cbd09ad4d65a1842e34f21ef878aeb9994d04853f95",
+        "errors": []
+      },
+      {
+        "window": "2022_2023",
+        "path": "data/minutes/2022_2023/raw/futures/markPriceKlines/ETHUSDT/ETHUSDT-1m-2022-08.zip",
+        "status": "downloaded",
+        "bytes": 1090249,
+        "sha256": "85e156484da65689eedc419fe5f6970a1273e74e797ac05ca9185e4405b669a3",
+        "errors": []
+      },
+      {
+        "window": "2022_2023",
+        "path": "data/minutes/2022_2023/raw/futures/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2022-08.zip",
+        "status": "downloaded",
+        "bytes": 1000,
+        "sha256": "a2680549de5e087566f4d323b3a812c2b9863528c6bc49b0e551cb42c381bb4d",
+        "errors": []
+      },
+      {
+        "window": "2025_2026",
+        "path": "data/minutes/2025_2026/raw/spot/klines/BTCUSDT/BTCUSDT-1m-2025-08.zip",
+        "status": "downloaded",
+        "bytes": 2150048,
+        "sha256": "11da1c7db8949cbdcbb757531756eda55f2a3d663cfac671c5d1a8a87911318f",
+        "errors": []
+      },
+      {
+        "window": "2025_2026",
+        "path": "data/minutes/2025_2026/raw/futures/klines/BTCUSDT/BTCUSDT-1m-2025-08.zip",
+        "status": "downloaded",
+        "bytes": 1871971,
+        "sha256": "eaf41354fc1aa96eac94ee50b3fda603cd595f95030ebf30b2ab5bea7a4462c3",
+        "errors": []
+      },
+      {
+        "window": "2025_2026",
+        "path": "data/minutes/2025_2026/raw/futures/markPriceKlines/BTCUSDT/BTCUSDT-1m-2025-08.zip",
+        "status": "downloaded",
+        "bytes": 1046935,
+        "sha256": "b52004debc432af8cc44cd98884cc7c94458346be8adb13950b44edf8b646f9b",
+        "errors": []
+      },
+      {
+        "window": "2025_2026",
+        "path": "data/minutes/2025_2026/raw/futures/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2025-08.zip",
+        "status": "downloaded",
+        "bytes": 927,
+        "sha256": "1180129860b6e196e8d70bb9719e81573aa6b4acb423ba5ee7f82f10c836f7ab",
+        "errors": []
+      },
+      {
+        "window": "2025_2026",
+        "path": "data/minutes/2025_2026/raw/spot/klines/ETHUSDT/ETHUSDT-1m-2025-08.zip",
+        "status": "downloaded",
+        "bytes": 2162576,
+        "sha256": "aaebc0e2baa7d7dcfcf6eb3eeb681b55a2e746dad86e758be0af7fca4391c480",
+        "errors": []
+      },
+      {
+        "window": "2025_2026",
+        "path": "data/minutes/2025_2026/raw/futures/klines/ETHUSDT/ETHUSDT-1m-2025-08.zip",
+        "status": "downloaded",
+        "bytes": 2017496,
+        "sha256": "8cd85f1c417c4c65cd32348f3e4e23c8b35dd4e5e59a20a187e2a74777bd6664",
+        "errors": []
+      },
+      {
+        "window": "2025_2026",
+        "path": "data/minutes/2025_2026/raw/futures/markPriceKlines/ETHUSDT/ETHUSDT-1m-2025-08.zip",
+        "status": "downloaded",
+        "bytes": 1045618,
+        "sha256": "6e049b3801a12f61cc1ec71a6fab1d7be623e2d78201690e3dbdb1060262e2e1",
+        "errors": []
+      },
+      {
+        "window": "2025_2026",
+        "path": "data/minutes/2025_2026/raw/futures/fundingRate/ETHUSDT/ETHUSDT-fundingRate-2025-08.zip",
+        "status": "downloaded",
+        "bytes": 922,
+        "sha256": "c3fca21c71afb4962e89f8e3d84afe5832019ed8f570ee7c7c299f2436a28b62",
+        "errors": []
+      }
+    ],
+    "funding_api_probes": [
+      {
+        "window": "2022_2023",
+        "status": 200,
+        "rows": 3,
+        "sha256": "dd3d8ababe3454df5b9230ee3393a2684b5e0c63edc5215ebd08cbf893dee45d",
+        "first": 1661990400012
+      },
+      {
+        "window": "2025_2026",
+        "status": 200,
+        "rows": 3,
+        "sha256": "2c9edde46b50d0dca0e4d60018f74c322c0a749cd7b57ea0880e644fc67184b8",
+        "first": 1756684800000
+      }
+    ],
+    "total_zip_bytes": 20814590
+  },
+  "legacy_inventory": [
+    {
+      "path": "D:\\Backtesting\\data\\raw\\spot\\trades\\BTCUSDT",
+      "files": 1766,
+      "bytes": 32169813203
+    },
+    {
+      "path": "D:\\Backtesting\\data\\raw\\futures\\trades\\BTCUSDT",
+      "files": 1764,
+      "bytes": 26884163368
+    },
+    {
+      "path": "D:\\Backtesting\\data\\raw\\futures\\markPriceKlines\\BTCUSDT",
+      "files": 1666,
+      "bytes": 32117688
+    }
+  ],
+  "deleted_files": [],
+  "engine_changes": false,
+  "expected_zip_archives": 208,
+  "expected_api_snapshots": 4,
+  "coverage_certified": false
+}

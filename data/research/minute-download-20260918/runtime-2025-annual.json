@@ -1,0 +1,81 @@
+{
+  "config": {
+    "symbols": [
+      "BTCUSDT",
+      "ETHUSDT"
+    ],
+    "history_start": "2025-09-01T00:00:00Z",
+    "start": "2025-09-01T00:00:00Z",
+    "end": "2026-09-01T00:00:00Z",
+    "capital": "10000",
+    "window_hours": 336,
+    "half_life_hours": 24,
+    "horizon_hours": 168,
+    "holding_hours": 168,
+    "signal_delay_seconds": 60,
+    "target_fraction": "0.30",
+    "leverage": "2",
+    "rebalance_threshold": "0.05",
+    "slippage": "0.0001",
+    "cost_multiplier": "1",
+    "leg_delay_seconds": 1,
+    "order_timeout_seconds": 120,
+    "freshness_seconds": 60,
+    "basis_min": "0",
+    "basis_max": "0.005",
+    "basis_exit": "0.02",
+    "margin_exit_ratio": "0.50",
+    "liquidation_distance": "0.15",
+    "hedge_trigger": "0.02",
+    "hedge_tolerance": "0.005",
+    "correction_seconds": 60,
+    "inactivity_seconds": 1800,
+    "cooldown_hours": 24,
+    "participation_seconds": 60,
+    "execution_model": "minute_open",
+    "vwap_seconds": 5,
+    "data_budget_bytes": 20000000000,
+    "data_dir": "data/minutes/2025_2026",
+    "rules_file": "data/rules/history.json",
+    "fee_profile": "prescribed_fixed_no_discounts",
+    "analysis_mode": "prescribed_research",
+    "funding_proxy_stress_bps": "0",
+    "research_futures_taker_fee": "0.0005",
+    "research_maintenance_multiplier": "1",
+    "research_liquidation_fee": "0.0125",
+    "sample_start": "2025-09-01T00:00:00Z",
+    "sample_end": "2025-09-02T00:00:00Z",
+    "accounting_tolerance": "1E-8"
+  },
+  "run_path": "D:\\Backtesting\\outputs\\run_0cb21afbec7cdba1e5848df6",
+  "validation_seconds": 18.57181789999595,
+  "total_seconds": 268.1404010000115,
+  "peak_working_set_bytes": 1626624000,
+  "results": [
+    {
+      "strategy": "conditional",
+      "status": "complete",
+      "replay_seconds": 120.7912798000034,
+      "native_fills": 0,
+      "equity": "10000",
+      "reasons": [],
+      "accounting_difference": "0"
+    },
+    {
+      "strategy": "permanent",
+      "status": "complete",
+      "replay_seconds": 99.76780199998757,
+      "native_fills": 8,
+      "equity": "9979.6702938314000000",
+      "reasons": [],
+      "accounting_difference": "0E-24"
+    }
+  ],
+  "output_verification": {
+    "valid": true,
+    "status": "complete",
+    "run_id": "run_0cb21afbec7cdba1e5848df6",
+    "checked_files": 43,
+    "mismatches": []
+  }
+}

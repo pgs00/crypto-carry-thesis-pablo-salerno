@@ -151,3 +151,32 @@ def test_streaming_checks_integrity_before_publishing_archive(tmp_path, failure)
             _download(client, tmp_path, expected, budget=len(payload))
 
     assert not (tmp_path / "archive.zip").exists()
+
+
+def test_complete_partial_is_verified_and_published_without_requesting_range_at_eof(tmp_path):
+    payload = _archive_bytes(rows=200)
+    partial = tmp_path / "archive.zip.part"
+    partial.write_bytes(payload)
+    requests = []
+
+    def handle(request):
+        requests.append(request)
+        return httpx.Response(416)
+
+    with httpx.Client(transport=httpx.MockTransport(handle)) as client:
+        result = _download(client, tmp_path, payload, budget=len(payload))
+    assert not requests
+    assert result["status"] == "cached"
+    assert (tmp_path / "archive.zip").read_bytes() == payload
+    assert not partial.exists()
+
+
+def test_complete_partial_requires_zip_crc_even_when_sha_matches(tmp_path):
+    damaged = bytearray(_archive_bytes(rows=200))
+    damaged[100] ^= 1
+    payload = bytes(damaged)
+    (tmp_path / "archive.zip.part").write_bytes(payload)
+    with httpx.Client(transport=httpx.MockTransport(lambda _: httpx.Response(416))) as client:
+        with pytest.raises(ValueError, match="ZIP integrity"):
+            _download(client, tmp_path, payload, budget=len(payload))
+    assert not (tmp_path / "archive.zip").exists()

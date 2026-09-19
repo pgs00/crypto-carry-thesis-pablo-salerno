@@ -18,7 +18,8 @@ import pyarrow.parquet as pq
 from ..config import DAY, HOUR, SECOND, Config, iso, timestamp
 from ..models import Funding, Mark
 from .funding_proxy import MINUTE, resolve_funding_mark
-from .normalize import _funding_calendar_times
+from .market_calendar import closed_minute_count, closure_for_minute, quality_closures
+from .normalize import VWAP_OHLC_REL_TOLERANCE, _funding_calendar_times
 from .prescribed import prescribed_rules, research_assumptions
 from .rules import RuleBook
 
@@ -54,6 +55,40 @@ _REQUIRED_SCHEMAS = {
         "close": "string",
         "source_file": "string",
     },
+    "minute_prices": {
+        "symbol": "string",
+        "market": "string",
+        "reference_id": "string",
+        "event_time": "int64",
+        "available_at": "int64",
+        "price": "string",
+        "source_file": "string",
+    },
+    "minute_volumes": {
+        "symbol": "string",
+        "market": "string",
+        "open_time": "int64",
+        "close_time": "int64",
+        "available_at": "int64",
+        "quantity": "string",
+        "trade_count": "int64",
+        "source_file": "string",
+    },
+    "minute_bars": {
+        "symbol": "string",
+        "market": "string",
+        "open_time": "int64",
+        "end_time": "int64",
+        "available_at": "int64",
+        "open": "string",
+        "high": "string",
+        "low": "string",
+        "close": "string",
+        "base_volume": "string",
+        "quote_volume": "string",
+        "trade_count": "int64",
+        "source_file": "string",
+    },
 }
 
 
@@ -67,10 +102,314 @@ def _hash(path: Path) -> str:
 
 def _required_keys(config: Config):
     for symbol in config.symbols:
-        yield "trades", symbol, "spot"
-        yield "trades", symbol, "futures"
+        if config.execution_model == "next_minute_vwap":
+            yield "minute_bars", symbol, "spot"
+            yield "minute_bars", symbol, "futures"
+        elif config.execution_model == "minute_open":
+            yield "minute_prices", symbol, "spot"
+            yield "minute_volumes", symbol, "spot"
+            yield "minute_prices", symbol, "futures"
+            yield "minute_volumes", symbol, "futures"
+        else:
+            yield "trades", symbol, "spot"
+            yield "trades", symbol, "futures"
+        if (
+            config.execution_model != "next_minute_vwap"
+            and getattr(config, "signal_price_model", "execution_default") == "closed_minute"
+        ):
+            yield "minute_bars", symbol, "spot"
+            yield "minute_bars", symbol, "futures"
         yield "marks", symbol, "futures"
         yield "funding", symbol, "futures"
+
+
+def _minute_rows(root: Path, parts: list[dict], columns: list[str]):
+    for entry in sorted(parts, key=lambda item: (int(item["start"]), item["path"])):
+        for batch in pq.ParquetFile(root / entry["path"]).iter_batches(columns=columns):
+            yield from batch.to_pylist()
+
+
+def _validate_minute_bars(
+    root: Path,
+    symbol: str,
+    market: str,
+    parts: list[dict],
+    start: int,
+    end: int,
+    coverage: dict,
+    issues: list[str],
+) -> None:
+    """Validate closed bars, including the bar available exactly at sample start."""
+    columns = list(_REQUIRED_SCHEMAS["minute_bars"])
+    expected_end = start
+    previous_end: int | None = None
+    missing_count = 0
+    documented_count = 0
+    invalid = False
+    volume_mismatch = False
+    vwap_outside = False
+    observed = 0
+    try:
+        for row in _minute_rows(root, parts, columns):
+            bar_end = int(row["end_time"])
+            if bar_end < start:
+                continue
+            if bar_end >= end:
+                break
+            observed += 1
+            open_time = int(row["open_time"])
+            if previous_end is not None and bar_end <= previous_end:
+                invalid = True
+            previous_end = bar_end
+            if bar_end > expected_end:
+                missing = (bar_end - expected_end) // MINUTE
+                documented = min(
+                    missing,
+                    closed_minute_count(symbol, market, expected_end - MINUTE, bar_end - MINUTE),
+                )
+                documented_count += documented
+                missing_count += missing - documented
+            elif bar_end < expected_end:
+                invalid = True
+            expected_end = max(expected_end, bar_end + MINUTE)
+            try:
+                open_price = Decimal(row["open"])
+                high = Decimal(row["high"])
+                low = Decimal(row["low"])
+                close = Decimal(row["close"])
+                base_volume = Decimal(row["base_volume"])
+                quote_volume = Decimal(row["quote_volume"])
+                trade_count = int(row["trade_count"])
+                prices = (open_price, high, low, close)
+                closure = closure_for_minute(symbol, market, open_time)
+                row_valid = (
+                    row["symbol"] == symbol
+                    and row["market"] == market
+                    and open_time % MINUTE == 0
+                    and bar_end == open_time + MINUTE
+                    and int(row["available_at"]) == bar_end
+                    and all(value.is_finite() and value > 0 for value in prices)
+                    and low <= open_price <= high
+                    and low <= close <= high
+                    and low <= high
+                    and base_volume.is_finite()
+                    and base_volume >= 0
+                    and quote_volume.is_finite()
+                    and quote_volume >= 0
+                    and trade_count >= 0
+                    and (closure is None or trade_count == 0)
+                )
+                consistent_zero = (base_volume == 0) == (quote_volume == 0)
+                consistent_count = trade_count != 0 or (base_volume == 0 and quote_volume == 0)
+                if not consistent_zero or not consistent_count:
+                    volume_mismatch = True
+                if base_volume > 0 and quote_volume > 0:
+                    vwap = quote_volume / base_volume
+                    tolerance = max(abs(low), abs(high), Decimal(1)) * VWAP_OHLC_REL_TOLERANCE
+                    if not low - tolerance <= vwap <= high + tolerance:
+                        vwap_outside = True
+                if closure is not None:
+                    documented_count += 1
+            except InvalidOperation, KeyError, TypeError, ValueError:
+                row_valid = False
+            if not row_valid:
+                invalid = True
+        if expected_end < end:
+            missing = (end - expected_end) // MINUTE
+            documented = min(
+                missing,
+                closed_minute_count(symbol, market, expected_end - MINUTE, end - MINUTE),
+            )
+            documented_count += documented
+            missing_count += missing - documented
+    except (KeyError, OSError, TypeError, ValueError, pa.ArrowException) as exc:
+        invalid = True
+        issues.append(f"unreadable closed minute bars: {symbol}/{market}: {exc}")
+
+    if missing_count or observed == 0:
+        coverage["status"] = "unknown"
+        count = missing_count or (end - start) // MINUTE
+        issues.append(f"missing closed minute bar: {symbol}/{market}: {count} minutes")
+    else:
+        coverage["checks"].append("complete_closed_bar_coverage")
+    if documented_count:
+        coverage["checks"].append("documented_market_closure")
+    if invalid:
+        coverage["status"] = "invalid"
+        issues.append(f"invalid closed minute bar: {symbol}/{market}")
+    if volume_mismatch:
+        coverage["status"] = "invalid"
+        issues.append(f"closed bar volume mismatch: {symbol}/{market}")
+    if vwap_outside:
+        coverage["status"] = "invalid"
+        issues.append(
+            f"closed bar VWAP outside OHLC tolerance {VWAP_OHLC_REL_TOLERANCE}: {symbol}/{market}"
+        )
+    if not invalid and not volume_mismatch and not vwap_outside:
+        coverage["checks"].append("closed_bar_vwap_within_ohlc")
+
+
+def _validate_minute_pair(
+    root: Path,
+    symbol: str,
+    market: str,
+    price_parts: list[dict],
+    volume_parts: list[dict],
+    start: int,
+    end: int,
+    price_coverage: dict,
+    volume_coverage: dict,
+    issues: list[str],
+) -> None:
+    """Stream exact minute coverage and positive-count price membership."""
+    price_columns = [
+        "symbol",
+        "market",
+        "reference_id",
+        "event_time",
+        "available_at",
+        "price",
+    ]
+    volume_columns = [
+        "symbol",
+        "market",
+        "open_time",
+        "close_time",
+        "available_at",
+        "quantity",
+        "trade_count",
+    ]
+    prices = iter(())
+    current_price = None
+    expected_open = start
+    gap_count = 0
+    documented_closure_minutes = 0
+    membership_mismatch = False
+    volume_invalid = False
+    previous_price_time: int | None = None
+
+    def scoped_price(raw: dict | None) -> dict | None:
+        nonlocal previous_price_time
+        while raw is not None and int(raw["event_time"]) < start:
+            raw = next(prices, None)
+        if raw is not None:
+            value = int(raw["event_time"])
+            if previous_price_time is not None and value <= previous_price_time:
+                raise ValueError("minute prices are not strictly chronological and unique")
+            previous_price_time = value
+        return raw
+
+    try:
+        prices = iter(_minute_rows(root, price_parts, price_columns))
+        current_price = next(prices, None)
+        current_price = scoped_price(current_price)
+        previous_volume_time: int | None = None
+        for volume in _minute_rows(root, volume_parts, volume_columns):
+            open_time = int(volume["open_time"])
+            if open_time < start:
+                continue
+            if open_time >= end:
+                break
+            if previous_volume_time is not None and open_time <= previous_volume_time:
+                volume_invalid = True
+            previous_volume_time = open_time
+            if open_time > expected_open:
+                missing = (open_time - expected_open) // MINUTE
+                documented = min(
+                    missing, closed_minute_count(symbol, market, expected_open, open_time)
+                )
+                documented_closure_minutes += documented
+                gap_count += missing - documented
+            elif open_time < expected_open:
+                volume_invalid = True
+            expected_open = max(expected_open, open_time + MINUTE)
+            try:
+                quantity = Decimal(volume["quantity"])
+                count = int(volume["trade_count"])
+                close_time = int(volume["close_time"])
+                available_at = int(volume["available_at"])
+                closure = closure_for_minute(symbol, market, open_time)
+                standard_timing = available_at == open_time + MINUTE and close_time in {
+                    open_time + MINUTE - 1_000,
+                    open_time + MINUTE - 1_000_000,
+                }
+                early_closed_zero = (
+                    closure is not None
+                    and count == 0
+                    and quantity == 0
+                    and open_time <= close_time < open_time + MINUTE - 1_000_000
+                    and available_at - close_time in {1_000, 1_000_000}
+                )
+                valid_volume = (
+                    volume["symbol"] == symbol
+                    and volume["market"] == market
+                    and open_time % MINUTE == 0
+                    and (standard_timing or early_closed_zero)
+                    and quantity.is_finite()
+                    and quantity >= 0
+                    and count >= 0
+                    and (count != 0 or quantity == 0)
+                    and (closure is None or count == 0)
+                )
+                if closure is not None:
+                    documented_closure_minutes += 1
+            except InvalidOperation, KeyError, TypeError, ValueError:
+                valid_volume = False
+                count = 0
+            if not valid_volume:
+                volume_invalid = True
+
+            while current_price is not None and int(current_price["event_time"]) < open_time:
+                if int(current_price["event_time"]) >= start:
+                    membership_mismatch = True
+                current_price = scoped_price(next(prices, None))
+            has_price = current_price is not None and int(current_price["event_time"]) == open_time
+            if has_price:
+                try:
+                    price = Decimal(current_price["price"])
+                    valid_price = (
+                        current_price["symbol"] == symbol
+                        and current_price["market"] == market
+                        and current_price["reference_id"] == f"bar:{symbol}:{market}:{open_time}"
+                        and int(current_price["available_at"]) == open_time
+                        and price.is_finite()
+                        and price > 0
+                    )
+                except InvalidOperation, KeyError, TypeError, ValueError:
+                    valid_price = False
+                if not valid_price:
+                    membership_mismatch = True
+                current_price = scoped_price(next(prices, None))
+            if has_price != (count > 0):
+                membership_mismatch = True
+        if expected_open < end:
+            missing = (end - expected_open) // MINUTE
+            documented = min(missing, closed_minute_count(symbol, market, expected_open, end))
+            documented_closure_minutes += documented
+            gap_count += missing - documented
+        while current_price is not None and int(current_price["event_time"]) < end:
+            membership_mismatch = True
+            current_price = scoped_price(next(prices, None))
+    except (KeyError, OSError, TypeError, ValueError, pa.ArrowException) as exc:
+        volume_invalid = True
+        membership_mismatch = True
+        issues.append(f"unreadable minute rows: {symbol}/{market}: {exc}")
+
+    if gap_count:
+        volume_coverage["status"] = "unknown"
+        issues.append(f"missing minute volume: {symbol}/{market}: {gap_count} minutes")
+    else:
+        volume_coverage["checks"].append("complete_minute_volume_coverage")
+    if documented_closure_minutes:
+        volume_coverage["checks"].append("documented_market_closure")
+    if volume_invalid:
+        volume_coverage["status"] = "invalid"
+        issues.append(f"invalid minute volume: {symbol}/{market}")
+    if membership_mismatch:
+        price_coverage["status"] = "invalid"
+        issues.append(f"price-volume membership mismatch: {symbol}/{market}")
+    else:
+        price_coverage["checks"].append("price_volume_membership")
 
 
 def _scoped_parts(parts: list[dict], start: int, end: int, *, antecedent: bool) -> list[dict]:
@@ -321,12 +660,24 @@ def validate_data(config: Config, root: Path, scope: str = "sample") -> dict:
     funding_start = start - (config.window_hours + 24) * HOUR
     issues: list[str] = []
     entries: list[dict] = []
+    payload: dict = {}
     if not manifest_path.exists():
         issues.append("missing processed manifest")
     else:
         payload = json.loads(manifest_path.read_text(encoding="utf-8"))
         entries = payload.get("entries", [])
         issues.extend(f"normalization error: {item}" for item in payload.get("errors", []))
+    manifest_kind = payload.get("kind") if manifest_path.exists() else None
+    closed_signals = getattr(config, "signal_price_model", "execution_default") == "closed_minute"
+    minute_model = config.execution_model in {"minute_open", "next_minute_vwap"} or closed_signals
+    if minute_model and manifest_kind != "minute_market_data":
+        issues.append(
+            f"incompatible processed dataset: {config.execution_model} requires minute_market_data"
+        )
+    if not minute_model and manifest_kind == "minute_market_data":
+        issues.append(
+            f"incompatible processed dataset: {config.execution_model} requires trade_market_data"
+        )
 
     grouped: dict[tuple[str, str, str], list[dict]] = {}
     for entry in entries:
@@ -338,6 +689,8 @@ def validate_data(config: Config, root: Path, scope: str = "sample") -> dict:
     coverage: list[dict] = []
     verified_marks = {}
     funding_mark_audit = []
+    verified_by_key: dict[tuple[str, str, str], list[dict]] = {}
+    coverage_by_key: dict[tuple[str, str, str], dict] = {}
     effective = config.changed(start=iso(start), end=iso(end))
     for dataset, symbol, market in _required_keys(config):
         key = (dataset, symbol, market)
@@ -361,7 +714,7 @@ def validate_data(config: Config, root: Path, scope: str = "sample") -> dict:
         if not parts:
             row["status"] = "unknown"
             issues.append(f"missing processed file: {dataset}/{symbol}/{market}")
-        if dataset in {"trades", "marks"}:
+        if dataset in {"trades", "marks"} and manifest_kind != "minute_market_data":
             dates = {entry.get("date", iso(int(entry["start"]))[:10]) for entry in parts}
             required_dates = {
                 iso(day * DAY)[:10] for day in range(start // DAY, (end - 1) // DAY + 1)
@@ -478,7 +831,41 @@ def validate_data(config: Config, root: Path, scope: str = "sample") -> dict:
                 mark_parts=verified_marks.get(symbol, []),
                 audit=funding_mark_audit,
             )
+        verified_by_key[key] = verified_parts
+        coverage_by_key[key] = row
         coverage.append(row)
+
+    if config.execution_model == "minute_open":
+        for symbol in config.symbols:
+            for market in ("spot", "futures"):
+                price_key = ("minute_prices", symbol, market)
+                volume_key = ("minute_volumes", symbol, market)
+                _validate_minute_pair(
+                    root,
+                    symbol,
+                    market,
+                    verified_by_key.get(price_key, []),
+                    verified_by_key.get(volume_key, []),
+                    start,
+                    end,
+                    coverage_by_key[price_key],
+                    coverage_by_key[volume_key],
+                    issues,
+                )
+    if config.execution_model == "next_minute_vwap" or closed_signals:
+        for symbol in config.symbols:
+            for market in ("spot", "futures"):
+                key = ("minute_bars", symbol, market)
+                _validate_minute_bars(
+                    root,
+                    symbol,
+                    market,
+                    verified_by_key.get(key, []),
+                    start,
+                    end,
+                    coverage_by_key[key],
+                    issues,
+                )
 
     rules_path = root / config.rules_file
     research = config.analysis_mode == "prescribed_research"
@@ -529,6 +916,8 @@ def validate_data(config: Config, root: Path, scope: str = "sample") -> dict:
         "issues": sorted(set(issues)),
         "coverage": coverage,
     }
+    if minute_model:
+        result["documented_closures"] = quality_closures(config.symbols, start, end)
     if research:
         result["research_assumptions"] = research_assumptions(effective)
         result["funding_mark_audit"] = funding_mark_audit
@@ -576,6 +965,15 @@ def validate_data(config: Config, root: Path, scope: str = "sample") -> dict:
     lines.extend(
         f"- {issue}" for issue in result["issues"] or ["Ninguno para el alcance solicitado."]
     )
+    documented = result.get("documented_closures", [])
+    if documented:
+        lines.extend(["", "## Cierres de mercado documentados", ""])
+        lines.extend(
+            f"- {item['market']} {', '.join(item['symbols'])}: "
+            f"`{item['start_utc']}` a `{item['end_utc']}` ({item['minutes']} minutos). "
+            f"Fuente primaria: {item['source_url']}"
+            for item in documented
+        )
     lines.extend(
         [
             "",

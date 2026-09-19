@@ -97,6 +97,57 @@ def test_preflight_missing_inputs_reports_blockers_without_creating_files(tmp_pa
     assert result["rules"]["ready"] is False
 
 
+def test_minute_preflight_checks_only_minute_sources(tmp_path):
+    from crypto_carry.data.minute_download import _bounds, minute_descriptors
+    from crypto_carry.preflight import preflight
+
+    config = Config(
+        history_start="2024-01-01T00:00:00Z",
+        start="2024-01-01T00:00:00Z",
+        end="2024-01-02T00:00:00Z",
+        execution_model="next_minute_vwap",
+        analysis_mode="prescribed_research",
+        fee_profile="prescribed_fixed_no_discounts",
+    )
+    entries = []
+    for descriptor in minute_descriptors(config):
+        path = tmp_path / descriptor["path"]
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(b"metadata-only-fixture")
+        entry = dict(
+            descriptor,
+            status="downloaded",
+            bytes=path.stat().st_size,
+            sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
+        )
+        if path.suffix == ".zip":
+            checksum = path.with_suffix(".zip.CHECKSUM")
+            checksum.write_bytes(b"fixture")
+            entry.update(
+                checksum_path=descriptor["path"] + ".CHECKSUM",
+                checksum_file_sha256=hashlib.sha256(b"fixture").hexdigest(),
+            )
+        entries.append(entry)
+    start, end, antecedent = _bounds(config)
+    path = tmp_path / config.data_dir / "manifests" / "download.json"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        json.dumps(
+            dict(
+                kind="minute_market_data",
+                requested_start=start,
+                requested_end=end,
+                funding_request_start=antecedent,
+                entries=entries,
+            )
+        ),
+        encoding="utf-8",
+    )
+    result = preflight(config, tmp_path)
+    assert result["status"] == "ready_for_validation", result
+    assert result["download"]["expected_files"] == len(entries)
+
+
 def test_preflight_complete_metadata_only_allows_validation_not_certification(tmp_path, capsys):
     config, config_file = _setup(tmp_path)
     _download_fixture(tmp_path)

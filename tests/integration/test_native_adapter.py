@@ -54,3 +54,42 @@ def test_native_timer_fires_without_trades_and_same_timestamp_data_precedes_time
     )
     assert seen == [(start, []), (start + 2 * SECOND, ["market_update"]), (start + 4 * SECOND, [])]
     adapter.dispose()
+
+
+def test_native_partial_fill_keeps_remaining_quantity_until_cancel():
+    start = timestamp("2024-01-01T00:00:00Z")
+    config = Config(start="2024-01-01T00:00:00Z", end="2024-01-01T00:02:00Z")
+    order = Order(
+        "partial-1", "BTCUSDT", "spot", "BUY", D(".15"), start, start + 60 * SECOND, "open"
+    )
+
+    def on_batch(t, records, native):
+        if t == start:
+            native.submit(order, D(100))
+        else:
+            native.execute(
+                Fill(
+                    "partial-fill",
+                    order.order_id,
+                    order.symbol,
+                    order.market,
+                    order.side,
+                    D(".10"),
+                    D("100.01"),
+                    D(100),
+                    t,
+                    "bar:fixture",
+                    D(".001"),
+                )
+            )
+            assert native.orders[order.order_id].is_open
+            assert native.quantity("BTCUSDT", "spot") == D(".10")
+            native.cancel(order.order_id)
+            assert native.orders[order.order_id].is_closed
+
+    adapter = NautilusAdapter(config)
+    try:
+        adapter.replay([(start, []), (start + 60 * SECOND, [])], on_batch)
+        assert len(adapter.fill_events) == 1
+    finally:
+        adapter.dispose()

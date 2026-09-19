@@ -1,0 +1,47 @@
+{
+  "code_hash": "38faac3d532ff9692f724f5bdfd0413aea00acdb2421de21b720914d0237c070",
+  "windows": [
+    {
+      "window": "2022_2023",
+      "start": "2022-09-01T00:00:00Z",
+      "end": "2023-09-01T00:00:00Z",
+      "quality_status": "complete",
+      "issues": [],
+      "funding_methods": {
+        "not_required_before_start": 92,
+        "previous_closed_1m": 2190
+      },
+      "documented_closures": [
+        {
+          "description": "Binance spot trading halt; full unavailable minutes after the 11:27 partial minute",
+          "end": 1679666400000000000,
+          "end_utc": "2023-03-24T14:00:00.000000000Z",
+          "market": "spot",
+          "minutes": 152,
+          "source_url": "https://www.binance.com/en/blog/from-our-ceo/6789340645608890113",
+          "start": 1679657280000000000,
+          "start_utc": "2023-03-24T11:28:00.000000000Z",
+          "symbols": [
+            "BTCUSDT",
+            "ETHUSDT"
+          ]
+        }
+      ],
+      "supplements_verified": 4,
+      "data_bytes": 322804335
+    },
+    {
+      "window": "2025_2026",
+      "start": "2025-09-01T00:00:00Z",
+      "end": "2026-09-01T00:00:00Z",
+      "quality_status": "complete",
+      "issues": [],
+      "funding_methods": {
+        "exact": 2282
+      },
+      "documented_closures": [],
+      "supplements_verified": 2,
+      "data_bytes": 320487800
+    }
+  ]
+}

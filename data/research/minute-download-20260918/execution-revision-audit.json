@@ -1,0 +1,247 @@
+{
+  "valid": true,
+  "tolerance_usdt": "1E-8",
+  "auditor_sha256": "05174e3dcd3033cca072ffb2fc196182281648f536fd45e8665cd6097e425805",
+  "runs": [
+    {
+      "run_id": "run_0cb21afbec7cdba1e5848df6",
+      "manifest_sha256": "1e48f9962e5a7080d7852aeeab596110afd624b716d190efcfc1c11d6ac7d8ab",
+      "fills_checked": 8,
+      "source_zips_checked": 0,
+      "strategies": [
+        {
+          "strategy": "conditional",
+          "equity_recomputed": "10000.0000000000000000",
+          "cash_residual": "0E-16",
+          "equity_residual": "0E-16",
+          "funding_payments_checked": 0
+        },
+        {
+          "strategy": "permanent",
+          "equity_recomputed": "9979.6702938314000000000",
+          "cash_residual": "0E-19",
+          "equity_residual": "0E-19",
+          "funding_payments_checked": 0
+        }
+      ],
+      "issues": [],
+      "valid": true
+    },
+    {
+      "run_id": "run_47cc0b884944c31d9695906c",
+      "manifest_sha256": "5058e749d8c81783be6ea409fd96d0427439e558f06697494c4d94c5cc8842c9",
+      "fills_checked": 110,
+      "source_zips_checked": 36,
+      "strategies": [
+        {
+          "strategy": "conditional",
+          "equity_recomputed": "10073.6891390389005447770000000000000000000000000000000000000",
+          "cash_residual": "-1.0000000000000000000000000000000E-24",
+          "equity_residual": "0E-55",
+          "funding_payments_checked": 203
+        },
+        {
+          "strategy": "permanent",
+          "equity_recomputed": "10233.4356282867430705820000000000000000000000000000000000000",
+          "cash_residual": "-4.255319148936170212765957446809E-26",
+          "equity_residual": "0E-55",
+          "funding_payments_checked": 1417
+        }
+      ],
+      "issues": [],
+      "valid": true
+    },
+    {
+      "run_id": "run_497651aa331a8648bf0ed438",
+      "manifest_sha256": "84533005de09c507ffdede8b937cd47472398194f784cb132a7708691025e8d9",
+      "fills_checked": 8,
+      "source_zips_checked": 0,
+      "strategies": [
+        {
+          "strategy": "conditional",
+          "equity_recomputed": "10000.0000000000000000",
+          "cash_residual": "0E-16",
+          "equity_residual": "0E-16",
+          "funding_payments_checked": 0
+        },
+        {
+          "strategy": "permanent",
+          "equity_recomputed": "9979.6702938314000000000",
+          "cash_residual": "0E-19",
+          "equity_residual": "0E-19",
+          "funding_payments_checked": 0
+        }
+      ],
+      "issues": [],
+      "valid": true
+    },
+    {
+      "run_id": "run_519a165818e2cadce24bc873",
+      "manifest_sha256": "bb467224e987e1b379b04164e900aabbab3cc84e50c9c55c0001d3b2daaa943e",
+      "fills_checked": 2,
+      "source_zips_checked": 2,
+      "strategies": [
+        {
+          "strategy": "conditional",
+          "equity_recomputed": "10000.0000000000000000",
+          "cash_residual": "0E-16",
+          "equity_residual": "0E-16",
+          "funding_payments_checked": 0
+        },
+        {
+          "strategy": "permanent",
+          "equity_recomputed": "10008.5990064113315053282",
+          "cash_residual": "0E-19",
+          "equity_residual": "0E-19",
+          "funding_payments_checked": 31
+        }
+      ],
+      "issues": [],
+      "valid": true
+    },
+    {
+      "run_id": "run_60882c5937ce61428a302648",
+      "manifest_sha256": "435b6f2fea50f7181222690f6913d7d034f9291b7723227e4ae6ca52da4bfea9",
+      "fills_checked": 2,
+      "source_zips_checked": 0,
+      "strategies": [
+        {
+          "strategy": "conditional",
+          "equity_recomputed": "10000.0000000000000000",
+          "cash_residual": "0E-16",
+          "equity_residual": "0E-16",
+          "funding_payments_checked": 0
+        },
+        {
+          "strategy": "permanent",
+          "equity_recomputed": "10005.8960077113315053282",
+          "cash_residual": "0E-19",
+          "equity_residual": "0E-19",
+          "funding_payments_checked": 31
+        }
+      ],
+      "issues": [],
+      "valid": true
+    },
+    {
+      "run_id": "run_705a1462342ca73175ba77ec",
+      "manifest_sha256": "1d5e81d8d86b2bea4fbe76a9cff34c00802199ecf5ae7be270bfd51da3507679",
+      "fills_checked": 92,
+      "source_zips_checked": 0,
+      "strategies": [
+        {
+          "strategy": "conditional",
+          "equity_recomputed": "10111.8602046702802763648000000000000000000000000000000000000",
+          "cash_residual": "1.0000000000000000000000000000000E-24",
+          "equity_residual": "0E-55",
+          "funding_payments_checked": 207
+        },
+        {
+          "strategy": "permanent",
+          "equity_recomputed": "10350.1563861542375069582000000000000000000000000000000000000",
+          "cash_residual": "2.17391304347826086956521739130435E-24",
+          "equity_residual": "0E-55",
+          "funding_payments_checked": 1677
+        }
+      ],
+      "issues": [],
+      "valid": true
+    },
+    {
+      "run_id": "run_8e60a7bd388ef9b8d7edb5d4",
+      "manifest_sha256": "3c4201aaf130cdd317cc65138e347331e12938a503c20fa165d0c113f9ddc593",
+      "fills_checked": 104,
+      "source_zips_checked": 0,
+      "strategies": [
+        {
+          "strategy": "conditional",
+          "equity_recomputed": "10111.8154897086989057237000000000000000000000000000000000000",
+          "cash_residual": "1.0000000000000000000000000000000E-24",
+          "equity_residual": "0E-55",
+          "funding_payments_checked": 207
+        },
+        {
+          "strategy": "permanent",
+          "equity_recomputed": "10201.9540031756718552706000000000000000000000000000000000000",
+          "cash_residual": "1.84037301151947339550191991223258E-24",
+          "equity_residual": "0E-55",
+          "funding_payments_checked": 1329
+        }
+      ],
+      "issues": [],
+      "valid": true
+    },
+    {
+      "run_id": "run_8fb22fa8b377466cff981b99",
+      "manifest_sha256": "966a251bd9ca7af6c908ce9df3698a8b3c14ddbaf282e1a54b79eaeffee94956",
+      "fills_checked": 98,
+      "source_zips_checked": 0,
+      "strategies": [
+        {
+          "strategy": "conditional",
+          "equity_recomputed": "10111.8154897086989057237000000000000000000000000000000000000",
+          "cash_residual": "1.0000000000000000000000000000000E-24",
+          "equity_residual": "0E-55",
+          "funding_payments_checked": 207
+        },
+        {
+          "strategy": "permanent",
+          "equity_recomputed": "10205.4396571226490021736000000000000000000000000000000000000",
+          "cash_residual": "2.41295546558704453441295546558704E-24",
+          "equity_residual": "0E-55",
+          "funding_payments_checked": 1308
+        }
+      ],
+      "issues": [],
+      "valid": true
+    },
+    {
+      "run_id": "run_f4151cc97937f3704d77fb14",
+      "manifest_sha256": "f40930c0ce2972333364c831b046152d2f654ba2fa211ced92375427259dd534",
+      "fills_checked": 90,
+      "source_zips_checked": 36,
+      "strategies": [
+        {
+          "strategy": "conditional",
+          "equity_recomputed": "10073.6363177009669044546000000000000000000000000000000000000",
+          "cash_residual": "-2.0000000000000000000000000000000E-24",
+          "equity_residual": "0E-55",
+          "funding_payments_checked": 203
+        },
+        {
+          "strategy": "permanent",
+          "equity_recomputed": "10334.3990159715046663077000000000000000000000000000000000000",
+          "cash_residual": "5.2173913043478260869565217391304E-25",
+          "equity_residual": "0E-55",
+          "funding_payments_checked": 1697
+        }
+      ],
+      "issues": [],
+      "valid": true
+    },
+    {
+      "run_id": "run_f80270bad77e25b5752e8e30",
+      "manifest_sha256": "b015b8c74dbe28e70f8e9d34b41445503e90b2bc0d01001f7273934d0558814b",
+      "fills_checked": 6,
+      "source_zips_checked": 2,
+      "strategies": [
+        {
+          "strategy": "conditional",
+          "equity_recomputed": "10000.0000000000000000",
+          "cash_residual": "0E-16",
+          "equity_residual": "0E-16",
+          "funding_payments_checked": 0
+        },
+        {
+          "strategy": "permanent",
+          "equity_recomputed": "9989.5665790039000000000",
+          "cash_residual": "0E-19",
+          "equity_residual": "0E-19",
+          "funding_payments_checked": 0
+        }
+      ],
+      "issues": [],
+      "valid": true
+    }
+  ]
+}
