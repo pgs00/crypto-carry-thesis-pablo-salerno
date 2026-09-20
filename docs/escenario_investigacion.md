@@ -1,5 +1,7 @@
 # Protocolo del estudio
 
+**Protocolo histórico de pilotos y ventanas independientes.** La metodología vigente de las carteras continuas está en [methodology.md](methodology.md) y sus resultados en [progress.md](progress.md). Los comandos de este antecedente no son necesarios para reproducir la presentación actual.
+
 La [revisión vigente de ejecución](sources/Prompt_Codex_Ajuste_Backtesting_1m.md)
 reemplaza el contrato `minute_open` por `next_minute_vwap` con sizing conjunto
 en el escenario principal. Sus datos, cronología y comparación controlada se

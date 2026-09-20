@@ -1,11 +1,15 @@
-# Investigación histórica y auditorías — 18/09/2026
+# Investigación histórica y auditorías
 
-Este índice conserva la evidencia histórica obtenida durante la investigación. Los rangos y conteos siguientes corresponden al horizonte original, no a las dos ventanas anuales actuales. El [protocolo vigente](../escenario_investigacion.md) registra las aproximaciones ya aprobadas, el modelo por minuto y los pasos pendientes. Las fuentes en C: se mantienen porque justifican esos supuestos.
+Este índice conserva fuentes y exploraciones de 2026-09-18/19. El estudio vigente
+son las [carteras continuas de 2022–agosto de 2026](../../entregas/entrega_3/continua/README.md).
+Los alcances y conteos fechados de esta página son antecedentes; no reemplazan
+los resultados actuales. El [catálogo de evidencia](../../data/research/README.md)
+identifica qué respalda el estudio continuo y qué corresponde a pilotos o ventanas.
 
 ## Evidencia obtenida
 
 La [auditoría del basis del 19/09/2026](../../data/research/basis-audit-20260919/README.md)
-corresponde a las ventanas actuales: 4.380 observaciones contrastadas con sus
+corresponde a las ventanas independientes históricas: 4.380 observaciones contrastadas con sus
 velas originales. Confirma el basis y documenta la corrección de presentación
 del funding omitido por la permanente, sin modificar resultados económicos.
 
@@ -73,7 +77,8 @@ La auditoría exige el esquema y ancho de columnas esperados, vuelve a comprobar
 
 Las fuentes sustentan las limitaciones y sensibilidades del escenario aprobado.
 Se conserva su procedencia; no se reclasifican reglas parciales o proxies como
-historia exacta. Las dos ventanas por minuto ya se descargaron, normalizaron,
-validaron y ejecutaron. [Avance y evidencia](../progress.md) registra los baselines,
-las auditorías actuales y el estado de las sensibilidades. Esta ruta usa fuentes
-públicas y no requiere contactar soporte ni contratar proveedores de datos.
+historia exacta. Las dos ventanas por minuto son antecedentes ejecutados y
+conservados en el [archivo de Entrega 3](../../entregas/entrega_3/archivo/README.md).
+[Avance y evidencia](../progress.md) describe las carteras continuas vigentes.
+Las fuentes de esta investigación fueron públicas y no requirieron contactar
+soporte ni contratar proveedores de datos.

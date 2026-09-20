@@ -1,0 +1,41 @@
+{
+  "file_hashes": {
+    "README.md": "6e9a9c94835efcc6bd5f13f7e5e972b4d553217fd6dd803fd4cfabd9acfcde67",
+    "figuras/composicion_pnl.png": "5783a74e7c226597bedacbcb1318366200733cf78776cd3420f9d69e40eb0db5",
+    "figuras/composicion_pnl.svg": "f26296d0f91f24025e260f8c12ac8c840f8207394b41b29d49d2f1a91c2be1d1",
+    "figuras/equity_drawdown.png": "a2f138e4c24fc9c3b6f1551328ca8969ae84582c65a5d8ad7d99a2206cfd64ad",
+    "figuras/equity_drawdown.svg": "f992fdb2f224b9a53bd496f935a38dc75441fceee32ed53b97db4962d0a895bf",
+    "figuras/hipotesis.png": "756aa207079323fd59047102685da991a000908427b393e923ee4d37fb401c7b",
+    "figuras/hipotesis.svg": "3bbd04c872ec28ebfbab6a8128b5a0057d852946793f38f62d9d56be75fc9cf4",
+    "tablas/actividad.csv": "8b9362621ae7f0265583c4e44a099746da7ed102d7c0175a280b05acc384b871",
+    "tablas/ciclos.csv": "53a25e5e9a0d26e11c8fad651c22246126afb51b06981a1552507fd65d4ea66c",
+    "tablas/episodio_2023_03_24_exposicion.csv": "7cbeaebc7ae4f189843d36190fa4fbccab3c477f625381904ccd999eb77e881d",
+    "tablas/episodio_2023_03_24_resumen.csv": "d3bb9eb449fa489aff8f1d09f0153b283326517046f0f049346d10210cd709f1",
+    "tablas/equity_diario.csv": "0fdc3fcb489dbe39a027a0baeca699a0808c5a37b8d1659a110180d84ab83c3c",
+    "tablas/eventos_por_causa.csv": "d01e110dc1bc21fbd3d64f79ff6e7c4e8d39ab63cefe7eb5532665e3149d20fb",
+    "tablas/filtros_entrada.csv": "27acecd2a0c8868f704447559c5c64540d9142cf53c3bc81ad13b4d0f08fced1",
+    "tablas/h1_resumen.csv": "4409c54134eb6affc0f74202b6e2524c6da12d0b18be4ae483b128853d6ad899",
+    "tablas/h3_diario_conjunto.csv": "cf91790e23a7b036afd8744d87ceff3fbc634338b52c19ce8d8efcfeb77307dc",
+    "tablas/h3_resumen.csv": "0ced29faba09bf6f27bdac08ee5fe75ae77b59f4928751e6c18d49bfca846e76",
+    "tablas/resultados_periodos.csv": "d58d6107e09d70e335418cd90348d90903d5e915ba79a69c59deab480a370581",
+    "tablas/tiempo_invertido.csv": "9c35e6b80db80acef78ea6b11fe7666532b8c0ad9ac46c62880ac542ddd3a5f0"
+  },
+  "generator": "scripts/publish_thesis.py",
+  "generator_sha256": "e4ca01f6759235a155b8d8ace1b290da12264c9979d72b9426ff4398470fed36",
+  "source_members": {
+    "tablas/actividad.csv": "8b9362621ae7f0265583c4e44a099746da7ed102d7c0175a280b05acc384b871",
+    "tablas/ciclos.csv": "53a25e5e9a0d26e11c8fad651c22246126afb51b06981a1552507fd65d4ea66c",
+    "tablas/episodio_2023_03_24_exposicion.csv": "7cbeaebc7ae4f189843d36190fa4fbccab3c477f625381904ccd999eb77e881d",
+    "tablas/episodio_2023_03_24_resumen.csv": "d3bb9eb449fa489aff8f1d09f0153b283326517046f0f049346d10210cd709f1",
+    "tablas/equity_pnl_diario.csv": "25c714877a58b5e2830155446f5f13f33de51e9dd5a6a0c029d75529fdaeea90",
+    "tablas/eventos_por_causa.csv": "d01e110dc1bc21fbd3d64f79ff6e7c4e8d39ab63cefe7eb5532665e3149d20fb",
+    "tablas/filtros_entrada.csv": "27acecd2a0c8868f704447559c5c64540d9142cf53c3bc81ad13b4d0f08fced1",
+    "tablas/h1_resumen.csv": "4409c54134eb6affc0f74202b6e2524c6da12d0b18be4ae483b128853d6ad899",
+    "tablas/h3_diario_conjunto.csv": "cf91790e23a7b036afd8744d87ceff3fbc634338b52c19ce8d8efcfeb77307dc",
+    "tablas/h3_resumen.csv": "0ced29faba09bf6f27bdac08ee5fe75ae77b59f4928751e6c18d49bfca846e76",
+    "tablas/resultados_periodos.csv": "d58d6107e09d70e335418cd90348d90903d5e915ba79a69c59deab480a370581",
+    "tablas/tiempo_invertido.csv": "9c35e6b80db80acef78ea6b11fe7666532b8c0ad9ac46c62880ac542ddd3a5f0"
+  },
+  "source_zip": "paquete_actualizacion_entrega_3_continua.zip",
+  "source_zip_sha256": "48485e691f7ae4b479d25766ee46aeac199cf4ea022a36d01cde177e87770916"
+}

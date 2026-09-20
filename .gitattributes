@@ -1,10 +1,19 @@
 # This verified package contains both LF and CRLF sources. Preserve exact bytes
 # through add/checkout on every platform; its SHA-256 values are not normalized.
-/entregas/entrega_3/paquete_redaccion/** -text whitespace=cr-at-eol
+/entregas/entrega_3/archivo/paquete_redaccion/** -text whitespace=cr-at-eol
 # Matplotlib emits spaces at the ends of SVG path lines; keep those source bytes.
-/entregas/entrega_3/paquete_redaccion/figuras/*.svg whitespace=-blank-at-eol,cr-at-eol
+/entregas/entrega_3/archivo/paquete_redaccion/figuras/*.svg whitespace=-blank-at-eol,cr-at-eol
 /entregas/entrega_3/*.zip -text
 /entregas/entrega_3/*.sha256 -text whitespace=cr-at-eol
+/entregas/entrega_3/archivo/*.zip -text
+/entregas/entrega_3/archivo/*.sha256 -text whitespace=cr-at-eol
+/entregas/entrega_3/archivo/*.txt -text whitespace=cr-at-eol
+/entregas/entrega_3/continua/** -text whitespace=cr-at-eol
+/entregas/entrega_3/continua/figuras/*.svg whitespace=-blank-at-eol,cr-at-eol
+/data/manifests/archive/** -text whitespace=cr-at-eol
+/docs/archive/*.txt -text whitespace=cr-at-eol
+/docs/repository_cleanup_manifest.json -text
+/scripts/publish_thesis.py -text
 # Preserve source-investigation evidence and the script hash recorded in its audit.
 /data/research/continuous-preparation-20260919/** -text whitespace=cr-at-eol
 # Keep the compact continuous-study evidence byte-identical across checkouts.

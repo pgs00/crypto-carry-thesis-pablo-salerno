@@ -9,8 +9,8 @@ import zipfile
 from datetime import UTC, datetime
 from pathlib import Path
 
-PROJECT = Path(__file__).resolve().parents[2]
-PACKAGE = PROJECT / "entregas/entrega_3/paquete_redaccion"
+PROJECT = Path(__file__).resolve().parents[3]
+PACKAGE = Path(__file__).resolve().parent / "paquete_redaccion"
 TARGET = PACKAGE.parent / "paquete_redaccion_entrega_3.zip"
 
 

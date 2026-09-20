@@ -1,179 +1,170 @@
-# Metodología implementada
+# Metodología de las carteras continuas
 
-La especificación vigente es la [revisión de ejecución por minuto](sources/Prompt_Codex_Ajuste_Backtesting_1m.md).
-Las dos ventanas son independientes: `[2022-09-01, 2023-09-01)` y
-`[2025-09-01, 2026-09-01)`, en UTC. Cada cartera comienza cada ventana con
-10.000 USDT y sin posiciones. El calentamiento previo sólo informa el pronóstico.
+## Alcance vigente
 
-## Ejecución vigente: `next_minute_vwap`
+Se comparan dos carteras independientes entre sí, condicional y permanente,
+desde **01/01/2022 hasta 31/08/2026 UTC**, intervalo
+`[2022-01-01T00:00:00Z, 2026-09-01T00:00:00Z)`. Cada una comienza con 10.000 USDT.
+No se reinician capital, posiciones, ciclos ni pronósticos al cambiar de año.
+Los cortes `[2022-01-01, 2024-01-01)` y `[2024-01-01, 2026-09-01)` conservan
+los saldos de entrada de la trayectoria continua.
 
-Se usan exclusivamente velas spot y USD-M de un minuto, funding en sus timestamps
-reales y marks de un minuto. Las barras completas conservan OHLC, volumen base
-(BTC/ETH), volumen cotizado (USDT), cantidad de operaciones y fin exclusivo.
-`VWAP = volumen_cotizado / volumen_base`; no se reemplaza por OHLC4 ni precio
-típico. Una barra de volumen cero no permite fills. Los timestamps spot desde
-2025 se normalizan desde microsegundos y los anteriores/futuros desde
-milisegundos. El VWAP debe quedar dentro del rango OHLC con tolerancia relativa
-explícita de `1e-8`, necesaria para redondeos de la fuente. Estas unidades y
-campos corresponden a la [documentación oficial de Binance](https://github.com/binance/binance-public-data).
+Las corridas principales son `run_ad71d751b20623006c195ff3` (condicional) y
+`run_dfea4b7ac1475668d5968c97` (permanente), con `futures_scaled`. Sus parámetros
+provienen de `configs/download_minutes_2022_2026_d.toml` y de las configuraciones
+efectivas conservadas en el [ZIP vigente](../entregas/entrega_3/paquete_actualizacion_entrega_3_continua.zip).
+La limpieza de presentación no cambia esas configuraciones ni el motor.
 
-La decisión fija cantidad y reserva usando información ya disponible. Los
-precios del basis son los **cierres de spot y perpetuo del mismo minuto cerrado**,
-ambos con actividad positiva y frescura de hasta 60 segundos. El mark se usa
-para garantías, valuación y riesgo; nunca como precio ejecutable.
+Las ventanas independientes de septiembre de 2022–agosto de 2023 y septiembre
+de 2025–agosto de 2026, cada una iniciada con capital nuevo, son
+[antecedentes archivados](../entregas/entrega_3/archivo/README.md). La
+[especificación de ejecución 1m](sources/Prompt_Codex_Ajuste_Backtesting_1m.md)
+fijó `next_minute_vwap` y `joint_quantity`; la ampliación continua posterior
+conservó ese contrato. El [texto metodológico anterior](archive/methodology_before_cleanup_20260920.md.txt)
+se conserva como snapshot histórico, incluyendo sus referencias al motor de trades.
 
-La ejecución comienza en `ceil(envío / 1 minuto) * 1 minuto` y dura una única
-ventana. Una orden de las 12:01 utiliza `[12:01,12:02)` y su fill se registra a
-las 12:02; una orden de las 12:01:15 utiliza `[12:02,12:03)` y llena a las 12:03.
-El precio es el VWAP de esa ventana con slippage adverso y redondeo adverso al
-tick. La comisión se aplica una vez. El slippage está incluido en el precio y
-no vuelve a restarse del P&L.
+## Datos y causalidad
 
-`max_volume_participation = 0.01` limita la cantidad agregada ejecutada por
-instrumento, minuto y cartera al 1% del volumen base observado. La capacidad
-se comparte entre órdenes, se redondea hacia abajo al step y respeta fondos,
-inventario y filtros del escenario. Es capacidad **simulada**, no liquidez
-accesible garantizada. Cada estrategia es una cartera contrafactual independiente.
+Universo: spot y perpetuos USD-M de BTCUSDT y ETHUSDT. Se usan OHLC y volúmenes
+de un minuto, tasas de funding en sus timestamps reales y mark prices de un
+minuto. Los timestamps internos son UTC en nanosegundos. Los datos spot desde
+2025 se normalizan desde microsegundos; los anteriores y futuros desde milisegundos.
+El calentamiento de diciembre de 2021 informa los pronósticos y no genera P&L.
 
-Primero se compra spot. Sólo después de completarlo se envía el futuro, que
-puede comenzar su ventana en ese mismo límite y llenar al final del minuto
-siguiente. El delay de un segundo de la referencia no se aplica a esta política.
-Los cierres conservan futuro → spot. Después del fill disponible se cancela el
-remanente de esa única ventana; una ventana sin volumen también consume el
-plazo. Una primera pata parcial no inicia cobertura: se desarma lo realmente
-comprado. Una segunda pata parcial obliga a desarmar ambas exposiciones reales.
-Los cierres parciales reintentan el remanente conciliado en el siguiente minuto.
+Una vela se conoce al cerrar, en el límite del minuto siguiente; no se utiliza
+su high, low o close antes. El basis usa cierres spot/perpetuo alineados del
+mismo minuto cerrado, con actividad positiva y frescura máxima de 60 segundos:
+`basis = futures_close / spot_close − 1`. El mark valúa el riesgo; no es un
+precio ejecutable. Las ausencias desconocidas bloquean cobertura. El calendario
+documentado de interrupción spot del 24/03/2023 clasifica cobertura, sin anunciar
+anticipadamente la suspensión a la estrategia.
 
-La prioridad nueva es: incorporar datos disponibles → funding sobre el short
-anterior a los fills → fills de ventanas comprometidas → riesgo y estado →
-vencimientos/reintentos → decisiones. Riesgo y deuda siguen activos durante
-desarmes. Una observación al cierre no borra un fill del intervalo terminado.
-Una cancelación anterior al comienzo impide el fill; si la ventana ya empezó,
-su resultado comprometido se contabiliza y el inventario se desarma. El plazo
-de corrección de hedge termina al finalizar una ventana elegible: primero se
-registra su fill, luego se evalúa la tolerancia, sin extenderlo por reintentos.
+La cobertura estricta original tiene 15 marks ausentes. La opción explícita
+`futures_scaled` estima `mark[t] = futures_close[t] × mark_close[s] / futures_close[s]`,
+donde `s` es el último minuto oficial anterior al hueco. Mantiene esa ancla en
+huecos consecutivos y escala los OHLC con el mismo factor, sin agregar basis.
+La sensibilidad `last_official` mantiene constante el cierre oficial anterior.
+Sólo se admiten los 15 minutos documentados, con datos ya cerrados; las fuentes
+originales siguen intactas. La cobertura se considera **completada mediante
+aproximaciones**, no enteramente oficial. La validación estricta sigue siendo
+el valor predeterminado. Ver [reglas y evidencia de marks](continuous_mark_gaps.md).
 
-Las ausencias no documentadas de barras o marks son fallos de cobertura, no
-suspensiones ni volumen cero inventado. Durante la interrupción spot del
-24/03/2023 se conserva inventario y se aplican las reglas de inactividad; el
-calendario documentado sólo clasifica la cobertura, sin anticipar la suspensión
-a la estrategia. El monitoreo es por minuto: no se reconstruye una trayectoria
-intraminuto a partir de high/low. No se registran fills ni funding en el fin
-exclusivo, ni cierre terminal ficticio; se valúan las posiciones y se conservan
-las órdenes pendientes.
+## Funding y pronóstico
 
-NautilusTrader 1.231.0 mantiene órdenes, fills parciales y posiciones nativas.
-La política explícita llama al matcher y concilia sus eventos con el ledger
-Decimal; no depende del recorrido OHLC del
-[matching nativo por barras](https://nautilustrader.io/docs/latest/concepts/backtesting/bar-execution/).
+Se conserva el precio oficial de liquidación cuando existe. De 10.224
+observaciones económicas, 6.214 tienen precio oficial y 4.010 usan
+`previous_closed_1m`: el cierre del minuto inmediatamente anterior al límite
+truncado del funding, disponible antes o en su timestamp real. Se respetan
+los milisegundos; no se usa el precio posterior ni se altera la tasa.
+Esta aproximación es distinta de los 15 huecos de velas de mark.
 
-## Sizing conjunto y comparación
+El funding se calcula sobre el short existente **antes de los fills del mismo
+instante**: `q × mark_de_cobro × tasa`. Una tasa positiva produce un ingreso
+para el short. La tasa queda disponible para señales 60 segundos después del
+cobro. Los pronósticos nunca usan las tasas futuras que después servirán como
+objetivo de H1.
 
-`joint_quantity` busca la mayor combinación viable dentro del objetivo neto
-spot de `0,30 * equity` por activo, respetando caja, margen, filtros y desbalance
-máximo de 0,5%. Con fee de compra spot en base,
-`spot_bruto = ceil_step((short_objetivo - spot_existente) / (1-fee))` para
-aumentos. La cobertura se calcula sobre todo el inventario neto, incluido el
-polvo previo. Las reducciones usan deltas y liberación del colateral propio;
-nunca reutilizan como disponible la garantía de otro activo. Los filtros se
-comprueban tanto al precio conocido como al precio adverso estimado. Después
-del fill se concilian cantidades y fondos reales, sin ampliar retrospectivamente
-la compra. Se conserva la moneda de comisión del escenario: base al comprar
-spot, USDT al vender spot y en futuros.
+En un ancla `a`, se toman tasas con `a − 336h < t_i <= a` y un antecedente para
+medir el primer intervalo. Con duración real `d_i` en horas y
+`w_i = 2^(-(a-t_i)/24h)`:
 
-La matriz conserva `legacy_reference`, `joint_sizing_only`, `vwap_only` y
-`vwap_joint`. **`vwap_joint` es el principal por diseño previo a los resultados.**
-Se agrega `alignment_only` para medir por separado la corrección de observación:
-ejecución/sizing anteriores con cierres alineados para las señales. La referencia
-antigua y el cambio aislado de sizing conservan sus opens anteriores. El paquete
-de ejecución nuevo cambia precio, capacidad, parciales y tiempos; su diferencia
-no se atribuye sólo al VWAP.
+`forecast = 168 × sum(w_i × funding_rate_i) / sum(w_i × d_i)`.
 
-Se conservan EWMA 336h, vida media 24h, horizonte/tenencia 168h, funding normalizado
-por duración efectiva, basis `[0,0.005]`, costos, apalancamiento y riesgos
-prescriptos. El único cambio entre condicional y permanente sigue siendo el
-filtro de funding de entrada (`forecast > costo de cuatro órdenes`) y renovación
-(`forecast > 0`). El diagnóstico registra todos los filtros evaluables como
-`pass`, `fail` o `not_evaluable`, causas simultáneas y secuencia aplicada.
-Las renovaciones se guardan aparte de las señales de H1 para no duplicar etiquetas.
+`no_change = 168 × última_tasa / último_intervalo_horas`.
 
-## Referencia histórica del motor anterior
+El costo ex ante es `2 × fee_spot + 2 × fee_futures + 4 × slippage`:
+0,10% spot, 0,05% futuros y 1 bp de slippage por orden producen **0,34%**.
+Son tarifas y reglas prescritas del escenario, no una serie histórica certificada.
 
-Se contrastaron los DOCX disponibles de Entrega 1 y de **Entrega 2 Crypto Carry
-Binance Pablo Salerno**, junto con la referencia anual persistida. No está la
-revisión exacta de Entrega 2 con sufijo `(6)`, la consigna académica citada ni
-la imagen original de feedback; sobre esos adjuntos sólo se dispone de su
-transcripción en el prompt original.
+## Carteras, sizing y ejecución
 
-Frente a Entrega 2, esta revisión cambia la muestra continua por dos ventanas
-independientes; la primera operación posterior y el fill completo por VWAP
-de una ventana con capacidad limitada y parciales; el dimensionamiento secuencial
-por una pareja viable calculada antes de comprar; y los últimos precios por
-cierres alineados. También registra fills comprometidos antes del riesgo observado
-al cierre. Conserva universo, forecast, filtros, tenencia, asignaciones, costos
-y comparación condicional/permanente. Estos cambios son posteriores a esa entrega,
-no reglas atribuidas retrospectivamente al documento académico.
+La condicional exige `forecast > costo` para entrar y `forecast > 0` para
+renovar. La permanente omite sólo esas condiciones; conserva basis, fondos,
+operatividad y riesgos. Un fallo de funding en su diagnóstico no es un rechazo
+aplicado. El filtro de entrada de basis es inclusivo `[0, 0,005]`.
 
-Las secciones siguientes conservan las reglas de la referencia de trades y
-sus fundamentos financieros. Sus horizontes globales y cronología de ejecución
-quedan reemplazados, para los escenarios nuevos, por el contrato anterior.
+El objetivo spot es `0,30 × equity` por activo. `joint_quantity` calcula antes
+de comprar una pareja viable, neta de comisión spot, con fondos, margen, filtros
+y desbalance máximo de 0,5%. Incluye polvo existente y redondea cantidades/ticks.
+La compra spot paga fee en base; ventas spot y operaciones de futuros en USDT.
+La garantía de otra posición no se reutiliza como efectivo disponible.
 
-## Contrato temporal
+`next_minute_vwap` ejecuta en una única ventana completa que comienza en
+`ceil(envío / minuto) × minuto`. Una orden a las 12:01 usa `[12:01,12:02)` y
+registra el fill a las 12:02; a las 12:01:15 usa `[12:02,12:03)`. El precio es
+`volumen_cotizado / volumen_base`, con slippage y tick adversos. No se usa OHLC4
+ni un recorrido intraminuto reconstruido. La participación agregada máxima por
+instrumento/minuto/cartera es 1% del volumen base observado, compartida entre
+órdenes. Volumen cero impide fills; capacidad observada no garantiza liquidez real.
 
-Timestamps enteros UTC en nanosegundos. Evaluación base `[2022-01-01, 2026-09-01)`, preparación prevista desde 2020-08-11. No se reinicia capital ni posiciones el 01/01/2024. La muestra descargada y la demo tienen rangos distintos, registrados en sus propias configuraciones.
+La secuencia de entrada es spot → futuro, enviando la segunda pata después de
+completar la primera; los cierres son futuro → spot. Los parciales, cancelaciones,
+remanentes y reintentos se concilian con el inventario real. Una apertura parcial
+fallida se desarma; no se presupone una cobertura completa. NautilusTrader mantiene
+órdenes y fills; el ledger Decimal concilia cantidades y economía.
 
-En cada timestamp: (1) incorporar todos los datos y reglas conocidos; (2) liquidar funding sobre el short anterior a los fills; (3) evaluar liquidación, deuda y riesgo; (4) gestionar timeouts, correcciones y secuencias; (5) actualizar señales disponibles, renovar y decidir con un equity común; (6) procesar fills elegibles. Una orden enviada en ese lote no puede utilizar ninguno de sus trades. La entrada se considera solamente en momentos de señal, no en cada tick.
+Orden temporal: incorporar datos → liquidar funding sobre el short previo →
+contabilizar fills comprometidos → riesgo/estado → vencimientos y reintentos →
+decisiones. Un riesgo detectado al cierre no borra un fill del intervalo acabado.
+Se mantienen tenencias de 168 horas, renovables; se rebalancea al renovar si el
+desvío del objetivo supera 5%. No se aplica el filtro de basis de entrada a la renovación.
 
-Una tasa se liquida en `funding_time` y queda disponible para señales 60 segundos después (120/300 en sensibilidades). El último mark cerrado se conoce al terminar su minuto (`close_time + 1 ms` en la fuente Binance); nunca al abrirlo. Los cobros usan su `settlement_mark_price`, no el mark de riesgo. Los cambios efectivos de reglas activan timers aunque no coincidan con un trade.
+## Riesgo y contabilidad
 
-## Pronóstico y costos
+Se conserva apalancamiento aislado 2x. Garantía al aumentar short:
+`q × fill / 2 + max(0, q × (mark − fill))`. Para el short,
+`UPnL = q × (precio_medio − mark)` y `margin_balance = garantía + UPnL`.
+Mantenimiento = `q × mark × tasa_del_tramo − deducción`, según reglas prescritas.
 
-En un ancla `a`, se toman tasas con `a - 336h < t_i <= a` y un antecedente que permita medir el primer intervalo. La ventana debe ser íntegra y cada intervalo corroborado. Con `d_i` en horas y `w_i = 2^(-(a-t_i)/24h)`:
+Se conservan la liquidación si el saldo no cubre mantenimiento y la salida preventiva
+por ratio de mantenimiento >= 0,50 o distancia de liquidación < 0,15. El descalce
+`> 2%` activa corrección de futuros hacia `<= 0,5%`; se evalúa al terminar la ventana
+elegible, con los controles de riesgo activos. La inactividad > 30 minutos
+provoca salida y el ensanchamiento de basis >= 0,02 frente a la referencia del
+par activa su control. Los cargos de liquidación siguen los supuestos guardados.
 
-`forecast = 168 * sum(w_i * funding_rate_i) / sum(w_i * d_i)`.
+Funding negativo usa caja futures, garantía del mismo contrato y caja spot libre;
+el remanente es deuda. No se crea dinero ni se trunca equity negativo. Transferencias
+y constitución/liberación de garantía no producen P&L. Al fin exclusivo se valúan
+posiciones abiertas sin inventar cierre, fee terminal, funding o fill posterior.
 
-`no_change = 168 * última_tasa / último_intervalo_horas`.
+`equity = caja_spot + caja_futures + garantías + spot × precio_spot + UPnL_futures − deuda`.
 
-La vida media es temporal, no una cantidad de observaciones. El costo ex ante es `multiplicador * (2 fee_spot + 2 fee_futures + 4 slippage)`. Con 0,10%, 0,05% y 1 bp, resulta 0,34%. Se usan las reglas conocidas al decidir; no se anticipan tarifas de salida futuras. Costos 2x/3x afectan taker y slippage realizado/ex ante, sin multiplicar el cargo de liquidación.
+La atribución concilia P&L spot y futuros (realizado/no realizado), funding,
+comisiones y cargos de liquidación con el cambio de equity. Slippage ya está en
+los precios y sólo se muestra como diagnóstico; no se resta dos veces.
 
-## Carteras y ejecución
+## Evaluación
 
-Cada estrategia empieza con 10.000 USDT propios. Una sola clase controla ambas; el flag de funding sólo cambia entrada (`forecast > costo`) y renovación (`forecast > 0`). El carry permanente elimina esas dos condiciones, conserva todos los demás controles.
+H1 compara el funding realizado acumulado en `(señal, señal+168h]` contra EWMA
+y no-change. Usa muestras emparejadas por activo y promedia sus MAE con peso
+BTC/ETH 50/50. Hay 10.180 observaciones válidas y 44 exclusiones: 42 horizontes
+fuera de muestra y dos límites de calendario no verificables. Los cortes se
+asignan por fecha de señal; un horizonte de diciembre de 2023 puede finalizar
+en 2024. Los horizontes solapados no son observaciones independientes.
 
-Objetivo spot por activo = `0,30 * equity`; se incorpora polvo previo y se redondea el incremento hacia abajo. La compra descuenta comisión en base. El short cubre cantidad neta spot redondeada al step de Futures. Entrada: comprar spot → esperar 1 segundo desde fill → vender perpetuo. Salida: recomprar perpetuo → esperar 1 segundo → vender spot negociable.
+H3 se calcula en cada minuto UTC, **independientemente de las posiciones**:
+forecast semanal completo si pasa funding/costo, basis y operatividad; cero
+si los datos son conocidos y falla un filtro. No se resta el costo al forecast.
+Se promedian los 1.440 minutos de cada día por activo y luego BTC/ETH 50/50.
+Datos desconocidos excluyen el día conjunto; las ausencias de la suspensión
+spot documentada son ceros operativos. Hay 1.704 días válidos. Se conserva la
+publicación exacta: una señal disponible a 00:01:00.006 entra en la grilla a 00:02.
 
-Cada orden llena por el primer trade `envío < trade_time < deadline`, timeout de 30 segundos y fill total independiente del volumen de ese trade. El slippage es adverso al lado y el tick se redondea adversamente. En VWAP se observan trades de `(envío, envío+5s]`, se pondera por cantidad y se ejecuta recién al cerrar esa ventana; sin trades no hay precio ni fill. Los reintentos crean nuevas órdenes y conservan exposición/costos previos.
+Retornos y drawdown usan equity al cierre UTC. CAGR usa duración/365; Sharpe
+usa desviación muestral (`ddof=1`), raíz de 365 y RF cero. Los cortes usan su
+saldo inicial real, sin reiniciar carteras; los retornos de tramos no se suman.
+Tiempo invertido excluye polvo; el tiempo de cartera es la unión de intervalos
+por activo. Capital utilizado al cierre = valor spot + garantía aislada, dividido
+por equity; es una medida diaria, y puede superar 100% por la valuación del short.
 
-Antes de comprometer capital se reservan spot, fee Futures, garantía y open loss; al fill se vuelven a comprobar fondos y filtros. No se financia con deuda ni se usan reservas de otro activo. Se bloquean entradas y aumentos con cualquiera de los trades de más de 60 segundos. Las salidas y el margen continúan.
+H2 exige CAGR condicional positivo y Sharpe superior al permanente. H3 contrasta
+oportunidad y CAGR condicional entre ambos regímenes. Son comparaciones descriptivas,
+no pruebas causales ni garantías de rentabilidad. El
+[análisis del precio de funding](../data/research/funding-price-sensitivity-20260920/README.md)
+cuantifica efectos con posiciones fijas y escenarios P95 ilustrativos; no incluye
+cambios de decisiones o margen ni garantiza extrapolación a los precios ausentes.
 
-Tenencia de 168 horas desde completar el par, renovable en bloques iguales. No se aplica el filtro de basis de entrada a la renovación. Sólo se rebalancea al renovar y si `abs(valor_spot - 0,30 equity)/(0,30 equity) > 0,05`; la igualdad no rebalancea. Aumentos spot→perpetuo; reducciones perpetuo→spot. Sin órdenes no hay comisiones ni cambio de basis de referencia.
-
-## Riesgo y deuda
-
-`basis = último_trade_futures / último_trade_spot - 1`; entrada inclusiva `[0, 0,005]`. Al completar un par o ajuste se guarda el basis observado. En cierres de minuto se sale si aumenta al menos 0,02 frente a la referencia. Las correcciones de hedge no la modifican.
-
-Garantía al aumentar short: `q * fill / 2 + max(0, q*(mark-fill))`. Precio medio ponderado por cantidad. `UPnL = q*(precio_medio-mark)`; `margin_balance = garantía + UPnL`; `maintenance = q*mark*tasa_tramo - deducción`. El precio de liquidación candidato es `(garantía + q*precio_medio + deducción)/(q*(1+tasa_tramo))`; debe pertenecer al tramo usado. Tramos insuficientes bloquean certificación.
-
-Liquidación total si saldo no positivo o saldo <= mantenimiento. De otro modo, salida preventiva si `mantenimiento/saldo >= 0,50` o `(precio_liquidación-mark)/mark < 0,15`. La orden forzosa usa la misma primera operación posterior; conserva el cargo histórico y aplica fee ordinario sólo si la regla lo exige. Una liquidación ya disparada no se cancela por transferencias posteriores.
-
-Descalce = `abs(spot_neto-short)/spot_neto`. Estrictamente >2% activa corrección sólo de Futures. Debe llegar a <=0,5% en 60 segundos o desarmar. Una secuencia normal entre patas no activa este detector, pero sí mantiene los otros riesgos. Short con spot cero es crítico. Inactividad real de >30 minutos en cualquier pata provoca salida; un archivo desconocido produce `incomplete_data`.
-
-Funding = short anterior a fills × mark de cobro × tasa. Positivo entra a caja Futures y cancela deuda primero. Negativo usa caja Futures, garantía del mismo contrato y luego caja spot libre; el remanente es deuda, sin reponer automáticamente garantía. Otras obligaciones usan caja Futures, caja spot y garantía liberada; nunca garantía de otro activo ni ganancia spot no realizada. La deuda selecciona cierres BTC→ETH y se reevalúa tras cada realización.
-
-## Contabilidad
-
-`equity = efectivo_spot + efectivo_futures + garantías + inventario_spot * precio_spot + UPnL_futures - deuda`.
-
-Se concilia cada movimiento y la atribución acumulada: P&L spot realizado/no realizado + P&L Futures realizado/no realizado + funding − fees − cargos de liquidación = equity − capital inicial. Slippage está dentro de precios y se presenta como diagnóstico, sin restarlo otra vez. Transferencias y constitución/liberación de garantía no crean P&L. La venta parcial libera garantía y costo spot proporcionalmente. El promedio Futures restante no cambia al reducir.
-
-La insolvencia conserva equity negativo y obligaciones; no se trunca a cero. El final del período valúa posiciones abiertas, sin cierre ni comisión terminal, y no permite funding ni fills posteriores.
-
-## Evaluación y salidas
-
-H1 usa la suma de funding real en `(señal, señal+horizonte]`. Se excluyen horizontes que salgan de la muestra o cuyo calendario/antecedente/límite no pueda verificarse. Se comparan EWMA y no-change en las mismas observaciones por activo, luego con igual peso. Se reportan MAE, observaciones y exclusiones, por período completo y regímenes. Los horizontes solapados no son observaciones independientes.
-
-Retornos diarios de equity a cierre UTC, capital inicial como referencia del primer retorno. CAGR usa duración calendario/365; Sharpe y volatilidad usan desviación muestral (`ddof=1`) y raíz de 365, RF cero. Se conserva retorno/pérdida observada aunque CAGR/Sharpe resulten nulos por equity no positivo. Con menos de dos retornos o volatilidad nula, Sharpe es nulo con motivo. Drawdown incorpora capital inicial y duración real sin reset en los cambios de régimen.
-
-H2 es descriptivamente favorable sólo con CAGR condicional positivo, Sharpe superior al permanente y cobertura válida. Un prefijo se etiqueta como diagnóstico. H3 calcula cada minuto, independientemente de saldo, posición o cooldown: forecast si pasa funding/costo, basis y datos/operatividad; cero si datos completos pero no elegible. Cada día exige 1.440 minutos por ambos activos. Se promedian ceros y activos con igual peso. Datos desconocidos excluyen el día conjunto. H3 compara oportunidad y CAGR condicional de 2022–2023 frente a 2024+; sin cobertura suficiente es no concluyente. No se atribuye causalidad.
-
-Los archivos de la corrida preservan decimales como strings y estadísticas como floats. El reporte y PNG/SVG se construyen sólo desde tablas guardadas; hashes y configuración permiten verificar/reproducir. Las pruebas y demo sintéticas validan software, nunca hipótesis históricas. Ver `decisions.md` para supuestos, integración, fallas y límites.
+Los [resultados publicados](../entregas/entrega_3/continua/README.md) se regeneran
+desde el ZIP verificado, sin nuevas simulaciones. Los datos masivos y corridas
+completas siguen locales; hashes y configuraciones preservan su trazabilidad.

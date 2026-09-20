@@ -8,7 +8,7 @@ from pathlib import Path
 
 import pytest
 
-SCRIPT = Path(__file__).resolve().parents[2] / "entregas/entrega_3/empaquetar.py"
+SCRIPT = Path(__file__).resolve().parents[2] / "entregas/entrega_3/archivo/empaquetar.py"
 SPEC = importlib.util.spec_from_file_location("delivery_packager", SCRIPT)
 packager = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(packager)

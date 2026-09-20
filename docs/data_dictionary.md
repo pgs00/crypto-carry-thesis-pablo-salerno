@@ -94,7 +94,7 @@ Cada registro es un snapshot completo: `symbol`, `market`, `rule_type=market`, `
 
 ## Manifiestos y cobertura
 
-`data/manifests/download.json` registra por objeto `source_url`, ruta local, SHA-256, bytes, dataset, símbolo, mercado, rango, estado, errores y hora de recuperación. Los ZIP conservan además el archivo `.CHECKSUM` oficial. `processed.json` registra hashes, filas, esquema, rango, duplicados idénticos removidos, conflictos y verificaciones de continuidad. `coverage.json`, `data_coverage.csv` y `data_quality_report.md` distinguen `complete` de `incomplete_data`, el alcance acotado del baseline completo y las reglas faltantes.
+Las rutas `data/manifests/` del checkout conservan el [piloto histórico](../data/manifests/README.md); los manifiestos continuos están junto a las fuentes locales. En cada raíz de datos, `data/manifests/download.json` registra por objeto `source_url`, ruta local, SHA-256, bytes, dataset, símbolo, mercado, rango, estado, errores y hora de recuperación. Los ZIP conservan además el archivo `.CHECKSUM` oficial. `processed.json` registra hashes, filas, esquema, rango, duplicados idénticos removidos, conflictos y verificaciones de continuidad. `coverage.json`, `data_coverage.csv` y `data_quality_report.md` distinguen `complete` de `incomplete_data`, el alcance acotado del baseline completo y las reglas faltantes.
 
 Un archivo ausente o incompleto es información desconocida. No se convierte en inactividad, funding cero, precio interpolado ni retorno inventado. Sólo se eliminan duplicados idénticos; dos filas distintas con la misma clave invalidan la partición.
 

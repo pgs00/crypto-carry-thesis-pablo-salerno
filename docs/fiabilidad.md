@@ -1,12 +1,14 @@
 # Fiabilidad y condiciones para interpretar los resultados
 
+La evidencia de esta página está fechada y conserva los controles de revisiones anteriores. Para el alcance continuo vigente y sus validaciones, consultar [metodología](methodology.md) y [avance](progress.md).
+
 Requisito del usuario, 18/09/2026: el backtest debe ser lo más fiable posible porque podría servir para evaluar una futura prueba con capital propio. Este documento distingue los controles ejecutados y los límites del estudio con supuestos aprobados. El alcance sigue siendo un backtest, sin órdenes reales.
 
 ## Criterio de aceptación histórico
 
 La revisión del 19/09/2026 introduce `next_minute_vwap`, capacidad simulada del
 1%, parciales y sizing conjunto. Sus pruebas y corridas se registran en
-[avance](progress.md); la tabla fechada abajo conserva la evidencia del baseline
+[avance histórico](archive/progress_before_cleanup_20260920.md.txt); la tabla fechada abajo conserva la evidencia del baseline
 anterior. No se reutiliza la auditoría de trades como validación del nuevo modelo.
 
 La rentabilidad no decide si una corrida es válida. La evidencia de datos, el modelo temporal y la conciliación contable se revisan antes de interpretar el resultado. Un resultado negativo también debe conservarse y explicarse.
@@ -21,13 +23,13 @@ La rentabilidad no decide si una corrida es válida. La evidencia de datos, el m
 | Reproducibilidad | Mismos inputs, reglas, configuración y código reproducen resultados; reanudación conserva exposición y eventos. | Dos baselines inmutables con 43 artefactos verificados cada uno; hashes de fuentes y código, parámetros y pruebas de reanudación conservados. |
 | Robustez | Publicar los escenarios evaluados y sus faltantes, pérdidas, drawdowns y costos. | Los siete escenarios priorizados terminaron para ambas ventanas; índices y corridas verificados. Las demás dimensiones del motor están identificadas como no ejecutadas en este conjunto. |
 
-El detalle de pruebas y corridas está en [avance](progress.md), y la evidencia histórica en [investigación](research/README.md). Los tests comprueban casos del software; su cantidad no estima una probabilidad de éxito económico ni prueba ausencia de errores.
+El detalle de las carteras continuas está en [avance](progress.md), y la evidencia histórica en [investigación](research/README.md). Los tests comprueban casos del software; su cantidad no estima una probabilidad de éxito económico ni prueba ausencia de errores.
 
 Los controles estrictos continúan bloqueando resultados completos cuando falta evidencia necesaria. No se aprueba un hueco porque sea pequeño o porque resolverlo perjudique la rentabilidad. Un checksum prueba integridad del archivo; conciliar dos productos del mismo proveedor no descarta una omisión compartida.
 
 ## Límites del modelo que afectan una futura operación
 
-El baseline sigue la [especificación](sources/Prompt_Codex_Backtesting.md) con las modificaciones de alcance, reglas y ejecución aprobadas en el [protocolo vigente](escenario_investigacion.md). Cambiar su economía requiere documentar el cambio y conservar una comparación reproducible.
+El baseline sigue la [especificación](sources/Prompt_Codex_Backtesting.md) con las modificaciones de alcance, reglas y ejecución aprobadas en el [protocolo histórico](escenario_investigacion.md) y la [metodología continua vigente](methodology.md). Cambiar su economía requiere documentar el cambio y conservar una comparación reproducible.
 
 - **Ejecución agregada:** el modelo vigente usa el VWAP del minuto elegible y una capacidad simulada del 1%, con parciales y expiración. No reconstruye spread, profundidad ni colas. Tanto la participación como el slippage fijo son supuestos, no evidencia de liquidez accesible. El modelo `minute_open` con fills completos se conserva sólo como referencia.
 - **Riesgo al cierre de minuto:** el mark cerrado puede omitir movimientos intraminuto capaces de afectar margen o liquidación. No observar una liquidación con esta frecuencia no demuestra que no hubiera ocurrido con observación más fina.
@@ -50,4 +52,4 @@ No se fija ahora un capital de prueba, una duración arbitraria, un drawdown ace
 
 ## Verificación de esta revisión
 
-Se contrastó este documento con el motor, los artefactos anuales y el protocolo aprobado. La suite vigente pasó 302 pruebas; la [auditoría financiera independiente](../data/research/minute-download-20260918/annual-economic-audit.json) reproduce la economía sin importar el ledger ni sus funciones de costos. Estos controles respaldan la consistencia del estudio declarado, no la precisión de sus supuestos frente a una operación real.
+La revisión histórica contrastó este documento con el motor, los artefactos de las ventanas independientes y el protocolo aprobado. En esa revisión pasaron 302 pruebas; la [auditoría financiera independiente](../data/research/minute-download-20260918/annual-economic-audit.json) reprodujo su economía sin importar el ledger ni sus funciones de costos. Los controles actuales están en el [registro de validación](repository_cleanup.md). Estos controles respaldan la consistencia del estudio declarado, no la precisión de sus supuestos frente a una operación real.

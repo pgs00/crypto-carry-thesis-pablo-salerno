@@ -1,8 +1,10 @@
 # Descarga de velas de un minuto en D:
 
-BTCUSDT y ETHUSDT, spot y perpetuos USD-M:
-01/09/2022–31/08/2023 y 01/09/2025–31/08/2026, con agosto previo como
-calentamiento. Se usan archivos y consultas públicas de Binance, sin API key.
+Estudio vigente: BTCUSDT y ETHUSDT, spot y perpetuos USD-M, **01/01/2022–31/08/2026
+UTC**, con diciembre de 2021 como calentamiento. Se usan fuentes públicas de
+Binance. Las instrucciones de las ventanas independientes se conservan más
+abajo como antecedentes. Para leer o reproducir las tablas publicadas no hace
+falta descargar datos: ver la [guía principal](../README.md#reproducción).
 
 ## Ampliación continua: enero de 2022 a agosto de 2026
 

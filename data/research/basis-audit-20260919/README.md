@@ -1,5 +1,7 @@
 # Auditoría del basis — 19/09/2026
 
+**Antecedente histórico:** esta auditoría corresponde a las ventanas independientes. Los [resultados vigentes son continuos](../../../entregas/entrega_3/continua/README.md).
+
 Se ejecutó el [instructivo del usuario](../../../docs/sources/Prompt_Codex_Auditoria_Basis.md)
 sobre el escenario `vwap_joint` de las dos ventanas anuales. El basis negativo
 quedó confirmado en las velas originales, con cobertura de 4.380/4.380
@@ -21,11 +23,11 @@ permanente estaba rotulada y agregada como rechazo aunque esa estrategia omite
 el filtro. Ahora se informa como `diagnostic_fail_not_applied`, fuera de la
 unión de rechazos. Las decisiones reales, operaciones y resultados no cambian.
 
-- [Reporte completo](../../../entregas/entrega_3/paquete_redaccion/evidencia/basis_audit_report.md).
-- [80 observaciones de muestra](../../../entregas/entrega_3/paquete_redaccion/evidencia/basis/basis_audit_sample.csv).
-- [Estadísticas por ventana y activo](../../../entregas/entrega_3/paquete_redaccion/evidencia/basis/basis_audit_summary.csv).
-- [Manifiesto y checksums de todas las observaciones](../../../entregas/entrega_3/paquete_redaccion/evidencia/basis/basis_audit_manifest.json).
-- [Comparación económica con presentación corregida](../../../entregas/entrega_3/paquete_redaccion/evidencia/execution_revision_report.md).
+- [Reporte completo](../../../entregas/entrega_3/archivo/paquete_redaccion/evidencia/basis_audit_report.md).
+- [80 observaciones de muestra](../../../entregas/entrega_3/archivo/paquete_redaccion/evidencia/basis/basis_audit_sample.csv).
+- [Estadísticas por ventana y activo](../../../entregas/entrega_3/archivo/paquete_redaccion/evidencia/basis/basis_audit_summary.csv).
+- [Manifiesto y checksums de todas las observaciones](../../../entregas/entrega_3/archivo/paquete_redaccion/evidencia/basis/basis_audit_manifest.json).
+- [Comparación económica con presentación corregida](../../../entregas/entrega_3/archivo/paquete_redaccion/evidencia/execution_revision_report.md).
 
 El CSV completo `outputs/basis_audit_afd512e8a542f331ffa9ac3f/basis_audit_all.csv`
 y los ZIP de mercado quedan locales. El paquete publica la muestra, el resumen
@@ -36,7 +38,7 @@ y los hashes del conjunto completo; no requiere esos datos para leer el reporte.
 Desde la raíz del repositorio, sin datos de mercado:
 
 ```powershell
-& '.\.venv\Scripts\python.exe' entregas/entrega_3/paquete_redaccion/scripts/verificar_paquete.py
+& '.\.venv\Scripts\python.exe' entregas/entrega_3/archivo/paquete_redaccion/scripts/verificar_paquete.py
 ```
 
 ## Repetir el contraste con las fuentes locales
