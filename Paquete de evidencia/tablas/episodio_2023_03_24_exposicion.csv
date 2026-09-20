@@ -1,0 +1,7 @@
+period,symbol,covered_seconds,unhedged_seconds,dust_seconds,flat_seconds,invested_seconds,calendar_seconds,strategy,source_run_id,any_unhedged_seconds,any_covered_seconds,both_covered_seconds,cash_or_dust_seconds
+2023-03-24,BTCUSDT,0,0,0,86400.000000000,0,86400,conditional,run_ad71d751b20623006c195ff3,,,,
+2023-03-24,ETHUSDT,43200,7260,35940.000000000,0,50460,86400,conditional,run_ad71d751b20623006c195ff3,,,,
+2023-03-24,PORTFOLIO,,,,,50460.000000000,86400,conditional,run_ad71d751b20623006c195ff3,7260.000000000,43200.000000000,0E-9,35940.000000000
+2023-03-24,BTCUSDT,43200,7260,35940.000000000,0,50460,86400,permanent,run_dfea4b7ac1475668d5968c97,,,,
+2023-03-24,ETHUSDT,43200,7260,35940.000000000,0,50460,86400,permanent,run_dfea4b7ac1475668d5968c97,,,,
+2023-03-24,PORTFOLIO,,,,,50460.000000000,86400,permanent,run_dfea4b7ac1475668d5968c97,7260.000000000,43200.000000000,43200.000000000,35940.000000000

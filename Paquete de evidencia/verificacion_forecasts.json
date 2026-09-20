@@ -1,0 +1,14 @@
+[
+  {
+    "stored_forecasts_verified": 5112,
+    "symbol": "BTCUSDT",
+    "warmup_anchor_utc": "2021-12-31T16:00:00.000000000Z",
+    "warmup_available_at_utc": "2021-12-31T16:01:00.000000000Z"
+  },
+  {
+    "stored_forecasts_verified": 5112,
+    "symbol": "ETHUSDT",
+    "warmup_anchor_utc": "2021-12-31T16:00:00.000000000Z",
+    "warmup_available_at_utc": "2021-12-31T16:01:00.000000000Z"
+  }
+]

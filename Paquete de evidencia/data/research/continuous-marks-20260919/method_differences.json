@@ -1,0 +1,66 @@
+{
+  "conditional": {
+    "daily_equity": {
+      "changed_rows": 0,
+      "identical": true,
+      "primary_rows": 1704,
+      "sensitivity_rows": 1704
+    },
+    "fills": {
+      "changed_rows": 0,
+      "identical": true,
+      "primary_rows": 138,
+      "sensitivity_rows": 138
+    },
+    "funding_observations": {
+      "changed_rows": 0,
+      "identical": true,
+      "primary_rows": 10316,
+      "sensitivity_rows": 10316
+    },
+    "risk_events": {
+      "changed_rows": 0,
+      "identical": true,
+      "primary_rows": 574,
+      "sensitivity_rows": 574
+    },
+    "signals": {
+      "changed_rows": 0,
+      "identical": true,
+      "primary_rows": 10224,
+      "sensitivity_rows": 10224
+    }
+  },
+  "permanent": {
+    "daily_equity": {
+      "changed_rows": 0,
+      "identical": true,
+      "primary_rows": 1704,
+      "sensitivity_rows": 1704
+    },
+    "fills": {
+      "changed_rows": 0,
+      "identical": true,
+      "primary_rows": 332,
+      "sensitivity_rows": 332
+    },
+    "funding_observations": {
+      "changed_rows": 0,
+      "identical": true,
+      "primary_rows": 10316,
+      "sensitivity_rows": 10316
+    },
+    "risk_events": {
+      "changed_rows": 0,
+      "identical": true,
+      "primary_rows": 1437,
+      "sensitivity_rows": 1437
+    },
+    "signals": {
+      "changed_rows": 0,
+      "identical": true,
+      "primary_rows": 10224,
+      "sensitivity_rows": 10224
+    }
+  }
+}

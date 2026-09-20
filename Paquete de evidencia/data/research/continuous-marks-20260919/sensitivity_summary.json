@@ -1,0 +1,134 @@
+{
+  "conditional": {
+    "controls": [
+      {
+        "close_requests": 0,
+        "mark_method": "futures_scaled",
+        "max_margin_ratio": "0.006481089392783261633190071417",
+        "method": "futures_scaled",
+        "min_liquidation_distance": "0.6107372436722490287654929263",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "close_requests": 0,
+        "mark_method": "last_official",
+        "max_margin_ratio": "0.006475724666644638930178006950",
+        "method": "last_official",
+        "min_liquidation_distance": "0.6112465011894588343610722118",
+        "symbol": "BTCUSDT"
+      }
+    ],
+    "estimated_checks_per_method": 15,
+    "gap_decisions_identical": true,
+    "gap_risk_events": {
+      "futures_scaled": 0,
+      "last_official": 0
+    },
+    "max_differences": {
+      "distance": {
+        "available_at_utc": "2024-08-12T10:04:00.000000000Z",
+        "max_absolute_difference": "0.0010277979933826037044866503",
+        "symbol": "BTCUSDT"
+      },
+      "equity_before_risk": {
+        "available_at_utc": "2024-08-12T10:04:00.000000000Z",
+        "max_absolute_difference": "1.96872819197439573109544",
+        "symbol": "BTCUSDT"
+      },
+      "mark_close": {
+        "available_at_utc": "2024-08-12T10:04:00.000000000Z",
+        "max_absolute_difference": "37.14581494291312700180079",
+        "symbol": "BTCUSDT"
+      },
+      "ratio": {
+        "available_at_utc": "2024-08-12T10:04:00.000000000Z",
+        "max_absolute_difference": "0.000010800237722461065671194141",
+        "symbol": "BTCUSDT"
+      }
+    },
+    "portfolio_positions_identical": true,
+    "positions_per_method": 26
+  },
+  "permanent": {
+    "controls": [
+      {
+        "close_requests": 0,
+        "mark_method": "futures_scaled",
+        "max_margin_ratio": "0.007091120039806547484267780596",
+        "method": "futures_scaled",
+        "min_liquidation_distance": "0.5578543655376705721559834126",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "close_requests": 0,
+        "mark_method": "official",
+        "max_margin_ratio": "0.003538390467229828620740131199",
+        "method": "futures_scaled",
+        "min_liquidation_distance": "1.121969609801643503618366917",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "close_requests": 0,
+        "mark_method": "futures_scaled",
+        "max_margin_ratio": "0.007577572901014337875273073169",
+        "method": "futures_scaled",
+        "min_liquidation_distance": "0.8457967737471921375376497551",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "close_requests": 0,
+        "mark_method": "last_official",
+        "max_margin_ratio": "0.007084909026777820041866600444",
+        "method": "last_official",
+        "min_liquidation_distance": "0.5583469033798821605810674375",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "close_requests": 0,
+        "mark_method": "official",
+        "max_margin_ratio": "0.003538390467229828620740131199",
+        "method": "last_official",
+        "min_liquidation_distance": "1.121969609801643503618366917",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "close_requests": 0,
+        "mark_method": "last_official",
+        "max_margin_ratio": "0.007578585497260686360059938768",
+        "method": "last_official",
+        "min_liquidation_distance": "0.8456829015729875681364521355",
+        "symbol": "ETHUSDT"
+      }
+    ],
+    "estimated_checks_per_method": 15,
+    "gap_decisions_identical": true,
+    "gap_risk_events": {
+      "futures_scaled": 0,
+      "last_official": 0
+    },
+    "max_differences": {
+      "distance": {
+        "available_at_utc": "2024-08-12T10:04:00.000000000Z",
+        "max_absolute_difference": "0.0026868532777278570089833404",
+        "symbol": "ETHUSDT"
+      },
+      "equity_before_risk": {
+        "available_at_utc": "2024-08-12T10:04:00.000000000Z",
+        "max_absolute_difference": "6.68532402900029554573782",
+        "symbol": "BTCUSDT"
+      },
+      "mark_close": {
+        "available_at_utc": "2024-08-12T10:04:00.000000000Z",
+        "max_absolute_difference": "37.14581494291312700180079",
+        "symbol": "BTCUSDT"
+      },
+      "ratio": {
+        "available_at_utc": "2024-08-12T10:04:00.000000000Z",
+        "max_absolute_difference": "0.000023820642958738665017960733",
+        "symbol": "ETHUSDT"
+      }
+    },
+    "portfolio_positions_identical": true,
+    "positions_per_method": 26
+  }
+}

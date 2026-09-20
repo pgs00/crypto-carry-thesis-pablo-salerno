@@ -1,0 +1,69 @@
+{
+  "methods_recomputed": [
+    "futures_scaled",
+    "last_official"
+  ],
+  "portfolio_csv_sha256": null,
+  "portfolio_positions_checked": 104,
+  "runs": [
+    {
+      "accounting_difference": "-1E-24",
+      "days": 1704,
+      "estimated_risk_checks": 15,
+      "funding_methods": {
+        "exact": 6214,
+        "previous_closed_1m": 4010
+      },
+      "independent_daily_drawdown": "-0.0020616558706701528492637308",
+      "independent_net_return": "0.07857630496471659369000",
+      "method": "futures_scaled",
+      "risk_checks": 29,
+      "strategy": "conditional"
+    },
+    {
+      "accounting_difference": "1E-24",
+      "days": 1704,
+      "estimated_risk_checks": 15,
+      "funding_methods": {
+        "exact": 6214,
+        "previous_closed_1m": 4010
+      },
+      "independent_daily_drawdown": "-0.0048274899052302995404322594",
+      "independent_net_return": "0.168006921675742584680269999",
+      "method": "futures_scaled",
+      "risk_checks": 29,
+      "strategy": "permanent"
+    },
+    {
+      "accounting_difference": "-1E-24",
+      "days": 1704,
+      "estimated_risk_checks": 15,
+      "funding_methods": {
+        "exact": 6214,
+        "previous_closed_1m": 4010
+      },
+      "independent_daily_drawdown": "-0.0020616558706701528492637308",
+      "independent_net_return": "0.07857630496471659369000",
+      "method": "last_official",
+      "risk_checks": 29,
+      "strategy": "conditional"
+    },
+    {
+      "accounting_difference": "1E-24",
+      "days": 1704,
+      "estimated_risk_checks": 15,
+      "funding_methods": {
+        "exact": 6214,
+        "previous_closed_1m": 4010
+      },
+      "independent_daily_drawdown": "-0.0048274899052302995404322594",
+      "independent_net_return": "0.168006921675742584680269999",
+      "method": "last_official",
+      "risk_checks": 29,
+      "strategy": "permanent"
+    }
+  ],
+  "source_files_verified": 1735,
+  "status": "verified",
+  "study": "continuous_marks_b417d512a416058238193c79"
+}
