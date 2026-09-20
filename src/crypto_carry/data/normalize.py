@@ -165,6 +165,7 @@ def _kline_records(
     timestamp_unit: str,
     source_start: str,
     stats: dict,
+    minimum_open_time: int | None = None,
 ) -> Iterator[tuple[dict | None, dict, dict]]:
     """Yield causal open-price and closed-volume records from Binance 1m klines."""
     expected_unit = "us" if market == "spot" and source_start[:4] >= "2025" else "ms"
@@ -183,6 +184,7 @@ def _kline_records(
         documented_missing_minutes=0,
         first_open_time=None,
         last_open_time=None,
+        excluded_before_start=0,
     )
     if first is None:
         stats["minute_coverage_complete"] = False
@@ -201,6 +203,9 @@ def _kline_records(
             raise ValueError(f"Expected Binance 12-field kline schema in {path}")
         try:
             open_raw = int(values[0])
+            if minimum_open_time is not None and open_raw * unit_ns < minimum_open_time:
+                stats["excluded_before_start"] += 1
+                continue
             close_raw = int(values[6])
             prices = tuple(Decimal(values[index]) for index in (1, 2, 3, 4))
             quantity = Decimal(values[5])
@@ -633,13 +638,23 @@ def _funding_dict(record: Funding) -> dict:
     }
 
 
-def normalize(config: Config, root: Path) -> dict:
+def normalize(config: Config, root: Path, *, clip_price_warmup: bool = False) -> dict:
     """Normalize all successful raw-manifest entries without materializing full histories."""
+    if config.mark_gap_method != "strict":
+        raise ValueError("Cannot normalize over a derived mark layer; use prepare-mark-gaps")
     root = Path(root).resolve()
     data_root = root / config.data_dir
     download_path = data_root / "manifests" / "download.json"
     manifest = json.loads(download_path.read_text(encoding="utf-8"))
     manifest_kind = manifest.get("kind", "trade_market_data")
+    price_start = None
+    if clip_price_warmup:
+        if manifest_kind != "minute_market_data":
+            raise ValueError("Price warmup scoping requires minute_market_data")
+        # Prices need the closed-bar antecedent and the participation lookback.
+        # Funding and mark histories retain their full requested warmup.
+        lookback_minutes = max(1, (config.participation_seconds + 59) // 60)
+        price_start = (timestamp(config.start) // MINUTE - lookback_minutes) * MINUTE
     budget_root = root / "data" / "minutes" if manifest_kind == "minute_market_data" else data_root
     successful = [
         entry for entry in manifest["entries"] if entry["status"] in {"cached", "downloaded"}
@@ -699,6 +714,7 @@ def normalize(config: Config, root: Path) -> dict:
                         timestamp_unit=entry["timestamp_unit"],
                         source_start=source_start,
                         stats=output_stats,
+                        minimum_open_time=price_start,
                     )
                     rows = (pair[position] for pair in pairs if pair[position] is not None)
                     destination = (
@@ -721,6 +737,8 @@ def normalize(config: Config, root: Path) -> dict:
                         else int(entry["end"])
                     )
                     source_start_ns = timestamp(source_start)
+                    if price_start is not None:
+                        source_start_ns = max(source_start_ns, price_start)
                     expected_rows = (source_end - source_start_ns) // MINUTE + 1
                     complete = (
                         output_stats.get("minute_coverage_complete") is True
@@ -759,6 +777,14 @@ def normalize(config: Config, root: Path) -> dict:
                                 "timestamp_unit": entry["timestamp_unit"],
                                 "first_trade_id": None,
                                 "last_trade_id": None,
+                                **(
+                                    dict(
+                                        source_scope_start=source_start_ns,
+                                        excluded_before_start=output_stats["excluded_before_start"],
+                                    )
+                                    if price_start is not None
+                                    else {}
+                                ),
                             }
                         )
                 continue
@@ -916,6 +942,13 @@ def normalize(config: Config, root: Path) -> dict:
         "entries": processed_entries,
         "errors": errors,
     }
+    if price_start is not None:
+        result["normalization_scope"] = dict(
+            price_start=price_start,
+            price_start_utc=iso(price_start),
+            reason="Evaluation prices with closed-bar and participation antecedents",
+            funding_and_marks_clipped=False,
+        )
     output_path = data_root / "manifests" / "processed.json"
     encoded = json.dumps(result, indent=2, sort_keys=True).encode()
     if _data_bytes(budget_root) + len(encoded) > config.data_budget_bytes:

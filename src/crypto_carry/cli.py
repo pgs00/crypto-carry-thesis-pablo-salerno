@@ -59,6 +59,11 @@ def parser() -> argparse.ArgumentParser:
             sub.add_argument(
                 "--skip-normalize", action="store_true", help="Validate existing Parquet only"
             )
+            sub.add_argument(
+                "--clip-price-warmup",
+                action="store_true",
+                help="Normalize minute prices from required antecedents; keep full funding/mark warmup",
+            )
         if name == "backtest":
             sub.add_argument(
                 "--sample",
@@ -83,6 +88,11 @@ def parser() -> argparse.ArgumentParser:
             )
     sub = commands.add_parser("report")
     sub.add_argument("--run-id", required=True)
+    sub = commands.add_parser("prepare-mark-gaps")
+    sub.add_argument("--config", required=True)
+    sub.add_argument("--method", choices=("futures_scaled", "last_official"), required=True)
+    sub = commands.add_parser("continuous-mark-study")
+    sub.add_argument("--config", required=True)
     sub = commands.add_parser("execution-revision")
     sub.add_argument("--early-config", required=True)
     sub.add_argument("--late-config", required=True)
@@ -162,6 +172,33 @@ def main(argv: list[str] | None = None) -> int:
         config = Config.load(config_path) if config_path.exists() else Config()
         if not config_path.exists() and args.command != "demo":
             raise FileNotFoundError(config_path)
+        if args.command == "prepare-mark-gaps":
+            from .data.mark_gaps import prepare_mark_gaps
+
+            derived = prepare_mark_gaps(config, root, args.method)
+            print(
+                json.dumps(
+                    {
+                        "method": derived.mark_gap_method,
+                        "config": str(root / derived.data_dir / "manifests/effective_config.toml"),
+                        "status": "prepared_pending_full_validation",
+                    }
+                )
+            )
+            return 0
+        if args.command == "continuous-mark-study":
+            from .mark_gap_study import run_mark_gap_study, verify_mark_gap_study
+
+            study = run_mark_gap_study(root, config)
+            print(
+                json.dumps(
+                    {
+                        "report": str(study / "mark_gap_report.md"),
+                        "verification": verify_mark_gap_study(study),
+                    }
+                )
+            )
+            return 0
         if args.command == "preflight":
             from .preflight import preflight
 
@@ -209,8 +246,13 @@ def main(argv: list[str] | None = None) -> int:
             )
             return 1 if counts.get("failed", 0) else 0
         if args.command == "validate-data":
+            if config.mark_gap_method != "strict" and not args.skip_normalize:
+                raise ValueError("Derived mark layers must be validated with --skip-normalize")
             if not args.skip_normalize:
-                normalize(config, root)
+                if args.clip_price_warmup:
+                    normalize(config, root, clip_price_warmup=True)
+                else:
+                    normalize(config, root)
             result = validate_data(config, root, scope=args.scope)
             print(
                 json.dumps(
@@ -266,12 +308,17 @@ def main(argv: list[str] | None = None) -> int:
             if not synthetic and args.strategy != "both":
                 strategies = tuple(s for s in strategies if s[0] == args.strategy)
             for strategy, enabled in strategies:
+                engine_class = Backtest
+                if config.mark_gap_method != "strict":
+                    from .mark_gap_study import GapAuditedBacktest
+
+                    engine_class = GapAuditedBacktest
                 b = (
-                    Backtest.load_checkpoint(
+                    engine_class.load_checkpoint(
                         _inside(root, args.resume_dir) / f"{strategy}.json", config, rules, inputs
                     )
                     if not synthetic and args.resume_dir
-                    else Backtest(config, rules, strategy, enabled, inputs)
+                    else engine_class(config, rules, strategy, enabled, inputs)
                 )
                 records = (
                     demo_records(config)
@@ -284,6 +331,7 @@ def main(argv: list[str] | None = None) -> int:
                         data_dir=config.data_dir,
                         execution_model=config.execution_model,
                         include_closed_bars=config.signal_price_model == "closed_minute",
+                        mark_gap_method=config.mark_gap_method,
                     )
                 )
                 b.run(

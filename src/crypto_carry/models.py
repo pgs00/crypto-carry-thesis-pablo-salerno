@@ -106,6 +106,8 @@ class Mark:
     low: Decimal
     close: Decimal
     source_file: str = "synthetic"
+    estimation_method: str = "official"
+    anchor_open_time: int | None = None
 
 
 @dataclass(frozen=True)

@@ -74,6 +74,7 @@ class Config:
     rules_file: str = "data/rules/history.json"
     fee_profile: str = "VIP0_no_BNB_no_referral_documented_public_promotions"
     analysis_mode: str = "strict_historical"
+    mark_gap_method: str = "strict"
     funding_proxy_stress_bps: Decimal = Decimal("0")
     research_futures_taker_fee: Decimal = Decimal("0.0005")
     research_maintenance_multiplier: Decimal = Decimal("1")
@@ -145,6 +146,13 @@ class Config:
                 raise ValueError("minute_open requires an order timeout greater than 60 seconds")
         if self.analysis_mode not in ("strict_historical", "prescribed_research"):
             raise ValueError("Unknown analysis mode")
+        if self.mark_gap_method not in ("strict", "futures_scaled", "last_official"):
+            raise ValueError("Unknown mark gap method")
+        if self.mark_gap_method != "strict" and (
+            self.analysis_mode != "prescribed_research"
+            or self.execution_model != "next_minute_vwap"
+        ):
+            raise ValueError("Mark gap estimates require minute VWAP research mode")
         if (
             self.analysis_mode == "prescribed_research"
             and self.fee_profile != "prescribed_fixed_no_discounts"

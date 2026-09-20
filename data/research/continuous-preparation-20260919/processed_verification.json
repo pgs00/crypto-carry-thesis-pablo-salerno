@@ -1,0 +1,30 @@
+{
+  "economic_period_and_funding_and_mark_parquet_unchanged": true,
+  "new_spot_antecedent_partitions": 6,
+  "normalization_errors": [],
+  "normalization_scope": {
+    "funding_and_marks_clipped": false,
+    "price_start": 1640995140000000000,
+    "price_start_utc": "2021-12-31T23:59:00.000000000Z",
+    "reason": "Evaluation prices with closed-bar and participation antecedents"
+  },
+  "partitions_by_dataset": {
+    "funding": 2,
+    "marks": 114,
+    "minute_bars": 228,
+    "minute_prices": 228,
+    "minute_volumes": 228
+  },
+  "processed_files_verified": 800,
+  "processed_manifest_sha256": "432f4ec33b8d618fd71872ff19288b7c9b473abb1479bc67a5c1139b28347435",
+  "referenced_parquet_bytes": 1370099646,
+  "rows_by_dataset": {
+    "funding": 10402,
+    "marks": 4996785,
+    "minute_bars": 9814884,
+    "minute_prices": 9814219,
+    "minute_volumes": 9814884
+  },
+  "same_parquet_sha256_as_initial_processing": 788,
+  "scoped_futures_antecedent_partitions": 6
+}

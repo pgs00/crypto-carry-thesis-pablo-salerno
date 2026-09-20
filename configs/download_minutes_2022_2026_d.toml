@@ -1,0 +1,17 @@
+# Acquisition profile for continuous history, 2022-01-01 through 2026-08-31 UTC.
+# Includes December 2021 for warmup; does not launch or certify a backtest.
+# Uses the current vwap_joint conventions without changing the annual profiles.
+# The 20 GB budget is shared by all folders under D:/Backtesting/data/minutes.
+analysis_mode = "prescribed_research"
+fee_profile = "prescribed_fixed_no_discounts"
+execution_model = "next_minute_vwap"
+sizing_model = "joint_quantity"
+signal_price_model = "closed_minute"
+order_timeout_seconds = 120
+history_start = "2022-01-01T00:00:00Z"
+start = "2022-01-01T00:00:00Z"
+end = "2026-09-01T00:00:00Z"
+sample_start = "2022-01-01T00:00:00Z"
+sample_end = "2022-01-02T00:00:00Z"
+data_dir = "data/minutes/2022_2026_continuous"
+data_budget_bytes = 20000000000

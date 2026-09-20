@@ -1,10 +1,99 @@
-# Descarga vigente: dos ventanas por minuto en D:
+# Descarga de velas de un minuto en D:
 
 BTCUSDT y ETHUSDT, spot y perpetuos USD-M:
 01/09/2022–31/08/2023 y 01/09/2025–31/08/2026, con agosto previo como
 calentamiento. Se usan archivos y consultas públicas de Binance, sin API key.
 
-## Ejecutar o reanudar en PowerShell
+## Ampliación continua: enero de 2022 a agosto de 2026
+
+La descarga y el procesamiento continuo ya están disponibles en este equipo.
+Para ejecutar ambas carteras con los dos tratamientos explícitos de los 15
+marks faltantes, seguir [la guía de cartera continua](continuous_mark_gaps.md).
+Los pasos de adquisición siguientes se conservan para reproducir la preparación.
+
+Para descargar el historial continuo de BTCUSDT y ETHUSDT, desde el
+01/01/2022 hasta el 31/08/2026 UTC inclusive, ejecutar una sola copia:
+
+```powershell
+Set-Location 'C:\Users\pablo\Documentos\UCEMA\Tesina\Backtesting'
+& '.\.venv\Scripts\python.exe' -u '.\scripts\download_continuous.py' --root 'D:\Backtesting'
+```
+
+Usa [el perfil continuo](../configs/download_minutes_2022_2026_d.toml) y guarda
+los crudos en `D:\Backtesting\data\minutes\2022_2026_continuous`. Incluye
+diciembre de 2021 para calentamiento. El límite compartido sigue siendo 20 GB.
+Este comando adquiere datos; la normalización, la validación de cobertura y las
+corridas del período ampliado son pasos posteriores.
+
+El plan comprende **456 ZIP mensuales y dos consultas paginadas de funding**.
+Con las dos ventanas actuales presentes, reutiliza **208 ZIP** y sus seis
+suplementos diarios de mark, después de verificar SHA-256 y CRC. Hace copias
+independientes en el destino nuevo y conserva intactas las fuentes anuales.
+Faltan **248 ZIP mensuales**, unos **311 MB** comprimidos según las cabeceras
+oficiales consultadas el 19/09/2026, más las respuestas pequeñas de funding
+y checksums. Las copias locales agregan unos 257 MB en disco, sin tráfico de
+descarga. No copia los Parquet anuales ni concatena sus snapshots de la API:
+consulta el funding para todo el intervalo nuevo.
+
+Primero muestra `CACHE LOCAL [n/208]` mientras prepara las copias. Después:
+
+```text
+[100/458]  21.83% verificado | faltan 358 | downloaded | ...
+```
+
+El contador incluye descargas y archivos locales por verificar, y se actualiza
+al terminar cada archivo o consulta. `cached` significa que reutilizó el ZIP;
+solo volvió a consultar su checksum. Los fallos quedan pendientes y no suman
+al porcentaje. Es progreso por archivos/respuestas, no por bytes ni una
+estimación de tiempo restante. La descarga termina correctamente al mostrar:
+
+```text
+DESCARGA COMPLETA: 458/458 (100%). Integridad verificada; cobertura y normalizacion pendientes.
+```
+
+Si se interrumpe con `Ctrl+C` o informa `DESCARGA INCOMPLETA`, repetir exactamente
+el mismo comando: conserva los completos y reanuda los parciales cuando el
+servidor admite HTTP Range. Mantener el equipo sin suspensión. No hace falta
+API key. Para consultar el plan sin descargar ni escribir datos, agregar
+`--plan-only` al comando.
+
+### Procesar y validar el período continuo
+
+La descarga completa verifica los archivos, pero no garantiza que Binance haya
+publicado todas las observaciones. La revisión del período ampliado encontró
+un día de mark BTC recuperable desde el diario oficial (31/07/2022) y 15 minutos
+ausentes también de los diarios y de la API. El procedimiento reproducible es:
+
+```powershell
+Set-Location 'C:\Users\pablo\Documentos\UCEMA\Tesina\Backtesting'
+& '.\.venv\Scripts\python.exe' -u '.\data\research\continuous-preparation-20260919\repair_sources.py' --root 'D:\Backtesting'
+$configContinuo = (Resolve-Path '.\configs\download_minutes_2022_2026_d.toml').Path
+& '.\.venv\Scripts\python.exe' -u -m crypto_carry --root 'D:\Backtesting' validate-data --config $configContinuo --scope full --clip-price-warmup
+```
+
+El primer comando conserva los originales, adjunta únicamente observaciones
+oficiales recuperadas y registra las consultas sin resultado. Devuelve código 2
+si quedan huecos. El segundo convierte los crudos a Parquet y valida la cobertura
+completa; también devuelve código 2 si faltan datos. No ejecuta backtests.
+La conversión puede tardar varios minutos sin imprimir progreso.
+
+`--clip-price-warmup` conserva los precios desde el antecedente cerrado y el
+historial de volumen que necesita el modelo (31/12/2021 23:59 UTC con el perfil
+actual). Evita que dos velas irregulares del 24/12/2021, fuera del período usado,
+impidan importar los antecedentes válidos. Registra el alcance y las filas
+excluidas; mantiene completos el calentamiento de funding y los marks. La
+validación dentro del período utilizado conserva sus exigencias. La opción
+es explícita: las reproducciones anuales anteriores mantienen su comportamiento.
+
+Los informes quedan en la carpeta `manifests` del destino continuo:
+`processed.json`, `coverage.json`, `data_coverage.csv` y `data_quality_report.md`.
+Para repetir solamente la validación, agregar `--skip-normalize` al segundo
+comando. Un estado `incomplete_data` impide iniciar el backtest; los minutos
+ausentes no se rellenan ni se reclasifican como cierres del mercado.
+La investigación y sus fuentes se conservan en
+[preparación continua](../data/research/continuous-preparation-20260919/README.md).
+
+## Ejecutar o reanudar las dos ventanas anuales
 
 Ejecutar una sola copia. Si ya está descargando, dejarla continuar.
 

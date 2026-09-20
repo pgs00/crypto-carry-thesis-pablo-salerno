@@ -70,6 +70,93 @@ def _write_checksum(path: Path, archive: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def test_price_scope_excludes_unused_bad_warmup_but_rejects_bad_required_bar(tmp_path):
+    first = timestamp("2021-12-24T04:59:00Z")
+    antecedent = timestamp("2021-12-31T23:59:00Z")
+    unused = _row(first // 1_000_000, unit="ms")
+    unused[6] = str(first // 1_000_000 + 54_362)
+    required = _row(antecedent // 1_000_000, unit="ms")
+    path = tmp_path / "BTCUSDT-1m-2021-12.zip"
+    _write_kline_zip(path, [unused, required], header=False)
+    options = dict(timestamp_unit="ms", source_start="2021-12-01T00:00:00Z")
+    with pytest.raises(ValueError, match="exact one-minute"):
+        list(normalize._kline_records(path, "BTCUSDT", "spot", stats={}, **options))
+    stats = {}
+    records = list(
+        normalize._kline_records(
+            path, "BTCUSDT", "spot", stats=stats, minimum_open_time=antecedent, **options
+        )
+    )
+    assert len(records) == 1
+    assert records[0][2]["open_time"] == antecedent
+    assert stats["excluded_before_start"] == 1
+    required[6] = str(antecedent // 1_000_000 + 54_362)
+    _write_kline_zip(path, [unused, required], header=False)
+    with pytest.raises(ValueError, match="exact one-minute"):
+        list(
+            normalize._kline_records(
+                path, "BTCUSDT", "spot", stats={}, minimum_open_time=antecedent, **options
+            )
+        )
+
+
+@pytest.mark.parametrize("participation_seconds,expected_rows", [(60, 1), (180, 3)])
+def test_normalization_scopes_price_antecedents_and_records_excluded_source_rows(
+    tmp_path, participation_seconds, expected_rows
+):
+    config = Config(
+        history_start="2022-01-01T00:00:00Z",
+        start="2022-01-01T00:00:00Z",
+        data_dir="data/minutes/continuous",
+        participation_seconds=participation_seconds,
+    )
+    data_root = tmp_path / config.data_dir
+    path = data_root / "raw/BTCUSDT-1m-2021-12.zip"
+    start = timestamp(config.start)
+    unused = _row(timestamp("2021-12-24T04:59:00Z") // 1_000_000, unit="ms")
+    unused[6] = str(int(unused[0]) + 54_362)
+    _write_kline_zip(
+        path,
+        [unused, *[_row((start - n * 60 * SECOND) // 1_000_000, unit="ms") for n in (3, 2, 1)]],
+        header=False,
+    )
+    original = path.read_bytes()
+    manifest_path = data_root / "manifests/download.json"
+    manifest_path.parent.mkdir()
+    manifest_path.write_text(
+        json.dumps(
+            dict(
+                kind="minute_market_data",
+                entries=[
+                    dict(
+                        dataset="klines",
+                        symbol="BTCUSDT",
+                        market="spot",
+                        status="downloaded",
+                        path=path.relative_to(tmp_path).as_posix(),
+                        sha256=hashlib.sha256(original).hexdigest(),
+                        timestamp_unit="ms",
+                        start="2021-12-01T00:00:00Z",
+                        end="2021-12-31T23:59:59.999999999Z",
+                    )
+                ],
+            )
+        ),
+        encoding="utf-8",
+    )
+    result = normalize.normalize(config, tmp_path, clip_price_warmup=True)
+    assert not result["errors"]
+    assert len(result["entries"]) == 3
+    for entry in result["entries"]:
+        assert entry["complete"] is True
+        assert entry["rows"] == expected_rows
+        assert entry["excluded_before_start"] == 4 - expected_rows
+        assert entry["source_scope_start"] == start - participation_seconds * SECOND
+        assert entry["source_sha256"] == hashlib.sha256(original).hexdigest()
+    assert result["normalization_scope"]["price_start"] == start - participation_seconds * SECOND
+    assert path.read_bytes() == original
+
+
 def test_kline_records_publish_open_price_immediately_and_volume_after_close(tmp_path):
     open_ns = timestamp("2025-09-01T00:00:00Z")
     open_us = open_ns // 1_000

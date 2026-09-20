@@ -1,0 +1,92 @@
+{
+  "entries": [
+    {
+      "symbol": "BTCUSDT",
+      "retrieved_at": "2026-09-19T22:59:39.156673+00:00",
+      "open_ms": 1640321940000,
+      "daily_row": [
+        "1640321940000",
+        "50951.62000000",
+        "50951.62000000",
+        "50926.58000000",
+        "50951.41000000",
+        "16.27482000",
+        "1640321994362",
+        "829102.73191950",
+        "1126",
+        "6.83894000",
+        "348443.71326310",
+        "0"
+      ],
+      "daily_source_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2021-12-24.zip",
+      "daily_path": "data/minutes/2022_2026_continuous/raw/spot/klines/BTCUSDT/daily/BTCUSDT-1m-2021-12-24.zip",
+      "daily": {
+        "status": "downloaded",
+        "sha256": "d4bcb804d36c8464fb248b7f03bdfb82001b4db8e796d7ba51c5081f0c3216aa",
+        "bytes": 72167
+      },
+      "api_status": 200,
+      "api_source_url": "https://data-api.binance.vision/api/v3/klines?symbol=BTCUSDT&interval=1m&startTime=1640321940000&endTime=1640321999999&limit=1",
+      "api_response": [
+        [
+          1640321940000,
+          "50951.62000000",
+          "50951.62000000",
+          "50926.58000000",
+          "50951.41000000",
+          "16.27482000",
+          1640321994362,
+          "829102.73191950",
+          1126,
+          "6.83894000",
+          "348443.71326310",
+          "0"
+        ]
+      ]
+    },
+    {
+      "symbol": "ETHUSDT",
+      "retrieved_at": "2026-09-19T22:59:41.718220+00:00",
+      "open_ms": 1640321940000,
+      "daily_row": [
+        "1640321940000",
+        "4091.21000000",
+        "4092.48000000",
+        "4088.76000000",
+        "4090.37000000",
+        "105.76010000",
+        "1640321996158",
+        "432603.98525600",
+        "543",
+        "45.23210000",
+        "185027.08778400",
+        "0"
+      ],
+      "daily_source_url": "https://data.binance.vision/data/spot/daily/klines/ETHUSDT/1m/ETHUSDT-1m-2021-12-24.zip",
+      "daily_path": "data/minutes/2022_2026_continuous/raw/spot/klines/ETHUSDT/daily/ETHUSDT-1m-2021-12-24.zip",
+      "daily": {
+        "status": "downloaded",
+        "sha256": "5f5c3c954d69a15423adc37b99a6a249389388b442b99b6f21a48815cffeea97",
+        "bytes": 67684
+      },
+      "api_status": 200,
+      "api_source_url": "https://data-api.binance.vision/api/v3/klines?symbol=ETHUSDT&interval=1m&startTime=1640321940000&endTime=1640321999999&limit=1",
+      "api_response": [
+        [
+          1640321940000,
+          "4091.21000000",
+          "4092.48000000",
+          "4088.76000000",
+          "4090.37000000",
+          "105.76010000",
+          1640321996158,
+          "432603.98525600",
+          543,
+          "45.23210000",
+          "185027.08778400",
+          "0"
+        ]
+      ]
+    }
+  ]
+}

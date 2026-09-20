@@ -1,0 +1,46 @@
+{
+  "comparison.csv": {
+    "sha256": "c5e8f818e5eafa61de3cec13e4ea8440615ac9d739a5822c3a2ea9a80d2b42c4",
+    "source_path_relative_to_local_root": "outputs/continuous_marks_b417d512a416058238193c79/comparison.csv"
+  },
+  "gap_positions_summary.csv": {
+    "sha256": "ba40b297348ae543f026aae4d99f798a8b47c6dc73e3676c9576d2035db5e29e",
+    "source_path_relative_to_local_root": "outputs/continuous_marks_b417d512a416058238193c79/gap_positions_summary.csv"
+  },
+  "gap_risk_checks.csv": {
+    "sha256": "e114a040db915fe9e1a81ed245186e512335e7adf6bc0f04a7638002f0ed1e21",
+    "source_path_relative_to_local_root": "outputs/continuous_marks_b417d512a416058238193c79/gap_risk_checks.csv"
+  },
+  "mark_gap_report.md": {
+    "sha256": "b1bf7c724f5abb08390b4dbde673ca0ce23f4636c795d72fa3f9efb3812d50e0",
+    "source_path_relative_to_local_root": "outputs/continuous_marks_b417d512a416058238193c79/mark_gap_report.md"
+  },
+  "marks_futures_scaled.json": {
+    "sha256": "a5db98ccfdd96b61006aff2a95bf77c7c2cd2df214e0a3db8d846a3386242b76",
+    "source_path_relative_to_local_root": "data/minutes/2022_2026_continuous/derived_marks/futures_scaled/manifests/mark_gap_audit.json"
+  },
+  "marks_last_official.json": {
+    "sha256": "aaea1867ed82d98263f5cec8c4c14e4dd53bfbcd2dfee1087443f95242ba870e",
+    "source_path_relative_to_local_root": "data/minutes/2022_2026_continuous/derived_marks/last_official/manifests/mark_gap_audit.json"
+  },
+  "method_differences.json": {
+    "sha256": "e8db28fb2b47057ce9022175bf33b640a6abe4c717dd83f82560e1f386008460",
+    "source_path_relative_to_local_root": "outputs/continuous_marks_b417d512a416058238193c79/method_differences.json"
+  },
+  "period_metrics.csv": {
+    "sha256": "dc5e3055357ea4ca621beec5a25a89a92c4e23613e9e31a1eb0b1586c08696e7",
+    "source_path_relative_to_local_root": "outputs/continuous_marks_b417d512a416058238193c79/period_metrics.csv"
+  },
+  "source_study_manifest.json": {
+    "sha256": "696fee146f477d40c82404af1140890714cadf0e32f9e7c8f7fa2e9f8a32f57c",
+    "source_path_relative_to_local_root": "outputs/continuous_marks_b417d512a416058238193c79/study_manifest.json"
+  },
+  "source_study_manifest.sha256": {
+    "sha256": "46f60a1110a63132482aa09cd07f5902fc933ff82964695d47a8c9e8a979c1ce",
+    "source_path_relative_to_local_root": "outputs/continuous_marks_b417d512a416058238193c79/study_manifest.sha256"
+  },
+  "study_index.json": {
+    "sha256": "9147c002b44a62019811ae5b37c17041493780f5a1bd997ab63d5d295e28773d",
+    "source_path_relative_to_local_root": "outputs/continuous_marks_b417d512a416058238193c79/study_index.json"
+  }
+}

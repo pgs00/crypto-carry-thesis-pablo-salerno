@@ -143,6 +143,27 @@ PARQUET_COLUMNS = {
     "risk_events": ["kind", "cause", "previous", "state", "order_id", "cycle_id"],
 }
 OPTIONAL_PARQUET_COLUMNS = {
+    "mark_gap_checks": [
+        "method",
+        "stage",
+        "mark_open_time",
+        "mark_available_at",
+        "mark_close",
+        "spot",
+        "short",
+        "average",
+        "collateral",
+        "balance",
+        "maintenance",
+        "ratio",
+        "distance",
+        "liquidation_price",
+        "liquidate",
+        "preventive",
+        "state_before",
+        "state_after",
+        "risk_events",
+    ],
     "renewal_diagnostics": [
         "decision_kind",
         "decision",
@@ -154,7 +175,7 @@ OPTIONAL_PARQUET_COLUMNS = {
         "renewal_status_kind",
         "state_after",
         "expiry_after",
-    ]
+    ],
 }
 CSV_COLUMNS = {
     "data_coverage": [
@@ -281,6 +302,10 @@ CSV_COLUMNS = {
 }
 FIGURES = ("equity", "drawdown", "pnl_components", "forecast", "opportunity", "cost_sensitivity")
 BOOL_FIELDS = {
+    "liquidate",
+    "preventive",
+    "periodic",
+    "risk_applicable",
     "funding_filter_enabled",
     "valid",
     "liquidation",
@@ -293,6 +318,9 @@ BOOL_FIELDS = {
     "scenario_evaluated",
 }
 NS_FIELDS = {
+    "mark_open_time",
+    "gap_anchor",
+    "gap_last",
     "time_ns",
     "anchor",
     "history_start",
@@ -396,12 +424,16 @@ def _unit(name: str) -> str:
         "vwap_quantity",
     }:
         return "base asset units"
-    if "price" in name or name in {"average", "mark"} or name.endswith("_mark"):
+    if "price" in name or name in {"average", "mark", "mark_close"} or name.endswith("_mark"):
         return "USDT per base asset unit"
     if (
         name.endswith("usdt")
         or name
         in {
+            "balance",
+            "maintenance",
+            "equity_before_risk",
+            "equity_after_risk",
             "equity",
             "free_spot",
             "free_futures",
@@ -432,6 +464,8 @@ def _unit(name: str) -> str:
         return "USDT"
     if name in BOOL_FIELDS:
         return "boolean"
+    if name in {"ratio", "distance", "margin_exit_ratio", "liquidation_distance"}:
+        return "dimensionless fraction"
     if (
         any(
             part in name
@@ -734,6 +768,7 @@ def _result_digest(backtests, quality) -> str:
             b.ledger.funding_rows,
             b.positions,
             b.risk_events,
+            getattr(b, "mark_gap_checks", []),
             b.daily,
             b.opportunities,
             b.all_funding,
@@ -772,6 +807,7 @@ def _persist_tables(run, config, backtests, quality, manifest):
             ("ledger", b.ledger.rows),
             ("funding_payments", b.ledger.funding_rows),
             ("risk_events", b.risk_events),
+            ("mark_gap_checks", getattr(b, "mark_gap_checks", [])),
             ("equity_daily", b.daily),
         ):
             tables[name].extend(_stamp(rows, b))
@@ -1009,6 +1045,8 @@ def _report_text(run: Path) -> str:
         label = "PRECIOS OBSERVADOS CON SUPUESTOS PRESCRIPTOS"
     summary, metrics = _read(run, "run_summary"), _read(run, "metrics")
     params = _read(run, "parameters")
+    gap_parameter = params[params.parameter == "mark_gap_method"]
+    gap_method = gap_parameter.iloc[0].value if len(gap_parameter) else "strict"
     execution = params[params.parameter == "execution_model"]
     execution_value = execution.iloc[0].value if len(execution) == 1 else None
     minute_execution = execution_value in {"minute_open", "next_minute_vwap"}
@@ -1051,6 +1089,19 @@ def _report_text(run: Path) -> str:
         else ""
     )
     h3_text = f"H3: {h3}."
+    if gap_method != "strict":
+        gap_coverage = (
+            "completed_with_approximations"
+            if context.status in {"complete", "insolvent"}
+            else "incomplete_data"
+        )
+        window_scope = (
+            f" Cartera del intervalo solicitado con {capital} USDT iniciales por estrategia; "
+            "no se reinician posiciones ni capital al cambiar de año o régimen. "
+            f"Cobertura {gap_coverage}: método `{gap_method}`, opción limitada a los "
+            "15 minutos documentados, con disponibilidad al minuto siguiente. "
+            "Se conserva la aproximación de funding vigente."
+        )
     if minute_execution:
         h3_text += (
             " En las ventanas de evaluación por minuto, la clasificación anterior/posterior a "
@@ -1799,8 +1850,25 @@ def write_run(
         },
         conventions=conventions,
     )
+    if config.mark_gap_method != "strict":
+        conventions["mark_gap_method"] = config.mark_gap_method
+        conventions["mark_gap_coverage"] = (
+            "completed_with_approximations"
+            if quality["status"] == "complete" and manifest["status"] in {"complete", "insolvent"}
+            else "incomplete_data"
+        )
+        conventions["mark_gap_estimates"] = (
+            "Only 15 documented missing minutes; fixed last official anchor; "
+            "published at next minute; no additional basis; funding proxy unchanged"
+        )
     try:
-        for name in ("download.json", "processed.json", "coverage.json"):
+        for name in (
+            "download.json",
+            "processed.json",
+            "coverage.json",
+            "mark_gap_audit.json",
+            "original_processed.json",
+        ):
             source = Path(root).resolve() / config.data_dir / "manifests" / name
             if data_kind in {"historical", "historical_assumptions"} and source.is_file():
                 destination = run / "source_manifests" / name

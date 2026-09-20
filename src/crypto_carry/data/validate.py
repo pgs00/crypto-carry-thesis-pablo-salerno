@@ -668,6 +668,13 @@ def validate_data(config: Config, root: Path, scope: str = "sample") -> dict:
         entries = payload.get("entries", [])
         issues.extend(f"normalization error: {item}" for item in payload.get("errors", []))
     manifest_kind = payload.get("kind") if manifest_path.exists() else None
+    from .mark_gaps import verify_mark_derivation
+
+    mark_gap_audit = []
+    try:
+        mark_gap_audit = verify_mark_derivation(config, root, payload)
+    except (ValueError, KeyError, OSError, TypeError, pa.ArrowException) as exc:
+        issues.append(f"invalid mark gap derivation: {exc}")
     closed_signals = getattr(config, "signal_price_model", "execution_default") == "closed_minute"
     minute_model = config.execution_model in {"minute_open", "next_minute_vwap"} or closed_signals
     if minute_model and manifest_kind != "minute_market_data":
@@ -921,6 +928,12 @@ def validate_data(config: Config, root: Path, scope: str = "sample") -> dict:
     if research:
         result["research_assumptions"] = research_assumptions(effective)
         result["funding_mark_audit"] = funding_mark_audit
+    if config.mark_gap_method != "strict":
+        result["mark_gap_method"] = config.mark_gap_method
+        result["mark_gap_audit"] = mark_gap_audit
+        result["coverage_kind"] = (
+            "completed_with_approximations" if status == "complete" else "incomplete_data"
+        )
 
     manifests = data_root / "manifests"
     manifests.mkdir(parents=True, exist_ok=True)
@@ -965,6 +978,15 @@ def validate_data(config: Config, root: Path, scope: str = "sample") -> dict:
     lines.extend(
         f"- {issue}" for issue in result["issues"] or ["Ninguno para el alcance solicitado."]
     )
+    if config.mark_gap_method != "strict":
+        lines.extend(
+            [
+                "",
+                f"Cobertura: **{result['coverage_kind']}**; método de mark: "
+                f"`{config.mark_gap_method}`; {len(mark_gap_audit)} minutos estimados. "
+                "Estas observaciones no son marks oficiales.",
+            ]
+        )
     documented = result.get("documented_closures", [])
     if documented:
         lines.extend(["", "## Cierres de mercado documentados", ""])

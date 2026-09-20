@@ -942,6 +942,20 @@ class Backtest:
                 ):
                     volume.popleft()
             elif isinstance(r, Mark):
+                if r.estimation_method != "official":
+                    from .data.mark_gaps import APPROVED_MINUTES, MINUTE, official_anchor
+
+                    if (
+                        self.config.mark_gap_method == "strict"
+                        or r.estimation_method != self.config.mark_gap_method
+                        or (r.symbol, r.open_time) not in APPROVED_MINUTES
+                        or r.anchor_open_time != official_anchor(r.symbol, r.open_time)
+                        or r.available_at != r.open_time + MINUTE
+                        or r.close_time != r.available_at - 1_000_000
+                        or r.available_at != self.now
+                    ):
+                        self._halt("Unauthorized or noncausal estimated mark")
+                        return
                 self.marks[r.symbol] = r
             elif isinstance(r, Funding):
                 if self.config.analysis_mode == "prescribed_research":

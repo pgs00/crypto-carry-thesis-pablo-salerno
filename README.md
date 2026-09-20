@@ -6,6 +6,20 @@ ETHUSDT, spot y perpetuos USD-M. NautilusTrader 1.231.0 gestiona el replay y las
 
 ## Alcance vigente
 
+La extensión actual agrega una **cartera continua del 01/01/2022 al
+31/08/2026 UTC**, sin reinicios anuales, con sensibilidad explícita para los
+15 marks ausentes. Conserva los parámetros del modelo por minuto y la
+aproximación de funding vigente. Ver [métodos, evidencia y reproducción](docs/continuous_mark_gaps.md).
+La validación estricta continúa siendo el valor predeterminado.
+
+Las cuatro corridas continuas ya están ejecutadas y verificadas. El
+[reporte de resultados y sensibilidad](data/research/continuous-marks-20260919/README.md)
+incluye posiciones durante los huecos, controles de margen y evidencia compacta
+que se puede comprobar sin descargar los datos masivos.
+
+Las siguientes ventanas independientes y su paquete de entrega se conservan
+como resultados anteriores:
+
 | Ventana independiente | Inicio UTC incluido | Fin UTC excluido |
 |---|---|---|
 | 2022–2023 | 01/09/2022 | 01/09/2023 |

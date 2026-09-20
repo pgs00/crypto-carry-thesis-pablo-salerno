@@ -1,0 +1,31 @@
+{
+  "coverage_kind": "completed_with_approximations",
+  "download_manifest_sha256": "286565cd1bf6ef20af1eaa59e751e06dc092bacc35873cfe954fb82410578a2e",
+  "file_hashes": {
+    "README.md": "8ebb7e305189d21e9d587359feb81fd2ad0c234a005d5914b9970461709133d4",
+    "comparison.csv": "c5e8f818e5eafa61de3cec13e4ea8440615ac9d739a5822c3a2ea9a80d2b42c4",
+    "copy_provenance.json": "cdb1ebae52f3d5465156dd2c0b6c072b67bf82f0f32fd13ba5106adadc3bdf6b",
+    "gap_positions_summary.csv": "ba40b297348ae543f026aae4d99f798a8b47c6dc73e3676c9576d2035db5e29e",
+    "gap_risk_checks.csv": "e114a040db915fe9e1a81ed245186e512335e7adf6bc0f04a7638002f0ed1e21",
+    "mark_gap_report.md": "b1bf7c724f5abb08390b4dbde673ca0ce23f4636c795d72fa3f9efb3812d50e0",
+    "marks_futures_scaled.json": "a5db98ccfdd96b61006aff2a95bf77c7c2cd2df214e0a3db8d846a3386242b76",
+    "marks_last_official.json": "aaea1867ed82d98263f5cec8c4c14e4dd53bfbcd2dfee1087443f95242ba870e",
+    "method_differences.json": "e8db28fb2b47057ce9022175bf33b640a6abe4c717dd83f82560e1f386008460",
+    "period_metrics.csv": "dc5e3055357ea4ca621beec5a25a89a92c4e23613e9e31a1eb0b1586c08696e7",
+    "portfolio_positions_during_gaps.csv": "3fc6016e914c2dc5c6521aa93cb919ca1ab65386fb649385b2527ffd67dbc874",
+    "sensitivity_summary.json": "98886dbe0784e921094303292dd940aceb3e91ef44bc45b10cebe04ff4ae0c3a",
+    "source_study_manifest.json": "696fee146f477d40c82404af1140890714cadf0e32f9e7c8f7fa2e9f8a32f57c",
+    "source_study_manifest.sha256": "46f60a1110a63132482aa09cd07f5902fc933ff82964695d47a8c9e8a979c1ce",
+    "study_index.json": "9147c002b44a62019811ae5b37c17041493780f5a1bd997ab63d5d295e28773d",
+    "summarize_sensitivity.py": "d6308ae2f4abbde745f043ce8ff76a101a51efad8b69eae84893b65cca7c40bf",
+    "verification.json": "f389d5ce29eef84a715893599e51fe8411847cbeccf65d6128517a27ccbb47ab"
+  },
+  "independent_verifier": {
+    "repository_path": "scripts/verify_continuous_marks.py",
+    "sha256": "53f224ed0eb918ffea864b6e26d2341a4652612120ca516928ab697bbd49e958"
+  },
+  "scope": "Compact evidence only; original market partitions and run ledgers remain under the local data root.",
+  "source_manifest_sha256": "432f4ec33b8d618fd71872ff19288b7c9b473abb1479bc67a5c1139b28347435",
+  "study": "continuous_marks_b417d512a416058238193c79",
+  "study_code_hash": "206a0850cddba64474a30e7e07fbc299e1e551e8c6f22c303560aa634c54a008"
+}

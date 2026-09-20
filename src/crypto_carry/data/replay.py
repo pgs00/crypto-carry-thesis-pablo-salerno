@@ -94,6 +94,8 @@ def _records(
                     low=Decimal(str(row["low"])),
                     close=Decimal(str(row["close"])),
                     source_file=row["source_file"],
+                    estimation_method=row.get("estimation_method", "official"),
+                    anchor_open_time=row.get("anchor_open_time"),
                 )
             elif dataset == "gaps":
                 yield DataGap(
@@ -220,6 +222,7 @@ def iter_records(
     data_dir: str = "data",
     execution_model: str | None = None,
     include_closed_bars: bool = False,
+    mark_gap_method: str = "strict",
 ):
     """Merge dataset/symbol streams while retaining required prior observations."""
     if start >= end or warmup_hours < 0:
@@ -227,6 +230,14 @@ def iter_records(
     root = Path(root).resolve()
     manifest_path = root / data_dir / "manifests" / "processed.json"
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    from ..config import Config
+    from .mark_gaps import verify_mark_derivation
+
+    source_config = manifest.get("mark_gap_derivation", {}).get("original_config", {})
+    verification_config = Config.from_dict(source_config).changed(
+        data_dir=data_dir, mark_gap_method=mark_gap_method
+    )
+    verify_mark_derivation(verification_config, root, manifest)
     grouped: dict[tuple[str, str, str], list[dict]] = {}
     for entry in manifest.get("entries", []):
         grouped.setdefault(
@@ -270,6 +281,9 @@ def input_hashes(root: Path, config=None) -> dict[str, str]:
     result = {}
     if processed.exists():
         manifest = json.loads(processed.read_text(encoding="utf-8"))
+        derivation = manifest.get("mark_gap_derivation")
+        if derivation:
+            paths.extend(root / derivation[k] for k in ("original_manifest", "audit_path"))
         paths.extend(root / entry["path"] for entry in manifest.get("entries", []))
         semantic = {k: v for k, v in manifest.items() if k != "source_manifest_sha256"}
         result["processed_manifest_semantics"] = hashlib.sha256(

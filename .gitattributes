@@ -5,3 +5,8 @@
 /entregas/entrega_3/paquete_redaccion/figuras/*.svg whitespace=-blank-at-eol,cr-at-eol
 /entregas/entrega_3/*.zip -text
 /entregas/entrega_3/*.sha256 -text whitespace=cr-at-eol
+# Preserve source-investigation evidence and the script hash recorded in its audit.
+/data/research/continuous-preparation-20260919/** -text whitespace=cr-at-eol
+# Keep the compact continuous-study evidence byte-identical across checkouts.
+/data/research/continuous-marks-20260919/** -text whitespace=cr-at-eol
+/scripts/verify_continuous_marks.py -text

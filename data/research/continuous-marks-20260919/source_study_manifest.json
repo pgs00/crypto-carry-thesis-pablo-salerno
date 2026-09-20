@@ -1,0 +1,196 @@
+{
+  "coverage_kind": "completed_with_approximations",
+  "differences": {
+    "conditional": {
+      "daily_equity": {
+        "changed_rows": 0,
+        "identical": true,
+        "primary_rows": 1704,
+        "sensitivity_rows": 1704
+      },
+      "fills": {
+        "changed_rows": 0,
+        "identical": true,
+        "primary_rows": 138,
+        "sensitivity_rows": 138
+      },
+      "funding_observations": {
+        "changed_rows": 0,
+        "identical": true,
+        "primary_rows": 10316,
+        "sensitivity_rows": 10316
+      },
+      "risk_events": {
+        "changed_rows": 0,
+        "identical": true,
+        "primary_rows": 574,
+        "sensitivity_rows": 574
+      },
+      "signals": {
+        "changed_rows": 0,
+        "identical": true,
+        "primary_rows": 10224,
+        "sensitivity_rows": 10224
+      }
+    },
+    "permanent": {
+      "daily_equity": {
+        "changed_rows": 0,
+        "identical": true,
+        "primary_rows": 1704,
+        "sensitivity_rows": 1704
+      },
+      "fills": {
+        "changed_rows": 0,
+        "identical": true,
+        "primary_rows": 332,
+        "sensitivity_rows": 332
+      },
+      "funding_observations": {
+        "changed_rows": 0,
+        "identical": true,
+        "primary_rows": 10316,
+        "sensitivity_rows": 10316
+      },
+      "risk_events": {
+        "changed_rows": 0,
+        "identical": true,
+        "primary_rows": 1437,
+        "sensitivity_rows": 1437
+      },
+      "signals": {
+        "changed_rows": 0,
+        "identical": true,
+        "primary_rows": 10224,
+        "sensitivity_rows": 10224
+      }
+    }
+  },
+  "output_hashes": {
+    "comparison.csv": "c5e8f818e5eafa61de3cec13e4ea8440615ac9d739a5822c3a2ea9a80d2b42c4",
+    "gap_positions_summary.csv": "ba40b297348ae543f026aae4d99f798a8b47c6dc73e3676c9576d2035db5e29e",
+    "gap_risk_checks.csv": "e114a040db915fe9e1a81ed245186e512335e7adf6bc0f04a7638002f0ed1e21",
+    "mark_gap_report.md": "b1bf7c724f5abb08390b4dbde673ca0ce23f4636c795d72fa3f9efb3812d50e0",
+    "method_differences.json": "e8db28fb2b47057ce9022175bf33b640a6abe4c717dd83f82560e1f386008460",
+    "period_metrics.csv": "dc5e3055357ea4ca621beec5a25a89a92c4e23613e9e31a1eb0b1586c08696e7",
+    "strict_validation/manifests/coverage.json": "44fc9850eb1c570c1a4585b63c7ea5cc01f2ed0f02c2d4f3e7bad41d20ff2b66",
+    "strict_validation/manifests/data_coverage.csv": "222d9fa198a051b27c4f65019f7d641f6a890744ce6007b06eaea2fdc7fdae85",
+    "strict_validation/manifests/data_quality_report.md": "6d2f5228b45ad2a09ed7e73a75ab7eb6560cad8d1d5c05413d7cb5e814993a5f",
+    "strict_validation/manifests/download.json": "286565cd1bf6ef20af1eaa59e751e06dc092bacc35873cfe954fb82410578a2e",
+    "strict_validation/manifests/processed.json": "432f4ec33b8d618fd71872ff19288b7c9b473abb1479bc67a5c1139b28347435",
+    "study_index.json": "9147c002b44a62019811ae5b37c17041493780f5a1bd997ab63d5d295e28773d"
+  },
+  "results": [
+    {
+      "cagr": "0.016334619265711003",
+      "close_causes": {
+        "holding_expiry": 3,
+        "margin": 5,
+        "opening_or_second_leg_failed": 1,
+        "real_market_inactivity": 89
+      },
+      "daily_observations": "1704",
+      "final_equity_usdt": "10785.76304964716593690000000",
+      "gap_checks": 29,
+      "liquidation_fills": 0,
+      "liquidation_requests": 0,
+      "margin_closes": 5,
+      "max_drawdown_daily": "-0.002061655870670309",
+      "method": "futures_scaled",
+      "net_return": "0.07857630496471657",
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "run_manifest_sha256": "a9510b7ad3a5435e83d062e561507ec0b4f118bceca83719da6162d5cc55209f",
+      "strategy": "conditional"
+    },
+    {
+      "cagr": "0.033824773314583556",
+      "close_causes": {
+        "basis_widening": 3,
+        "margin": 7,
+        "opening_or_second_leg_failed": 3,
+        "real_market_inactivity": 7
+      },
+      "daily_observations": "1704",
+      "final_equity_usdt": "11680.06921675742584680269999",
+      "gap_checks": 29,
+      "liquidation_fills": 0,
+      "liquidation_requests": 0,
+      "margin_closes": 7,
+      "max_drawdown_daily": "-0.004827489905230298",
+      "method": "futures_scaled",
+      "net_return": "0.1680069216757425",
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "run_manifest_sha256": "d37bb1781a7402b33ef6b006b8df8f44635e84c238da0bbd769894b00ee40261",
+      "strategy": "permanent"
+    },
+    {
+      "cagr": "0.016334619265711003",
+      "close_causes": {
+        "holding_expiry": 3,
+        "margin": 5,
+        "opening_or_second_leg_failed": 1,
+        "real_market_inactivity": 89
+      },
+      "daily_observations": "1704",
+      "final_equity_usdt": "10785.76304964716593690000000",
+      "gap_checks": 29,
+      "liquidation_fills": 0,
+      "liquidation_requests": 0,
+      "margin_closes": 5,
+      "max_drawdown_daily": "-0.002061655870670309",
+      "method": "last_official",
+      "net_return": "0.07857630496471657",
+      "run_id": "run_19c29a014ce223b02f314100",
+      "run_manifest_sha256": "5d9f491b89d59405e87e51f8f71443d45f058a062fdcddf152d4533f9b4e127a",
+      "strategy": "conditional"
+    },
+    {
+      "cagr": "0.033824773314583556",
+      "close_causes": {
+        "basis_widening": 3,
+        "margin": 7,
+        "opening_or_second_leg_failed": 3,
+        "real_market_inactivity": 7
+      },
+      "daily_observations": "1704",
+      "final_equity_usdt": "11680.06921675742584680269999",
+      "gap_checks": 29,
+      "liquidation_fills": 0,
+      "liquidation_requests": 0,
+      "margin_closes": 7,
+      "max_drawdown_daily": "-0.004827489905230298",
+      "method": "last_official",
+      "net_return": "0.1680069216757425",
+      "run_id": "run_4b9aca288342e402c7f1f990",
+      "run_manifest_sha256": "ad2baaf6b55e99212f2cb2c85f06cfaf6ba2b9648dfff01990266c577186b83c",
+      "strategy": "permanent"
+    }
+  ],
+  "runs": [
+    {
+      "accounting_difference": "-1E-24",
+      "method": "futures_scaled",
+      "path": "outputs/run_ad71d751b20623006c195ff3",
+      "strategy": "conditional"
+    },
+    {
+      "accounting_difference": "1E-24",
+      "method": "futures_scaled",
+      "path": "outputs/run_dfea4b7ac1475668d5968c97",
+      "strategy": "permanent"
+    },
+    {
+      "accounting_difference": "-1E-24",
+      "method": "last_official",
+      "path": "outputs/run_19c29a014ce223b02f314100",
+      "strategy": "conditional"
+    },
+    {
+      "accounting_difference": "1E-24",
+      "method": "last_official",
+      "path": "outputs/run_4b9aca288342e402c7f1f990",
+      "strategy": "permanent"
+    }
+  ],
+  "status": "complete"
+}

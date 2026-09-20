@@ -1,0 +1,64 @@
+{
+  "entries": [
+    {
+      "antecedent_checks": {
+        "checks": [
+          "complete_closed_bar_coverage",
+          "closed_bar_vwap_within_ohlc"
+        ],
+        "status": "complete"
+      },
+      "bar": {
+        "available_at": 1640995200000000000,
+        "base_volume": "23.12242000",
+        "close": "46216.93000000",
+        "end_time": 1640995200000000000,
+        "high": "46233.10000000",
+        "low": "46179.63000000",
+        "market": "spot",
+        "open": "46186.33000000",
+        "open_time": 1640995140000000000,
+        "quote_volume": "1068638.35745640",
+        "source_file": "BTCUSDT-1m-2021-12.zip",
+        "symbol": "BTCUSDT",
+        "trade_count": 509
+      },
+      "original_ohlc_and_volume_unchanged": true,
+      "parquet_path": "data/minutes/2022_2026_continuous/processed/dataset=minute_bars/symbol=BTCUSDT/market=spot/month=2021-12/part-00000.parquet",
+      "parquet_sha256": "5a448261c63e3c33ac2f3ff446b7c63eb1a6cf722f3d94531a1562b2e9819e27",
+      "source_path": "data/minutes/2022_2026_continuous/raw/spot/klines/BTCUSDT/BTCUSDT-1m-2021-12.zip",
+      "source_sha256": "2b6c79547da2d87e6735d29fcb2d75f0e15c9cbfcec6396c8d8f20b3632d8e0b",
+      "symbol": "BTCUSDT"
+    },
+    {
+      "antecedent_checks": {
+        "checks": [
+          "complete_closed_bar_coverage",
+          "closed_bar_vwap_within_ohlc"
+        ],
+        "status": "complete"
+      },
+      "bar": {
+        "available_at": 1640995200000000000,
+        "base_volume": "128.71610000",
+        "close": "3676.23000000",
+        "end_time": 1640995200000000000,
+        "high": "3678.63000000",
+        "low": "3675.09000000",
+        "market": "spot",
+        "open": "3675.10000000",
+        "open_time": 1640995140000000000,
+        "quote_volume": "473269.51792100",
+        "source_file": "ETHUSDT-1m-2021-12.zip",
+        "symbol": "ETHUSDT",
+        "trade_count": 295
+      },
+      "original_ohlc_and_volume_unchanged": true,
+      "parquet_path": "data/minutes/2022_2026_continuous/processed/dataset=minute_bars/symbol=ETHUSDT/market=spot/month=2021-12/part-00000.parquet",
+      "parquet_sha256": "ff4db0879f932cf455794ad0eb7f1c3171951cfa7d7e72d31a1ad2af24033609",
+      "source_path": "data/minutes/2022_2026_continuous/raw/spot/klines/ETHUSDT/ETHUSDT-1m-2021-12.zip",
+      "source_sha256": "4afcb0943a7a7e474904bc2f40983abc5155c6c88cd0775f5b5b2977cb69a69f",
+      "symbol": "ETHUSDT"
+    }
+  ]
+}

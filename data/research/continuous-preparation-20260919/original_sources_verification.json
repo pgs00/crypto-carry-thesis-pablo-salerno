@@ -1,0 +1,11 @@
+{
+  "current_download_manifest_sha256": "286565cd1bf6ef20af1eaa59e751e06dc092bacc35873cfe954fb82410578a2e",
+  "current_supplement_count": 7,
+  "only_changed_source_entries": [
+    "data/minutes/2022_2026_continuous/raw/futures/markPriceKlines/BTCUSDT/BTCUSDT-1m-2022-07.zip"
+  ],
+  "original_download_manifest_sha256": "17b34f963fb7283d45301fec84b50ed12b581201c2c405f8467764e9569ebe44",
+  "original_source_count": 458,
+  "original_source_hashes_unchanged": true,
+  "original_supplement_count": 6
+}

@@ -1,0 +1,85 @@
+{
+  "identity": {
+    "code_hash": "206a0850cddba64474a30e7e07fbc299e1e551e8c6f22c303560aa634c54a008",
+    "config": {
+      "accounting_tolerance": "1E-8",
+      "analysis_mode": "prescribed_research",
+      "basis_exit": "0.02",
+      "basis_max": "0.005",
+      "basis_min": "0",
+      "capital": "10000",
+      "cooldown_hours": 24,
+      "correction_seconds": 60,
+      "cost_multiplier": "1",
+      "data_budget_bytes": 20000000000,
+      "data_dir": "data/minutes/2022_2026_continuous",
+      "end": "2026-09-01T00:00:00Z",
+      "execution_model": "next_minute_vwap",
+      "fee_profile": "prescribed_fixed_no_discounts",
+      "freshness_seconds": 60,
+      "funding_proxy_stress_bps": "0",
+      "half_life_hours": 24,
+      "hedge_tolerance": "0.005",
+      "hedge_trigger": "0.02",
+      "history_start": "2022-01-01T00:00:00Z",
+      "holding_hours": 168,
+      "horizon_hours": 168,
+      "inactivity_seconds": 1800,
+      "leg_delay_seconds": 1,
+      "leverage": "2",
+      "liquidation_distance": "0.15",
+      "margin_exit_ratio": "0.50",
+      "mark_gap_method": "strict",
+      "max_volume_participation": "0.01",
+      "order_timeout_seconds": 120,
+      "participation_seconds": 60,
+      "rebalance_threshold": "0.05",
+      "research_futures_taker_fee": "0.0005",
+      "research_liquidation_fee": "0.0125",
+      "research_maintenance_multiplier": "1",
+      "rules_file": "data/rules/history.json",
+      "sample_end": "2022-01-02T00:00:00Z",
+      "sample_start": "2022-01-01T00:00:00Z",
+      "signal_delay_seconds": 60,
+      "signal_price_model": "closed_minute",
+      "sizing_model": "joint_quantity",
+      "slippage": "0.0001",
+      "start": "2022-01-01T00:00:00Z",
+      "symbols": [
+        "BTCUSDT",
+        "ETHUSDT"
+      ],
+      "target_fraction": "0.30",
+      "vwap_seconds": 5,
+      "window_hours": 336
+    },
+    "download_sha256": "286565cd1bf6ef20af1eaa59e751e06dc092bacc35873cfe954fb82410578a2e",
+    "source_manifest_sha256": "432f4ec33b8d618fd71872ff19288b7c9b473abb1479bc67a5c1139b28347435"
+  },
+  "runs": [
+    {
+      "accounting_difference": "-1E-24",
+      "method": "futures_scaled",
+      "path": "outputs/run_ad71d751b20623006c195ff3",
+      "strategy": "conditional"
+    },
+    {
+      "accounting_difference": "1E-24",
+      "method": "futures_scaled",
+      "path": "outputs/run_dfea4b7ac1475668d5968c97",
+      "strategy": "permanent"
+    },
+    {
+      "accounting_difference": "-1E-24",
+      "method": "last_official",
+      "path": "outputs/run_19c29a014ce223b02f314100",
+      "strategy": "conditional"
+    },
+    {
+      "accounting_difference": "1E-24",
+      "method": "last_official",
+      "path": "outputs/run_4b9aca288342e402c7f1f990",
+      "strategy": "permanent"
+    }
+  ]
+}
