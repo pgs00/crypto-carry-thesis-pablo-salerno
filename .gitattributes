@@ -10,3 +10,7 @@
 # Keep the compact continuous-study evidence byte-identical across checkouts.
 /data/research/continuous-marks-20260919/** -text whitespace=cr-at-eol
 /scripts/verify_continuous_marks.py -text
+# Preserve funding-price evidence and the analysis hashes across checkouts.
+/data/research/funding-price-sensitivity-20260920/** -text whitespace=cr-at-eol
+/scripts/analyze_funding_prices.py -text
+/scripts/funding_price_analysis.py -text

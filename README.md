@@ -17,6 +17,21 @@ Las cuatro corridas continuas ya están ejecutadas y verificadas. El
 incluye posiciones durante los huecos, controles de margen y evidencia compacta
 que se puede comprobar sin descargar los datos masivos.
 
+El [ZIP de actualización de la Entrega 3](entregas/entrega_3/paquete_actualizacion_entrega_3_continua.zip)
+reúne las dos carteras continuas con `futures_scaled`, sus cortes 2022–2023 y
+2024–agosto de 2026, H1, H3 y la revisión del 24/03/2023. Incluye CSV, README,
+fuentes, sensibilidad y un verificador independiente; ocupa 9,64 MB y conserva
+los parámetros y resultados guardados. Su
+[SHA-256](entregas/entrega_3/paquete_actualizacion_entrega_3_continua.zip.sha256)
+permite comprobar la descarga. Tras extraerlo, ejecutar `python verificar.py`
+desde esa carpeta; no requiere los datos masivos ni repetir backtests.
+
+El [análisis del precio de liquidación del funding](data/research/funding-price-sensitivity-20260920/README.md)
+contrasta 6.214 precios oficiales con el cierre del minuto anterior y cuantifica
+el efecto contable sobre ambas carteras. Incluye escenarios ilustrativos para
+los 4.010 precios ausentes, CSV, hashes y comandos de reproducción con posiciones
+fijas. Este análisis es independiente de los 15 marks de velas faltantes.
+
 Las siguientes ventanas independientes y su paquete de entrega se conservan
 como resultados anteriores:
 
@@ -40,16 +55,21 @@ Las aproximaciones históricas de funding y reglas continúan explícitas en la
 
 ## Empezar
 
-1. Leer el [paquete vigente de la Entrega 3](entregas/entrega_3/paquete_redaccion/LEEME.md)
-   o descargar su [ZIP revisado](entregas/entrega_3/paquete_redaccion_entrega_3_v2.zip).
-2. Consultar el [informe corregido](entregas/entrega_3/paquete_redaccion/evidencia/execution_revision_report.md)
+1. Para actualizar el informe con las carteras continuas, descargar el
+   [ZIP de actualización](entregas/entrega_3/paquete_actualizacion_entrega_3_continua.zip)
+   y seguir su `README.md` y `verificar.py`.
+2. Para las ventanas independientes anteriores, leer su
+   [paquete de la Entrega 3](entregas/entrega_3/paquete_redaccion/LEEME.md)
+   o descargar el [ZIP revisado](entregas/entrega_3/paquete_redaccion_entrega_3_v2.zip).
+   Consultar el [informe corregido](entregas/entrega_3/paquete_redaccion/evidencia/execution_revision_report.md)
    y la [auditoría del basis](entregas/entrega_3/paquete_redaccion/evidencia/basis_audit_report.md).
-3. Reproducir las tablas y figuras con el subconjunto incluido, siguiendo el bloque siguiente.
+3. Reproducir las tablas y figuras de esas ventanas con el subconjunto incluido,
+   siguiendo el bloque siguiente.
 4. La [guía de descarga local](docs/descarga_d.md) y los
    [comandos de auditoría completa](docs/escenario_investigacion.md) sólo hacen falta
    para reconstruir datos o contrastar las fuentes de mercado locales.
 
-## Reproducir tablas y figuras
+## Reproducir tablas y figuras de las ventanas independientes
 
 Desde la raíz del repositorio, con el entorno instalado como se indica en
 [Entorno y pruebas](#entorno-y-pruebas):
@@ -68,7 +88,8 @@ Para usar sólo el ZIP, seguir su [LEEME](entregas/entrega_3/paquete_redaccion/L
 `.gitattributes` conserva los bytes del paquete, incluidos los saltos CRLF/LF;
 no se normalizan las fuentes para hacer coincidir sus hashes. El
 [ZIP original verificado](entregas/entrega_3/paquete_redaccion_entrega_3.zip)
-se conserva como referencia histórica; la revisión vigente es `v2`.
+se conserva como referencia histórica; la revisión de esas ventanas es `v2`.
+La actualización continua se distribuye en un ZIP separado, enlazado arriba.
 
 ## Repetir la comparación anual con datos locales
 

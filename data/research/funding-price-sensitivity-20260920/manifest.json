@@ -1,0 +1,17 @@
+{
+  "capital_usdt": "10000",
+  "files": {
+    "README.md": "4b7196f4e3f915e477962303936613c6670084c7aa0b8b8689c549273920addd",
+    "economic_summary.csv": "e3e1607f3445e78fe1329aef8f6e46ed0474f4164840c2eb38c772173187cbdc",
+    "funding_events.csv": "7e41144bd82227932d83eaf007825fd199734204798b88b3b4915232139d713f",
+    "portfolio_scenarios.csv": "bf9dd97a363f295b592daa6681f52630c2d1cb19fe28ba75271555c2a9cea0d6",
+    "price_summary.csv": "b9b66a559349e854f2a2c115d7d80e9f44e6e9d1ccbe2d40e43e6a0b009ba824",
+    "prices.csv": "32a74da09cb7b48224c7961abf46dafc7650e5006a8d37196780c03cb2ed21df",
+    "sources.json": "aa3de417588a53491299a4568b2bc32c4ffde2c5ad8b791a1448d420f85d420f"
+  },
+  "final_equity_usdt": {
+    "conditional": "10785.76304964716593690000000",
+    "permanent": "11680.06921675742584680269999"
+  },
+  "format_version": 1
+}
