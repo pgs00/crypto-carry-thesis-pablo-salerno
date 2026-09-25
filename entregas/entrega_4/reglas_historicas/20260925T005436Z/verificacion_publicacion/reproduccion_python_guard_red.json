@@ -1,0 +1,15 @@
+{
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "-m",
+    "pytest",
+    "tests/unit/test_rules_sensitivity_reproduction.py",
+    "-q",
+    "-k",
+    "each_base_requires or probe_exit"
+  ],
+  "exit_code": 1
+}

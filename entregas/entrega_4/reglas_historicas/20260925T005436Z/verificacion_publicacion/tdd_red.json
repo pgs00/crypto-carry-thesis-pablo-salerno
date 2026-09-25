@@ -1,0 +1,11 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "pytest",
+    "tests/unit/test_historical_rules_publication.py",
+    "-x",
+    "-q"
+  ],
+  "exit_code": 1
+}

@@ -1,0 +1,21 @@
+{
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "-m",
+    "pytest",
+    "tests/unit/test_rules_sensitivity_runner.py",
+    "-q"
+  ],
+  "exit_code": 1,
+  "seconds": 14.55824330006726,
+  "before_sha256": {
+    "scripts\\run_historical_rules_sensitivity.py": "68036ed6263d1bedabe62b844029d649b44ba64603f01ca1c3f34608ddbfbba5",
+    "scripts\\reproduce_historical_rules_sensitivity.py": "a861dcf135a2e467e156b1c843b8a8439e39c53ee832b497208f372e21bc4953",
+    "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\codigo_ejecutado\\scripts\\run_historical_rules_sensitivity.py": "68036ed6263d1bedabe62b844029d649b44ba64603f01ca1c3f34608ddbfbba5"
+  },
+  "unchanged": true,
+  "scope": "Controlled orchestration doubles only; no market replay, no runner/engine/config/source changes."
+}

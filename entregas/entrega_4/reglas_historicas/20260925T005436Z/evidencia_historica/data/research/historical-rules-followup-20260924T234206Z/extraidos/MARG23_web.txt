@@ -1,0 +1,86 @@
+Updates on the Leverage & Margin Tiers of Multiple USDⓈ-M and COIN-M Perpetual Contracts (2024-01-02) | Binance Support (https://www.binance.com/en/support/announcement/detail/d75c5ca94f704e96a6a4e55ffddfd65d)
+citeturn5view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.binance.com/en/support/announcement/detail/d75c5ca94f704e96a6a4e55ffddfd65d","lineno":0}); Total lines: 289
+L0: cite0†Markets L1: 
+L2: Trade
+L3: 
+L4: cite1†Square L5: 
+L6: Institutional
+L7: 
+L8: cite2†New Cryptocurrency Listing cite3†Latest Binance News cite4†Latest Activities cite5†Delisting cite6†Maintenance Updates cite7†API Updates cite8†Crypto Airdrop L9: # Updates on the Leverage & Margin Tiers of Multiple USDⓈ-M and COIN-M Perpetual Contracts (2024-01-02)
+L10: 
+L11: Published on 2024-01-02 13:50
+L12: 
+L13: Fellow Binancians,
+L14: 
+L15: Binance Futures has updated the leverage and margin tiers of the following USDⓈ-M and COIN-M Perpetual Contracts, as per the tables below:
+L16: 
+L17:   * At 2023-12-24 09:35 (UTC): USDⓈ-M BTCUSDT, ETHUSDT, ORDIUSDT and SOLUSDT Perpetual Contracts
+L18:   * At 2024-01-02 12:50 (UTC): USDⓈ-M BNBUSDT, OPUSDT, DOTUSDT, NEARUSDT and 1000SATSUSDT Perpetual Contracts, as well as the COIN-M ETHUSD Perpetual Contract
+L19: 
+L20: Please note that existing positions opened before the update will not be affected.
+L21: 
+L22: Updates to Leverage & Margin Tiers:
+L23: 
+L24:   * BTCUSDT (USDⓈ-M Perpetual Contract)
+L25: Previous Leverage and Margin Tiers  | New Leverage and Margin Tiers
+L26: Leverage Before Change  | Position Before Change (Notional Value in USDT)  | Maintenance Margin Rate Before Change  | Leverage After Change  | Position After Change (Notional Value in USDT)  | Maintenance Margin Rate After Change
+L27: 101 - 125x  | 0 < Position ≤ 50,000  | 0.40%  | 101 - 125x  | 0 < Position ≤ 50,000  | 0.40%
+L28: 51 - 100x  | 50,000 < Position ≤ 500,000  | 0.50%  | 51 - 100x  | 50,000 < Position ≤ 500,000  | 0.50%
+L29: 21 - 50x  | 500,000 < Position ≤ 8,000,000  | 1.00%  | 21 - 50x  | 500,000 < Position ≤ 10,000,000  | 1.00%
+L30: 11 - 20x  | 8,000,000 < Position ≤ 50,000,000  | 2.50%  | 11 - 20x  | 10,000,000 < Position ≤ 80,000,000  | 2.50%
+L31: 6 - 10x  | 50,000,000 < Position ≤ 80,000,000  | 5.00%  | 6 - 10x  | 80,000,000 < Position ≤ 150,000,000  | 5.00%
+L32: 5x  | 80,000,000 < Position ≤ 100,000,000  | 10.00%  | 5x  | 150,000,000 < Position ≤ 300,000,000  | 10.00%
+L33: 4x  | 100,000,000 < Position ≤ 120,000,000  | 12.50%  | 4x  | 300,000,000 < Position ≤ 450,000,000  | 12.50%
+L34: 3x  | 120,000,000 < Position ≤ 200,000,000  | 15.00%  | 3x  | 450,000,000 < Position ≤ 600,000,000  | 15.00%
+L35: 2x  | 200,000,000 < Position ≤ 300,000,000  | 25.00%  | 2x  | 600,000,000 < Position ≤ 800,000,000  | 25.00%
+L36: 1x  | 300,000,000 < Position ≤ 500,000,000  | 50.00%  | 1x  | 800,000,000 < Position ≤ 1,000,000,000  | 50.00%
+L37:   * ETHUSDT (USDⓈ-M Perpetual Contract)
+L38: Previous Leverage and Margin Tiers  | New Leverage and Margin Tiers
+L39: Leverage Before Change  | Position Before Change (Notional Value in USDT)  | Maintenance Margin Rate Before Change  | Leverage After Change  | Position After Change (Notional Value in USDT)  | Maintenance Margin Rate After Change
+L40: 76 - 100x  | 0 < Position ≤ 200,000  | 0.50%  | 101 - 125x  | 0 < Position ≤ 50,000  | 0.40%
+L41: 51 - 75x  | 200,000 < Position ≤ 800,000  | 0.65%  | 76 - 100x  | 50,000 < Position ≤ 500,000  | 0.50%
+L42: 21 - 50x  | 800,000 < Position ≤ 5,000,000  | 1.00%  | 51 - 75x  | 500,000 < Position ≤ 1,000,000  | 0.65%
+L43: 11 - 20x  | 5,000,000 < Position ≤ 30,000,000  | 2.00%  | 21 - 50x  | 1,000,000 < Position ≤ 5,000,000  | 1.00%
+L44: 6 - 10x  | 30,000,000 < Position ≤ 50,000,000  | 5.00%  | 11 - 20x  | 5,000,000 < Position ≤ 50,000,000  | 2.00%
+L45: 5x  | 50,000,000 < Position ≤ 70,000,000  | 10.00%  | 6 - 10x  | 50,000,000 < Position ≤ 100,000,000  | 5.00%
+L46: 4x  | 70,000,000 < Position ≤ 80,000,000  | 12.50%  | 5x  | 100,000,000 < Position ≤ 150,000,000  | 10.00%
+L47: 3x  | 80,000,000 < Position ≤ 100,000,000  | 15.00%  | 4x  | 150,000,000 < Position ≤ 300,000,000  | 12.50%
+L48: 2x  | 100,000,000 < Position ≤ 150,000,000  | 25.00%  | 3x  | 300,000,000 < Position ≤ 400,000,000  | 15.00%
+L49: 1x  | 150,000,000 < Position ≤ 300,000,000  | 50.00%  | 2x  | 400,000,000 < Position ≤ 500,000,000  | 25.00%
+L50: N/A  | 1x  | 500,000,000 < Position ≤ 800,000,000  | 50.00%
+L51:   * ORDIUSDT (USDⓈ-M Perpetual Contract)
+L52: Previous Leverage and Margin Tiers  | New Leverage and Margin Tiers
+L53: Leverage Before Change  | Position Before Change (Notional Value in USDT)  | Maintenance Margin Rate Before Change  | Leverage After Change  | Position After Change (Notional Value in USDT)  | Maintenance Margin Rate After Change
+L54: 26 - 50x  | 0 < Position ≤ 5,000  | 1.50%  | 51 - 75x  | 0 < Position ≤ 5,000  | 0.65%
+L55: 21 - 25x  | 5,000 < Position ≤ 50,000  | 2.00%  | 41 - 50x  | 5,000 < Position ≤ 75,000  | 1.00%
+L56: 11 - 20x  | 50,000 < Position ≤ 400,000  | 2.50%  | 26 - 40x  | 75,000 < Position ≤ 150,000  | 1.50%
+L57: 6 - 10x  | 400,000 < Position ≤ 800,000  | 5.00%  | 21 - 25x  | 150,000 < Position ≤ 300,000  | 2.00%
+L58: 5x  | 800,000 < Position ≤ 2,000,000  | 10.00%  | 11 - 20x  | 300,000 < Position ≤ 1,000,000  | 2.50%
+L59: 3 - 4x  | 2,000,000 < Position ≤ 4,000,000  | 12.50%  | 6 - 10x  | 1,000,000 < Position ≤ 3,000,000  | 5.00%
+L60: 2x  | 4,000,000 < Position ≤ 8,000,000  | 25.00%  | 5x  | 3,000,000 < Position ≤ 6,000,000  | 10.00%
+L61: 1x  | 8,000,000 < Position ≤ 15,000,000  | 50.00%  | 3 - 4x  | 6,000,000 < Position ≤ 10,000,000  | 12.50%
+L62: N/A  | 2x  | 10,000,000 < Position ≤ 20,000,000  | 25.00%
+L63: 1x  | 20,000,000 < Position ≤ 30,000,000  | 50.00%
+L64:   * SOLUSDT (USDⓈ-M Perpetual Contract)
+L65: Previous Leverage and Margin Tiers  | New Leverage and Margin Tiers
+L66: Leverage Before Change  | Position Before Change (Notional Value in USDT)  | Maintenance Margin Rate Before Change  | Leverage After Change  | Position After Change (Notional Value in USDT)  | Maintenance Margin Rate After Change
+L67: 51 - 75x  | 0 < Position ≤ 10,000  | 0.65%  | 76 - 100x  | 0 < Position ≤ 10,000  | 0.50%
+L68: 41 - 50x  | 10,000 < Position ≤ 50,000  | 1.00%  | 51 - 75x  | 10,000 < Position ≤ 50,000  | 0.65%
+L69: 26 - 40x  | 50,000 < Position ≤ 100,000  | 1.20%  | 41 - 50x  | 50,000 < Position ≤ 200,000  | 1.00%
+L70: 21 - 25x  | 100,000 < Position ≤ 200,000  | 2.00%  | 26 - 40x  | 200,000 < Position ≤ 500,000  | 1.20%
+L71: 11 - 20x  | 200,000 < Position ≤ 1,000,000  | 2.50%  | 21 - 25x  | 500,000 < Position ≤ 1,000,000  | 2.00%
+L72: 6 - 10x  | 1,000,000 < Position ≤ 2,000,000  | 5.00%  | 11 - 20x  | 1,000,000 < Position ≤ 2,000,000  | 2.50%
+L73: 5x  | 2,000,000 < Position ≤ 4,800,000  | 10.00%  | 6 - 10x  | 2,000,000 < Position ≤ 5,000,000  | 5.00%
+L74: 3 - 4x  | 4,800,000 < Position ≤ 6,000,000  | 12.50%  | 5x  | 5,000,000 < Position ≤ 15,000,000  | 10.00%
+L75: 2x  | 6,000,000 < Position ≤ 18,000,000  | 25.00%  | 3 - 4x  | 15,000,000 < Position ≤ 20,000,000  | 12.50%
+L76: 1x  | 18,000,000 < Position ≤ 30,000,000  | 50.00%  | 2x  | 20,000,000 < Position ≤ 50,000,000  | 25.00%
+L77: N/A  | 1x  | 50,000,000 < Position ≤ 100,000,000  | 50.00%
+L78:   * BNBUSDT (USDⓈ-M Perpetual Contract)
+L79: Previous Leverage and Margin Tiers  | New Leverage and Margin Tiers
+L80: Leverage Before Change  | Position Before Change (Notional Value in USDT)  | Maintenance Margin Rate Before Change  | Leverage After Change  | Position After Change (Notional Value in USDT)  | Maintenance Margin Rate After Change
+L81: 51 - 75x  | 0 < Position ≤ 5,000  | 0.50%  | 51 - 75x  | 0 < Position ≤ 10,000  | 0.50%
+L82: 41 - 50x  | 5,000 < Position ≤ 10,000  | 0.60%  | 41 - 50x  | 10,000 < Position ≤ 50,000  | 0.60%
+L83: 26 - 40x  | 10,000 < Position ≤ 50,000  | 1.00%  | 26 - 40x  | 50,000 < Position ≤ 100,000  | 1.00%
+L84: 11 - 25x  | 50,000 < Position ≤ 250,000  | 2.00%  | 11 - 25x  | 100,000 < Position ≤ 500,000  | 2.00%
+L85: 6 - 10x  | 250,000 < Position ≤ 1,000,000  | 5.00%  | 6 - 10x  | 500,000 < Position ≤ 2,000,000  | 5.00%
+L86: 5x  | 1,000,000 < Position ≤ 5,000,000  | 10.00%  | 5x  | 2,000,000 < Position ≤ 6,000,000  | 10.00%

@@ -1,0 +1,1 @@
+run_id,strategy,order_id,symbol,market,side,purpose,submitted_at_ns,submitted_at_utc,quantity,final_status,fill_count,filled_quantity,fill_notional_usdt,reference_price_first_fill,order_notional_proxy_usdt,notional_definition,first_fill_id,fact_id,source_id,temporal_kind,diagnostic_anchor_utc,within_24h_anchor,threshold_result_differs,submitted_before_anchor,scope

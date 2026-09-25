@@ -1,0 +1,16 @@
+F
+================================== FAILURES ===================================
+________________________ test_read_only_command_exists ________________________
+
+    def test_read_only_command_exists():
+>       assert SCRIPT.is_file(), "The read-only publication verifier must exist"
+E       AssertionError: The read-only publication verifier must exist
+E       assert False
+E        +  where False = is_file()
+E        +    where is_file = WindowsPath('C:/Users/pablo/Documentos/UCEMA/Tesina/Backtesting/scripts/verify_historical_rules_publication.py').is_file
+
+tests\unit\test_historical_rules_publication.py:23: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/unit/test_historical_rules_publication.py::test_read_only_command_exists
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!
+1 failed in 0.34s

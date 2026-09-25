@@ -1,0 +1,49 @@
+{
+  "created_at_utc": "2026-09-25T14:07:54.772971+00:00",
+  "aliases": {
+    "run_ad71d751b20623006c195ff3": {
+      "source_run_id": "run_d17c6848d9a0c5c85249b152",
+      "status": "derivado_invariancia_verificada",
+      "reason": "BASE_E3 did not archive per-asset minute aggregates. Reconstructed from the same-strategy FUT4_REALIZADA with unchanged ex-ante filter; exact forecast_evaluation and opportunity_daily economic digests verified. This is derived evidence, not an original archived BASE per-asset table."
+    },
+    "run_dfea4b7ac1475668d5968c97": {
+      "source_run_id": "run_edc965655c124abd4318e838",
+      "status": "derivado_invariancia_verificada",
+      "reason": "BASE_E3 did not archive per-asset minute aggregates. Reconstructed from the same-strategy FUT4_REALIZADA with unchanged ex-ante filter; exact forecast_evaluation and opportunity_daily economic digests verified. This is derived evidence, not an original archived BASE per-asset table."
+    }
+  },
+  "invariance_proofs": [
+    {
+      "strategy": "conditional",
+      "base_run_id": "run_ad71d751b20623006c195ff3",
+      "source_run_id": "run_d17c6848d9a0c5c85249b152",
+      "artifact": "forecast_evaluation.csv",
+      "economic_digest": "571a235ce23c155c1d58da7f3585ac784bb035edccf3d1b8349d039deaa9d4a5",
+      "exact": true
+    },
+    {
+      "strategy": "conditional",
+      "base_run_id": "run_ad71d751b20623006c195ff3",
+      "source_run_id": "run_d17c6848d9a0c5c85249b152",
+      "artifact": "opportunity_daily.csv",
+      "economic_digest": "8c4d3b3bd8a7160f76333a952552a83f75b32fed29e2437b11c360dd67578ffc",
+      "exact": true
+    },
+    {
+      "strategy": "permanent",
+      "base_run_id": "run_dfea4b7ac1475668d5968c97",
+      "source_run_id": "run_edc965655c124abd4318e838",
+      "artifact": "forecast_evaluation.csv",
+      "economic_digest": "571a235ce23c155c1d58da7f3585ac784bb035edccf3d1b8349d039deaa9d4a5",
+      "exact": true
+    },
+    {
+      "strategy": "permanent",
+      "base_run_id": "run_dfea4b7ac1475668d5968c97",
+      "source_run_id": "run_edc965655c124abd4318e838",
+      "artifact": "opportunity_daily.csv",
+      "economic_digest": "8c4d3b3bd8a7160f76333a952552a83f75b32fed29e2437b11c360dd67578ffc",
+      "exact": true
+    }
+  ]
+}

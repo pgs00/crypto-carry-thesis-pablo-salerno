@@ -1,0 +1,39 @@
+{
+  "started_at": "2026-09-25T14:11:31.327434+00:00",
+  "finished_at": "2026-09-25T14:11:53.789671+00:00",
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "scripts\\report_historical_rules_sensitivity.py",
+    "--package",
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\20260925T005436Z"
+  ],
+  "exit_code": 0,
+  "stdout": "{\n  \"status\": \"constructed_not_sealed\",\n  \"successful_runs\": 12,\n  \"financial_periods\": 96,\n  \"daily_reconciliations\": 20448,\n  \"output\": \"C:\\\\Users\\\\pablo\\\\Documentos\\\\UCEMA\\\\Tesina\\\\Backtesting\\\\entregas\\\\entrega_4\\\\reglas_historicas\\\\20260925T005436Z\\\\comparacion\"\n}\n",
+  "stderr": "",
+  "change": "Move H3 legend outside axes so it cannot obscure MARGEN_2X bar; no arithmetic changes",
+  "old_report_sha256": "1226a4622fd9ea23e25157862240910a21785eac15f07d182c5c3423e2e56f78",
+  "new_report_sha256": "4288c11752834e4454cf4ed6481f80d238dc9eed6d54ccea642ec3f5f59247f6",
+  "tool_copy_equal": true,
+  "csv_bytes_unchanged": true,
+  "csv_hashes": {
+    "componentes_por_activo_periodo.csv": "f13d2c4f2103036fd78adbaa88565659d092189e0f78b020652490c1f278ac67",
+    "conciliaciones.csv": "ed4f34c62c4bab6e5a085585ef180fb9d5c86488e82a88d8b3408443fb668a13",
+    "deltas.csv": "bcb5216753a3ca8b154d804722f3adf9a71f839fcb409dce8414278fe00e7222",
+    "diario_carteras.csv": "57447b3f445769aab4ef6ea3b7a07eaa3c4a67e6a89412e5385e3d0d821df348",
+    "eventos_periodo.csv": "93a96a7f36f0bd0729449c712b023d25b32c95d16e366ab6291174a973289c7f",
+    "exposicion_periodo.csv": "ce9bd6488ff8e65fe187015eca928b97605643875743851d164f1721d56b0f1b",
+    "fronteras_promocion.csv": "76382180d3919d1e1ba8693560da906e4bfd8052d39dfad6569ba21216cee67f",
+    "h1_invariancia.csv": "ba71b579ac043e45797bda55499bfe36dfb9b8ef1f95f3683b1ddb4a3bcfcbb5",
+    "h1_resumen.csv": "dc7d0c145d2b3784084c75ca458d27a0d4326c17377016b5fb82af8dfa2b1047",
+    "h2.csv": "1befd642ace2c52ad3bc0ec299a4827e45d026fb26691b0760a6f72799e6f591",
+    "h3_diario.csv": "20be8afa496e4f8b8571fc760d15d42407673cd07a19a75bf280c29d7bb60ec9",
+    "h3_invariancia.csv": "869622e5f6e58cf6e3a55bbb245c79e13402ca20dd50a07a3ba77b96314f832d",
+    "h3_regimen.csv": "398608c088ea973ceadc111288766117304499b436b17fe7ad92edd2724b8d0c",
+    "metricas_cartera_periodo.csv": "205cc4c119c0efa717d6793bebfcc45121864d7d691985da0164b695c3fed1d7",
+    "registro_corridas.csv": "060738b55bc9897c89d68331ee6eaf913a236d9f93ae9f52e8f16bdef03a7ef4"
+  },
+  "package_original_sealed": false
+}

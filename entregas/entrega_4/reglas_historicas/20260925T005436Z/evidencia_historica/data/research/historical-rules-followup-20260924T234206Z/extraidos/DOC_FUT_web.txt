@@ -1,0 +1,640 @@
+Market Data - Futures (USDⓈ-M) REST API | Binance Developer Docs (https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/rest-api/market-data)
+citeturn12view3 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({"ref_id":"https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/rest-api/market-data","pattern":"liquidationFee"}); Total lines: 5180
+L1037: Example: PERPETUAL
+L1038: 
+L1039: `deliveryDate`
+L1040: 
+L1041: ​integer · int64
+L1042: 
+L1104: ​integer · int64
+L1105: 
+L1106: please do not use it as tickSize
+L1107: 
+L1108: Example: 5
+L1109: 
+L1110: `quantityPrecision`
+L1111: 
+L1112: ​integer · int64
+L1113: 
+L1114: please do not use it as stepSize
+L1115: 
+L1116: Example: 0
+L1117: 
+L1118: `baseAssetPrecision`
+L1119: 
+L1120: ​integer · int64
+L1121: 
+L1122: Base Asset Precision.
+L1123: 
+L1124: Example: 8
+L1125: 
+L1126: `quotePrecision`
+L1127: 
+L1128: ​integer · int64
+L1129: 
+L1130: Quote Precision.
+L1131: 
+L1132: Example: 8
+L1133: 
+L1134: `underlyingType`
+L1135: 
+L1136: ​string
+L1137: 
+L1138: Example: COIN
+L1139: 
+L1140: `underlyingSubType`
+L1141: 
+L1142: ​string[]
+L1143: 
+L1144: `settlePlan`
+L1145: 
+L1146: ​integer · int64
+L1147: 
+L1148: Example: 0
+L1149: 
+L1150: `triggerProtect`
+L1151: 
+L1152: ​string
+L1153: 
+L1154: threshold for algo order with "priceProtect"
+L1155: 
+L1156: Example: 0.15
+L1157: 
+L1158: `filters`
+L1159: ​object[]
+L1160: 
+L1161: `filterType`
+L1162: 
+L1163: ​string
+L1164: 
+L1165: Filter Type.
+L1166: 
+L1167: Example: PRICE_FILTER
+L1168: 
+L1169: `maxPrice`
+L1170: 
+L1171: ​string
+L1172: 
+L1173: Max Price.
+L1174: 
+L1175: Example: 300
+L1176: 
+L1177: `minPrice`
+L1178: 
+L1179: ​string
+L1180: 
+L1181: Min Price.
+L1182: 
+L1183: Example: 0.0001
+L1184: 
+L1185: `tickSize`
+L1186: 
+L1187: ​string
+L1188: 
+L1189: Tick Size.
+L1190: 
+L1191: Example: 0.0001
+L1192: 
+L1193: `maxQty`
+L1194: 
+L1195: ​string
+L1196: 
+L1197: Max Qty.
+L1198: 
+L1199: Example: 10000000
+L1200: 
+L1201: `minQty`
+L1202: 
+L1203: ​string
+L1204: 
+L1205: Min Qty.
+L1206: 
+L1207: Example: 1
+L1208: 
+L1209: `stepSize`
+L1210: 
+L1211: ​string
+L1212: 
+L1213: Step Size.
+L1214: 
+L1215: Example: 1
+L1216: 
+L1217: `limit`
+L1218: 
+L1219: ​integer · int64
+L1220: 
+L1221: Limit.
+L1222: 
+L1223: Example: 200
+L1224: 
+L1225: `notional`
+L1226: 
+L1227: ​string
+L1228: 
+L1229: Example: 5.0
+L1230: 
+L1231: `multiplierUp`
+L1232: 
+L1233: ​string
+L1234: 
+L1235: Multiplier Up.
+L1236: 
+L1237: Example: 1.1500
+L1238: 
+L1239: `multiplierDown`
+L1240: ​string
+L1241: 
+L1242: Multiplier Down.
+L1243: 
+L1244: Example: 0.8500
+L1245: 
+L1246: `multiplierDecimal`
+L1247: 
+L1248: ​string
+L1249: 
+L1250: Example: 4
+L1251: 
+L1252: `orderTypes`
+L1253: 
+L1254: ​string[]
+L1255: 
+L1256: `timeInForce`
+L1257: 
+L1258: ​string[]
+L1259: 
+L1260: Time In Force.
+L1261: 
+L1262: `liquidationFee`
+L1263: 
+L1264: ​string
+L1265: 
+L1266: liquidation fee rate
+L1267: 
+L1268: Example: 0.010000
+L1269: 
+L1270: `marketTakeBound`
+L1271: 
+L1272: ​string
+L1273: 
+L1274: the max price difference rate( from mark price) a market order can make
+L1275: 
+L1276: Example: 0.30
+L1277: 
+L1278: `timezone`
+L1279: 
+L1280: ​string
+L1281: 
+L1282: Timezone.
+L1283: 
+L1284: Example: UTC
+L1285: 
+L1286: GET/fapi/v1/exchangeInfo
+L1287: 
+L1288: [Select]
+L1289: 
+L1290:     `curl --request GET \
+L1291:       --url https://fapi.binance.com/fapi/v1/exchangeInfo`
+L1292: Example Responses
+L1293: [Select]
+L1294: 
+L1295:     `
+L1296: 
+L1297:     {
+L1298:       "exchangeFilters": [
+L1299:         ""
+L1300:       ],
+L1301:       "rateLimits": [
+L1302:         {
+L1303:           "interval": "MINUTE",
+L1304:           "intervalNum": 1,
+L1305:           "limit": 2400,
+L1306:           "rateLimitType": "REQUEST_WEIGHT"
+L1307:         }
+L1308:       ],
+L1309:       "serverTime": 1565613908500,
+L1310:       "assets": [
+L1311:         {
+L1312:           "asset": "BTC",
+L1313:           "marginAvailable": true,
+L1314:           "autoAssetExchange": "-0.10"
+L1315:         }
+L1316:       ],
+L1317:       "symbols": [
+L1318:         {
+L1319:           "symbol": "BLZUSDT",
+L1320:           "pair": "BLZUSDT",
+L1321:           "contractType": "PERPETUAL",
+L1322:           "deliveryDate": 4133404800000,
+L1323:           "onboardDate": 1598252400000,
+L1324:           "status": "TRADING",
+L1325:           "maintMarginPercent": "2.5000",
+L1326:           "requiredMarginPercent": "5.0000",
+L1327:           "baseAsset": "BLZ",
+L1328:           "quoteAsset": "USDT",
+L1329:           "marginAsset": "USDT",
+L1330:           "pricePrecision": 5,
+L1331:           "quantityPrecision": 0,
+L1332:           "baseAssetPrecision": 8,
+L1333:           "quotePrecision": 8,
+L1334:           "underlyingType": "COIN",
+L1335:           "underlyingSubType": [
+L1336:             "STORAGE"
+L1337:           ],
+L1338:           "settlePlan": 0,
+L1339:           "triggerProtect": "0.15",
+L1340:           "filters": [
+L1341:             {
+L1342:               "filterType": "PRICE_FILTER",
+L1343:               "maxPrice": "300",
+L1344:               "minPrice": "0.0001",
+L1345:               "tickSize": "0.0001",
+L1346:               "maxQty": "10000000",
+L1347:               "minQty": "1",
+L1348:               "stepSize": "1",
+L1349:               "limit": 200,
+L1350:               "notional": "5.0",
+L1351:               "multiplierUp": "1.1500",
+L1352:               "multiplierDown": "0.8500",
+L1353:               "multiplierDecimal": "4"
+L1354:             }
+L1355:           ],
+L1356:           "orderTypes": [
+L1357:             "LIMIT"
+L1358:           ],
+L1359:           "timeInForce": [
+L1360:             "GTC"
+L1361:           ],
+L1362:           "liquidationFee": "0.010000",
+L1363:           "marketTakeBound": "0.30"
+L1364:         }
+L1365:       ],
+L1366:       "timezone": "UTC"
+L1367:     }`
+L1368: application/json
+L1369: 
+L1370: * * *
+L1371: ## Get Funding Rate History
+L1372: 
+L1373: Get Funding Rate History
+L1374: 
+L1375: GET
+L1376: 
+L1377: /fapi/v1/fundingRate
+L1378: 
+L1379: https://fapi.binance.com
+L1380: 
+L1381: ### Get Funding Rate History › Request Weight
+L1382: 
+L1383: This endpoint consumes IP-based request weight. Heavier endpoints consume more of your IP rate limit capacity.
+L1384: 
+L1385: Learn more in the cite120†Rate limits section.
+L1386: 
+L1387: IP Weight
+L1388: 
+L1389: share 500/5min/IP rate limit with GET /fapi/v1/fundingInfo
+L1390: ### Get Funding Rate History › Query Parameters
+L1391: 
+L1392: `symbol`
+L1393: 
+L1394: ​string
+L1395: 
+L1396: Example: BTCUSDT
+L1397: 
+L1398: `startTime`
+L1399: 
+L1400: ​integer · int64
+L1401: 
+L1402: Timestamp in ms to get funding rate from INCLUSIVE.
+L1403: 
+L1404: Example: 1623319461670
+L1405: 
+L1406: `endTime`
+L1407: 
+L1408: ​integer · int64
+L1409: 
+L1410: Timestamp in ms to get funding rate until INCLUSIVE.
+L1411: 
+L1412: Example: 1641782889000
+L1413: 
+L1414: `limit`
+L1415: 
+L1416: ​integer · int64 · max: 1000
+L1417: 
+L1418: Example: 50
+L1419: 
+L1420: Default: 100
+L1421:   * If `startTime` and `endTime` are not sent, the most recent 200 records are returned.
+L1422:   * If the number of data between `startTime` and `endTime` is larger than `limit`, return as `startTime` + `limit`.
+L1423:   * In ascending order.
+L1424: ### Get Funding Rate History › Responses
+L1425: 
+L1426: 200
+L1427: 
+L1428: Get Funding Rate History
+L1429: 
+L1430: ``
+L1431: 
+L1432: ​object
+L1433: 
+L1434: `symbol`
+L1435: 
+L1436: ​string
+L1437: 
+L1438: Symbol.
+L1439: 
+L1440: Example: BTCUSDT
+L1441: 
+L1442: `fundingRate`
+L1443: 
+L1444: ​string
+L1445: 
+L1446: Funding Rate.
+L1447: 
+L1448: Example: -0.03750000
+L1449: 
+L1450: `fundingTime`
+L1451: 
+L1452: ​integer · int64
+L1453: 
+L1454: Funding Time.
+L1455: 
+L1456: Example: 1570608000000
+L1457: 
+L1458: `markPrice`
+L1459: 
+L1460: ​string
+L1461: 
+L1462: mark price associated with a particular funding fee charge
+L1463: 
+L1464: Example: 34287.54619963
+L1465: 
+L1466: `rateType`
+L1467: 
+L1468: ​string · enum
+L1469: Funding rate type. `Regular` for the normal funding rate; `Special` for the additional funding rate generated by stock dividends.
+L1470: 
+L1471: Enum values:
+L1472: 
+L1473: Regular
+L1474: 
+L1475: Special
+L1476: 
+L1477: Example: Regular
+L1478: 
+L1479: GET/fapi/v1/fundingRate
+L1480: 
+L1481: [Select]
+L1482: 
+L1483:     `curl --request GET \
+L1484:       --url https://fapi.binance.com/fapi/v1/fundingRate`
+L1485: 
+L1486: Example Responses
+L1487: [Select]
+L1488: 
+L1489:     `[
+L1490:       {
+L1491:         "symbol": "BTCUSDT",
+L1492:         "fundingRate": "-0.03750000",
+L1493:         "fundingTime": 1570608000000,
+L1494:         "markPrice": "34287.54619963",
+L1495:         "rateType": "Regular"
+L1496:       }
+L1497:     ]`
+L1498: 
+L1499: application/json
+L1500: 
+L1501: * * *
+L1502: ## Get Funding Rate Info
+L1503: 
+L1504: Query funding rate info for symbols that had FundingRateCap/FundingRateFloor / fundingIntervalHours adjustment
+L1505: 
+L1506: GET
+L1507: 
+L1508: /fapi/v1/fundingInfo
+L1509: 
+L1510: https://fapi.binance.com
+L1511: 
+L1512: ### Get Funding Rate Info › Request Weight
+L1513: 
+L1514: This endpoint consumes IP-based request weight. Heavier endpoints consume more of your IP rate limit capacity.
+L1515: 
+L1516: Learn more in the cite120†Rate limits section.
+L1517: 
+L1518: IP Weight
+L1519: 
+L1520: 0
+L1521: 
+L1522: share 500/5min/IP rate limit with `GET /fapi/v1/fundingRate`
+L1523: ### Get Funding Rate Info › Responses
+L1524: 
+L1525: 200
+L1526: 
+L1527: Get Funding Rate Info
+L1528: 
+L1529: ``
+L1530: 
+L1531: ​object
+L1532: 
+L1533: `symbol`
+L1534: 
+L1535: ​string
+L1536: 
+L1537: Example: BLZUSDT
+L1538: 
+L1539: `adjustedFundingRateCap`
+L1540: 
+L1541: ​string
+L1542: 
+L1543: Example: 0.02500000
+L1544: 
+L1545: `adjustedFundingRateFloor`
+L1546: 
+L1547: ​string
+L1548: 
+L1549: Example: -0.02500000
+L1550: 
+L1551: `fundingIntervalHours`
+L1552: 
+L1553: ​integer · int64
+L1554: 
+L1555: Example: 8
+L1556: 
+L1557: `disclaimer`
+L1558: 
+L1559: ​boolean
+L1560: 
+L1561: ingore
+L1562: 
+L1563: Example: false
+L1564: 
+L1565: GET/fapi/v1/fundingInfo
+L1566: 
+L1567: [Select]
+L1568: 
+L1569:     `curl --request GET \
+L1570:       --url https://fapi.binance.com/fapi/v1/fundingInfo`
+L1571: 
+L1572: Example Responses
+L1573: [Select]
+L1574: 
+L1575:     `[
+L1576:       {
+L1577:         "symbol": "BLZUSDT",
+L1578:         "adjustedFundingRateCap": "0.02500000",
+L1579:         "adjustedFundingRateFloor": "-0.02500000",
+L1580:         "fundingIntervalHours": 8,
+L1581:         "disclaimer": false
+L1582:       }
+L1583:     ]`
+L1584: 
+L1585: application/json
+L1586: 
+L1587: * * *
+L1588: ## Index Price Kline/Candlestick Data
+L1589: 
+L1590: Kline/candlestick bars for the index price of a pair. Klines are uniquely identified by their open time.
+L1591: 
+L1592: GET
+L1593: 
+L1594: /fapi/v1/indexPriceKlines
+L1595: 
+L1596: https://fapi.binance.com
+L1597: ### Index Price Kline/Candlestick Data › Request Weight
+L1598: 
+L1599: This endpoint consumes IP-based request weight. Heavier endpoints consume more of your IP rate limit capacity.
+L1600: 
+L1601: Learn more in the cite120†Rate limits section.
+L1602: 
+L1603: IP Weight
+L1604: 
+L1605: based on parameter `LIMIT`
+L1606: 
+L1607: LIMIT  | weight
+L1608: --- | ---
+L1609: [1,100)  | 1
+L1610: [100, 500)  | 2
+L1611: [500, 1000]  | 5
+L1612: > 1000  | 10
+L1613: ### Index Price Kline/Candlestick Data › Query Parameters
+L1614: 
+L1615: `pair`
+L1616: 
+L1617: ​string · required
+L1618: 
+L1619: After CM migration, accepts both UM and CM pair values.
+L1620: 
+L1621: Example: BTCUSDT
+L1622: 
+L1623: `interval`
+L1624: 
+L1625: ​string · enum · required
+L1626: 
+L1627: Enum values:
+L1628: 
+L1629: 1m
+L1630: 
+L1631: 3m
+L1632: 
+L1633: 5m
+L1634: 
+L1635: 15m
+L1636: 
+L1637: 30m
+L1638: 
+L1639: 1h
+L1640: 
+L1641: 2h
+L1642: 
+L1643: 4h
+L1644: 
+L1645: show 7 more
+L1646: 
+L1647: Example: 1m
+L1648: 
+L1649: `startTime`
+L1650: 
+L1651: ​integer · int64
+L1652: 
+L1653: Start time
+L1654: 
+L1655: Example: 1623319461670
+L1656: 
+L1657: `endTime`
+L1658: 
+L1659: ​integer · int64
+L1660: 
+L1661: End time
+L1662: 
+L1663: Example: 1641782889000
+L1664: 
+L1665: `limit`
+L1666: 
+L1667: ​integer · int64 · max: 1500
+L1668: 
+L1669: Example: 50
+L1670: 
+L1671: Default: 500
+L1672:   * If startTime and endTime are not sent, the most recent klines are returned.
+L1673: ### Index Price Kline/Candlestick Data › Responses
+L1674: 
+L1675: 200
+L1676: 
+L1677: Index Price Kline/Candlestick Data
+L1678: 
+L1679: ``
+L1680: 
+L1681: ​array[]
+L1682: 
+L1683: ``
+L1684: 
+L1685: ​tuple[12] · minItems: 12 · maxItems: 12
+L1686: 
+L1687: `[0]`
+L1688: 
+L1689: ​integer · int64 · required
+L1690: 
+L1691: Open time
+L1692: 
+L1693: Example: 1591256400000
+L1694: 
+L1695: `[1]`
+L1696: 
+L1697: ​string · required
+L1698: 
+L1699: Open
+L1700: 
+L1701: Example: 9653.69440000
+L1702: 
+L1703: `[2]`
+L1704: 
+L1705: ​string · required
+L1706: 
+L1707: High
+L1708: 
+L1709: Example: 9653.69640000
+L1710: 
+L1711: `[3]`
+L1712: 
+L1713: ​string · required
+L1714: 
+L1715: Low
+L1716: 
+L1717: Example: 9651.38600000
+L1718: 
+L1719: `[4]`
+L1720: 
+L1721: ​string · required
+L1722: 
+L1723: Close
+L1724: 
+L1725: Example: 9651.55200000
+L1726: 
+L1727: `[5]`
+L1728: 
+L1729: ​string · required
+L1730: 
+L1731: Ignore
+L1732: 
+L1733: Example: 0
+L1734: 
+L1735: `[6]`

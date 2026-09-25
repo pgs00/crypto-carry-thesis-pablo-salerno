@@ -1,0 +1,312 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-09-25T14:08:21.843935+00:00",
+  "self_checks": 10,
+  "runs": [
+    {
+      "scenario": "BASE_E3",
+      "strategy": "conditional",
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "fills_checked": 138,
+      "config_exactly_matches_predeclared_change": true,
+      "tariffs_and_unique_ledger_fees_exact": true,
+      "spot_net_units_exact": true,
+      "fee_total_usdt": "114.8976280464",
+      "base_fee_quantities": {
+        "BTCUSDT": "0.00025226",
+        "ETHUSDT": "0.0105635"
+      },
+      "counts": {
+        "BTCUSDT/futures/fee=0.0005": 24,
+        "BTCUSDT/spot/fee=0.001": 24,
+        "ETHUSDT/futures/fee=0.0005": 43,
+        "ETHUSDT/spot/fee=0.001": 47,
+        "booking_equals_end": 0,
+        "booking_equals_start": 0,
+        "liquidation_fills": 0,
+        "window_crosses_end": 0,
+        "window_crosses_start": 0
+      }
+    },
+    {
+      "scenario": "BASE_E3",
+      "strategy": "permanent",
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "fills_checked": 332,
+      "config_exactly_matches_predeclared_change": true,
+      "tariffs_and_unique_ledger_fees_exact": true,
+      "spot_net_units_exact": true,
+      "fee_total_usdt": "229.2079792800",
+      "base_fee_quantities": {
+        "BTCUSDT": "0.00079680",
+        "ETHUSDT": "0.0178683"
+      },
+      "counts": {
+        "BTCUSDT/futures/fee=0.0005": 75,
+        "BTCUSDT/spot/fee=0.001": 77,
+        "ETHUSDT/futures/fee=0.0005": 88,
+        "ETHUSDT/spot/fee=0.001": 92,
+        "booking_equals_end": 0,
+        "booking_equals_start": 0,
+        "liquidation_fills": 0,
+        "window_crosses_end": 0,
+        "window_crosses_start": 0
+      }
+    },
+    {
+      "scenario": "BTC_PROMO_REALIZADA",
+      "strategy": "conditional",
+      "run_id": "run_1ae1cf88ac71b976740edc03",
+      "fills_checked": 138,
+      "config_exactly_matches_predeclared_change": true,
+      "tariffs_and_unique_ledger_fees_exact": true,
+      "spot_net_units_exact": true,
+      "fee_total_usdt": "114.8976280464",
+      "base_fee_quantities": {
+        "BTCUSDT": "0.00025226",
+        "ETHUSDT": "0.0105635"
+      },
+      "counts": {
+        "BTCUSDT/futures/fee=0.0005": 24,
+        "BTCUSDT/spot/fee=0.001": 24,
+        "ETHUSDT/futures/fee=0.0005": 43,
+        "ETHUSDT/spot/fee=0.001": 47,
+        "booking_equals_end": 0,
+        "booking_equals_start": 0,
+        "liquidation_fills": 0,
+        "window_crosses_end": 0,
+        "window_crosses_start": 0
+      }
+    },
+    {
+      "scenario": "BTC_PROMO_DECISION",
+      "strategy": "conditional",
+      "run_id": "run_d434594cde4077ba6661d7e4",
+      "fills_checked": 156,
+      "config_exactly_matches_predeclared_change": true,
+      "tariffs_and_unique_ledger_fees_exact": true,
+      "spot_net_units_exact": true,
+      "fee_total_usdt": "125.7196073313",
+      "base_fee_quantities": {
+        "BTCUSDT": "0.00025326",
+        "ETHUSDT": "0.0106266"
+      },
+      "counts": {
+        "BTCUSDT/futures/fee=0.0005": 33,
+        "BTCUSDT/spot/fee=0": 9,
+        "BTCUSDT/spot/fee=0.001": 24,
+        "ETHUSDT/futures/fee=0.0005": 43,
+        "ETHUSDT/spot/fee=0.001": 47,
+        "booking_equals_end": 0,
+        "booking_equals_start": 0,
+        "liquidation_fills": 0,
+        "window_crosses_end": 0,
+        "window_crosses_start": 0
+      }
+    },
+    {
+      "scenario": "BTC_PROMO_REALIZADA",
+      "strategy": "permanent",
+      "run_id": "run_d3ebbfeb6f98be343782ccbb",
+      "fills_checked": 324,
+      "config_exactly_matches_predeclared_change": true,
+      "tariffs_and_unique_ledger_fees_exact": true,
+      "spot_net_units_exact": true,
+      "fee_total_usdt": "226.0632915964",
+      "base_fee_quantities": {
+        "BTCUSDT": "0.00074875",
+        "ETHUSDT": "0.0178753"
+      },
+      "counts": {
+        "BTCUSDT/futures/fee=0.0005": 73,
+        "BTCUSDT/spot/fee=0": 10,
+        "BTCUSDT/spot/fee=0.001": 65,
+        "ETHUSDT/futures/fee=0.0005": 86,
+        "ETHUSDT/spot/fee=0.001": 90,
+        "booking_equals_end": 0,
+        "booking_equals_start": 0,
+        "liquidation_fills": 0,
+        "window_crosses_end": 0,
+        "window_crosses_start": 0
+      }
+    },
+    {
+      "scenario": "BTC_PROMO_DECISION",
+      "strategy": "permanent",
+      "run_id": "run_a45c9456ea5d541c9ddce187",
+      "fills_checked": 324,
+      "config_exactly_matches_predeclared_change": true,
+      "tariffs_and_unique_ledger_fees_exact": true,
+      "spot_net_units_exact": true,
+      "fee_total_usdt": "226.0632915964",
+      "base_fee_quantities": {
+        "BTCUSDT": "0.00074875",
+        "ETHUSDT": "0.0178753"
+      },
+      "counts": {
+        "BTCUSDT/futures/fee=0.0005": 73,
+        "BTCUSDT/spot/fee=0": 10,
+        "BTCUSDT/spot/fee=0.001": 65,
+        "ETHUSDT/futures/fee=0.0005": 86,
+        "ETHUSDT/spot/fee=0.001": 90,
+        "booking_equals_end": 0,
+        "booking_equals_start": 0,
+        "liquidation_fills": 0,
+        "window_crosses_end": 0,
+        "window_crosses_start": 0
+      }
+    },
+    {
+      "scenario": "FUT4_REALIZADA",
+      "strategy": "conditional",
+      "run_id": "run_d17c6848d9a0c5c85249b152",
+      "fills_checked": 138,
+      "config_exactly_matches_predeclared_change": true,
+      "tariffs_and_unique_ledger_fees_exact": true,
+      "spot_net_units_exact": true,
+      "fee_total_usdt": "107.6023035354",
+      "base_fee_quantities": {
+        "BTCUSDT": "0.00025226",
+        "ETHUSDT": "0.0105645"
+      },
+      "counts": {
+        "BTCUSDT/futures/fee=0.0004": 24,
+        "BTCUSDT/spot/fee=0.001": 24,
+        "ETHUSDT/futures/fee=0.0004": 43,
+        "ETHUSDT/spot/fee=0.001": 47,
+        "booking_equals_end": 0,
+        "booking_equals_start": 0,
+        "liquidation_fills": 0,
+        "window_crosses_end": 0,
+        "window_crosses_start": 0
+      }
+    },
+    {
+      "scenario": "FUT4_DECISION",
+      "strategy": "conditional",
+      "run_id": "run_8f497f6f609b074f796e043f",
+      "fills_checked": 149,
+      "config_exactly_matches_predeclared_change": true,
+      "tariffs_and_unique_ledger_fees_exact": true,
+      "spot_net_units_exact": true,
+      "fee_total_usdt": "123.5660885184",
+      "base_fee_quantities": {
+        "BTCUSDT": "0.00052953",
+        "ETHUSDT": "0.0105105"
+      },
+      "counts": {
+        "BTCUSDT/futures/fee=0.0004": 29,
+        "BTCUSDT/spot/fee=0.001": 31,
+        "ETHUSDT/futures/fee=0.0004": 43,
+        "ETHUSDT/spot/fee=0.001": 46,
+        "booking_equals_end": 0,
+        "booking_equals_start": 0,
+        "liquidation_fills": 0,
+        "window_crosses_end": 0,
+        "window_crosses_start": 0
+      }
+    },
+    {
+      "scenario": "MARGEN_2X",
+      "strategy": "conditional",
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "fills_checked": 110,
+      "config_exactly_matches_predeclared_change": true,
+      "tariffs_and_unique_ledger_fees_exact": true,
+      "spot_net_units_exact": true,
+      "fee_total_usdt": "106.9871096507",
+      "base_fee_quantities": {
+        "BTCUSDT": "0.00025726",
+        "ETHUSDT": "0.0088718"
+      },
+      "counts": {
+        "BTCUSDT/futures/fee=0.0005": 26,
+        "BTCUSDT/spot/fee=0.001": 26,
+        "ETHUSDT/futures/fee=0.0005": 28,
+        "ETHUSDT/spot/fee=0.001": 30,
+        "booking_equals_end": 0,
+        "booking_equals_start": 0,
+        "liquidation_fills": 0,
+        "window_crosses_end": 0,
+        "window_crosses_start": 0
+      }
+    },
+    {
+      "scenario": "MARGEN_2X",
+      "strategy": "permanent",
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "fills_checked": 324,
+      "config_exactly_matches_predeclared_change": true,
+      "tariffs_and_unique_ledger_fees_exact": true,
+      "spot_net_units_exact": true,
+      "fee_total_usdt": "230.5163941528",
+      "base_fee_quantities": {
+        "BTCUSDT": "0.00079680",
+        "ETHUSDT": "0.0182653"
+      },
+      "counts": {
+        "BTCUSDT/futures/fee=0.0005": 76,
+        "BTCUSDT/spot/fee=0.001": 78,
+        "ETHUSDT/futures/fee=0.0005": 82,
+        "ETHUSDT/spot/fee=0.001": 88,
+        "booking_equals_end": 0,
+        "booking_equals_start": 0,
+        "liquidation_fills": 0,
+        "window_crosses_end": 0,
+        "window_crosses_start": 0
+      }
+    },
+    {
+      "scenario": "FUT4_REALIZADA",
+      "strategy": "permanent",
+      "run_id": "run_edc965655c124abd4318e838",
+      "fills_checked": 324,
+      "config_exactly_matches_predeclared_change": true,
+      "tariffs_and_unique_ledger_fees_exact": true,
+      "spot_net_units_exact": true,
+      "fee_total_usdt": "213.9205426417",
+      "base_fee_quantities": {
+        "BTCUSDT": "0.00078879",
+        "ETHUSDT": "0.0178314"
+      },
+      "counts": {
+        "BTCUSDT/futures/fee=0.0004": 73,
+        "BTCUSDT/spot/fee=0.001": 75,
+        "ETHUSDT/futures/fee=0.0004": 86,
+        "ETHUSDT/spot/fee=0.001": 90,
+        "booking_equals_end": 0,
+        "booking_equals_start": 0,
+        "liquidation_fills": 0,
+        "window_crosses_end": 0,
+        "window_crosses_start": 0
+      }
+    },
+    {
+      "scenario": "FUT4_DECISION",
+      "strategy": "permanent",
+      "run_id": "run_9a4b6b4c853215594e14bd86",
+      "fills_checked": 324,
+      "config_exactly_matches_predeclared_change": true,
+      "tariffs_and_unique_ledger_fees_exact": true,
+      "spot_net_units_exact": true,
+      "fee_total_usdt": "213.9205426417",
+      "base_fee_quantities": {
+        "BTCUSDT": "0.00078879",
+        "ETHUSDT": "0.0178314"
+      },
+      "counts": {
+        "BTCUSDT/futures/fee=0.0004": 73,
+        "BTCUSDT/spot/fee=0.001": 75,
+        "ETHUSDT/futures/fee=0.0004": 86,
+        "ETHUSDT/spot/fee=0.001": 90,
+        "booking_equals_end": 0,
+        "booking_equals_start": 0,
+        "liquidation_fills": 0,
+        "window_crosses_end": 0,
+        "window_crosses_start": 0
+      }
+    }
+  ],
+  "scope": "Persisted fills and ledger, independently prescribed tariffs; no engine import",
+  "limitations": "Does not independently reconstruct market prices or the native engine account"
+}

@@ -1,0 +1,56 @@
+{
+  "status": "ejecutado_diagnostico_no_simulacion",
+  "technical_preliminary": true,
+  "scenario": "BASE_E3",
+  "run_ids": [
+    "run_ad71d751b20623006c195ff3",
+    "run_dfea4b7ac1475668d5968c97"
+  ],
+  "documentary_facts": 345,
+  "documentary_states": {
+    "observacion_puntual": 305,
+    "intervalo_respaldado": 1,
+    "evento_respaldado": 16,
+    "derivado": 16,
+    "pendiente": 2,
+    "supuesto": 2,
+    "fuera_de_alcance": 3
+  },
+  "input_files_read_and_hash_checked": 338,
+  "input_bytes_unchanged": true,
+  "matrix_loadable_by_rulebook": false,
+  "output_rows": {
+    "orders_baseline.csv": 993,
+    "daily_positions_baseline.csv": 6816,
+    "filter_candidates_summary.csv": 204,
+    "candidate_orders.csv": 0,
+    "margin_candidates_summary.csv": 32,
+    "margin_candidates_daily.csv": 32160,
+    "tier_boundary_checks.csv": 177,
+    "event_order_candidates.csv": 0,
+    "event_position_cohorts.csv": 16,
+    "promo_fill_boundaries.csv": 4
+  },
+  "populations": [
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "submitted_orders": 258,
+      "fills": 138,
+      "daily_observations": 1704
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "submitted_orders": 735,
+      "fills": 332,
+      "daily_observations": 1704
+    }
+  ],
+  "limitations": [
+    "Candidate screens are atemporal; observations are not made continuous.",
+    "Order notional is a first-fill reference-price proxy; unfilled orders have no estimated notional.",
+    "MARKET applicability without a documented flag remains unknown; published zero semantics unresolved.",
+    "Daily marks do not observe intraday maximum notionals or intraday margin risk.",
+    "Cohort quantities use the ledger; no grandfathering or increase policy is simulated.",
+    "No historical transition date, interpolation, backtest, or second scenario batch is executed."
+  ]
+}

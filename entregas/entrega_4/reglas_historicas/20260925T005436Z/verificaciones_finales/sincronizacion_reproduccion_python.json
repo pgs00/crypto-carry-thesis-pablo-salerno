@@ -1,0 +1,14 @@
+[
+  {
+    "source": "scripts/reproduce_historical_rules_sensitivity.py",
+    "target": "herramientas/reproduce_historical_rules_sensitivity.py",
+    "before_sha256": "0dd5c96e389a2a93a6542c7af00d62b643c27ddd0148920e2112bb0fd8fd273b",
+    "after_sha256": "a861dcf135a2e467e156b1c843b8a8439e39c53ee832b497208f372e21bc4953"
+  },
+  {
+    "source": "docs/entrega_4/reglas_historicas/reproduccion.md",
+    "target": "documentos/reproduccion.md",
+    "before_sha256": "81540c2ebefba78c7560995fae62fa043982934bdeea1b85fa672edc307547d4",
+    "after_sha256": "379ab5830975150546010d00715f0387e8e4d718187ecb9706a750d4872d7855"
+  }
+]

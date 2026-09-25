@@ -1,0 +1,75 @@
+{
+  "schema": "diagnostic_output_manifest_v1",
+  "files": [
+    {
+      "path": "candidate_orders.csv",
+      "bytes": 343,
+      "sha256": "dd829a3e40e00a81a3cb2776148e455b4bdb609064ce5218d5a7d92b601b125f"
+    },
+    {
+      "path": "daily_positions_baseline.csv",
+      "bytes": 1360342,
+      "sha256": "81a14c68b75aea7e9e13e24b3222091ddfed94cd046ca72f35fdcccf5b8210a6"
+    },
+    {
+      "path": "diagnostico_resultados.json",
+      "bytes": 1863,
+      "sha256": "e867aa27141283d7c499864163abe5350eee64df6fe97585218614cd5468a5f1"
+    },
+    {
+      "path": "esquema_columnas.json",
+      "bytes": 15272,
+      "sha256": "df1b9bc820f1b98919a2ab4cbc6098a64ba224bc6e3dace87034e685d48f4237"
+    },
+    {
+      "path": "event_order_candidates.csv",
+      "bytes": 367,
+      "sha256": "8daa3232c1592f08d8d932f14893a6bb834b0fad1a284d410f7926c2c0026584"
+    },
+    {
+      "path": "event_position_cohorts.csv",
+      "bytes": 6152,
+      "sha256": "da8b43165541d99c39df5dcf45c5ea9b6b19b262745034217a51cf61da504252"
+    },
+    {
+      "path": "filter_candidates_summary.csv",
+      "bytes": 44275,
+      "sha256": "958652cd1d05f4db98f9fde40f600cf2e3a917c83074af09137fc287663589b6"
+    },
+    {
+      "path": "input_inventory.csv",
+      "bytes": 73795,
+      "sha256": "f00f13b381a4db9072812cc318129f4e848086f6f4240b9619667ff5ed234fc3"
+    },
+    {
+      "path": "margin_candidates_daily.csv",
+      "bytes": 13979724,
+      "sha256": "2c82719956f602f4a321991652090031a9f73dc14acbb7c31dc7dd099f42ba6b"
+    },
+    {
+      "path": "margin_candidates_summary.csv",
+      "bytes": 7728,
+      "sha256": "2c716ad4f28bc4590888aa773bedd75999c644158ee836c61cbb5de5a24db109"
+    },
+    {
+      "path": "orders_baseline.csv",
+      "bytes": 288532,
+      "sha256": "00caea6b675655af8520e782f52f6adc83cc9171e9cc8d6d06a94c0fe747fc55"
+    },
+    {
+      "path": "promo_fill_boundaries.csv",
+      "bytes": 639,
+      "sha256": "941996266082775114bf06d092db10e5630457234c34dab4499505303f0325ae"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5735,
+      "sha256": "c21b154674ce104bb09da7a2f59529a85255d4e1319c4690fdd77c4e3821ba1f"
+    },
+    {
+      "path": "tier_boundary_checks.csv",
+      "bytes": 25554,
+      "sha256": "b96ce7db8fe8ecd7764aebb037ffb0015b0a046e0d25d42ce0d04703e8fba98b"
+    }
+  ]
+}

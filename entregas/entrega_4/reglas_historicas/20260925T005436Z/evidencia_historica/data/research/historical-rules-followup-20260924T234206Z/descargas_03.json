@@ -1,0 +1,22 @@
+[
+  {
+    "id": "SPOT25B",
+    "url": "https://web.archive.org/web/20250718191905id_/https://www.binance.com/en/fee/trading"
+  },
+  {
+    "id": "CDX_SPOTINFO",
+    "url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fapi.binance.com%2Fapi%2Fv3%2FexchangeInfo&output=json&from=20220101&to=20260831&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true&matchType=exact"
+  },
+  {
+    "id": "CDX_FUTINFO",
+    "url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffapi.binance.com%2Ffapi%2Fv1%2FexchangeInfo&output=json&from=20220101&to=20260831&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true&matchType=exact"
+  },
+  {
+    "id": "CDX_FEE_AU",
+    "url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.binance.com%2Fen-AU%2Ffee%2FfutureFee&output=json&from=20230501&to=20240229&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true&matchType=exact"
+  },
+  {
+    "id": "CDX_FEE_OLD",
+    "url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.binance.com%2Fen%2Ffee%2FfutureFee%3F&output=json&from=20230501&to=20240229&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true&matchType=prefix"
+  }
+]

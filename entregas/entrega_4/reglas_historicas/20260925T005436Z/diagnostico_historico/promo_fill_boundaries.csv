@@ -1,0 +1,5 @@
+run_id,fact_id,source_id,boundary,boundary_ns,btc_spot_fills_all,fills_inside_interval_by_recorded_timestamp,fills_at_boundary,windows_straddling_boundary,boundary_fill_ids,straddling_fill_ids
+run_ad71d751b20623006c195ff3,BTC_SPOT_ZERO,PROMO_START|PROMO_END,start_inclusive,1657288800000000000,24,0,0,0,,
+run_ad71d751b20623006c195ff3,BTC_SPOT_ZERO,PROMO_START|PROMO_END,end_exclusive,1679443200000000000,24,0,0,0,,
+run_dfea4b7ac1475668d5968c97,BTC_SPOT_ZERO,PROMO_START|PROMO_END,start_inclusive,1657288800000000000,77,10,0,0,,
+run_dfea4b7ac1475668d5968c97,BTC_SPOT_ZERO,PROMO_START|PROMO_END,end_exclusive,1679443200000000000,77,10,0,0,,

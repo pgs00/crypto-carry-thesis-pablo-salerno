@@ -1,0 +1,50 @@
+{
+  "status": "verified",
+  "cleanup": {
+    "protected_or_archived_files": 458,
+    "removed_duplicates": 1,
+    "local_market_files_unchanged": 0,
+    "ignore_rules_verified": 6
+  },
+  "presentation": {
+    "status": "verified",
+    "source_zip_sha256": "48485e691f7ae4b479d25766ee46aeac199cf4ea022a36d01cde177e87770916",
+    "original_tables": 11,
+    "daily_equity_rows": 3408,
+    "figures": 6,
+    "published_files": 19
+  },
+  "current_package": {
+    "status": "verified",
+    "files": 120,
+    "valid_local_links": 23,
+    "daily_financial_rows": 3408,
+    "h1_observations": 10224,
+    "h3_asset_days": 3408,
+    "h3_joint_days": 1704,
+    "scope": "ZIP contents, paired H1 labels and MAE, H3 aggregates, daily/regime accounting; original market files verified separately"
+  },
+  "historical_package": {
+    "fuentes_verificadas": 101,
+    "archivos_manifiesto": 138,
+    "enlaces_locales_validos": 63,
+    "png_300dpi": 2,
+    "svg_validos": 2,
+    "campos_documentados": 194
+  },
+  "historical_v2_members": 140,
+  "original_zip_anchor": {
+    "archivo": "paquete_redaccion_entrega_3.zip",
+    "sha256": "f7174d49214e954ee66620dbb36f800a9d9bc22cb45633a19c2755782b0be1ba",
+    "manifiesto_sha256": "dbfe4027bbaa0063a4d0ebe2b2c16623e7507f0c403c4e240bd4d3441e3aa439"
+  },
+  "funding_sensitivity": {
+    "status": "verified",
+    "files": 7,
+    "price_observations": 10224,
+    "official_prices": 6214,
+    "approximated_prices": 4010,
+    "open_position_events": 12061
+  },
+  "current_document_links": 160
+}

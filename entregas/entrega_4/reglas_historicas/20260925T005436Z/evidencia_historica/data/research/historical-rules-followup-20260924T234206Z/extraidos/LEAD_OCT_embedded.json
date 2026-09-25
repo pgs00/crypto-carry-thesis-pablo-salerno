@@ -1,0 +1,210 @@
+[
+  {
+    "script_index": 0,
+    "id": null,
+    "type": "application/ld+json",
+    "value": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "@id": "https://kriptoakademia.com/2023/10/21/binance-futures-magasabb-jutalekot-kell-fizetni-a-hataridos-kereskedesert#article",
+          "isPartOf": {
+            "@id": "https://kriptoakademia.com/2023/10/21/binance-futures-magasabb-jutalekot-kell-fizetni-a-hataridos-kereskedesert"
+          },
+          "author": {
+            "name": "moonbaby",
+            "@id": "https://kriptoakademia.com/#/schema/person/4eec63885d247dbdc31a1da10193ef2a"
+          },
+          "headline": "Binance Futures: magasabb jutalékot kell fizetni a határidős kereskedésért",
+          "datePublished": "2023-10-21T04:13:39+00:00",
+          "mainEntityOfPage": {
+            "@id": "https://kriptoakademia.com/2023/10/21/binance-futures-magasabb-jutalekot-kell-fizetni-a-hataridos-kereskedesert"
+          },
+          "wordCount": 312,
+          "commentCount": 0,
+          "publisher": {
+            "@id": "https://kriptoakademia.com/#organization"
+          },
+          "image": {
+            "@id": "https://kriptoakademia.com/2023/10/21/binance-futures-magasabb-jutalekot-kell-fizetni-a-hataridos-kereskedesert#primaryimage"
+          },
+          "thumbnailUrl": "https://kriptoakademia.com/wp-content/uploads/2022/10/binance-mobil-hack.jpg",
+          "articleSection": [
+            "Hírek"
+          ],
+          "inLanguage": "hu",
+          "potentialAction": [
+            {
+              "@type": "CommentAction",
+              "name": "Comment",
+              "target": [
+                "https://kriptoakademia.com/2023/10/21/binance-futures-magasabb-jutalekot-kell-fizetni-a-hataridos-kereskedesert#respond"
+              ]
+            }
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://kriptoakademia.com/2023/10/21/binance-futures-magasabb-jutalekot-kell-fizetni-a-hataridos-kereskedesert",
+          "url": "https://kriptoakademia.com/2023/10/21/binance-futures-magasabb-jutalekot-kell-fizetni-a-hataridos-kereskedesert",
+          "name": "Binance Futures: magasabb jutalékot kell fizetni a határidős kereskedésért &#8211; Kripto Akadémia",
+          "isPartOf": {
+            "@id": "https://kriptoakademia.com/#website"
+          },
+          "primaryImageOfPage": {
+            "@id": "https://kriptoakademia.com/2023/10/21/binance-futures-magasabb-jutalekot-kell-fizetni-a-hataridos-kereskedesert#primaryimage"
+          },
+          "image": {
+            "@id": "https://kriptoakademia.com/2023/10/21/binance-futures-magasabb-jutalekot-kell-fizetni-a-hataridos-kereskedesert#primaryimage"
+          },
+          "thumbnailUrl": "https://kriptoakademia.com/wp-content/uploads/2022/10/binance-mobil-hack.jpg",
+          "datePublished": "2023-10-21T04:13:39+00:00",
+          "breadcrumb": {
+            "@id": "https://kriptoakademia.com/2023/10/21/binance-futures-magasabb-jutalekot-kell-fizetni-a-hataridos-kereskedesert#breadcrumb"
+          },
+          "inLanguage": "hu",
+          "potentialAction": [
+            {
+              "@type": "ReadAction",
+              "target": [
+                "https://kriptoakademia.com/2023/10/21/binance-futures-magasabb-jutalekot-kell-fizetni-a-hataridos-kereskedesert"
+              ]
+            }
+          ]
+        },
+        {
+          "@type": "ImageObject",
+          "inLanguage": "hu",
+          "@id": "https://kriptoakademia.com/2023/10/21/binance-futures-magasabb-jutalekot-kell-fizetni-a-hataridos-kereskedesert#primaryimage",
+          "url": "https://kriptoakademia.com/wp-content/uploads/2022/10/binance-mobil-hack.jpg",
+          "contentUrl": "https://kriptoakademia.com/wp-content/uploads/2022/10/binance-mobil-hack.jpg",
+          "width": 800,
+          "height": 400
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://kriptoakademia.com/2023/10/21/binance-futures-magasabb-jutalekot-kell-fizetni-a-hataridos-kereskedesert#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://kriptoakademia.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Binance Futures: magasabb jutalékot kell fizetni a határidős kereskedésért"
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://kriptoakademia.com/#website",
+          "url": "https://kriptoakademia.com/",
+          "name": "Kripto Akadémia",
+          "description": "A magyar kripto közösség otthona",
+          "publisher": {
+            "@id": "https://kriptoakademia.com/#organization"
+          },
+          "potentialAction": [
+            {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://kriptoakademia.com/?s={search_term_string}"
+              },
+              "query-input": {
+                "@type": "PropertyValueSpecification",
+                "valueRequired": true,
+                "valueName": "search_term_string"
+              }
+            }
+          ],
+          "inLanguage": "hu"
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://kriptoakademia.com/#organization",
+          "name": "Kripto Akadémia",
+          "url": "https://kriptoakademia.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "inLanguage": "hu",
+            "@id": "https://kriptoakademia.com/#/schema/logo/image/",
+            "url": "https://kriptoakademia.com/wp-content/uploads/2024/08/image.png",
+            "contentUrl": "https://kriptoakademia.com/wp-content/uploads/2024/08/image.png",
+            "width": 892,
+            "height": 364,
+            "caption": "Kripto Akadémia"
+          },
+          "image": {
+            "@id": "https://kriptoakademia.com/#/schema/logo/image/"
+          },
+          "sameAs": [
+            "https://www.facebook.com/kriptoakademia",
+            "https://x.com/KriptoAkademia"
+          ]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://kriptoakademia.com/#/schema/person/4eec63885d247dbdc31a1da10193ef2a",
+          "name": "moonbaby",
+          "url": "https://kriptoakademia.com/author/fizetett-hirdetes"
+        }
+      ]
+    }
+  },
+  {
+    "script_index": 18,
+    "id": null,
+    "type": "application/ld+json",
+    "value": {
+      "@context": "http://schema.org",
+      "@type": "Article",
+      "headline": "Binance Futures: magasabb jutalékot kell fizetni a határidős kereskedésért",
+      "url": "https://kriptoakademia.com/2023/10/21/binance-futures-magasabb-jutalekot-kell-fizetni-a-hataridos-kereskedesert",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://kriptoakademia.com/wp-content/uploads/2022/10/binance-mobil-hack.jpg",
+        "width": 800,
+        "height": 400
+      },
+      "datePublished": "2023-10-21T06:13:39+02:00",
+      "dateModified": "2023-10-21T06:13:39+02:00",
+      "author": {
+        "@type": "Person",
+        "name": "moonbaby",
+        "url": "https://kriptoakademia.com/author/fizetett-hirdetes"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Kripto Akadémia",
+        "sameAs": "https://kriptoakademia.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://kriptoakademia.com/wp-content/uploads/2024/10/KA_logo_black-2.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://kriptoakademia.com/2023/10/21/binance-futures-magasabb-jutalekot-kell-fizetni-a-hataridos-kereskedesert"
+      }
+    }
+  },
+  {
+    "script_index": 44,
+    "id": "wp-emoji-settings",
+    "type": "application/json",
+    "value": {
+      "baseUrl": "https://s.w.org/images/core/emoji/17.0.2/72x72/",
+      "ext": ".png",
+      "svgUrl": "https://s.w.org/images/core/emoji/17.0.2/svg/",
+      "svgExt": ".svg",
+      "source": {
+        "concatemoji": "https://kriptoakademia.com/wp-includes/js/wp-emoji-release.min.js?ver=7.1.2"
+      }
+    }
+  }
+]

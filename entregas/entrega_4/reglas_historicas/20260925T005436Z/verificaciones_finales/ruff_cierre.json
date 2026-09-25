@@ -1,0 +1,20 @@
+{
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "-m",
+    "ruff",
+    "check",
+    "src",
+    "tests",
+    "scripts",
+    "entregas/entrega_3/archivo/empaquetar.py"
+  ],
+  "exit_code": 0,
+  "started_at_utc": "2026-09-25T02:39:45.842452+00:00",
+  "elapsed_seconds": 0.12649900000542402,
+  "log_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+  "reason": "Includes four additional reproduction-environment negative cases and final auxiliary auditor"
+}

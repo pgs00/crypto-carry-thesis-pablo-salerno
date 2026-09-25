@@ -1,0 +1,31 @@
+{
+  "recorded_at_utc": "2026-09-25T00:16:28.379211Z",
+  "incidents": [
+    {
+      "stage": "lectura terminal",
+      "issue": "La salida de texto Unicode por la consola cp1252 produjo una incidencia de codificaci?n en una lectura inicial.",
+      "resolution": "Se volvi? a leer con python -X utf8 y lecturas UTF-8 expl?citas; originales no reescritos."
+    },
+    {
+      "stage": "b?squeda local",
+      "issue": "Una consulta rg inicial con rutas agrupadas no encontr? el archivo esperado.",
+      "resolution": "Se localizaron rutas reales y se leyeron individualmente; ninguna ausencia se infiri? de ese fallo."
+    },
+    {
+      "stage": "construir_registro.py primera ejecuci?n",
+      "issue": "decimal.InvalidOperation en campos positionControlSide=NONE de FUTI26/FUTI26B.",
+      "resolution": "Inspecci?n de todos los filtros no num?ricos; se conserv? ese campo como enum. Reejecuci?n exitosa: 345 hechos, 288 rutas API."
+    },
+    {
+      "stage": "verificaci?n inicial",
+      "issue": null,
+      "result": "PASS de 52 fuentes, 345 hechos, 479 filas de cobertura, 717 protegidos y 11 pruebas negativas, a 2026-09-25T00:10:59.425316Z; manifiesto inicial a?n sin reporte y revisi?n final. No se confunde con la verificaci?n final."
+    },
+    {
+      "stage": "eficiencia del verificador",
+      "issue": "La misma evidencia JSON/HTML se rele?a por cada caso negativo.",
+      "resolution": "Cach? en memoria s?lo de originales que ya se verificaron por hash; casos alteran copias temporales del registro. Se conserva la revisi?n de todos los hashes en cada ejecuci?n."
+    }
+  ],
+  "network_failures": "Ver descargas.jsonl y fuentes.json: HTTP 202 vac?o, 451 archivado, redirecciones, p?ginas sin tabla; no se equiparan a inexistencia de evidencia."
+}

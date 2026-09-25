@@ -1,0 +1,40 @@
+{
+  "commands": [
+    {
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "pytest",
+        "tests/unit/test_historical_rules_publication.py::test_output_is_new_and_cannot_be_inside_evidence",
+        "-q",
+        "-W",
+        "error::pytest.PytestUnhandledThreadExceptionWarning"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 17.96020309999585
+    },
+    {
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "ruff",
+        "check",
+        "tests/unit/test_historical_rules_publication.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.26652179996017367
+    }
+  ],
+  "frozen_verifier_sha256": "d10ebd8461c9d71026cbd7b148d4a26604165c6052cde7caa0f5f2e0c793d18f",
+  "frozen_verifier_unchanged": true,
+  "original_full_suite_warning_log": "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\pytest_completo.txt",
+  "original_warning_log_sha256": "0ce96ce366e00eb5deac77f346071134ab38d146f53f25f0a02ef645c3445be2",
+  "subprocess_audit": "All Python subprocess invocations in this test now use -X utf8 and explicit UTF-8 decoding. Remaining git/cmd calls capture bytes or inherit streams; no text reader remains implicit.",
+  "stdout_assertion": "Decoded stdout JSON must equal saved result JSON; warning category is an error in focused verification."
+}

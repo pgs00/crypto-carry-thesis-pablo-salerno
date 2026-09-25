@@ -1,0 +1,108 @@
+.F...FFF                                                                 [100%]
+================================== FAILURES ===================================
+_ test_finished_trajectory_is_saved_with_its_actual_engine_status[insolvent--25] _
+
+orchestration = (<module 'runner_orchestration_fixture' from 'C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\scripts\\run_h...shed_trajectory_is_sa1/data'), namespace(status='insolvent', finish=True, writer_calls=0, consumed=['fixture-record']))
+status = 'insolvent', equity = '-25'
+
+    @pytest.mark.parametrize("status,equity", [("complete", "10100"), ("insolvent", "-25")])
+    def test_finished_trajectory_is_saved_with_its_actual_engine_status(orchestration, status, equity):
+        module, destination, data, state = orchestration
+        state.status = status
+>       result = module.run_one(destination, data, SCENARIO, "conditional")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\unit\test_rules_sensitivity_runner.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+package = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-329/test_finished_trajectory_is_sa1/new-output')
+data_root = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-329/test_finished_trajectory_is_sa1/data')
+scenario = 'FUT4_REALIZADA', strategy = 'conditional'
+
+    def run_one(package, data_root, scenario, strategy):
+        audit = check_protocol(package)
+        config = Config.load(PROJECT / "configs/entrega_4/reglas_historicas" / f"{scenario}.toml")
+        baseline = data_root / "outputs" / BASES[strategy]
+        quality = read(baseline / "data_quality.json")
+        quality["research_assumptions"] = research_assumptions(config)
+        quality["reused_market_validation"] = {
+            "run_id": baseline.name,
+            "data_quality_sha256": digest(baseline / "data_quality.json"),
+            "input_hashes_verified": True,
+            "scope": "same prices, funding, coverage and mark derivation; scenario-specific fees/margin",
+        }
+        inputs = dict(audit["input_hashes"],
+                      sensitivity_protocol_sha256=digest(package / "protocolo_previo.json"),
+                      sensitivity_runner_sha256=digest(Path(__file__)))
+        code_before = _code_identity()[0]
+        started = time.monotonic()
+        print(f"START {scenario}/{strategy} code={code_before}", flush=True)
+        b = GapAuditedBacktest(config, prescribed_rules(config), strategy, strategy == "conditional", inputs)
+        b.run(iter_records(data_root, timestamp(config.start), timestamp(config.end),
+                           config.window_hours + 24, data_dir=config.data_dir,
+                           execution_model=config.execution_model, include_closed_bars=True,
+                           mark_gap_method=config.mark_gap_method))
+        replay_seconds = time.monotonic() - started
+        if code_before != _code_identity()[0]:
+            raise ValueError("Executing source changed while replay was running")
+        if b.status != "complete" or b.now != timestamp(config.end) - 1:
+>           raise ValueError(f"Incomplete scenario: {b.status}: {b.reasons}")
+E           ValueError: Incomplete scenario: insolvent: ['controlled orchestration fixture']
+
+scripts\run_historical_rules_sensitivity.py:148: ValueError
+---------------------------- Captured stdout call -----------------------------
+START FUT4_REALIZADA/conditional code=controlled-frozen-code
+___________ test_relocated_helper_finds_project_via_imported_config ___________
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-329/test_relocated_helper_finds_pr0')
+
+    def test_relocated_helper_finds_project_via_imported_config(tmp_path):
+        helper = tmp_path / "herramientas/run_historical_rules_sensitivity.py"
+        helper.parent.mkdir()
+        helper.write_bytes(RUNNER.read_bytes())
+        relocated = load_runner(helper)
+>       assert relocated.PROJECT == ROOT
+E       AssertionError: assert WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-329/test_relocated_helper_finds_pr0') == WindowsPath('C:/Users/pablo/Documentos/UCEMA/Tesina/Backtesting')
+E        +  where WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-329/test_relocated_helper_finds_pr0') = <module 'runner_orchestration_fixture' from 'C:\\Users\\pablo\\AppData\\Local\\Temp\\pytest-of-pablo\\pytest-329\\test_relocated_helper_finds_pr0\\herramientas\\run_historical_rules_sensitivity.py'>.PROJECT
+
+tests\unit\test_rules_sensitivity_runner.py:126: AssertionError
+_________ test_reproduction_selects_the_authenticated_packaged_helper _________
+
+package = (WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-329/test_reproduction_selects_the_0/sealed'), W...wsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-329/test_reproduction_selects_the_0/NEW-destination'))
+
+    def test_reproduction_selects_the_authenticated_packaged_helper(package):
+        source, data, destination = package
+        helper = source / "herramientas/run_historical_rules_sensitivity.py"
+        put(helper, "raise RuntimeError('prepare-only must not execute helper')\n")
+        seal(source)
+        result = run(command(source, data, destination))
+        assert result.returncode == 0, result.stderr + result.stdout
+        preparation = json.loads((destination / "reproduccion_preparacion.json").read_text())
+>       assert str(helper) in preparation["runner_command"]
+E       AssertionError: assert 'C:\\Users\\pablo\\AppData\\Local\\Temp\\pytest-of-pablo\\pytest-329\\test_reproduction_selects_the_0\\sealed\\herramientas\\run_historical_rules_sensitivity.py' in ['C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe', '-B', '-X', 'utf8', '-u', 'C:...est-329\\test_reproduction_selects_the_0\\sealed\\codigo_ejecutado\\scripts\\run_historical_rules_sensitivity.py', ...]
+E        +  where 'C:\\Users\\pablo\\AppData\\Local\\Temp\\pytest-of-pablo\\pytest-329\\test_reproduction_selects_the_0\\sealed\\herramientas\\run_historical_rules_sensitivity.py' = str(WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-329/test_reproduction_selects_the_0/sealed/herramientas/run_historical_rules_sensitivity.py'))
+
+tests\unit\test_rules_sensitivity_runner.py:137: AssertionError
+___________ test_reproduction_rejects_helper_changed_after_sealing ____________
+
+package = (WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-329/test_reproduction_rejects_help0/sealed'), W...wsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-329/test_reproduction_rejects_help0/NEW-destination'))
+
+    def test_reproduction_rejects_helper_changed_after_sealing(package):
+        source, data, destination = package
+        helper = source / "herramientas/run_historical_rules_sensitivity.py"
+        put(helper, "# authenticated fixture helper\n")
+        seal(source)
+        put(helper, "# altered after seal\n")
+        result = run(command(source, data, destination))
+>       assert result.returncode != 0, "The selected helper must be authenticated before preparation"
+E       AssertionError: The selected helper must be authenticated before preparation
+E       assert 0 != 0
+E        +  where 0 = CompletedProcess(args=['C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe', '-B', '...pytest-329\\\\test_reproduction_rejects_help0\\\\data-root", "--workers", "4"], "batch_executed": false}\n', stderr='').returncode
+
+tests\unit\test_rules_sensitivity_runner.py:149: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/unit/test_rules_sensitivity_runner.py::test_finished_trajectory_is_saved_with_its_actual_engine_status[insolvent--25]
+FAILED tests/unit/test_rules_sensitivity_runner.py::test_relocated_helper_finds_project_via_imported_config
+FAILED tests/unit/test_rules_sensitivity_runner.py::test_reproduction_selects_the_authenticated_packaged_helper
+FAILED tests/unit/test_rules_sensitivity_runner.py::test_reproduction_rejects_helper_changed_after_sealing
+4 failed, 4 passed in 13.42s

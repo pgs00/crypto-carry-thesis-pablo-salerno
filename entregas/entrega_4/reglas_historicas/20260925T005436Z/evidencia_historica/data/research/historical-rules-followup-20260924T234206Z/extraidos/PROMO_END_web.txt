@@ -1,0 +1,101 @@
+Updates on Zero-Fee Bitcoin Trading & BUSD Zero Maker Fee Promotion | Binance Support (https://www.binance.com/en/support/announcement/detail/be13a645cca643d28eab5b9b34f2dc36)
+citeturn2view2 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"turn1view2","lineno":40}); Total lines: 172
+L20: Trading Pairs  | cite11†Maker Fee | cite11†Taker Fee L21: BTC/FDUSD  | 0%  | 0%
+L22: BTC/TUSD, BNB/TUSD, ETH/TUSD  | 0%  | Standard taker fees as per user’s cite11†VIP level L23: BTC/AUD, BTC/BIDR, BTC/BRL, BTC/BUSD, BTC/EUR, BTC/GBP, BTC/RUB, BTC/TRY, BTC/UAH, BTC/USDT  | Standard maker fees as per user’s cite11†VIP level | Standard taker fees as per user’s cite11†VIP level L24: BNB/BUSD, BTC/BUSD, ETH/BUSD  | Standard maker fees as per user’s cite11†VIP level | Standard taker fees as per user’s cite11†VIP level L25: 
+L26: Key Updates:
+L27:   * Users will continue to enjoy zero cite12†maker fees when trading BTC on the BTC/TUSD spot and margin trading pair. Please refer to this cite13†link for more details on the promotion.
+L28: 
+L29:   * The cite10†BUSD zero maker fee promotion will now exclude the BNB/BUSD, BTC/BUSD and ETH/BUSD spot and margin trading pairs. All other BUSD spot and margin trading pairs will not be impacted.
+L30:   * cite11†Standard trading fees will apply to the BTC/AUD, BTC/BIDR, BTC/BRL, BTC/BUSD, BTC/EUR, BTC/GBP, BTC/RUB, BTC/TRY, BTC/UAH and BTC/USDT spot and margin trading pairs, as well as the BNB/BUSD and ETH/BUSD spot and margin trading pairs.
+L31:   * From 2023-03-22 00:00 (UTC), the calculation of maker fee and taker fee rebates will resume for the spot and margin pairs stipulated above. In addition, the corresponding trading volume on the above BTC spot and margin trading pairs will count toward VIP tier calculation and all Liquidity Provider programs.
+L32: 
+L33: Terms & Conditions:
+L34:   * Binance reserves the right to disqualify trades that are deemed to be wash trades or illegally bulk registered accounts, as well as trades that display attributes of self-dealing or market manipulation.
+L35: 
+L36:   * All trading volume and metrics related to the programs are measured by Binance at its sole and absolute discretion.
+L37:   * Calculation of maker fee and taker fee rebates for all remaining spot and margin trading pairs under both programs will resume when the respective program ends, subject to further updates.
+L38: 
+L39:   * Standard trading fees apply after the programs end. Please refer to the cite11†VIP tier fee structure for more details.
+L40: 
+L41:   * Binance reserves the right to cancel or amend the program or program rules at its sole discretion.
+L42:   * Where any discrepancy arises between the translated versions and the original English version, the English version shall prevail.
+L43: 
+L44: Thanks for your support!
+L45: 
+L46: Binance Team
+L47: 
+L48: 2023-03-15
+L49: 
+L50: Note: This announcement was last updated on 2023-11-22 to reflect fee structure change on BTC/FDUSD and BTC/TUSD trading pairs. It was previously updated on 2023-05-04 to reflect fee structure change on the BTC/TUSD margin pair.
+L51: 
+L52: cite14†Trade on-the-go with Binance’s crypto trading app (iOS/Android)†binance.onelink.me L53: Find us on
+L54: 
+L55:   * cite15†Telegram†t.me L56: 
+L57:   * cite16†WhatsApp†whatsapp.com L58: 
+L59:   * cite17†X†twitter.com L60: 
+L61:   * cite18†Facebook†www.facebook.com L62: 
+L63:   * cite19†Instagram†www.instagram.com L64: 
+L65:   * cite20†Discord†discord.gg L66: 
+L67: Binance reserves the right in its sole discretion to amend or cancel this announcement at any time and for any reasons without prior notice.
+L68: Disclaimer: Digital asset prices are subject to high market risk and price volatility. The value of your investment may go down or up, and you may not get back the amount invested. You are solely responsible for your investment decisions and Binance is not liable for any losses you may incur. Past performance is not a reliable predictor of future performance. You should only invest in products you are familiar with and where you understand the risks.
+L69: You should carefully consider your investment experience, financial situation, investment objectives and risk tolerance and consult an independent financial adviser prior to making any investment. This material should not be construed as financial advice. For more information, see our cite21†Terms of Use and cite22†Risk Warning .
+L70: [Input: Search]
+L71: 
+L72: Register Now - Get up to 100 USDT in trading fee rebate (for verified users)
+L73: 
+L74: cite23†Register Now†accounts.binance.com L75: ## Latest Articles
+L76: 
+L77: cite24†Trade bStocks 24/7 and Win Up to 500 USDT in Token Vouchers L78: 
+L79: cite25†Binance Alpha Trading Competition: Trade ChainOpera AI (COAI) and Share $200K Worth of Rewards (2026-09-24) L80: 
+L81: cite26†The Binance Starter Carnival: Complete Tasks to Share $100,000 Worth of Rewards in BTC L82: 
+L83: cite27†Binance Will Add Hyperliquid (HYPE) on Earn, Buy Crypto, Convert, VIP Loan & Margin L84: 
+L85: cite28†VTHO Trading Tournament: Trade to Share Up to 400 BNB Token Vouchers L86: 
+L87: ### Community
+L88: ### About Us
+L89: 
+L90:   * cite29†About L91:   * cite30†Careers L92:   * cite31†Announcements L93:   * cite32†News L94:   * cite33†Press L95:   * cite34†Legal L96:   * cite21†Terms L97:   * cite35†Privacy L98:   * cite36†Building Trust L99:   * cite37†Blog L100:   * cite38†Community L101:   * cite22†Risk Warning L102:   * cite39†Notices L103:   * cite40†Downloads L104:   * cite41†Desktop Application L105:   * cite42†Secure Internal Communication Channel L106: ### Products
+L107: 
+L108:   * cite43†Exchange L109:   * cite44†Buy Crypto L110:   * cite45†Pay L111:   * cite46†Crypto Payments†pay.binance.com L112:   * cite47†Binance Junior L113:   * cite48†Card L114:   * cite49†Academy L115:   * cite50†Gift Card L116:   * cite51†Launchpool L117:   * cite52†Auto-Invest L118:   * cite53†ETH Staking L119:   * cite54†BABT L120:   * cite55†Research L121:   * cite56†Charity†www.binance.charity L122: 
+L123: ### Business
+L124: 
+L125:   * cite57†P2P Merchant Application†c2c.binance.com L126:   * cite58†Listing Application L127:   * cite59†Institutional & VIP Services L128:   * cite60†Labs†labs.binance.com L129:   * cite61†Pay Onchain L130: ### Learn
+L131: 
+L132:   * cite62†Learn & Earn L133:   * cite63†Browse Crypto Prices L134:   * cite64†Bitcoin Price L135:   * cite65†Ethereum Price
+
+Updates on Zero-Fee Bitcoin Trading & BUSD Zero Maker Fee Promotion | Binance Support (https://www.binance.com/en/support/announcement/detail/be13a645cca643d28eab5b9b34f2dc36)
+citeturn16view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.binance.com/en/support/announcement/detail/be13a645cca643d28eab5b9b34f2dc36","lineno":0}); Total lines: 172
+L0: cite0†Markets L1: 
+L2: Trade
+L3: 
+L4: cite1†Square L5: 
+L6: Institutional
+L7: 
+L8: cite2†New Cryptocurrency Listing cite3†Latest Binance News cite4†Latest Activities cite5†Delisting cite6†Maintenance Updates cite7†API Updates cite8†Crypto Airdrop L9: # Updates on Zero-Fee Bitcoin Trading & BUSD Zero Maker Fee Promotion
+L10: 
+L11: Published on 2023-03-15 06:10
+L12: 
+L13: Fellow Binancians,
+L14: 
+L15: Binance will update the cite9†zero-fee Bitcoin trading program and cite10†BUSD zero maker fee promotion , effective from 2023-03-22 00:00 (UTC).
+L16: 
+L17: Validity Period: 2023-03-22 00:00 (UTC) until further notice
+L18: 
+L19: Fee Structure:
+L20: Trading Pairs  | cite11†Maker Fee | cite11†Taker Fee L21: BTC/FDUSD  | 0%  | 0%
+L22: BTC/TUSD, BNB/TUSD, ETH/TUSD  | 0%  | Standard taker fees as per user’s cite11†VIP level L23: BTC/AUD, BTC/BIDR, BTC/BRL, BTC/BUSD, BTC/EUR, BTC/GBP, BTC/RUB, BTC/TRY, BTC/UAH, BTC/USDT  | Standard maker fees as per user’s cite11†VIP level | Standard taker fees as per user’s cite11†VIP level L24: BNB/BUSD, BTC/BUSD, ETH/BUSD  | Standard maker fees as per user’s cite11†VIP level | Standard taker fees as per user’s cite11†VIP level L25: 
+L26: Key Updates:
+L27:   * Users will continue to enjoy zero cite12†maker fees when trading BTC on the BTC/TUSD spot and margin trading pair. Please refer to this cite13†link for more details on the promotion.
+L28: 
+L29:   * The cite10†BUSD zero maker fee promotion will now exclude the BNB/BUSD, BTC/BUSD and ETH/BUSD spot and margin trading pairs. All other BUSD spot and margin trading pairs will not be impacted.
+L30:   * cite11†Standard trading fees will apply to the BTC/AUD, BTC/BIDR, BTC/BRL, BTC/BUSD, BTC/EUR, BTC/GBP, BTC/RUB, BTC/TRY, BTC/UAH and BTC/USDT spot and margin trading pairs, as well as the BNB/BUSD and ETH/BUSD spot and margin trading pairs.
+L31:   * From 2023-03-22 00:00 (UTC), the calculation of maker fee and taker fee rebates will resume for the spot and margin pairs stipulated above. In addition, the corresponding trading volume on the above BTC spot and margin trading pairs will count toward VIP tier calculation and all Liquidity Provider programs.
+L32: 
+L33: Terms & Conditions:
+L34:   * Binance reserves the right to disqualify trades that are deemed to be wash trades or illegally bulk registered accounts, as well as trades that display attributes of self-dealing or market manipulation.
+L35: 
+L36:   * All trading volume and metrics related to the programs are measured by Binance at its sole and absolute discretion.
+L37:   * Calculation of maker fee and taker fee rebates for all remaining spot and margin trading pairs under both programs will resume when the respective program ends, subject to further updates.
+L38: 
+L39:   * Standard trading fees apply after the programs end. Please refer to the cite11†VIP tier fee structure for more details.
+L40: 
+L41:   * Binance reserves the right to cancel or amend the program or program rules at its sole discretion.

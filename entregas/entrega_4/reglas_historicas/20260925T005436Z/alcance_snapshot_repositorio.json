@@ -1,0 +1,42 @@
+{
+  "original_repository_verifier_exit": 1,
+  "reason": "Historical cleanup snapshot predates the authorized opt-in extension. Original snapshot and verifier retained.",
+  "protected_snapshot_differences": [
+    {
+      "path": "src/crypto_carry/config.py",
+      "expected": [
+        "48e33a37be674afb309f7aa145c99cefaabcf1e3a1273bed11d729ad49ad7b36"
+      ],
+      "actual": "e04aba786423696e5bdba811600402ef465b97bf8ac06147b7a9c74f7b069dd5"
+    },
+    {
+      "path": "src/crypto_carry/costs.py",
+      "expected": [
+        "f8ca611e9b0546a42ee1ce59dc07641cf417023bdd27341b4bd20181bd33db9c"
+      ],
+      "actual": "2047c57f151b875dc182bc2963361ca52320cbbe9342f00562f43dd85c21debd"
+    },
+    {
+      "path": "src/crypto_carry/data/prescribed.py",
+      "expected": [
+        "97d8e3886115314aa6f23d2115a306e210948275798f3b646df09bab3021a251"
+      ],
+      "actual": "9c93a973558f3e44f093b5915b7944622128cba2974d76660da71b73942626f8"
+    },
+    {
+      "path": "src/crypto_carry/reporting.py",
+      "expected": [
+        "a55261898f29fbd480809aafcc31eaa0404f420cb465e734f6e8209d1c823b03"
+      ],
+      "actual": "6d57a60e5d417060dd365fe16ef0f6eea5592e25ff122eb25fb28da4142830fc"
+    },
+    {
+      "path": "src/crypto_carry/strategy.py",
+      "expected": [
+        "cf009afa7705886a01a2c220c18707aa4c88604e6cdfe00213170a24c6cc584d"
+      ],
+      "actual": "431ea4d5ecde2411c29eaeae991a2525e2921f9d13af5b3dbe804252961abfc2"
+    }
+  ],
+  "head": "894059e4ce318e51f25211d04be9f0202de90ae7"
+}

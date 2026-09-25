@@ -1,0 +1,13 @@
+scenario,strategy,run_id,daily_rows,max_daily_residual_usdt,max_daily_balance_residual_usdt,max_period_residual_usdt,tolerance_usdt,status
+BASE_E3,conditional,run_ad71d751b20623006c195ff3,1704,1.0462E-23,7.442E-24,1.3E-24,1E-8,passed
+BASE_E3,permanent,run_dfea4b7ac1475668d5968c97,1704,1.0210E-23,8.912E-24,8.4E-24,1E-8,passed
+BTC_PROMO_REALIZADA,conditional,run_1ae1cf88ac71b976740edc03,1704,1.0462E-23,7.442E-24,1.3E-24,1E-8,passed
+BTC_PROMO_DECISION,conditional,run_d434594cde4077ba6661d7e4,1704,1.295E-24,3.138E-24,7E-24,1E-8,passed
+BTC_PROMO_REALIZADA,permanent,run_d3ebbfeb6f98be343782ccbb,1704,1.0445E-23,9.440E-24,1.00E-23,1E-8,passed
+BTC_PROMO_DECISION,permanent,run_a45c9456ea5d541c9ddce187,1704,1.0445E-23,9.440E-24,1.00E-23,1E-8,passed
+FUT4_REALIZADA,conditional,run_d17c6848d9a0c5c85249b152,1704,1.0100E-23,8.851E-24,2E-24,1E-8,passed
+FUT4_DECISION,conditional,run_8f497f6f609b074f796e043f,1704,1.0025E-23,7.325E-24,3E-24,1E-8,passed
+MARGEN_2X,conditional,run_70383794701c4f0fc157b2ed,1704,6.78E-25,3.173E-24,1E-24,1E-8,passed
+MARGEN_2X,permanent,run_3f5d9cce8ff1c2ba5447e3b6,1704,1.0620E-23,8.780E-24,4E-24,1E-8,passed
+FUT4_REALIZADA,permanent,run_edc965655c124abd4318e838,1704,1.0440E-23,8.670E-24,4E-24,1E-8,passed
+FUT4_DECISION,permanent,run_9a4b6b4c853215594e14bd86,1704,1.0440E-23,8.670E-24,4E-24,1E-8,passed

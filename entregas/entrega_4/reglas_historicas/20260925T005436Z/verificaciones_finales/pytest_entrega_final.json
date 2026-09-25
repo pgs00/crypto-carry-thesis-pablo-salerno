@@ -1,0 +1,18 @@
+{
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider"
+  ],
+  "started_at_utc": "2026-09-25T14:10:29.615734+00:00",
+  "elapsed_seconds": 174.2257162000751,
+  "exit_code": 0,
+  "log_sha256": "e9d530ebb018f14dd4a0f896722ce630382ac0d83265186ee9ea189ed839786a",
+  "scope": "Final entire suite after post-review launcher/reproducer correction; frozen economic engine unchanged."
+}

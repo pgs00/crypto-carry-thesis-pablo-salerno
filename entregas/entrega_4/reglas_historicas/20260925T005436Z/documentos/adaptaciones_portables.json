@@ -1,0 +1,25 @@
+{
+  "created_at_utc": "2026-09-25T13:51:48.284501+00:00",
+  "scope": "Only relative Markdown link targets adapted for the relocated document copy. Source document and pre-run snapshot remain unchanged.",
+  "file": "documentos/decisiones_integracion.md",
+  "source": "docs/entrega_4/reglas_historicas/decisiones_integracion.md",
+  "source_sha256": "4c729a6bec7bcd827381bf8f9aa1da0e0a76fd6a999e9ef455a238c11c039d17",
+  "portable_sha256": "99be0357f83dd046961ebe3cf967d8d96bf8de5deb881662a97bc0e3d8a1f957",
+  "replacements": [
+    {
+      "from": "../../../data/research/",
+      "to": "../evidencia_historica/data/research/",
+      "occurrences": 4
+    },
+    {
+      "from": "../../../scripts/diagnose_historical_rules_exposure.py",
+      "to": "../herramientas/diagnose_historical_rules_exposure.py",
+      "occurrences": 1
+    },
+    {
+      "from": "../../../entregas/entrega_4/reglas_historicas/20260925T005436Z/diagnostico_historico/README.md",
+      "to": "../diagnostico_historico/README.md",
+      "occurrences": 1
+    }
+  ]
+}

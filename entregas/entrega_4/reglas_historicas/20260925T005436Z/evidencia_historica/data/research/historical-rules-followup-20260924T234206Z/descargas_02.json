@@ -1,0 +1,34 @@
+[
+  {
+    "id": "A4",
+    "url": "https://web.archive.org/web/20230621192025id_/http://www.binance.com/en/support/faq/binance-futures-fee-structure-fee-calculations-360033544231"
+  },
+  {
+    "id": "SPOT25",
+    "url": "https://web.archive.org/web/20250114132420id_/https://www.binance.com/en/fee/trading"
+  },
+  {
+    "id": "SPOT26",
+    "url": "https://web.archive.org/web/20260806031057id_/https://www.binance.com/en/fee/trading"
+  },
+  {
+    "id": "PROMO25",
+    "url": "https://web.archive.org/web/20250118100211id_/https://www.binance.com/en/fee/tradingPromote"
+  },
+  {
+    "id": "PROMO26",
+    "url": "https://web.archive.org/web/20260831075419id_/https://www.binance.com/en/fee/tradingPromote"
+  },
+  {
+    "id": "CDX_FEEPREFIX",
+    "url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.binance.com%2Fen%2Ffee%2FfutureFee&output=json&from=20230501&to=20240229&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true&matchType=prefix"
+  },
+  {
+    "id": "CDX_FEE_ES",
+    "url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.binance.com%2Fes%2Ffee%2FfutureFee&output=json&from=20230501&to=20240229&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true&matchType=exact"
+  },
+  {
+    "id": "CDX_FEE_CN",
+    "url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.binance.com%2Fzh-CN%2Ffee%2FfutureFee&output=json&from=20230501&to=20240229&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true&matchType=exact"
+  }
+]

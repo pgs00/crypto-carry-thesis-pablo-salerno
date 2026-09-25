@@ -1,0 +1,74 @@
+{
+  "observed_at_utc": "2026-09-25T01:54:28.727118+00:00",
+  "phase": "during batch and final test suite, not pre-execution or a peak measurement",
+  "command": [
+    "powershell",
+    "-NoProfile",
+    "-Command",
+    "$os=Get-CimInstance Win32_OperatingSystem; $drives=Get-PSDrive C,D; [pscustomobject]@{total_memory_kib=$os.TotalVisibleMemorySize;free_memory_kib=$os.FreePhysicalMemory;drives=@($drives|Select-Object Name,Used,Free);python_processes=@(Get-Process python -ErrorAction SilentlyContinue|Sort-Object WorkingSet64 -Descending|Select-Object -First 6 Id,CPU,WorkingSet64,PeakWorkingSet64)}|ConvertTo-Json -Depth 5 -Compress"
+  ],
+  "exit_code": 0,
+  "resources": {
+    "total_memory_kib": 29208636,
+    "free_memory_kib": 9807652,
+    "drives": [
+      {
+        "Name": "C",
+        "Used": 258346807296,
+        "Free": 252656779264
+      },
+      {
+        "Name": "D",
+        "Used": 45937508352,
+        "Free": 954248802304
+      }
+    ],
+    "python_processes": [
+      {
+        "Id": 32280,
+        "CPU": 2095.90625,
+        "WorkingSet64": 2336776192,
+        "PeakWorkingSet64": 2349293568
+      },
+      {
+        "Id": 16552,
+        "CPU": 2095.671875,
+        "WorkingSet64": 2308308992,
+        "PeakWorkingSet64": 2342772736
+      },
+      {
+        "Id": 30532,
+        "CPU": 117.03125,
+        "WorkingSet64": 1593303040,
+        "PeakWorkingSet64": 1601658880
+      },
+      {
+        "Id": 21728,
+        "CPU": 325.9375,
+        "WorkingSet64": 1415610368,
+        "PeakWorkingSet64": 1426305024
+      },
+      {
+        "Id": 25820,
+        "CPU": 133.625,
+        "WorkingSet64": 1081794560,
+        "PeakWorkingSet64": 1095307264
+      },
+      {
+        "Id": 6560,
+        "CPU": 4.78125,
+        "WorkingSet64": 181161984,
+        "PeakWorkingSet64": 212336640
+      }
+    ]
+  },
+  "workers": 4,
+  "market_data_duplicated_per_scenario": false,
+  "market_root": "D:/Backtesting",
+  "output_root": "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z",
+  "bounded_measurement": [
+    "benchmark_antes.json",
+    "benchmark_despues.json"
+  ],
+  "expected_input_identifiers": 1731
+}

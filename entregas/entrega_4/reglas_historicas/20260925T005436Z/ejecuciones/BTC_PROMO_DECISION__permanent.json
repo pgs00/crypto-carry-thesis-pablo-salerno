@@ -1,0 +1,17 @@
+{
+  "scenario": "BTC_PROMO_DECISION",
+  "strategy": "permanent",
+  "status": "ejecutado",
+  "engine_status": "complete",
+  "run_id": "run_a45c9456ea5d541c9ddce187",
+  "path": "corridas/run_a45c9456ea5d541c9ddce187",
+  "manifest_sha256": "a1668fe49627fa258363394b1a6733aae74c67e1ae59a9c5e2e93a40e3e0e45c",
+  "code_hash": "314631c24b36bbee58eb55a9b17505af656de453b60d1496c067e6f30b33de97",
+  "replay_seconds": 2422.2443460000213,
+  "total_seconds": 2781.137183999992,
+  "final_equity": "11683.38048945462628528569999",
+  "ledger_difference": "-1E-24",
+  "native_fills": 324,
+  "fills": 324,
+  "input_hashes_verified_again_at_batch_end": false
+}

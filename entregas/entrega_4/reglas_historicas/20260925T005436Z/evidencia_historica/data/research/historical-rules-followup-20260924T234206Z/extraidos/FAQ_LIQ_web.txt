@@ -1,0 +1,171 @@
+What Fees are Generated in Binance Futures Trading? | Binance Futures,Binance Futures Fees (https://www.binance.com/en/support/faq/detail/98488a516eb84e3eb34605683dffd554)
+citeturn11view2 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.binance.com/en/support/faq/detail/98488a516eb84e3eb34605683dffd554","lineno":0}); Total lines: 215
+L0: cite0†Markets L1: 
+L2: Trade
+L3: 
+L4: cite1†Square L5: 
+L6: Institutional
+L7: 
+L8: cite2†Account Functions cite3†Tutorial cite4†Binance Wallet cite5†Binance Alpha cite6†Crypto Deposit/Withdrawal cite7†Binance Junior cite8†Crypto Derivatives L9: 
+L10: cite9†Futures Contracts L11: cite10†Introduction to Binance Futures cite11†Multi-Assets Mode cite12†Portfolio Margin cite13†USDⓈ-M Futures Contracts cite14†COIN-M Futures Contracts cite15†Futures Guide cite16†Hedge Mode cite17†Types of Orders cite18†Futures Service Agreement cite19†Binance Futures Related Programs cite20†Index cite21†Trading Parameters cite22†LDUSDT cite23†TradFi Perpetual Contracts cite24†Portfolio Margin Pro cite25†Binance Futures Credits (BNFCR) L12: 
+L13: cite26†Options cite27†Smart Money cite28†Event Contracts L14: cite29†Buy Crypto (Fiat/P2P) cite30†Spot & Margin Trading cite31†Trading Bots cite32†Copy Trading cite33†Finance cite34†Launchpool & Megadrop cite35†Binance Earn cite36†Binance Fan Token cite37†Convert & Block Trade cite38†API cite39†Binance Link cite40†NFT cite41†Binance Square cite42†VIP cite43†Tax cite44†Security cite45†Other Topics cite46†Binance Referral Program cite47†OTC & Execution services cite48†Binance Chat cite49†Stock Trading cite50†bStocks L15: # What Fees are Generated in Binance Futures Trading?
+L16: 
+L17: Published on 2024-05-29 14:55
+L18: 
+L19: Updated on 2026-01-05 05:00
+L20: Disclaimer: This FAQ Page is for general information and educational purposes only. It does not constitute legal terms or any form of legal agreement between you and Binance. It should not be construed as financial, legal or other professional advice. The information on this page may be outdated.
+L21: For legal terms applicable to Futures and Options Trading Services, please refer to the cite51†Terms of Use , the cite52†Exchange Rules (including the cite53†Exchange Procedures ) and the cite54†Clearing Rules (including the cite55†Clearing Procedures ) which come into effect on 5 January 2026. Additional terms and conditions will also be set out in the Contract Specifications applicable to the relevant Derivatives contract.
+L22: 
+L23: 
+L24: There are three types of applicable fees in Binance Futures trading:
+L25: 
+L26: 1. Commission Fee (Incurred every time an order is executed)
+L27: 2. Funding Fee (Incurred depending on the trade position at the time of settlement)
+L28: 3. Insurance Clearance Fee (Incurred when a position is forcibly liquidated)
+L29: 
+L30: Read below to learn more about the different fees involved.
+L31: 
+L32: 1. Commission fee
+L33: 
+L34: The commission fee incurred on your order can vary depending on several factors:
+L35: Pay-out Timing  | Whether your position was partially or fully executed
+L36: VIP Levels  | Your participation and progress in our exclusive programs
+L37: Maker & Taker  | Whether your order remains on the order book as a maker or is immediately matched as a taker.Maker: Orders that provide market liquidity. If you place an order that is not immediately executed and remains on the order book, commonly seen in limit orders, you are acting as a maker. This action means you are adding liquidity to the market.Taker: Orders that remove market liquidity. If you place an order that is immediately executed, like a market order, you are acting as a taker.
+L38: These orders remove liquidity from the order book.
+L39: BNB Discount  | Receive a 10% discount on standard trading fees when you use BNB to pay for commission fees on the Binance Futures platform for USDⓈ-M Futures. Please ensure that you have transferred a sufficient BNB balance to your USDⓈ-M Futures Wallet, otherwise the system will automatically deduct USDT for the fees and you will not be entitled to the discount.
+L40: #### Commission fee calculation
+L41: 
+L42: Depending on the contract type, commission fees will differ in calculation:
+L43: 
+L44: For USDⓈ-Margined:
+L45: Commission Fee = Notional Value * Fee Rate
+L46: Notional Value = Number of Contracts * Trade Price
+L47: 
+L48: For COIN-Margin:
+L49: Commission Fee = Notional Value * Fee Rate
+L50: Notional Value = (Number of Contracts* Contract Size) / Trade Price
+L51: 
+L52: For more details on commission fees calculations, see the cite56†Binance Futures Fee Structure & Calculations page.
+L53: 
+L54: 2. Funding fee
+L55: Funding rates are exchanged between long- and short-position holders periodically, to help converge perpetual contracts’ prices to underlying asset prices. Through the funding rate, traders are incentivized to hold positions that help align the contract price closer to the spot price.
+L56: 
+L57: Please note that Binance only helps facilitate the exchange of funding amounts between long- and short-position holders. Binance does not charge any service fees.
+L58: Additionally, the funding rate can serve as an indicator of market sentiment. A positive funding rate typically indicates that long positions are stronger in the market, while a negative funding rate suggests that short positions are more dominant.
+L59: #### Funding fee settlement time
+L60: 
+L61: Typically settling every 8 hours, the frequency of funding fee settlements varies depending on the cryptocurrency pair held.
+L62: 
+L63: Funding payments with a settlement frequency of every 8 hours start at 00:00 (UTC), 08:00 (UTC), and 16:00 (UTC).
+L64: 
+L65: Funding payments with a settlement frequency of every 4 hours start at 00:00 (UTC), 04:00 (UTC), 08:00 (UTC), 12:00 (UTC), 16:00 (UTC), and 20:00 (UTC).
+L66: #### Funding fee payments and receipts
+L67: 
+L68: Traders will be charged or receive the funding fee only if they hold a position in the corresponding direction at the time the fee is charged. If there is no position held at that time, no funding fee will be paid or received.
+L69: 
+L70: The flow of funding fee payments and receipts is as follow:
+L71: 
+L72:    | Funding Rate > 0  | Funding Rate < 0
+L73: Long position  | Paying funding fee  | Receiving funding fee
+L74: Short position  | Receiving funding fee  | Paying funding fee
+
+What Fees are Generated in Binance Futures Trading? | Binance Futures,Binance Futures Fees (https://www.binance.com/en/support/faq/detail/98488a516eb84e3eb34605683dffd554)
+citeturn12view2 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.binance.com/en/support/faq/detail/98488a516eb84e3eb34605683dffd554","lineno":75}); Total lines: 215
+L40: #### Commission fee calculation
+L41: 
+L42: Depending on the contract type, commission fees will differ in calculation:
+L43: 
+L44: For USDⓈ-Margined:
+L45: Commission Fee = Notional Value * Fee Rate
+L46: Notional Value = Number of Contracts * Trade Price
+L47: 
+L48: For COIN-Margin:
+L49: Commission Fee = Notional Value * Fee Rate
+L50: Notional Value = (Number of Contracts* Contract Size) / Trade Price
+L51: 
+L52: For more details on commission fees calculations, see the cite56†Binance Futures Fee Structure & Calculations page.
+L53: 
+L54: 2. Funding fee
+L55: Funding rates are exchanged between long- and short-position holders periodically, to help converge perpetual contracts’ prices to underlying asset prices. Through the funding rate, traders are incentivized to hold positions that help align the contract price closer to the spot price.
+L56: 
+L57: Please note that Binance only helps facilitate the exchange of funding amounts between long- and short-position holders. Binance does not charge any service fees.
+L58: Additionally, the funding rate can serve as an indicator of market sentiment. A positive funding rate typically indicates that long positions are stronger in the market, while a negative funding rate suggests that short positions are more dominant.
+L59: #### Funding fee settlement time
+L60: 
+L61: Typically settling every 8 hours, the frequency of funding fee settlements varies depending on the cryptocurrency pair held.
+L62: 
+L63: Funding payments with a settlement frequency of every 8 hours start at 00:00 (UTC), 08:00 (UTC), and 16:00 (UTC).
+L64: 
+L65: Funding payments with a settlement frequency of every 4 hours start at 00:00 (UTC), 04:00 (UTC), 08:00 (UTC), 12:00 (UTC), 16:00 (UTC), and 20:00 (UTC).
+L66: #### Funding fee payments and receipts
+L67: 
+L68: Traders will be charged or receive the funding fee only if they hold a position in the corresponding direction at the time the fee is charged. If there is no position held at that time, no funding fee will be paid or received.
+L69: 
+L70: The flow of funding fee payments and receipts is as follow:
+L71: 
+L72:    | Funding Rate > 0  | Funding Rate < 0
+L73: Long position  | Paying funding fee  | Receiving funding fee
+L74: Short position  | Receiving funding fee  | Paying funding fee
+L75: #### Funding fee calculation
+L76: 
+L77: For USDⓈ-Margined:
+L78: Funding Fee = Notional Value * Fee Rate
+L79: Notional Value = Number of Contracts * Trade Price
+L80: 
+L81: For COIN-Margin:
+L82: Funding Fee = Notional Value * Fee Rate
+L83: Notional Value = (Number of Contracts* Contract Size) / Trade Price
+L84: 
+L85: For more details on futures funding rates, please visit the cite57†Introduction to Binance Futures Funding Rates page.
+L86: #### Funding rate arbitrage and bot
+L87:   * Funding rate arbitrage
+L88: Funding rate arbitrage is a delta neutral strategy that enables traders to hedge their positions in the futures market by taking an opposite position for the same trading pair in the spot market. Any loss originating from a price movement on the futures market will be offset by a profit on the spot market (and vice versa), which allows traders to earn funding fees without closing any of their positions.
+L89: For more details on funding rate arbitrage, please visit this cite58†Contract Information page.
+L90: 
+L91:   * Funding Rate Arbitrage Bot
+L92: The Binance Funding Rate Arbitrage Bot is an innovative tool designed for traders to engage in arbitrage strategies between perpetual futures contracts and their spot equivalents. The Bot leverages the funding rate mechanism by hedging their futures position with a spot position to collect the funding fee.
+L93: For more details, please visit cite59†What is the Binance Funding Rate Arbitrage Bot and How Does It Work? L94: 3. Insurance Clearance fee
+L95: 
+L96: If your wallet balance is insufficient to meet the margin requirements, the system will automatically close your position through forced liquidation. This can lead to the loss of all the capital invested in the position. For more details, please visit cite60†Binance Futures Liquidation Protocols .
+L97: When a position is liquidated, a portion of the assets that have been made available to maintain the position will be deducted and paid to Binance as the Insurance Clearance Fee, unless the position is a bankrupt position following liquidation. The transfer will be marked as ''Insurance Clearance'' in your transaction history.
+L98: 
+L99: You can check the rates of Insurance clearance fees on the cite61†Trading Rules page.
+L100: #### Insurance Clearance fee calculation
+L101: 
+L102: For USDⓈ-Margined:
+L103: Insurance Clearance Fee = Notional Value * Fee Rate
+L104: Notional Value = Number of Contracts * Trade Price
+L105: 
+L106: For more details, please visit cite62†How to Calculate Liquidation Price of USDⓈ-M Futures Contracts .
+L107: 
+L108: For COIN-Margin:
+L109: Insurance Clearance Fee = Notional Value * Fee Rate
+L110: Notional Value = (Number of Contracts* Contract Size) / Trade Price
+L111: 
+L112: For more details, please visit cite63†How to Calculate Liquidation Price of Coin-M Futures Contracts .
+L113: [Input: Search]
+L114: 
+L115: Register Now - Get up to 100 USDT in trading fee rebate (for verified users)
+L116: 
+L117: cite64†Register Now†accounts.binance.com L118: ## Related Articles
+L119: 
+L120: cite65†Binance Futures Fee Structure & Fee Calculations L121: 
+L122: cite66†What Are the Differences between Spot Trading and Futures Trading L123: 
+L124: cite67†What Are the Differences between Margin and Futures Trading? L125: 
+L126: cite68†Differences Between Perpetual Contract and Traditional Futures Contract L127: 
+L128: cite69†Introduction to Binance Futures Funding Rates L129: 
+L130: ### Community
+L131: ### About Us
+L132: 
+L133:   * cite70†About L134:   * cite71†Careers L135:   * cite72†Announcements L136:   * cite73†News L137:   * cite74†Press L138:   * cite75†Legal L139:   * cite51†Terms L140:   * cite76†Privacy L141:   * cite77†Building Trust L142:   * cite78†Blog L143:   * cite79†Community L144:   * cite80†Risk Warning L145:   * cite81†Notices L146:   * cite82†Downloads L147:   * cite83†Desktop Application L148:   * cite84†Secure Internal Communication Channel L149: ### Products
+L150: 
+L151:   * cite85†Exchange L152:   * cite86†Buy Crypto L153:   * cite87†Pay L154:   * cite88†Crypto Payments†pay.binance.com L155:   * cite89†Binance Junior L156:   * cite90†Card L157:   * cite91†Academy L158:   * cite92†Gift Card L159:   * cite93†Launchpool L160:   * cite94†Auto-Invest L161:   * cite95†ETH Staking L162:   * cite96†BABT L163:   * cite97†Research L164:   * cite98†Charity†www.binance.charity L165: 
+L166: ### Business
+L167: 
+L168:   * cite99†P2P Merchant Application†c2c.binance.com L169:   * cite100†Listing Application L170:   * cite101†Institutional & VIP Services L171:   * cite102†Labs†labs.binance.com L172:   * cite103†Pay Onchain L173: ### Learn
+L174: 
+L175:   * cite104†Learn & Earn L176:   * cite105†Browse Crypto Prices L177:   * cite106†Bitcoin Price L178:   * cite107†Ethereum Price L179:   * cite108†Browse Crypto Price Predictions L180:   * cite109†Bitcoin Price Prediction L181:   * cite110†Ethereum Price Prediction L182:   * cite111†Ethereum Upgrade (Pectra) L183:   * cite112†Buy Bitcoin L184:   * cite113†Buy BNB L185:   * cite114†Buy XRP L186:   * cite115†Buy Dogecoin L187:   * cite116†Buy Ethereum L188:   * cite117†Buy Tradable Altcoins L189: ### Service
+L190: 
+L191:   * cite118†Affiliate L192:   * cite119†Referral L193:   * cite120†BNB L194:   * cite121†OTC & Execution Services L195:   * cite122†Historical Market Data†data.binance.vision L196:   * cite123†Trading Insight L197:   * cite124†Proof of Reserves L198: ### Support
+L199: 
+L200:   * cite125†24/7 Chat Support L201:   * cite126†Support Center L202:   * cite127†Product Feedback & Suggestions L203:   * cite128†Fees L204:   * cite129†APIs L205:   * cite130†Binance Verify L206:   * cite131†Trading Parameters L207:   * cite132†Binance Airdrop Portal L208:   * cite133†Law Enforcement Requests L209:   * cite134†How to Raise a Complaint

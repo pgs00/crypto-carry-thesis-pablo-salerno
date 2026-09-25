@@ -1,0 +1,39 @@
+{
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "scripts/benchmark_historical_rules.py",
+    "--data-root",
+    "D:/Backtesting",
+    "--config",
+    "configs/entrega_4/reglas_historicas/BASE_E3.toml",
+    "--end",
+    "2022-01-15T00:00:00Z",
+    "--output",
+    "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\benchmark_codigo_congelado.json"
+  ],
+  "exit_code": 0,
+  "started_at_utc": "2026-09-25T01:57:37.781899+00:00",
+  "elapsed_seconds": 35.736941599985585,
+  "scope": "Final frozen engine metadata changed after first post-change benchmark; no economic code changed",
+  "before_code_hash": "8fcff8b7c1cd00bbc637f3e144db408422eeb11d4504f9afa7e4a5d813cc17c0",
+  "after_code_hash": "314631c24b36bbee58eb55a9b17505af656de453b60d1496c067e6f30b33de97",
+  "config_exact": true,
+  "runs": [
+    {
+      "strategy": "conditional",
+      "economic_digests_exact": true,
+      "equity_exact": true,
+      "reconciliation_exact": true
+    },
+    {
+      "strategy": "permanent",
+      "economic_digests_exact": true,
+      "equity_exact": true,
+      "reconciliation_exact": true
+    }
+  ],
+  "passed": true
+}

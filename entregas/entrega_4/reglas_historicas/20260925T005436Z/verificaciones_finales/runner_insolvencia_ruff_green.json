@@ -1,0 +1,16 @@
+{
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "-m",
+    "ruff",
+    "check",
+    "scripts/run_historical_rules_sensitivity.py",
+    "scripts/reproduce_historical_rules_sensitivity.py",
+    "tests/unit/test_rules_sensitivity_runner.py",
+    "tests/unit/test_rules_sensitivity_reproduction.py"
+  ],
+  "exit_code": 0
+}

@@ -1,0 +1,25 @@
+START MARGEN_2X/conditional code=314631c24b36bbee58eb55a9b17505af656de453b60d1496c067e6f30b33de97
+[futures_scaled/conditional] 2.0% | UTC 2022-02-04T15:27:00.000000000Z | fills 0
+[futures_scaled/conditional] 4.9% | UTC 2022-03-25T04:24:00.000000000Z | fills 0
+[futures_scaled/conditional] 7.7% | UTC 2022-05-12T17:25:00.000000000Z | fills 0
+[futures_scaled/conditional] 10.6% | UTC 2022-06-30T06:25:00.000000000Z | fills 0
+[futures_scaled/conditional] 13.4% | UTC 2022-08-18T02:35:00.000000000Z | fills 0
+[futures_scaled/conditional] 16.3% | UTC 2022-10-05T08:34:00.000000000Z | fills 0
+[futures_scaled/conditional] 19.1% | UTC 2022-11-22T21:37:00.000000000Z | fills 0
+[futures_scaled/conditional] 21.9% | UTC 2023-01-09T05:56:00.000000000Z | fills 0
+[futures_scaled/conditional] 24.1% | UTC 2023-02-16T08:01:00.000000000Z | fills 8
+[futures_scaled/conditional] 26.5% | UTC 2023-03-27T17:05:00.000000000Z | fills 18
+[futures_scaled/conditional] 28.5% | UTC 2023-05-01T09:47:00.000000000Z | fills 18
+[futures_scaled/conditional] 30.5% | UTC 2023-06-05T07:01:00.000000000Z | fills 18
+[futures_scaled/conditional] 32.6% | UTC 2023-07-10T15:53:00.000000000Z | fills 18
+[futures_scaled/conditional] 34.7% | UTC 2023-08-16T00:08:00.000000000Z | fills 18
+[futures_scaled/conditional] 36.8% | UTC 2023-09-20T11:10:00.000000000Z | fills 18
+[futures_scaled/conditional] 39.1% | UTC 2023-10-28T20:30:00.000000000Z | fills 18
+[futures_scaled/conditional] 42.6% | UTC 2023-12-28T02:52:00.000000000Z | fills 30
+[futures_scaled/conditional] 46.4% | UTC 2024-03-01T19:22:00.000000000Z | fills 40
+[futures_scaled/conditional] 49.7% | UTC 2024-04-26T08:39:00.000000000Z | fills 64
+[futures_scaled/conditional] 52.5% | UTC 2024-06-13T23:05:00.000000000Z | fills 74
+[futures_scaled/conditional] 55.4% | UTC 2024-08-01T13:25:00.000000000Z | fills 88
+[futures_scaled/conditional] 59.0% | UTC 2024-10-02T00:01:00.000000000Z | fills 94
+[futures_scaled/conditional] 62.6% | UTC 2024-12-02T03:53:00.000000000Z | fills 104
+[futures_scaled/conditional] 66.5% | UTC 2025-02-07T01:21:00.000000000Z | fills 110

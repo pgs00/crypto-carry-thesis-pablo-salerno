@@ -1,0 +1,81 @@
+{
+  "resolved_at_utc": "2026-09-25T14:09:32.753847+00:00",
+  "review": "completed insolvent replay must preserve artifacts",
+  "authorization": "parent confirmed four active runs finished with driver exit 0 before changes",
+  "real_insolvent_runs_in_delivered_batch": 0,
+  "production_changes": [
+    "runner accepts complete or insolvent only when now=end-1; reconciliation unchanged",
+    "PROJECT resolves imported Config module",
+    "reproduction explicitly authenticates preferred helper or identified frozen fallback and records selected path/hash"
+  ],
+  "copies": [
+    {
+      "source": "scripts/run_historical_rules_sensitivity.py",
+      "package_copy": "herramientas/run_historical_rules_sensitivity.py",
+      "sha256": "efa3b1748372c2007d1dfd235bc3005c9e1a9cb8cbfaa66a62af69970d68a48b",
+      "byte_exact": true
+    },
+    {
+      "source": "scripts/reproduce_historical_rules_sensitivity.py",
+      "package_copy": "herramientas/reproduce_historical_rules_sensitivity.py",
+      "sha256": "c7e2cc0a21de2666925d5a8a8739fda742cc5d40865e6f101585a3eeca58657d",
+      "byte_exact": true
+    },
+    {
+      "source": "docs/entrega_4/reglas_historicas/reproduccion.md",
+      "package_copy": "documentos/reproduccion.md",
+      "sha256": "06c1efb99a6508c28fb749eab123eb47f8740bb2e9e12f965d158c834ff9ded8",
+      "byte_exact": true
+    }
+  ],
+  "frozen_runner_sha256": "68036ed6263d1bedabe62b844029d649b44ba64603f01ca1c3f34608ddbfbba5",
+  "frozen_runner_unchanged": true,
+  "tests": [
+    {
+      "path": "tests/unit/test_rules_sensitivity_runner.py",
+      "sha256": "879ca71f9a10f530c641611ea862fb63e4001c27e413a0355b9c08ac81e445e0"
+    },
+    {
+      "path": "tests/unit/test_rules_sensitivity_reproduction.py",
+      "sha256": "3c130f1c381dea5a6de14b1a22cfceb464fd63db918f54188d624285d41e6167"
+    }
+  ],
+  "red_result": {
+    "failed": 4,
+    "passed": 4,
+    "exit_code": 1,
+    "log": "runner_insolvencia_tdd_red.txt"
+  },
+  "green_result": {
+    "command": [
+      "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "-m",
+      "pytest",
+      "tests/unit/test_rules_sensitivity_runner.py",
+      "tests/unit/test_rules_sensitivity_reproduction.py",
+      "-q"
+    ],
+    "exit_code": 0,
+    "seconds": 8.48608589998912
+  },
+  "ruff_result": {
+    "command": [
+      "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "-m",
+      "ruff",
+      "check",
+      "scripts/run_historical_rules_sensitivity.py",
+      "scripts/reproduce_historical_rules_sensitivity.py",
+      "tests/unit/test_rules_sensitivity_runner.py",
+      "tests/unit/test_rules_sensitivity_reproduction.py"
+    ],
+    "exit_code": 0
+  },
+  "scope": "No real backtests, full suite, engine/config/snapshot/run/manifest modifications or Git index/commit/push operations."
+}

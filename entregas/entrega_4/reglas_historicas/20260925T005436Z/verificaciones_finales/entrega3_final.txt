@@ -1,0 +1,8 @@
+{
+  "status": "verified",
+  "source_zip_sha256": "48485e691f7ae4b479d25766ee46aeac199cf4ea022a36d01cde177e87770916",
+  "original_tables": 11,
+  "daily_equity_rows": 3408,
+  "figures": 6,
+  "published_files": 19
+}

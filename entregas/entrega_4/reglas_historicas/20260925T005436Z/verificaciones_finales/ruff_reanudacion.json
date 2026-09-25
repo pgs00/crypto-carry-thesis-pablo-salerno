@@ -1,0 +1,17 @@
+{
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "-m",
+    "ruff",
+    "check",
+    "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\herramientas\\reanudar_lote_interrumpido.py"
+  ],
+  "started_at_utc": "2026-09-25T13:52:21.244292+00:00",
+  "exit_code": 0,
+  "elapsed_seconds": 0.14720120001584291,
+  "log_sha256": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0",
+  "scope": "Recovery helper added after the 599-test suite; no economic code changed."
+}

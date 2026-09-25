@@ -1,0 +1,33 @@
+{
+  "id": "PSTART",
+  "original_url": "https://www.binance.com/en/support/announcement/detail/10435147c55d4a40b64fcbf43cb46329",
+  "final_url": "https://www.binance.com/en/support/announcement/detail/10435147c55d4a40b64fcbf43cb46329",
+  "requested_at_utc": "2026-09-24T23:46:02.496927Z",
+  "retrieved_at_utc": "2026-09-24T23:46:02.810263Z",
+  "http_status": 202,
+  "headers": {
+    "Server": "CloudFront",
+    "Date": "Thu, 24 Sep 2026 23:46:02 GMT",
+    "Content-Length": "0",
+    "Connection": "keep-alive",
+    "x-amzn-waf-action": "challenge",
+    "Cache-Control": "no-store, max-age=0",
+    "Content-Type": "text/html; charset=UTF-8",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Max-Age": "86400",
+    "Access-Control-Allow-Methods": "OPTIONS,GET,POST",
+    "Access-Control-Expose-Headers": "x-amzn-waf-action",
+    "X-Cache": "Error from cloudfront",
+    "Via": "1.1 d533401067ab80eea1e4c53caf2fc4d4.cloudfront.net (CloudFront)",
+    "X-Amz-Cf-Pop": "EZE50-P7",
+    "X-Amz-Cf-Id": "8rEf-h1pcAg88tgJAl2AUtZ-Dt2Cr8UoUobtdC7a4lXm7T4kxa_pQg=="
+  },
+  "redirects": [],
+  "file": "originales/PSTART.body",
+  "bytes": 0,
+  "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "hash_representation": "requests.Response.content bytes exactly saved; automatic HTTP content decompression by requests if Content-Encoding is set; not raw wire/chunk bytes",
+  "automatic_decompression": false,
+  "extraction": null,
+  "attempt": 1
+}

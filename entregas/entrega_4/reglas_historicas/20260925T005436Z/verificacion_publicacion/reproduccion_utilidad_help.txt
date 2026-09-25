@@ -1,0 +1,19 @@
+usage: reproduce_historical_rules_sensitivity.py [-h]
+                                                 --source-package SOURCE_PACKAGE
+                                                 --destination DESTINATION
+                                                 [--data-root DATA_ROOT]
+                                                 [--workers {1,2,3,4}]
+                                                 [--prepare-only]
+
+Verify a sealed source and external data, then reproduce into a NEW directory.
+Offline package verification does not supply the external market data or the
+two original BASE_E3 runs. --prepare-only performs all checks but starts no
+backtest.
+
+options:
+  -h, --help            show this help message and exit
+  --source-package SOURCE_PACKAGE
+  --destination DESTINATION
+  --data-root DATA_ROOT
+  --workers {1,2,3,4}
+  --prepare-only

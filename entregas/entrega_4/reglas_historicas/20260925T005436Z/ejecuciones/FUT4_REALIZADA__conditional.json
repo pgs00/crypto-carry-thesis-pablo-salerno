@@ -1,0 +1,17 @@
+{
+  "scenario": "FUT4_REALIZADA",
+  "strategy": "conditional",
+  "status": "ejecutado",
+  "engine_status": "complete",
+  "run_id": "run_d17c6848d9a0c5c85249b152",
+  "path": "corridas/run_d17c6848d9a0c5c85249b152",
+  "manifest_sha256": "03ce44c6fdcc72b5ceeefd688d9fc6967a0db0d6b5aa7acb9a5587f6f4b3ec05",
+  "code_hash": "314631c24b36bbee58eb55a9b17505af656de453b60d1496c067e6f30b33de97",
+  "replay_seconds": 1673.0470213000663,
+  "total_seconds": 1864.5487015000544,
+  "final_equity": "10793.31880780948408291340000",
+  "ledger_difference": "1E-24",
+  "native_fills": 138,
+  "fills": 138,
+  "input_hashes_verified_again_at_batch_end": false
+}

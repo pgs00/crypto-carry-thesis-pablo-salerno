@@ -1,0 +1,143 @@
+{
+  "checked_at_utc": "2026-09-25T00:19:45.569870Z",
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "command": "data\\research\\historical-rules-followup-20260924T234206Z\\verificar_fuentes.py --self-test",
+  "passed": true,
+  "errors": [],
+  "checks": [
+    {
+      "name": "manifiesto de archivos nuevos",
+      "count": 196
+    },
+    {
+      "name": "fuentes y capturas reales, incluidos hashes de texto extraído",
+      "count": 52
+    },
+    {
+      "name": "esquema, alcance, prueba contra fuente y temporalidad",
+      "count": 345
+    },
+    {
+      "name": "cobertura por unión sin días imputados a puntos",
+      "count": 479
+    },
+    {
+      "name": "archivos protegidos, índice, HEAD y rama",
+      "count": 717
+    },
+    {
+      "name": "atributos efectivos -text y whitespace=cr-at-eol",
+      "count": 199
+    }
+  ],
+  "negative_tests": [
+    {
+      "test": "mezcla VIP0 con VIP1",
+      "passed": true,
+      "expected_error": "scope_mismatch",
+      "detected_errors": [
+        "scope_mismatch: FEE_A1_BTCUSDT"
+      ]
+    },
+    {
+      "test": "mezcla futuros con spot",
+      "passed": true,
+      "expected_error": "scope_mismatch",
+      "detected_errors": [
+        "scope_mismatch: FEE_A1_BTCUSDT"
+      ]
+    },
+    {
+      "test": "ventana incierta promovida a instante",
+      "passed": true,
+      "expected_error": "rollout_promoted_to_exact",
+      "detected_errors": [
+        "rollout_promoted_to_exact: EVENT_MINBTC26_BTCUSDT"
+      ]
+    },
+    {
+      "test": "publicación posterior igualada a conocimiento de vigencia",
+      "passed": true,
+      "expected_error": "publication_after_claimed_knowledge",
+      "detected_errors": [
+        "unproven_known_from: TIERS_MARG23_BTCUSDT_after",
+        "publication_after_claimed_knowledge: TIERS_MARG23_BTCUSDT_after"
+      ]
+    },
+    {
+      "test": "captura sin tabla usada como tarifa",
+      "passed": true,
+      "expected_error": "source_without_usable_data",
+      "detected_errors": [
+        "capture_mismatch: FEE_SPOT26_BTCUSDT",
+        "source_without_usable_data: FEE_SPOT26_BTCUSDT",
+        "fee_anchor_source_mismatch: FEE_SPOT26_BTCUSDT",
+        "proof_error Sección USD-M no encontrada SPOT25: FEE_SPOT26_BTCUSDT"
+      ]
+    },
+    {
+      "test": "cero desconocido inventado",
+      "passed": true,
+      "expected_error": "unknown_as_number",
+      "detected_errors": [
+        "unknown_as_number: PENDING_FEE_DATE_BTCUSDT"
+      ]
+    },
+    {
+      "test": "porcentaje mal convertido",
+      "passed": true,
+      "expected_error": "rate_conversion",
+      "detected_errors": [
+        "rate_conversion: FEE_A1_BTCUSDT",
+        "fee_value_mismatch: FEE_A1_BTCUSDT"
+      ]
+    },
+    {
+      "test": "intervalo invertido",
+      "passed": true,
+      "expected_error": "inverted_interval",
+      "detected_errors": [
+        "inverted_interval: BTC_SPOT_ZERO"
+      ]
+    },
+    {
+      "test": "solapamiento contradictorio",
+      "passed": true,
+      "expected_error": "contradictory_overlap",
+      "detected_errors": [
+        "contradictory_overlap: BTC_SPOT_ZERO CONTRADICTORY_TEST"
+      ]
+    },
+    {
+      "test": "alteración de copia de archivo protegido",
+      "passed": true,
+      "expected_error": "protected_file_changed",
+      "detected_errors": [
+        "protected_file_changed: .gitattributes"
+      ]
+    },
+    {
+      "test": "cobertura duplicada",
+      "passed": true,
+      "expected_error": "coverage_double_count",
+      "detected_errors": [
+        "coverage_double_count"
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "symbol": "BTCUSDT",
+      "market": "spot",
+      "parameter": "taker_fee",
+      "covered_seconds_union": 22154400,
+      "covered_days_decimal": "256.4166666666666666666666667",
+      "criterion": "unión de intervalos explícitos finitos; observaciones/eventos/supuestos aportan cero"
+    }
+  ],
+  "manifest_sha256": "629915f074a29fed6a7686e9b9af2a9279e0ff0601c1121c965c46539f5c99fb",
+  "git_status": "?? data/research/historical-rules-followup-20260924T234206Z/",
+  "index_unchanged": true,
+  "head": "80feefc45872d2c48c33f3fbc3ebc9eb402eee6a",
+  "interpretation_limit": "Hash conserva bytes; las pruebas documentales no certifican continuidad ni primera publicación. Segunda revisión por el mismo agente registrada por separado."
+}

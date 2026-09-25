@@ -1,0 +1,17 @@
+{
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "scripts/audit_historical_rules_fills.py",
+    "--package",
+    "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z",
+    "--output",
+    "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\verificaciones_finales\\auditoria_fills.json"
+  ],
+  "started_at_utc": "2026-09-25T14:08:20.516311+00:00",
+  "elapsed_seconds": 1.4408252000575885,
+  "exit_code": 0,
+  "log_sha256": "7f3c77842b5c5b3c8d3cc7aa9cc833c881715c5e64383fedaba2a4280dfc43d2"
+}

@@ -1,0 +1,40 @@
+{
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "C:\\Users\\pablo\\AppData\\Local\\Temp\\historical_session_preserved_copy_wueoztw5\\repo\\data\\research\\historical-rules-followup-20260924T234206Z\\verificar_fuentes.py",
+    "--self-test"
+  ],
+  "setup_commands": [
+    [
+      "git",
+      "clone",
+      "--quiet",
+      "--no-hardlinks",
+      "--no-checkout",
+      "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting",
+      "C:\\Users\\pablo\\AppData\\Local\\Temp\\historical_session_preserved_copy_wueoztw5\\repo"
+    ],
+    [
+      "git",
+      "-C",
+      "C:\\Users\\pablo\\AppData\\Local\\Temp\\historical_session_preserved_copy_wueoztw5\\repo",
+      "-c",
+      "core.autocrlf=false",
+      "checkout",
+      "--quiet",
+      "-B",
+      "codex/crypto-carry",
+      "894059e4ce318e51f25211d04be9f0202de90ae7"
+    ]
+  ],
+  "copied_protected_files_with_baseline_hash_verified": 717,
+  "exit_code": 1,
+  "temporary_clone_deleted_after_run": true,
+  "original_results_unchanged": true,
+  "errors": [
+    "git_index_changed",
+    "git_head_changed"
+  ],
+  "interpretation": "Byte-preserved working-tree copy of all historical protected files. Only current Git physical index and HEAD differ. The original physical index was neither recreated nor certified."
+}

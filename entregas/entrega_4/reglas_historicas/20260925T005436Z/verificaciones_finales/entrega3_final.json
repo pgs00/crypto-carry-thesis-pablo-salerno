@@ -1,0 +1,15 @@
+{
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "-m",
+    "scripts.publish_thesis",
+    "--verify"
+  ],
+  "exit_code": 0,
+  "started_at_utc": "2026-09-25T01:49:22.315267+00:00",
+  "elapsed_seconds": 2.4073408000404015,
+  "log_sha256": "ffde5a1e09835df048f6ba2477d21d4808e6926a1a965f68bc06f30e3442b6f7"
+}

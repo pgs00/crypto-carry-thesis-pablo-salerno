@@ -1,0 +1,18 @@
+{
+  "started_at": "2026-09-25T14:09:09.301400+00:00",
+  "finished_at": "2026-09-25T14:09:33.351004+00:00",
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "scripts/report_historical_rules_sensitivity.py",
+    "--package",
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\20260925T005436Z"
+  ],
+  "exit_code": 0,
+  "stdout": "{\n  \"status\": \"constructed_not_sealed\",\n  \"successful_runs\": 12,\n  \"financial_periods\": 96,\n  \"daily_reconciliations\": 20448,\n  \"output\": \"C:\\\\Users\\\\pablo\\\\Documentos\\\\UCEMA\\\\Tesina\\\\Backtesting\\\\entregas\\\\entrega_4\\\\reglas_historicas\\\\20260925T005436Z\\\\comparacion\"\n}\n",
+  "stderr": "",
+  "report_script_sha256": "1226a4622fd9ea23e25157862240910a21785eac15f07d182c5c3423e2e56f78",
+  "package_original_sealed": false
+}

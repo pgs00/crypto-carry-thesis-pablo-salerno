@@ -24,3 +24,12 @@
 /scripts/analyze_funding_prices.py -text
 /scripts/funding_price_analysis.py -text
 "/Paquete de evidencia/**" -text whitespace=cr-at-eol
+# External dependencies of the sealed historical publication also need exact bytes.
+/data/research/fee-archive-followup-20260918/A1.html -text
+/data/research/fee-archive-followup-20260918/A2.html -text
+/data/research/fee-archive-followup-20260918/A3.html -text
+# New protocol, configurations and evidence are hashed without newline conversion.
+/configs/entrega_4/reglas_historicas/** -text whitespace=cr-at-eol
+/docs/entrega_4/reglas_historicas/** -text whitespace=cr-at-eol
+/entregas/entrega_4/reglas_historicas/** -text whitespace=cr-at-eol
+/entregas/entrega_4/reglas_historicas/**/*.svg whitespace=-blank-at-eol,cr-at-eol

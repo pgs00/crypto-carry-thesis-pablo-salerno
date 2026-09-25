@@ -1,0 +1,7 @@
+{
+  "snapshot_sha256": "c9d8c044f6b3d87f00a7fe9a69ebfc7da087034a895f94a9d2667ee804072073",
+  "already_matching": 459,
+  "restored": [],
+  "unresolved": [],
+  "policy": "Only LF/CRLF transforms matching explicit original snapshot hashes; no hashes regenerated."
+}

@@ -1,0 +1,17 @@
+{
+  "scenario": "MARGEN_2X",
+  "strategy": "permanent",
+  "status": "ejecutado",
+  "engine_status": "complete",
+  "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+  "path": "corridas/run_3f5d9cce8ff1c2ba5447e3b6",
+  "manifest_sha256": "29ae8e7e0862a22875bf4e6563d16bbb4d334c4963384897097a89df12f1f9dd",
+  "code_hash": "314631c24b36bbee58eb55a9b17505af656de453b60d1496c067e6f30b33de97",
+  "replay_seconds": 1274.2551366999978,
+  "total_seconds": 1335.5432722999249,
+  "final_equity": "11628.23407455384730719199999",
+  "ledger_difference": "3E-24",
+  "native_fills": 324,
+  "fills": 324,
+  "input_hashes_verified_again_at_batch_end": false
+}

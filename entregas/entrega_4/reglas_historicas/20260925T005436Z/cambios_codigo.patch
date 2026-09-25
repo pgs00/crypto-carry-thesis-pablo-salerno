@@ -1,0 +1,215 @@
+diff --git a/.gitattributes b/.gitattributes
+index bae7d2b..ded3938 100644
+--- a/.gitattributes
++++ b/.gitattributes
+@@ -24,3 +24,12 @@
+ /scripts/analyze_funding_prices.py -text
+ /scripts/funding_price_analysis.py -text
+ "/Paquete de evidencia/**" -text whitespace=cr-at-eol
++# External dependencies of the sealed historical publication also need exact bytes.
++/data/research/fee-archive-followup-20260918/A1.html -text
++/data/research/fee-archive-followup-20260918/A2.html -text
++/data/research/fee-archive-followup-20260918/A3.html -text
++# New protocol, configurations and evidence are hashed without newline conversion.
++/configs/entrega_4/reglas_historicas/** -text whitespace=cr-at-eol
++/docs/entrega_4/reglas_historicas/** -text whitespace=cr-at-eol
++/entregas/entrega_4/reglas_historicas/** -text whitespace=cr-at-eol
++/entregas/entrega_4/reglas_historicas/**/*.svg whitespace=-blank-at-eol,cr-at-eol
+diff --git a/src/crypto_carry/config.py b/src/crypto_carry/config.py
+index a6cc214..5a31a51 100644
+--- a/src/crypto_carry/config.py
++++ b/src/crypto_carry/config.py
+@@ -79,6 +79,8 @@ class Config:
+     research_futures_taker_fee: Decimal = Decimal("0.0005")
+     research_maintenance_multiplier: Decimal = Decimal("1")
+     research_liquidation_fee: Decimal = Decimal("0.0125")
++    research_spot_fee_schedule: str = "constant"
++    research_decision_fee_mode: str = "realized"
+     sample_start: str = "2024-01-01T00:00:00Z"
+     sample_end: str = "2024-01-02T00:00:00Z"
+     accounting_tolerance: Decimal = Decimal("0.00000001")
+@@ -170,8 +172,14 @@ class Config:
+             or self.research_futures_taker_fee != Decimal("0.0005")
+             or self.research_maintenance_multiplier != 1
+             or self.research_liquidation_fee != Decimal("0.0125")
++            or self.research_spot_fee_schedule != "constant"
++            or self.research_decision_fee_mode != "realized"
+         ):
+             raise ValueError("Research parameters require prescribed_research analysis mode")
++        if self.research_spot_fee_schedule not in ("constant", "btc_promo_2022_2023"):
++            raise ValueError("Unknown research spot fee schedule")
++        if self.research_decision_fee_mode not in ("realized", "base_e3"):
++            raise ValueError("Unknown research decision fee mode")
+         if not 0 < self.target_fraction < Decimal("0.5"):
+             raise ValueError("Invalid per-asset target")
+         if not 0 <= self.hedge_tolerance < self.hedge_trigger < 1:
+@@ -198,6 +206,10 @@ class Config:
+         return {
+             k: str(v) if isinstance(v, Decimal) else list(v) if isinstance(v, tuple) else v
+             for k, v in asdict(self).items()
++            if (k, v) not in (
++                ("research_spot_fee_schedule", "constant"),
++                ("research_decision_fee_mode", "realized"),
++            )
+         }
+ 
+     def digest(self) -> str:
+diff --git a/src/crypto_carry/costs.py b/src/crypto_carry/costs.py
+index 632bcf1..4a7254f 100644
+--- a/src/crypto_carry/costs.py
++++ b/src/crypto_carry/costs.py
+@@ -2,10 +2,12 @@
+ 
+ from decimal import ROUND_CEILING, ROUND_FLOOR, Decimal
+ 
+-from .config import Config
++from .config import Config, timestamp
+ from .models import MarketRule
+ 
+ D = Decimal
++BTC_PROMO_START = timestamp("2022-07-08T14:00:00Z")
++BTC_PROMO_END = timestamp("2023-03-22T00:00:00Z")
+ 
+ 
+ def floor_step(value: Decimal, step: Decimal) -> Decimal:
+@@ -32,11 +34,27 @@ def execution_price(
+ 
+ 
+ def cycle_cost(spot_rule: MarketRule, futures_rule: MarketRule, config: Config) -> Decimal:
++    """Contemporaneous entry estimate, independent of fees charged by the ledger."""
++    spot_fee, future_fee = spot_rule.taker_fee, futures_rule.taker_fee
++    if config.research_decision_fee_mode == "base_e3":
++        spot_fee, future_fee = D("0.001"), D("0.0005")
+     return config.cost_multiplier * (
+-        D(2) * spot_rule.taker_fee + D(2) * futures_rule.taker_fee + D(4) * config.slippage
++        D(2) * spot_fee + D(2) * future_fee + D(4) * config.slippage
+     )
+ 
+ 
++def realized_taker_fee(rule: MarketRule, config: Config, time_ns: int) -> Decimal:
++    """Unscaled realized tariff; minute executions use their window's start.
++
++    BTC_SPOT_ZERO / PROMO_START / PROMO_END establishes only this interval.
++    The 0.001 outside it is the explicit BASE_E3 assumption.
++    """
++    if (config.research_spot_fee_schedule == "btc_promo_2022_2023"
++            and rule.symbol == "BTCUSDT" and rule.market == "spot"):
++        return D(0) if BTC_PROMO_START <= time_ns < BTC_PROMO_END else D("0.001")
++    return rule.taker_fee
++
++
+ def valid_quantity(quantity: Decimal, price: Decimal, rule: MarketRule) -> bool:
+     if not rule.operational or quantity <= 0 or price <= 0 or rule.step <= 0:
+         return False
+diff --git a/src/crypto_carry/data/prescribed.py b/src/crypto_carry/data/prescribed.py
+index ed55e25..49f86db 100644
+--- a/src/crypto_carry/data/prescribed.py
++++ b/src/crypto_carry/data/prescribed.py
+@@ -5,7 +5,8 @@ from __future__ import annotations
+ from copy import deepcopy
+ from decimal import Decimal
+ 
+-from ..config import Config
++from ..config import Config, iso, timestamp
++from ..costs import BTC_PROMO_END, BTC_PROMO_START
+ from .rules import RuleBook
+ 
+ _DECLARED_AT = "2026-09-18T00:00:00Z"
+@@ -82,6 +83,16 @@ def _records(config: Config) -> list[dict]:
+                 },
+             }
+         )
++    if config.research_spot_fee_schedule == "btc_promo_2022_2023":
++        original = next(r for r in records if r["symbol"] == "BTCUSDT" and r["market"] == "spot")
++        records.remove(original)
++        start, end = timestamp(config.start), timestamp(config.end)
++        bounds = sorted({start, end, *(t for t in (BTC_PROMO_START, BTC_PROMO_END) if start < t < end)})
++        for lower, upper in zip(bounds, bounds[1:]):
++            row = deepcopy(original)
++            row.update(valid_from=iso(lower), valid_to=iso(upper))
++            row["values"]["taker_fee"] = "0" if BTC_PROMO_START <= lower < BTC_PROMO_END else "0.001"
++            records.append(row)
+     return records
+ 
+ 
+@@ -156,4 +167,34 @@ def research_assumptions(config: Config) -> dict:
+             "liquidation_intrabar_path_modeled": False,
+             "risk_mark": "last available closed one-minute mark",
+         }
++    if (config.research_spot_fee_schedule != "constant"
++            or config.research_decision_fee_mode != "realized"
++            or config.research_futures_taker_fee != Decimal("0.0005")):
++        declaration["fee_sensitivity"] = {
++            "spot_schedule": config.research_spot_fee_schedule,
++            "decision_fee_mode": config.research_decision_fee_mode,
++            "promotion_fact_id": "BTC_SPOT_ZERO" if config.research_spot_fee_schedule != "constant" else None,
++            "promotion_source_ids": ["PROMO_START", "PROMO_END"] if config.research_spot_fee_schedule != "constant" else [],
++            "documented_known_from_utc": None,
++            "decision_knowledge_assumption": (
++                "fixed BASE_E3 decision tariffs independent of realized fees; no historical knowledge claim"
++                if config.research_decision_fee_mode == "base_e3"
++                else "experimental tariff knowledge when effective; current tariff only, no future exit tariff"
++                if config.research_spot_fee_schedule != "constant"
++                else "constant prescribed decision tariffs; no historical knowledge claim"
++            ),
++            "futures_fee_interpretation": (
++                "constant experimental tariff over entire sample; effective historical change unknown"
++                if config.research_futures_taker_fee != Decimal("0.0005")
++                else "BASE_E3 prescribed tariff"
++            ),
++            "outside_promotion": "0.001 BASE_E3 assumption, not reconstructed history",
++            "minute_fee_clock": "start of eligible full-minute window; ledger booking at close",
++            "protocol": "docs/entrega_4/reglas_historicas/protocolo.md",
++        }
++        if config.research_spot_fee_schedule != "constant":
++            declaration["methodology"].update(
++                constant_over_economic_window=False,
++                fees="BTC spot zero only in documented interval; remaining tariffs prescribed",
++            )
+     return declaration
+diff --git a/src/crypto_carry/reporting.py b/src/crypto_carry/reporting.py
+index f87f982..86d0570 100644
+--- a/src/crypto_carry/reporting.py
++++ b/src/crypto_carry/reporting.py
+@@ -1731,6 +1731,7 @@ def write_run(
+     data_kind: str,
+     label: str = "baseline",
+     inputs: dict | None = None,
++    output_root: Path | None = None,
+ ) -> Path:
+     """Create a run once, or reuse it only after checking identity and all hashes."""
+     if data_kind not in {"synthetic", "historical", "historical_assumptions"}:
+@@ -1758,7 +1759,8 @@ def write_run(
+         "label": label,
+     }
+     run_id = "run_" + hashlib.sha256(_json(identity).encode("utf-8")).hexdigest()[:24]
+-    run = Path(root).resolve() / "outputs" / run_id
++    destination = Path(root).resolve() / "outputs" if output_root is None else Path(output_root).resolve()
++    run = destination / run_id
+     result_digest = _result_digest(backtests, quality)
+     if run.exists():
+         verification = verify_run(run)
+diff --git a/src/crypto_carry/strategy.py b/src/crypto_carry/strategy.py
+index 583ad27..0ec4484 100644
+--- a/src/crypto_carry/strategy.py
++++ b/src/crypto_carry/strategy.py
+@@ -9,7 +9,7 @@ from decimal import Decimal as D
+ from pathlib import Path
+ 
+ from .config import DAY, HOUR, SECOND, Config, iso, timestamp
+-from .costs import cycle_cost, execution_price, floor_step, valid_quantity
++from .costs import cycle_cost, execution_price, floor_step, realized_taker_fee, valid_quantity
+ from .data.funding_proxy import resolve_funding_mark
+ from .data.market_calendar import closure_for_minute
+ from .diagnostics import renewal_diagnostics, signal_diagnostics
+@@ -724,7 +724,9 @@ class Backtest:
+             reference,
+             self.now,
+             trade_id,
+-            rule.taker_fee * self.config.cost_multiplier,
++            realized_taker_fee(
++                rule, self.config, order.window_start if window_model else self.now
++            ) * self.config.cost_multiplier,
+             order.purpose == "liquidate",
+         )
+         trial = deepcopy(self.ledger)

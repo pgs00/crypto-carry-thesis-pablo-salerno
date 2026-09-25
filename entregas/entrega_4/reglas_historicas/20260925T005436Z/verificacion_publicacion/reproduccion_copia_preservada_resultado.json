@@ -1,0 +1,146 @@
+{
+  "checked_at_utc": "2026-09-25T01:07:00.516697Z",
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "command": "C:\\Users\\pablo\\AppData\\Local\\Temp\\historical_session_preserved_copy_wueoztw5\\repo\\data\\research\\historical-rules-followup-20260924T234206Z\\verificar_fuentes.py --self-test",
+  "passed": false,
+  "errors": [
+    "git_index_changed",
+    "git_head_changed"
+  ],
+  "checks": [
+    {
+      "name": "manifiesto de archivos nuevos",
+      "count": 196
+    },
+    {
+      "name": "fuentes y capturas reales, incluidos hashes de texto extraído",
+      "count": 52
+    },
+    {
+      "name": "esquema, alcance, prueba contra fuente y temporalidad",
+      "count": 345
+    },
+    {
+      "name": "cobertura por unión sin días imputados a puntos",
+      "count": 479
+    },
+    {
+      "name": "archivos protegidos, índice, HEAD y rama",
+      "count": 717
+    },
+    {
+      "name": "atributos efectivos -text y whitespace=cr-at-eol",
+      "count": 199
+    }
+  ],
+  "negative_tests": [
+    {
+      "test": "mezcla VIP0 con VIP1",
+      "passed": true,
+      "expected_error": "scope_mismatch",
+      "detected_errors": [
+        "scope_mismatch: FEE_A1_BTCUSDT"
+      ]
+    },
+    {
+      "test": "mezcla futuros con spot",
+      "passed": true,
+      "expected_error": "scope_mismatch",
+      "detected_errors": [
+        "scope_mismatch: FEE_A1_BTCUSDT"
+      ]
+    },
+    {
+      "test": "ventana incierta promovida a instante",
+      "passed": true,
+      "expected_error": "rollout_promoted_to_exact",
+      "detected_errors": [
+        "rollout_promoted_to_exact: EVENT_MINBTC26_BTCUSDT"
+      ]
+    },
+    {
+      "test": "publicación posterior igualada a conocimiento de vigencia",
+      "passed": true,
+      "expected_error": "publication_after_claimed_knowledge",
+      "detected_errors": [
+        "unproven_known_from: TIERS_MARG23_BTCUSDT_after",
+        "publication_after_claimed_knowledge: TIERS_MARG23_BTCUSDT_after"
+      ]
+    },
+    {
+      "test": "captura sin tabla usada como tarifa",
+      "passed": true,
+      "expected_error": "source_without_usable_data",
+      "detected_errors": [
+        "capture_mismatch: FEE_SPOT26_BTCUSDT",
+        "source_without_usable_data: FEE_SPOT26_BTCUSDT",
+        "fee_anchor_source_mismatch: FEE_SPOT26_BTCUSDT",
+        "proof_error Sección USD-M no encontrada SPOT25: FEE_SPOT26_BTCUSDT"
+      ]
+    },
+    {
+      "test": "cero desconocido inventado",
+      "passed": true,
+      "expected_error": "unknown_as_number",
+      "detected_errors": [
+        "unknown_as_number: PENDING_FEE_DATE_BTCUSDT"
+      ]
+    },
+    {
+      "test": "porcentaje mal convertido",
+      "passed": true,
+      "expected_error": "rate_conversion",
+      "detected_errors": [
+        "rate_conversion: FEE_A1_BTCUSDT",
+        "fee_value_mismatch: FEE_A1_BTCUSDT"
+      ]
+    },
+    {
+      "test": "intervalo invertido",
+      "passed": true,
+      "expected_error": "inverted_interval",
+      "detected_errors": [
+        "inverted_interval: BTC_SPOT_ZERO"
+      ]
+    },
+    {
+      "test": "solapamiento contradictorio",
+      "passed": true,
+      "expected_error": "contradictory_overlap",
+      "detected_errors": [
+        "contradictory_overlap: BTC_SPOT_ZERO CONTRADICTORY_TEST"
+      ]
+    },
+    {
+      "test": "alteración de copia de archivo protegido",
+      "passed": true,
+      "expected_error": "protected_file_changed",
+      "detected_errors": [
+        "protected_file_changed: .gitattributes"
+      ]
+    },
+    {
+      "test": "cobertura duplicada",
+      "passed": true,
+      "expected_error": "coverage_double_count",
+      "detected_errors": [
+        "coverage_double_count"
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "symbol": "BTCUSDT",
+      "market": "spot",
+      "parameter": "taker_fee",
+      "covered_seconds_union": 22154400,
+      "covered_days_decimal": "256.4166666666666666666666667",
+      "criterion": "unión de intervalos explícitos finitos; observaciones/eventos/supuestos aportan cero"
+    }
+  ],
+  "manifest_sha256": "629915f074a29fed6a7686e9b9af2a9279e0ff0601c1121c965c46539f5c99fb",
+  "git_status": "M configs/base.toml\n M configs/robustness.toml\n M data/manifests/coverage.json\n M data/manifests/data_coverage.csv\n M data/research/fee-archive-followup-20260918/manifest.json\n M data/research/funding-calendar-h1-20260918/h1_summary.json\n M data/research/funding-calendar-h1-20260918/independent-verification.json\n M data/research/funding-calendar-h1-20260918/manifest.json\n M data/research/funding-provider-access-20260918/documentation-manifest.json\n M data/research/funding-provider-access-20260918/sample-comparison.json\n M data/research/funding-provider-access-20260918/tardis-20220101-0759.meta.json\n M data/research/funding-provider-access-20260918/tardis-20220101-1559.meta.json\n M data/research/funding-provider-access-20260918/tardis-20231101-0759.meta.json\n M data/research/funding-provider-access-20260918/tardis-20231101-1559.meta.json\n M data/research/funding-provider-access-20260918/tardis-20240101-0759.meta.json\n M data/research/funding-provider-access-20260918/tardis-20240101-1559.meta.json\n M data/research/funding-provider-access-20260918/tardis-20240201-0759.meta.json\n M data/research/funding-provider-access-20260918/tardis-20240201-1559.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2021-12.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2022-01.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2022-02.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2022-03.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2022-04.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2022-05.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2022-06.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2022-07.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2022-08.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2022-09.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2022-10.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2022-11.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2022-12.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2023-01.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2023-02.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2023-03.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2023-04.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2023-05.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2023-06.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2023-07.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2023-08.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2023-09.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2023-10.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2023-11.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2023-12.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2024-01.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2024-02.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2024-03.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2024-04.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2024-05.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2024-06.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2024-07.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2024-08.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2024-09.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2024-10.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2024-11.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2024-12.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2025-01.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2025-02.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2025-03.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2025-04.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2025-05.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2025-06.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2025-07.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2025-08.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2025-09.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2025-10.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2025-11.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2025-12.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2026-01.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2026-02.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2026-03.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2026-04.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2026-05.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2026-06.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2026-07.zip.meta.json\n M data/research/funding-proxy-audit-20260918/BTCUSDT-1m-2026-08.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2021-12.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2022-01.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2022-02.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2022-03.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2022-04.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2022-05.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2022-06.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2022-07.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2022-08.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2022-09.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2022-10.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2022-11.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2022-12.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2023-01.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2023-02.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2023-03.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2023-04.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2023-05.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2023-06.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2023-07.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2023-08.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2023-09.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2023-10.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2023-11.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2023-12.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2024-01.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2024-02.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2024-03.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2024-04.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2024-05.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2024-06.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2024-07.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2024-08.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2024-09.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2024-10.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2024-11.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2024-12.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2025-01.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2025-02.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2025-03.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2025-04.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2025-05.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2025-06.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2025-07.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2025-08.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2025-09.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2025-10.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2025-11.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2025-12.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2026-01.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2026-02.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2026-03.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2026-04.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2026-05.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2026-06.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2026-07.zip.meta.json\n M data/research/funding-proxy-audit-20260918/ETHUSDT-1m-2026-08.zip.meta.json\n M data/research/funding-proxy-audit-20260918/comparison.json\n M data/research/funding-proxy-audit-20260918/daily-gap-recovery-manifest.json\n M data/research/funding-proxy-audit-20260918/manifest.json\n M data/research/funding-proxy-audit-20260918/monthly-coverage-audit.json\n M data/research/funding-proxy-audit-20260918/rest-gap-recovery-manifest.json\n M data/research/minute-download-20260918/annual-data-validation.json\n M data/research/minute-download-20260918/annual-economic-audit.json\n M data/research/minute-download-20260918/execution-revision-audit.json\n M data/research/minute-download-20260918/outage-trades-validation.json\n M data/research/minute-download-20260918/preparation.json\n M data/research/minute-download-20260918/runtime-2022-annual.json\n M data/research/minute-download-20260918/runtime-2022-pilot.json\n M data/research/minute-download-20260918/runtime-2025-annual.json\n M data/research/minute-download-20260918/source-repair-audit.json\n M data/research/research-scenario-20260918/corrected-plot-preview/figures/cost_sensitivity.svg\n M data/research/research-scenario-20260918/full-day-sample-coverage.json\n M data/research/research-scenario-20260918/full-day-sample-quality.md\n M data/research/research-scenario-20260918/funding-resolver-verification.json\n M data/research/research-scenario-20260918/pilot-artifact-verification.json\n M data/research/research-scenario-20260918/pilot-data/manifests/coverage.json\n M data/research/research-scenario-20260918/pilot-data/manifests/data_coverage.csv\n M data/research/research-scenario-20260918/pilot-data/manifests/data_quality_report.md\n M data/research/research-scenario-20260918/pilot-data/manifests/processed.json\n M data/research/research-scenario-20260918/pilot-input-audit.json\n M data/research/research-scenario-20260918/pilot-results.json\n M data/research/research-scenario-20260918/pilot.toml\n M data/research/research-scenario-20260918/tick-minute-comparison.json\n M docs/research/btc_quote_discrepancy.json\n M docs/research/btcusdt_reconciliation.json\n M docs/research/ethusdt_reconciliation.json\n M docs/research/funding_api_coverage.json\n M docs/research/funding_followup_20260918.json\n M docs/research/funding_h1_preliminary_20260918.json\n M docs/research/funding_provider_access_20260918.json\n M docs/research/funding_proxy_feasibility_20260918.json\n M docs/research/trade_archive_reconciliation.json\n M src/crypto_carry/execution_revision.py",
+  "index_unchanged": false,
+  "head": "894059e4ce318e51f25211d04be9f0202de90ae7",
+  "interpretation_limit": "Hash conserva bytes; las pruebas documentales no certifican continuidad ni primera publicación. Segunda revisión por el mismo agente registrada por separado."
+}

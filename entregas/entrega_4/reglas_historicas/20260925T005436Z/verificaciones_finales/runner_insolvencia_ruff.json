@@ -1,0 +1,14 @@
+{
+  "utc": "2026-09-25T13:59:05.410946+00:00",
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "-m",
+    "ruff",
+    "check",
+    "tests/unit/test_rules_sensitivity_runner.py"
+  ],
+  "exit_code": 0
+}

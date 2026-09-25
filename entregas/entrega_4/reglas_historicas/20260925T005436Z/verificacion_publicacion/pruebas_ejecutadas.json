@@ -1,0 +1,25 @@
+[
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-m",
+      "pytest",
+      "tests/unit/test_historical_rules_publication.py",
+      "-q"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 244.28155459999107
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-m",
+      "ruff",
+      "check",
+      "scripts/verify_historical_rules_publication.py",
+      "tests/unit/test_historical_rules_publication.py"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.24819730001036078
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "started_at": "2026-09-25T14:12:18.457183+00:00",
+  "finished_at": "2026-09-25T14:12:40.432051+00:00",
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "-m",
+    "pytest",
+    "tests/unit/test_rules_sensitivity_reporting.py",
+    "-q",
+    "-p",
+    "no:cacheprovider"
+  ],
+  "exit_code": 0,
+  "stdout": "................................                                         [100%]\n32 passed in 21.27s\n",
+  "stderr": "",
+  "scope": "32 reporting/verifier tests after final H3 legend placement"
+}

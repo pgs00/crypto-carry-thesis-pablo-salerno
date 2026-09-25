@@ -1,0 +1,329 @@
+{
+  "checked_at_utc": "2026-09-25T01:03:44.855758Z",
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "command": "C:\\Users\\pablo\\AppData\\Local\\Temp\\historical_session_reproduction_fvqbof9k\\repo\\data\\research\\historical-rules-followup-20260924T234206Z\\verificar_fuentes.py --self-test",
+  "passed": false,
+  "errors": [
+    "source_hash_mismatch: A1",
+    "source_hash_mismatch: A2",
+    "source_hash_mismatch: A3",
+    "protected_file_changed: .gitattributes",
+    "protected_file_changed: .gitignore",
+    "protected_file_changed: .python-version",
+    "protected_file_changed: README.md",
+    "protected_file_changed: configs/download_minutes_2022_2023_d.toml",
+    "protected_file_changed: configs/download_minutes_2022_2026_d.toml",
+    "protected_file_changed: configs/download_minutes_2025_2026_d.toml",
+    "protected_file_changed: configs/research.toml",
+    "protected_file_changed: data/manifests/README.md",
+    "protected_file_changed: data/manifests/data_quality_report.md",
+    "protected_file_changed: data/manifests/download.json",
+    "protected_file_changed: data/manifests/processed.json",
+    "protected_file_changed: data/research/README.md",
+    "protected_file_changed: data/research/basis-audit-20260919/README.md",
+    "protected_file_changed: data/research/basis-audit-20260919/verify_basis.py",
+    "protected_file_changed: data/research/fee-archive-followup-20260918/A1.html",
+    "protected_file_changed: data/research/fee-archive-followup-20260918/A2.html",
+    "protected_file_changed: data/research/fee-archive-followup-20260918/A3.html",
+    "protected_file_changed: data/research/funding-calendar-h1-20260918/.gitignore",
+    "protected_file_changed: data/research/funding-calendar-h1-20260918/run_h1.py",
+    "protected_file_changed: data/research/funding-followup-20260918/missing-economic-settlement-marks.json",
+    "protected_file_changed: data/research/funding-provider-access-20260918/amberdata-funding-rates.md",
+    "protected_file_changed: data/research/funding-provider-access-20260918/amberdata-realized-definition.md",
+    "protected_file_changed: data/research/funding-provider-access-20260918/coinmetrics-funding.md",
+    "protected_file_changed: data/research/funding-provider-access-20260918/kaiko-exchange-metrics.md",
+    "protected_file_changed: data/research/funding-provider-access-20260918/tardis-20220101-0759.txt",
+    "protected_file_changed: data/research/funding-provider-access-20260918/tardis-20220101-1559.txt",
+    "protected_file_changed: data/research/funding-provider-access-20260918/tardis-20231101-0759.txt",
+    "protected_file_changed: data/research/funding-provider-access-20260918/tardis-20231101-1559.txt",
+    "protected_file_changed: data/research/funding-provider-access-20260918/tardis-20240101-0759.txt",
+    "protected_file_changed: data/research/funding-provider-access-20260918/tardis-20240101-1559.txt",
+    "protected_file_changed: data/research/funding-provider-access-20260918/tardis-20240201-0759.txt",
+    "protected_file_changed: data/research/funding-provider-access-20260918/tardis-20240201-1559.txt",
+    "protected_file_changed: data/research/funding-provider-access-20260918/tardis-billing.md",
+    "protected_file_changed: data/research/funding-provider-access-20260918/tardis-binance-futures.md",
+    "protected_file_changed: data/research/funding-provider-access-20260918/tardis-http-api.md",
+    "protected_file_changed: data/research/funding-provider-access-20260918/tardis-metadata.md",
+    "protected_file_changed: data/research/funding-proxy-audit-20260918/.gitignore",
+    "protected_file_changed: data/research/funding-proxy-audit-20260918/audit_probe.py",
+    "protected_file_changed: data/research/minute-download-20260918/build_study_report.py",
+    "protected_file_changed: data/research/minute-download-20260918/repair_sources.py",
+    "protected_file_changed: data/research/minute-download-20260918/verify_annual_economics.py",
+    "protected_file_changed: data/research/minute-download-20260918/verify_execution_revision.py",
+    "protected_file_changed: data/research/minute-download-20260918/verify_outage_trades.py",
+    "protected_file_changed: data/research/research-scenario-20260918/.gitignore",
+    "protected_file_changed: data/research/research-scenario-20260918/compare_tick_minute.py",
+    "protected_file_changed: data/research/research-scenario-20260918/pilot-data/manifests/download.json",
+    "protected_file_changed: data/research/research-scenario-20260918/prepare_pilot.py",
+    "protected_file_changed: data/research/research-scenario-20260918/verify_funding_proxy.py",
+    "protected_file_changed: data/rules/history.json",
+    "protected_file_changed: docs/continuous_mark_gaps.md",
+    "protected_file_changed: docs/data_dictionary.md",
+    "protected_file_changed: docs/decisions.md",
+    "protected_file_changed: docs/descarga_d.md",
+    "protected_file_changed: docs/escenario_investigacion.md",
+    "protected_file_changed: docs/fiabilidad.md",
+    "protected_file_changed: docs/methodology.md",
+    "protected_file_changed: docs/plans/2026-09-19-continuous-mark-gaps.md",
+    "protected_file_changed: docs/plans/2026-09-20-continuous-delivery.md",
+    "protected_file_changed: docs/plans/2026-09-20-funding-price-analysis.md",
+    "protected_file_changed: docs/plans/2026-09-20-thesis-cleanup.md",
+    "protected_file_changed: docs/progress.md",
+    "protected_file_changed: docs/repository_cleanup.md",
+    "protected_file_changed: docs/requirements_traceability.md",
+    "protected_file_changed: docs/research/README.md",
+    "protected_file_changed: docs/research/binance_historical_access_20260918.json",
+    "protected_file_changed: docs/research/binance_historical_access_20260918.md",
+    "protected_file_changed: docs/research/fees_followup_20260918.json",
+    "protected_file_changed: docs/research/fees_followup_20260918.md",
+    "protected_file_changed: docs/research/funding_followup_20260918.md",
+    "protected_file_changed: docs/research/funding_h1_preliminary_20260918.md",
+    "protected_file_changed: docs/research/funding_provider_access_20260918.md",
+    "protected_file_changed: docs/research/funding_proxy_feasibility_20260918.md",
+    "protected_file_changed: docs/research/historical_fees.json",
+    "protected_file_changed: docs/research/historical_fees.md",
+    "protected_file_changed: docs/research/historical_market_rules.json",
+    "protected_file_changed: docs/research/historical_market_rules.md",
+    "protected_file_changed: docs/research/implementation_verification_20260918.md",
+    "protected_file_changed: docs/research/metadata_provider_access_20260918.json",
+    "protected_file_changed: docs/research/metadata_provider_access_20260918.md",
+    "protected_file_changed: docs/research/methodology_two_days_20260918.md",
+    "protected_file_changed: docs/research/public_rules_alternatives_20260918.json",
+    "protected_file_changed: docs/research/public_rules_alternatives_20260918.md",
+    "protected_file_changed: docs/research/rules_followup_20260918.json",
+    "protected_file_changed: docs/research/rules_followup_20260918.md",
+    "protected_file_changed: docs/sources/Prompt_Codex_Ajuste_Backtesting_1m.md",
+    "protected_file_changed: docs/sources/Prompt_Codex_Auditoria_Basis.md",
+    "protected_file_changed: docs/sources/Prompt_Codex_Backtesting.md",
+    "protected_file_changed: docs/sources/Prompt_Codex_Paquete_Entrega_3.md",
+    "protected_file_changed: entregas/entrega_3/README.md",
+    "protected_file_changed: entregas/entrega_3/archivo/README.md",
+    "protected_file_changed: entregas/entrega_3/archivo/empaquetar.py",
+    "protected_file_changed: pyproject.toml",
+    "protected_file_changed: scripts/continuous_delivery/__init__.py",
+    "protected_file_changed: scripts/continuous_delivery/build.py",
+    "protected_file_changed: scripts/continuous_delivery/common.py",
+    "protected_file_changed: scripts/continuous_delivery/diagnostics.py",
+    "protected_file_changed: scripts/continuous_delivery/hypotheses.py",
+    "protected_file_changed: scripts/continuous_delivery/portfolio.py",
+    "protected_file_changed: scripts/continuous_delivery/verify.py",
+    "protected_file_changed: scripts/download_continuous.py",
+    "protected_file_changed: scripts/verify_repository_evidence.py",
+    "protected_file_changed: src/crypto_carry/__init__.py",
+    "protected_file_changed: src/crypto_carry/__main__.py",
+    "protected_file_changed: src/crypto_carry/cli.py",
+    "protected_file_changed: src/crypto_carry/config.py",
+    "protected_file_changed: src/crypto_carry/costs.py",
+    "protected_file_changed: src/crypto_carry/data/__init__.py",
+    "protected_file_changed: src/crypto_carry/data/download.py",
+    "protected_file_changed: src/crypto_carry/data/funding_proxy.py",
+    "protected_file_changed: src/crypto_carry/data/mark_gaps.py",
+    "protected_file_changed: src/crypto_carry/data/market_calendar.py",
+    "protected_file_changed: src/crypto_carry/data/minute_download.py",
+    "protected_file_changed: src/crypto_carry/data/normalize.py",
+    "protected_file_changed: src/crypto_carry/data/prescribed.py",
+    "protected_file_changed: src/crypto_carry/data/reconcile.py",
+    "protected_file_changed: src/crypto_carry/data/replay.py",
+    "protected_file_changed: src/crypto_carry/data/rules.py",
+    "protected_file_changed: src/crypto_carry/data/validate.py",
+    "protected_file_changed: src/crypto_carry/diagnostics.py",
+    "protected_file_changed: src/crypto_carry/evaluation.py",
+    "protected_file_changed: src/crypto_carry/events.py",
+    "protected_file_changed: src/crypto_carry/execution.py",
+    "protected_file_changed: src/crypto_carry/fixtures.py",
+    "protected_file_changed: src/crypto_carry/forecast.py",
+    "protected_file_changed: src/crypto_carry/ledger.py",
+    "protected_file_changed: src/crypto_carry/margin.py",
+    "protected_file_changed: src/crypto_carry/mark_gap_study.py",
+    "protected_file_changed: src/crypto_carry/models.py",
+    "protected_file_changed: src/crypto_carry/nautilus_adapter.py",
+    "protected_file_changed: src/crypto_carry/portfolio.py",
+    "protected_file_changed: src/crypto_carry/preflight.py",
+    "protected_file_changed: src/crypto_carry/reporting.py",
+    "protected_file_changed: src/crypto_carry/risk.py",
+    "protected_file_changed: src/crypto_carry/robustness.py",
+    "protected_file_changed: src/crypto_carry/serialization.py",
+    "protected_file_changed: src/crypto_carry/strategy.py",
+    "protected_file_changed: tests/conftest.py",
+    "protected_file_changed: tests/integration/test_checkpoint.py",
+    "protected_file_changed: tests/integration/test_demo.py",
+    "protected_file_changed: tests/integration/test_mark_gap_risk.py",
+    "protected_file_changed: tests/integration/test_minute_execution.py",
+    "protected_file_changed: tests/integration/test_native_adapter.py",
+    "protected_file_changed: tests/integration/test_next_minute_vwap.py",
+    "protected_file_changed: tests/integration/test_research_funding.py",
+    "protected_file_changed: tests/integration/test_strategy.py",
+    "protected_file_changed: tests/unit/test_basis_audit.py",
+    "protected_file_changed: tests/unit/test_cli.py",
+    "protected_file_changed: tests/unit/test_config.py",
+    "protected_file_changed: tests/unit/test_continuous_delivery.py",
+    "protected_file_changed: tests/unit/test_continuous_download.py",
+    "protected_file_changed: tests/unit/test_data.py",
+    "protected_file_changed: tests/unit/test_delivery_integrity.py",
+    "protected_file_changed: tests/unit/test_diagnostics.py",
+    "protected_file_changed: tests/unit/test_download_streaming.py",
+    "protected_file_changed: tests/unit/test_evaluation.py",
+    "protected_file_changed: tests/unit/test_execution.py",
+    "protected_file_changed: tests/unit/test_execution_revision.py",
+    "protected_file_changed: tests/unit/test_finance.py",
+    "protected_file_changed: tests/unit/test_finance_integration.py",
+    "protected_file_changed: tests/unit/test_funding_price_analysis.py",
+    "protected_file_changed: tests/unit/test_funding_proxy.py",
+    "protected_file_changed: tests/unit/test_joint_sizing.py",
+    "protected_file_changed: tests/unit/test_mark_gaps.py",
+    "protected_file_changed: tests/unit/test_minute_data.py",
+    "protected_file_changed: tests/unit/test_minute_download.py",
+    "protected_file_changed: tests/unit/test_minute_reporting.py",
+    "protected_file_changed: tests/unit/test_minute_validation.py",
+    "protected_file_changed: tests/unit/test_minute_window.py",
+    "protected_file_changed: tests/unit/test_preflight.py",
+    "protected_file_changed: tests/unit/test_prescribed_rules.py",
+    "protected_file_changed: tests/unit/test_reconcile.py",
+    "protected_file_changed: tests/unit/test_replay_window.py",
+    "protected_file_changed: tests/unit/test_reporting.py",
+    "protected_file_changed: tests/unit/test_repository_evidence.py",
+    "protected_file_changed: tests/unit/test_research_reporting.py",
+    "protected_file_changed: tests/unit/test_research_validation.py",
+    "protected_file_changed: tests/unit/test_revision_review.py",
+    "protected_file_changed: tests/unit/test_validation_scope.py",
+    "protected_file_changed: uv.lock",
+    "git_index_changed",
+    "git_head_changed"
+  ],
+  "checks": [
+    {
+      "name": "manifiesto de archivos nuevos",
+      "count": 196
+    },
+    {
+      "name": "fuentes y capturas reales, incluidos hashes de texto extraído",
+      "count": 52
+    },
+    {
+      "name": "esquema, alcance, prueba contra fuente y temporalidad",
+      "count": 345
+    },
+    {
+      "name": "cobertura por unión sin días imputados a puntos",
+      "count": 479
+    },
+    {
+      "name": "archivos protegidos, índice, HEAD y rama",
+      "count": 717
+    },
+    {
+      "name": "atributos efectivos -text y whitespace=cr-at-eol",
+      "count": 199
+    }
+  ],
+  "negative_tests": [
+    {
+      "test": "mezcla VIP0 con VIP1",
+      "passed": true,
+      "expected_error": "scope_mismatch",
+      "detected_errors": [
+        "scope_mismatch: FEE_A1_BTCUSDT"
+      ]
+    },
+    {
+      "test": "mezcla futuros con spot",
+      "passed": true,
+      "expected_error": "scope_mismatch",
+      "detected_errors": [
+        "scope_mismatch: FEE_A1_BTCUSDT"
+      ]
+    },
+    {
+      "test": "ventana incierta promovida a instante",
+      "passed": true,
+      "expected_error": "rollout_promoted_to_exact",
+      "detected_errors": [
+        "rollout_promoted_to_exact: EVENT_MINBTC26_BTCUSDT"
+      ]
+    },
+    {
+      "test": "publicación posterior igualada a conocimiento de vigencia",
+      "passed": true,
+      "expected_error": "publication_after_claimed_knowledge",
+      "detected_errors": [
+        "unproven_known_from: TIERS_MARG23_BTCUSDT_after",
+        "publication_after_claimed_knowledge: TIERS_MARG23_BTCUSDT_after"
+      ]
+    },
+    {
+      "test": "captura sin tabla usada como tarifa",
+      "passed": true,
+      "expected_error": "source_without_usable_data",
+      "detected_errors": [
+        "capture_mismatch: FEE_SPOT26_BTCUSDT",
+        "source_without_usable_data: FEE_SPOT26_BTCUSDT",
+        "fee_anchor_source_mismatch: FEE_SPOT26_BTCUSDT",
+        "proof_error Sección USD-M no encontrada SPOT25: FEE_SPOT26_BTCUSDT"
+      ]
+    },
+    {
+      "test": "cero desconocido inventado",
+      "passed": true,
+      "expected_error": "unknown_as_number",
+      "detected_errors": [
+        "unknown_as_number: PENDING_FEE_DATE_BTCUSDT"
+      ]
+    },
+    {
+      "test": "porcentaje mal convertido",
+      "passed": true,
+      "expected_error": "rate_conversion",
+      "detected_errors": [
+        "rate_conversion: FEE_A1_BTCUSDT",
+        "fee_value_mismatch: FEE_A1_BTCUSDT"
+      ]
+    },
+    {
+      "test": "intervalo invertido",
+      "passed": true,
+      "expected_error": "inverted_interval",
+      "detected_errors": [
+        "inverted_interval: BTC_SPOT_ZERO"
+      ]
+    },
+    {
+      "test": "solapamiento contradictorio",
+      "passed": true,
+      "expected_error": "contradictory_overlap",
+      "detected_errors": [
+        "contradictory_overlap: BTC_SPOT_ZERO CONTRADICTORY_TEST"
+      ]
+    },
+    {
+      "test": "alteración de copia de archivo protegido",
+      "passed": true,
+      "expected_error": "protected_file_changed",
+      "detected_errors": [
+        "protected_file_changed: .gitattributes"
+      ]
+    },
+    {
+      "test": "cobertura duplicada",
+      "passed": true,
+      "expected_error": "coverage_double_count",
+      "detected_errors": [
+        "coverage_double_count"
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "symbol": "BTCUSDT",
+      "market": "spot",
+      "parameter": "taker_fee",
+      "covered_seconds_union": 22154400,
+      "covered_days_decimal": "256.4166666666666666666666667",
+      "criterion": "unión de intervalos explícitos finitos; observaciones/eventos/supuestos aportan cero"
+    }
+  ],
+  "manifest_sha256": "629915f074a29fed6a7686e9b9af2a9279e0ff0601c1121c965c46539f5c99fb",
+  "git_status": "",
+  "index_unchanged": false,
+  "head": "894059e4ce318e51f25211d04be9f0202de90ae7",
+  "interpretation_limit": "Hash conserva bytes; las pruebas documentales no certifican continuidad ni primera publicación. Segunda revisión por el mismo agente registrada por separado."
+}

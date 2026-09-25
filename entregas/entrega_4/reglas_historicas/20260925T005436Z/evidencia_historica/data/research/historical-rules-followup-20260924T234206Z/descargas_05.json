@@ -1,0 +1,14 @@
+[
+  {
+    "id": "DOCSPOT",
+    "url": "https://developers.binance.com/en/docs/products/spot/filters"
+  },
+  {
+    "id": "DOCFUT",
+    "url": "https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/rest-api/market-data"
+  },
+  {
+    "id": "FUTI22B",
+    "url": "https://web.archive.org/web/20221127174756id_/https://fapi.binance.com/fapi/v1/exchangeInfo"
+  }
+]

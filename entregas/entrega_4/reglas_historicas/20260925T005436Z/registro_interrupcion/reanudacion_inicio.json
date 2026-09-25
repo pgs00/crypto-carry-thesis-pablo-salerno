@@ -1,0 +1,38 @@
+{
+  "started_at_utc": "2026-09-25T13:41:57.039212+00:00",
+  "driver_pid": 32576,
+  "original_attempt_exit_code": null,
+  "interruption": "User turn interruption; no Python processes remained when checked",
+  "preserved_complete_records": 8,
+  "resumed_pairs": [
+    [
+      "FUT4_REALIZADA",
+      "permanent"
+    ],
+    [
+      "FUT4_DECISION",
+      "permanent"
+    ],
+    [
+      "MARGEN_2X",
+      "conditional"
+    ],
+    [
+      "MARGEN_2X",
+      "permanent"
+    ]
+  ],
+  "original_logs": {
+    "logs_corridas/BTC_PROMO_DECISION__conditional.txt": "52e3c699fbbeee4a605b5413816138a4b713237543fd048be48fd50c8ebfcf62",
+    "logs_corridas/BTC_PROMO_DECISION__permanent.txt": "286ca5bba67bbea63eab2b8c319e124927e525906111fc3406c05291789af003",
+    "logs_corridas/BTC_PROMO_REALIZADA__conditional.txt": "d4fa8c7e0191a10b8e3221f0500dd6ccd7b598d393e0450647a9d61e01dce123",
+    "logs_corridas/BTC_PROMO_REALIZADA__permanent.txt": "368143d6a8f11605a9f80d393080a3c5f8069e59a2de7af9287f3eaffb2438d0",
+    "logs_corridas/FUT4_DECISION__conditional.txt": "c9d69fb57de5c2dd20699da8f85d3f942ad386af9bb8c2c1dc49d04816a224b5",
+    "logs_corridas/FUT4_DECISION__permanent.txt": "85228ff0613b7227100f5bb88d624b7f2bc7db7f701e277636a09887c4afb72a",
+    "logs_corridas/FUT4_REALIZADA__conditional.txt": "ae2e344125d29ce691ccfa91f5f0250d1571a344cd00ff9fdee2ebb2a796e678",
+    "logs_corridas/FUT4_REALIZADA__permanent.txt": "cbba4c67c3828d5de89cc59781290fb70f0d02caa8f2911891483cd0bd1e336b",
+    "logs_corridas/MARGEN_2X__conditional.txt": "e917700f4a8fc7df09dfecf74f977c42e560b339b2bb2623250887254800a0ec",
+    "logs_corridas/MARGEN_2X__permanent.txt": "7fa91ffcc210b467b1c3e52f117bafdbbd2190ea2963d0f7c723f5bbade45eb4"
+  },
+  "validation": "verificaciones_finales/datos_antes_reanudacion.json"
+}

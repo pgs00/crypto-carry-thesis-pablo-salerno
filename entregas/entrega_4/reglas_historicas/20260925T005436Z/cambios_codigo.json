@@ -1,0 +1,19 @@
+{
+  "command": [
+    "git",
+    "--no-optional-locks",
+    "diff",
+    "--binary",
+    "--",
+    ".gitattributes",
+    "src/crypto_carry/config.py",
+    "src/crypto_carry/costs.py",
+    "src/crypto_carry/data/prescribed.py",
+    "src/crypto_carry/reporting.py",
+    "src/crypto_carry/strategy.py"
+  ],
+  "exit_code": 0,
+  "sha256": "f4161304492e31003e7d2fbd7851241b47832e8f45541cc86724b3da065c2d0f",
+  "scope": "Six existing files; exact new-file inventory is delivered separately",
+  "stderr": "warning: in the working copy of '.gitattributes', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'src/crypto_carry/config.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'src/crypto_carry/costs.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'src/crypto_carry/data/prescribed.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'src/crypto_carry/reporting.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'src/crypto_carry/strategy.py', LF will be replaced by CRLF the next time Git touches it\n"
+}

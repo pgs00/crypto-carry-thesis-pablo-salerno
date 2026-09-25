@@ -1,0 +1,994 @@
+{
+  "created_at_utc": "2026-09-25T14:26:15.405373+00:00",
+  "scope": "Index of explicit executed command records. Null exit_code means the source record does not expose one; no success inferred. Post-seal commands are in the separate final certificate. Future runner_command instructions are not counted as executions.",
+  "records": [
+    {
+      "source": "verificaciones_finales/auditor_tarifas_prechecks.json",
+      "json_pointer": "/",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "ruff",
+        "check",
+        "scripts/audit_historical_rules_fills.py"
+      ],
+      "exit_code": 0,
+      "started_at": null,
+      "elapsed_seconds": null
+    },
+    {
+      "source": "verificaciones_finales/auditoria_fills_comando.json",
+      "json_pointer": "/",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "scripts/audit_historical_rules_fills.py",
+        "--package",
+        "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z",
+        "--output",
+        "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\verificaciones_finales\\auditoria_fills.json"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-09-25T14:08:20.516311+00:00",
+      "elapsed_seconds": 1.4408252000575885
+    },
+    {
+      "source": "verificaciones_finales/comparacion_ajuste_visual.json",
+      "json_pointer": "/",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "scripts\\report_historical_rules_sensitivity.py",
+        "--package",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\20260925T005436Z"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-09-25T14:11:31.327434+00:00",
+      "elapsed_seconds": null
+    },
+    {
+      "source": "verificaciones_finales/comparacion_candidata_portable.json",
+      "json_pointer": "/seal",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\scripts\\report_historical_rules_sensitivity.py",
+        "--package",
+        "C:\\Users\\pablo\\AppData\\Local\\Temp\\rules-sensitivity-candidate-7gs9_9r5\\paquete",
+        "--seal"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-09-25T14:23:45.567353+00:00",
+      "elapsed_seconds": null
+    },
+    {
+      "source": "verificaciones_finales/comparacion_candidata_portable.json",
+      "json_pointer": "/portable_verification",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-I",
+        "-S",
+        "-B",
+        "-X",
+        "utf8",
+        "C:\\Users\\pablo\\AppData\\Local\\Temp\\rules-sensitivity-candidate-7gs9_9r5\\paquete\\herramientas\\verify_rules_sensitivity_package.py",
+        "--package",
+        "C:\\Users\\pablo\\AppData\\Local\\Temp\\rules-sensitivity-candidate-7gs9_9r5\\paquete"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-09-25T14:23:48.797144+00:00",
+      "elapsed_seconds": null
+    },
+    {
+      "source": "verificaciones_finales/comparacion_construccion.json",
+      "json_pointer": "/",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "scripts/report_historical_rules_sensitivity.py",
+        "--package",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\20260925T005436Z"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-09-25T14:09:09.301400+00:00",
+      "elapsed_seconds": null
+    },
+    {
+      "source": "verificaciones_finales/comparacion_ruff_final.json",
+      "json_pointer": "/",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "ruff",
+        "check",
+        "scripts/report_historical_rules_sensitivity.py",
+        "scripts/verify_rules_sensitivity_package.py",
+        "tests/unit/test_rules_sensitivity_reporting.py",
+        "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\herramientas\\report_historical_rules_sensitivity.py",
+        "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\herramientas\\verify_rules_sensitivity_package.py"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-09-25T14:12:18.468930+00:00",
+      "elapsed_seconds": null
+    },
+    {
+      "source": "verificaciones_finales/comparacion_tests_final.json",
+      "json_pointer": "/",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "pytest",
+        "tests/unit/test_rules_sensitivity_reporting.py",
+        "-q",
+        "-p",
+        "no:cacheprovider"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-09-25T14:12:18.457183+00:00",
+      "elapsed_seconds": null
+    },
+    {
+      "source": "verificaciones_finales/control_promocion_persistida.json",
+      "json_pointer": "/",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "C:\\Users\\pablo\\AppData\\Local\\Temp\\rules-promo-persisted-audit-tej_wtw7\\control_promocion.py",
+        "--package",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\20260925T005436Z",
+        "--output",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\verificaciones_finales\\control_promocion_persistida.json"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-09-25T02:15:43.709391+00:00",
+      "elapsed_seconds": null
+    },
+    {
+      "source": "verificaciones_finales/entrega3_final.json",
+      "json_pointer": "/",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "scripts.publish_thesis",
+        "--verify"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-09-25T01:49:22.315267+00:00",
+      "elapsed_seconds": 2.4073408000404015
+    },
+    {
+      "source": "verificaciones_finales/pytest_cierre.json",
+      "json_pointer": "/",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-09-25T02:23:03.891437+00:00",
+      "elapsed_seconds": 1002.0338850999251
+    },
+    {
+      "source": "verificaciones_finales/pytest_completo_final.json",
+      "json_pointer": "/",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-09-25T01:49:22.242971+00:00",
+      "elapsed_seconds": 440.2072767999489
+    },
+    {
+      "source": "verificaciones_finales/pytest_entrega_final.json",
+      "json_pointer": "/",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-09-25T14:10:29.615734+00:00",
+      "elapsed_seconds": 174.2257162000751
+    },
+    {
+      "source": "verificaciones_finales/ruff_cierre.json",
+      "json_pointer": "/",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "ruff",
+        "check",
+        "src",
+        "tests",
+        "scripts",
+        "entregas/entrega_3/archivo/empaquetar.py"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-09-25T02:39:45.842452+00:00",
+      "elapsed_seconds": 0.12649900000542402
+    },
+    {
+      "source": "verificaciones_finales/ruff_entrega_final.json",
+      "json_pointer": "/",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "ruff",
+        "check",
+        "src",
+        "tests",
+        "scripts",
+        "entregas/entrega_3/archivo/empaquetar.py"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-09-25T14:10:29.622861+00:00",
+      "elapsed_seconds": 0.11303989996667951
+    },
+    {
+      "source": "verificaciones_finales/ruff_final.json",
+      "json_pointer": "/",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "ruff",
+        "check",
+        "src",
+        "tests",
+        "scripts",
+        "entregas/entrega_3/archivo/empaquetar.py"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-09-25T01:49:22.294948+00:00",
+      "elapsed_seconds": 0.276115300017409
+    },
+    {
+      "source": "verificaciones_finales/ruff_reanudacion.json",
+      "json_pointer": "/",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "ruff",
+        "check",
+        "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\herramientas\\reanudar_lote_interrumpido.py"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-09-25T13:52:21.244292+00:00",
+      "elapsed_seconds": 0.14720120001584291
+    },
+    {
+      "source": "verificaciones_finales/runner_insolvencia_resolucion.json",
+      "json_pointer": "/green_result",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "pytest",
+        "tests/unit/test_rules_sensitivity_runner.py",
+        "tests/unit/test_rules_sensitivity_reproduction.py",
+        "-q"
+      ],
+      "exit_code": 0,
+      "started_at": null,
+      "elapsed_seconds": 8.48608589998912
+    },
+    {
+      "source": "verificaciones_finales/runner_insolvencia_resolucion.json",
+      "json_pointer": "/ruff_result",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "ruff",
+        "check",
+        "scripts/run_historical_rules_sensitivity.py",
+        "scripts/reproduce_historical_rules_sensitivity.py",
+        "tests/unit/test_rules_sensitivity_runner.py",
+        "tests/unit/test_rules_sensitivity_reproduction.py"
+      ],
+      "exit_code": 0,
+      "started_at": null,
+      "elapsed_seconds": null
+    },
+    {
+      "source": "verificaciones_finales/runner_insolvencia_ruff.json",
+      "json_pointer": "/",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "ruff",
+        "check",
+        "tests/unit/test_rules_sensitivity_runner.py"
+      ],
+      "exit_code": 0,
+      "started_at": null,
+      "elapsed_seconds": null
+    },
+    {
+      "source": "verificaciones_finales/runner_insolvencia_ruff_green.json",
+      "json_pointer": "/",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "ruff",
+        "check",
+        "scripts/run_historical_rules_sensitivity.py",
+        "scripts/reproduce_historical_rules_sensitivity.py",
+        "tests/unit/test_rules_sensitivity_runner.py",
+        "tests/unit/test_rules_sensitivity_reproduction.py"
+      ],
+      "exit_code": 0,
+      "started_at": null,
+      "elapsed_seconds": null
+    },
+    {
+      "source": "verificaciones_finales/runner_insolvencia_tdd_green.json",
+      "json_pointer": "/",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "pytest",
+        "tests/unit/test_rules_sensitivity_runner.py",
+        "tests/unit/test_rules_sensitivity_reproduction.py",
+        "-q"
+      ],
+      "exit_code": 0,
+      "started_at": null,
+      "elapsed_seconds": 8.48608589998912
+    },
+    {
+      "source": "verificaciones_finales/runner_insolvencia_tdd_red.json",
+      "json_pointer": "/",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "pytest",
+        "tests/unit/test_rules_sensitivity_runner.py",
+        "-q"
+      ],
+      "exit_code": 1,
+      "started_at": null,
+      "elapsed_seconds": 14.55824330006726
+    },
+    {
+      "source": "verificacion_publicacion/auditoria_repositorio_resumen.json",
+      "json_pointer": "/",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "scripts.verify_repository_evidence"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-09-25T01:26:40.127711+00:00",
+      "elapsed_seconds": 13.741665600100532
+    },
+    {
+      "source": "verificacion_publicacion/auditoria_repositorio_resumen.json",
+      "json_pointer": "/import_probe",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-c",
+        "import json,crypto_carry.config,scripts.verify_repository_evidence as v; print(json.dumps({\"config\":crypto_carry.config.__file__,\"verifier\":v.__file__,\"root\":str(v.ROOT)}))"
+      ],
+      "exit_code": 0,
+      "started_at": null,
+      "elapsed_seconds": null
+    },
+    {
+      "source": "verificacion_publicacion/correccion_utf8_pruebas.json",
+      "json_pointer": "/commands/0",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "pytest",
+        "tests/unit/test_historical_rules_publication.py::test_output_is_new_and_cannot_be_inside_evidence",
+        "-q",
+        "-W",
+        "error::pytest.PytestUnhandledThreadExceptionWarning"
+      ],
+      "exit_code": 0,
+      "started_at": null,
+      "elapsed_seconds": 17.96020309999585
+    },
+    {
+      "source": "verificacion_publicacion/correccion_utf8_pruebas.json",
+      "json_pointer": "/commands/1",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "ruff",
+        "check",
+        "tests/unit/test_historical_rules_publication.py"
+      ],
+      "exit_code": 0,
+      "started_at": null,
+      "elapsed_seconds": 0.26652179996017367
+    },
+    {
+      "source": "verificacion_publicacion/preservacion_verificacion.json",
+      "json_pointer": "/",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "importtime",
+        "scripts/verify_historical_rules_publication.py",
+        "--root",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting",
+        "--evidence",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\data\\research\\historical-rules-followup-20260924T234206Z",
+        "--temp-dir",
+        "C:\\Users\\pablo\\AppData\\Local\\Temp",
+        "--output",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\verificacion_publicacion\\verificacion_actual.json"
+      ],
+      "exit_code": 0,
+      "started_at": null,
+      "elapsed_seconds": null
+    },
+    {
+      "source": "verificacion_publicacion/pruebas_ejecutadas.json",
+      "json_pointer": "/0",
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "pytest",
+        "tests/unit/test_historical_rules_publication.py",
+        "-q"
+      ],
+      "exit_code": 0,
+      "started_at": null,
+      "elapsed_seconds": 244.28155459999107
+    },
+    {
+      "source": "verificacion_publicacion/pruebas_ejecutadas.json",
+      "json_pointer": "/1",
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "scripts/verify_historical_rules_publication.py",
+        "tests/unit/test_historical_rules_publication.py"
+      ],
+      "exit_code": 0,
+      "started_at": null,
+      "elapsed_seconds": 0.24819730001036078
+    },
+    {
+      "source": "verificacion_publicacion/reproduccion_bytes_exactos_resultado.json",
+      "json_pointer": "/",
+      "command": "C:\\Users\\pablo\\AppData\\Local\\Temp\\historical_session_reproduction_exact_fwpc1em3\\repo\\data\\research\\historical-rules-followup-20260924T234206Z\\verificar_fuentes.py --self-test",
+      "exit_code": null,
+      "started_at": null,
+      "elapsed_seconds": null
+    },
+    {
+      "source": "verificacion_publicacion/reproduccion_bytes_exactos_resumen.json",
+      "json_pointer": "/",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "C:\\Users\\pablo\\AppData\\Local\\Temp\\historical_session_reproduction_exact_fwpc1em3\\repo\\data\\research\\historical-rules-followup-20260924T234206Z\\verificar_fuentes.py",
+        "--self-test"
+      ],
+      "exit_code": 1,
+      "started_at": null,
+      "elapsed_seconds": null
+    },
+    {
+      "source": "verificacion_publicacion/reproduccion_copia_preservada_resultado.json",
+      "json_pointer": "/",
+      "command": "C:\\Users\\pablo\\AppData\\Local\\Temp\\historical_session_preserved_copy_wueoztw5\\repo\\data\\research\\historical-rules-followup-20260924T234206Z\\verificar_fuentes.py --self-test",
+      "exit_code": null,
+      "started_at": null,
+      "elapsed_seconds": null
+    },
+    {
+      "source": "verificacion_publicacion/reproduccion_copia_preservada_resumen.json",
+      "json_pointer": "/",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "C:\\Users\\pablo\\AppData\\Local\\Temp\\historical_session_preserved_copy_wueoztw5\\repo\\data\\research\\historical-rules-followup-20260924T234206Z\\verificar_fuentes.py",
+        "--self-test"
+      ],
+      "exit_code": 1,
+      "started_at": null,
+      "elapsed_seconds": null
+    },
+    {
+      "source": "verificacion_publicacion/reproduccion_original_resultado.json",
+      "json_pointer": "/",
+      "command": "C:\\Users\\pablo\\AppData\\Local\\Temp\\historical_session_reproduction_fvqbof9k\\repo\\data\\research\\historical-rules-followup-20260924T234206Z\\verificar_fuentes.py --self-test",
+      "exit_code": null,
+      "started_at": null,
+      "elapsed_seconds": null
+    },
+    {
+      "source": "verificacion_publicacion/reproduccion_python_guard_pruebas.json",
+      "json_pointer": "/commands/0",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "pytest",
+        "tests/unit/test_rules_sensitivity_reproduction.py",
+        "-q",
+        "-W",
+        "error::pytest.PytestUnhandledThreadExceptionWarning"
+      ],
+      "exit_code": 0,
+      "started_at": null,
+      "elapsed_seconds": 13.727253000019118
+    },
+    {
+      "source": "verificacion_publicacion/reproduccion_python_guard_pruebas.json",
+      "json_pointer": "/commands/1",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "ruff",
+        "check",
+        "scripts/reproduce_historical_rules_sensitivity.py",
+        "tests/unit/test_rules_sensitivity_reproduction.py"
+      ],
+      "exit_code": 0,
+      "started_at": null,
+      "elapsed_seconds": 0.26117840001825243
+    },
+    {
+      "source": "verificacion_publicacion/reproduccion_python_guard_red.json",
+      "json_pointer": "/",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "pytest",
+        "tests/unit/test_rules_sensitivity_reproduction.py",
+        "-q",
+        "-k",
+        "each_base_requires or probe_exit"
+      ],
+      "exit_code": 1,
+      "started_at": null,
+      "elapsed_seconds": null
+    },
+    {
+      "source": "verificacion_publicacion/reproduccion_resumen.json",
+      "json_pointer": "/",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "C:\\Users\\pablo\\AppData\\Local\\Temp\\historical_session_reproduction_fvqbof9k\\repo\\data\\research\\historical-rules-followup-20260924T234206Z\\verificar_fuentes.py",
+        "--self-test"
+      ],
+      "exit_code": 1,
+      "started_at": null,
+      "elapsed_seconds": null
+    },
+    {
+      "source": "verificacion_publicacion/reproduccion_utilidad_pruebas.json",
+      "json_pointer": "/commands/0",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "pytest",
+        "tests/unit/test_rules_sensitivity_reproduction.py",
+        "-q",
+        "-W",
+        "error::pytest.PytestUnhandledThreadExceptionWarning"
+      ],
+      "exit_code": 0,
+      "started_at": null,
+      "elapsed_seconds": 11.061547999968752
+    },
+    {
+      "source": "verificacion_publicacion/reproduccion_utilidad_pruebas.json",
+      "json_pointer": "/commands/1",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "ruff",
+        "check",
+        "scripts/reproduce_historical_rules_sensitivity.py",
+        "tests/unit/test_rules_sensitivity_reproduction.py"
+      ],
+      "exit_code": 0,
+      "started_at": null,
+      "elapsed_seconds": 0.25141350005287677
+    },
+    {
+      "source": "verificacion_publicacion/reproduccion_utilidad_pruebas.json",
+      "json_pointer": "/commands/2",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "scripts/reproduce_historical_rules_sensitivity.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "started_at": null,
+      "elapsed_seconds": 0.2998397999908775
+    },
+    {
+      "source": "verificacion_publicacion/reproduccion_utilidad_tdd_red.json",
+      "json_pointer": "/",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "pytest",
+        "tests/unit/test_rules_sensitivity_reproduction.py",
+        "-x",
+        "-q"
+      ],
+      "exit_code": 1,
+      "started_at": null,
+      "elapsed_seconds": null
+    },
+    {
+      "source": "verificacion_publicacion/tdd_red.json",
+      "json_pointer": "/",
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "pytest",
+        "tests/unit/test_historical_rules_publication.py",
+        "-x",
+        "-q"
+      ],
+      "exit_code": 1,
+      "started_at": null,
+      "elapsed_seconds": null
+    },
+    {
+      "source": "indice_corridas.json",
+      "json_pointer": "/runs/2",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-u",
+        "-X",
+        "utf8",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\scripts\\run_historical_rules_sensitivity.py",
+        "--package",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\20260925T005436Z",
+        "--data-root",
+        "D:\\Backtesting",
+        "--scenario",
+        "BTC_PROMO_REALIZADA",
+        "--strategy",
+        "conditional"
+      ],
+      "exit_code": 0,
+      "started_at": null,
+      "elapsed_seconds": null
+    },
+    {
+      "source": "indice_corridas.json",
+      "json_pointer": "/runs/3",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-u",
+        "-X",
+        "utf8",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\scripts\\run_historical_rules_sensitivity.py",
+        "--package",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\20260925T005436Z",
+        "--data-root",
+        "D:\\Backtesting",
+        "--scenario",
+        "BTC_PROMO_DECISION",
+        "--strategy",
+        "conditional"
+      ],
+      "exit_code": 0,
+      "started_at": null,
+      "elapsed_seconds": null
+    },
+    {
+      "source": "indice_corridas.json",
+      "json_pointer": "/runs/4",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-u",
+        "-X",
+        "utf8",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\scripts\\run_historical_rules_sensitivity.py",
+        "--package",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\20260925T005436Z",
+        "--data-root",
+        "D:\\Backtesting",
+        "--scenario",
+        "BTC_PROMO_REALIZADA",
+        "--strategy",
+        "permanent"
+      ],
+      "exit_code": 0,
+      "started_at": null,
+      "elapsed_seconds": null
+    },
+    {
+      "source": "indice_corridas.json",
+      "json_pointer": "/runs/5",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-u",
+        "-X",
+        "utf8",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\scripts\\run_historical_rules_sensitivity.py",
+        "--package",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\20260925T005436Z",
+        "--data-root",
+        "D:\\Backtesting",
+        "--scenario",
+        "BTC_PROMO_DECISION",
+        "--strategy",
+        "permanent"
+      ],
+      "exit_code": 0,
+      "started_at": null,
+      "elapsed_seconds": null
+    },
+    {
+      "source": "indice_corridas.json",
+      "json_pointer": "/runs/6",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-u",
+        "-X",
+        "utf8",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\scripts\\run_historical_rules_sensitivity.py",
+        "--package",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\20260925T005436Z",
+        "--data-root",
+        "D:\\Backtesting",
+        "--scenario",
+        "FUT4_REALIZADA",
+        "--strategy",
+        "conditional"
+      ],
+      "exit_code": 0,
+      "started_at": null,
+      "elapsed_seconds": null
+    },
+    {
+      "source": "indice_corridas.json",
+      "json_pointer": "/runs/7",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-u",
+        "-X",
+        "utf8",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\scripts\\run_historical_rules_sensitivity.py",
+        "--package",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\20260925T005436Z",
+        "--data-root",
+        "D:\\Backtesting",
+        "--scenario",
+        "FUT4_DECISION",
+        "--strategy",
+        "conditional"
+      ],
+      "exit_code": 0,
+      "started_at": null,
+      "elapsed_seconds": null
+    },
+    {
+      "source": "indice_corridas.json",
+      "json_pointer": "/runs/8",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-u",
+        "-X",
+        "utf8",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\scripts\\run_historical_rules_sensitivity.py",
+        "--package",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\20260925T005436Z",
+        "--data-root",
+        "D:\\Backtesting",
+        "--scenario",
+        "MARGEN_2X",
+        "--strategy",
+        "conditional"
+      ],
+      "exit_code": 0,
+      "started_at": null,
+      "elapsed_seconds": null
+    },
+    {
+      "source": "indice_corridas.json",
+      "json_pointer": "/runs/9",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-u",
+        "-X",
+        "utf8",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\scripts\\run_historical_rules_sensitivity.py",
+        "--package",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\20260925T005436Z",
+        "--data-root",
+        "D:\\Backtesting",
+        "--scenario",
+        "MARGEN_2X",
+        "--strategy",
+        "permanent"
+      ],
+      "exit_code": 0,
+      "started_at": null,
+      "elapsed_seconds": null
+    },
+    {
+      "source": "indice_corridas.json",
+      "json_pointer": "/runs/10",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-u",
+        "-X",
+        "utf8",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\scripts\\run_historical_rules_sensitivity.py",
+        "--package",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\20260925T005436Z",
+        "--data-root",
+        "D:\\Backtesting",
+        "--scenario",
+        "FUT4_REALIZADA",
+        "--strategy",
+        "permanent"
+      ],
+      "exit_code": 0,
+      "started_at": null,
+      "elapsed_seconds": null
+    },
+    {
+      "source": "indice_corridas.json",
+      "json_pointer": "/runs/11",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-u",
+        "-X",
+        "utf8",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\scripts\\run_historical_rules_sensitivity.py",
+        "--package",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\20260925T005436Z",
+        "--data-root",
+        "D:\\Backtesting",
+        "--scenario",
+        "FUT4_DECISION",
+        "--strategy",
+        "permanent"
+      ],
+      "exit_code": 0,
+      "started_at": null,
+      "elapsed_seconds": null
+    },
+    {
+      "source": "cambios_codigo.json",
+      "json_pointer": "/",
+      "command": [
+        "git",
+        "--no-optional-locks",
+        "diff",
+        "--binary",
+        "--",
+        ".gitattributes",
+        "src/crypto_carry/config.py",
+        "src/crypto_carry/costs.py",
+        "src/crypto_carry/data/prescribed.py",
+        "src/crypto_carry/reporting.py",
+        "src/crypto_carry/strategy.py"
+      ],
+      "exit_code": 0,
+      "started_at": null,
+      "elapsed_seconds": null
+    }
+  ]
+}

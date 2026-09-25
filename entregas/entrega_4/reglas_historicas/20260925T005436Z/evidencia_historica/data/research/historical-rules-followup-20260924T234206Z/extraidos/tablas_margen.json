@@ -1,0 +1,2962 @@
+[
+  {
+    "fact_id": "TIERS_MARG22_ETHUSDT_before",
+    "source_id": "MARG22",
+    "symbol": "ETHUSDT",
+    "side": "before",
+    "rows": [
+      {
+        "floor_usdt": "0",
+        "cap_usdt": "100000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.005",
+        "maximum_initial_leverage": 100,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "76 - 100x",
+          "position": "0 < Position ≤ 100,000",
+          "rate_percent": "0.50%"
+        },
+        "source_line": 25,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "100000",
+        "cap_usdt": "250000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.0065",
+        "maximum_initial_leverage": 75,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "51 - 75x",
+          "position": "100,000 < Position ≤ 250,000",
+          "rate_percent": "0.65%"
+        },
+        "source_line": 26,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "250000",
+        "cap_usdt": "1000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.01",
+        "maximum_initial_leverage": 50,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "26 - 50x",
+          "position": "250,000 < Position ≤ 1,000,000",
+          "rate_percent": "1.00%"
+        },
+        "source_line": 27,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "1000000",
+        "cap_usdt": "5000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.02",
+        "maximum_initial_leverage": 25,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "11 - 25x",
+          "position": "1,000,000 < Position ≤ 5,000,000",
+          "rate_percent": "2.00%"
+        },
+        "source_line": 28,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "5000000",
+        "cap_usdt": "10000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.05",
+        "maximum_initial_leverage": 10,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "6 - 10x",
+          "position": "5,000,000 < Position ≤ 10,000,000",
+          "rate_percent": "5.00%"
+        },
+        "source_line": 29,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "10000000",
+        "cap_usdt": "20000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.1",
+        "maximum_initial_leverage": 5,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "5x",
+          "position": "10,000,000 < Position ≤ 20,000,000",
+          "rate_percent": "10.00%"
+        },
+        "source_line": 30,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "20000000",
+        "cap_usdt": "40000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.125",
+        "maximum_initial_leverage": 4,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "4x",
+          "position": "20,000,000 < Position ≤ 40,000,000",
+          "rate_percent": "12.50%"
+        },
+        "source_line": 31,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "40000000",
+        "cap_usdt": "80000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.15",
+        "maximum_initial_leverage": 3,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "3x",
+          "position": "40,000,000 < Position ≤ 80,000,000",
+          "rate_percent": "15.00%"
+        },
+        "source_line": 32,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "80000000",
+        "cap_usdt": "150000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.25",
+        "maximum_initial_leverage": 2,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "2x",
+          "position": "80,000,000 < Position ≤ 150,000,000",
+          "rate_percent": "25.00%"
+        },
+        "source_line": 33,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "150000000",
+        "cap_usdt": "300000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.5",
+        "maximum_initial_leverage": 1,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "1x",
+          "position": "150,000,000 < Position ≤ 300,000,000",
+          "rate_percent": "50.00%"
+        },
+        "source_line": 34,
+        "side": "before"
+      }
+    ]
+  },
+  {
+    "fact_id": "TIERS_MARG22_ETHUSDT_after",
+    "source_id": "MARG22",
+    "symbol": "ETHUSDT",
+    "side": "after",
+    "rows": [
+      {
+        "floor_usdt": "0",
+        "cap_usdt": "250000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.0065",
+        "maximum_initial_leverage": 75,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "51 - 75x",
+          "position": "0 < Position ≤ 250,000",
+          "rate_percent": "0.65%"
+        },
+        "source_line": 26,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "250000",
+        "cap_usdt": "1000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.01",
+        "maximum_initial_leverage": 50,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "26 - 50x",
+          "position": "250,000 < Position ≤ 1,000,000",
+          "rate_percent": "1.00%"
+        },
+        "source_line": 27,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "1000000",
+        "cap_usdt": "5000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.02",
+        "maximum_initial_leverage": 25,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "11 - 25x",
+          "position": "1,000,000 < Position ≤ 5,000,000",
+          "rate_percent": "2.00%"
+        },
+        "source_line": 28,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "5000000",
+        "cap_usdt": "10000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.05",
+        "maximum_initial_leverage": 10,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "6 - 10x",
+          "position": "5,000,000 < Position ≤ 10,000,000",
+          "rate_percent": "5.00%"
+        },
+        "source_line": 29,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "10000000",
+        "cap_usdt": "20000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.1",
+        "maximum_initial_leverage": 5,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "5x",
+          "position": "10,000,000 < Position ≤ 20,000,000",
+          "rate_percent": "10.00%"
+        },
+        "source_line": 30,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "20000000",
+        "cap_usdt": "40000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.125",
+        "maximum_initial_leverage": 4,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "4x",
+          "position": "20,000,000 < Position ≤ 40,000,000",
+          "rate_percent": "12.50%"
+        },
+        "source_line": 31,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "40000000",
+        "cap_usdt": "80000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.15",
+        "maximum_initial_leverage": 3,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "3x",
+          "position": "40,000,000 < Position ≤ 80,000,000",
+          "rate_percent": "15.00%"
+        },
+        "source_line": 32,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "80000000",
+        "cap_usdt": "150000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.25",
+        "maximum_initial_leverage": 2,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "2x",
+          "position": "80,000,000 < Position ≤ 150,000,000",
+          "rate_percent": "25.00%"
+        },
+        "source_line": 33,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "150000000",
+        "cap_usdt": "300000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.5",
+        "maximum_initial_leverage": 1,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "1x",
+          "position": "150,000,000 < Position ≤ 300,000,000",
+          "rate_percent": "50.00%"
+        },
+        "source_line": 34,
+        "side": "after"
+      }
+    ]
+  },
+  {
+    "fact_id": "TIERS_MARG23_BTCUSDT_before",
+    "source_id": "MARG23",
+    "symbol": "BTCUSDT",
+    "side": "before",
+    "rows": [
+      {
+        "floor_usdt": "0",
+        "cap_usdt": "50000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.004",
+        "maximum_initial_leverage": 125,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "101 - 125x",
+          "position": "0 < Position ≤ 50,000",
+          "rate_percent": "0.40%"
+        },
+        "source_line": 27,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "50000",
+        "cap_usdt": "500000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.005",
+        "maximum_initial_leverage": 100,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "51 - 100x",
+          "position": "50,000 < Position ≤ 500,000",
+          "rate_percent": "0.50%"
+        },
+        "source_line": 28,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "500000",
+        "cap_usdt": "8000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.01",
+        "maximum_initial_leverage": 50,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "21 - 50x",
+          "position": "500,000 < Position ≤ 8,000,000",
+          "rate_percent": "1.00%"
+        },
+        "source_line": 29,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "8000000",
+        "cap_usdt": "50000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.025",
+        "maximum_initial_leverage": 20,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "11 - 20x",
+          "position": "8,000,000 < Position ≤ 50,000,000",
+          "rate_percent": "2.50%"
+        },
+        "source_line": 30,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "50000000",
+        "cap_usdt": "80000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.05",
+        "maximum_initial_leverage": 10,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "6 - 10x",
+          "position": "50,000,000 < Position ≤ 80,000,000",
+          "rate_percent": "5.00%"
+        },
+        "source_line": 31,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "80000000",
+        "cap_usdt": "100000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.1",
+        "maximum_initial_leverage": 5,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "5x",
+          "position": "80,000,000 < Position ≤ 100,000,000",
+          "rate_percent": "10.00%"
+        },
+        "source_line": 32,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "100000000",
+        "cap_usdt": "120000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.125",
+        "maximum_initial_leverage": 4,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "4x",
+          "position": "100,000,000 < Position ≤ 120,000,000",
+          "rate_percent": "12.50%"
+        },
+        "source_line": 33,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "120000000",
+        "cap_usdt": "200000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.15",
+        "maximum_initial_leverage": 3,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "3x",
+          "position": "120,000,000 < Position ≤ 200,000,000",
+          "rate_percent": "15.00%"
+        },
+        "source_line": 34,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "200000000",
+        "cap_usdt": "300000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.25",
+        "maximum_initial_leverage": 2,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "2x",
+          "position": "200,000,000 < Position ≤ 300,000,000",
+          "rate_percent": "25.00%"
+        },
+        "source_line": 35,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "300000000",
+        "cap_usdt": "500000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.5",
+        "maximum_initial_leverage": 1,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "1x",
+          "position": "300,000,000 < Position ≤ 500,000,000",
+          "rate_percent": "50.00%"
+        },
+        "source_line": 36,
+        "side": "before"
+      }
+    ]
+  },
+  {
+    "fact_id": "TIERS_MARG23_BTCUSDT_after",
+    "source_id": "MARG23",
+    "symbol": "BTCUSDT",
+    "side": "after",
+    "rows": [
+      {
+        "floor_usdt": "0",
+        "cap_usdt": "50000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.004",
+        "maximum_initial_leverage": 125,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "101 - 125x",
+          "position": "0 < Position ≤ 50,000",
+          "rate_percent": "0.40%"
+        },
+        "source_line": 27,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "50000",
+        "cap_usdt": "500000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.005",
+        "maximum_initial_leverage": 100,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "51 - 100x",
+          "position": "50,000 < Position ≤ 500,000",
+          "rate_percent": "0.50%"
+        },
+        "source_line": 28,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "500000",
+        "cap_usdt": "10000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.01",
+        "maximum_initial_leverage": 50,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "21 - 50x",
+          "position": "500,000 < Position ≤ 10,000,000",
+          "rate_percent": "1.00%"
+        },
+        "source_line": 29,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "10000000",
+        "cap_usdt": "80000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.025",
+        "maximum_initial_leverage": 20,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "11 - 20x",
+          "position": "10,000,000 < Position ≤ 80,000,000",
+          "rate_percent": "2.50%"
+        },
+        "source_line": 30,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "80000000",
+        "cap_usdt": "150000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.05",
+        "maximum_initial_leverage": 10,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "6 - 10x",
+          "position": "80,000,000 < Position ≤ 150,000,000",
+          "rate_percent": "5.00%"
+        },
+        "source_line": 31,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "150000000",
+        "cap_usdt": "300000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.1",
+        "maximum_initial_leverage": 5,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "5x",
+          "position": "150,000,000 < Position ≤ 300,000,000",
+          "rate_percent": "10.00%"
+        },
+        "source_line": 32,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "300000000",
+        "cap_usdt": "450000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.125",
+        "maximum_initial_leverage": 4,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "4x",
+          "position": "300,000,000 < Position ≤ 450,000,000",
+          "rate_percent": "12.50%"
+        },
+        "source_line": 33,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "450000000",
+        "cap_usdt": "600000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.15",
+        "maximum_initial_leverage": 3,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "3x",
+          "position": "450,000,000 < Position ≤ 600,000,000",
+          "rate_percent": "15.00%"
+        },
+        "source_line": 34,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "600000000",
+        "cap_usdt": "800000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.25",
+        "maximum_initial_leverage": 2,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "2x",
+          "position": "600,000,000 < Position ≤ 800,000,000",
+          "rate_percent": "25.00%"
+        },
+        "source_line": 35,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "800000000",
+        "cap_usdt": "1000000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.5",
+        "maximum_initial_leverage": 1,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "1x",
+          "position": "800,000,000 < Position ≤ 1,000,000,000",
+          "rate_percent": "50.00%"
+        },
+        "source_line": 36,
+        "side": "after"
+      }
+    ]
+  },
+  {
+    "fact_id": "TIERS_MARG23_ETHUSDT_before",
+    "source_id": "MARG23",
+    "symbol": "ETHUSDT",
+    "side": "before",
+    "rows": [
+      {
+        "floor_usdt": "0",
+        "cap_usdt": "200000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.005",
+        "maximum_initial_leverage": 100,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "76 - 100x",
+          "position": "0 < Position ≤ 200,000",
+          "rate_percent": "0.50%"
+        },
+        "source_line": 40,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "200000",
+        "cap_usdt": "800000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.0065",
+        "maximum_initial_leverage": 75,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "51 - 75x",
+          "position": "200,000 < Position ≤ 800,000",
+          "rate_percent": "0.65%"
+        },
+        "source_line": 41,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "800000",
+        "cap_usdt": "5000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.01",
+        "maximum_initial_leverage": 50,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "21 - 50x",
+          "position": "800,000 < Position ≤ 5,000,000",
+          "rate_percent": "1.00%"
+        },
+        "source_line": 42,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "5000000",
+        "cap_usdt": "30000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.02",
+        "maximum_initial_leverage": 20,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "11 - 20x",
+          "position": "5,000,000 < Position ≤ 30,000,000",
+          "rate_percent": "2.00%"
+        },
+        "source_line": 43,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "30000000",
+        "cap_usdt": "50000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.05",
+        "maximum_initial_leverage": 10,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "6 - 10x",
+          "position": "30,000,000 < Position ≤ 50,000,000",
+          "rate_percent": "5.00%"
+        },
+        "source_line": 44,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "50000000",
+        "cap_usdt": "70000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.1",
+        "maximum_initial_leverage": 5,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "5x",
+          "position": "50,000,000 < Position ≤ 70,000,000",
+          "rate_percent": "10.00%"
+        },
+        "source_line": 45,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "70000000",
+        "cap_usdt": "80000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.125",
+        "maximum_initial_leverage": 4,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "4x",
+          "position": "70,000,000 < Position ≤ 80,000,000",
+          "rate_percent": "12.50%"
+        },
+        "source_line": 46,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "80000000",
+        "cap_usdt": "100000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.15",
+        "maximum_initial_leverage": 3,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "3x",
+          "position": "80,000,000 < Position ≤ 100,000,000",
+          "rate_percent": "15.00%"
+        },
+        "source_line": 47,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "100000000",
+        "cap_usdt": "150000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.25",
+        "maximum_initial_leverage": 2,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "2x",
+          "position": "100,000,000 < Position ≤ 150,000,000",
+          "rate_percent": "25.00%"
+        },
+        "source_line": 48,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "150000000",
+        "cap_usdt": "300000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.5",
+        "maximum_initial_leverage": 1,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "1x",
+          "position": "150,000,000 < Position ≤ 300,000,000",
+          "rate_percent": "50.00%"
+        },
+        "source_line": 49,
+        "side": "before"
+      }
+    ]
+  },
+  {
+    "fact_id": "TIERS_MARG23_ETHUSDT_after",
+    "source_id": "MARG23",
+    "symbol": "ETHUSDT",
+    "side": "after",
+    "rows": [
+      {
+        "floor_usdt": "0",
+        "cap_usdt": "50000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.004",
+        "maximum_initial_leverage": 125,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "101 - 125x",
+          "position": "0 < Position ≤ 50,000",
+          "rate_percent": "0.40%"
+        },
+        "source_line": 40,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "50000",
+        "cap_usdt": "500000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.005",
+        "maximum_initial_leverage": 100,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "76 - 100x",
+          "position": "50,000 < Position ≤ 500,000",
+          "rate_percent": "0.50%"
+        },
+        "source_line": 41,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "500000",
+        "cap_usdt": "1000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.0065",
+        "maximum_initial_leverage": 75,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "51 - 75x",
+          "position": "500,000 < Position ≤ 1,000,000",
+          "rate_percent": "0.65%"
+        },
+        "source_line": 42,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "1000000",
+        "cap_usdt": "5000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.01",
+        "maximum_initial_leverage": 50,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "21 - 50x",
+          "position": "1,000,000 < Position ≤ 5,000,000",
+          "rate_percent": "1.00%"
+        },
+        "source_line": 43,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "5000000",
+        "cap_usdt": "50000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.02",
+        "maximum_initial_leverage": 20,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "11 - 20x",
+          "position": "5,000,000 < Position ≤ 50,000,000",
+          "rate_percent": "2.00%"
+        },
+        "source_line": 44,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "50000000",
+        "cap_usdt": "100000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.05",
+        "maximum_initial_leverage": 10,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "6 - 10x",
+          "position": "50,000,000 < Position ≤ 100,000,000",
+          "rate_percent": "5.00%"
+        },
+        "source_line": 45,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "100000000",
+        "cap_usdt": "150000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.1",
+        "maximum_initial_leverage": 5,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "5x",
+          "position": "100,000,000 < Position ≤ 150,000,000",
+          "rate_percent": "10.00%"
+        },
+        "source_line": 46,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "150000000",
+        "cap_usdt": "300000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.125",
+        "maximum_initial_leverage": 4,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "4x",
+          "position": "150,000,000 < Position ≤ 300,000,000",
+          "rate_percent": "12.50%"
+        },
+        "source_line": 47,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "300000000",
+        "cap_usdt": "400000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.15",
+        "maximum_initial_leverage": 3,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "3x",
+          "position": "300,000,000 < Position ≤ 400,000,000",
+          "rate_percent": "15.00%"
+        },
+        "source_line": 48,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "400000000",
+        "cap_usdt": "500000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.25",
+        "maximum_initial_leverage": 2,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "2x",
+          "position": "400,000,000 < Position ≤ 500,000,000",
+          "rate_percent": "25.00%"
+        },
+        "source_line": 49,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "500000000",
+        "cap_usdt": "800000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.5",
+        "maximum_initial_leverage": 1,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "1x",
+          "position": "500,000,000 < Position ≤ 800,000,000",
+          "rate_percent": "50.00%"
+        },
+        "source_line": 50,
+        "side": "after"
+      }
+    ]
+  },
+  {
+    "fact_id": "TIERS_MARG24_BTCUSDT_before",
+    "source_id": "MARG24",
+    "symbol": "BTCUSDT",
+    "side": "before",
+    "rows": [
+      {
+        "floor_usdt": "0",
+        "cap_usdt": "50000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.004",
+        "maximum_initial_leverage": 125,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "101 - 125x",
+          "position": "0 < Position ≤ 50,000",
+          "rate_percent": "0.40%"
+        },
+        "source_line": 25,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "50000",
+        "cap_usdt": "500000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.005",
+        "maximum_initial_leverage": 100,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "51 - 100x",
+          "position": "50,000 < Position ≤ 500,000",
+          "rate_percent": "0.50%"
+        },
+        "source_line": 26,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "500000",
+        "cap_usdt": "10000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.01",
+        "maximum_initial_leverage": 50,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "21 - 50x",
+          "position": "500,000 < Position ≤ 10,000,000",
+          "rate_percent": "1.00%"
+        },
+        "source_line": 28,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "10000000",
+        "cap_usdt": "80000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.025",
+        "maximum_initial_leverage": 20,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "11 - 20x",
+          "position": "10,000,000 < Position ≤ 80,000,000",
+          "rate_percent": "2.50%"
+        },
+        "source_line": 30,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "80000000",
+        "cap_usdt": "150000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.05",
+        "maximum_initial_leverage": 10,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "6 - 10x",
+          "position": "80,000,000 < Position ≤ 150,000,000",
+          "rate_percent": "5.00%"
+        },
+        "source_line": 31,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "150000000",
+        "cap_usdt": "300000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.1",
+        "maximum_initial_leverage": 5,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "5x",
+          "position": "150,000,000 < Position ≤ 300,000,000",
+          "rate_percent": "10.00%"
+        },
+        "source_line": 32,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "300000000",
+        "cap_usdt": "450000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.125",
+        "maximum_initial_leverage": 4,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "4x",
+          "position": "300,000,000 < Position ≤ 450,000,000",
+          "rate_percent": "12.50%"
+        },
+        "source_line": 33,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "450000000",
+        "cap_usdt": "600000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.15",
+        "maximum_initial_leverage": 3,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "3x",
+          "position": "450,000,000 < Position ≤ 600,000,000",
+          "rate_percent": "15.00%"
+        },
+        "source_line": 34,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "600000000",
+        "cap_usdt": "800000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.25",
+        "maximum_initial_leverage": 2,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "2x",
+          "position": "600,000,000 < Position ≤ 800,000,000",
+          "rate_percent": "25.00%"
+        },
+        "source_line": 35,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "800000000",
+        "cap_usdt": "1000000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.5",
+        "maximum_initial_leverage": 1,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "1x",
+          "position": "800,000,000 < Position ≤ 1,000,000,000",
+          "rate_percent": "50.00%"
+        },
+        "source_line": 36,
+        "side": "before"
+      }
+    ]
+  },
+  {
+    "fact_id": "TIERS_MARG24_BTCUSDT_after",
+    "source_id": "MARG24",
+    "symbol": "BTCUSDT",
+    "side": "after",
+    "rows": [
+      {
+        "floor_usdt": "0",
+        "cap_usdt": "50000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.004",
+        "maximum_initial_leverage": 125,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "101 - 125x",
+          "position": "0 < Position ≤ 50,000",
+          "rate_percent": "0.40%"
+        },
+        "source_line": 25,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "50000",
+        "cap_usdt": "600000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.005",
+        "maximum_initial_leverage": 100,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "76 - 100x",
+          "position": "50,000 < Position ≤ 600,000",
+          "rate_percent": "0.50%"
+        },
+        "source_line": 26,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "600000",
+        "cap_usdt": "3000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.0065",
+        "maximum_initial_leverage": 75,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "51 - 75x",
+          "position": "600,000 < Position ≤ 3,000,000",
+          "rate_percent": "0.65%"
+        },
+        "source_line": 27,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "3000000",
+        "cap_usdt": "12000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.01",
+        "maximum_initial_leverage": 50,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "26 - 50x",
+          "position": "3,000,000 < Position ≤ 12,000,000",
+          "rate_percent": "1.00%"
+        },
+        "source_line": 28,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "12000000",
+        "cap_usdt": "70000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.02",
+        "maximum_initial_leverage": 25,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "21 - 25x",
+          "position": "12,000,000 < Position ≤ 70,000,000",
+          "rate_percent": "2.00%"
+        },
+        "source_line": 29,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "70000000",
+        "cap_usdt": "100000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.025",
+        "maximum_initial_leverage": 20,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "11 - 20x",
+          "position": "70,000,000 < Position ≤ 100,000,000",
+          "rate_percent": "2.50%"
+        },
+        "source_line": 30,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "100000000",
+        "cap_usdt": "230000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.05",
+        "maximum_initial_leverage": 10,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "6 - 10x",
+          "position": "100,000,000 < Position ≤ 230,000,000",
+          "rate_percent": "5.00%"
+        },
+        "source_line": 31,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "230000000",
+        "cap_usdt": "480000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.1",
+        "maximum_initial_leverage": 5,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "5x",
+          "position": "230,000,000 < Position ≤ 480,000,000",
+          "rate_percent": "10.00%"
+        },
+        "source_line": 32,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "480000000",
+        "cap_usdt": "600000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.125",
+        "maximum_initial_leverage": 4,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "4x",
+          "position": "480,000,000 < Position ≤ 600,000,000",
+          "rate_percent": "12.50%"
+        },
+        "source_line": 33,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "600000000",
+        "cap_usdt": "800000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.15",
+        "maximum_initial_leverage": 3,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "3x",
+          "position": "600,000,000 < Position ≤ 800,000,000",
+          "rate_percent": "15.00%"
+        },
+        "source_line": 34,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "800000000",
+        "cap_usdt": "1200000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.25",
+        "maximum_initial_leverage": 2,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "2x",
+          "position": "800,000,000 < Position ≤ 1,200,000,000",
+          "rate_percent": "25.00%"
+        },
+        "source_line": 35,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "1200000000",
+        "cap_usdt": "1800000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.5",
+        "maximum_initial_leverage": 1,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "1x",
+          "position": "1,200,000,000 < Position ≤ 1,800,000,000",
+          "rate_percent": "50.00%"
+        },
+        "source_line": 36,
+        "side": "after"
+      }
+    ]
+  },
+  {
+    "fact_id": "TIERS_MARG24_ETHUSDT_before",
+    "source_id": "MARG24",
+    "symbol": "ETHUSDT",
+    "side": "before",
+    "rows": [
+      {
+        "floor_usdt": "0",
+        "cap_usdt": "50000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.004",
+        "maximum_initial_leverage": 125,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "101 - 125x",
+          "position": "0 < Position ≤ 50,000",
+          "rate_percent": "0.40%"
+        },
+        "source_line": 40,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "50000",
+        "cap_usdt": "500000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.005",
+        "maximum_initial_leverage": 100,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "76 - 100x",
+          "position": "50,000 < Position ≤ 500,000",
+          "rate_percent": "0.50%"
+        },
+        "source_line": 41,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "500000",
+        "cap_usdt": "1000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.0065",
+        "maximum_initial_leverage": 75,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "51 - 75x",
+          "position": "500,000 < Position ≤ 1,000,000",
+          "rate_percent": "0.65%"
+        },
+        "source_line": 42,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "1000000",
+        "cap_usdt": "5000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.01",
+        "maximum_initial_leverage": 50,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "21 - 50x",
+          "position": "1,000,000 < Position ≤ 5,000,000",
+          "rate_percent": "1.00%"
+        },
+        "source_line": 43,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "5000000",
+        "cap_usdt": "50000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.02",
+        "maximum_initial_leverage": 20,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "11 - 20x",
+          "position": "5,000,000 < Position ≤ 50,000,000",
+          "rate_percent": "2.00%"
+        },
+        "source_line": 45,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "50000000",
+        "cap_usdt": "100000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.05",
+        "maximum_initial_leverage": 10,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "6 - 10x",
+          "position": "50,000,000 < Position ≤ 100,000,000",
+          "rate_percent": "5.00%"
+        },
+        "source_line": 46,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "100000000",
+        "cap_usdt": "150000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.1",
+        "maximum_initial_leverage": 5,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "5x",
+          "position": "100,000,000 < Position ≤ 150,000,000",
+          "rate_percent": "10.00%"
+        },
+        "source_line": 47,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "150000000",
+        "cap_usdt": "300000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.125",
+        "maximum_initial_leverage": 4,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "4x",
+          "position": "150,000,000 < Position ≤ 300,000,000",
+          "rate_percent": "12.50%"
+        },
+        "source_line": 48,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "300000000",
+        "cap_usdt": "400000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.15",
+        "maximum_initial_leverage": 3,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "3x",
+          "position": "300,000,000 < Position ≤ 400,000,000",
+          "rate_percent": "15.00%"
+        },
+        "source_line": 49,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "400000000",
+        "cap_usdt": "500000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.25",
+        "maximum_initial_leverage": 2,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "2x",
+          "position": "400,000,000 < Position ≤ 500,000,000",
+          "rate_percent": "25.00%"
+        },
+        "source_line": 50,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "500000000",
+        "cap_usdt": "800000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.5",
+        "maximum_initial_leverage": 1,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "1x",
+          "position": "500,000,000 < Position ≤ 800,000,000",
+          "rate_percent": "50.00%"
+        },
+        "source_line": 51,
+        "side": "before"
+      }
+    ]
+  },
+  {
+    "fact_id": "TIERS_MARG24_ETHUSDT_after",
+    "source_id": "MARG24",
+    "symbol": "ETHUSDT",
+    "side": "after",
+    "rows": [
+      {
+        "floor_usdt": "0",
+        "cap_usdt": "50000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.004",
+        "maximum_initial_leverage": 125,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "101 - 125x",
+          "position": "0 < Position ≤ 50,000",
+          "rate_percent": "0.40%"
+        },
+        "source_line": 40,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "50000",
+        "cap_usdt": "600000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.005",
+        "maximum_initial_leverage": 100,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "76 - 100x",
+          "position": "50,000 < Position ≤ 600,000",
+          "rate_percent": "0.50%"
+        },
+        "source_line": 41,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "600000",
+        "cap_usdt": "3000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.0065",
+        "maximum_initial_leverage": 75,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "51 - 75x",
+          "position": "600,000 < Position ≤ 3,000,000",
+          "rate_percent": "0.65%"
+        },
+        "source_line": 42,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "3000000",
+        "cap_usdt": "12000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.01",
+        "maximum_initial_leverage": 50,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "26 - 50x",
+          "position": "3,000,000 < Position ≤ 12,000,000",
+          "rate_percent": "1.00%"
+        },
+        "source_line": 43,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "12000000",
+        "cap_usdt": "50000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.02",
+        "maximum_initial_leverage": 25,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "21 - 25x",
+          "position": "12,000,000 < Position ≤ 50,000,000",
+          "rate_percent": "2.00%"
+        },
+        "source_line": 44,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "50000000",
+        "cap_usdt": "65000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.025",
+        "maximum_initial_leverage": 20,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "11 - 20x",
+          "position": "50,000,000 < Position ≤ 65,000,000",
+          "rate_percent": "2.50%"
+        },
+        "source_line": 45,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "65000000",
+        "cap_usdt": "150000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.05",
+        "maximum_initial_leverage": 10,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "6 - 10x",
+          "position": "65,000,000 < Position ≤ 150,000,000",
+          "rate_percent": "5.00%"
+        },
+        "source_line": 46,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "150000000",
+        "cap_usdt": "320000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.1",
+        "maximum_initial_leverage": 5,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "5x",
+          "position": "150,000,000 < Position ≤ 320,000,000",
+          "rate_percent": "10.00%"
+        },
+        "source_line": 47,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "320000000",
+        "cap_usdt": "400000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.125",
+        "maximum_initial_leverage": 4,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "4x",
+          "position": "320,000,000 < Position ≤ 400,000,000",
+          "rate_percent": "12.50%"
+        },
+        "source_line": 48,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "400000000",
+        "cap_usdt": "530000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.15",
+        "maximum_initial_leverage": 3,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "3x",
+          "position": "400,000,000 < Position ≤ 530,000,000",
+          "rate_percent": "15.00%"
+        },
+        "source_line": 49,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "530000000",
+        "cap_usdt": "800000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.25",
+        "maximum_initial_leverage": 2,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "2x",
+          "position": "530,000,000 < Position ≤ 800,000,000",
+          "rate_percent": "25.00%"
+        },
+        "source_line": 50,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "800000000",
+        "cap_usdt": "1200000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.5",
+        "maximum_initial_leverage": 1,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "1x",
+          "position": "800,000,000 < Position ≤ 1,200,000,000",
+          "rate_percent": "50.00%"
+        },
+        "source_line": 51,
+        "side": "after"
+      }
+    ]
+  },
+  {
+    "fact_id": "TIERS_MARGBTC25_BTCUSDT_before",
+    "source_id": "MARGBTC25",
+    "symbol": "BTCUSDT",
+    "side": "before",
+    "rows": [
+      {
+        "floor_usdt": "0",
+        "cap_usdt": "50000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.004",
+        "maximum_initial_leverage": 125,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "101 - 125x",
+          "position": "0 < Position ≤ 50,000",
+          "rate_percent": "0.40%"
+        },
+        "source_line": 40,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "50000",
+        "cap_usdt": "600000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.005",
+        "maximum_initial_leverage": 100,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "76 - 100x",
+          "position": "50,000 < Position ≤ 600,000",
+          "rate_percent": "0.50%"
+        },
+        "source_line": 41,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "600000",
+        "cap_usdt": "3000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.0065",
+        "maximum_initial_leverage": 75,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "51 - 75x",
+          "position": "600,000 < Position ≤ 3,000,000",
+          "rate_percent": "0.65%"
+        },
+        "source_line": 42,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "3000000",
+        "cap_usdt": "12000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.01",
+        "maximum_initial_leverage": 50,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "26 - 50x",
+          "position": "3,000,000 < Position ≤ 12,000,000",
+          "rate_percent": "1.00%"
+        },
+        "source_line": 43,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "12000000",
+        "cap_usdt": "70000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.02",
+        "maximum_initial_leverage": 25,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "21 - 25x",
+          "position": "12,000,000 < Position ≤ 70,000,000",
+          "rate_percent": "2.00%"
+        },
+        "source_line": 44,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "70000000",
+        "cap_usdt": "100000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.025",
+        "maximum_initial_leverage": 20,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "11 - 20x",
+          "position": "70,000,000 < Position ≤ 100,000,000",
+          "rate_percent": "2.50%"
+        },
+        "source_line": 45,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "100000000",
+        "cap_usdt": "230000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.05",
+        "maximum_initial_leverage": 10,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "6 - 10x",
+          "position": "100,000,000 < Position ≤ 230,000,000",
+          "rate_percent": "5.00%"
+        },
+        "source_line": 46,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "230000000",
+        "cap_usdt": "480000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.1",
+        "maximum_initial_leverage": 5,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "5x",
+          "position": "230,000,000 < Position ≤ 480,000,000",
+          "rate_percent": "10%"
+        },
+        "source_line": 47,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "480000000",
+        "cap_usdt": "600000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.125",
+        "maximum_initial_leverage": 4,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "4x",
+          "position": "480,000,000 < Position ≤ 600,000,000",
+          "rate_percent": "12.50%"
+        },
+        "source_line": 48,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "600000000",
+        "cap_usdt": "800000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.15",
+        "maximum_initial_leverage": 3,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "3x",
+          "position": "600,000,000 < Position ≤ 800,000,000",
+          "rate_percent": "15.00%"
+        },
+        "source_line": 49,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "800000000",
+        "cap_usdt": "1200000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.25",
+        "maximum_initial_leverage": 2,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "2x",
+          "position": "800,000,000 < Position ≤ 1,200,000,000",
+          "rate_percent": "25.00%"
+        },
+        "source_line": 50,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "1200000000",
+        "cap_usdt": "1800000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.5",
+        "maximum_initial_leverage": 1,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "1x",
+          "position": "1,200,000,000 < Position ≤ 1,800,000,000",
+          "rate_percent": "50%"
+        },
+        "source_line": 51,
+        "side": "before"
+      }
+    ]
+  },
+  {
+    "fact_id": "TIERS_MARGBTC25_BTCUSDT_after",
+    "source_id": "MARGBTC25",
+    "symbol": "BTCUSDT",
+    "side": "after",
+    "rows": [
+      {
+        "floor_usdt": "0",
+        "cap_usdt": "300000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.004",
+        "maximum_initial_leverage": 125,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "101 - 125x",
+          "position": "0 < Position ≤ 300,000",
+          "rate_percent": "0.40%"
+        },
+        "source_line": 40,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "300000",
+        "cap_usdt": "800000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.005",
+        "maximum_initial_leverage": 100,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "76 - 100x",
+          "position": "300,000 < Position ≤ 800,000",
+          "rate_percent": "0.50%"
+        },
+        "source_line": 41,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "800000",
+        "cap_usdt": "3000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.0065",
+        "maximum_initial_leverage": 75,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "51 - 75x",
+          "position": "800,000 < Position ≤ 3,000,000",
+          "rate_percent": "0.65%"
+        },
+        "source_line": 42,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "3000000",
+        "cap_usdt": "12000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.01",
+        "maximum_initial_leverage": 50,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "26 - 50x",
+          "position": "3,000,000 < Position ≤ 12,000,000",
+          "rate_percent": "1.00%"
+        },
+        "source_line": 43,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "12000000",
+        "cap_usdt": "70000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.02",
+        "maximum_initial_leverage": 25,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "21 - 25x",
+          "position": "12,000,000 < Position ≤ 70,000,000",
+          "rate_percent": "2.00%"
+        },
+        "source_line": 44,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "70000000",
+        "cap_usdt": "100000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.025",
+        "maximum_initial_leverage": 20,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "11 - 20x",
+          "position": "70,000,000 < Position ≤ 100,000,000",
+          "rate_percent": "2.50%"
+        },
+        "source_line": 45,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "100000000",
+        "cap_usdt": "230000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.05",
+        "maximum_initial_leverage": 10,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "6 - 10x",
+          "position": "100,000,000 < Position ≤ 230,000,000",
+          "rate_percent": "5.00%"
+        },
+        "source_line": 46,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "230000000",
+        "cap_usdt": "480000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.1",
+        "maximum_initial_leverage": 5,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "5x",
+          "position": "230,000,000 < Position ≤ 480,000,000",
+          "rate_percent": "10%"
+        },
+        "source_line": 47,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "480000000",
+        "cap_usdt": "600000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.125",
+        "maximum_initial_leverage": 4,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "4x",
+          "position": "480,000,000 < Position ≤ 600,000,000",
+          "rate_percent": "12.50%"
+        },
+        "source_line": 48,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "600000000",
+        "cap_usdt": "800000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.15",
+        "maximum_initial_leverage": 3,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "3x",
+          "position": "600,000,000 < Position ≤ 800,000,000",
+          "rate_percent": "15.00%"
+        },
+        "source_line": 49,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "800000000",
+        "cap_usdt": "1200000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.25",
+        "maximum_initial_leverage": 2,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "2x",
+          "position": "800,000,000 < Position ≤ 1,200,000,000",
+          "rate_percent": "25.00%"
+        },
+        "source_line": 50,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "1200000000",
+        "cap_usdt": "1800000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.5",
+        "maximum_initial_leverage": 1,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "1x",
+          "position": "1,200,000,000 < Position ≤ 1,800,000,000",
+          "rate_percent": "50%"
+        },
+        "source_line": 51,
+        "side": "after"
+      }
+    ]
+  },
+  {
+    "fact_id": "TIERS_MARGAUG25_BTCUSDT_before",
+    "source_id": "MARGAUG25",
+    "symbol": "BTCUSDT",
+    "side": "before",
+    "rows": [
+      {
+        "floor_usdt": "0",
+        "cap_usdt": "300000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.004",
+        "maximum_initial_leverage": 125,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "101 - 125x",
+          "position": "0 < Position ≤ 300,000",
+          "rate_percent": "0.40%"
+        },
+        "source_line": 52,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "300000",
+        "cap_usdt": "800000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.005",
+        "maximum_initial_leverage": 100,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "76 - 100x",
+          "position": "300,000 < Position ≤ 800,000",
+          "rate_percent": "0.50%"
+        },
+        "source_line": 53,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "800000",
+        "cap_usdt": "3000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.0065",
+        "maximum_initial_leverage": 75,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "51 - 75x",
+          "position": "800,000 < Position ≤ 3,000,000",
+          "rate_percent": "0.65%"
+        },
+        "source_line": 54,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "3000000",
+        "cap_usdt": "12000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.01",
+        "maximum_initial_leverage": 50,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "26 - 50x",
+          "position": "3,000,000 < Position ≤ 12,000,000",
+          "rate_percent": "1.00%"
+        },
+        "source_line": 55,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "12000000",
+        "cap_usdt": "70000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.02",
+        "maximum_initial_leverage": 25,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "21 - 25x",
+          "position": "12,000,000 < Position ≤ 70,000,000",
+          "rate_percent": "2.00%"
+        },
+        "source_line": 56,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "70000000",
+        "cap_usdt": "100000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.025",
+        "maximum_initial_leverage": 20,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "11 - 20x",
+          "position": "70,000,000 < Position ≤ 100,000,000",
+          "rate_percent": "2.50%"
+        },
+        "source_line": 57,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "100000000",
+        "cap_usdt": "230000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.05",
+        "maximum_initial_leverage": 10,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "6 - 10x",
+          "position": "100,000,000 < Position ≤ 230,000,000",
+          "rate_percent": "5.00%"
+        },
+        "source_line": 58,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "230000000",
+        "cap_usdt": "480000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.1",
+        "maximum_initial_leverage": 5,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "5x",
+          "position": "230,000,000 < Position ≤ 480,000,000",
+          "rate_percent": "10.00%"
+        },
+        "source_line": 59,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "480000000",
+        "cap_usdt": "600000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.125",
+        "maximum_initial_leverage": 4,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "4x",
+          "position": "480,000,000 < Position ≤ 600,000,000",
+          "rate_percent": "12.50%"
+        },
+        "source_line": 60,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "600000000",
+        "cap_usdt": "800000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.15",
+        "maximum_initial_leverage": 3,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "3x",
+          "position": "600,000,000 < Position ≤ 800,000,000",
+          "rate_percent": "15.00%"
+        },
+        "source_line": 61,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "800000000",
+        "cap_usdt": "1200000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.25",
+        "maximum_initial_leverage": 2,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "2x",
+          "position": "800,000,000 < Position ≤ 1,200,000,000",
+          "rate_percent": "25.00%"
+        },
+        "source_line": 62,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "1200000000",
+        "cap_usdt": "1800000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.5",
+        "maximum_initial_leverage": 1,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "1x",
+          "position": "1,200,000,000 < Position ≤ 1,800,000,000",
+          "rate_percent": "50.00%"
+        },
+        "source_line": 63,
+        "side": "before"
+      }
+    ]
+  },
+  {
+    "fact_id": "TIERS_MARGAUG25_BTCUSDT_after",
+    "source_id": "MARGAUG25",
+    "symbol": "BTCUSDT",
+    "side": "after",
+    "rows": [
+      {
+        "floor_usdt": "0",
+        "cap_usdt": "300000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.004",
+        "maximum_initial_leverage": 150,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "101 - 150x",
+          "position": "0 < Position ≤ 300,000",
+          "rate_percent": "0.40%"
+        },
+        "source_line": 52,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "300000",
+        "cap_usdt": "800000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.005",
+        "maximum_initial_leverage": 100,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "76 - 100x",
+          "position": "300,000 < Position ≤ 800,000",
+          "rate_percent": "0.50%"
+        },
+        "source_line": 53,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "800000",
+        "cap_usdt": "3000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.0065",
+        "maximum_initial_leverage": 75,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "51 - 75x",
+          "position": "800,000 < Position ≤ 3,000,000",
+          "rate_percent": "0.65%"
+        },
+        "source_line": 54,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "3000000",
+        "cap_usdt": "12000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.01",
+        "maximum_initial_leverage": 50,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "26 - 50x",
+          "position": "3,000,000 < Position ≤ 12,000,000",
+          "rate_percent": "1.00%"
+        },
+        "source_line": 55,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "12000000",
+        "cap_usdt": "70000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.02",
+        "maximum_initial_leverage": 25,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "21 - 25x",
+          "position": "12,000,000 < Position ≤ 70,000,000",
+          "rate_percent": "2.00%"
+        },
+        "source_line": 56,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "70000000",
+        "cap_usdt": "100000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.025",
+        "maximum_initial_leverage": 20,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "11 - 20x",
+          "position": "70,000,000 < Position ≤ 100,000,000",
+          "rate_percent": "2.50%"
+        },
+        "source_line": 57,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "100000000",
+        "cap_usdt": "230000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.05",
+        "maximum_initial_leverage": 10,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "6 - 10x",
+          "position": "100,000,000 < Position ≤ 230,000,000",
+          "rate_percent": "5.00%"
+        },
+        "source_line": 58,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "230000000",
+        "cap_usdt": "480000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.1",
+        "maximum_initial_leverage": 5,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "5x",
+          "position": "230,000,000 < Position ≤ 480,000,000",
+          "rate_percent": "10.00%"
+        },
+        "source_line": 59,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "480000000",
+        "cap_usdt": "600000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.125",
+        "maximum_initial_leverage": 4,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "4x",
+          "position": "480,000,000 < Position ≤ 600,000,000",
+          "rate_percent": "12.50%"
+        },
+        "source_line": 60,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "600000000",
+        "cap_usdt": "800000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.15",
+        "maximum_initial_leverage": 3,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "3x",
+          "position": "600,000,000 < Position ≤ 800,000,000",
+          "rate_percent": "15.00%"
+        },
+        "source_line": 61,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "800000000",
+        "cap_usdt": "1200000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.25",
+        "maximum_initial_leverage": 2,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "2x",
+          "position": "800,000,000 < Position ≤ 1,200,000,000",
+          "rate_percent": "25.00%"
+        },
+        "source_line": 62,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "1200000000",
+        "cap_usdt": "1800000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.5",
+        "maximum_initial_leverage": 1,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "1x",
+          "position": "1,200,000,000 < Position ≤ 1,800,000,000",
+          "rate_percent": "50.00%"
+        },
+        "source_line": 63,
+        "side": "after"
+      }
+    ]
+  },
+  {
+    "fact_id": "TIERS_MARGAUG25_ETHUSDT_before",
+    "source_id": "MARGAUG25",
+    "symbol": "ETHUSDT",
+    "side": "before",
+    "rows": [
+      {
+        "floor_usdt": "0",
+        "cap_usdt": "300000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.004",
+        "maximum_initial_leverage": 125,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "101 - 125x",
+          "position": "0 < Position ≤ 300,000",
+          "rate_percent": "0.40%"
+        },
+        "source_line": 67,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "300000",
+        "cap_usdt": "800000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.005",
+        "maximum_initial_leverage": 100,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "76 - 100x",
+          "position": "300,000 < Position ≤ 800,000",
+          "rate_percent": "0.50%"
+        },
+        "source_line": 68,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "800000",
+        "cap_usdt": "3000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.0065",
+        "maximum_initial_leverage": 75,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "51 - 75x",
+          "position": "800,000 < Position ≤ 3,000,000",
+          "rate_percent": "0.65%"
+        },
+        "source_line": 69,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "3000000",
+        "cap_usdt": "12000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.01",
+        "maximum_initial_leverage": 50,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "26 - 50x",
+          "position": "3,000,000 < Position ≤ 12,000,000",
+          "rate_percent": "1.00%"
+        },
+        "source_line": 70,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "12000000",
+        "cap_usdt": "50000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.02",
+        "maximum_initial_leverage": 25,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "21 - 25x",
+          "position": "12,000,000 < Position ≤ 50,000,000",
+          "rate_percent": "2.00%"
+        },
+        "source_line": 71,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "50000000",
+        "cap_usdt": "65000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.025",
+        "maximum_initial_leverage": 20,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "11 - 20x",
+          "position": "50,000,000 < Position ≤ 65,000,000",
+          "rate_percent": "2.50%"
+        },
+        "source_line": 72,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "65000000",
+        "cap_usdt": "150000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.05",
+        "maximum_initial_leverage": 10,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "6 - 10x",
+          "position": "65,000,000 < Position ≤ 150,000,000",
+          "rate_percent": "5.00%"
+        },
+        "source_line": 73,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "150000000",
+        "cap_usdt": "320000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.1",
+        "maximum_initial_leverage": 5,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "5x",
+          "position": "150,000,000 < Position ≤ 320,000,000",
+          "rate_percent": "10.00%"
+        },
+        "source_line": 74,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "320000000",
+        "cap_usdt": "400000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.125",
+        "maximum_initial_leverage": 4,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "4x",
+          "position": "320,000,000 < Position ≤ 400,000,000",
+          "rate_percent": "12.50%"
+        },
+        "source_line": 75,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "400000000",
+        "cap_usdt": "530000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.15",
+        "maximum_initial_leverage": 3,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "3x",
+          "position": "400,000,000 < Position ≤ 530,000,000",
+          "rate_percent": "15.00%"
+        },
+        "source_line": 76,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "530000000",
+        "cap_usdt": "800000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.25",
+        "maximum_initial_leverage": 2,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "2x",
+          "position": "530,000,000 < Position ≤ 800,000,000",
+          "rate_percent": "25.00%"
+        },
+        "source_line": 77,
+        "side": "before"
+      },
+      {
+        "floor_usdt": "800000000",
+        "cap_usdt": "1200000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.5",
+        "maximum_initial_leverage": 1,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "1x",
+          "position": "800,000,000 < Position ≤ 1,200,000,000",
+          "rate_percent": "50.00%"
+        },
+        "source_line": 78,
+        "side": "before"
+      }
+    ]
+  },
+  {
+    "fact_id": "TIERS_MARGAUG25_ETHUSDT_after",
+    "source_id": "MARGAUG25",
+    "symbol": "ETHUSDT",
+    "side": "after",
+    "rows": [
+      {
+        "floor_usdt": "0",
+        "cap_usdt": "300000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.004",
+        "maximum_initial_leverage": 150,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "101 - 150x",
+          "position": "0 < Position ≤ 300,000",
+          "rate_percent": "0.40%"
+        },
+        "source_line": 67,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "300000",
+        "cap_usdt": "800000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.005",
+        "maximum_initial_leverage": 100,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "76 - 100x",
+          "position": "300,000 < Position ≤ 800,000",
+          "rate_percent": "0.50%"
+        },
+        "source_line": 68,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "800000",
+        "cap_usdt": "3000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.0065",
+        "maximum_initial_leverage": 75,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "51 - 75x",
+          "position": "800,000 < Position ≤ 3,000,000",
+          "rate_percent": "0.65%"
+        },
+        "source_line": 69,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "3000000",
+        "cap_usdt": "12000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.01",
+        "maximum_initial_leverage": 50,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "26 - 50x",
+          "position": "3,000,000 < Position ≤ 12,000,000",
+          "rate_percent": "1.00%"
+        },
+        "source_line": 70,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "12000000",
+        "cap_usdt": "50000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.02",
+        "maximum_initial_leverage": 25,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "21 - 25x",
+          "position": "12,000,000 < Position ≤ 50,000,000",
+          "rate_percent": "2.00%"
+        },
+        "source_line": 71,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "50000000",
+        "cap_usdt": "65000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.025",
+        "maximum_initial_leverage": 20,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "11 - 20x",
+          "position": "50,000,000 < Position ≤ 65,000,000",
+          "rate_percent": "2.50%"
+        },
+        "source_line": 72,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "65000000",
+        "cap_usdt": "150000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.05",
+        "maximum_initial_leverage": 10,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "6 - 10x",
+          "position": "65,000,000 < Position ≤ 150,000,000",
+          "rate_percent": "5.00%"
+        },
+        "source_line": 73,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "150000000",
+        "cap_usdt": "320000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.1",
+        "maximum_initial_leverage": 5,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "5x",
+          "position": "150,000,000 < Position ≤ 320,000,000",
+          "rate_percent": "10.00%"
+        },
+        "source_line": 74,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "320000000",
+        "cap_usdt": "400000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.125",
+        "maximum_initial_leverage": 4,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "4x",
+          "position": "320,000,000 < Position ≤ 400,000,000",
+          "rate_percent": "12.50%"
+        },
+        "source_line": 75,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "400000000",
+        "cap_usdt": "530000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.15",
+        "maximum_initial_leverage": 3,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "3x",
+          "position": "400,000,000 < Position ≤ 530,000,000",
+          "rate_percent": "15.00%"
+        },
+        "source_line": 76,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "530000000",
+        "cap_usdt": "800000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.25",
+        "maximum_initial_leverage": 2,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "2x",
+          "position": "530,000,000 < Position ≤ 800,000,000",
+          "rate_percent": "25.00%"
+        },
+        "source_line": 77,
+        "side": "after"
+      },
+      {
+        "floor_usdt": "800000000",
+        "cap_usdt": "1200000000",
+        "floor_inclusive": false,
+        "cap_inclusive": true,
+        "maintenance_rate": "0.5",
+        "maximum_initial_leverage": 1,
+        "maintenance_amount_published": null,
+        "original": {
+          "leverage": "1x",
+          "position": "800,000,000 < Position ≤ 1,200,000,000",
+          "rate_percent": "50.00%"
+        },
+        "source_line": 78,
+        "side": "after"
+      }
+    ]
+  }
+]

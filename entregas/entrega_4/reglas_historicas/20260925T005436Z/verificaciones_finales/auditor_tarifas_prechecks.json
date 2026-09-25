@@ -1,0 +1,16 @@
+{
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "-m",
+    "ruff",
+    "check",
+    "scripts/audit_historical_rules_fills.py"
+  ],
+  "exit_code": 0,
+  "output": "All checks passed!\n",
+  "self_checks": 10,
+  "scope": "Postprocessing auditor only; full 595 pytest suite already passed before addition; engine and scenario runner unchanged"
+}

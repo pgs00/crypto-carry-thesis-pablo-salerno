@@ -1,0 +1,17 @@
+{
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider"
+  ],
+  "exit_code": 0,
+  "seconds": 420.4044022000162,
+  "log": "pytest_completo.txt",
+  "sha256": "0ce96ce366e00eb5deac77f346071134ab38d146f53f25f0a02ef645c3445be2"
+}

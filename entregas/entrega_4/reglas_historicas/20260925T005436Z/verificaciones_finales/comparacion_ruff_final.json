@@ -1,0 +1,21 @@
+{
+  "started_at": "2026-09-25T14:12:18.468930+00:00",
+  "finished_at": "2026-09-25T14:12:18.591192+00:00",
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "-m",
+    "ruff",
+    "check",
+    "scripts/report_historical_rules_sensitivity.py",
+    "scripts/verify_rules_sensitivity_package.py",
+    "tests/unit/test_rules_sensitivity_reporting.py",
+    "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\herramientas\\report_historical_rules_sensitivity.py",
+    "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\herramientas\\verify_rules_sensitivity_package.py"
+  ],
+  "exit_code": 0,
+  "stdout": "All checks passed!\n",
+  "stderr": ""
+}

@@ -1,0 +1,45 @@
+START MARGEN_2X/permanent code=314631c24b36bbee58eb55a9b17505af656de453b60d1496c067e6f30b33de97
+[futures_scaled/permanent] 1.3% | UTC 2022-01-22T20:43:00.000000000Z | fills 8
+[futures_scaled/permanent] 2.9% | UTC 2022-02-18T15:01:00.000000000Z | fills 8
+[futures_scaled/permanent] 4.5% | UTC 2022-03-18T06:01:00.000000000Z | fills 10
+[futures_scaled/permanent] 6.1% | UTC 2022-04-14T23:42:00.000000000Z | fills 16
+[futures_scaled/permanent] 7.7% | UTC 2022-05-12T01:36:00.000000000Z | fills 16
+[futures_scaled/permanent] 9.2% | UTC 2022-06-05T23:55:00.000000000Z | fills 22
+[futures_scaled/permanent] 10.9% | UTC 2022-07-05T08:01:00.000000000Z | fills 26
+[futures_scaled/permanent] 12.5% | UTC 2022-08-01T08:01:00.019000000Z | fills 36
+[futures_scaled/permanent] 14.0% | UTC 2022-08-28T08:25:00.000000000Z | fills 44
+[futures_scaled/permanent] 15.5% | UTC 2022-09-21T11:39:00.000000000Z | fills 48
+[futures_scaled/permanent] 16.8% | UTC 2022-10-14T13:38:00.000000000Z | fills 50
+[futures_scaled/permanent] 18.2% | UTC 2022-11-07T00:01:00.012000000Z | fills 50
+[futures_scaled/permanent] 19.5% | UTC 2022-11-29T20:03:00.000000000Z | fills 50
+[futures_scaled/permanent] 20.9% | UTC 2022-12-22T15:14:00.000000000Z | fills 50
+[futures_scaled/permanent] 22.1% | UTC 2023-01-13T08:01:00.000000000Z | fills 52
+[futures_scaled/permanent] 23.5% | UTC 2023-02-06T06:31:00.000000000Z | fills 66
+[futures_scaled/permanent] 25.2% | UTC 2023-03-06T02:27:00.000000000Z | fills 74
+[futures_scaled/permanent] 27.9% | UTC 2023-04-21T01:43:00.000000000Z | fills 92
+[futures_scaled/permanent] 31.6% | UTC 2023-06-23T01:32:00.000000000Z | fills 100
+[futures_scaled/permanent] 35.1% | UTC 2023-08-22T00:01:00.000000000Z | fills 106
+[futures_scaled/permanent] 38.3% | UTC 2023-10-16T01:16:00.000000000Z | fills 106
+[futures_scaled/permanent] 41.6% | UTC 2023-12-10T16:01:00.000000000Z | fills 128
+[futures_scaled/permanent] 44.8% | UTC 2024-02-03T13:20:00.000000000Z | fills 146
+[futures_scaled/permanent] 47.9% | UTC 2024-03-27T16:01:00.000000000Z | fills 172
+[futures_scaled/permanent] 51.1% | UTC 2024-05-19T23:19:00.000000000Z | fills 186
+[futures_scaled/permanent] 54.2% | UTC 2024-07-11T17:31:00.000000000Z | fills 204
+[futures_scaled/permanent] 57.4% | UTC 2024-09-04T22:59:00.000000000Z | fills 218
+[futures_scaled/permanent] 60.6% | UTC 2024-10-30T10:32:00.000000000Z | fills 230
+[futures_scaled/permanent] 63.5% | UTC 2024-12-17T11:44:00.000000000Z | fills 252
+[futures_scaled/permanent] 66.3% | UTC 2025-02-04T10:12:00.000000000Z | fills 262
+[futures_scaled/permanent] 69.2% | UTC 2025-03-25T14:03:00.000000000Z | fills 268
+[futures_scaled/permanent] 72.1% | UTC 2025-05-13T03:51:00.000000000Z | fills 268
+[futures_scaled/permanent] 75.0% | UTC 2025-07-01T18:07:00.000000000Z | fills 278
+[futures_scaled/permanent] 77.6% | UTC 2025-08-14T16:01:00.000000000Z | fills 292
+[futures_scaled/permanent] 79.8% | UTC 2025-09-21T00:22:00.000000000Z | fills 302
+[futures_scaled/permanent] 81.9% | UTC 2025-10-27T00:26:00.000000000Z | fills 314
+[futures_scaled/permanent] 84.9% | UTC 2025-12-17T04:11:00.000000000Z | fills 320
+[futures_scaled/permanent] 87.8% | UTC 2026-02-05T11:39:00.000000000Z | fills 322
+[futures_scaled/permanent] 90.7% | UTC 2026-03-26T00:01:00.001000000Z | fills 322
+[futures_scaled/permanent] 93.6% | UTC 2026-05-14T13:18:00.000000000Z | fills 322
+[futures_scaled/permanent] 96.4% | UTC 2026-07-02T04:56:00.000000000Z | fills 322
+[futures_scaled/permanent] 99.2% | UTC 2026-08-18T16:01:00.003000000Z | fills 324
+REPLAY_COMPLETE MARGEN_2X/permanent seconds=1274.26
+{"scenario": "MARGEN_2X", "strategy": "permanent", "status": "ejecutado", "engine_status": "complete", "run_id": "run_3f5d9cce8ff1c2ba5447e3b6", "path": "corridas/run_3f5d9cce8ff1c2ba5447e3b6", "manifest_sha256": "29ae8e7e0862a22875bf4e6563d16bbb4d334c4963384897097a89df12f1f9dd", "code_hash": "314631c24b36bbee58eb55a9b17505af656de453b60d1496c067e6f30b33de97", "replay_seconds": 1274.2551366999978, "total_seconds": 1335.5432722999249, "final_equity": "11628.23407455384730719199999", "ledger_difference": "3E-24", "native_fills": 324, "fills": 324, "input_hashes_verified_again_at_batch_end": false}

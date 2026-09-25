@@ -1,0 +1,19 @@
+{
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "-m",
+    "ruff",
+    "check",
+    "src",
+    "tests",
+    "scripts",
+    "entregas/entrega_3/archivo/empaquetar.py"
+  ],
+  "started_at_utc": "2026-09-25T14:10:29.622861+00:00",
+  "elapsed_seconds": 0.11303989996667951,
+  "exit_code": 0,
+  "log_sha256": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0"
+}

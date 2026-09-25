@@ -1,0 +1,19 @@
+{
+  "sealed_before_new_results_utc": "2026-09-25T01:04:10.937517+00:00",
+  "files": {
+    "docs/entrega_4/reglas_historicas/protocolo.md": "b4dbdffa74423da6f9080ecb43b62321f9be2d058e798e0eca0c7f7a49b4ba55",
+    "configs/entrega_4/reglas_historicas/BASE_E3.toml": "de8388f6ec90913fab195452ffadb749aafedb461e498b4188f0a38d1bcf66e5",
+    "configs/entrega_4/reglas_historicas/BTC_PROMO_DECISION.toml": "f53309975e5127003879c63efafdb1546dc67a654515dd3e053fccc4c3e9a899",
+    "configs/entrega_4/reglas_historicas/BTC_PROMO_REALIZADA.toml": "98a87bd22110d21e139e468059387359d98e501d8090a41836934ee2f8a8a4a6",
+    "configs/entrega_4/reglas_historicas/FUT4_DECISION.toml": "02cc203ff76fe6458101bb7f75694ea94caf829cd886a050197378af3f15815b",
+    "configs/entrega_4/reglas_historicas/FUT4_REALIZADA.toml": "0bf1e519e19f2e0d43e04b8b339dcfe73eb564a51fd0d8ca014456d37bd472ee",
+    "configs/entrega_4/reglas_historicas/MARGEN_2X.toml": "36d1ebf12d6945cf54f4ff0c8363e950c904b28b3b90999bc54b5a1fb44341b1"
+  },
+  "comparators": {
+    "BTC_PROMO_REALIZADA": "BASE_E3",
+    "BTC_PROMO_DECISION": "BTC_PROMO_REALIZADA",
+    "FUT4_REALIZADA": "BASE_E3",
+    "FUT4_DECISION": "FUT4_REALIZADA",
+    "MARGEN_2X": "BASE_E3"
+  }
+}

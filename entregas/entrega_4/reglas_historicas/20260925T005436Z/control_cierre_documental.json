@@ -1,0 +1,699 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-09-25T14:26:15.536014+00:00",
+  "authored_markdown_files": 14,
+  "local_links_checked": 135,
+  "local_links": [
+    {
+      "document": "cambios.md",
+      "target": "cambios_codigo.patch",
+      "exists": true
+    },
+    {
+      "document": "cambios.md",
+      "target": "archivos_nuevos_modificados.csv",
+      "exists": true
+    },
+    {
+      "document": "cambios.md",
+      "target": "codigo_base_manifest.json",
+      "exists": true
+    },
+    {
+      "document": "cambios.md",
+      "target": "codigo_ejecutado_manifest.json",
+      "exists": true
+    },
+    {
+      "document": "cambios.md",
+      "target": "verificaciones.md",
+      "exists": true
+    },
+    {
+      "document": "cambios.md",
+      "target": "verificaciones_finales/runner_insolvencia_resolucion.json",
+      "exists": true
+    },
+    {
+      "document": "cobertura_pendiente.md",
+      "target": "evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/reglas_historicas.json",
+      "exists": true
+    },
+    {
+      "document": "cobertura_pendiente.md",
+      "target": "evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/fuentes.json",
+      "exists": true
+    },
+    {
+      "document": "cobertura_pendiente.md",
+      "target": "evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/cobertura.csv",
+      "exists": true
+    },
+    {
+      "document": "cobertura_pendiente.md",
+      "target": "documentos/matriz_integracion.csv",
+      "exists": true
+    },
+    {
+      "document": "cobertura_pendiente.md",
+      "target": "diagnostico_historico/README.md",
+      "exists": true
+    },
+    {
+      "document": "cobertura_pendiente.md",
+      "target": "documentos/decisiones_integracion.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "indice_corridas.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "comparacion/reporte.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "comparacion/metricas_cartera_periodo.csv",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "comparacion/h2.csv",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "comparacion/h3_regimen.csv",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "comparacion/reporte.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "documentos/protocolo.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "protocolo_previo.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "documentos/matriz_integracion.csv",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "documentos/decisiones_integracion.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "diagnostico_historico/README.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "cobertura_pendiente.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "verificaciones.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "cambios.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "cambios_codigo.patch",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "archivos_nuevos_modificados.csv",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "documentos/lectura_resultados.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "documentos/verificacion_publicacion.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "documentos/reproduccion.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "evidencia_historica/",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/reglas_historicas.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/fuentes.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "verificacion_publicacion/reproduccion_copia_preservada_resumen.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "verificacion_base_previa.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "comparacion_extension_apagada_final.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "cobertura_pendiente.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "verificacion_final_datos.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "preservacion_final.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "verificaciones_finales/auditoria_fills.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "documentos/adaptaciones_portables.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "verificaciones_finales/runner_insolvencia_resolucion.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "verificaciones_finales/datos_antes_reanudacion.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "registro_interrupcion/reanudacion_inicio.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "verificacion_publicacion/reproduccion_copia_preservada_resumen.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "verificacion_publicacion/verificacion_actual.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "verificacion_fuentes_exportadas.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "verificacion_base_previa.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "comparacion_extension_apagada_final.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "verificaciones_finales/entrega3_final.txt",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "verificaciones_finales/entrega3_final.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "benchmark_antes.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "benchmark_despues.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "benchmark_codigo_congelado.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "verificaciones_finales/pytest_entrega_final.txt",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "verificaciones_finales/pytest_entrega_final.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "verificaciones_finales/ruff_entrega_final.txt",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "verificaciones_finales/ruff_entrega_final.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "verificaciones_finales/comparacion_tests_final.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "verificaciones_finales/comparacion_ruff_final.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "verificaciones_finales/pytest_cierre.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "tdd_reglas_fallo_inicial.txt",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "verificacion_publicacion/tdd_red.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "verificacion_publicacion/reproduccion_utilidad_tdd_red.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "pytest_completo.txt",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "verificacion_publicacion/correccion_utf8_pruebas.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "verificaciones_finales/revision_independiente.md",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "verificaciones_finales/runner_insolvencia_tdd_red.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "verificaciones_finales/runner_insolvencia_tdd_green.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "verificaciones_finales/revision_independiente_cierre.md",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "verificaciones_finales/runner_insolvencia_resolucion.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "verificacion_repositorio_modulo.txt",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "alcance_snapshot_repositorio.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "verificacion_publicacion/auditoria_repositorio_resumen.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "verificacion_publicacion/auditoria_repositorio_publicacion_resultado.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "verificacion_publicacion/auditoria_repositorio_comparacion.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "verificacion_repositorio.txt",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "diagnostico_historico/diagnostico_resultados.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "indice_corridas.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "registro_interrupcion/reanudacion_resultado.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "comparacion/reporte.md",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "verificacion_final_datos.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "verificaciones_finales/auditoria_fills.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "verificaciones_finales/auditoria_fills_comando.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "preservacion_final.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "verificaciones_finales/comparacion_candidata_portable.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "recursos_durante_ejecucion.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "README.md",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "documentos/reproduccion.md",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "verificaciones_finales/datos_antes_reanudacion.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "reanudacion_lanzamiento.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "estado_inicial.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "archivos_nuevos_modificados.csv",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "comandos_ejecutados.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones.md",
+      "target": "preservacion_final.json",
+      "exists": true
+    },
+    {
+      "document": "documentos/decisiones_integracion.md",
+      "target": "protocolo.md",
+      "exists": true
+    },
+    {
+      "document": "documentos/decisiones_integracion.md",
+      "target": "matriz_integracion.csv",
+      "exists": true
+    },
+    {
+      "document": "documentos/decisiones_integracion.md",
+      "target": "../evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/reglas_historicas.json",
+      "exists": true
+    },
+    {
+      "document": "documentos/decisiones_integracion.md",
+      "target": "../evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/fuentes.json",
+      "exists": true
+    },
+    {
+      "document": "documentos/decisiones_integracion.md",
+      "target": "../evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/extraidos/PROMO_START_web.txt",
+      "exists": true
+    },
+    {
+      "document": "documentos/decisiones_integracion.md",
+      "target": "../evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/extraidos/PROMO_END_web.txt",
+      "exists": true
+    },
+    {
+      "document": "documentos/decisiones_integracion.md",
+      "target": "../herramientas/diagnose_historical_rules_exposure.py",
+      "exists": true
+    },
+    {
+      "document": "documentos/decisiones_integracion.md",
+      "target": "../diagnostico_historico/README.md",
+      "exists": true
+    },
+    {
+      "document": "documentos/lectura_resultados.md",
+      "target": "protocolo.md",
+      "exists": true
+    },
+    {
+      "document": "diagnostico_historico/README.md",
+      "target": "diagnostico_resultados.json",
+      "exists": true
+    },
+    {
+      "document": "diagnostico_historico/README.md",
+      "target": "esquema_columnas.json",
+      "exists": true
+    },
+    {
+      "document": "diagnostico_historico/README.md",
+      "target": "input_inventory.csv",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "metricas_cartera_periodo.csv",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "../evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/reglas_historicas.json",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "../evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/fuentes.json",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "../documentos/matriz_integracion.csv",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "../documentos/protocolo.md",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "figuras/equity.png",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "deltas.csv",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "deltas.csv",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "diario_carteras.csv",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "componentes_por_activo_periodo.csv",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "conciliaciones.csv",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "eventos_periodo.csv",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "exposicion_periodo.csv",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "fronteras_promocion.csv",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "h1_invariancia.csv",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "h1_resumen.csv",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "h2.csv",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "h2.csv",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "h3_diario.csv",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "h3_invariancia.csv",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "h3_regimen.csv",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "figuras/deltas.png",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "figuras/h3.png",
+      "exists": true
+    },
+    {
+      "document": "verificaciones_finales/revision_independiente.md",
+      "target": "../codigo_ejecutado/scripts/run_historical_rules_sensitivity.py",
+      "exists": true
+    },
+    {
+      "document": "verificaciones_finales/revision_independiente_cierre.md",
+      "target": "runner_insolvencia_resolucion.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones_finales/revision_independiente_cierre.md",
+      "target": "runner_insolvencia_tdd_green.json",
+      "exists": true
+    },
+    {
+      "document": "verificaciones_finales/revision_independiente_cierre.md",
+      "target": "runner_insolvencia_tdd_red.json",
+      "exists": true
+    }
+  ],
+  "errors": [],
+  "inventory_rows": 1123,
+  "inventory_modified": 6,
+  "inventory_new": 1117,
+  "inventory_sha256": "243e1df0e5f5a156b52dd4194db69a08e303f0b01cc676245e82b90c5980e7d1",
+  "inventory_scope": "Git tracked modifications plus all nonignored untracked paths. Two final seal members reserved before seal; final certificate verifies exact equality against actual status afterward. Runtime caches and external temporary copies are excluded.",
+  "future_seal_members": [
+    "manifiesto_paquete.json",
+    "manifiesto_paquete.sha256"
+  ],
+  "post_seal_certificate": "entregas\\entrega_4\\reglas_historicas\\verificacion_final_20260925T005436Z.json",
+  "tracked_diff_identical": true,
+  "helper_copies_exact": true,
+  "physical_index_unchanged": true,
+  "no_package_pycache": true,
+  "inventory_finalized_at_utc": "2026-09-25T14:28:40.298501+00:00"
+}

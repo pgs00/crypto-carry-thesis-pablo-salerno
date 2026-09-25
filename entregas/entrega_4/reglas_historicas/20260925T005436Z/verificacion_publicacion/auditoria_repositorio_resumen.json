@@ -1,0 +1,73 @@
+{
+  "started_at_utc": "2026-09-25T01:26:40.127711+00:00",
+  "reference_commit": "894059e4ce318e51f25211d04be9f0202de90ae7",
+  "source_root": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting",
+  "real_index_before_sha256": "e90713eb36af1194c8c72e0cca50f3bb7d076719f6aeb223db0b6a01e47f4ae4",
+  "real_head_before": "894059e4ce318e51f25211d04be9f0202de90ae7",
+  "interpretation": "Historical published snapshot is checked independently of the authorized modified current engine. No current verifier failure is converted to success.",
+  "setup_commands": [
+    [
+      "git",
+      "--no-optional-locks",
+      "clone",
+      "--quiet",
+      "--no-hardlinks",
+      "--no-checkout",
+      "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting",
+      "C:\\Users\\pablo\\AppData\\Local\\Temp\\repository_published_snapshot_cn3qbrtf\\repo"
+    ],
+    [
+      "git",
+      "--no-optional-locks",
+      "-C",
+      "C:\\Users\\pablo\\AppData\\Local\\Temp\\repository_published_snapshot_cn3qbrtf\\repo",
+      "-c",
+      "core.autocrlf=false",
+      "checkout",
+      "--quiet",
+      "894059e4ce318e51f25211d04be9f0202de90ae7"
+    ]
+  ],
+  "cleanup_manifest_sha256": "c9d8c044f6b3d87f00a7fe9a69ebfc7da087034a895f94a9d2667ee804072073",
+  "import_probe": {
+    "command": [
+      "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "-c",
+      "import json,crypto_carry.config,scripts.verify_repository_evidence as v; print(json.dumps({\"config\":crypto_carry.config.__file__,\"verifier\":v.__file__,\"root\":str(v.ROOT)}))"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"config\": \"C:\\\\Users\\\\pablo\\\\AppData\\\\Local\\\\Temp\\\\repository_published_snapshot_cn3qbrtf\\\\repo\\\\src\\\\crypto_carry\\\\config.py\", \"verifier\": \"C:\\\\Users\\\\pablo\\\\AppData\\\\Local\\\\Temp\\\\repository_published_snapshot_cn3qbrtf\\\\repo\\\\scripts\\\\verify_repository_evidence.py\", \"root\": \"C:\\\\Users\\\\pablo\\\\AppData\\\\Local\\\\Temp\\\\repository_published_snapshot_cn3qbrtf\\\\repo\"}\n",
+    "stderr": ""
+  },
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "-m",
+    "scripts.verify_repository_evidence"
+  ],
+  "command_cwd": "C:\\Users\\pablo\\AppData\\Local\\Temp\\repository_published_snapshot_cn3qbrtf\\repo",
+  "command_environment_overrides": {
+    "GIT_OPTIONAL_LOCKS": "0",
+    "GIT_NO_LAZY_FETCH": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONUTF8": "1",
+    "PYTHONPATH": "C:\\Users\\pablo\\AppData\\Local\\Temp\\repository_published_snapshot_cn3qbrtf\\repo\\src;C:\\Users\\pablo\\AppData\\Local\\Temp\\repository_published_snapshot_cn3qbrtf\\repo"
+  },
+  "exit_code": 0,
+  "elapsed_seconds": 13.741665600100532,
+  "newline_restorations": 0,
+  "unresolved_restorations": [],
+  "clone_index_unchanged": true,
+  "clone_head_unchanged": true,
+  "temporary_clone_removed_after_run": true,
+  "real_evidence_bytes_unchanged": true,
+  "real_watched_file_count": 381,
+  "real_index_unchanged": true,
+  "real_head_unchanged": true,
+  "completed_at_utc": "2026-09-25T01:27:16.350667+00:00"
+}

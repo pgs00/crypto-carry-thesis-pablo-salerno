@@ -1,0 +1,110 @@
+FFFF                                                                     [100%]
+================================== FAILURES ===================================
+_ test_each_base_requires_the_current_exact_python_version[run_ad71d751b20623006c195ff3] _
+
+package = (WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-326/test_each_base_requires_the_cu0/sealed'), W...wsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-326/test_each_base_requires_the_cu0/NEW-destination'))
+run_id = 'run_ad71d751b20623006c195ff3'
+
+    @pytest.mark.parametrize("run_id", BASES)
+    def test_each_base_requires_the_current_exact_python_version(package, run_id):
+        source, data, destination = package
+        manifest_path = data / "outputs" / run_id / "run_manifest.json"
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        manifest["python"] = "0.0.0"
+        put(manifest_path, manifest)
+        audit_path = source / "verificacion_base_previa.json"
+        audit = json.loads(audit_path.read_text(encoding="utf-8"))
+        record = next(row for row in audit["runs"] if row["run_id"] == run_id)
+        record["manifest_sha256"] = digest(manifest_path)
+        record["protected_files"]["run_manifest.json"] = digest(manifest_path)
+        put(audit_path, audit)
+        seal(source)
+        result = run(command(source, data, destination))
+>       assert result.returncode != 0, "A BASE from another Python version was accepted"
+E       AssertionError: A BASE from another Python version was accepted
+E       assert 0 != 0
+E        +  where 0 = CompletedProcess(args=['C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe', '-B', '...pytest-326\\\\test_each_base_requires_the_cu0\\\\data-root", "--workers", "4"], "batch_executed": false}\n', stderr='').returncode
+
+tests\unit\test_rules_sensitivity_reproduction.py:192: AssertionError
+_ test_each_base_requires_the_current_exact_python_version[run_dfea4b7ac1475668d5968c97] _
+
+package = (WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-326/test_each_base_requires_the_cu1/sealed'), W...wsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-326/test_each_base_requires_the_cu1/NEW-destination'))
+run_id = 'run_dfea4b7ac1475668d5968c97'
+
+    @pytest.mark.parametrize("run_id", BASES)
+    def test_each_base_requires_the_current_exact_python_version(package, run_id):
+        source, data, destination = package
+        manifest_path = data / "outputs" / run_id / "run_manifest.json"
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        manifest["python"] = "0.0.0"
+        put(manifest_path, manifest)
+        audit_path = source / "verificacion_base_previa.json"
+        audit = json.loads(audit_path.read_text(encoding="utf-8"))
+        record = next(row for row in audit["runs"] if row["run_id"] == run_id)
+        record["manifest_sha256"] = digest(manifest_path)
+        record["protected_files"]["run_manifest.json"] = digest(manifest_path)
+        put(audit_path, audit)
+        seal(source)
+        result = run(command(source, data, destination))
+>       assert result.returncode != 0, "A BASE from another Python version was accepted"
+E       AssertionError: A BASE from another Python version was accepted
+E       assert 0 != 0
+E        +  where 0 = CompletedProcess(args=['C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe', '-B', '...pytest-326\\\\test_each_base_requires_the_cu1\\\\data-root", "--workers", "4"], "batch_executed": false}\n', stderr='').returncode
+
+tests\unit\test_rules_sensitivity_reproduction.py:192: AssertionError
+_ test_successful_probe_exit_cannot_hide_failed_contract[input_hashes_exact] __
+
+package = (WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-326/test_successful_probe_exit_can0/sealed'), W...wsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-326/test_successful_probe_exit_can0/NEW-destination'))
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000016161F10640>
+field = 'input_hashes_exact'
+
+    @pytest.mark.parametrize("field", ["input_hashes_exact", "dependencies_exact"])
+    def test_successful_probe_exit_cannot_hide_failed_contract(package, monkeypatch, field):
+        source, data, destination = package
+        utility = runpy.run_path(str(SCRIPT))
+        original_run = subprocess.run
+        probe_result = {"input_hashes_exact": True, "dependencies_exact": True, "python_exact": True}
+        probe_result[field] = False
+    
+        def malformed_probe(arguments, **kwargs):
+            if "-c" in arguments:
+                return subprocess.CompletedProcess(arguments, 0, json.dumps(probe_result), "")
+            return original_run(arguments, **kwargs)
+    
+        monkeypatch.setattr(subprocess, "run", malformed_probe)
+>       with pytest.raises(ValueError, match="probe contract"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+
+tests\unit\test_rules_sensitivity_reproduction.py:211: Failed
+_ test_successful_probe_exit_cannot_hide_failed_contract[dependencies_exact] __
+
+package = (WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-326/test_successful_probe_exit_can1/sealed'), W...wsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-326/test_successful_probe_exit_can1/NEW-destination'))
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000016161F12060>
+field = 'dependencies_exact'
+
+    @pytest.mark.parametrize("field", ["input_hashes_exact", "dependencies_exact"])
+    def test_successful_probe_exit_cannot_hide_failed_contract(package, monkeypatch, field):
+        source, data, destination = package
+        utility = runpy.run_path(str(SCRIPT))
+        original_run = subprocess.run
+        probe_result = {"input_hashes_exact": True, "dependencies_exact": True, "python_exact": True}
+        probe_result[field] = False
+    
+        def malformed_probe(arguments, **kwargs):
+            if "-c" in arguments:
+                return subprocess.CompletedProcess(arguments, 0, json.dumps(probe_result), "")
+            return original_run(arguments, **kwargs)
+    
+        monkeypatch.setattr(subprocess, "run", malformed_probe)
+>       with pytest.raises(ValueError, match="probe contract"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+
+tests\unit\test_rules_sensitivity_reproduction.py:211: Failed
+=========================== short test summary info ===========================
+FAILED tests/unit/test_rules_sensitivity_reproduction.py::test_each_base_requires_the_current_exact_python_version[run_ad71d751b20623006c195ff3]
+FAILED tests/unit/test_rules_sensitivity_reproduction.py::test_each_base_requires_the_current_exact_python_version[run_dfea4b7ac1475668d5968c97]
+FAILED tests/unit/test_rules_sensitivity_reproduction.py::test_successful_probe_exit_cannot_hide_failed_contract[input_hashes_exact]
+FAILED tests/unit/test_rules_sensitivity_reproduction.py::test_successful_probe_exit_cannot_hide_failed_contract[dependencies_exact]
+4 failed, 15 deselected in 3.51s
