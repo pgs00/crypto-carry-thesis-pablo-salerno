@@ -1,0 +1,90 @@
+Updates on Leverage and Margin Tiers of Binance Futures Contracts (2022-09-13) | Binance Support (https://www.binance.com/en/support/announcement/detail/56ba139dd19249acb4f9470c3d98020d)
+citeturn5view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.binance.com/en/support/announcement/detail/56ba139dd19249acb4f9470c3d98020d","lineno":0}); Total lines: 181
+L0: cite0†Markets L1: 
+L2: Trade
+L3: 
+L4: cite1†Square L5: 
+L6: Institutional
+L7: 
+L8: cite2†New Cryptocurrency Listing cite3†Latest Binance News cite4†Latest Activities cite5†Delisting cite6†Maintenance Updates cite7†API Updates cite8†Crypto Airdrop L9: # Updates on Leverage and Margin Tiers of Binance Futures Contracts (2022-09-13)
+L10: 
+L11: Published on 2022-09-13 03:05
+L12: 
+L13: Fellow Binancians,
+L14: 
+L15: Binance Futures will adjust the margin tiers of the ETH cite9†USDⓈ-M Perpetual Contracts and ETH cite10†COIN-M Perpetual Contracts with new leverage and margin tiers, as reflected in the tables below. The timeline for the upcoming adjustments is as follows:
+L16:   * Leverage and margin tiers of ETHUSDT Perpetual Contracts will be updated on 2022-09-13 at 07:00 (UTC).
+L17:   * Leverage and margin tiers of ETHUSD Perpetual Contracts will be updated on 2022-09-13 at 07:30 (UTC).
+L18: 
+L19: Position value and maintenance margin will be adjusted for the first two tiers. Existing positions opened before the updates will be affected. It is strongly advised to adjust the position and leverage prior to the adjustment in order to avoid any potential liquidation.
+L20: Updates to Leverage and Margin Tiers:
+L21: 
+L22:   * ETHUSDT (USDⓈ-M Perpetual Contracts)
+L23: Previous Leverage and Margin Tiers  | New Leverage and Margin Tiers
+L24: Leverage  | Position Before Change(Notional Value in USDT)  | Maintenance Margin Rate (Before Change)  | Leverage After Change  | Position After Change(Notional Value in USDT)  | Maintenance Margin Rate (After Change)
+L25: 76 - 100x  | 0 < Position ≤ 100,000  | 0.50%  | N/A
+L26: 51 - 75x  | 100,000 < Position ≤ 250,000  | 0.65%  | 51 - 75x  | 0 < Position ≤ 250,000  | 0.65%
+L27: 26 - 50x  | 250,000 < Position ≤ 1,000,000  | 1.00%  | 26 - 50x  | 250,000 < Position ≤ 1,000,000  | 1.00%
+L28: 11 - 25x  | 1,000,000 < Position ≤ 5,000,000  | 2.00%  | 11 - 25x  | 1,000,000 < Position ≤ 5,000,000  | 2.00%
+L29: 6 - 10x  | 5,000,000 < Position ≤ 10,000,000  | 5.00%  | 6 - 10x  | 5,000,000 < Position ≤ 10,000,000  | 5.00%
+L30: 5x  | 10,000,000 < Position ≤ 20,000,000  | 10.00%  | 5x  | 10,000,000 < Position ≤ 20,000,000  | 10.00%
+L31: 4x  | 20,000,000 < Position ≤ 40,000,000  | 12.50%  | 4x  | 20,000,000 < Position ≤ 40,000,000  | 12.50%
+L32: 3x  | 40,000,000 < Position ≤ 80,000,000  | 15.00%  | 3x  | 40,000,000 < Position ≤ 80,000,000  | 15.00%
+L33: 2x  | 80,000,000 < Position ≤ 150,000,000  | 25.00%  | 2x  | 80,000,000 < Position ≤ 150,000,000  | 25.00%
+L34: 1x  | 150,000,000 < Position ≤ 300,000,000  | 50.00%  | 1x  | 150,000,000 < Position ≤ 300,000,000  | 50.00%
+L35:   * ETHUSD (COIN-M Perpetual Contracts)
+L36: Previous Leverage and Margin Tiers  | New Leverage and Margin Tiers
+L37: Leverage  | Position Before Change(Notional Value in ETH)  | Maintenance Margin Rate (Before Change)  | Leverage After Change  | Position After Change(Notional Value in ETH)  | Maintenance Margin Rate (After Change)
+L38: 76 - 100x  | 0 < Position ≤ 15  | 0.50%  | N/A
+L39: 51 - 75x  | 15 < Position ≤ 100  | 0.65%  | 51 - 75x  | 0 < Position ≤ 100  | 0.65%
+L40: 26 - 50x  | 100 < Position ≤ 250  | 1.00%  | 26 - 50x  | 100 < Position ≤ 250  | 1.00%
+L41: 11 - 25x  | 250 < Position ≤ 500  | 2.00%  | 11 - 25x  | 250 < Position ≤ 500  | 2.00%
+L42: 6 - 10x  | 500 < Position ≤ 1,000  | 5.00%  | 6 - 10x  | 500 < Position ≤ 1,000  | 5.00%
+L43: 5x  | 1,000 < Position ≤ 1,500  | 10.00%  | 5x  | 1,000 < Position ≤ 1,500  | 10.00%
+L44: 4x  | 1,500 < Position ≤ 2,000  | 12.50%  | 4x  | 1,500 < Position ≤ 2,000  | 12.50%
+L45: 3x  | 2,000 < Position ≤ 5,000  | 15.00%  | 3x  | 2,000 < Position ≤ 5,000  | 15.00%
+L46: 2x  | 5,000 < Position ≤ 7,500  | 25.00%  | 2x  | 5,000 < Position ≤ 7,500  | 25.00%
+L47: 1x  | 7,500 < Position ≤ 50,000  | 50.00%  | 1x  | 7,500 < Position ≤ 50,000  | 50.00%
+L48: Notes:
+L49:   * It is important to note that the maintenance margin change will directly affect liquidation price. Users who held existing positions of these USDⓈ-M Perpetual Contracts or COIN-M Perpetual Contracts will be affected. To avoid being liquidated (i.e. margin ratio hits 100%), please add more margin to your USDⓈ-M or COIN-M Futures account or reduce your positions. It is recommended to control the margin ratio below 80%.
+L50:   * Maintenance margin rate change will affect the funding rate. Capped Funding Rate = clamp (Funding Rate, -0.75 * Maintenance Margin Ratio, 0.75 * Maintenance Margin Ratio). For more details on funding rate, please refer to cite11†Introduction to Binance Futures Funding Rates .
+L51: Further information:
+L52: 
+L53:   * cite12†Liquidation L54:   * cite13†Leverage and Margin of USDⓈ-M Futures Contracts L55:   * cite14†Leverage and Margin of COIN-M Futures Contracts L56: 
+L57: Thanks for your support!
+L58: 
+L59: Binance Team
+L60: 
+L61: 2022-09-13
+L62: 
+L63: 
+L64: 
+L65: cite15†Trade on-the-go with Binance’s crypto trading app (iOS/Android)†binance.onelink.me L66: 
+L67: Find us on
+L68: 
+L69: Telegram: cite16†https://t.me/binanceexchange†t.me L70: 
+L71: Twitter: cite17†https://twitter.com/binance†twitter.com L72: 
+L73: Facebook: cite18†https://www.facebook.com/binance†www.facebook.com L74: Instagram: cite19†https://www.instagram.com/binance†www.instagram.com L75: 
+L76: Binance reserves the right in its sole discretion to amend or change or cancel the products referred to in this announcement at any time and for any reasons without prior notice.
+L77: Risk Warning: Digital asset prices can be volatile. The value of your investment may go down or up and you may not get back the amount invested. You are solely responsible for your investment decisions and Binance is not liable for any losses you may incur. Futures trading, in particular, is subject to high market risk and price volatility. All of your margin balance may be liquidated in the event of adverse price movement. Past performance is not a reliable predictor of future performance.
+L78: Before trading, you should make an independent assessment of the appropriateness of the transaction in light of your own objectives and circumstances, including the risks and potential benefits. Consult your own advisers, where appropriate. This information should not be construed as financial or investment advice. To learn more about how to protect yourself, visit our cite20†Responsible Trading page . For more information, see our cite21†Terms of Use and cite22†Risk Warning .
+L79: [Input: Search]
+L80: 
+L81: Register Now - Get up to 100 USDT in trading fee rebate (for verified users)
+L82: 
+L83: cite23†Register Now†accounts.binance.com L84: ## Latest Articles
+L85: 
+L86: cite24†Binance Will Support Scheduled Upgrade for Stock Trading Services - 2026-09-26 L87: 
+L88: cite25†Binance Will Support the Injective (INJ) Network Upgrade & Hard Fork - 2026-09-24 L89: 
+L90: cite26†Hold RLUSD in Any Binance Accounts to Share $800,000 Rewards in XRP L91: 
+L92: cite27†Introducing Hold to Earn: Earn Up to 4.75% APR by Holding U, USDe, and USDS in Binance Wallet L93: 
+L94: cite28†Binance Will Support the Zilliqa (ZIL) Network Migration L95: 
+L96: ### Community
+L97: ### About Us
+L98: 
+L99:   * cite29†About L100:   * cite30†Careers L101:   * cite31†Announcements L102:   * cite32†News L103:   * cite33†Press L104:   * cite34†Legal L105:   * cite21†Terms L106:   * cite35†Privacy L107:   * cite36†Building Trust L108:   * cite37†Blog L109:   * cite38†Community L110:   * cite22†Risk Warning L111:   * cite39†Notices L112:   * cite40†Downloads L113:   * cite41†Desktop Application L114:   * cite42†Secure Internal Communication Channel L115: ### Products
+L116: 
+L117:   * cite43†Exchange L118:   * cite44†Buy Crypto L119:   * cite45†Pay L120:   * cite46†Crypto Payments†pay.binance.com L121:   * cite47†Binance Junior L122:   * cite48†Card L123:   * cite49†Academy L124:   * cite50†Gift Card L125:   * cite51†Launchpool L126:   * cite52†Auto-Invest L127:   * cite53†ETH Staking L128:   * cite54†BABT L129:   * cite55†Research L130:   * cite56†Charity†www.binance.charity L131: 
+L132: ### Business
+L133: 
+L134:   * cite57†P2P Merchant Application†c2c.binance.com L135:   * cite58†Listing Application L136:   * cite59†Institutional & VIP Services L137:   * cite60†Labs†labs.binance.com L138:   * cite61†Pay Onchain

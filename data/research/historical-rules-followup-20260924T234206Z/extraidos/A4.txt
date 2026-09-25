@@ -1,0 +1,308 @@
+Binance Futures Fee Structure & Fee Calculations | Binance
+Exchange
+Blockchain and crypto asset exchange
+Academy
+Blockchain and crypto education
+Learn & Earn
+Earn free crypto through learning
+Charity
+Powering blockchain for good
+Cloud
+Enterprise exchange solutions
+DEX
+Fast and secure decentralized digital asset exchange
+Labs
+Incubator for top blockchain projects
+Launchpad
+Token Launch Platform
+Research
+Institutional-grade analysis and reports
+Binance Live
+Bringing blockchain broadcasts to you live
+BABT
+Verified user credentials for the Web3 era
+Binance Tax
+new
+Free tax tool to calculate your crypto taxes
+DeFi Wallet
+Meet the next-generation Web3 wallet
+OTC Trading
+Spot, Options, Algo Orders and more
+Accept Crypto Payment
+Allow your customers to pay with crypto
+Buy Crypto
+Pay with
+Markets
+Markets Overview
+Overview of the crypto market with real-time prices and key data
+Trading Data
+View top market movers and price performance
+Trade
+Binance Convert
+The easiest way to trade
+Spot
+Trade crypto with advanced tools
+Margin
+Increase your profits with leverage
+Trading Bots
+Trade smarter with our various automated strategies - easy, fast and reliable
+P2P
+Bank transfer and 100+ options
+Swap Farming
+Swap to earn BNB
+Fan Token
+Upgrade your fan experience
+OTC Block Trading
+RFQ and trade large spot orders
+Derivatives
+USDⓈ-M Futures
+Perpetual or Quarterly Contracts settled in USDT or BUSD
+COIN-M Futures
+Perpetual or Quarterly Contracts settled in Cryptocurrency
+Options
+Buy and Sell European-style Options.
+Leveraged Tokens
+Enjoy increased leverage without risk of liquidation
+Leaderboard
+Exclusive ranking for Binance traders, follow top traders' strategies
+Binance Futures Overview
+View our full range of crypto-derivative instruments
+Futures Markets
+View trends and opportunities in the Futures Markets before trading
+Responsible Trading
+Learn how you could practice responsible trading with Binance Futures
+Blog
+Expand your knowledge and get the latest insights in Derivatives Trading
+VIP Portal
+VIP Exclusive, Tailor-made Institutional Grade Services
+Earn
+Binance Earn
+One-stop Investment Solution
+Launchpad
+Token Launch Platform
+Simple Earn
+Earn daily rewards on your idle tokens
+DeFi Staking
+Easy Access to DeFi Opportunities
+BNB Vault
+Earn Multi-benefits with BNB
+Dual Investment
+Commit your crypto holdings and enjoy high returns
+Liquidity Farming
+Add liquidity and earn double
+Auto-Invest
+new
+Accumulate crypto on autopilot
+Binance Pool
+Mine more rewards by connecting to the pool
+ETH Staking
+One click staking, rewards paid daily
+Range Bound
+new
+Earn high rewards when the market moves sideways
+Finance
+Binance Card
+new
+Get up to 8% cashback when you spend at 90M merchants worldwide
+Binance Loans
+Get an instant loan secured by crypto assets
+Binance Pay
+Send, receive and spend crypto with 0 fees
+Binance Gift Card
+Customizable crypto gift card
+NFT
+Institutional
+Institutional Home
+Premium digital asset solutions for institutions
+Link
+Connect and grow with Binance liquidity solutions
+Asset Management Solutions
+Discover various asset management solutions
+VIP Portal
+One-stop station made for VIP and institutions
+Custody
+Secure digital assets with leading infrastructure
+VIP Loan
+Bespoke institutional loan with wide coverage
+APIs
+Unlimited opportunities with one key
+Historical Market Data
+Your all-in-one trading data repository
+Execution & OTC Services
+Execution & OTC Services
+Capital Connect
+Connecting investors and investment managers
+Feed
+Cancel
+FAQ
+Search
+Account Functions
+Tutorial
+Binance Fan Token
+Binance Earn
+Crypto Deposit/Withdrawal
+Buy Crypto (Fiat/P2P)
+Spot & Margin Trading
+Crypto Derivatives
+Trading Bots
+Finance
+API
+Security
+Other Topics
+Tax
+Binance Convert
+Binance Link
+NFT
+VIP
+Home
+Support Center
+FAQ
+Crypto Derivatives
+Futures Contracts
+Introduction to Binance Futures
+Binance Futures Fee Structure & Fee Calculations
+Binance Futures Fee Structure & Fee Calculations
+2020-06-11 07:01
+To check your trading fee rate, please click
+here
+.
+Notes:
+All spot market VIPs are also VIPs in the Futures market.
+Futures fee tiers mirror the spot market tiers but are generally lower. Please note that the volume requirement for each VIP tier is 5 times that of the spot market due to the leverage provided.
+Please refer to
+Daily BNB Balance Calculation Mechanism.
+Users will receive a 10% discount on standard trading fees when they use BNB to pay for trading fees on Binance Futures. Users will need to transfer BNB from their Spot Wallet to their Futures Wallet to receive the 10% discount. Please ensure that you have a sufficient BNB balance in your Futures Wallet to pay for the trading fees. The system will automatically deduct USDT as Futures trading fees and you will not be entitled to the discount.
+BNB transferred to the Futures USDⓈ-M Wallet can be used for fee discounts and collateral when Multi-Assets mode is enabled. For more details, please refer to
+Binance Futures Trading Fee Discount Program - Save 10% With BNB
+What Do "Maker" and "Taker" Mean?
+Taker:
+When you place an order that trades immediately before going on the order book, either filling partially or fully, those trades will be "taker" trades.
+Trades from Market orders are always Takers, as Market orders can never go on the order book. These trades are "taking" volume off of the order book, and therefore called the "taker."
+Maker:
+When you place an order that goes on the order book partially or fully, such as a limit order, any subsequent trades coming from that order will be as a “maker.”
+These orders add volume to the order book, helping to "make the market," and are therefore termed the "maker" for any subsequent trades.
+How to calculate the commission for Coin-margined contracts?
+Commission fee = notional value*fee rate
+Notional value = (number of contracts*contract size) / trade price
+For example, regular user's maker commission: 0.015%; taker commission: 0.040%
+Buy 10 BTCUSD 0925 quarterly contracts using Market order:
+Notional value = (number of contracts*contract size) / opening price
+= (10 contracts*100 USD) / 10,104 USD
+= 0.09897 BTC
+Taker commission fee: 0.09897*0.040% = 0.00003959 BTC
+After the price increases, sell 10 BTCUSD 0925 quarterly contracts using Limit order:
+Notional value = (number of contracts*contract size) / closing price
+= (10 contracts*100 USD) / 11,104 USD
+= 0.09 BTC
+Maker commission fee: 0.09*0.015% = 0.00001351 BTC
+Note: For quarterly delivery contracts, a flat 0.015% of settlement fee is charged for all positions settled on the delivery date.
+How to calculate commission of USDⓈ-margined contracts?
+Commission fee = notional value*fee rate
+Notional value =
+coins
+*trade price
+For example, regular maker commission: 0.02%; taker commission: 0.040%
+Buy 1 BTC BTCUSDT contract using Market order:
+Notional value =
+coins
+*opening price
+= 1 contract*10,104 USD
+= 10,104
+Taker commission fee: 10,104*0.040% = 4.0416 USDT
+After the price increases, sell 1 BTC BTCUSDT contract using Limit order:
+Notional value =
+coins
+*closing price
+= 1 contract*11,104 USD
+= 11,104
+Maker commission fee: 11,104*0.02% = 2.2208 USDT
+Related Articles
+An Overview of Binance Futures Products & Features
+Binance Futures Fee Structure & Fee Calculations
+What Are the Differences between Spot Trading and Futures Trading
+Differences Between Perpetual Contract and Traditional Futures Contract
+Introduction to Binance Futures Funding Rates
+Liquidation Protocols
+Introduction to Insurance Funds
+What Is Auto-Deleveraging (ADL) and How Does It Work
+Introduction to Binance Futures Leaderboard
+How to Download My Order History for USDⓈ-M and COIN-M Futures Orders
+How to Manage Risk and Trade Responsibly
+What Are USDⓈ-Margined Futures and Coin-Margined Futures
+What Are Perpetual Futures and Quarterly Futures
+Understanding Order Book and Market Depth
+How to Calculate Profit and Loss for Futures Contracts
+A Complete Guide to Desktop App Keyboard Shortcuts
+How to Customize Binance Futures Trading Interface
+What Are Cryptocurrency Futures
+About Binance Futures
+About Us
+About
+Press
+Careers
+Business Contacts
+Community
+Binance Blog
+Building Trust
+Legal
+Terms
+Privacy
+Risk Warning
+Announcements
+News
+Notices
+Sitemap
+Cookie Preferences
+Products
+Exchange
+Academy
+Binance Live
+Charity
+Card
+Labs
+Launchpad
+Research
+NFT
+Binance Pay
+Binance Gift Card
+BABT
+Binance Tax
+Service
+Downloads
+Desktop Application
+Buy Crypto
+Institutional & VIP Services
+OTC Trading
+Referral
+Affiliate
+BNB
+Listing Application
+P2P Merchant Application
+P2Pro Merchant Application
+Historical Market Data
+Proof of Reserves
+Support
+Request a Feature
+Support Center
+24/7 Chat Support
+APIs
+Fees
+Trading Rules
+Binance Verify
+Law Enforcement Requests
+Binance Legal (Court Orders)
+Binance Airdrop Portal
+Learn
+Learn & Earn
+Browse Crypto Prices
+Bitcoin Price
+Ethereum Price
+Buy BNB
+Buy BUSD
+Buy Bitcoin
+Buy Ethereum
+Buy Dogecoin
+Buy Ripple
+Buy Tradable Altcoins
+Community
+Binance © 2023

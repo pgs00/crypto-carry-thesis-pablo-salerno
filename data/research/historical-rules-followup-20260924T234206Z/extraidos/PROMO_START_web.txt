@@ -1,0 +1,60 @@
+Binance Launches Zero-Fee Bitcoin Trading | Binance Support (https://www.binance.com/en/support/announcement/detail/10435147c55d4a40b64fcbf43cb46329)
+citeturn2view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"turn1view1","lineno":40}); Total lines: 152
+L9: # Binance Launches Zero-Fee Bitcoin Trading
+L10: 
+L11: Published on 2022-07-06 14:00
+L12: 
+L13: * Update: Users will continue to enjoy zero maker and taker fees when trading BTC on the BTC/TUSD spot trading pair only after 2023-03-22 00:00 (UTC). Please refer to cite9†this link for more details.
+L14: 
+L15: Fellow Binancians,
+L16: To celebrate Binance’s fifth anniversary, Binance will introduce zero-fee trading for BTC spot trading pairs at 2022-07-08 14:00 (UTC). The zero-fee trading will cover the following 13 spot trading pairs: BTC/AUD, BTC/BIDR, BTC/BRL, BTC/BUSD, BTC/EUR, BTC/GBP, BTC/RUB, BTC/TRY, BTC/TUSD, BTC/UAH, BTC/USDC, BTC/USDP and BTC/USDT.
+L17: 
+L18: Validity Period: 2022-07-08 14:00 (UTC) until further notice
+L19:   * All users will enjoy zero maker and taker fees for all 13 BTC spot trading pairs.
+L20:   * The 13 BTC spot trading pairs will be excluded from BNB fee discounts, fee rebates or any other form of fee adjustments or fee promotions.
+L21: 
+L22: Note:
+L23:   * Binance reserves the right to disqualify trades that are deemed to be wash trades or illegally bulk registered accounts, as well as trades that display attributes of self-dealing or market manipulation.
+L24:   * All trading volume and metrics related to the program are measured by Binance at its sole and absolute discretion.
+L25:   * Calculation of cite10†maker fee and cite11†taker fee rebates will resume at the end of this program, subject to further updates.
+L26: You are cordially invited to join us in celebrating our fifth anniversary!
+L27: 
+L28: Thanks for your support!
+L29: 
+L30: Binance Team
+L31: 
+L32: 2022-07-06
+L33: 
+L34: 
+L35: cite12†Trade on-the-go with Binance’s crypto trading app (iOS/Android)†binance.onelink.me L36: 
+L37: Find us on
+L38: 
+L39: Telegram: cite13†https://t.me/binanceexchange†t.me L40: 
+L41: Twitter: cite14†https://twitter.com/binance†twitter.com L42: 
+L43: Facebook: cite15†https://www.facebook.com/binance†www.facebook.com L44: 
+L45: Instagram: cite16†https://www.instagram.com/binance†www.instagram.com L46: Note: This announcement was last updated on 2023-03-23 to clarify that users will continue to enjoy zero maker and taker fees when trading BTC on the BTC/TUSD spot trading pair only after 2023-03-22 00:00 (UTC). It was previously updated on 2022-07-08 to provide updates on the activity, where the trading volume on the 13 Bitcoin spot trading pairs will be excluded from volume calculations toward the VIP program and Spot Liquidity Providers program.
+L47: Binance reserves the right in its sole discretion to amend or cancel this announcement at any time and for any reasons without prior notice.
+L48: Risk Warning: Digital asset prices are subject to high market risk and price volatility. The value of your investment can go down or up, and you may not get back the amount invested. You are solely responsible for your investment decisions and Binance is not liable for any losses you may incur. Past performance is not a reliable predictor of future performance. You should only invest in products you are familiar with and where you understand the risks.
+L49: You should carefully consider your investment experience, financial situation, investment objectives and risk tolerance and consult an independent financial adviser prior to making any investment. This material should not be construed as financial advice. For more information, see our cite17†Terms of Use and cite18†Risk Warning .
+L50: [Input: Search]
+L51: 
+L52: Register Now - Get up to 100 USDT in trading fee rebate (for verified users)
+L53: 
+L54: cite19†Register Now†accounts.binance.com L55: ## Latest Articles
+L56: 
+L57: cite20†Trade bStocks 24/7 and Win Up to 500 USDT in Token Vouchers L58: 
+L59: cite21†Binance Alpha Trading Competition: Trade ChainOpera AI (COAI) and Share $200K Worth of Rewards (2026-09-24) L60: 
+L61: cite22†The Binance Starter Carnival: Complete Tasks to Share $100,000 Worth of Rewards in BTC L62: 
+L63: cite23†Binance Will Add Hyperliquid (HYPE) on Earn, Buy Crypto, Convert, VIP Loan & Margin L64: 
+L65: cite24†VTHO Trading Tournament: Trade to Share Up to 400 BNB Token Vouchers L66: 
+L67: ### Community
+L68: ### About Us
+L69: 
+L70:   * cite25†About L71:   * cite26†Careers L72:   * cite27†Announcements L73:   * cite28†News L74:   * cite29†Press L75:   * cite30†Legal L76:   * cite17†Terms L77:   * cite31†Privacy L78:   * cite32†Building Trust L79:   * cite33†Blog L80:   * cite34†Community L81:   * cite18†Risk Warning L82:   * cite35†Notices L83:   * cite36†Downloads L84:   * cite37†Desktop Application L85:   * cite38†Secure Internal Communication Channel L86: ### Products
+L87: 
+L88:   * cite39†Exchange L89:   * cite40†Buy Crypto L90:   * cite41†Pay L91:   * cite42†Crypto Payments†pay.binance.com L92:   * cite43†Binance Junior L93:   * cite44†Card L94:   * cite45†Academy L95:   * cite46†Gift Card L96:   * cite47†Launchpool L97:   * cite48†Auto-Invest L98:   * cite49†ETH Staking L99:   * cite50†BABT L100:   * cite51†Research L101:   * cite52†Charity†www.binance.charity L102: 
+L103: ### Business
+L104: 
+L105:   * cite53†P2P Merchant Application†c2c.binance.com L106:   * cite54†Listing Application L107:   * cite55†Institutional & VIP Services L108:   * cite56†Labs†labs.binance.com L109:   * cite57†Pay Onchain L110: ### Learn
+L111: 
+L112:   * cite58†Learn & Earn L113:   * cite59†Browse Crypto Prices L114:   * cite60†Bitcoin Price L115:   * cite61†Ethereum Price L116:   * cite62†Browse Crypto Price Predictions L117:   * cite63†Bitcoin Price Prediction L118:   * cite64†Ethereum Price Prediction L119:   * cite65†Ethereum Upgrade (Pectra) L120:   * cite66†Buy Bitcoin L121:   * cite67†Buy BNB L122:   * cite68†Buy XRP L123:   * cite69†Buy Dogecoin L124:   * cite70†Buy Ethereum L125:   * cite71†Buy Tradable Altcoins

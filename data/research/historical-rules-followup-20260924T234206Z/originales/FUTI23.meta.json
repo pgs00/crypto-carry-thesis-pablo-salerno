@@ -1,0 +1,59 @@
+{
+  "id": "FUTI23",
+  "original_url": "https://web.archive.org/web/20231102093209id_/https://fapi.binance.com/fapi/v1/exchangeInfo",
+  "final_url": "https://web.archive.org/web/20240108115316id_/https://fapi.binance.com/fapi/v1/exchangeInfo",
+  "requested_at_utc": "2026-09-24T23:49:58.016948Z",
+  "retrieved_at_utc": "2026-09-24T23:50:08.320867Z",
+  "http_status": 451,
+  "headers": {
+    "Server": "nginx",
+    "Date": "Thu, 24 Sep 2026 23:50:08 GMT",
+    "Content-Type": "application/json",
+    "Content-Length": "224",
+    "Connection": "keep-alive",
+    "x-archive-orig-server": "awselb/2.0",
+    "x-archive-orig-date": "Mon, 08 Jan 2024 11:53:16 GMT",
+    "x-archive-orig-content-length": "224",
+    "x-archive-orig-connection": "close",
+    "cache-control": "max-age=1800",
+    "memento-datetime": "Mon, 08 Jan 2024 11:53:16 GMT",
+    "link": "<https://fapi.binance.com/fapi/v1/exchangeInfo>; rel=\"original\", <https://web.archive.org/web/timemap/link/https://fapi.binance.com/fapi/v1/exchangeInfo>; rel=\"timemap\"; type=\"application/link-format\", <https://web.archive.org/web/https://fapi.binance.com/fapi/v1/exchangeInfo>; rel=\"timegate\"",
+    "content-security-policy": "default-src 'self' 'unsafe-eval' 'unsafe-inline' data: blob: archive.org web.archive.org web-static.archive.org wayback-api.archive.org athena.archive.org analytics.archive.org pragma.archivelab.org wwwb-events.archive.org",
+    "x-archive-src": "SPNOUTLINKS-20240108112435-crawl910/SPNOUTLINKS-20240108115140-00025.warc.gz",
+    "server-timing": "captures_list;dur=0.392228, exclusion.robots;dur=0.036602, exclusion.robots.policy;dur=0.030029, esindex;dur=0.006767, cdx.remote;dur=45.277616, LoadShardBlock;dur=183.031193, PetaboxLoader3.datanode;dur=137.742473, PetaboxLoader3.resolve;dur=147.092936, load_resource;dur=104.080202, TR;dur=0,Tw;dur=0,Tc;dur=0",
+    "x-app-server": "wwwb-app265-dc8",
+    "x-ts": "451",
+    "x-tr": "345",
+    "X-location": "All",
+    "X-AS": "22927",
+    "X-RL": "0",
+    "X-NA": "0",
+    "X-Page-Cache": "MISS",
+    "X-NID": "Telefonica de Argentina",
+    "Referrer-Policy": "no-referrer-when-downgrade",
+    "Permissions-Policy": "interest-cohort=()",
+    "X-sd": "0"
+  },
+  "redirects": [
+    {
+      "url": "https://web.archive.org/web/20231102093209id_/https://fapi.binance.com/fapi/v1/exchangeInfo",
+      "status": 302,
+      "location": "https://web.archive.org/web/20240108115316id_/https://fapi.binance.com/fapi/v1/exchangeInfo"
+    }
+  ],
+  "file": "originales/FUTI23.body",
+  "bytes": 224,
+  "sha256": "79c1db471a4cdc1c8565b5dfc52e0ed2d29962738ee4d28597696fcd0920e348",
+  "hash_representation": "requests.Response.content bytes exactly saved; automatic HTTP content decompression by requests if Content-Encoding is set; not raw wire/chunk bytes",
+  "automatic_decompression": false,
+  "extraction": {
+    "title": null,
+    "text_path": "extraidos/FUTI23.txt",
+    "text_sha256": "79c1db471a4cdc1c8565b5dfc52e0ed2d29962738ee4d28597696fcd0920e348",
+    "table_count": 0,
+    "text_chars": 224,
+    "contains_no_records_found": false,
+    "embedded_json_count": 0
+  },
+  "attempt": 1
+}

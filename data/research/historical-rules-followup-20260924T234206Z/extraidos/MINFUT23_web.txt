@@ -1,0 +1,82 @@
+Updates on Minimum Notional Value for BTCUSDT and ETHUSDT Perpetual Contracts (2023-11-02) | Binance Support (https://www.binance.com/en/support/announcement/detail/e4384cba297a4bd2a154be644d5d76f9)
+citeturn9view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.binance.com/en/support/announcement/detail/e4384cba297a4bd2a154be644d5d76f9","lineno":0}); Total lines: 164
+L0: cite0†Markets L1: 
+L2: Trade
+L3: 
+L4: cite1†Square L5: 
+L6: Institutional
+L7: 
+L8: cite2†New Cryptocurrency Listing cite3†Latest Binance News cite4†Latest Activities cite5†Delisting cite6†Maintenance Updates cite7†API Updates cite8†Crypto Airdrop L9: # Updates on Minimum Notional Value for BTCUSDT and ETHUSDT Perpetual Contracts (2023-11-02)
+L10: 
+L11: Published on 2023-10-27 12:40
+L12: 
+L13: Fellow Binancians,
+L14: 
+L15: Binance Futures will update the minimum notional value for orders on BTCUSDT and ETHUSDT Perpetual Contracts by 2023-11-02 10:00 (UTC).
+L16: 
+L17: Details of the adjustments are shown in the table below:
+L18: Symbol  | Previous Minimum Notional Value   | New Minimum Notional Value
+L19: BTCUSDT Perpetual Contract  | 5.0 USDT  | 100.0 USDT
+L20: ETHUSDT Perpetual Contract  | 5.0 USDT  | 20.0 USDT
+L21: 
+L22: Please Note:
+L23: 
+L24:   * The aforementioned updates will not impact existing orders on BTCUSDT and ETHUSDT Perpetual Contracts.
+L25:   * Futures Grid Trading Bot orders for the aforementioned contracts will automatically expire if they do not meet the corresponding minimum notional value requirement. Users are strongly advised to update their Futures Grid Trading Bots prior to 2023-11-02 10:00 (UTC).
+L26: 
+L27:   * API users could use GET /fapi/v1/exchangeInfo to check the latest minimum notional values for orders on each symbol. For further API details and updates, please refer to our cite9†API Change Log†binance-docs.github.io .
+L28:   * Where any discrepancy arises between the translated versions and the original English version, the English version shall prevail.
+L29: 
+L30: Further Information:
+L31: 
+L32:   * cite10†Trading Rules of USDⓈ-M Futures Contracts L33: 
+L34:   * cite9†Binance Futures API Change Log†binance-docs.github.io L35: 
+L36: Thanks for your support!
+L37: 
+L38: Binance Team
+L39: 
+L40: 2023-10-27
+L41: Note: This announcement was last updated on 2023-10-30 to clarify that Futures Grid Trading Bot orders for the aforementioned contracts will automatically expire if they do not meet the corresponding minimum notional value requirement.
+L42: 
+L43: cite11†Trade on-the-go with Binance’s crypto trading app (iOS/Android)†binance.onelink.me L44: 
+L45: Find us on
+L46: 
+L47:   * cite12†Telegram†t.me L48: 
+L49:   * cite13†WhatsApp†whatsapp.com L50: 
+L51:   * cite14†X†twitter.com L52: 
+L53:   * cite15†Facebook†www.facebook.com L54: 
+L55:   * cite16†Instagram†www.instagram.com L56:   * cite17†Discord†discord.gg L57: 
+L58: Binance reserves the right in its sole discretion to amend or cancel this announcement at any time and for any reasons without prior notice.
+L59: Disclaimer:  Digital asset prices can be volatile. The value of your investment can go down or up and you may not get back the amount invested. You are solely responsible for your investment decisions and Binance is not liable for any losses you may incur. Futures trading, in particular, is subject to high market risk and price volatility. All of your Margin Balance may be liquidated in the event of adverse price movement. Past performance is not a reliable predictor of future performance.
+L60: Before trading, you should make an independent assessment of the appropriateness of the transaction in light of your own objectives and circumstances, including the risks and potential benefits. Consult your own advisers, where appropriate. This information should not be construed as financial or investment advice.To learn more about how to protect yourself, visit our cite18†Responsible Trading resource page†app.binance.com .
+L61: For more information, see our Terms of Use, Exchange Rules, Clearing Rules, Exchange Procedures, Clearing Procedures, relevant Contract Specifications and Risk Warning.
+L62: [Input: Search]
+L63: 
+L64: Register Now - Get up to 100 USDT in trading fee rebate (for verified users)
+L65: 
+L66: cite19†Register Now†accounts.binance.com L67: ## Latest Articles
+L68: 
+L69: cite20†Binance Will Support Scheduled Upgrade for Stock Trading Services - 2026-09-26 L70: 
+L71: cite21†Binance Will Support the Injective (INJ) Network Upgrade & Hard Fork - 2026-09-24 L72: 
+L73: cite22†Hold RLUSD in Any Binance Accounts to Share $800,000 Rewards in XRP L74: 
+L75: cite23†Introducing Hold to Earn: Earn Up to 4.75% APR by Holding U, USDe, and USDS in Binance Wallet L76: 
+L77: cite24†Binance Will Support the Zilliqa (ZIL) Network Migration L78: 
+L79: ### Community
+L80: ### About Us
+L81: 
+L82:   * cite25†About L83:   * cite26†Careers L84:   * cite27†Announcements L85:   * cite28†News L86:   * cite29†Press L87:   * cite30†Legal L88:   * cite31†Terms L89:   * cite32†Privacy L90:   * cite33†Building Trust L91:   * cite34†Blog L92:   * cite35†Community L93:   * cite36†Risk Warning L94:   * cite37†Notices L95:   * cite38†Downloads L96:   * cite39†Desktop Application L97:   * cite40†Secure Internal Communication Channel L98: ### Products
+L99: 
+L100:   * cite41†Exchange L101:   * cite42†Buy Crypto L102:   * cite43†Pay L103:   * cite44†Crypto Payments†pay.binance.com L104:   * cite45†Binance Junior L105:   * cite46†Card L106:   * cite47†Academy L107:   * cite48†Gift Card L108:   * cite49†Launchpool L109:   * cite50†Auto-Invest L110:   * cite51†ETH Staking L111:   * cite52†BABT L112:   * cite53†Research L113:   * cite54†Charity†www.binance.charity L114: 
+L115: ### Business
+L116: 
+L117:   * cite55†P2P Merchant Application†c2c.binance.com L118:   * cite56†Listing Application L119:   * cite57†Institutional & VIP Services L120:   * cite58†Labs†labs.binance.com L121:   * cite59†Pay Onchain L122: ### Learn
+L123: 
+L124:   * cite60†Learn & Earn L125:   * cite61†Browse Crypto Prices L126:   * cite62†Bitcoin Price L127:   * cite63†Ethereum Price L128:   * cite64†Browse Crypto Price Predictions L129:   * cite65†Bitcoin Price Prediction L130:   * cite66†Ethereum Price Prediction L131:   * cite67†Ethereum Upgrade (Pectra) L132:   * cite68†Buy Bitcoin L133:   * cite69†Buy BNB L134:   * cite70†Buy XRP L135:   * cite71†Buy Dogecoin L136:   * cite72†Buy Ethereum L137:   * cite73†Buy Tradable Altcoins L138: ### Service
+L139: 
+L140:   * cite74†Affiliate L141:   * cite75†Referral L142:   * cite76†BNB L143:   * cite77†OTC & Execution Services L144:   * cite78†Historical Market Data†data.binance.vision L145:   * cite79†Trading Insight L146:   * cite80†Proof of Reserves L147: ### Support
+L148: 
+L149:   * cite81†24/7 Chat Support L150:   * cite82†Support Center L151:   * cite83†Product Feedback & Suggestions L152:   * cite84†Fees L153:   * cite85†APIs L154:   * cite86†Binance Verify L155:   * cite87†Trading Parameters L156:   * cite88†Binance Airdrop Portal L157:   * cite89†Law Enforcement Requests L158:   * cite90†How to Raise a Complaint L159: Binance ADGM entities are regulated by the Financial Services Regulatory Authority (FSRA) of the Abu Dhabi Global Markets (ADGM) as follows: (1) Nest Exchange Limited is recognised as a Recognised Investment Exchange (Derivatives), with a stipulation to Operate a Multilateral Trading Facility; (2) Nest Clearing and Custody Limited is recognised as a Recognised Clearing House, with a stipulation to Provide Custody and operating a Central Securities Depository; (3) Nest Trading Limited is authorised to carry out the following Regulated Activities: (i) Dealing in Investments as Principal; (ii) Dealing in Investments as Agent; (iii) Arranging Deals in Investments; (iv) Managing Assets; (v) Providing Money Services; and (vi) Arranging Custody.
+L160: Risk Warning: virtual asset prices can be volatile. The value of your investment may go down or up and you may not get back the amount invested. You are solely responsible for your investment decisions and Binance is not liable for any trading losses you may incur.
+L161: Binance© 2026 Cookie Preferences
+L162: 
+L163: cite91†iframe†www.googletagmanager.com

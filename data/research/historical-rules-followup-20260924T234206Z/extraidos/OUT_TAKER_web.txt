@@ -1,0 +1,45 @@
+Binance Futures Upgrades Taker Program (2023-10-31) | Binance Support (https://www.binance.com/en/support/announcement/detail/143cee3a83944c4da2b1a53f302f45f0)
+citeturn14view2 [wordlim: 200] Crawled: 5 days ago; Content type: text/html; Source: open({"ref_id":"https://www.binance.com/en/support/announcement/detail/143cee3a83944c4da2b1a53f302f45f0","lineno":0}); Total lines: 180
+L0: cite0†Markets L1: 
+L2: Trade
+L3: 
+L4: cite1†Square L5: 
+L6: cite2†New Cryptocurrency Listing cite3†Latest Binance News cite4†Latest Activities cite5†Delisting cite6†Maintenance Updates cite7†API Updates cite8†Crypto Airdrop L7: # Binance Futures Upgrades Taker Program (2023-10-31)
+L8: 
+L9: Published on 2023-10-18 04:00
+L10: 
+L11: Fellow Binancians,
+L12: 
+L13: Binance Futures is upgrading the Taker Program. Effective from 2023-10-31 at 00:00 (UTC), eligible users may enjoy a taker fee discount of up to 25% on eligible USDⓈ-M perpetual and delivery contracts.
+L14: 
+L15: Validity Period: 2023-10-31 00:00 (UTC) to 2024-01-29 23:59 (UTC)
+L16: Users who reach a total futures trading volume of 100,000,000 USDT equivalent in the last 30 days, may cite9†submit an application for the Taker Program at any time and be assessed in the weekly review of the Taker Program. Users who have applied for the cite10†previous Taker Program are not required to resubmit the form, and will be assessed for eligibility automatically. Taker fee discounts will be effective from the following Tuesday after the weekly review.
+L17: The taker fee discount will be based on the user’s weekly taker volume, weekly taker volume share on BTC and ETH pairs, or weekly taker volume share excluding that of BTC and ETH pairs on USDⓈ-M perpetual and delivery contracts in the previous week (i.e., Monday at 00:00 UTC to Sunday at 23:59 UTC). Refer to the table below for more details:
+L18: Fee Tier  | Weekly USDⓈ-M Futures Taker Volume(USDT Equivalent)  | Or  | Weekly USDⓈ-M Futures Taker Volume Share on BTC and ETH Pairs  | Or  | Weekly USDⓈ-M Futures Taker Volume Share Excluding That of BTC and ETH Pairs  | Taker Fee Discount on USDT-M Perpetual and Delivery Contracts  | Taker Fee Discount on BUSD-M Perpetual Contracts
+L19: 1  | 250M ≤ X < 500M  | Or  | 0.1% ≤ X < 0.2%  | Or  | 0.1% ≤ X < 0.4%  | 10%  | 5%
+L20: 2  | 500M ≤ X < 2,500M  | Or  | 0.2% ≤ X < 1%  | Or  | 0.4% ≤ X < 1%  | 15%  | 5%
+L21: 3  | 2,500M ≤ X < 5,000M  | Or  | 1% ≤ X < 2%  | Or  | 1% ≤ X < 2%  | 20%  | 5%
+L22: 4  | X ≥ 5,000M  | Or  | X ≥ 2%  | Or  | X ≥ 2%  | 25%  | 5%
+L23: Please Note:
+L24: 
+L25:   * Users may qualify for a higher fee tier and corresponding taker fee discount when trading eligible USDⓈ-M perpetual and delivery contracts, so long as they fulfill the requirements of either the weekly taker volume, weekly taker volume share on BTC and ETH pairs, or weekly taker volume share excluding that of BTC and ETH pairs on USDⓈ-M perpetual and delivery contracts for the respective fee tier.
+L26:   * Assuming user A reaches a weekly taker volume of 3,000M USDT equivalent, a 2% taker volume share on BTC and ETH pairs, and a 0.4% taker volume share excluding that of BTC and ETH pairs on USDⓈ-M perpetual and delivery contracts from Monday, October 23 at 00:00 (UTC) to Sunday, October 29 at 23:59 (UTC).
+L27: 
+L28:     * User A will qualify for Fee Tier 4 as per the weekly USDⓈ-M futures taker volume share on BTC and ETH pairs.
+L29:     * Therefore, user A will enjoy 25% off taker fees for trades on USDT-margined perpetual and delivery contracts and 5% off taker fees for trades on BUSD-margined perpetual contracts starting from Tuesday, October 31 at 00:00 (UTC) to Monday, November 6 at 23:59 (UTC) (i.e., during the Validity Period).
+L30:     * As the taker fee discounts from the upgraded program will be effective from Tuesday, October 31 at 00:00 (UTC) only, users may still enjoy the respective taker fee discounts from the cite10†previous Taker Program till 2023-10-30 23:59 (UTC), if they have applied for the program previously and meet the corresponding requirements.
+L31: 
+L32: cite9†Enroll in the Taker Program Now! L33: 
+L34: Terms & Conditions:
+L35:   * Users’ weekly taker volume, weekly taker volume share on BTC and ETH pairs, and weekly taker volume share excluding that of BTC and ETH pairs on USDⓈ-M perpetual and delivery contracts will be reviewed on a weekly basis (i.e., Monday at 00:00 UTC to Sunday at 23:59 UTC).
+L36:   * Weekly USDⓈ-M futures taker volume share on BTC and ETH pairs is defined by the user's weekly taker transaction volume on BTC and ETH pairs divided by the weekly total taker transaction volume on BTC and ETH pairs in the USDⓈ-M market from Monday at 00:00 (UTC) to Sunday at 23:59 (UTC).
+L37:   * Weekly USDⓈ-M futures taker volume share excluding that of BTC and ETH pairs is defined by the user's weekly taker transaction volume excluding that of BTC and ETH pairs divided by the weekly total taker transaction volume excluding that of BTC and ETH pairs in the USDⓈ-M market from Monday at 00:00 (UTC) to Sunday at 23:59 (UTC).
+L38: 
+L39:   * Any fee tier adjustments will be automatically updated on the following Tuesday at 00:00 (UTC) based on the aforementioned criteria.
+L40:   * Users will be removed from the Taker Program if they do not meet the lowest criteria for three consecutive weeks. Binance Futures will not consider reapplications to the Taker Program by these users for the rest of the Validity Period.
+L41: 
+L42:   * Taker fee discount will be directly applied to each taker trade.
+L43: 
+L44:   * Taker fee discount is applied on top of the cite11†BNB fee discount and cite12†VIP tier rates .
+L45: 
+L46:   * Binance Futures will provide daily and weekly reports to participating users via email.

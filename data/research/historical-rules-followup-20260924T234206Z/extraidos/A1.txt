@@ -1,0 +1,408 @@
+USDⓈ-M Futures Trading Fee Rate | Binance
+Exchange
+Blockchain and crypto asset exchange
+Academy
+Blockchain and crypto education
+Learn & Earn
+Earn free crypto through learning
+Charity
+Powering blockchain for good
+Cloud
+Enterprise exchange solutions
+DEX
+Fast and secure decentralized digital asset exchange
+Labs
+Incubator for top blockchain projects
+Launchpad
+Token Launch Platform
+Research
+Institutional-grade analysis and reports
+Trust Wallet
+Binance's official crypto wallet
+Binance Live
+Bringing blockchain broadcasts to you live
+BABT
+Verified user credentials for the Web3 era
+Binance Tax
+new
+Free tax tool to calculate your crypto taxes
+DeFi Wallet
+Meet the next-generation Web3 wallet
+OTC Trading
+Spot, Options, Algo Orders and more
+Accept Crypto Payment
+Allow your customers to pay with crypto
+Buy Crypto
+Pay with
+Markets
+Markets Overview
+Overview of the crypto market with real-time prices and key data
+Trading Data
+View top market movers and price performance
+Trade
+Binance Convert
+The easiest way to trade
+Spot
+Trade crypto with advanced tools
+Margin
+Increase your profits with leverage
+Trading Bots
+Trade smarter with our various automated strategies - easy, fast and reliable
+P2P
+Bank transfer and 100+ options
+Swap Farming
+Swap to earn BNB
+Fan Token
+Upgrade your fan experience
+OTC Block Trading
+RFQ and trade large spot orders
+Derivatives
+USDⓈ-M Futures
+Perpetual or Quarterly Contracts settled in USDT or BUSD
+COIN-M Futures
+Perpetual or Quarterly Contracts settled in Cryptocurrency
+Options
+Buy and Sell European-style Options.
+Leveraged Tokens
+Enjoy increased leverage without risk of liquidation
+Leaderboard
+Exclusive ranking for Binance traders, follow top traders' strategies
+Binance Futures Overview
+View our full range of crypto-derivative instruments
+Futures Markets
+View trends and opportunities in the Futures Markets before trading
+Responsible Trading
+Learn how you could practice responsible trading with Binance Futures
+Blog
+Expand your knowledge and get the latest insights in Derivatives Trading
+VIP Portal
+VIP Exclusive, Tailor-made Institutional Grade Services
+Earn
+Binance Earn
+One-stop Investment Solution
+Launchpad
+Token Launch Platform
+Simple Earn
+Earn daily rewards on your idle tokens
+DeFi Staking
+Easy Access to DeFi Opportunities
+BNB Vault
+Earn Multi-benefits with BNB
+Dual Investment
+Commit your crypto holdings and enjoy high returns
+Liquidity Farming
+Add liquidity and earn double
+Auto-Invest
+new
+Accumulate crypto on autopilot
+Binance Pool
+Mine more rewards by connecting to the pool
+ETH Staking
+One click staking, rewards paid daily
+Range Bound
+new
+Earn high rewards when the market moves sideways
+Finance
+Binance Card
+new
+Get up to 8% cashback when you spend at 90M merchants worldwide
+Binance Loans
+Get an instant loan secured by crypto assets
+Binance Pay
+Send, receive and spend crypto with 0 fees
+Binance Gift Card
+Customizable crypto gift card
+NFT
+Institutional
+Institutional Home
+Premium digital asset solutions for institutions
+Link
+Connect and grow with Binance liquidity solutions
+Asset Management Solutions
+Discover various asset management solutions
+VIP Portal
+One-stop station made for VIP and institutions
+Custody
+Secure digital assets with leading infrastructure
+VIP Loan
+Bespoke institutional loan with wide coverage
+APIs
+Unlimited opportunities with one key
+Historical Market Data
+Your all-in-one trading data repository
+Execution & OTC Services
+Execution & OTC Services
+Capital Connect
+Connecting investors and investment managers
+Feed
+Trading Fees
+Deposit & Withdrawal Fees
+Log in to check your trading fee rate.
+Login
+Enjoy higher discounts and privilege.
+VIP program
+Enjoy more benefits with fee deductions for the following transactions.
+BTC/TUSD Spot & Margin Pair
+0% Fee
+Learn more
+BNB Deduction
+25% Off
+on Spot & Margin Trading fee
+Learn more
+BNB Deduction
+10% Off
+on USDⓈ-M Futures Trading fee
+Learn more
+Invite friends and get
+$100 off
+on spot trading fees.
+Refer a friend
+Fee Rate
+Level
+30d Trade Volume (BUSD)
+and/or
+BNB Balance
+USDT
+Maker / Taker
+USDT Maker/Taker
+BNB 10% off
+BUSD
+Maker / Taker
+BUSD Maker/Taker
+BNB 10% off
+Regular User
+< 15,000,000 BUSD
+or
+≥ 0 BNB
+0.0200%
+/
+0.0400%
+0.0180%
+/
+0.0360%
+0.0120%
+/
+0.0300%
+0.0108%
+/
+0.0270%
+VIP 1
+≥ 15,000,000 BUSD
+and
+≥ 25 BNB
+0.0160%
+/
+0.0400%
+0.0144%
+/
+0.0360%
+0.0120%
+/
+0.0300%
+0.0108%
+/
+0.0270%
+VIP 2
+≥ 50,000,000 BUSD
+and
+≥ 100 BNB
+0.0140%
+/
+0.0350%
+0.0126%
+/
+0.0315%
+0.0120%
+/
+0.0300%
+0.0108%
+/
+0.0270%
+VIP 3
+≥ 100,000,000 BUSD
+and
+≥ 250 BNB
+0.0120%
+/
+0.0320%
+0.0108%
+/
+0.0288%
+0.0120%
+/
+0.0300%
+0.0108%
+/
+0.0270%
+VIP 4
+≥ 600,000,000 BUSD
+and
+≥ 500 BNB
+0.0100%
+/
+0.0300%
+0.0090%
+/
+0.0270%
+0.0100%
+/
+0.0300%
+0.0090%
+/
+0.0270%
+VIP 5
+≥ 1,000,000,000 BUSD
+and
+≥ 1,000 BNB
+0.0080%
+/
+0.0270%
+0.0072%
+/
+0.0243%
+-0.0100%
+/
+0.0230%
+-0.0100%
+/
+0.0207%
+VIP 6
+≥ 2,500,000,000 BUSD
+and
+≥ 1,750 BNB
+0.0060%
+/
+0.0250%
+0.0054%
+/
+0.0225%
+-0.0100%
+/
+0.0230%
+-0.0100%
+/
+0.0207%
+VIP 7
+≥ 5,000,000,000 BUSD
+and
+≥ 3,000 BNB
+0.0040%
+/
+0.0220%
+0.0036%
+/
+0.0198%
+-0.0100%
+/
+0.0230%
+-0.0100%
+/
+0.0207%
+VIP 8
+≥ 12,500,000,000 BUSD
+and
+≥ 4,500 BNB
+0.0020%
+/
+0.0200%
+0.0018%
+/
+0.0180%
+-0.0100%
+/
+0.0230%
+-0.0100%
+/
+0.0207%
+VIP 9
+≥ 25,000,000,000 BUSD
+and
+≥ 5,500 BNB
+0.0000%
+/
+0.0170%
+0.0000%
+/
+0.0153%
+-0.0100%
+/
+0.0230%
+-0.0100%
+/
+0.0207%
+A “Taker” is a trader who places an order at the market price, whereas a “Maker” is a trader who places an order at a limit price.
+Learn more
+VIP trade volume levels are measured on the basis of the spot trading volume, or whether the futures trading volume meets the standard (Futures trading volume includes USDS-M futures and COIN-M futures) .
+Refer friends to earn trading fees 20% kickback.
+Learn more
+About Us
+About
+Press
+Careers
+Business Contacts
+Community
+Binance Blog
+Building Trust
+Legal
+Terms
+Privacy
+Risk Warning
+Announcements
+News
+Notices
+Sitemap
+Cookie Preferences
+Products
+Exchange
+Academy
+Binance Live
+Charity
+Card
+Labs
+Launchpad
+Research
+Trust Wallet
+NFT
+Binance Pay
+Binance Gift Card
+BABT
+Binance Tax
+Service
+Downloads
+Desktop Application
+Buy Crypto
+Institutional & VIP Services
+OTC Trading
+Referral
+Affiliate
+BNB
+Listing Application
+P2P Merchant Application
+P2Pro Merchant Application
+Historical Market Data
+Proof of Reserves
+Support
+Request a Feature
+Support Center
+24/7 Chat Support
+APIs
+Fees
+Trading Rules
+Binance Verify
+Law Enforcement Requests
+Binance Legal (Court Orders)
+Binance Airdrop Portal
+Learn
+Learn & Earn
+Browse Crypto Prices
+Bitcoin Price
+Ethereum Price
+Buy BNB
+Buy BUSD
+Buy Bitcoin
+Buy Ethereum
+Buy Dogecoin
+Buy Ripple
+Buy Tradable Altcoins
+Community
+Binance © 2023

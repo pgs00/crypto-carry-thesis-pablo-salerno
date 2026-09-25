@@ -1,0 +1,30 @@
+[
+  {
+    "id": "SPOTI22",
+    "url": "https://web.archive.org/web/20220102134838id_/https://api.binance.com/api/v3/exchangeInfo"
+  },
+  {
+    "id": "SPOTI23",
+    "url": "https://web.archive.org/web/20230621052717id_/http://api.binance.com/api/v3/exchangeInfo?"
+  },
+  {
+    "id": "SPOTI25",
+    "url": "https://web.archive.org/web/20251209111642id_/https://api.binance.com/api/v3/exchangeInfo"
+  },
+  {
+    "id": "FUTI22",
+    "url": "https://web.archive.org/web/20220102134838id_/https://fapi.binance.com/fapi/v1/exchangeInfo"
+  },
+  {
+    "id": "FUTI23",
+    "url": "https://web.archive.org/web/20231102093209id_/https://fapi.binance.com/fapi/v1/exchangeInfo"
+  },
+  {
+    "id": "FUTI26",
+    "url": "https://web.archive.org/web/20260217041328id_/https://fapi.binance.com/fapi/v1/exchangeInfo"
+  },
+  {
+    "id": "FUTI26B",
+    "url": "https://web.archive.org/web/20260510103016id_/https://fapi.binance.com/fapi/v1/exchangeInfo"
+  }
+]

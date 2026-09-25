@@ -1,0 +1,73 @@
+Updates on the Tick Size for BTC USDⓈ-M Perpetual Futures Contracts | Binance Support (https://www.binance.com/en-AU/support/announcement/detail/81e6795b0bae49828cbd52479094a987)
+citeturn14view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.binance.com/en-AU/support/announcement/detail/81e6795b0bae49828cbd52479094a987","lineno":0}); Total lines: 135
+L0: cite0†Markets L1: 
+L2: Trade
+L3: 
+L4: Learn
+L5: 
+L6: More
+L7: 
+L8: cite1†New Crypto Listings cite2†Latest Binance News cite3†Latest Activities L9: 
+L10: This article does not support your language.
+L11: # Updates on the Tick Size for BTC USDⓈ-M Perpetual Futures Contracts
+L12: 
+L13: Published on 2021-12-31 06:45
+L14: 
+L15: Fellow Binancians,
+L16: 
+L17: In order to increase market liquidity and improve your trading experience, Binance will be adjusting the tick size (i.e., the minimum change in the unit price) of the USDⓈ-M perpetual futures contracts as shown in the table below at 2022-02-15 03:30 AM (UTC).
+L18:   * The adjustment will not impact USDⓈ-M Futures trading operations.
+L19:   * Tick size via API will also change. API users may use GET /fapi/v1/exchangeInfo for the latest tick size. For further details and updates, please refer to our full cite4†API Changelog†binance-docs.github.io .
+L20:   * The tick size update will not affect existing orders. After the tick size is updated, orders placed before the update will be matched with the original tick size.
+L21: 
+L22: Details are as follows:
+L23: Contract Type  | Trading Pair  | Before  | After
+L24: USDⓈ-M Futures  | BTCUSDT  | 0.01  | 0.1
+L25: 
+L26: Please refer to cite5†Trading Rules for details and please adjust your trading strategy according to the change to avoid unnecessary impact on your trading.
+L27: Risk Warning: Futures trading carries substantial risk and the possibility of both significant profits and losses. Past gains are not indicative of future returns. All of your margin balance may be liquidated in the event of extreme price movements. The information here should not be regarded as financial or investment advice from Binance. All trading strategies are used at your discretion and your own risk. Binance will not be liable to you for any loss that might arise from your use of Futures.
+L28: To learn more about how to protect yourself, visit our cite6†Responsible Trading resource page .
+L29: Thanks for your support!
+L30: 
+L31: Binance Team
+L32: 
+L33: 2021-12-31
+L34: 
+L35: 
+L36: cite7†Trade on-the-go with Binance’s crypto trading app (iOS/Android)†binance.onelink.me L37: 
+L38: Find us on
+L39: 
+L40: Telegram: cite8†https://t.me/binanceexchange†t.me L41: 
+L42: Twitter: cite9†https://twitter.com/binance†twitter.com L43: 
+L44: Facebook: cite10†https://www.facebook.com/binance†www.facebook.com L45: 
+L46: Instagram: cite11†https://www.instagram.com/binance†www.instagram.com L47: Binance reserves the right in its sole discretion to amend or change or cancel this announcement at any time and for any reasons without prior notice.
+L48: 
+L49: [Input: Search]
+L50: 
+L51: Register Now - Get up to 100 USDT in trading fee rebate (for verified users)
+L52: 
+L53: cite12†Register Now†accounts.binance.com L54: ## Latest Articles
+L55: 
+L56: cite13†Binance Card: Enjoy 40% Cashback on Your First Apple Pay Transaction! L57: 
+L58: cite14†Updates on Crypto Transfer Procedures in Australia L59: 
+L60: cite15†Babylon BTC Staking: Enjoy Up to 2.5% APR L61: 
+L62: cite16†Invite Friends And Claim up to 160 USDT in Rewards! L63: 
+L64: cite17†Binance Earn Introduces On-Chain Yields with the Launch of BTC, USDT and BNB Staking L65: 
+L66: ### Community
+L67: ### About Us
+L68: 
+L69:   * cite18†About L70:   * cite19†Careers L71:   * cite20†Announcements L72:   * cite21†Press L73:   * cite22†Legal L74:   * cite23†Building Trust L75:   * cite24†Blog L76:   * cite25†Community L77:   * cite26†Risk Warning L78: 
+L79: ### Products
+L80: 
+L81:   * cite27†Exchange L82:   * cite28†Buy Crypto L83:   * cite29†Academy L84:   * cite30†Gift Card L85:   * cite31†BABT L86:   * cite32†Research L87:   * cite33†Charity†www.binance.charity L88: 
+L89: ### Business
+L90: 
+L91:   * cite34†P2P Merchant Application†c2c.binance.com L92:   * cite35†Listing Application L93:   * cite36†Institutional & VIP Services L94:   * cite37†Labs†labs.binance.com L95: ### Service
+L96: 
+L97:   * cite38†Downloads L98:   * cite39†Desktop Application L99:   * cite40†Referral L100:   * cite41†OTC & Execution Services L101:   * cite42†Proof of Reserves L102: 
+L103: ### Support
+L104: 
+L105:   * cite43†24/7 Chat Support L106:   * cite44†Support Center L107:   * cite45†Product Feedback & Suggestions L108:   * cite46†Fees L109:   * cite47†APIs L110:   * cite48†Binance Verify L111:   * cite49†Trading Parameters L112:   * cite50†Binance Airdrop Portal L113:   * cite51†Law Enforcement Requests L114: ### Learn
+L115: 
+L116:   * cite52†Learn & Earn L117:   * cite53†Browse Crypto Prices L118:   * cite54†Bitcoin Price L119:   * cite55†Ethereum Price L120:   * cite56†Browse Crypto Price Predictions L121:   * cite57†Bitcoin Price Prediction L122:   * cite58†Ethereum Price Prediction L123:   * cite59†Ethereum Upgrade (Pectra) L124:   * cite60†Buy Bitcoin L125:   * cite61†Buy BNB L126:   * cite62†Buy XRP L127:   * cite63†Buy Dogecoin L128:   * cite64†Buy Ethereum L129:   * cite65†Buy Tradable Altcoins L130: Binance Australia is a reporting entity regulated by the Australian Transaction Reports and Analysis Centre (AUSTRAC) as a Virtual Asset Service Provider (registration number: 100576141-001). Binance Australia has also lodged an application with the Australian Securities and Investments Commission (ASIC) for an Australian Financial Services Licence (AFSL), which is currently pending determination.
+L131: Risk Warning: Crypto Assets prices can be volatile. The value of your investment may go down or up and you may not get back the amount invested. You are solely responsible for your investment decisions and Binance is not liable for any trading losses you may incur.

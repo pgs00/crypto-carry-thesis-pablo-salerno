@@ -1,0 +1,86 @@
+Updates on Minimum Order Size for Spot Trading Pairs (2023-08-31) | Binance Support (https://www.binance.com/en-AE/support/announcement/detail/c4706c73b805423a8d36be948e297603)
+citeturn9view1 [wordlim: 200] Crawled: yesterday; Content type: text/html; Source: open({"ref_id":"https://www.binance.com/en-AE/support/announcement/detail/c4706c73b805423a8d36be948e297603","lineno":0}); Total lines: 147
+L0: cite0†Markets L1: 
+L2: Trade
+L3: 
+L4: cite1†Square L5: 
+L6: Institutional
+L7: 
+L8: cite2†New Cryptocurrency Listing cite3†Latest Binance News cite4†Latest Activities cite5†Delisting cite6†Wallet Maintenance Updates cite7†API Updates cite8†Crypto Airdrop L9: # Updates on Minimum Order Size for Spot Trading Pairs (2023-08-31)
+L10: 
+L11: Published on 2023-08-24 02:05
+L12: 
+L13: Fellow Binancians,
+L14: 
+L15: In order to make trading more accessible and improve trading experience, Binance will reduce the minimum order size of spot trading pairs with DAI, USDT, TUSD, USDC as quote assets by 2023-08-31 03:00 (UTC), as well as spot trading pairs with ETH, BNB as quote assets by 2023-08-31 07:00 (UTC).
+L16: For details about the minimum order sizes of all spot trading pairs on Binance, please refer to the cite9†Trading Rules .
+L17: 
+L18:   * The adjustment will not affect spot trading or other relevant functions.
+L19: 
+L20:   * API users may use GET /api/v3/exchangeInfo for the latest minimum order size. For further API details and updates, please refer to our cite10†API Changelog†github.com .
+L21: 
+L22:   * The updates to minimum order size will not affect existing spot orders.
+L23:   * Where any discrepancy arises between the translated versions and the original English version, the English version shall prevail.
+L24: 
+L25: Details of the adjustments are shown in the table below:
+L26: 
+L27:   * By 2023-08-31 03:00 (UTC):
+L28: 
+L29: Trading Pairs With the Following Quote Assets  | Previous Minimum Order Size  | Updated Minimum Order Size
+L30: DAI  | 10 DAI  | 5 DAI
+L31: USDT  | 10 USDT  | 5 USDT
+L32: TUSD  | 10 TUSD  | 5 TUSD
+L33: USDC  | 10 USDC  | 5 USDC
+L34: 
+L35:   * By 2023-08-31 07:00 (UTC):
+L36: Trading Pairs With the Following Quote Assets  | Previous Minimum Order Size  | Updated Minimum Order Size
+L37: ETH  | 0.005 ETH  | 0.001 ETH
+L38: BNB  | 0.05 BNB  | 0.01 BNB
+L39: 
+L40: Thanks for your support!
+L41: 
+L42: Binance Team
+L43: 
+L44: 2023-08-24
+L45: 
+L46: cite11†Trade on-the-go with Binance’s crypto trading app (iOS/Android)†binance.onelink.me L47: 
+L48: Find us on
+L49: 
+L50:   * cite12†Telegram†t.me L51: 
+L52:   * cite13†X†twitter.com L53: 
+L54:   * cite14†Facebook†www.facebook.com L55: 
+L56:   * cite15†Instagram†www.instagram.com L57: Binance reserves the right in its sole discretion to amend or cancel this announcement at any time and for any reasons without prior notice.
+L58: 
+L59: Binance FZE is licensed by the Dubai Virtual Assets Regulatory Authority (VARA) as a Virtual Asset Service Provider (VASP Reference: VL/24/04/001).
+L60: Risk warning: Virtual Asset prices can be extremely volatile. The value of your investment may go down or up and you may lose some or all of the amount invested. You are solely responsible for your investment decisions. Binance is not liable for any trading losses you may incur and your investment does not benefit from any form of financial protection. This communication should not be regarded as financial advice. For more information, see our cite16†Terms of Use and cite17†Risk Warning .
+L61: 
+L62: [Input: Search]
+L63: Register Now - Get up to 100 USDT in trading fee rebate (for verified users)
+L64: 
+L65: cite18†Register Now†accounts.binance.com L66: ## Latest Articles
+L67: 
+L68: cite19†Notice of Removal of Spot Trading Pairs - 2026-09-25 L69: 
+L70: cite20†Binance Will Support the Terra (LUNA) Network Upgrade - 2026-09-21 L71: 
+L72: cite21†Notice of Removal of Spot Trading Pairs - 2026-09-18 L73: 
+L74: cite22†Binance Will Support the Vana (VANA) Network Upgrade & Hard Fork - 2026-09-21 L75: 
+L76: cite23†Binance Will Support the Vechain (VET) Network Upgrade & Hard Fork - 2026-09-16 L77: 
+L78: ### Community
+L79: ### About Us
+L80: 
+L81:   * cite24†About L82:   * cite25†Careers L83:   * cite26†Announcements L84:   * cite27†News L85:   * cite28†Press L86:   * cite29†Legal L87:   * cite16†Terms L88:   * cite30†Privacy Notice L89:   * cite31†Building Trust L90:   * cite32†Blog L91:   * cite33†Community L92:   * cite17†Risk Warning L93:   * cite34†Notices L94:   * cite35†Downloads L95:   * cite36†Desktop Application L96: 
+L97: ### Products
+L98: 
+L99:   * cite37†Exchange L100:   * cite38†Buy Crypto L101:   * cite39†Pay L102:   * cite40†Binance Junior L103:   * cite41†Academy L104:   * cite42†BABT L105:   * cite43†Research L106: ### Business
+L107: 
+L108:   * cite44†Listing Application L109:   * cite45†Institutional & VIP Services L110:   * cite46†Labs†labs.binance.com L111: 
+L112: ### Service
+L113: 
+L114:   * cite47†Affiliate L115:   * cite48†Referral L116:   * cite49†OTC & Execution Services L117:   * cite50†Historical Market Data†data.binance.vision L118:   * cite51†Proof of Reserves L119: ### Support
+L120: 
+L121:   * cite52†24/7 Chat Support L122:   * cite53†Support Center L123:   * cite54†Product Feedback & Suggestions L124:   * cite55†Fees L125:   * cite56†APIs L126:   * cite57†Binance Verify L127:   * cite58†Trading Parameters L128:   * cite59†Binance Airdrop Portal L129:   * cite60†Law Enforcement Requests L130: ### Learn
+L131: 
+L132:   * cite61†Learn & Earn L133:   * cite62†Browse Crypto Prices L134:   * cite63†Bitcoin Price L135:   * cite64†Ethereum Price L136:   * cite65†Ethereum Upgrade (Pectra) L137:   * cite66†What is Spot Trading†academy.binance.com L138:   * cite67†What is Proof of Reserves†academy.binance.com L139:   * cite68†Buy BNB L140:   * cite69†How to invest in Bitcoin & Crypto†academy.binance.com L141:   * cite70†What are Altcoins†academy.binance.com L142: Binance FZE is licensed by the Dubai Virtual Assets Regulatory Authority (VARA) as a Virtual Asset Service Provider (VASP Reference: VL/24/04/001) for the following Virtual Asset Activities: (i) Exchange Services, (ii) Broker-Dealer Services, (iii) Lending and Borrowing Services, and (iv) VA Management and Investment Services.
+L143: Risk Warning: Virtual Asset prices can be volatile. The value of your investment may go down or up and you may not get back the amount invested. You are solely responsible for your investment decisions and Binance is not liable for any trading losses you may incur.
+L144: Binance© 2026 Cookie Preferences
+L145: 
+L146: cite71†iframe†www.googletagmanager.com

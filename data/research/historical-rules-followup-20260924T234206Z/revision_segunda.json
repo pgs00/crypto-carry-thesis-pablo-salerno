@@ -1,0 +1,115 @@
+{
+  "reviewed_at_utc": "2026-09-25T00:16:28.379211Z",
+  "reviewer": "mismo agente Codex; no hubo revisi?n humana ni agente independiente",
+  "independent": false,
+  "method": "Segunda pasada dirigida a hechos prioritarios, combinando relectura de fuente y comprobaci?n program?tica; no s?lo repetici?n de hashes.",
+  "checks": [
+    {
+      "topic": "comisiones",
+      "method": "Relectura de A1 SSR level 0 y columnas USDT/BUSD; A2/A4 y A3 s?lo secci?n USD-M; SPOT26 tabla 0, fila 2, columna Maker / Taker est?ndar. Conversi?n Decimal y aritm?tica verificadas contra los cuerpos.",
+      "findings": "0.0004, 0.0004, 0.0004, 0.0005 y 0.001; ninguna captura anuncia fecha operativa. FAQ A2/A4 etiqueta 2020; A3 etiqueta 2019.",
+      "passed": true
+    },
+    {
+      "topic": "promoci?n BTC",
+      "method": "Segunda apertura del aviso de fin W017 y relectura del inicio W003; fila BTC/USDT y UTC expl?cito; lectura de notas de enmienda.",
+      "findings": "Inicio 2022-07-08T14:00:00Z; fin 2023-03-22T00:00:00Z. Tabla actual de otros pares no se retrotrae.",
+      "passed": true
+    },
+    {
+      "topic": "margen",
+      "method": "Revisi?n de encabezados y bloques BTCUSDT/ETHUSDT de W006 y W008; todos los campos de 177 filas cotejados program?ticamente con el texto de l?nea y mitad antes/despu?s; comprobaci?n secundaria de 90 filas nuevas contra registro previo. N/A se expande s?lo en su mitad.",
+      "published_deduction_obtained": false,
+      "comparison_with_previous": [
+        {
+          "previous_id": "eth_after_20220913",
+          "current_fact_ids": [
+            "TIERS_MARG22_ETHUSDT_after"
+          ],
+          "rows": 9,
+          "passed": true
+        },
+        {
+          "previous_id": "btc_after_20231224",
+          "current_fact_ids": [
+            "TIERS_MARG23_BTCUSDT_after"
+          ],
+          "rows": 10,
+          "passed": true
+        },
+        {
+          "previous_id": "eth_after_20231224",
+          "current_fact_ids": [
+            "TIERS_MARG23_ETHUSDT_after"
+          ],
+          "rows": 11,
+          "passed": true
+        },
+        {
+          "previous_id": "btc_after_20240528",
+          "current_fact_ids": [
+            "TIERS_MARG24_BTCUSDT_after"
+          ],
+          "rows": 12,
+          "passed": true
+        },
+        {
+          "previous_id": "eth_after_20240528",
+          "current_fact_ids": [
+            "TIERS_MARG24_ETHUSDT_after"
+          ],
+          "rows": 12,
+          "passed": true
+        },
+        {
+          "previous_id": "btc_after_20250617",
+          "current_fact_ids": [
+            "TIERS_MARGBTC25_BTCUSDT_after"
+          ],
+          "rows": 12,
+          "passed": true
+        },
+        {
+          "previous_id": "btc_after_20250819",
+          "current_fact_ids": [
+            "TIERS_MARGAUG25_BTCUSDT_after"
+          ],
+          "rows": 12,
+          "passed": true
+        },
+        {
+          "previous_id": "eth_after_20250819",
+          "current_fact_ids": [
+            "TIERS_MARGAUG25_ETHUSDT_after"
+          ],
+          "rows": 12,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "topic": "temporalidad",
+      "method": "Relectura de by, approximately y p?rrafos de posiciones existentes en W010/W006/W008; nota de enmienda agosto 2025 en W017.",
+      "findings": "No igualar publicaci?n/known_from/operativa; diciembre 2023 tiene anuncio posterior en enero 2024. L?mites ETH intermedios siguen sin fechar.",
+      "passed": true
+    },
+    {
+      "topic": "APIs",
+      "method": "Segunda lectura de objetos completos BTC/ETH y cotejo de 288 rutas JSON con cuerpo original; comprobaci?n de PERPETUAL, USDT, filtros, banderas, ceros y enum NONE.",
+      "findings": "7 capturas utilizables; maxQty y maxNotional se distinguen; minQty no se deriva de step; serverTime no es valid_from.",
+      "passed": true
+    },
+    {
+      "topic": "replays",
+      "method": "URL final, Memento-Datetime y metadatos HTTP contrastados de nuevo.",
+      "findings": "SPOTI23 real 2023-06-18; FUTI22B real 2022-11-16; FUTI23 real 2024-01-08 devuelve 451 y se excluye. Capturas promocionales sin tabla no certifican ausencia.",
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "Revisi?n sobre extracciones web cuando no se dispone del HTML HTTP original.",
+    "No demuestra continuidad temporal ni primera disponibilidad de versiones mutables.",
+    "Las tablas margen extra?das fueron inequ?vocas tras asignar N/A a su mitad; no se requiri? OCR ni adivinar cifras."
+  ]
+}

@@ -1,0 +1,2349 @@
+{
+  "schema": "historical_sources_v1",
+  "generated_at_utc": "2026-09-25T00:19:07.693738Z",
+  "sources": [
+    {
+      "id": "PROMO_START",
+      "publisher": "Binance",
+      "title": "Binance Launches Zero-Fee Bitcoin Trading | Binance Support",
+      "type": "official_current_web_text",
+      "original_url": "https://www.binance.com/en/support/announcement/detail/10435147c55d4a40b64fcbf43cb46329",
+      "final_url": "https://www.binance.com/en/support/announcement/detail/10435147c55d4a40b64fcbf43cb46329",
+      "publisher_url": "https://www.binance.com/en/support/announcement/detail/10435147c55d4a40b64fcbf43cb46329",
+      "publication_original": "2022-07-06 14:00",
+      "publication_utc": null,
+      "publication_timezone": "no acreditada en encabezado",
+      "updates_original": [
+        "2022-07-08",
+        "2023-03-23"
+      ],
+      "updates_utc": null,
+      "capture_utc": null,
+      "queried_at_utc": "2026-09-24T23:45:28.136Z",
+      "last_consulted_at_utc": "2026-09-24T23:45:28.136Z",
+      "http_status": null,
+      "local_file": "extraidos/PROMO_START_web.txt",
+      "local_base": "package",
+      "bytes": 6826,
+      "sha256": "70715ea1c47e3ec72998b8bd0f1f991a1e6b1bec55b276f3dd3c4beafaad6f26",
+      "hash_representation": "UTF-8 de extracción textual web.run; NO bytes HTML/HTTP originales",
+      "raw_tool_records": [
+        "originales/W003_web.json"
+      ],
+      "original_http_copy_available": false,
+      "online_only_original": true,
+      "usable_for_facts": true,
+      "table_recovered": true,
+      "evidence_scope": {
+        "markets": [
+          "spot"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "regional_note": "Versión pública del mismo ID en Binance.com; el cuerpo describe el mercado indicado. Locales no son fuentes independientes ni acreditan acceso de una cuenta/región. No es Binance.US.",
+      "historical_original_version_verified": false
+    },
+    {
+      "id": "PROMO_END",
+      "publisher": "Binance",
+      "title": "Updates on Zero-Fee Bitcoin Trading & BUSD Zero Maker Fee Promotion | Binance Support",
+      "type": "official_current_web_text",
+      "original_url": "https://www.binance.com/en/support/announcement/detail/be13a645cca643d28eab5b9b34f2dc36",
+      "final_url": "https://www.binance.com/en/support/announcement/detail/be13a645cca643d28eab5b9b34f2dc36",
+      "publisher_url": "https://www.binance.com/en/support/announcement/detail/be13a645cca643d28eab5b9b34f2dc36",
+      "publication_original": "2023-03-15 06:10",
+      "publication_utc": null,
+      "publication_timezone": "no acreditada en encabezado",
+      "updates_original": [
+        "2023-05-04",
+        "2023-11-22"
+      ],
+      "updates_utc": null,
+      "capture_utc": null,
+      "queried_at_utc": "2026-09-24T23:45:28.136Z",
+      "last_consulted_at_utc": "2026-09-24T23:59:06.610Z",
+      "http_status": null,
+      "local_file": "extraidos/PROMO_END_web.txt",
+      "local_base": "package",
+      "bytes": 10858,
+      "sha256": "9cb520a7b456a461e3f80cde5bcd6073c2b10add73429bd4d47144695d7b9f09",
+      "hash_representation": "UTF-8 de extracción textual web.run; NO bytes HTML/HTTP originales",
+      "raw_tool_records": [
+        "originales/W003_web.json",
+        "originales/W017_web.json"
+      ],
+      "original_http_copy_available": false,
+      "online_only_original": true,
+      "usable_for_facts": true,
+      "table_recovered": true,
+      "evidence_scope": {
+        "markets": [
+          "spot"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "regional_note": "Versión pública del mismo ID en Binance.com; el cuerpo describe el mercado indicado. Locales no son fuentes independientes ni acreditan acceso de una cuenta/región. No es Binance.US.",
+      "historical_original_version_verified": false
+    },
+    {
+      "id": "MARG22",
+      "publisher": "Binance",
+      "title": "Updates on Leverage and Margin Tiers of Binance Futures Contracts (2022-09-13) | Binance Support",
+      "type": "official_current_web_text",
+      "original_url": "https://www.binance.com/en/support/announcement/detail/56ba139dd19249acb4f9470c3d98020d",
+      "final_url": "https://www.binance.com/en/support/announcement/detail/56ba139dd19249acb4f9470c3d98020d",
+      "publisher_url": "https://www.binance.com/en/support/announcement/detail/56ba139dd19249acb4f9470c3d98020d",
+      "publication_original": "2022-09-13 03:05",
+      "publication_utc": null,
+      "publication_timezone": "no acreditada en encabezado",
+      "updates_original": [],
+      "updates_utc": null,
+      "capture_utc": null,
+      "queried_at_utc": "2026-09-24T23:47:14.120Z",
+      "last_consulted_at_utc": "2026-09-24T23:47:14.120Z",
+      "http_status": null,
+      "local_file": "extraidos/MARG22_web.txt",
+      "local_base": "package",
+      "bytes": 9487,
+      "sha256": "e90b3c4e2e3d103d711ec99f047a2766446635ae6ed446029d1b95ed7a7b17ff",
+      "hash_representation": "UTF-8 de extracción textual web.run; NO bytes HTML/HTTP originales",
+      "raw_tool_records": [
+        "originales/W006_web.json"
+      ],
+      "original_http_copy_available": false,
+      "online_only_original": true,
+      "usable_for_facts": true,
+      "table_recovered": true,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "regional_note": "Versión pública del mismo ID en Binance.com; el cuerpo describe el mercado indicado. Locales no son fuentes independientes ni acreditan acceso de una cuenta/región. No es Binance.US.",
+      "historical_original_version_verified": false
+    },
+    {
+      "id": "MARG23",
+      "publisher": "Binance",
+      "title": "Updates on the Leverage & Margin Tiers of Multiple USDⓈ-M and COIN-M Perpetual Contracts (2024-01-02) | Binance Support",
+      "type": "official_current_web_text",
+      "original_url": "https://www.binance.com/en/support/announcement/detail/d75c5ca94f704e96a6a4e55ffddfd65d",
+      "final_url": "https://www.binance.com/en/support/announcement/detail/d75c5ca94f704e96a6a4e55ffddfd65d",
+      "publisher_url": "https://www.binance.com/en/support/announcement/detail/d75c5ca94f704e96a6a4e55ffddfd65d",
+      "publication_original": "2024-01-02 13:50",
+      "publication_utc": null,
+      "publication_timezone": "no acreditada en encabezado",
+      "updates_original": [],
+      "updates_utc": null,
+      "capture_utc": null,
+      "queried_at_utc": "2026-09-24T23:47:14.120Z",
+      "last_consulted_at_utc": "2026-09-24T23:47:14.120Z",
+      "http_status": null,
+      "local_file": "extraidos/MARG23_web.txt",
+      "local_base": "package",
+      "bytes": 8553,
+      "sha256": "9d95f3b08a9420db5cbf8a5701e3460cecc37ba2184f6e3c7ed3de5c38c37032",
+      "hash_representation": "UTF-8 de extracción textual web.run; NO bytes HTML/HTTP originales",
+      "raw_tool_records": [
+        "originales/W006_web.json"
+      ],
+      "original_http_copy_available": false,
+      "online_only_original": true,
+      "usable_for_facts": true,
+      "table_recovered": true,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "regional_note": "Versión pública del mismo ID en Binance.com; el cuerpo describe el mercado indicado. Locales no son fuentes independientes ni acreditan acceso de una cuenta/región. No es Binance.US.",
+      "historical_original_version_verified": false
+    },
+    {
+      "id": "MARG24",
+      "publisher": "Binance",
+      "title": "Updates on the Leverage & Margin Tiers of Multiple USDⓈ-M and COIN-M Perpetual Contracts (2024-05-28) | Binance Support",
+      "type": "official_current_web_text",
+      "original_url": "https://www.binance.com/en-AU/support/announcement/detail/aa735cd2d8bd4e7bb092179cf086e486",
+      "final_url": "https://www.binance.com/en-AU/support/announcement/detail/aa735cd2d8bd4e7bb092179cf086e486",
+      "publisher_url": "https://www.binance.com/en-AU/support/announcement/detail/aa735cd2d8bd4e7bb092179cf086e486",
+      "publication_original": "2024-05-27 06:00",
+      "publication_utc": null,
+      "publication_timezone": "no acreditada en encabezado",
+      "updates_original": [],
+      "updates_utc": null,
+      "capture_utc": null,
+      "queried_at_utc": "2026-09-24T23:48:26.441Z",
+      "last_consulted_at_utc": "2026-09-24T23:48:26.441Z",
+      "http_status": null,
+      "local_file": "extraidos/MARG24_web.txt",
+      "local_base": "package",
+      "bytes": 6373,
+      "sha256": "87202fd9cfa49ebe9cf7f79406ef33bd1bb3d007e50ecd6983cf785b5b4336ae",
+      "hash_representation": "UTF-8 de extracción textual web.run; NO bytes HTML/HTTP originales",
+      "raw_tool_records": [
+        "originales/W008_web.json"
+      ],
+      "original_http_copy_available": false,
+      "online_only_original": true,
+      "usable_for_facts": true,
+      "table_recovered": true,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "regional_note": "Versión pública del mismo ID en Binance.com; el cuerpo describe el mercado indicado. Locales no son fuentes independientes ni acreditan acceso de una cuenta/región. No es Binance.US.",
+      "historical_original_version_verified": false
+    },
+    {
+      "id": "MARGBTC25",
+      "publisher": "Binance",
+      "title": "Update on the Collateral Ratio Under Portfolio Margin and the Leverage & Margin Tiers of USDⓈ-M Perpetual Contracts | Binance Support",
+      "type": "official_current_web_text",
+      "original_url": "https://www.binance.com/en-PH/support/announcement/detail/e778988edec446038ad536bcb0c8d460",
+      "final_url": "https://www.binance.com/en-PH/support/announcement/detail/e778988edec446038ad536bcb0c8d460",
+      "publisher_url": "https://www.binance.com/en-PH/support/announcement/detail/e778988edec446038ad536bcb0c8d460",
+      "publication_original": "2025-06-14 14:08",
+      "publication_utc": null,
+      "publication_timezone": "no acreditada en encabezado",
+      "updates_original": [],
+      "updates_utc": null,
+      "capture_utc": null,
+      "queried_at_utc": "2026-09-24T23:48:26.441Z",
+      "last_consulted_at_utc": "2026-09-24T23:48:26.441Z",
+      "http_status": null,
+      "local_file": "extraidos/MARGBTC25_web.txt",
+      "local_base": "package",
+      "bytes": 6439,
+      "sha256": "91f6795fd6ab155d1a5d76a0d3dc869fa90ab70f19bdeb8889654bf75150077c",
+      "hash_representation": "UTF-8 de extracción textual web.run; NO bytes HTML/HTTP originales",
+      "raw_tool_records": [
+        "originales/W008_web.json"
+      ],
+      "original_http_copy_available": false,
+      "online_only_original": true,
+      "usable_for_facts": true,
+      "table_recovered": true,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "BTCUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "regional_note": "Versión pública del mismo ID en Binance.com; el cuerpo describe el mercado indicado. Locales no son fuentes independientes ni acreditan acceso de una cuenta/región. No es Binance.US.",
+      "historical_original_version_verified": false
+    },
+    {
+      "id": "MARGAUG25",
+      "publisher": "Binance",
+      "title": "Update on the Collateral Ratio Under Portfolio Margin and the Leverage & Margin Tiers of USDⓈ-M Perpetual Contracts | Binance announcement,Binance news",
+      "type": "official_current_web_text",
+      "original_url": "https://www.binance.com/en/support/announcement/detail/8e428625ebeb4cc7ae8678026846095c",
+      "final_url": "https://www.binance.com/en/support/announcement/detail/8e428625ebeb4cc7ae8678026846095c",
+      "publisher_url": "https://www.binance.com/en/support/announcement/detail/8e428625ebeb4cc7ae8678026846095c",
+      "publication_original": "2025-08-17 03:31",
+      "publication_utc": null,
+      "publication_timezone": "no acreditada en encabezado",
+      "updates_original": [
+        "2025-08-18",
+        "2025-08-25"
+      ],
+      "updates_utc": null,
+      "capture_utc": null,
+      "queried_at_utc": "2026-09-24T23:48:26.441Z",
+      "last_consulted_at_utc": "2026-09-24T23:59:06.610Z",
+      "http_status": null,
+      "local_file": "extraidos/MARGAUG25_web.txt",
+      "local_base": "package",
+      "bytes": 11421,
+      "sha256": "a4227b90c4dc95ac52112db85c06e56677d3ff83f543a172048d05e2bc0a8b76",
+      "hash_representation": "UTF-8 de extracción textual web.run; NO bytes HTML/HTTP originales",
+      "raw_tool_records": [
+        "originales/W008_web.json",
+        "originales/W017_web.json"
+      ],
+      "original_http_copy_available": false,
+      "online_only_original": true,
+      "usable_for_facts": true,
+      "table_recovered": true,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "regional_note": "Versión pública del mismo ID en Binance.com; el cuerpo describe el mercado indicado. Locales no son fuentes independientes ni acreditan acceso de una cuenta/región. No es Binance.US.",
+      "historical_original_version_verified": false
+    },
+    {
+      "id": "MINFUT23",
+      "publisher": "Binance",
+      "title": "Updates on Minimum Notional Value for BTCUSDT and ETHUSDT Perpetual Contracts (2023-11-02) | Binance Support",
+      "type": "official_current_web_text",
+      "original_url": "https://www.binance.com/en/support/announcement/detail/e4384cba297a4bd2a154be644d5d76f9",
+      "final_url": "https://www.binance.com/en/support/announcement/detail/e4384cba297a4bd2a154be644d5d76f9",
+      "publisher_url": "https://www.binance.com/en/support/announcement/detail/e4384cba297a4bd2a154be644d5d76f9",
+      "publication_original": "2023-10-27 12:40",
+      "publication_utc": null,
+      "publication_timezone": "no acreditada en encabezado",
+      "updates_original": [
+        "2023-10-30"
+      ],
+      "updates_utc": null,
+      "capture_utc": null,
+      "queried_at_utc": "2026-09-24T23:49:57.019Z",
+      "last_consulted_at_utc": "2026-09-24T23:49:57.019Z",
+      "http_status": null,
+      "local_file": "extraidos/MINFUT23_web.txt",
+      "local_base": "package",
+      "bytes": 9318,
+      "sha256": "828f8fec8403c619b48e59f9f0510580d14ca2d20ba30a86a8aa35b14672665a",
+      "hash_representation": "UTF-8 de extracción textual web.run; NO bytes HTML/HTTP originales",
+      "raw_tool_records": [
+        "originales/W010_web.json"
+      ],
+      "original_http_copy_available": false,
+      "online_only_original": true,
+      "usable_for_facts": true,
+      "table_recovered": true,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "regional_note": "Versión pública del mismo ID en Binance.com; el cuerpo describe el mercado indicado. Locales no son fuentes independientes ni acreditan acceso de una cuenta/región. No es Binance.US.",
+      "historical_original_version_verified": false
+    },
+    {
+      "id": "MINSPOT23",
+      "publisher": "Binance",
+      "title": "Updates on Minimum Order Size for Spot Trading Pairs (2023-08-31) | Binance Support",
+      "type": "official_current_web_text",
+      "original_url": "https://www.binance.com/en-AE/support/announcement/detail/c4706c73b805423a8d36be948e297603",
+      "final_url": "https://www.binance.com/en-AE/support/announcement/detail/c4706c73b805423a8d36be948e297603",
+      "publisher_url": "https://www.binance.com/en-AE/support/announcement/detail/c4706c73b805423a8d36be948e297603",
+      "publication_original": "2023-08-24 02:05",
+      "publication_utc": null,
+      "publication_timezone": "no acreditada en encabezado",
+      "updates_original": [],
+      "updates_utc": null,
+      "capture_utc": null,
+      "queried_at_utc": "2026-09-24T23:49:57.019Z",
+      "last_consulted_at_utc": "2026-09-24T23:49:57.019Z",
+      "http_status": null,
+      "local_file": "extraidos/MINSPOT23_web.txt",
+      "local_base": "package",
+      "bytes": 7457,
+      "sha256": "7194fbcc63d68091abf3db2213998c60f7024f4cfdcb6e216043cbf96a137500",
+      "hash_representation": "UTF-8 de extracción textual web.run; NO bytes HTML/HTTP originales",
+      "raw_tool_records": [
+        "originales/W010_web.json"
+      ],
+      "original_http_copy_available": false,
+      "online_only_original": true,
+      "usable_for_facts": true,
+      "table_recovered": true,
+      "evidence_scope": {
+        "markets": [
+          "spot"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "regional_note": "Versión pública del mismo ID en Binance.com; el cuerpo describe el mercado indicado. Locales no son fuentes independientes ni acreditan acceso de una cuenta/región. No es Binance.US.",
+      "historical_original_version_verified": false
+    },
+    {
+      "id": "MINBTC26",
+      "publisher": "Binance",
+      "title": "Updates on Minimum Notional Value for BTCUSDT and BTCUSDC USDⓈ-M Perpetual Futures Contracts (2026-04-14) | Binance announcement,Binance news",
+      "type": "official_current_web_text",
+      "original_url": "https://www.binance.com/en-KZ/support/announcement/detail/10999fd17dc045de801c0c78ab29e6fc",
+      "final_url": "https://www.binance.com/en-KZ/support/announcement/detail/10999fd17dc045de801c0c78ab29e6fc",
+      "publisher_url": "https://www.binance.com/en-KZ/support/announcement/detail/10999fd17dc045de801c0c78ab29e6fc",
+      "publication_original": "2026-04-09 06:14",
+      "publication_utc": null,
+      "publication_timezone": "no acreditada en encabezado",
+      "updates_original": [],
+      "updates_utc": null,
+      "capture_utc": null,
+      "queried_at_utc": "2026-09-24T23:49:57.019Z",
+      "last_consulted_at_utc": "2026-09-24T23:49:57.019Z",
+      "http_status": null,
+      "local_file": "extraidos/MINBTC26_web.txt",
+      "local_base": "package",
+      "bytes": 8285,
+      "sha256": "4da29d77c045baa3273dc57acbfc901b681b16ea400c10969afba1e2c237e9cd",
+      "hash_representation": "UTF-8 de extracción textual web.run; NO bytes HTML/HTTP originales",
+      "raw_tool_records": [
+        "originales/W010_web.json"
+      ],
+      "original_http_copy_available": false,
+      "online_only_original": true,
+      "usable_for_facts": true,
+      "table_recovered": true,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "BTCUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "regional_note": "Versión pública del mismo ID en Binance.com; el cuerpo describe el mercado indicado. Locales no son fuentes independientes ni acreditan acceso de una cuenta/región. No es Binance.US.",
+      "historical_original_version_verified": false
+    },
+    {
+      "id": "TICK22",
+      "publisher": "Binance",
+      "title": "Updates on the Tick Size for BTC USDⓈ-M Perpetual Futures Contracts | Binance Support",
+      "type": "official_current_web_text",
+      "original_url": "https://www.binance.com/en-AU/support/announcement/detail/81e6795b0bae49828cbd52479094a987",
+      "final_url": "https://www.binance.com/en-AU/support/announcement/detail/81e6795b0bae49828cbd52479094a987",
+      "publisher_url": "https://www.binance.com/en-AU/support/announcement/detail/81e6795b0bae49828cbd52479094a987",
+      "publication_original": "2021-12-31 06:45",
+      "publication_utc": null,
+      "publication_timezone": "no acreditada en encabezado",
+      "updates_original": [],
+      "updates_utc": null,
+      "capture_utc": null,
+      "queried_at_utc": "2026-09-24T23:57:23.293Z",
+      "last_consulted_at_utc": "2026-09-24T23:57:23.293Z",
+      "http_status": null,
+      "local_file": "extraidos/TICK22_web.txt",
+      "local_base": "package",
+      "bytes": 6808,
+      "sha256": "e74e2b3d5f13dafff9fc0574f005589ae713eb814ceb846aad1844c36bbb0df2",
+      "hash_representation": "UTF-8 de extracción textual web.run; NO bytes HTML/HTTP originales",
+      "raw_tool_records": [
+        "originales/W015_web.json"
+      ],
+      "original_http_copy_available": false,
+      "online_only_original": true,
+      "usable_for_facts": true,
+      "table_recovered": true,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "BTCUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "regional_note": "Versión pública del mismo ID en Binance.com; el cuerpo describe el mercado indicado. Locales no son fuentes independientes ni acreditan acceso de una cuenta/región. No es Binance.US.",
+      "historical_original_version_verified": false
+    },
+    {
+      "id": "STEP21",
+      "publisher": "Binance",
+      "title": "Updates on Tick Size and Step Size for Spot Trading Pairs | Binance Support",
+      "type": "official_current_web_text",
+      "original_url": "https://www.binance.com/en-PH/support/announcement/detail/6925d618ab6b47e2936cc4614eaad64b",
+      "final_url": "https://www.binance.com/en-PH/support/announcement/detail/6925d618ab6b47e2936cc4614eaad64b",
+      "publisher_url": "https://www.binance.com/en-PH/support/announcement/detail/6925d618ab6b47e2936cc4614eaad64b",
+      "publication_original": "2021-08-12 15:57",
+      "publication_utc": null,
+      "publication_timezone": "no acreditada en encabezado",
+      "updates_original": [],
+      "updates_utc": null,
+      "capture_utc": null,
+      "queried_at_utc": "2026-09-24T23:57:23.293Z",
+      "last_consulted_at_utc": "2026-09-24T23:59:06.610Z",
+      "http_status": null,
+      "local_file": "extraidos/STEP21_web.txt",
+      "local_base": "package",
+      "bytes": 30258,
+      "sha256": "0be6c399292450bf8679a8b367783fc1d6818fc390ce0e1a95bae7620f8fc5e8",
+      "hash_representation": "UTF-8 de extracción textual web.run; NO bytes HTML/HTTP originales",
+      "raw_tool_records": [
+        "originales/W015_web.json",
+        "originales/W016_web.json",
+        "originales/W017_web.json"
+      ],
+      "original_http_copy_available": false,
+      "online_only_original": true,
+      "usable_for_facts": true,
+      "table_recovered": true,
+      "evidence_scope": {
+        "markets": [
+          "spot"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "regional_note": "Versión pública del mismo ID en Binance.com; el cuerpo describe el mercado indicado. Locales no son fuentes independientes ni acreditan acceso de una cuenta/región. No es Binance.US.",
+      "historical_original_version_verified": false
+    },
+    {
+      "id": "FAQ_LIQ",
+      "publisher": "Binance",
+      "title": "What Fees are Generated in Binance Futures Trading? | Binance Futures,Binance Futures Fees",
+      "type": "official_current_web_text",
+      "original_url": "https://www.binance.com/en/support/faq/detail/98488a516eb84e3eb34605683dffd554",
+      "final_url": "https://www.binance.com/en/support/faq/detail/98488a516eb84e3eb34605683dffd554",
+      "publisher_url": "https://www.binance.com/en/support/faq/detail/98488a516eb84e3eb34605683dffd554",
+      "publication_original": "2024-05-29 14:55",
+      "publication_utc": null,
+      "publication_timezone": "no acreditada en encabezado",
+      "updates_original": [
+        "2026-01-05 05:00"
+      ],
+      "updates_utc": null,
+      "capture_utc": null,
+      "queried_at_utc": "2026-09-24T23:51:04.471Z",
+      "last_consulted_at_utc": "2026-09-24T23:56:18.905Z",
+      "http_status": null,
+      "local_file": "extraidos/FAQ_LIQ_web.txt",
+      "local_base": "package",
+      "bytes": 16433,
+      "sha256": "d351e3464978365d015668aac2851daa038b30134800dda99560c72ef814bfb1",
+      "hash_representation": "UTF-8 de extracción textual web.run; NO bytes HTML/HTTP originales",
+      "raw_tool_records": [
+        "originales/W012_web.json",
+        "originales/W013_web.json"
+      ],
+      "original_http_copy_available": false,
+      "online_only_original": true,
+      "usable_for_facts": true,
+      "table_recovered": true,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "regional_note": "Versión pública del mismo ID en Binance.com; el cuerpo describe el mercado indicado. Locales no son fuentes independientes ni acreditan acceso de una cuenta/región. No es Binance.US.",
+      "historical_original_version_verified": false
+    },
+    {
+      "id": "DOC_FUT",
+      "publisher": "Binance",
+      "title": "Market Data - Futures (USDⓈ-M) REST API | Binance Developer Docs",
+      "type": "official_current_web_text",
+      "original_url": "https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/rest-api/market-data",
+      "final_url": "https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/rest-api/market-data",
+      "publisher_url": "https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/rest-api/market-data",
+      "publication_original": null,
+      "publication_utc": null,
+      "publication_timezone": "no acreditada en encabezado",
+      "updates_original": [],
+      "updates_utc": null,
+      "capture_utc": null,
+      "queried_at_utc": "2026-09-24T23:56:18.905Z",
+      "last_consulted_at_utc": "2026-09-24T23:56:18.905Z",
+      "http_status": null,
+      "local_file": "extraidos/DOC_FUT_web.txt",
+      "local_base": "package",
+      "bytes": 13419,
+      "sha256": "b2513e4b8eab9ca29ba701501ec31216080391f0735d369a95ad6df5494bd8d4",
+      "hash_representation": "UTF-8 de extracción textual web.run; NO bytes HTML/HTTP originales",
+      "raw_tool_records": [
+        "originales/W013_web.json"
+      ],
+      "original_http_copy_available": false,
+      "online_only_original": true,
+      "usable_for_facts": true,
+      "table_recovered": true,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "regional_note": "Versión pública del mismo ID en Binance.com; el cuerpo describe el mercado indicado. Locales no son fuentes independientes ni acreditan acceso de una cuenta/región. No es Binance.US.",
+      "historical_original_version_verified": false
+    },
+    {
+      "id": "OUT_VIP1",
+      "publisher": "Binance",
+      "title": "Binance Updates VIP Program Eligibility Thresholds | Binance Announcements, Binance News,Binance VIP program",
+      "type": "official_current_web_text",
+      "original_url": "https://www.binance.com/en/support/announcement/detail/4f379b9ab6314eff8fe02babfe255825",
+      "final_url": "https://www.binance.com/en/support/announcement/detail/4f379b9ab6314eff8fe02babfe255825",
+      "publisher_url": "https://www.binance.com/en/support/announcement/detail/4f379b9ab6314eff8fe02babfe255825",
+      "publication_original": "2026-03-18 08:00",
+      "publication_utc": null,
+      "publication_timezone": "no acreditada en encabezado",
+      "updates_original": [
+        "2026-09-10 03:53"
+      ],
+      "updates_utc": null,
+      "capture_utc": null,
+      "queried_at_utc": "2026-09-24T23:51:04.471Z",
+      "last_consulted_at_utc": "2026-09-24T23:51:04.471Z",
+      "http_status": null,
+      "local_file": "extraidos/OUT_VIP1_web.txt",
+      "local_base": "package",
+      "bytes": 6518,
+      "sha256": "f0cac64d7f785097626c491f418f8accf04d83873d96b27ee1152a377602a419",
+      "hash_representation": "UTF-8 de extracción textual web.run; NO bytes HTML/HTTP originales",
+      "raw_tool_records": [
+        "originales/W012_web.json"
+      ],
+      "original_http_copy_available": false,
+      "online_only_original": true,
+      "usable_for_facts": true,
+      "table_recovered": true,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "VIP1",
+          "VIP2"
+        ],
+        "special_program": false
+      },
+      "regional_note": "Versión pública del mismo ID en Binance.com; el cuerpo describe el mercado indicado. Locales no son fuentes independientes ni acreditan acceso de una cuenta/región. No es Binance.US.",
+      "historical_original_version_verified": false
+    },
+    {
+      "id": "OUT_TAKER",
+      "publisher": "Binance",
+      "title": "Binance Futures Upgrades Taker Program (2023-10-31) | Binance Support",
+      "type": "official_current_web_text",
+      "original_url": "https://www.binance.com/en/support/announcement/detail/143cee3a83944c4da2b1a53f302f45f0",
+      "final_url": "https://www.binance.com/en/support/announcement/detail/143cee3a83944c4da2b1a53f302f45f0",
+      "publisher_url": "https://www.binance.com/en/support/announcement/detail/143cee3a83944c4da2b1a53f302f45f0",
+      "publication_original": "2023-10-18 04:00",
+      "publication_utc": null,
+      "publication_timezone": "no acreditada en encabezado",
+      "updates_original": [],
+      "updates_utc": null,
+      "capture_utc": null,
+      "queried_at_utc": "2026-09-24T23:57:23.293Z",
+      "last_consulted_at_utc": "2026-09-24T23:57:23.293Z",
+      "http_status": null,
+      "local_file": "extraidos/OUT_TAKER_web.txt",
+      "local_base": "package",
+      "bytes": 5962,
+      "sha256": "4e135d91b634190e746b2f4a35a54322c288fa064a49b52d8c871a6fd1998615",
+      "hash_representation": "UTF-8 de extracción textual web.run; NO bytes HTML/HTTP originales",
+      "raw_tool_records": [
+        "originales/W015_web.json"
+      ],
+      "original_http_copy_available": false,
+      "online_only_original": true,
+      "usable_for_facts": true,
+      "table_recovered": true,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": true
+      },
+      "regional_note": "Versión pública del mismo ID en Binance.com; el cuerpo describe el mercado indicado. Locales no son fuentes independientes ni acreditan acceso de una cuenta/región. No es Binance.US.",
+      "historical_original_version_verified": false
+    },
+    {
+      "id": "OUT_BTCU",
+      "publisher": "Binance",
+      "title": "Binance Launches BTC/U Zero Trading Fees Promotion (2026-04-17) | Binance announcement,Binance news",
+      "type": "official_current_web_text",
+      "original_url": "https://www.binance.com/en/support/announcement/detail/fe2b0d2853004943aba45f2e87a4081c",
+      "final_url": "https://www.binance.com/en/support/announcement/detail/fe2b0d2853004943aba45f2e87a4081c",
+      "publisher_url": "https://www.binance.com/en/support/announcement/detail/fe2b0d2853004943aba45f2e87a4081c",
+      "publication_original": "2026-04-10 09:00",
+      "publication_utc": null,
+      "publication_timezone": "no acreditada en encabezado",
+      "updates_original": [],
+      "updates_utc": null,
+      "capture_utc": null,
+      "queried_at_utc": "2026-09-24T23:57:23.293Z",
+      "last_consulted_at_utc": "2026-09-24T23:57:23.293Z",
+      "http_status": null,
+      "local_file": "extraidos/OUT_BTCU_web.txt",
+      "local_base": "package",
+      "bytes": 5880,
+      "sha256": "7e5cddd31032dcfb5a34b2ecde39da73ece9ba34af9a4d0e3ba7ae182c1b2155",
+      "hash_representation": "UTF-8 de extracción textual web.run; NO bytes HTML/HTTP originales",
+      "raw_tool_records": [
+        "originales/W015_web.json"
+      ],
+      "original_http_copy_available": false,
+      "online_only_original": true,
+      "usable_for_facts": true,
+      "table_recovered": true,
+      "evidence_scope": {
+        "markets": [
+          "spot"
+        ],
+        "symbols": [
+          "BTCU"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "regional_note": "Versión pública del mismo ID en Binance.com; el cuerpo describe el mercado indicado. Locales no son fuentes independientes ni acreditan acceso de una cuenta/región. No es Binance.US.",
+      "historical_original_version_verified": false
+    },
+    {
+      "id": "A1",
+      "publisher": "Binance vía Internet Archive",
+      "title": "Futures fees: tabla Regular USDT",
+      "type": "legacy_archived_official_html",
+      "original_url": "https://web.archive.org/web/20230531224744id_/https://www.binance.com/en/fee/futureFee",
+      "final_url": "https://web.archive.org/web/20230531224744id_/https://www.binance.com/en/fee/futureFee",
+      "publisher_url": "https://www.binance.com/en/fee/futureFee",
+      "publication_original": null,
+      "publication_utc": null,
+      "updates_original": [],
+      "capture_utc": "2023-05-31T22:47:44Z",
+      "queried_at_utc": "2026-09-25T00:19:07.693738Z",
+      "previous_retrieval_utc": "2026-09-18T14:54:26.142746Z",
+      "http_status": null,
+      "local_file": "data/research/fee-archive-followup-20260918/A1.html",
+      "local_base": "repository",
+      "bytes": 846790,
+      "sha256": "9c9719d5f9344af2b1f519a2d4207632fb745bc2f816b1671184245cd59d19c0",
+      "hash_representation": "HTML decodificado y recodificado UTF-8 en antecedente; no bytes de transporte",
+      "original_http_copy_available": false,
+      "online_only_original": false,
+      "usable_for_facts": true,
+      "table_recovered": true,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "historical_original_version_verified": true
+    },
+    {
+      "id": "A2",
+      "publisher": "Binance vía Internet Archive",
+      "title": "Binance Futures Fee Structure & Fee Calculations",
+      "type": "legacy_archived_official_html",
+      "original_url": "https://web.archive.org/web/20230602173120id_/https://www.binance.com/en/support/faq/binance-futures-fee-structure-fee-calculations-360033544231",
+      "final_url": "https://web.archive.org/web/20230602173120id_/https://www.binance.com/en/support/faq/binance-futures-fee-structure-fee-calculations-360033544231",
+      "publisher_url": "https://www.binance.com/en/support/faq/binance-futures-fee-structure-fee-calculations-360033544231",
+      "publication_original": "2020-06-11 07:01",
+      "publication_utc": null,
+      "updates_original": [],
+      "capture_utc": "2023-06-02T17:31:20Z",
+      "queried_at_utc": "2026-09-25T00:19:07.693738Z",
+      "previous_retrieval_utc": "2026-09-18T14:54:37.828988Z",
+      "http_status": null,
+      "local_file": "data/research/fee-archive-followup-20260918/A2.html",
+      "local_base": "repository",
+      "bytes": 413920,
+      "sha256": "e262a8f07876e3d4282bd9fe6497d83ea5ec60f43578d011b5b5999a42b92a9a",
+      "hash_representation": "HTML decodificado y recodificado UTF-8 en antecedente; no bytes de transporte",
+      "original_http_copy_available": false,
+      "online_only_original": false,
+      "usable_for_facts": true,
+      "table_recovered": false,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "BTCUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "historical_original_version_verified": true
+    },
+    {
+      "id": "A3",
+      "publisher": "Binance vía Internet Archive",
+      "title": "Binance Futures Fee Structure & Fee Calculations",
+      "type": "legacy_archived_official_html",
+      "original_url": "https://web.archive.org/web/20240220064115id_/https://www.binance.com/en/support/faq/binance-futures-fee-structure-fee-calculations-360033544231",
+      "final_url": "https://web.archive.org/web/20240220064115id_/https://www.binance.com/en/support/faq/binance-futures-fee-structure-fee-calculations-360033544231",
+      "publisher_url": "https://www.binance.com/en/support/faq/binance-futures-fee-structure-fee-calculations-360033544231",
+      "publication_original": "2019-09-09 13:39",
+      "publication_utc": null,
+      "updates_original": [],
+      "capture_utc": "2024-02-20T06:41:15Z",
+      "queried_at_utc": "2026-09-25T00:19:07.693738Z",
+      "previous_retrieval_utc": "2026-09-18T14:54:44.342289Z",
+      "http_status": null,
+      "local_file": "data/research/fee-archive-followup-20260918/A3.html",
+      "local_base": "repository",
+      "bytes": 440516,
+      "sha256": "c046ab84892a2093de0d16c8ad1eab0278089600ee9f7186c58e1a54bcd45cbe",
+      "hash_representation": "HTML decodificado y recodificado UTF-8 en antecedente; no bytes de transporte",
+      "original_http_copy_available": false,
+      "online_only_original": false,
+      "usable_for_facts": true,
+      "table_recovered": false,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "BTCUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "historical_original_version_verified": true
+    },
+    {
+      "id": "A4",
+      "publisher": "Binance",
+      "title": "Binance Futures Fee Structure & Fee Calculations | Binance",
+      "type": "archived_official_html",
+      "original_url": "https://web.archive.org/web/20230621192025id_/http://www.binance.com/en/support/faq/binance-futures-fee-structure-fee-calculations-360033544231",
+      "final_url": "https://web.archive.org/web/20230621192025id_/http://www.binance.com/en/support/faq/binance-futures-fee-structure-fee-calculations-360033544231",
+      "publisher_url": "http://www.binance.com/en/support/faq/binance-futures-fee-structure-fee-calculations-360033544231",
+      "publication_original": "2020-06-11 07:01",
+      "publication_utc": null,
+      "updates_original": [],
+      "capture_utc": "2023-06-21T19:20:25Z",
+      "queried_at_utc": "2026-09-24T23:47:14.794671Z",
+      "retrieved_at_utc": "2026-09-24T23:47:18.315503Z",
+      "http_status": 200,
+      "local_file": "originales/A4.body",
+      "local_base": "package",
+      "bytes": 421440,
+      "sha256": "b15321194c6ec29c0c5a27cab2ce6e50651966e0d9dcb9d330ff1e192fb88fe8",
+      "hash_representation": "requests.Response.content bytes exactly saved; automatic HTTP content decompression by requests if Content-Encoding is set; not raw wire/chunk bytes",
+      "automatic_decompression": true,
+      "metadata_file": "originales/A4.meta.json",
+      "redirects": [],
+      "original_http_copy_available": true,
+      "online_only_original": false,
+      "usable_for_facts": true,
+      "table_recovered": false,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "BTCUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "historical_original_version_verified": true,
+      "exclusion_reason": null
+    },
+    {
+      "id": "CDX_FAQ",
+      "publisher": "Internet Archive",
+      "title": "CDX_FAQ",
+      "type": "archive_index",
+      "original_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.binance.com%2Fen%2Fsupport%2Ffaq%2Fbinance-futures-fee-structure-fee-calculations-360033544231&output=json&from=20230501&to=20240229&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true",
+      "final_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.binance.com%2Fen%2Fsupport%2Ffaq%2Fbinance-futures-fee-structure-fee-calculations-360033544231&output=json&from=20230501&to=20240229&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true",
+      "publisher_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.binance.com%2Fen%2Fsupport%2Ffaq%2Fbinance-futures-fee-structure-fee-calculations-360033544231&output=json&from=20230501&to=20240229&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true",
+      "publication_original": null,
+      "publication_utc": null,
+      "updates_original": [],
+      "capture_utc": null,
+      "queried_at_utc": "2026-09-24T23:46:12.010969Z",
+      "retrieved_at_utc": "2026-09-24T23:46:14.375252Z",
+      "http_status": 200,
+      "local_file": "originales/CDX_FAQ.body",
+      "local_base": "package",
+      "bytes": 581,
+      "sha256": "04322bced5812827ad49040789f227929b095bf6a472b9f8cca4c40cbeaa7c9a",
+      "hash_representation": "requests.Response.content bytes exactly saved; automatic HTTP content decompression by requests if Content-Encoding is set; not raw wire/chunk bytes",
+      "automatic_decompression": true,
+      "metadata_file": "originales/CDX_FAQ.meta.json",
+      "redirects": [],
+      "original_http_copy_available": true,
+      "online_only_original": false,
+      "usable_for_facts": false,
+      "table_recovered": false,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "historical_original_version_verified": false,
+      "exclusion_reason": "Índice/pista o respuesta sin datos objetivo; no prueba una regla ni ausencia de promociones",
+      "cdx_row_count": 3,
+      "cdx_no_resume_key_returned": true,
+      "cdx_scope_note": "Resultado íntegro de esta URL/rango sin collapse; no inventario exhaustivo de todo Binance."
+    },
+    {
+      "id": "CDX_FEE",
+      "publisher": "Internet Archive",
+      "title": "CDX_FEE",
+      "type": "archive_index",
+      "original_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.binance.com%2Fen%2Ffee%2FfutureFee&output=json&from=20230501&to=20240229&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true",
+      "final_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.binance.com%2Fen%2Ffee%2FfutureFee&output=json&from=20230501&to=20240229&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true",
+      "publisher_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.binance.com%2Fen%2Ffee%2FfutureFee&output=json&from=20230501&to=20240229&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true",
+      "publication_original": null,
+      "publication_utc": null,
+      "updates_original": [],
+      "capture_utc": null,
+      "queried_at_utc": "2026-09-24T23:46:04.152475Z",
+      "retrieved_at_utc": "2026-09-24T23:46:11.992872Z",
+      "http_status": 200,
+      "local_file": "originales/CDX_FEE.body",
+      "local_base": "package",
+      "bytes": 519,
+      "sha256": "ca7ea791fb59928c50c43376beb2cc19efe31ade68511393ec4ad4ede408052e",
+      "hash_representation": "requests.Response.content bytes exactly saved; automatic HTTP content decompression by requests if Content-Encoding is set; not raw wire/chunk bytes",
+      "automatic_decompression": true,
+      "metadata_file": "originales/CDX_FEE.meta.json",
+      "redirects": [],
+      "original_http_copy_available": true,
+      "online_only_original": false,
+      "usable_for_facts": false,
+      "table_recovered": false,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "historical_original_version_verified": false,
+      "exclusion_reason": "Índice/pista o respuesta sin datos objetivo; no prueba una regla ni ausencia de promociones",
+      "cdx_row_count": 4,
+      "cdx_no_resume_key_returned": true,
+      "cdx_scope_note": "Resultado íntegro de esta URL/rango sin collapse; no inventario exhaustivo de todo Binance."
+    },
+    {
+      "id": "CDX_FEE_AU",
+      "publisher": "Internet Archive",
+      "title": "CDX_FEE_AU",
+      "type": "archive_index",
+      "original_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.binance.com%2Fen-AU%2Ffee%2FfutureFee&output=json&from=20230501&to=20240229&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true&matchType=exact",
+      "final_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.binance.com%2Fen-AU%2Ffee%2FfutureFee&output=json&from=20230501&to=20240229&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true&matchType=exact",
+      "publisher_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.binance.com%2Fen-AU%2Ffee%2FfutureFee&output=json&from=20230501&to=20240229&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true&matchType=exact",
+      "publication_original": null,
+      "publication_utc": null,
+      "updates_original": [],
+      "capture_utc": null,
+      "queried_at_utc": "2026-09-24T23:48:32.411177Z",
+      "retrieved_at_utc": "2026-09-24T23:48:33.530021Z",
+      "http_status": 200,
+      "local_file": "originales/CDX_FEE_AU.body",
+      "local_base": "package",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "hash_representation": "requests.Response.content bytes exactly saved; automatic HTTP content decompression by requests if Content-Encoding is set; not raw wire/chunk bytes",
+      "automatic_decompression": true,
+      "metadata_file": "originales/CDX_FEE_AU.meta.json",
+      "redirects": [],
+      "original_http_copy_available": true,
+      "online_only_original": false,
+      "usable_for_facts": false,
+      "table_recovered": false,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "historical_original_version_verified": false,
+      "exclusion_reason": "Índice/pista o respuesta sin datos objetivo; no prueba una regla ni ausencia de promociones",
+      "cdx_row_count": 0,
+      "cdx_no_resume_key_returned": true,
+      "cdx_scope_note": "Resultado íntegro de esta URL/rango sin collapse; no inventario exhaustivo de todo Binance."
+    },
+    {
+      "id": "CDX_FEE_CN",
+      "publisher": "Internet Archive",
+      "title": "CDX_FEE_CN",
+      "type": "archive_index",
+      "original_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.binance.com%2Fzh-CN%2Ffee%2FfutureFee&output=json&from=20230501&to=20240229&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true&matchType=exact",
+      "final_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.binance.com%2Fzh-CN%2Ffee%2FfutureFee&output=json&from=20230501&to=20240229&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true&matchType=exact",
+      "publisher_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.binance.com%2Fzh-CN%2Ffee%2FfutureFee&output=json&from=20230501&to=20240229&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true&matchType=exact",
+      "publication_original": null,
+      "publication_utc": null,
+      "updates_original": [],
+      "capture_utc": null,
+      "queried_at_utc": "2026-09-24T23:47:34.005486Z",
+      "retrieved_at_utc": "2026-09-24T23:47:35.296786Z",
+      "http_status": 200,
+      "local_file": "originales/CDX_FEE_CN.body",
+      "local_base": "package",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "hash_representation": "requests.Response.content bytes exactly saved; automatic HTTP content decompression by requests if Content-Encoding is set; not raw wire/chunk bytes",
+      "automatic_decompression": true,
+      "metadata_file": "originales/CDX_FEE_CN.meta.json",
+      "redirects": [],
+      "original_http_copy_available": true,
+      "online_only_original": false,
+      "usable_for_facts": false,
+      "table_recovered": false,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "historical_original_version_verified": false,
+      "exclusion_reason": "Índice/pista o respuesta sin datos objetivo; no prueba una regla ni ausencia de promociones",
+      "cdx_row_count": 0,
+      "cdx_no_resume_key_returned": true,
+      "cdx_scope_note": "Resultado íntegro de esta URL/rango sin collapse; no inventario exhaustivo de todo Binance."
+    },
+    {
+      "id": "CDX_FEE_ES",
+      "publisher": "Internet Archive",
+      "title": "CDX_FEE_ES",
+      "type": "archive_index",
+      "original_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.binance.com%2Fes%2Ffee%2FfutureFee&output=json&from=20230501&to=20240229&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true&matchType=exact",
+      "final_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.binance.com%2Fes%2Ffee%2FfutureFee&output=json&from=20230501&to=20240229&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true&matchType=exact",
+      "publisher_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.binance.com%2Fes%2Ffee%2FfutureFee&output=json&from=20230501&to=20240229&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true&matchType=exact",
+      "publication_original": null,
+      "publication_utc": null,
+      "updates_original": [],
+      "capture_utc": null,
+      "queried_at_utc": "2026-09-24T23:47:32.912886Z",
+      "retrieved_at_utc": "2026-09-24T23:47:33.993132Z",
+      "http_status": 200,
+      "local_file": "originales/CDX_FEE_ES.body",
+      "local_base": "package",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "hash_representation": "requests.Response.content bytes exactly saved; automatic HTTP content decompression by requests if Content-Encoding is set; not raw wire/chunk bytes",
+      "automatic_decompression": true,
+      "metadata_file": "originales/CDX_FEE_ES.meta.json",
+      "redirects": [],
+      "original_http_copy_available": true,
+      "online_only_original": false,
+      "usable_for_facts": false,
+      "table_recovered": false,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "historical_original_version_verified": false,
+      "exclusion_reason": "Índice/pista o respuesta sin datos objetivo; no prueba una regla ni ausencia de promociones",
+      "cdx_row_count": 0,
+      "cdx_no_resume_key_returned": true,
+      "cdx_scope_note": "Resultado íntegro de esta URL/rango sin collapse; no inventario exhaustivo de todo Binance."
+    },
+    {
+      "id": "CDX_FEE_OLD",
+      "publisher": "Internet Archive",
+      "title": "CDX_FEE_OLD",
+      "type": "archive_index",
+      "original_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.binance.com%2Fen%2Ffee%2FfutureFee%3F&output=json&from=20230501&to=20240229&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true&matchType=prefix",
+      "final_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.binance.com%2Fen%2Ffee%2FfutureFee%3F&output=json&from=20230501&to=20240229&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true&matchType=prefix",
+      "publisher_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.binance.com%2Fen%2Ffee%2FfutureFee%3F&output=json&from=20230501&to=20240229&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true&matchType=prefix",
+      "publication_original": null,
+      "publication_utc": null,
+      "updates_original": [],
+      "capture_utc": null,
+      "queried_at_utc": "2026-09-24T23:48:33.534194Z",
+      "retrieved_at_utc": "2026-09-24T23:48:35.692869Z",
+      "http_status": 200,
+      "local_file": "originales/CDX_FEE_OLD.body",
+      "local_base": "package",
+      "bytes": 762,
+      "sha256": "579df5057906a6be305a8027af46a3585e582e43b4bfb4073dbae714cba11c05",
+      "hash_representation": "requests.Response.content bytes exactly saved; automatic HTTP content decompression by requests if Content-Encoding is set; not raw wire/chunk bytes",
+      "automatic_decompression": true,
+      "metadata_file": "originales/CDX_FEE_OLD.meta.json",
+      "redirects": [],
+      "original_http_copy_available": true,
+      "online_only_original": false,
+      "usable_for_facts": false,
+      "table_recovered": false,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "historical_original_version_verified": false,
+      "exclusion_reason": "Índice/pista o respuesta sin datos objetivo; no prueba una regla ni ausencia de promociones",
+      "cdx_row_count": 6,
+      "cdx_no_resume_key_returned": true,
+      "cdx_scope_note": "Resultado íntegro de esta URL/rango sin collapse; no inventario exhaustivo de todo Binance."
+    },
+    {
+      "id": "CDX_FEEPREFIX",
+      "publisher": "Internet Archive",
+      "title": "CDX_FEEPREFIX",
+      "type": "archive_index",
+      "original_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.binance.com%2Fen%2Ffee%2FfutureFee&output=json&from=20230501&to=20240229&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true&matchType=prefix",
+      "final_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.binance.com%2Fen%2Ffee%2FfutureFee&output=json&from=20230501&to=20240229&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true&matchType=prefix",
+      "publisher_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.binance.com%2Fen%2Ffee%2FfutureFee&output=json&from=20230501&to=20240229&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true&matchType=prefix",
+      "publication_original": null,
+      "publication_utc": null,
+      "updates_original": [],
+      "capture_utc": null,
+      "queried_at_utc": "2026-09-24T23:47:27.318822Z",
+      "retrieved_at_utc": "2026-09-24T23:47:32.890697Z",
+      "http_status": 200,
+      "local_file": "originales/CDX_FEEPREFIX.body",
+      "local_base": "package",
+      "bytes": 762,
+      "sha256": "579df5057906a6be305a8027af46a3585e582e43b4bfb4073dbae714cba11c05",
+      "hash_representation": "requests.Response.content bytes exactly saved; automatic HTTP content decompression by requests if Content-Encoding is set; not raw wire/chunk bytes",
+      "automatic_decompression": true,
+      "metadata_file": "originales/CDX_FEEPREFIX.meta.json",
+      "redirects": [],
+      "original_http_copy_available": true,
+      "online_only_original": false,
+      "usable_for_facts": false,
+      "table_recovered": false,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "historical_original_version_verified": false,
+      "exclusion_reason": "Índice/pista o respuesta sin datos objetivo; no prueba una regla ni ausencia de promociones",
+      "cdx_row_count": 6,
+      "cdx_no_resume_key_returned": true,
+      "cdx_scope_note": "Resultado íntegro de esta URL/rango sin collapse; no inventario exhaustivo de todo Binance."
+    },
+    {
+      "id": "CDX_FUTINFO",
+      "publisher": "Internet Archive",
+      "title": "CDX_FUTINFO",
+      "type": "archive_index",
+      "original_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffapi.binance.com%2Ffapi%2Fv1%2FexchangeInfo&output=json&from=20220101&to=20260831&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true&matchType=exact",
+      "final_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffapi.binance.com%2Ffapi%2Fv1%2FexchangeInfo&output=json&from=20220101&to=20260831&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true&matchType=exact",
+      "publisher_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Ffapi.binance.com%2Ffapi%2Fv1%2FexchangeInfo&output=json&from=20220101&to=20260831&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true&matchType=exact",
+      "publication_original": null,
+      "publication_utc": null,
+      "updates_original": [],
+      "capture_utc": null,
+      "queried_at_utc": "2026-09-24T23:48:31.306049Z",
+      "retrieved_at_utc": "2026-09-24T23:48:32.389581Z",
+      "http_status": 200,
+      "local_file": "originales/CDX_FUTINFO.body",
+      "local_base": "package",
+      "bytes": 13108,
+      "sha256": "67ba06ae5935900076b0a0f60e7418533e19011c9a7126f8c6078b7b7956997f",
+      "hash_representation": "requests.Response.content bytes exactly saved; automatic HTTP content decompression by requests if Content-Encoding is set; not raw wire/chunk bytes",
+      "automatic_decompression": true,
+      "metadata_file": "originales/CDX_FUTINFO.meta.json",
+      "redirects": [],
+      "original_http_copy_available": true,
+      "online_only_original": false,
+      "usable_for_facts": false,
+      "table_recovered": false,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "historical_original_version_verified": false,
+      "exclusion_reason": "Índice/pista o respuesta sin datos objetivo; no prueba una regla ni ausencia de promociones",
+      "cdx_row_count": 102,
+      "cdx_no_resume_key_returned": true,
+      "cdx_scope_note": "Resultado íntegro de esta URL/rango sin collapse; no inventario exhaustivo de todo Binance."
+    },
+    {
+      "id": "CDX_PROMO",
+      "publisher": "Internet Archive",
+      "title": "CDX_PROMO",
+      "type": "archive_index",
+      "original_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.binance.com%2Fen%2Ffee%2FtradingPromote&output=json&from=20240501&to=20260831&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true",
+      "final_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.binance.com%2Fen%2Ffee%2FtradingPromote&output=json&from=20240501&to=20260831&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true",
+      "publisher_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.binance.com%2Fen%2Ffee%2FtradingPromote&output=json&from=20240501&to=20260831&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true",
+      "publication_original": null,
+      "publication_utc": null,
+      "updates_original": [],
+      "capture_utc": null,
+      "queried_at_utc": "2026-09-24T23:46:24.843672Z",
+      "retrieved_at_utc": "2026-09-24T23:46:27.902386Z",
+      "http_status": 200,
+      "local_file": "originales/CDX_PROMO.body",
+      "local_base": "package",
+      "bytes": 2238,
+      "sha256": "420839508b7d8dea817b935a85f24f089a2ba1d372809c21998dee12d5dafffe",
+      "hash_representation": "requests.Response.content bytes exactly saved; automatic HTTP content decompression by requests if Content-Encoding is set; not raw wire/chunk bytes",
+      "automatic_decompression": true,
+      "metadata_file": "originales/CDX_PROMO.meta.json",
+      "redirects": [],
+      "original_http_copy_available": true,
+      "online_only_original": false,
+      "usable_for_facts": false,
+      "table_recovered": false,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "historical_original_version_verified": false,
+      "exclusion_reason": "Índice/pista o respuesta sin datos objetivo; no prueba una regla ni ausencia de promociones",
+      "cdx_row_count": 18,
+      "cdx_no_resume_key_returned": true,
+      "cdx_scope_note": "Resultado íntegro de esta URL/rango sin collapse; no inventario exhaustivo de todo Binance."
+    },
+    {
+      "id": "CDX_SPOT",
+      "publisher": "Internet Archive",
+      "title": "CDX_SPOT",
+      "type": "archive_index",
+      "original_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.binance.com%2Fen%2Ffee%2Ftrading&output=json&from=20250101&to=20260831&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true",
+      "final_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.binance.com%2Fen%2Ffee%2Ftrading&output=json&from=20250101&to=20260831&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true",
+      "publisher_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.binance.com%2Fen%2Ffee%2Ftrading&output=json&from=20250101&to=20260831&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true",
+      "publication_original": null,
+      "publication_utc": null,
+      "updates_original": [],
+      "capture_utc": null,
+      "queried_at_utc": "2026-09-24T23:46:14.387993Z",
+      "retrieved_at_utc": "2026-09-24T23:46:24.812666Z",
+      "http_status": 200,
+      "local_file": "originales/CDX_SPOT.body",
+      "local_base": "package",
+      "bytes": 4620,
+      "sha256": "7cbcf84242716359d26277b5244e44f25bfc0a13af5809b5e499902a425a7b1b",
+      "hash_representation": "requests.Response.content bytes exactly saved; automatic HTTP content decompression by requests if Content-Encoding is set; not raw wire/chunk bytes",
+      "automatic_decompression": true,
+      "metadata_file": "originales/CDX_SPOT.meta.json",
+      "redirects": [],
+      "original_http_copy_available": true,
+      "online_only_original": false,
+      "usable_for_facts": false,
+      "table_recovered": false,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "historical_original_version_verified": false,
+      "exclusion_reason": "Índice/pista o respuesta sin datos objetivo; no prueba una regla ni ausencia de promociones",
+      "cdx_row_count": 40,
+      "cdx_no_resume_key_returned": true,
+      "cdx_scope_note": "Resultado íntegro de esta URL/rango sin collapse; no inventario exhaustivo de todo Binance."
+    },
+    {
+      "id": "CDX_SPOTINFO",
+      "publisher": "Internet Archive",
+      "title": "CDX_SPOTINFO",
+      "type": "archive_index",
+      "original_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fapi.binance.com%2Fapi%2Fv3%2FexchangeInfo&output=json&from=20220101&to=20260831&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true&matchType=exact",
+      "final_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fapi.binance.com%2Fapi%2Fv3%2FexchangeInfo&output=json&from=20220101&to=20260831&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true&matchType=exact",
+      "publisher_url": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fapi.binance.com%2Fapi%2Fv3%2FexchangeInfo&output=json&from=20220101&to=20260831&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&limit=1000&showResumeKey=true&matchType=exact",
+      "publication_original": null,
+      "publication_utc": null,
+      "updates_original": [],
+      "capture_utc": null,
+      "queried_at_utc": "2026-09-24T23:48:29.304144Z",
+      "retrieved_at_utc": "2026-09-24T23:48:31.282904Z",
+      "http_status": 200,
+      "local_file": "originales/CDX_SPOTINFO.body",
+      "local_base": "package",
+      "bytes": 21468,
+      "sha256": "71025a414d944f1ce9e4a3fdab4b54c4ce594d3e8ceaa6e222604195355f3285",
+      "hash_representation": "requests.Response.content bytes exactly saved; automatic HTTP content decompression by requests if Content-Encoding is set; not raw wire/chunk bytes",
+      "automatic_decompression": true,
+      "metadata_file": "originales/CDX_SPOTINFO.meta.json",
+      "redirects": [],
+      "original_http_copy_available": true,
+      "online_only_original": false,
+      "usable_for_facts": false,
+      "table_recovered": false,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "historical_original_version_verified": false,
+      "exclusion_reason": "Índice/pista o respuesta sin datos objetivo; no prueba una regla ni ausencia de promociones",
+      "cdx_row_count": 170,
+      "cdx_no_resume_key_returned": true,
+      "cdx_scope_note": "Resultado íntegro de esta URL/rango sin collapse; no inventario exhaustivo de todo Binance."
+    },
+    {
+      "id": "CDXDOC",
+      "publisher": "Internet Archive",
+      "title": "CDXDOC",
+      "type": "retrieval_only",
+      "original_url": "https://raw.githubusercontent.com/internetarchive/wayback/master/wayback-cdx-server/README.md",
+      "final_url": "https://raw.githubusercontent.com/internetarchive/wayback/master/wayback-cdx-server/README.md",
+      "publisher_url": "https://raw.githubusercontent.com/internetarchive/wayback/master/wayback-cdx-server/README.md",
+      "publication_original": null,
+      "publication_utc": null,
+      "updates_original": [],
+      "capture_utc": null,
+      "queried_at_utc": "2026-09-24T23:45:09.179040Z",
+      "retrieved_at_utc": "2026-09-24T23:45:09.725624Z",
+      "http_status": 200,
+      "local_file": "originales/CDXDOC.body",
+      "local_base": "package",
+      "bytes": 18292,
+      "sha256": "e17a0e1f43c4dd887adbb1473a7be452bbc12f823b64ea3fda2105c8d27ee7dd",
+      "hash_representation": "requests.Response.content bytes exactly saved; automatic HTTP content decompression by requests if Content-Encoding is set; not raw wire/chunk bytes",
+      "automatic_decompression": true,
+      "metadata_file": "originales/CDXDOC.meta.json",
+      "redirects": [],
+      "original_http_copy_available": true,
+      "online_only_original": false,
+      "usable_for_facts": false,
+      "table_recovered": false,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "historical_original_version_verified": false,
+      "exclusion_reason": null
+    },
+    {
+      "id": "DOCFUT",
+      "publisher": "ver URL",
+      "title": "DOCFUT",
+      "type": "retrieval_only",
+      "original_url": "https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/rest-api/market-data",
+      "final_url": "https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/rest-api/market-data",
+      "publisher_url": "https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/rest-api/market-data",
+      "publication_original": null,
+      "publication_utc": null,
+      "updates_original": [],
+      "capture_utc": null,
+      "queried_at_utc": "2026-09-24T23:57:14.081774Z",
+      "retrieved_at_utc": "2026-09-24T23:57:14.370920Z",
+      "http_status": 202,
+      "local_file": "originales/DOCFUT.body",
+      "local_base": "package",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_representation": "requests.Response.content bytes exactly saved; automatic HTTP content decompression by requests if Content-Encoding is set; not raw wire/chunk bytes",
+      "automatic_decompression": false,
+      "metadata_file": "originales/DOCFUT.meta.json",
+      "redirects": [],
+      "original_http_copy_available": true,
+      "online_only_original": false,
+      "usable_for_facts": false,
+      "table_recovered": false,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "historical_original_version_verified": false,
+      "exclusion_reason": "Índice/pista o respuesta sin datos objetivo; no prueba una regla ni ausencia de promociones"
+    },
+    {
+      "id": "DOCSPOT",
+      "publisher": "ver URL",
+      "title": "DOCSPOT",
+      "type": "retrieval_only",
+      "original_url": "https://developers.binance.com/en/docs/products/spot/filters",
+      "final_url": "https://developers.binance.com/en/docs/products/spot/filters",
+      "publisher_url": "https://developers.binance.com/en/docs/products/spot/filters",
+      "publication_original": null,
+      "publication_utc": null,
+      "updates_original": [],
+      "capture_utc": null,
+      "queried_at_utc": "2026-09-24T23:57:13.733514Z",
+      "retrieved_at_utc": "2026-09-24T23:57:14.079456Z",
+      "http_status": 202,
+      "local_file": "originales/DOCSPOT.body",
+      "local_base": "package",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_representation": "requests.Response.content bytes exactly saved; automatic HTTP content decompression by requests if Content-Encoding is set; not raw wire/chunk bytes",
+      "automatic_decompression": false,
+      "metadata_file": "originales/DOCSPOT.meta.json",
+      "redirects": [],
+      "original_http_copy_available": true,
+      "online_only_original": false,
+      "usable_for_facts": false,
+      "table_recovered": false,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "historical_original_version_verified": false,
+      "exclusion_reason": "Índice/pista o respuesta sin datos objetivo; no prueba una regla ni ausencia de promociones"
+    },
+    {
+      "id": "DOCSPOTRAW",
+      "publisher": "Binance",
+      "title": "DOCSPOTRAW",
+      "type": "official_documentation_current",
+      "original_url": "https://raw.githubusercontent.com/binance/binance-spot-api-docs/master/filters.md",
+      "final_url": "https://raw.githubusercontent.com/binance/binance-spot-api-docs/master/filters.md",
+      "publisher_url": "https://raw.githubusercontent.com/binance/binance-spot-api-docs/master/filters.md",
+      "publication_original": null,
+      "publication_utc": null,
+      "updates_original": [],
+      "capture_utc": null,
+      "queried_at_utc": "2026-09-24T23:58:06.432221Z",
+      "retrieved_at_utc": "2026-09-24T23:58:06.945158Z",
+      "http_status": 200,
+      "local_file": "originales/DOCSPOTRAW.body",
+      "local_base": "package",
+      "bytes": 13528,
+      "sha256": "4b5a8f0f5d15bcf68fd7ac2059ba6c88da641c06fd7885e642330c5ac8124dd3",
+      "hash_representation": "requests.Response.content bytes exactly saved; automatic HTTP content decompression by requests if Content-Encoding is set; not raw wire/chunk bytes",
+      "automatic_decompression": true,
+      "metadata_file": "originales/DOCSPOTRAW.meta.json",
+      "redirects": [],
+      "original_http_copy_available": true,
+      "online_only_original": false,
+      "usable_for_facts": true,
+      "table_recovered": false,
+      "evidence_scope": {
+        "markets": [
+          "spot"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "historical_original_version_verified": false,
+      "exclusion_reason": null
+    },
+    {
+      "id": "FUTI22",
+      "publisher": "Binance",
+      "title": "exchangeInfo futures_usdm_perpetual",
+      "type": "historical_api_snapshot",
+      "original_url": "https://web.archive.org/web/20220102134838id_/https://fapi.binance.com/fapi/v1/exchangeInfo",
+      "final_url": "https://web.archive.org/web/20220102134838id_/https://fapi.binance.com/fapi/v1/exchangeInfo",
+      "publisher_url": "https://fapi.binance.com/fapi/v1/exchangeInfo",
+      "publication_original": null,
+      "publication_utc": null,
+      "updates_original": [],
+      "capture_utc": "2022-01-02T13:48:38Z",
+      "queried_at_utc": "2026-09-24T23:49:56.689177Z",
+      "retrieved_at_utc": "2026-09-24T23:49:57.993138Z",
+      "http_status": 200,
+      "local_file": "originales/FUTI22.body",
+      "local_base": "package",
+      "bytes": 168715,
+      "sha256": "4c75d92ff884759b4da0567451604fa65851ae5f0892f2a51e501dad4d9c68ce",
+      "hash_representation": "requests.Response.content bytes exactly saved; automatic HTTP content decompression by requests if Content-Encoding is set; not raw wire/chunk bytes",
+      "automatic_decompression": true,
+      "metadata_file": "originales/FUTI22.meta.json",
+      "redirects": [],
+      "original_http_copy_available": true,
+      "online_only_original": false,
+      "usable_for_facts": true,
+      "table_recovered": false,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "historical_original_version_verified": true,
+      "exclusion_reason": null,
+      "serverTime_original_ms": 1640937743218,
+      "serverTime_utc": "2021-12-31T08:02:23.218000Z",
+      "serverTime_is_effective_date": false
+    },
+    {
+      "id": "FUTI22B",
+      "publisher": "Binance",
+      "title": "exchangeInfo futures_usdm_perpetual",
+      "type": "historical_api_snapshot",
+      "original_url": "https://web.archive.org/web/20221127174756id_/https://fapi.binance.com/fapi/v1/exchangeInfo",
+      "final_url": "https://web.archive.org/web/20221116205542id_/https://fapi.binance.com/fapi/v1/exchangeInfo",
+      "publisher_url": "https://fapi.binance.com/fapi/v1/exchangeInfo",
+      "publication_original": null,
+      "publication_utc": null,
+      "updates_original": [],
+      "capture_utc": "2022-11-16T20:55:42Z",
+      "queried_at_utc": "2026-09-24T23:57:14.373209Z",
+      "retrieved_at_utc": "2026-09-24T23:57:24.623896Z",
+      "http_status": 200,
+      "local_file": "originales/FUTI22B.body",
+      "local_base": "package",
+      "bytes": 224851,
+      "sha256": "7ba77a8cfe4397f58e5439b617e3bf4c9280e7fde0e59b63e55838158ee824f5",
+      "hash_representation": "requests.Response.content bytes exactly saved; automatic HTTP content decompression by requests if Content-Encoding is set; not raw wire/chunk bytes",
+      "automatic_decompression": true,
+      "metadata_file": "originales/FUTI22B.meta.json",
+      "redirects": [
+        {
+          "url": "https://web.archive.org/web/20221127174756id_/https://fapi.binance.com/fapi/v1/exchangeInfo",
+          "status": 302,
+          "location": "https://web.archive.org/web/20221116205542id_/https://fapi.binance.com/fapi/v1/exchangeInfo"
+        }
+      ],
+      "original_http_copy_available": true,
+      "online_only_original": false,
+      "usable_for_facts": true,
+      "table_recovered": false,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "historical_original_version_verified": true,
+      "exclusion_reason": null,
+      "serverTime_original_ms": 1668628810820,
+      "serverTime_utc": "2022-11-16T20:00:10.820000Z",
+      "serverTime_is_effective_date": false
+    },
+    {
+      "id": "FUTI23",
+      "publisher": "ver URL",
+      "title": "FUTI23",
+      "type": "retrieval_only",
+      "original_url": "https://web.archive.org/web/20231102093209id_/https://fapi.binance.com/fapi/v1/exchangeInfo",
+      "final_url": "https://web.archive.org/web/20240108115316id_/https://fapi.binance.com/fapi/v1/exchangeInfo",
+      "publisher_url": "https://fapi.binance.com/fapi/v1/exchangeInfo",
+      "publication_original": null,
+      "publication_utc": null,
+      "updates_original": [],
+      "capture_utc": "2024-01-08T11:53:16Z",
+      "queried_at_utc": "2026-09-24T23:49:58.016948Z",
+      "retrieved_at_utc": "2026-09-24T23:50:08.320867Z",
+      "http_status": 451,
+      "local_file": "originales/FUTI23.body",
+      "local_base": "package",
+      "bytes": 224,
+      "sha256": "79c1db471a4cdc1c8565b5dfc52e0ed2d29962738ee4d28597696fcd0920e348",
+      "hash_representation": "requests.Response.content bytes exactly saved; automatic HTTP content decompression by requests if Content-Encoding is set; not raw wire/chunk bytes",
+      "automatic_decompression": false,
+      "metadata_file": "originales/FUTI23.meta.json",
+      "redirects": [
+        {
+          "url": "https://web.archive.org/web/20231102093209id_/https://fapi.binance.com/fapi/v1/exchangeInfo",
+          "status": 302,
+          "location": "https://web.archive.org/web/20240108115316id_/https://fapi.binance.com/fapi/v1/exchangeInfo"
+        }
+      ],
+      "original_http_copy_available": true,
+      "online_only_original": false,
+      "usable_for_facts": false,
+      "table_recovered": false,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "historical_original_version_verified": false,
+      "exclusion_reason": "Replay redirige a 2024-01-08 y devuelve HTTP 451: no exchangeInfo utilizable, aunque CDX listaba 200 en otra fecha."
+    },
+    {
+      "id": "FUTI26",
+      "publisher": "Binance",
+      "title": "exchangeInfo futures_usdm_perpetual",
+      "type": "historical_api_snapshot",
+      "original_url": "https://web.archive.org/web/20260217041328id_/https://fapi.binance.com/fapi/v1/exchangeInfo",
+      "final_url": "https://web.archive.org/web/20260217041328id_/https://fapi.binance.com/fapi/v1/exchangeInfo",
+      "publisher_url": "https://fapi.binance.com/fapi/v1/exchangeInfo",
+      "publication_original": null,
+      "publication_utc": null,
+      "updates_original": [],
+      "capture_utc": "2026-02-17T04:13:28Z",
+      "queried_at_utc": "2026-09-24T23:50:08.334972Z",
+      "retrieved_at_utc": "2026-09-24T23:50:10.737550Z",
+      "http_status": 200,
+      "local_file": "originales/FUTI26.body",
+      "local_base": "package",
+      "bytes": 836886,
+      "sha256": "fef22b65892ec2254be2850762621b4982ac462c66de31ee9d6c38df61a1c2ac",
+      "hash_representation": "requests.Response.content bytes exactly saved; automatic HTTP content decompression by requests if Content-Encoding is set; not raw wire/chunk bytes",
+      "automatic_decompression": true,
+      "metadata_file": "originales/FUTI26.meta.json",
+      "redirects": [],
+      "original_http_copy_available": true,
+      "online_only_original": false,
+      "usable_for_facts": true,
+      "table_recovered": false,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "historical_original_version_verified": true,
+      "exclusion_reason": null,
+      "serverTime_original_ms": 1771300813648,
+      "serverTime_utc": "2026-02-17T04:00:13.648000Z",
+      "serverTime_is_effective_date": false
+    },
+    {
+      "id": "FUTI26B",
+      "publisher": "Binance",
+      "title": "exchangeInfo futures_usdm_perpetual",
+      "type": "historical_api_snapshot",
+      "original_url": "https://web.archive.org/web/20260510103016id_/https://fapi.binance.com/fapi/v1/exchangeInfo",
+      "final_url": "https://web.archive.org/web/20260510103016id_/https://fapi.binance.com/fapi/v1/exchangeInfo",
+      "publisher_url": "https://fapi.binance.com/fapi/v1/exchangeInfo",
+      "publication_original": null,
+      "publication_utc": null,
+      "updates_original": [],
+      "capture_utc": "2026-05-10T10:30:16Z",
+      "queried_at_utc": "2026-09-24T23:50:10.771134Z",
+      "retrieved_at_utc": "2026-09-24T23:50:12.366941Z",
+      "http_status": 200,
+      "local_file": "originales/FUTI26B.body",
+      "local_base": "package",
+      "bytes": 887744,
+      "sha256": "56b89ecf852317d7892b644d14304f530679ddc5d55fd434044775cb14fbd1ea",
+      "hash_representation": "requests.Response.content bytes exactly saved; automatic HTTP content decompression by requests if Content-Encoding is set; not raw wire/chunk bytes",
+      "automatic_decompression": true,
+      "metadata_file": "originales/FUTI26B.meta.json",
+      "redirects": [],
+      "original_http_copy_available": true,
+      "online_only_original": false,
+      "usable_for_facts": true,
+      "table_recovered": false,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "historical_original_version_verified": true,
+      "exclusion_reason": null,
+      "serverTime_original_ms": 1778407213208,
+      "serverTime_utc": "2026-05-10T10:00:13.208000Z",
+      "serverTime_is_effective_date": false
+    },
+    {
+      "id": "LEAD_OCT",
+      "publisher": "Kripto Akadémia",
+      "title": "Binance Futures: magasabb jutalékot kell fizetni a határidős kereskedésért – Kripto Akadémia",
+      "type": "retrieval_only",
+      "original_url": "https://kriptoakademia.com/2023/10/21/binance-futures-magasabb-jutalekot-kell-fizetni-a-hataridos-kereskedesert",
+      "final_url": "https://kriptoakademia.com/2023/10/21/binance-futures-magasabb-jutalekot-kell-fizetni-a-hataridos-kereskedesert",
+      "publisher_url": "https://kriptoakademia.com/2023/10/21/binance-futures-magasabb-jutalekot-kell-fizetni-a-hataridos-kereskedesert",
+      "publication_original": null,
+      "publication_utc": null,
+      "updates_original": [],
+      "capture_utc": null,
+      "queried_at_utc": "2026-09-24T23:46:03.153757Z",
+      "retrieved_at_utc": "2026-09-24T23:46:04.119245Z",
+      "http_status": 200,
+      "local_file": "originales/LEAD_OCT.body",
+      "local_base": "package",
+      "bytes": 145424,
+      "sha256": "f9fff2ccd6a27810b821278e4d00dd6101dcbd944f07c44ec81230528996bb46",
+      "hash_representation": "requests.Response.content bytes exactly saved; automatic HTTP content decompression by requests if Content-Encoding is set; not raw wire/chunk bytes",
+      "automatic_decompression": true,
+      "metadata_file": "originales/LEAD_OCT.meta.json",
+      "redirects": [],
+      "original_http_copy_available": true,
+      "online_only_original": false,
+      "usable_for_facts": false,
+      "table_recovered": false,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "historical_original_version_verified": false,
+      "exclusion_reason": "Índice/pista o respuesta sin datos objetivo; no prueba una regla ni ausencia de promociones"
+    },
+    {
+      "id": "PEND",
+      "publisher": "ver URL",
+      "title": "PEND",
+      "type": "retrieval_only",
+      "original_url": "https://www.binance.com/en/support/announcement/detail/be13a645cca643d28eab5b9b34f2dc36",
+      "final_url": "https://www.binance.com/en/support/announcement/detail/be13a645cca643d28eab5b9b34f2dc36",
+      "publisher_url": "https://www.binance.com/en/support/announcement/detail/be13a645cca643d28eab5b9b34f2dc36",
+      "publication_original": null,
+      "publication_utc": null,
+      "updates_original": [],
+      "capture_utc": null,
+      "queried_at_utc": "2026-09-24T23:46:02.812688Z",
+      "retrieved_at_utc": "2026-09-24T23:46:03.151638Z",
+      "http_status": 202,
+      "local_file": "originales/PEND.body",
+      "local_base": "package",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_representation": "requests.Response.content bytes exactly saved; automatic HTTP content decompression by requests if Content-Encoding is set; not raw wire/chunk bytes",
+      "automatic_decompression": false,
+      "metadata_file": "originales/PEND.meta.json",
+      "redirects": [],
+      "original_http_copy_available": true,
+      "online_only_original": false,
+      "usable_for_facts": false,
+      "table_recovered": false,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "historical_original_version_verified": false,
+      "exclusion_reason": "Índice/pista o respuesta sin datos objetivo; no prueba una regla ni ausencia de promociones"
+    },
+    {
+      "id": "PROMO25",
+      "publisher": "ver URL",
+      "title": "Spot Trading Fee Rate | Binance",
+      "type": "retrieval_only",
+      "original_url": "https://web.archive.org/web/20250118100211id_/https://www.binance.com/en/fee/tradingPromote",
+      "final_url": "https://web.archive.org/web/20250118100211id_/https://www.binance.com/en/fee/tradingPromote",
+      "publisher_url": "https://www.binance.com/en/fee/tradingPromote",
+      "publication_original": null,
+      "publication_utc": null,
+      "updates_original": [],
+      "capture_utc": "2025-01-18T10:02:11Z",
+      "queried_at_utc": "2026-09-24T23:47:22.523568Z",
+      "retrieved_at_utc": "2026-09-24T23:47:25.033957Z",
+      "http_status": 200,
+      "local_file": "originales/PROMO25.body",
+      "local_base": "package",
+      "bytes": 1733978,
+      "sha256": "c29fcb8811f2eba304ef60216f602bc12c85e9d81e3dc0b019428e4dfd99d0e9",
+      "hash_representation": "requests.Response.content bytes exactly saved; automatic HTTP content decompression by requests if Content-Encoding is set; not raw wire/chunk bytes",
+      "automatic_decompression": true,
+      "metadata_file": "originales/PROMO25.meta.json",
+      "redirects": [],
+      "original_http_copy_available": true,
+      "online_only_original": false,
+      "usable_for_facts": false,
+      "table_recovered": false,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "historical_original_version_verified": false,
+      "exclusion_reason": "HTML recuperado sin tabla de tarifas/promociones objetivo. No records found o plantilla sin pares no demuestra ausencia de promociones."
+    },
+    {
+      "id": "PROMO26",
+      "publisher": "ver URL",
+      "title": "Spot Trading Fee Rate | Binance",
+      "type": "retrieval_only",
+      "original_url": "https://web.archive.org/web/20260831075419id_/https://www.binance.com/en/fee/tradingPromote",
+      "final_url": "https://web.archive.org/web/20260831075419id_/https://www.binance.com/en/fee/tradingPromote",
+      "publisher_url": "https://www.binance.com/en/fee/tradingPromote",
+      "publication_original": null,
+      "publication_utc": null,
+      "updates_original": [],
+      "capture_utc": "2026-08-31T07:54:19Z",
+      "queried_at_utc": "2026-09-24T23:47:25.104738Z",
+      "retrieved_at_utc": "2026-09-24T23:47:27.292507Z",
+      "http_status": 200,
+      "local_file": "originales/PROMO26.body",
+      "local_base": "package",
+      "bytes": 178976,
+      "sha256": "2c3aff22bb17e81345f0fbef4774fc3fc1c1007977c7354d3d50f7bd0d97eb72",
+      "hash_representation": "requests.Response.content bytes exactly saved; automatic HTTP content decompression by requests if Content-Encoding is set; not raw wire/chunk bytes",
+      "automatic_decompression": true,
+      "metadata_file": "originales/PROMO26.meta.json",
+      "redirects": [],
+      "original_http_copy_available": true,
+      "online_only_original": false,
+      "usable_for_facts": false,
+      "table_recovered": false,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "historical_original_version_verified": false,
+      "exclusion_reason": "HTML recuperado sin tabla de tarifas/promociones objetivo. No records found o plantilla sin pares no demuestra ausencia de promociones."
+    },
+    {
+      "id": "PSTART",
+      "publisher": "ver URL",
+      "title": "PSTART",
+      "type": "retrieval_only",
+      "original_url": "https://www.binance.com/en/support/announcement/detail/10435147c55d4a40b64fcbf43cb46329",
+      "final_url": "https://www.binance.com/en/support/announcement/detail/10435147c55d4a40b64fcbf43cb46329",
+      "publisher_url": "https://www.binance.com/en/support/announcement/detail/10435147c55d4a40b64fcbf43cb46329",
+      "publication_original": null,
+      "publication_utc": null,
+      "updates_original": [],
+      "capture_utc": null,
+      "queried_at_utc": "2026-09-24T23:46:02.496927Z",
+      "retrieved_at_utc": "2026-09-24T23:46:02.810263Z",
+      "http_status": 202,
+      "local_file": "originales/PSTART.body",
+      "local_base": "package",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_representation": "requests.Response.content bytes exactly saved; automatic HTTP content decompression by requests if Content-Encoding is set; not raw wire/chunk bytes",
+      "automatic_decompression": false,
+      "metadata_file": "originales/PSTART.meta.json",
+      "redirects": [],
+      "original_http_copy_available": true,
+      "online_only_original": false,
+      "usable_for_facts": false,
+      "table_recovered": false,
+      "evidence_scope": {
+        "markets": [
+          "futures_usdm_perpetual"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "historical_original_version_verified": false,
+      "exclusion_reason": "Índice/pista o respuesta sin datos objetivo; no prueba una regla ni ausencia de promociones"
+    },
+    {
+      "id": "SPOT25",
+      "publisher": "ver URL",
+      "title": "Spot Trading Fee Rate | Binance",
+      "type": "retrieval_only",
+      "original_url": "https://web.archive.org/web/20250114132420id_/https://www.binance.com/en/fee/trading",
+      "final_url": "https://web.archive.org/web/20250114132420id_/https://www.binance.com/en/fee/trading",
+      "publisher_url": "https://www.binance.com/en/fee/trading",
+      "publication_original": null,
+      "publication_utc": null,
+      "updates_original": [],
+      "capture_utc": "2025-01-14T13:24:20Z",
+      "queried_at_utc": "2026-09-24T23:47:18.366902Z",
+      "retrieved_at_utc": "2026-09-24T23:47:20.670469Z",
+      "http_status": 200,
+      "local_file": "originales/SPOT25.body",
+      "local_base": "package",
+      "bytes": 1729164,
+      "sha256": "0f4e59556dea2b7bec2dd8beffbbffe0b9d2303ac6170b576ed513aa353eb661",
+      "hash_representation": "requests.Response.content bytes exactly saved; automatic HTTP content decompression by requests if Content-Encoding is set; not raw wire/chunk bytes",
+      "automatic_decompression": true,
+      "metadata_file": "originales/SPOT25.meta.json",
+      "redirects": [],
+      "original_http_copy_available": true,
+      "online_only_original": false,
+      "usable_for_facts": false,
+      "table_recovered": false,
+      "evidence_scope": {
+        "markets": [
+          "spot"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "historical_original_version_verified": false,
+      "exclusion_reason": "HTML recuperado sin tabla de tarifas/promociones objetivo. No records found o plantilla sin pares no demuestra ausencia de promociones."
+    },
+    {
+      "id": "SPOT25B",
+      "publisher": "ver URL",
+      "title": "Spot Trading Fee Rate | Binance",
+      "type": "retrieval_only",
+      "original_url": "https://web.archive.org/web/20250718191905id_/https://www.binance.com/en/fee/trading",
+      "final_url": "https://web.archive.org/web/20250718191905id_/https://www.binance.com/en/fee/trading",
+      "publisher_url": "https://www.binance.com/en/fee/trading",
+      "publication_original": null,
+      "publication_utc": null,
+      "updates_original": [],
+      "capture_utc": "2025-07-18T19:19:05Z",
+      "queried_at_utc": "2026-09-24T23:48:27.078678Z",
+      "retrieved_at_utc": "2026-09-24T23:48:29.241671Z",
+      "http_status": 200,
+      "local_file": "originales/SPOT25B.body",
+      "local_base": "package",
+      "bytes": 1912607,
+      "sha256": "951012a4735d1ca4faa4d9b5971b4df85c94fd9c915f48a92324e803c163249f",
+      "hash_representation": "requests.Response.content bytes exactly saved; automatic HTTP content decompression by requests if Content-Encoding is set; not raw wire/chunk bytes",
+      "automatic_decompression": true,
+      "metadata_file": "originales/SPOT25B.meta.json",
+      "redirects": [],
+      "original_http_copy_available": true,
+      "online_only_original": false,
+      "usable_for_facts": false,
+      "table_recovered": false,
+      "evidence_scope": {
+        "markets": [
+          "spot"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "historical_original_version_verified": false,
+      "exclusion_reason": "HTML recuperado sin tabla de tarifas/promociones objetivo. No records found o plantilla sin pares no demuestra ausencia de promociones."
+    },
+    {
+      "id": "SPOT26",
+      "publisher": "Binance",
+      "title": "Spot Trading Fee Rate | Binance",
+      "type": "archived_official_html",
+      "original_url": "https://web.archive.org/web/20260806031057id_/https://www.binance.com/en/fee/trading",
+      "final_url": "https://web.archive.org/web/20260806031057id_/https://www.binance.com/en/fee/trading",
+      "publisher_url": "https://www.binance.com/en/fee/trading",
+      "publication_original": null,
+      "publication_utc": null,
+      "updates_original": [],
+      "capture_utc": "2026-08-06T03:10:57Z",
+      "queried_at_utc": "2026-09-24T23:47:20.736702Z",
+      "retrieved_at_utc": "2026-09-24T23:47:22.488039Z",
+      "http_status": 200,
+      "local_file": "originales/SPOT26.body",
+      "local_base": "package",
+      "bytes": 201422,
+      "sha256": "3f4ba24fa743f2b8d4765686896463664caa546ffe48216647abbead5320301d",
+      "hash_representation": "requests.Response.content bytes exactly saved; automatic HTTP content decompression by requests if Content-Encoding is set; not raw wire/chunk bytes",
+      "automatic_decompression": true,
+      "metadata_file": "originales/SPOT26.meta.json",
+      "redirects": [],
+      "original_http_copy_available": true,
+      "online_only_original": false,
+      "usable_for_facts": true,
+      "table_recovered": true,
+      "evidence_scope": {
+        "markets": [
+          "spot"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "historical_original_version_verified": true,
+      "exclusion_reason": null
+    },
+    {
+      "id": "SPOTI22",
+      "publisher": "Binance",
+      "title": "exchangeInfo spot",
+      "type": "historical_api_snapshot",
+      "original_url": "https://web.archive.org/web/20220102134838id_/https://api.binance.com/api/v3/exchangeInfo",
+      "final_url": "https://web.archive.org/web/20220102134838id_/https://api.binance.com/api/v3/exchangeInfo",
+      "publisher_url": "https://api.binance.com/api/v3/exchangeInfo",
+      "publication_original": null,
+      "publication_utc": null,
+      "updates_original": [],
+      "capture_utc": "2022-01-02T13:48:38Z",
+      "queried_at_utc": "2026-09-24T23:49:45.301150Z",
+      "retrieved_at_utc": "2026-09-24T23:49:46.930524Z",
+      "http_status": 200,
+      "local_file": "originales/SPOTI22.body",
+      "local_base": "package",
+      "bytes": 2052384,
+      "sha256": "173aa95c417e9457d5674d0f21f0bf19d81067a7d8b93be0531f60ad0043d719",
+      "hash_representation": "requests.Response.content bytes exactly saved; automatic HTTP content decompression by requests if Content-Encoding is set; not raw wire/chunk bytes",
+      "automatic_decompression": true,
+      "metadata_file": "originales/SPOTI22.meta.json",
+      "redirects": [],
+      "original_http_copy_available": true,
+      "online_only_original": false,
+      "usable_for_facts": true,
+      "table_recovered": false,
+      "evidence_scope": {
+        "markets": [
+          "spot"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "historical_original_version_verified": true,
+      "exclusion_reason": null,
+      "serverTime_original_ms": 1641131318325,
+      "serverTime_utc": "2022-01-02T13:48:38.325000Z",
+      "serverTime_is_effective_date": false
+    },
+    {
+      "id": "SPOTI23",
+      "publisher": "Binance",
+      "title": "exchangeInfo spot",
+      "type": "historical_api_snapshot",
+      "original_url": "https://web.archive.org/web/20230621052717id_/http://api.binance.com/api/v3/exchangeInfo?",
+      "final_url": "https://web.archive.org/web/20230618161425id_/https://api.binance.com/api/v3/exchangeInfo",
+      "publisher_url": "https://api.binance.com/api/v3/exchangeInfo",
+      "publication_original": null,
+      "publication_utc": null,
+      "updates_original": [],
+      "capture_utc": "2023-06-18T16:14:25Z",
+      "queried_at_utc": "2026-09-24T23:49:46.960933Z",
+      "retrieved_at_utc": "2026-09-24T23:49:52.012234Z",
+      "http_status": 200,
+      "local_file": "originales/SPOTI23.body",
+      "local_base": "package",
+      "bytes": 3444081,
+      "sha256": "c94839df756bf3a31b9d9f7be59480170b217abb2e36a24ce2a5c1e5405cd256",
+      "hash_representation": "requests.Response.content bytes exactly saved; automatic HTTP content decompression by requests if Content-Encoding is set; not raw wire/chunk bytes",
+      "automatic_decompression": true,
+      "metadata_file": "originales/SPOTI23.meta.json",
+      "redirects": [
+        {
+          "url": "https://web.archive.org/web/20230621052717id_/http://api.binance.com/api/v3/exchangeInfo",
+          "status": 302,
+          "location": "https://web.archive.org/web/20230618161425id_/https://api.binance.com/api/v3/exchangeInfo"
+        }
+      ],
+      "original_http_copy_available": true,
+      "online_only_original": false,
+      "usable_for_facts": true,
+      "table_recovered": false,
+      "evidence_scope": {
+        "markets": [
+          "spot"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "historical_original_version_verified": true,
+      "exclusion_reason": null,
+      "serverTime_original_ms": 1687104866016,
+      "serverTime_utc": "2023-06-18T16:14:26.016000Z",
+      "serverTime_is_effective_date": false
+    },
+    {
+      "id": "SPOTI25",
+      "publisher": "Binance",
+      "title": "exchangeInfo spot",
+      "type": "historical_api_snapshot",
+      "original_url": "https://web.archive.org/web/20251209111642id_/https://api.binance.com/api/v3/exchangeInfo",
+      "final_url": "https://web.archive.org/web/20251209111642id_/https://api.binance.com/api/v3/exchangeInfo",
+      "publisher_url": "https://api.binance.com/api/v3/exchangeInfo",
+      "publication_original": null,
+      "publication_utc": null,
+      "updates_original": [],
+      "capture_utc": "2025-12-09T11:16:42Z",
+      "queried_at_utc": "2026-09-24T23:49:52.060101Z",
+      "retrieved_at_utc": "2026-09-24T23:49:56.560222Z",
+      "http_status": 200,
+      "local_file": "originales/SPOTI25.body",
+      "local_base": "package",
+      "bytes": 15514854,
+      "sha256": "f6e303edbe7bc160bc379ea1db170e4e1d0737dbddeaaac517d45fd3c08af7f9",
+      "hash_representation": "requests.Response.content bytes exactly saved; automatic HTTP content decompression by requests if Content-Encoding is set; not raw wire/chunk bytes",
+      "automatic_decompression": true,
+      "metadata_file": "originales/SPOTI25.meta.json",
+      "redirects": [],
+      "original_http_copy_available": true,
+      "online_only_original": false,
+      "usable_for_facts": true,
+      "table_recovered": false,
+      "evidence_scope": {
+        "markets": [
+          "spot"
+        ],
+        "symbols": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "vip": [
+          "Regular/VIP0"
+        ],
+        "special_program": false
+      },
+      "historical_original_version_verified": true,
+      "exclusion_reason": null,
+      "serverTime_original_ms": 1765279003189,
+      "serverTime_utc": "2025-12-09T11:16:43.189000Z",
+      "serverTime_is_effective_date": false
+    }
+  ]
+}

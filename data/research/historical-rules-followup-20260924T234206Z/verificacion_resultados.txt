@@ -1,0 +1,28 @@
+PASS
+
+[
+  {
+    "name": "manifiesto de archivos nuevos",
+    "count": 196
+  },
+  {
+    "name": "fuentes y capturas reales, incluidos hashes de texto extraído",
+    "count": 52
+  },
+  {
+    "name": "esquema, alcance, prueba contra fuente y temporalidad",
+    "count": 345
+  },
+  {
+    "name": "cobertura por unión sin días imputados a puntos",
+    "count": 479
+  },
+  {
+    "name": "archivos protegidos, índice, HEAD y rama",
+    "count": 717
+  },
+  {
+    "name": "atributos efectivos -text y whitespace=cr-at-eol",
+    "count": 199
+  }
+]

@@ -1,0 +1,643 @@
+[
+  {
+    "table_index": 0,
+    "rows": [
+      {
+        "row_index": 0,
+        "cells": [
+          {
+            "text": "Level",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "th"
+          },
+          {
+            "text": "30D Trade Volume (USD)",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "th"
+          },
+          {
+            "text": "and/or",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "th"
+          },
+          {
+            "text": "BNB Balance",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "th"
+          },
+          {
+            "text": "Maker / Taker",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "th"
+          },
+          {
+            "text": "Maker / Taker BNB 25% off",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "th"
+          },
+          {
+            "text": "USDC Maker / Taker",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "th"
+          },
+          {
+            "text": "USDC Maker / Taker BNB 25% off",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "th"
+          }
+        ]
+      },
+      {
+        "row_index": 1,
+        "cells": [
+          {
+            "text": "",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          }
+        ]
+      },
+      {
+        "row_index": 2,
+        "cells": [
+          {
+            "text": "Regular User",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "< 1,000,000 USD",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "or",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "≥ 0 BNB",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "0.100% / 0.100%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "0.07500% / 0.07500%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "Standard / 0.095%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "Standard / 0.07125%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          }
+        ]
+      },
+      {
+        "row_index": 3,
+        "cells": [
+          {
+            "text": "VIP 1",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "≥ 1,000,000 USD",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "and",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "≥ 5 BNB",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "0.090% / 0.100%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "0.06750% / 0.07500%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "Standard / 0.095%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "Standard / 0.07125%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          }
+        ]
+      },
+      {
+        "row_index": 4,
+        "cells": [
+          {
+            "text": "VIP 2",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "≥ 5,000,000 USD",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "and",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "≥ 25 BNB",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "0.080% / 0.100%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "0.06000% / 0.07500%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "Standard / 0.095%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "Standard / 0.07125%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          }
+        ]
+      },
+      {
+        "row_index": 5,
+        "cells": [
+          {
+            "text": "VIP 3",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "≥ 20,000,000 USD",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "and",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "≥ 100 BNB",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "0.040% / 0.060%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "0.03000% / 0.04500%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "Standard / 0.055%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "Standard / 0.04125%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          }
+        ]
+      },
+      {
+        "row_index": 6,
+        "cells": [
+          {
+            "text": "VIP 4",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "≥ 75,000,000 USD",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "and",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "≥ 500 BNB",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "0.040% / 0.052%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "0.03000% / 0.03900%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "Standard / 0.047%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "Standard / 0.03525%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          }
+        ]
+      },
+      {
+        "row_index": 7,
+        "cells": [
+          {
+            "text": "VIP 5",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "≥ 150,000,000 USD",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "and",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "≥ 1,000 BNB",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "0.025% / 0.031%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "0.01875% / 0.02325%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "Standard / 0.026%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "Standard / 0.01950%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          }
+        ]
+      },
+      {
+        "row_index": 8,
+        "cells": [
+          {
+            "text": "VIP 6",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "≥ 400,000,000 USD",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "and",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "≥ 1,750 BNB",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "0.020% / 0.029%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "0.01500% / 0.02175%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "Standard / 0.024%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "Standard / 0.01800%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          }
+        ]
+      },
+      {
+        "row_index": 9,
+        "cells": [
+          {
+            "text": "VIP 7",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "≥ 800,000,000 USD",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "and",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "≥ 3,000 BNB",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "0.019% / 0.028%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "0.01425% / 0.02100%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "Standard / 0.023%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "Standard / 0.01725%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          }
+        ]
+      },
+      {
+        "row_index": 10,
+        "cells": [
+          {
+            "text": "VIP 8",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "≥ 2,000,000,000 USD",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "and",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "≥ 4,500 BNB",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "0.016% / 0.025%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "0.01200% / 0.01875%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "Standard / 0.020%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "Standard / 0.01500%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          }
+        ]
+      },
+      {
+        "row_index": 11,
+        "cells": [
+          {
+            "text": "VIP 9",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "≥ 4,000,000,000 USD",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "and",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "≥ 5,500 BNB",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "0.011% / 0.023%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "0.00825% / 0.01725%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "Standard / 0.018%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          },
+          {
+            "text": "Standard / 0.01350%",
+            "rowspan": 1,
+            "colspan": 1,
+            "tag": "td"
+          }
+        ]
+      }
+    ]
+  }
+]

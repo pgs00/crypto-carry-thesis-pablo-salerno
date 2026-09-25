@@ -1,0 +1,91 @@
+Updates on Minimum Notional Value for BTCUSDT and BTCUSDC USDⓈ-M Perpetual Futures Contracts (2026-04-14) | Binance announcement,Binance news (https://www.binance.com/en-KZ/support/announcement/detail/10999fd17dc045de801c0c78ab29e6fc)
+citeturn9view2 [wordlim: 200] Crawled: 6 days ago; Content type: text/html; Source: open({"ref_id":"https://www.binance.com/en-KZ/support/announcement/detail/10999fd17dc045de801c0c78ab29e6fc","lineno":0}); Total lines: 152
+L0: cite0†Markets L1: 
+L2: Trade
+L3: 
+L4: cite1†Square L5: 
+L6: More
+L7: 
+L8: cite2†New Cryptocurrency Listing cite3†Latest Binance News cite4†Latest Activities cite5†Delisting cite6†Maintenance Updates L9: 
+L10: This article does not support your language.
+L11: # Updates on Minimum Notional Value for BTCUSDT and BTCUSDC USDⓈ-M Perpetual Futures Contracts (2026-04-14)
+L12: 
+L13: Published on 2026-04-09 06:14
+L14: 
+L15: This is a general Binance Exchange Notice. Products and services referred to here may not be available in your region.
+L16: 
+L17: Fellow Binancians,
+L18: 
+L19: In order to increase market liquidity and improve users’ trading experience, Binance will adjust the minimum notional value for orders of BTCUSDT and BTCUSDC USDⓈ-M Perpetual Futures Contracts at 2026-04-14 06:30 (UTC).
+L20:   * The adjustment will be completed within approximately 4 hours.
+L21: 
+L22:   * The adjustment will not impact USDⓈ-M Futures trading operations.
+L23: 
+L24:   * API users may use GET /fapi/v1/exchangeInfo to find the latest minimum notional value for orders of USDⓈ-M Perpetual Futures Contracts. For further details and updates, please refer to our full cite7†API Changelog†binance-docs.github.io .
+L25: 
+L26:   * The adjustment will not affect existing orders.
+L27: 
+L28: The specific adjustment details are as follows:
+L29: Contract Type  | Trading Pair  | Before Adjustment  | After Adjustment
+L30: USDⓈ-M Perpetual Futures Contract  | BTCUSDT  | 100 USDT  | 50 USDT
+L31: BTCUSDC  | 100 USDC  | 50 USDC
+L32: 
+L33: Notes:
+L34: 
+L35:   * This information is released as a Notice under Binance cite8†Exchange Rule 17.
+L36: 
+L37:   * Please refer to cite9†Trading Parameters for more details and adjust your trading strategy according to the aforementioned changes to avoid unnecessary impact on your trading.
+L38:   * There may be discrepancies between this original content in English and any translated versions. Please refer to the original English version for the most accurate information, in case any discrepancies arise.
+L39: 
+L40: Thank you for your support!
+L41: 
+L42: Binance Team
+L43: 
+L44: 2026-04-09
+L45: 
+L46: cite10†Trade on-the-go with Binance’s crypto trading app (iOS/Android)†binance.onelink.me L47: 
+L48: Find us on
+L49: 
+L50:   * cite11†Telegram†t.me L51: 
+L52:   * cite12†WhatsApp†whatsapp.com L53: 
+L54:   * cite13†X†twitter.com L55: 
+L56:   * cite14†Facebook†www.facebook.com L57:   * cite15†Instagram†www.instagram.com L58: 
+L59:   * cite16†Discord†discord.gg L60: 
+L61: Binance reserves the right in its sole discretion to amend or cancel this announcement at any time and for any reasons without prior notice.
+L62: 
+L63: Disclaimer: In compliance with MiCA requirements, from 2024-06-30, unauthorized stablecoins are subject to certain restrictions for EEA users. For more information, please click cite17†here .
+L64: Digital asset prices can be volatile. The value of your investment can go down or up and you may not get back the amount invested. You are solely responsible for your investment decisions and Binance is not liable for any losses you may incur. Futures trading, in particular, is subject to high market risk and price volatility. All of your Margin Balance may be liquidated in the event of adverse price movement. Past performance is not a reliable predictor of future performance.
+L65: Before trading, you should make an independent assessment of the appropriateness of the transaction in light of your own objectives and circumstances, including the risks and potential benefits. Consult your own advisers, where appropriate. This information should not be construed as financial or investment advice.To learn more about how to protect yourself, visit our cite18†Responsible Trading resource page†app.binance.com .
+L66: For more information, see our Terms of Use, Exchange Rules, Clearing Rules, Exchange Procedures, Clearing Procedures, relevant Contract Specifications and Risk Warning.
+L67: [Input: Search]
+L68: 
+L69: Register Now - Get up to 100 USDT in trading fee rebate (for verified users)
+L70: 
+L71: cite19†Register Now†accounts.binance.com L72: ## Latest Articles
+L73: 
+L74: cite20†NEAR Trading Tournament: Trade to Share Up to 400 BNB Token Vouchers L75: 
+L76: cite21†ZKC Trading Tournament: Trade to Share Up to 5,000,000 ZKC Token Vouchers L77: 
+L78: cite22†Binance Will Support the Western Digital (WDC) and NVIDIA (NVDA) Cash Dividend Distribution via bStocks L79: 
+L80: cite23†Binance Will Extend the Monitoring Tag to Include AVA, GNS, SCR & TOWNS on 2026-09-04 L81: 
+L82: cite24†SAHARA Trading Tournament: Trade to Share Up to 400 BNB Token Vouchers L83: 
+L84: ### Community
+L85: ### About Us
+L86: 
+L87:   * cite25†About L88:   * cite26†Careers L89:   * cite27†Announcements L90:   * cite28†News L91:   * cite29†Press L92:   * cite30†Legal L93:   * cite31†Terms and conditions (KZ) L94:   * cite32†Privacy L95:   * cite33†Building Trust L96:   * cite34†Blog L97:   * cite35†Community L98:   * cite36†Risk Warning L99:   * cite37†Downloads L100:   * cite38†Desktop Application L101:   * cite39†Platform Operating Rules L102: 
+L103: ### Products
+L104: 
+L105:   * cite40†Exchange L106:   * cite41†Buy Crypto L107:   * cite42†Card L108:   * cite43†Academy L109:   * cite44†Research L110:   * cite45†Charity†www.binance.charity L111: ### Business
+L112: 
+L113:   * cite46†Listing Application L114:   * cite47†Labs†labs.binance.com L115: 
+L116: ### Service
+L117: 
+L118:   * cite48†Affiliate L119:   * cite49†Referral L120:   * cite50†OTC & Execution Services L121:   * cite51†Historical Market Data L122:   * cite52†Proof of Reserves L123: 
+L124: ### Support
+L125: 
+L126:   * cite53†24/7 Chat Support L127:   * cite54†Support Center L128:   * cite55†Product Feedback & Suggestions L129:   * cite56†Fees L130:   * cite57†APIs L131:   * cite58†Binance Verify L132:   * cite59†Trading Parameters L133:   * cite60†Law Enforcement Requests L134: ### Learn
+L135: 
+L136:   * cite61†Learn & Earn L137:   * cite62†Browse Crypto Prices L138:   * cite63†Bitcoin Price L139:   * cite64†Ethereum Price L140:   * cite65†Browse Crypto Price Predictions L141:   * cite66†Bitcoin Price Prediction L142:   * cite67†Ethereum Price Prediction L143:   * cite68†Ethereum Upgrade (Pectra) L144:   * cite69†Buy Bitcoin L145:   * cite70†Buy BNB L146:   * cite71†Buy Ethereum L147: BN KZ Technologies limited (Binance Kazakhstan) is authorised by the financial regulator of the AIFC, Astana Financial Services Authority (“AFSA”), to conduct the activities of Operating Digital Asset Trading Platform, Dealing in Investments as Principal, Dealing in Investments as Agent, Advising on Investments, Arranging Deals in Investments, Providing Money Services and Providing Custody under the license No. AFSA-A-LA-2024-0028 in or from the AIFC.
+L148: Status of the licence and its validity may be verified at the AFSA website (www.afsa.kz).
+L149: Binance© 2026 Cookie Preferences
+L150: 
+L151: cite72†iframe†www.googletagmanager.com

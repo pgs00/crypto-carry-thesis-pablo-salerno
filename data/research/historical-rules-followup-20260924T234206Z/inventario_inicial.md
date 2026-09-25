@@ -1,0 +1,22 @@
+# Inventario previo a la nueva búsqueda
+
+Consulta local: 2026-09-24 UTC. Raíz `pgs00/crypto-carry-thesis-pablo-salerno`, rama `codex/crypto-carry`, HEAD `80feefc45872d2c48c33f3fbc3ebc9eb402eee6a`; estado inicial observado vacío. No se encontró AGENTS.md en la raíz, en sus ancestros ni entre las rutas enumeradas del repositorio. Se leyeron íntegros el encargo y los nueve documentos/JSON exigidos de docs/research, el manifiesto y las tres capturas, y los cuatro archivos del motor/metodología sólo como contexto. `models.py` está en `src/crypto_carry/models.py` y `data/prescribed.py` en `src/crypto_carry/data/prescribed.py`.
+
+| Hallazgo previo | Fuente / copia | Comprobación anterior y de esta ejecución | Qué demuestra | Qué falta |
+|---|---|---|---|---|
+| BTCUSDT spot sin comisión 08/07/2022 14:00–22/03/2023 00:00 UTC | historical_fees.md/json, S3/S5, anuncios 10435147… y be13a645…; sin HTML local en ese inventario | Lectura web anterior declarada; pendiente recuperar cuerpos en esta ejecución | Extremos de una promoción general, no tarifa ETHUSDT | Preservar las fuentes y revisar ediciones |
+| Spot Regular 0,1%, anclas 2021–2024 | historical_fees.md/json S1/S2/S6/S7; enlaces y transcripción | Lectura anterior declarada, sin originales verificables en ese paquete | Tabla ordinaria observada en anuncios de otros niveles | 2025–2026 y revisiones de listas promocionales |
+| Futures Regular USDT 0,04% | A1.html, captura 2023-05-31T22:47:44Z | SHA-256 y 846790 bytes coinciden; fila USDT y SSR $.pageData.redux.ssrStore.futureFee[level=0] revisados | Observación de tabla publicada, separada de BUSD y BNB | Fecha efectiva del cambio a 0,05% |
+| Ejemplos Futures 0,04% / 0,05% | A2/A3, capturas 2023-06-02 y 2024-02-20 | Ambos SHA-256 y tamaños coinciden; lectura completa y sección BTCUSDT identificada | Cambió la documentación educativa; cabeceras de publicación distintas | No determinan el corte operativo ni continuidad |
+| Exclusiones VIP1/COIN-M/BUSD/USDC/programas/ETHBUSD/BTCU | fees_followup_20260918.md/json | Inventario leído, no evidencia independiente | Riesgos de mezclar perfiles o mercados | Volver a abrir lo usado como respaldo nuevo |
+| Step Spot 2021, tick BTC Futures 2022, nocionales 2023 y 2026 | historical_market_rules.md/json | Eventos anteriores sin cuerpos locales en ese registro | Cambios parciales; algunas fechas son límites o rollouts | Flags MARKET, min/max qty y notional; continuidad |
+| Ocho tablas nuevas / 90 tramos de margen | historical_market_rules.json | Tabla JSON completa leída, deducciones explícitamente derivadas | Fechas anunciadas, tasas/caps y cohortes de algunos cambios | Tablas anteriores; cambio ETH cap 50000→300000; cadena completa y cum publicado |
+| Clearance 2020/2021 y explicaciones actuales | rules_followup_20260918.md/json, historical_market_rules.md/json | Lectura íntegra de antecedentes; imagen 2020 no guardada | Cambios preperíodo y semántica documental actual | Tasas/base/excepciones históricas 2022–2026; pista 6bd7… sin cuerpo |
+
+Los SHA heredados representan HTML decodificado y recodificado a UTF-8. La coincidencia valida sus bytes conservados; no prueba la interpretación ni que se preservaran bytes de transporte. `verificacion_antecedentes.json` registra las tres comparaciones.
+
+El seguimiento anterior declara inicialmente `raw_html_persisted=false`, pero un paso posterior creó A1/A2/A3 y el manifiesto. Se preservan ambas afirmaciones con su secuencia; prevalece la existencia comprobada, sin editar antecedentes.
+
+Se revisaron los índices docs/research/README.md y data/research/README.md. Hay trabajos vigentes de preparación, marks y sensibilidad de funding (19/20 de septiembre) y paquetes E3; se conservarán íntegros. No apareció otra carpeta historical-rules-followup al iniciar. `estado_inicial.json` enumera las carpetas y SHA-256 de 717 archivos versionados, además del índice Git. El status allí capturado incluye la carpeta nueva ya creada; la lectura Git anterior a crearla fue vacía.
+
+Limitaciones de representación leídas: RuleBook exige snapshots completos y números positivos para step/tick/min/max; no admite por separado LOT_SIZE/MARKET_LOT_SIZE, ceros deshabilitados, flags nocionales, cohortes de órdenes/posiciones ni máximo apalancamiento por tramo. Tier conserva floor/cap/rate/deduction. known_from se separa de valid_from; los hechos de investigación no se cargarán en RuleBook.

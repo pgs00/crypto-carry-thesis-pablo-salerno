@@ -1,0 +1,27 @@
+{
+  "generated_at_utc": "2026-09-25T00:19:07.693738Z",
+  "sources": 52,
+  "facts": 345,
+  "coverage_rows": 479,
+  "api_snapshots": [
+    "SPOTI22",
+    "SPOTI23",
+    "SPOTI25",
+    "FUTI22",
+    "FUTI22B",
+    "FUTI26",
+    "FUTI26B"
+  ],
+  "margin_tables": 16,
+  "margin_rows_before": 87,
+  "margin_rows_after": 90,
+  "status_counts": {
+    "derivado": 16,
+    "evento_respaldado": 16,
+    "fuera_de_alcance": 3,
+    "intervalo_respaldado": 1,
+    "observacion_puntual": 305,
+    "pendiente": 2,
+    "supuesto": 2
+  }
+}
