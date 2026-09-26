@@ -1,0 +1,155 @@
+{
+  "status": "passed",
+  "postprocessor_snapshots": [
+    {
+      "path": "scripts\\correct_rules_sensitivity_report.py",
+      "packaged_sha256": "82622f1afd380864aad277eea82d7e389d617a342b21707532243614249cd69f",
+      "live_sha256": "82622f1afd380864aad277eea82d7e389d617a342b21707532243614249cd69f",
+      "equal": true
+    },
+    {
+      "path": "scripts\\rules_sensitivity_correction_docs.py",
+      "packaged_sha256": "b1acda39b5292bbbb9c2e594f827908047b1f355260c5ff13966bbb91a386457",
+      "live_sha256": "b1acda39b5292bbbb9c2e594f827908047b1f355260c5ff13966bbb91a386457",
+      "equal": true
+    },
+    {
+      "path": "scripts\\rules_sensitivity_exposure.py",
+      "packaged_sha256": "7e6c258275154aca3d8bec5b0520a228567444a48a3cdad5e7243e3cac42c0e8",
+      "live_sha256": "7e6c258275154aca3d8bec5b0520a228567444a48a3cdad5e7243e3cac42c0e8",
+      "equal": true
+    },
+    {
+      "path": "scripts\\rules_sensitivity_h2.py",
+      "packaged_sha256": "d7bac31bc505b664a8adb4d207cbb1dbb2e806a9828692d9b804f0f6b6485886",
+      "live_sha256": "d7bac31bc505b664a8adb4d207cbb1dbb2e806a9828692d9b804f0f6b6485886",
+      "equal": true
+    },
+    {
+      "path": "scripts\\verify_rules_sensitivity_package.py",
+      "packaged_sha256": "6be1216cfd2f9509dd2aa8d4923f5660d48790ca3015ba2821db8c00965e4394",
+      "live_sha256": "6be1216cfd2f9509dd2aa8d4923f5660d48790ca3015ba2821db8c00965e4394",
+      "equal": true
+    },
+    {
+      "path": "scripts\\verify_rules_sensitivity_correction.py",
+      "packaged_sha256": "efb4ecf5b758d1a8cfd5a16fb3c8fd92c7fdde9fa60c7e1d6d467df192a648df",
+      "live_sha256": "efb4ecf5b758d1a8cfd5a16fb3c8fd92c7fdde9fa60c7e1d6d467df192a648df",
+      "equal": true
+    }
+  ],
+  "document_links": [
+    {
+      "document": "README.md",
+      "target": "comparacion/reporte.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "comparacion/antes_despues.csv",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "documentos/guia_metricas.md",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "antes_despues.csv",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "figuras/exposicion.png",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "../documentos/guia_metricas.md",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "episodio_2023_03_24.csv",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "h2.csv",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "h2_cambios.csv",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "preservacion_financiera.csv",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "preservacion_tablas.csv",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "h1_resumen.csv",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "h1_invariancia.csv",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "h3_diario.csv",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "h3_invariancia.csv",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "h3_regimen.csv",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "deltas.csv",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "../referencia_e3/",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "../procedencia.json",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "procedencia_corridas.csv",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "../verificacion_construccion.json",
+      "exists": true
+    },
+    {
+      "document": "comparacion/reporte.md",
+      "target": "../README.md",
+      "exists": true
+    }
+  ],
+  "package_files": 59,
+  "package_bytes": 31677318
+}

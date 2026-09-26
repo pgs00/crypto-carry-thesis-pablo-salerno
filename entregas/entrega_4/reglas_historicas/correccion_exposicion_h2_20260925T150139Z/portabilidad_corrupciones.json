@@ -1,0 +1,353 @@
+{
+  "started_at": "2026-09-26T20:45:30.808199+00:00",
+  "original_manifest_hashes": {
+    "correction": "e735207869c08bbd0b9b04818c8855ecd9576bd979d3127b5ff108f61d3843ce",
+    "parent": "77f1cfcaf4fb13044dbcb3b242a2eb19749cf7e88806db023a08bbe4ec272057"
+  },
+  "relocated_verification": {
+    "command": [
+      "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "C:\\Users\\pablo\\AppData\\Local\\Temp\\e4_rules_portability_ovfb4jh7\\correction relocated\\herramientas\\verify_rules_sensitivity_correction.py",
+      "--package",
+      "C:\\Users\\pablo\\AppData\\Local\\Temp\\e4_rules_portability_ovfb4jh7\\correction relocated",
+      "--parent",
+      "C:\\Users\\pablo\\AppData\\Local\\Temp\\e4_rules_portability_ovfb4jh7\\parent relocated"
+    ],
+    "cwd": "C:\\Users\\pablo\\AppData\\Local\\Temp\\e4_rules_portability_ovfb4jh7",
+    "exit_code": 0,
+    "elapsed_seconds": 36.39559620000364,
+    "result": {
+      "status": "passed",
+      "schema": "rules_sensitivity_correction_v2",
+      "members_checked": 57,
+      "parent_manifest_sha256": "77f1cfcaf4fb13044dbcb3b242a2eb19749cf7e88806db023a08bbe4ec272057",
+      "parent_verification": {
+        "members_checked": 1087,
+        "manifest_sha256": "77f1cfcaf4fb13044dbcb3b242a2eb19749cf7e88806db023a08bbe4ec272057",
+        "status": "passed",
+        "runs_checked": 12,
+        "run_artifacts_checked": 564,
+        "daily_reconciliations": 20448,
+        "period_reconciliations": 96,
+        "run_code_snapshot_hashes_checked": 456,
+        "code_provenance": "verified_against_packaged_snapshots",
+        "git_provenance": "not_checked_not_required",
+        "market_inputs": "recorded_hashes_not_rehashed_offline",
+        "engine_reexecution": false,
+        "package_read_only": true
+      },
+      "runs_checked": 12,
+      "h2_rows_checked": 48,
+      "intervals_checked": 45803,
+      "exposure_summaries_checked": 288,
+      "financial_rows_unchanged": 96,
+      "base_e3_equivalence": [
+        {
+          "strategy": "conditional",
+          "intervals_checked": 3710,
+          "summaries_checked": 9,
+          "episode_rows_checked": 3,
+          "exact": true,
+          "terminal_difference_ns": 0
+        },
+        {
+          "strategy": "permanent",
+          "intervals_checked": 3913,
+          "summaries_checked": 9,
+          "episode_rows_checked": 3,
+          "exact": true,
+          "terminal_difference_ns": 0
+        }
+      ],
+      "base_e3_percent_rounded": {
+        "conditional": "28.32",
+        "permanent": "98.21"
+      },
+      "source_files_checked": 1089,
+      "run_provenance_checked": 12,
+      "package_read_only": true,
+      "parent_read_only": true,
+      "engine_reexecution": false,
+      "dependency": "explicit parent package and PyArrow required; not self-contained"
+    },
+    "stderr": "",
+    "correction_bytes_unchanged": true
+  },
+  "semantic_corruptions": [
+    {
+      "name": "interval_boundary",
+      "detected": true,
+      "mutation": {
+        "table": "exposicion_intervalos.csv",
+        "column": "end_ns",
+        "before": "1641081599999999999",
+        "after": "1641081599999999998"
+      },
+      "test_manifest_rehashed": true,
+      "expected_error_contains": "interval",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "C:\\Users\\pablo\\AppData\\Local\\Temp\\e4_rules_portability_ovfb4jh7\\interval_boundary\\herramientas\\verify_rules_sensitivity_correction.py",
+        "--package",
+        "C:\\Users\\pablo\\AppData\\Local\\Temp\\e4_rules_portability_ovfb4jh7\\interval_boundary",
+        "--parent",
+        "C:\\Users\\pablo\\AppData\\Local\\Temp\\e4_rules_portability_ovfb4jh7\\parent relocated"
+      ],
+      "cwd": "C:\\Users\\pablo\\AppData\\Local\\Temp\\e4_rules_portability_ovfb4jh7",
+      "exit_code": 1,
+      "elapsed_seconds": 24.034704200006672,
+      "result": {
+        "status": "failed",
+        "error": "exposure interval boundary/coverage mismatch",
+        "package_read_only": true,
+        "parent_read_only": true
+      },
+      "stderr": ""
+    },
+    {
+      "name": "interval_classification",
+      "detected": true,
+      "mutation": {
+        "table": "exposicion_intervalos.csv",
+        "column": "exposure",
+        "before": "dust",
+        "after": "unhedged"
+      },
+      "test_manifest_rehashed": true,
+      "expected_error_contains": "interval",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "C:\\Users\\pablo\\AppData\\Local\\Temp\\e4_rules_portability_ovfb4jh7\\interval_classification\\herramientas\\verify_rules_sensitivity_correction.py",
+        "--package",
+        "C:\\Users\\pablo\\AppData\\Local\\Temp\\e4_rules_portability_ovfb4jh7\\interval_classification",
+        "--parent",
+        "C:\\Users\\pablo\\AppData\\Local\\Temp\\e4_rules_portability_ovfb4jh7\\parent relocated"
+      ],
+      "cwd": "C:\\Users\\pablo\\AppData\\Local\\Temp\\e4_rules_portability_ovfb4jh7",
+      "exit_code": 1,
+      "elapsed_seconds": 24.00403149999329,
+      "result": {
+        "status": "failed",
+        "error": "interval ('ETHUSDT', 1673683440000000000, 1673740799999999999)/exposure: 'unhedged' != 'dust'",
+        "package_read_only": true,
+        "parent_read_only": true
+      },
+      "stderr": ""
+    },
+    {
+      "name": "interval_duration",
+      "detected": true,
+      "mutation": {
+        "table": "exposicion_intervalos.csv",
+        "column": "seconds",
+        "before": "86399.999999999",
+        "after": "86400.999999999"
+      },
+      "test_manifest_rehashed": true,
+      "expected_error_contains": "interval",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "C:\\Users\\pablo\\AppData\\Local\\Temp\\e4_rules_portability_ovfb4jh7\\interval_duration\\herramientas\\verify_rules_sensitivity_correction.py",
+        "--package",
+        "C:\\Users\\pablo\\AppData\\Local\\Temp\\e4_rules_portability_ovfb4jh7\\interval_duration",
+        "--parent",
+        "C:\\Users\\pablo\\AppData\\Local\\Temp\\e4_rules_portability_ovfb4jh7\\parent relocated"
+      ],
+      "cwd": "C:\\Users\\pablo\\AppData\\Local\\Temp\\e4_rules_portability_ovfb4jh7",
+      "exit_code": 1,
+      "elapsed_seconds": 23.470386400003918,
+      "result": {
+        "status": "failed",
+        "error": "interval ('BTCUSDT', 1640995200000000000, 1641081599999999999)/seconds: '86400.999999999' != Decimal('86399.999999999')",
+        "package_read_only": true,
+        "parent_read_only": true
+      },
+      "stderr": ""
+    },
+    {
+      "name": "summary_duration",
+      "detected": true,
+      "mutation": {
+        "table": "exposicion_periodo.csv",
+        "column": "invested_seconds",
+        "before": "23980380.000000000",
+        "after": "23980381.000000000"
+      },
+      "test_manifest_rehashed": true,
+      "expected_error_contains": "summary",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "C:\\Users\\pablo\\AppData\\Local\\Temp\\e4_rules_portability_ovfb4jh7\\summary_duration\\herramientas\\verify_rules_sensitivity_correction.py",
+        "--package",
+        "C:\\Users\\pablo\\AppData\\Local\\Temp\\e4_rules_portability_ovfb4jh7\\summary_duration",
+        "--parent",
+        "C:\\Users\\pablo\\AppData\\Local\\Temp\\e4_rules_portability_ovfb4jh7\\parent relocated"
+      ],
+      "cwd": "C:\\Users\\pablo\\AppData\\Local\\Temp\\e4_rules_portability_ovfb4jh7",
+      "exit_code": 1,
+      "elapsed_seconds": 23.61831130000064,
+      "result": {
+        "status": "failed",
+        "error": "summary ('full', 'BTCUSDT')/invested_seconds: '23980381.000000000' != Decimal('23980380.000000000')",
+        "package_read_only": true,
+        "parent_read_only": true
+      },
+      "stderr": ""
+    },
+    {
+      "name": "h2_condition",
+      "detected": true,
+      "mutation": {
+        "table": "h2.csv",
+        "column": "cagr_positive",
+        "before": "False",
+        "after": "True"
+      },
+      "test_manifest_rehashed": true,
+      "expected_error_contains": "cagr_positive",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "C:\\Users\\pablo\\AppData\\Local\\Temp\\e4_rules_portability_ovfb4jh7\\h2_condition\\herramientas\\verify_rules_sensitivity_correction.py",
+        "--package",
+        "C:\\Users\\pablo\\AppData\\Local\\Temp\\e4_rules_portability_ovfb4jh7\\h2_condition",
+        "--parent",
+        "C:\\Users\\pablo\\AppData\\Local\\Temp\\e4_rules_portability_ovfb4jh7\\parent relocated"
+      ],
+      "cwd": "C:\\Users\\pablo\\AppData\\Local\\Temp\\e4_rules_portability_ovfb4jh7",
+      "exit_code": 1,
+      "elapsed_seconds": 23.23165859999426,
+      "result": {
+        "status": "failed",
+        "error": "H2 cagr_positive: 'True' != False",
+        "package_read_only": true,
+        "parent_read_only": true
+      },
+      "stderr": ""
+    },
+    {
+      "name": "comparison_number",
+      "detected": true,
+      "mutation": {
+        "table": "antes_despues.csv",
+        "column": "invested_fraction",
+        "before": "0.2831784689619196661450182577",
+        "after": "1.283178468961919666145018258"
+      },
+      "test_manifest_rehashed": true,
+      "expected_error_contains": "before/after",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "C:\\Users\\pablo\\AppData\\Local\\Temp\\e4_rules_portability_ovfb4jh7\\comparison_number\\herramientas\\verify_rules_sensitivity_correction.py",
+        "--package",
+        "C:\\Users\\pablo\\AppData\\Local\\Temp\\e4_rules_portability_ovfb4jh7\\comparison_number",
+        "--parent",
+        "C:\\Users\\pablo\\AppData\\Local\\Temp\\e4_rules_portability_ovfb4jh7\\parent relocated"
+      ],
+      "cwd": "C:\\Users\\pablo\\AppData\\Local\\Temp\\e4_rules_portability_ovfb4jh7",
+      "exit_code": 1,
+      "elapsed_seconds": 26.951444299993454,
+      "result": {
+        "status": "failed",
+        "error": "before/after invested_fraction: '1.283178468961919666145018258' != Decimal('0.2831784689619196661450182577')",
+        "package_read_only": true,
+        "parent_read_only": true
+      },
+      "stderr": ""
+    },
+    {
+      "name": "figure_source_number",
+      "detected": true,
+      "mutation": {
+        "table": "figuras/exposicion_datos.csv",
+        "column": "raw_invested_fraction",
+        "before": "0.7779721733176838810641627543",
+        "after": "1.777972173317683881064162754"
+      },
+      "test_manifest_rehashed": true,
+      "expected_error_contains": "figure",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "C:\\Users\\pablo\\AppData\\Local\\Temp\\e4_rules_portability_ovfb4jh7\\figure_source_number\\herramientas\\verify_rules_sensitivity_correction.py",
+        "--package",
+        "C:\\Users\\pablo\\AppData\\Local\\Temp\\e4_rules_portability_ovfb4jh7\\figure_source_number",
+        "--parent",
+        "C:\\Users\\pablo\\AppData\\Local\\Temp\\e4_rules_portability_ovfb4jh7\\parent relocated"
+      ],
+      "cwd": "C:\\Users\\pablo\\AppData\\Local\\Temp\\e4_rules_portability_ovfb4jh7",
+      "exit_code": 1,
+      "elapsed_seconds": 27.083951900000102,
+      "result": {
+        "status": "failed",
+        "error": "figure source data differs from full-period comparison",
+        "package_read_only": true,
+        "parent_read_only": true
+      },
+      "stderr": ""
+    },
+    {
+      "name": "financial_value",
+      "detected": true,
+      "mutation": {
+        "table": "metricas_cartera_periodo.csv",
+        "column": "final_equity_usdt",
+        "before": "10785.76304964716593690000000",
+        "after": "10786.76304964716593690000000"
+      },
+      "test_manifest_rehashed": true,
+      "expected_error_contains": "financial preservation",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "C:\\Users\\pablo\\AppData\\Local\\Temp\\e4_rules_portability_ovfb4jh7\\financial_value\\herramientas\\verify_rules_sensitivity_correction.py",
+        "--package",
+        "C:\\Users\\pablo\\AppData\\Local\\Temp\\e4_rules_portability_ovfb4jh7\\financial_value",
+        "--parent",
+        "C:\\Users\\pablo\\AppData\\Local\\Temp\\e4_rules_portability_ovfb4jh7\\parent relocated"
+      ],
+      "cwd": "C:\\Users\\pablo\\AppData\\Local\\Temp\\e4_rules_portability_ovfb4jh7",
+      "exit_code": 1,
+      "elapsed_seconds": 23.153212600009283,
+      "result": {
+        "status": "failed",
+        "error": "financial preservation ('BASE_E3', 'conditional', 'run_ad71d751b20623006c195ff3', 'full')/final_equity_usdt",
+        "package_read_only": true,
+        "parent_read_only": true
+      },
+      "stderr": ""
+    }
+  ],
+  "temporary_copies_removed": true,
+  "original_manifest_hashes_after": {
+    "correction": "e735207869c08bbd0b9b04818c8855ecd9576bd979d3127b5ff108f61d3843ce",
+    "parent": "77f1cfcaf4fb13044dbcb3b242a2eb19749cf7e88806db023a08bbe4ec272057"
+  },
+  "original_manifests_unchanged": true,
+  "status": "passed",
+  "ended_at": "2026-09-26T20:47:50.127262+00:00"
+}

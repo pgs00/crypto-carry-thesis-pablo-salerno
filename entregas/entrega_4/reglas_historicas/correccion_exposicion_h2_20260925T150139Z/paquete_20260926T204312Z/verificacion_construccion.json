@@ -1,0 +1,42 @@
+{
+  "base_e3_equivalence": [
+    {
+      "exact": true,
+      "intervals_checked": 3710,
+      "strategy": "conditional",
+      "summaries_checked": 9,
+      "terminal_difference_ns": 0
+    },
+    {
+      "exact": true,
+      "intervals_checked": 3913,
+      "strategy": "permanent",
+      "summaries_checked": 9,
+      "terminal_difference_ns": 0
+    }
+  ],
+  "engine_reexecution": false,
+  "financial_values_unchanged": 5568,
+  "h2_counts": {
+    "no_concluyente": 5,
+    "no_favorable": 43
+  },
+  "h2_verdicts_changed": 0,
+  "parent_original_scope": {
+    "code_provenance": "verified_against_packaged_snapshots",
+    "daily_reconciliations": 20448,
+    "engine_reexecution": false,
+    "git_provenance": "not_checked_not_required",
+    "manifest_sha256": "77f1cfcaf4fb13044dbcb3b242a2eb19749cf7e88806db023a08bbe4ec272057",
+    "market_inputs": "recorded_hashes_not_rehashed_offline",
+    "members_checked": 1087,
+    "package_read_only": true,
+    "period_reconciliations": 96,
+    "run_artifacts_checked": 564,
+    "run_code_snapshot_hashes_checked": 456,
+    "runs_checked": 12,
+    "status": "passed"
+  },
+  "preserved_tables": 12,
+  "sources_read_only": true
+}

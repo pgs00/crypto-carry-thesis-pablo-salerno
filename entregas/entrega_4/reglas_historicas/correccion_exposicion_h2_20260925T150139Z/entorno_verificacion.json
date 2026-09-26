@@ -1,0 +1,15 @@
+{
+  "checked_at": "2026-09-26T20:48:32.497673+00:00",
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "pyarrow": "25.0.1",
+    "matplotlib": "3.11.2",
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "pytest": "9.1.1",
+    "ruff": "0.16.8"
+  },
+  "scope": "Postprocessing and verification environment; original run dependency identities remain in parent manifests"
+}

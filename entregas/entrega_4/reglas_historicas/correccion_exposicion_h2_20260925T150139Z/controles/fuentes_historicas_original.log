@@ -1,0 +1,21 @@
+{
+  "schema": "historical_rules_publication_v1",
+  "checked_at_utc": "2026-09-25T15:09:32.837420+00:00",
+  "root": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\evidencia_historica",
+  "evidence": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\evidencia_historica\\data\\research\\historical-rules-followup-20260924T234206Z",
+  "documentary_integrity": {
+    "passed": false
+  },
+  "provenance": {
+    "git_status": "unchecked"
+  },
+  "original_session_audit": {
+    "reproduced": false
+  },
+  "negative_tests": [],
+  "errors": [
+    "VerificationError: unsafe_temp_dir: C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\$env:TEMP; use an existing directory outside evidence"
+  ],
+  "interpretation_limit": "Hashes and documentary checks do not certify first publication or historical continuity. The original physical Git index is not reconstructed.",
+  "passed": false
+}

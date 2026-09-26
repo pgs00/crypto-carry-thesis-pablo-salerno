@@ -1,0 +1,10 @@
+Relocated correction AND parent: passed, no Git or source-root dependency
+interval_classification: detected
+interval_boundary: detected
+summary_duration: detected
+interval_duration: detected
+h2_condition: detected
+comparison_number: detected
+financial_value: detected
+figure_source_number: detected
+{"status": "passed", "corruption_cases": 8, "output": "entregas\\entrega_4\\reglas_historicas\\correccion_exposicion_h2_20260925T150139Z\\portabilidad_corrupciones.json"}

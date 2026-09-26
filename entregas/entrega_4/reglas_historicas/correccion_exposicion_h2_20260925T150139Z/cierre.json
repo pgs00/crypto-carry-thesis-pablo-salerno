@@ -1,0 +1,407 @@
+{
+  "closed_at": "2026-09-26T20:53:30.531060+00:00",
+  "status": "passed",
+  "checks": {
+    "document_links": true,
+    "index_preserved": true,
+    "manifest_preserved": true,
+    "final_verification": true,
+    "relocation_and_corruptions": true
+  },
+  "document_links": [
+    {
+      "document": "README.md",
+      "target": "paquete_20260926T204312Z/comparacion/reporte.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "paquete_20260926T204312Z/comparacion/antes_despues.csv",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "paquete_20260926T204312Z/comparacion/exposicion_periodo.csv",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "paquete_20260926T204312Z/comparacion/exposicion_intervalos.csv",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "paquete_20260926T204312Z/comparacion/h2.csv",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "paquete_20260926T204312Z/comparacion/h2_cambios.csv",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "paquete_20260926T204312Z/documentos/guia_metricas.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "paquete_20260926T204312Z/README.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "paquete_20260926T204312Z/procedencia.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "paquete_20260926T204312Z/manifiesto_paquete.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "controles/suite_completa_final.log",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "controles/ruff_final.log",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "verificacion_final.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "portabilidad_corrupciones.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "controles/e3_publicacion_alcance_correcto.log",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "controles/e3_paquete_original.log",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "controles/e3_archivo_dependencias_correctas.log",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "controles/padre_original.log",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "controles/fuentes_historicas_ruta_correcta.log",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "preservacion_final.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "revision_independiente.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "auditoria_linaje/linaje_exposicion.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "revision_producto_final.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "entorno_verificacion.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "COMANDOS_Y_VERIFICACIONES.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "control_historico_alcance.json",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/e3_publicacion.json",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/e3_publicacion.log",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/padre_original.json",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/padre_original.log",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/fuentes_historicas_original.json",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/fuentes_historicas_original.log",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/fuentes_historicas_ruta_correcta.json",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/fuentes_historicas_ruta_correcta.log",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/e3_paquete_original.json",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/e3_paquete_original.log",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/e3_publicacion_alcance_correcto.json",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/e3_publicacion_alcance_correcto.log",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/e3_archivo_original.json",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/e3_archivo_original.log",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/red_constructor.json",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/red_constructor.log",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/green_constructor_helpers.json",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/green_constructor_helpers.log",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/red_destino_sellado.json",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/red_destino_sellado.log",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/green_destino_sellado.json",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/green_destino_sellado.log",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/e3_archivo_dependencias_correctas.json",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/e3_archivo_dependencias_correctas.log",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/preservacion_previa_cierre.json",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/preservacion_previa_cierre.log",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/construccion_previa.json",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/construccion_previa.log",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/verificacion_previa_integral.json",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/verificacion_previa_integral.log",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/suite_completa.json",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/suite_completa.log",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/red_carga_verificador_sin_cache.json",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/red_carga_verificador_sin_cache.log",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/green_carga_verificador_sin_cache.json",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/green_carga_verificador_sin_cache.log",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/ruff_final.json",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/ruff_final.log",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/suite_completa_final.json",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/suite_completa_final.log",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/construccion_final.json",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/construccion_final.log",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/verificacion_final.json",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/verificacion_final.log",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/portabilidad_corrupciones.json",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/portabilidad_corrupciones.log",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/preservacion_final.json",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "controles/preservacion_final.log",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "auditoria_linaje/linaje_exposicion.md",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "auditoria_h2/README.md",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "revision_independiente.md",
+      "exists": true
+    },
+    {
+      "document": "COMANDOS_Y_VERIFICACIONES.md",
+      "target": "portabilidad_corrupciones.json",
+      "exists": true
+    }
+  ],
+  "manifest_sha256": "e735207869c08bbd0b9b04818c8855ecd9576bd979d3127b5ff108f61d3843ce",
+  "index_sha256": "94fc1341d4df92c9f0dd437a55dc70ac40a7511fe7511a4e6c093f937d970383",
+  "staged_changes": "",
+  "new_product": "entregas/entrega_4/reglas_historicas/correccion_exposicion_h2_20260925T150139Z/paquete_20260926T204312Z"
+}

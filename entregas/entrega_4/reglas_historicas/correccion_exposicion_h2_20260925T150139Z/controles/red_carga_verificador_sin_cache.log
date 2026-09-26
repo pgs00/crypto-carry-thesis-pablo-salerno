@@ -1,0 +1,43 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+________ test_generic_v2_entrypoint_is_readonly_even_without_python_B _________
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-357/test_generic_v2_entrypoint_is_0')
+
+    def test_generic_v2_entrypoint_is_readonly_even_without_python_B(tmp_path):
+        import shutil
+        import subprocess
+        import sys
+        from pathlib import Path
+    
+        package = tmp_path / "invalid sealed fixture"
+        tools = package / "herramientas"
+        tools.mkdir(parents=True)
+        source = Path(__file__).resolve().parents[2] / "scripts"
+        for name in ("verify_rules_sensitivity_package.py", "verify_rules_sensitivity_correction.py",
+                     "rules_sensitivity_h2.py"):
+            shutil.copyfile(source / name, tools / name)
+        (package / "manifiesto_paquete.json").write_text(
+            '{"schema": "rules_sensitivity_correction_v2"}', encoding="utf-8")
+        before = {p.relative_to(package): p.read_bytes() for p in package.rglob("*") if p.is_file()}
+        result = subprocess.run(
+            [sys.executable, str(tools / "verify_rules_sensitivity_package.py"), "--package",
+             str(package), "--parent", str(tmp_path / "missing parent")],
+            capture_output=True, text=True, encoding="utf-8", cwd=tmp_path)
+        assert result.returncode == 1  # Invalid fixture must fail without modifying evidence.
+>       assert before == {p.relative_to(package): p.read_bytes() for p in package.rglob("*") if p.is_file()}
+E       AssertionError: assert {WindowsPath(...(main())\r\n'} == {WindowsPath(...())\r\n', ...}
+E         
+E         Omitting 4 identical items, use -vv to show
+E         Right contains 1 more item:
+E         {WindowsPath('herramientas/__pycache__/verify_rules_sensitivity_correction.cpython-314.pyc'): b'+\x0e\r\n'
+E                                                                                                       b'\x00\x00\x00\x00'
+E                                                                                                       b'\x91-\xb8j'
+E                                                                                                       b'\xa5\x98\x00\x00'...
+E         
+E         ...Full output truncated (14810 lines hidden), use '-vv' to show
+
+tests\unit\test_rules_sensitivity_correction_builder.py:194: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/unit/test_rules_sensitivity_correction_builder.py::test_generic_v2_entrypoint_is_readonly_even_without_python_B
+1 failed in 0.49s

@@ -1,0 +1,21 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "entregas/entrega_4/reglas_historicas/correccion_exposicion_h2_20260925T150139Z/paquete_20260926T204312Z/herramientas/verify_rules_sensitivity_package.py",
+    "--package",
+    "entregas/entrega_4/reglas_historicas/correccion_exposicion_h2_20260925T150139Z/paquete_20260926T204312Z",
+    "--parent",
+    "entregas/entrega_4/reglas_historicas/20260925T005436Z",
+    "--output",
+    "entregas/entrega_4/reglas_historicas/correccion_exposicion_h2_20260925T150139Z/verificacion_final.json"
+  ],
+  "cwd": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting",
+  "started_at": "2026-09-26T20:45:30.659041+00:00",
+  "ended_at": "2026-09-26T20:45:59.066352+00:00",
+  "elapsed_seconds": 28.407311,
+  "exit_code": 0,
+  "log": "verificacion_final.log"
+}

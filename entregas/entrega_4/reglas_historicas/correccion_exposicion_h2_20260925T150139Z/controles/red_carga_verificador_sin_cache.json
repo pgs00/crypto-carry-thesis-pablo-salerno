@@ -1,0 +1,16 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-B",
+    "-m",
+    "pytest",
+    "tests/unit/test_rules_sensitivity_correction_builder.py::test_generic_v2_entrypoint_is_readonly_even_without_python_B",
+    "-q"
+  ],
+  "cwd": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting",
+  "started_at": "2026-09-26T20:39:44.687781+00:00",
+  "ended_at": "2026-09-26T20:39:45.716986+00:00",
+  "elapsed_seconds": 1.029205,
+  "exit_code": 1,
+  "log": "red_carga_verificador_sin_cache.log"
+}

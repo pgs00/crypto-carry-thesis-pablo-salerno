@@ -1,0 +1,92 @@
+FFFF                                                                     [100%]
+================================== FAILURES ===================================
+_______________ test_destination_cannot_replace_or_enter_source _______________
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-333/test_destination_cannot_replac0')
+
+    def test_destination_cannot_replace_or_enter_source(tmp_path):
+        source = tmp_path / "sealed"
+        source.mkdir()
+        protected = source / "evidence.txt"
+        protected.write_bytes(b"sealed bytes")
+        with pytest.raises(ValueError, match="source|parent|sealed"):
+>           builder().validate_destination(source, source / "correction")
+            ^^^^^^^^^
+
+tests\unit\test_rules_sensitivity_correction_builder.py:20: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def builder():
+>       from scripts import correct_rules_sensitivity_report
+E       ImportError: cannot import name 'correct_rules_sensitivity_report' from 'scripts' (unknown location)
+
+tests\unit\test_rules_sensitivity_correction_builder.py:9: ImportError
+_________ test_only_exposure_changes_financial_precision_is_preserved _________
+
+    def test_only_exposure_changes_financial_precision_is_preserved():
+        original = dict(scenario="BASE_E3", strategy="conditional", run_id="same",
+                        period="full", cagr="-0.01000000000000000003", sharpe="-0.5",
+                        final_equity_usdt="99.0000000000000000001", coverage_complete="True",
+                        capital_utilization_daily_mean="0.01234567890123456789",
+                        invested_seconds="9", unhedged_seconds="8", invested_fraction="0.9")
+        summary = dict(scenario="BASE_E3", strategy="conditional", run_id="same",
+                       period="full", symbol="PORTFOLIO", invested_seconds=D(2),
+                       unhedged_seconds=D(1), invested_fraction=D("0.2"),
+                       raw_invested_seconds=D(9), dust_only_seconds=D(7))
+>       corrected = builder().correct_metrics([original], [summary])[0]
+                    ^^^^^^^^^
+
+tests\unit\test_rules_sensitivity_correction_builder.py:42: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def builder():
+>       from scripts import correct_rules_sensitivity_report
+E       ImportError: cannot import name 'correct_rules_sensitivity_report' from 'scripts' (unknown location)
+
+tests\unit\test_rules_sensitivity_correction_builder.py:9: ImportError
+___________ test_metrics_reject_duplicate_and_missing_exposure_rows ___________
+
+    def test_metrics_reject_duplicate_and_missing_exposure_rows():
+        row = dict(scenario="BASE_E3", strategy="conditional", run_id="a", period="full")
+        exposure = dict(row, symbol="PORTFOLIO", invested_seconds=D(1))
+        with pytest.raises(ValueError, match="[Dd]uplicate"):
+>           builder().correct_metrics([row], [exposure, exposure])
+            ^^^^^^^^^
+
+tests\unit\test_rules_sensitivity_correction_builder.py:57: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def builder():
+>       from scripts import correct_rules_sensitivity_report
+E       ImportError: cannot import name 'correct_rules_sensitivity_report' from 'scripts' (unknown location)
+
+tests\unit\test_rules_sensitivity_correction_builder.py:9: ImportError
+_____ test_deltas_preserve_economic_values_and_correct_operational_values _____
+
+    def test_deltas_preserve_economic_values_and_correct_operational_values():
+        rows = [dict(scenario=s, strategy="conditional", run_id=r, period="full",
+                     invested_seconds=D(seconds), net_pnl_usdt=pnl)
+                for s, r, seconds, pnl in (("BASE_E3", "b", 4, "10.1234567890123456789"),
+                                           ("FUT4_REALIZADA", "f", 6, "11.1234567890123456789"))]
+        common = dict(scenario="FUT4_REALIZADA", comparator="BASE_E3", strategy="conditional",
+                      period="full", run_id="f", comparator_run_id="b", reason="")
+        old = [dict(common, metric="net_pnl_usdt", value="11.1234567890123456789",
+                    comparator_value="10.1234567890123456789", delta="1.0000000000000000000"),
+               dict(common, metric="invested_seconds", value="10", comparator_value="10", delta="0")]
+>       actual = builder().correct_deltas(old, rows)
+                 ^^^^^^^^^
+
+tests\unit\test_rules_sensitivity_correction_builder.py:74: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def builder():
+>       from scripts import correct_rules_sensitivity_report
+E       ImportError: cannot import name 'correct_rules_sensitivity_report' from 'scripts' (unknown location)
+
+tests\unit\test_rules_sensitivity_correction_builder.py:9: ImportError
+=========================== short test summary info ===========================
+FAILED tests/unit/test_rules_sensitivity_correction_builder.py::test_destination_cannot_replace_or_enter_source
+FAILED tests/unit/test_rules_sensitivity_correction_builder.py::test_only_exposure_changes_financial_precision_is_preserved
+FAILED tests/unit/test_rules_sensitivity_correction_builder.py::test_metrics_reject_duplicate_and_missing_exposure_rows
+FAILED tests/unit/test_rules_sensitivity_correction_builder.py::test_deltas_preserve_economic_values_and_correct_operational_values
+4 failed in 0.35s

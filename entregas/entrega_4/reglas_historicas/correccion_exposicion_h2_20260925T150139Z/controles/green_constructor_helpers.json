@@ -1,0 +1,16 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-B",
+    "-m",
+    "pytest",
+    "tests/unit/test_rules_sensitivity_correction_builder.py",
+    "-q"
+  ],
+  "cwd": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting",
+  "started_at": "2026-09-25T15:14:35.945720+00:00",
+  "ended_at": "2026-09-25T15:14:36.549513+00:00",
+  "elapsed_seconds": 0.603793,
+  "exit_code": 0,
+  "log": "green_constructor_helpers.log"
+}

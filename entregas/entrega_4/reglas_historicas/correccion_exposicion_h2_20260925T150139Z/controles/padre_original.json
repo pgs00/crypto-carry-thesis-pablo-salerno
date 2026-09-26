@@ -1,0 +1,17 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-I",
+    "-S",
+    "-B",
+    "entregas/entrega_4/reglas_historicas/20260925T005436Z/herramientas/verify_rules_sensitivity_package.py",
+    "--package",
+    "entregas/entrega_4/reglas_historicas/20260925T005436Z"
+  ],
+  "cwd": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting",
+  "started_at": "2026-09-25T15:09:32.707152+00:00",
+  "ended_at": "2026-09-25T15:09:52.692161+00:00",
+  "elapsed_seconds": 19.985009,
+  "exit_code": 0,
+  "log": "padre_original.log"
+}

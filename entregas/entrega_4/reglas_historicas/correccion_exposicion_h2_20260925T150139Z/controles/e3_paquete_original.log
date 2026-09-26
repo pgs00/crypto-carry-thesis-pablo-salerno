@@ -1,0 +1,10 @@
+{
+  "status": "verified",
+  "files": 120,
+  "valid_local_links": 23,
+  "daily_financial_rows": 3408,
+  "h1_observations": 10224,
+  "h3_asset_days": 3408,
+  "h3_joint_days": 1704,
+  "scope": "ZIP contents, paired H1 labels and MAE, H3 aggregates, daily/regime accounting; original market files verified separately"
+}

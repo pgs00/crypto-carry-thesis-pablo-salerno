@@ -1,0 +1,21 @@
+.F...                                                                    [100%]
+================================== FAILURES ===================================
+____________ test_destination_cannot_enter_another_sealed_package _____________
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-340/test_destination_cannot_enter_0')
+
+    def test_destination_cannot_enter_another_sealed_package(tmp_path):
+        source = tmp_path / "parent"
+        source.mkdir()
+        e3 = tmp_path / "other sealed evidence"
+        e3.mkdir()
+        (e3 / "manifest.json").write_text("{}", encoding="utf-8")
+        (e3 / "manifest.sha256").write_text("preserved", encoding="ascii")
+>       with pytest.raises(ValueError, match="sealed"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+
+tests\unit\test_rules_sensitivity_correction_builder.py:39: Failed
+=========================== short test summary info ===========================
+FAILED tests/unit/test_rules_sensitivity_correction_builder.py::test_destination_cannot_enter_another_sealed_package
+1 failed, 4 passed in 0.16s

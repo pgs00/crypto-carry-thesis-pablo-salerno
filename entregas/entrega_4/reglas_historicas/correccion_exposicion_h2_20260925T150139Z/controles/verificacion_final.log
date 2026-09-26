@@ -1,0 +1,54 @@
+{
+  "status": "passed",
+  "schema": "rules_sensitivity_correction_v2",
+  "members_checked": 57,
+  "parent_manifest_sha256": "77f1cfcaf4fb13044dbcb3b242a2eb19749cf7e88806db023a08bbe4ec272057",
+  "parent_verification": {
+    "members_checked": 1087,
+    "manifest_sha256": "77f1cfcaf4fb13044dbcb3b242a2eb19749cf7e88806db023a08bbe4ec272057",
+    "status": "passed",
+    "runs_checked": 12,
+    "run_artifacts_checked": 564,
+    "daily_reconciliations": 20448,
+    "period_reconciliations": 96,
+    "run_code_snapshot_hashes_checked": 456,
+    "code_provenance": "verified_against_packaged_snapshots",
+    "git_provenance": "not_checked_not_required",
+    "market_inputs": "recorded_hashes_not_rehashed_offline",
+    "engine_reexecution": false,
+    "package_read_only": true
+  },
+  "runs_checked": 12,
+  "h2_rows_checked": 48,
+  "intervals_checked": 45803,
+  "exposure_summaries_checked": 288,
+  "financial_rows_unchanged": 96,
+  "base_e3_equivalence": [
+    {
+      "strategy": "conditional",
+      "intervals_checked": 3710,
+      "summaries_checked": 9,
+      "episode_rows_checked": 3,
+      "exact": true,
+      "terminal_difference_ns": 0
+    },
+    {
+      "strategy": "permanent",
+      "intervals_checked": 3913,
+      "summaries_checked": 9,
+      "episode_rows_checked": 3,
+      "exact": true,
+      "terminal_difference_ns": 0
+    }
+  ],
+  "base_e3_percent_rounded": {
+    "conditional": "28.32",
+    "permanent": "98.21"
+  },
+  "source_files_checked": 1089,
+  "run_provenance_checked": 12,
+  "package_read_only": true,
+  "parent_read_only": true,
+  "engine_reexecution": false,
+  "dependency": "explicit parent package and PyArrow required; not self-contained"
+}

@@ -1,0 +1,17 @@
+{
+  "control": "python -B -X utf8 -m scripts.verify_repository_evidence",
+  "exit_code": 1,
+  "error": "Protected source changed: src/crypto_carry/config.py",
+  "historical_expectation": {
+    "working_tree_sha256": "48e33a37be674afb309f7aa145c99cefaabcf1e3a1273bed11d729ad49ad7b36"
+  },
+  "inventory_initial_sha256": "e04aba786423696e5bdba811600402ef465b97bf8ac06147b7a9c74f7b069dd5",
+  "current_sha256": "e04aba786423696e5bdba811600402ef465b97bf8ac06147b7a9c74f7b069dd5",
+  "unchanged_during_correction": true,
+  "scope": "Historical cleanup inventory differs from the already-existing E4 engine version; this correction did not change config.py or repair old seals.",
+  "correct_scope_checks": [
+    "scripts.publish_thesis --verify",
+    "Paquete de evidencia/verificar.py",
+    "parent archived verify_rules_sensitivity_package.py"
+  ]
+}

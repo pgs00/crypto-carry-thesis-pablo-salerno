@@ -1,0 +1,21 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "entregas/entrega_4/reglas_historicas/correccion_exposicion_h2_20260925T150139Z/auditar_portabilidad_corrupciones.py",
+    "--package",
+    "entregas/entrega_4/reglas_historicas/correccion_exposicion_h2_20260925T150139Z/paquete_20260926T204312Z",
+    "--parent",
+    "entregas/entrega_4/reglas_historicas/20260925T005436Z",
+    "--output",
+    "entregas/entrega_4/reglas_historicas/correccion_exposicion_h2_20260925T150139Z/portabilidad_corrupciones.json"
+  ],
+  "cwd": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting",
+  "started_at": "2026-09-26T20:45:30.661179+00:00",
+  "ended_at": "2026-09-26T20:47:50.141189+00:00",
+  "elapsed_seconds": 139.48001,
+  "exit_code": 0,
+  "log": "portabilidad_corrupciones.log"
+}

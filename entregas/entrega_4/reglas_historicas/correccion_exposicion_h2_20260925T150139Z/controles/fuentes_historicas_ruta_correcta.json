@@ -1,0 +1,21 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-I",
+    "-S",
+    "-B",
+    "entregas/entrega_4/reglas_historicas/20260925T005436Z/herramientas/verify_historical_rules_publication.py",
+    "--root",
+    "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica",
+    "--evidence",
+    "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z",
+    "--temp-dir",
+    "C:\\Users\\pablo\\AppData\\Local\\Temp"
+  ],
+  "cwd": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting",
+  "started_at": "2026-09-25T15:10:01.161545+00:00",
+  "ended_at": "2026-09-25T15:10:03.473593+00:00",
+  "elapsed_seconds": 2.312048,
+  "exit_code": 0,
+  "log": "fuentes_historicas_ruta_correcta.log"
+}

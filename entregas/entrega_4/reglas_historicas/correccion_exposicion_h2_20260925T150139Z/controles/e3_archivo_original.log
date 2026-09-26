@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "C:\Users\pablo\Documentos\UCEMA\Tesina\Backtesting\entregas\entrega_3\archivo\paquete_redaccion\scripts\verificar_paquete.py", line 12, in <module>
+    from PIL import Image
+ModuleNotFoundError: No module named 'PIL'

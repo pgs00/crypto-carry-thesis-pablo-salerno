@@ -2,10 +2,8 @@
 
 from __future__ import annotations
 
-import argparse
 import csv
 import json
-import sys
 from collections import defaultdict
 from datetime import UTC, datetime
 from decimal import Decimal as D
@@ -64,92 +62,26 @@ def compare_deltas(rows):
 
 
 def h2_comparison(rows):
-    index = {(r["scenario"], r["period"], r["strategy"]): r for r in rows}
-    output = []
-    for scenario, period in sorted({(r["scenario"], r["period"]) for r in rows}):
-        cond, perm = (
-            index.get((scenario, period, strategy), {}) for strategy in ("conditional", "permanent")
-        )
-        a, b = cond.get("sharpe"), perm.get("sharpe")
-        difference = D(str(a)) - D(str(b)) if a is not None and b is not None else None
-        output.append(
-            dict(
-                scenario=scenario,
-                period=period,
-                conditional_run_id=cond.get("run_id", ""),
-                permanent_run_id=perm.get("run_id", ""),
-                conditional_sharpe=a,
-                permanent_sharpe=b,
-                sharpe_difference=difference,
-                verdict="no_concluyente"
-                if difference is None
-                else "favorable"
-                if difference > 0
-                else "no_favorable",
-                reason="; ".join(
-                    x.get("sharpe_reason", "missing portfolio" if not x else "")
-                    for x in (cond, perm)
-                ).strip("; "),
-            )
-        )
-    return output
+    if __package__:
+        from .rules_sensitivity_h2 import h2_comparison as complete_h2
+    else:
+        from rules_sensitivity_h2 import h2_comparison as complete_h2
+    return complete_h2(rows)
 
 
-def exposure_summary(ledger, periods, tolerance):
-    output = []
-    for period, start, end in periods:
-        state = {symbol: (D(0), D(0)) for symbol in SYMBOLS}
-        events = defaultdict(list)
-        for row in ledger:
-            moment = int(row["time_ns"])
-            if moment < end:
-                events[max(start, moment)].append(row)
-        times = sorted({start, end, *events})
-        totals = {symbol: defaultdict(lambda: D(0)) for symbol in (*SYMBOLS, "PORTFOLIO")}
-        for lower, upper in zip(times, times[1:]):
-            for row in events.get(lower, []):
-                if row["symbol"] in state:
-                    state[row["symbol"]] = (
-                        verify.decimal(row["spot"]),
-                        verify.decimal(row["short"]),
-                    )
-            seconds = D(upper - lower) / SECOND
-            invested, uncovered, covered = [], [], []
-            for symbol, (spot, short) in state.items():
-                is_invested = spot > 0 or short > 0
-                error = abs(spot - short) / spot if spot > 0 else (D(1) if short > 0 else D(0))
-                is_uncovered = is_invested and error > tolerance
-                is_covered = is_invested and not is_uncovered
-                for key, flag in (
-                    ("invested_seconds", is_invested),
-                    ("unhedged_seconds", is_uncovered),
-                    ("covered_seconds", is_covered),
-                    ("cash_seconds", not is_invested),
-                ):
-                    totals[symbol][key] += seconds * flag
-                invested.append(is_invested)
-                uncovered.append(is_uncovered)
-                covered.append(is_covered)
-            portfolio = totals["PORTFOLIO"]
-            for key, flag in (
-                ("invested_seconds", any(invested)),
-                ("unhedged_seconds", any(uncovered)),
-                ("covered_seconds", any(covered)),
-                ("both_covered_seconds", all(covered)),
-                ("cash_seconds", not any(invested)),
-            ):
-                portfolio[key] += seconds * flag
-        for symbol, values in totals.items():
-            output.append(
-                dict(
-                    period=period,
-                    symbol=symbol,
-                    **values,
-                    calendar_seconds=D(end - start) / SECOND,
-                    invested_fraction=values["invested_seconds"] / (D(end - start) / SECOND),
-                )
-            )
-    return output
+def exposure_summary(positions, periods, tolerance):
+    """E3 editorial indicator from complete persisted position states, then cuts."""
+    if __package__:
+        from .rules_sensitivity_exposure import exposure_intervals
+        from .rules_sensitivity_exposure import exposure_summary as summarize
+    else:
+        from rules_sensitivity_exposure import exposure_intervals
+        from rules_sensitivity_exposure import exposure_summary as summarize
+    periods = list(periods)
+    full = next((row for row in periods if row[0] == "full"), None)
+    if full is None:
+        raise ValueError("Exposure requires the full trajectory window before period cuts")
+    return summarize(exposure_intervals(positions, full[1], full[2], tolerance), periods)
 
 
 def h3_from_assets(rows):
@@ -394,11 +326,11 @@ def build_report(package, *, figures=True):
         daily, assets = verify.financial_daily(raw_daily, verify.decimal(config["capital"]))
         primitives = {
             name: pq.read_table(run / (name + ".parquet")).to_pylist()
-            for name in ("signals", "ledger", "fills", "orders", "risk_events")
+            for name in ("signals", "ledger", "fills", "orders", "risk_events", "positions")
         }
         events = execution_periods(primitives, periods)
         exposure = exposure_summary(
-            primitives["ledger"], periods, verify.decimal(config["hedge_tolerance"])
+            primitives["positions"], periods, verify.decimal(config["hedge_tolerance"])
         )
         assumptions_path = run / "research_assumptions.json"
         margins = margin_daily(
@@ -429,8 +361,9 @@ def build_report(package, *, figures=True):
             )
             for key in ("invested_seconds", "unhedged_seconds", "cash_seconds"):
                 if archived.get(key) not in (None, ""):
+                    raw_key = "raw_" + key if key != "cash_seconds" else key
                     verify.assert_close(
-                        archived[key], selected[key], f"Archived duration {item['run_id']} {key}"
+                        archived[key], selected[raw_key], f"Archived gross duration {item['run_id']} {key}"
                     )
         for row in financial:
             row.update(next(r for r in events if r["period"] == row["period"]))
@@ -809,7 +742,7 @@ def render_report(tables, figures):
                 "reconciliation_residual_usdt",
             ],
         ),
-        "[Eventos por período](eventos_periodo.csv) cuenta aperturas, intentos fallidos por orden, fills/parciales, cierres solicitados por margen y fills de liquidación. [Exposición](exposicion_periodo.csv) integra cantidades del ledger entre eventos; los segundos de cartera son la unión de activos y conservan residuos spot como inversión, igual que el contador original. Un residuo sin corto cuenta como exposición sin cobertura. No se infieren trades subminuto.\n",
+        "[Eventos por período](eventos_periodo.csv) conserva los eventos ejecutados. [Exposición](exposicion_periodo.csv) clasifica toda la trayectoria de posiciones persistidas conforme a E3 y después recorta períodos. Tiempo invertido y sin cobertura activa excluyen polvo; raw_* conserva el bruto con residuos. Los segundos de cartera integran la unión de activos. El polvo mantiene su valuación en equity y P&L.\n",
         md_table(
             full,
             [
@@ -829,7 +762,7 @@ def render_report(tables, figures):
         "Utilización = (valor spot + collateral)/equity, exposición bruta = spot + nocional corto. Utilización, collateral, mantenimiento y su razón se observan al cierre diario; sus máximos no son máximos intradiarios. Mantenimiento se deriva de los tramos prescritos guardados en research_assumptions.json de cada corrida. No es una tabla histórica de Binance. [Fronteras de promoción](fronteras_promocion.csv) conserva todos los fills que tocan una frontera exacta o declara su ausencia.\n",
         "## H1, H2 y H3\n",
         "[H1 invariancia](h1_invariancia.csv) compara exactamente pronósticos Decimal de signals, targets/exclusiones de forecast_evaluation y resumen original, ignorando identidad de corrida. [H1 resumen](h1_resumen.csv) recalcula MAE por activo y promedio 50/50. La invariancia es un control de entradas, no un descubrimiento económico.\n",
-        "[H2](h2.csv) compara Sharpe condicional y permanente dentro del mismo escenario y período; un Sharpe ND implica no_concluyente.\n",
+        "[H2](h2.csv) requiere conjuntamente CAGR condicional positivo y Sharpe superior al permanente, con ventana comparable y cobertura completa. Los tres valores deben ser finitos y definidos; se conserva no_concluyente y su motivo cuando no son evaluables. No se exige Sharpe positivo.\n",
         md_table(
             [r for r in tables["h2"] if r["period"] == "full"],
             [
@@ -976,20 +909,13 @@ def draw_figures(output, tables):
 
 
 def main(argv=None):
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--package", type=Path, required=True)
-    parser.add_argument(
-        "--seal", action="store_true", help="Seal existing final files only; do not rebuild"
-    )
-    parser.add_argument("--no-figures", action="store_true")
-    args = parser.parse_args(argv)
-    if args.seal:
-        manifest = seal_package(args.package)
-        result = dict(status="sealed", members=len(manifest["members"]))
+    # New command-line products always use v2 and a fresh explicit destination.
+    # Historical v1 packages retain their own archived construction tools.
+    if __package__:
+        from .correct_rules_sensitivity_report import main as correct_main
     else:
-        result = build_report(args.package, figures=not args.no_figures)
-    sys.stdout.write(json.dumps(result, ensure_ascii=False, indent=2) + "\n")
-    return 0
+        from correct_rules_sensitivity_report import main as correct_main
+    return correct_main(argv)
 
 
 if __name__ == "__main__":

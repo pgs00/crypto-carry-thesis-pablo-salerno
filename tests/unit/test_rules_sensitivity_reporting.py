@@ -165,14 +165,14 @@ def test_h2_never_pairs_with_another_scenario_and_keeps_undefined_sharpe():
     assert row["sharpe_difference"] is None
 
 
-def test_exposure_counts_union_and_uses_ledger_quantities_not_daily_snapshots():
+def test_exposure_counts_union_and_uses_complete_persisted_position_states():
     report, _ = modules()
     second = 1_000_000_000
     ledger = [
-        dict(time_ns=2 * second, symbol="BTCUSDT", spot="2", short="0"),
-        dict(time_ns=3 * second, symbol="BTCUSDT", spot="2", short="2"),
-        dict(time_ns=4 * second, symbol="ETHUSDT", spot="1", short="1"),
-        dict(time_ns=7 * second, symbol="BTCUSDT", spot="0", short="0"),
+        dict(time_ns=2 * second, symbol="BTCUSDT", spot="2", short="0", state="OPENING_SPOT"),
+        dict(time_ns=3 * second, symbol="BTCUSDT", spot="2", short="2", state="HOLDING"),
+        dict(time_ns=4 * second, symbol="ETHUSDT", spot="1", short="1", state="HOLDING"),
+        dict(time_ns=7 * second, symbol="BTCUSDT", spot="0", short="0", state="FLAT"),
     ]
     rows = report.exposure_summary(ledger, [("full", 0, 10 * second)], D("0.005"))
     portfolio = next(r for r in rows if r["symbol"] == "PORTFOLIO")

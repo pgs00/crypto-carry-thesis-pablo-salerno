@@ -1,0 +1,16 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "-m",
+    "scripts.verify_repository_evidence"
+  ],
+  "cwd": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting",
+  "started_at": "2026-09-25T15:09:32.703905+00:00",
+  "ended_at": "2026-09-25T15:09:34.840967+00:00",
+  "elapsed_seconds": 2.137062,
+  "exit_code": 1,
+  "log": "e3_publicacion.log"
+}

@@ -1,7 +1,8 @@
 """Portable, offline, read-only checks for the preliminary rules-sensitivity package.
 
-Only the Python standard library is imported. No trading engine, Git state,
-market-data drive, or saved Python session is needed.
+The original v1 checks use only the standard library. Correction v2 is explicitly
+dispatched to its independent verifier and requires a parent package and PyArrow.
+No trading engine, Git state, market-data drive, or saved Python session is needed.
 """
 
 from __future__ import annotations
@@ -645,8 +646,24 @@ def h1_summaries(rows, periods):
     return result
 
 
-def verify_package(package):
+def verify_package(package, parent=None):
     package = Path(package).resolve()
+    schema = read_json(package / MANIFEST).get("schema")
+    if schema == "rules_sensitivity_correction_v2":
+        if parent is None:
+            raise ValueError("Correction v2 requires explicit --parent; legacy checks are insufficient")
+        previous_bytecode = sys.dont_write_bytecode
+        try:
+            sys.dont_write_bytecode = True
+            if __package__:
+                from .verify_rules_sensitivity_correction import verify_package as verify_correction
+            else:
+                from verify_rules_sensitivity_correction import verify_package as verify_correction
+        finally:
+            sys.dont_write_bytecode = previous_bytecode
+        return verify_correction(package, parent)
+    if parent is not None:
+        raise ValueError("--parent is only applicable to correction v2")
     result = check_manifest(package)
     items = load_index(package)
     comparison = package / "comparacion"
@@ -943,14 +960,16 @@ def verify_package(package):
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--package", type=Path, required=True)
+    parser.add_argument("--parent", type=Path, help="Mandatory sealed source for correction v2")
     parser.add_argument("--output", type=Path, help="Optional NEW result file outside the package")
     args = parser.parse_args(argv)
     try:
         if args.output and (
             args.output.resolve().is_relative_to(args.package.resolve()) or args.output.exists()
+            or (args.parent and args.output.resolve().is_relative_to(args.parent.resolve()))
         ):
             raise ValueError("Verification output must be a NEW path outside the package")
-        result = verify_package(args.package)
+        result = verify_package(args.package, args.parent)
     except (ValueError, OSError, KeyError, TypeError) as exc:
         result = dict(status="failed", error=str(exc), package_read_only=True)
     text = json.dumps(result, ensure_ascii=False, indent=2) + "\n"

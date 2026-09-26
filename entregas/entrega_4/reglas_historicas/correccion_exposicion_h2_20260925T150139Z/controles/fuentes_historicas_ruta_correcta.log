@@ -1,0 +1,128 @@
+{
+  "schema": "historical_rules_publication_v1",
+  "checked_at_utc": "2026-09-25T15:10:01.276676+00:00",
+  "root": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\evidencia_historica",
+  "evidence": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\evidencia_historica\\data\\research\\historical-rules-followup-20260924T234206Z",
+  "documentary_integrity": {
+    "passed": true,
+    "manifest_members": 196,
+    "sources": 52,
+    "facts": 345,
+    "coverage_rows": 479
+  },
+  "provenance": {
+    "publication_commit": "894059e4ce318e51f25211d04be9f0202de90ae7",
+    "parent_commit": "80feefc45872d2c48c33f3fbc3ebc9eb402eee6a",
+    "expected_manifest_sha256": "629915f074a29fed6a7686e9b9af2a9279e0ff0601c1121c965c46539f5c99fb",
+    "git_status": "unchecked",
+    "reason": "No .git at explicit root or Git executable unavailable; content only."
+  },
+  "original_session_audit": {
+    "reproduced": false,
+    "recorded_at_utc": "2026-09-25T00:19:45.569870Z",
+    "recorded_passed": true,
+    "recorded_head": "80feefc45872d2c48c33f3fbc3ebc9eb402eee6a",
+    "recorded_index_sha256": "06fe834f54244af187cbc343bfe6d9e8fd44c4f03375b75561cdace0c01cae4d",
+    "original_results_sha256": "91363668ce7fc3167a8adc8270d21774e14914b4526ffdf9e600b997b98a0486",
+    "statement": "Archived record only; current index/branch/HEAD are not compared to that session."
+  },
+  "negative_tests": [
+    {
+      "test": "VIP",
+      "passed": true,
+      "expected_error": "scope_mismatch",
+      "detected_errors": [
+        "scope_mismatch: FEE_A1_BTCUSDT"
+      ]
+    },
+    {
+      "test": "market",
+      "passed": true,
+      "expected_error": "scope_mismatch",
+      "detected_errors": [
+        "scope_mismatch: FEE_A1_BTCUSDT"
+      ]
+    },
+    {
+      "test": "uncertain_exact",
+      "passed": true,
+      "expected_error": "rollout_promoted_to_exact",
+      "detected_errors": [
+        "false_exact_time: EVENT_MINBTC26_BTCUSDT",
+        "rollout_promoted_to_exact: EVENT_MINBTC26_BTCUSDT"
+      ]
+    },
+    {
+      "test": "unproved_knowledge",
+      "passed": true,
+      "expected_error": "publication_after_claimed_knowledge",
+      "detected_errors": [
+        "unproven_known_from: TIERS_MARG23_BTCUSDT_after",
+        "publication_after_claimed_knowledge: TIERS_MARG23_BTCUSDT_after"
+      ]
+    },
+    {
+      "test": "no_data",
+      "passed": true,
+      "expected_error": "source_without_usable_data",
+      "detected_errors": [
+        "capture_mismatch: FEE_SPOT26_BTCUSDT",
+        "source_without_usable_data: FEE_SPOT26_BTCUSDT",
+        "fee_anchor_source_mismatch: FEE_SPOT26_BTCUSDT",
+        "proof_error Secci�n USD-M no encontrada SPOT25: FEE_SPOT26_BTCUSDT"
+      ]
+    },
+    {
+      "test": "unknown_zero",
+      "passed": true,
+      "expected_error": "unknown_as_number",
+      "detected_errors": [
+        "unknown_as_number: PENDING_FEE_DATE_BTCUSDT"
+      ]
+    },
+    {
+      "test": "percent_conversion",
+      "passed": true,
+      "expected_error": "rate_conversion",
+      "detected_errors": [
+        "rate_conversion: FEE_A1_BTCUSDT",
+        "fee_value_mismatch: FEE_A1_BTCUSDT"
+      ]
+    },
+    {
+      "test": "inverted_interval",
+      "passed": true,
+      "expected_error": "inverted_interval",
+      "detected_errors": [
+        "inverted_interval: BTC_SPOT_ZERO"
+      ]
+    },
+    {
+      "test": "contradictory_overlap",
+      "passed": true,
+      "detected_errors": [
+        "contradictory_overlap: BTC_SPOT_ZERO CONTRADICTORY_TEST"
+      ]
+    },
+    {
+      "test": "duplicate_coverage",
+      "passed": true,
+      "detected_errors": [
+        "coverage_double_count"
+      ]
+    }
+  ],
+  "errors": [],
+  "interpretation_limit": "Hashes and documentary checks do not certify first publication or historical continuity. The original physical Git index is not reconstructed.",
+  "coverage": [
+    {
+      "symbol": "BTCUSDT",
+      "market": "spot",
+      "parameter": "taker_fee",
+      "covered_seconds_union": 22154400,
+      "covered_days_decimal": "256.4166666666666666666666667",
+      "criterion": "uni�n de intervalos expl�citos finitos; observaciones/eventos/supuestos aportan cero"
+    }
+  ],
+  "passed": true
+}

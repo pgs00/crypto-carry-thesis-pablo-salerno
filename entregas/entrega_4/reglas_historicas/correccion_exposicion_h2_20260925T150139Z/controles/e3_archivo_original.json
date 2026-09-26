@@ -1,0 +1,17 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-I",
+    "-S",
+    "-B",
+    "-X",
+    "utf8",
+    "entregas/entrega_3/archivo/paquete_redaccion/scripts/verificar_paquete.py"
+  ],
+  "cwd": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting",
+  "started_at": "2026-09-25T15:10:24.236930+00:00",
+  "ended_at": "2026-09-25T15:10:24.349957+00:00",
+  "elapsed_seconds": 0.113027,
+  "exit_code": 1,
+  "log": "e3_archivo_original.log"
+}

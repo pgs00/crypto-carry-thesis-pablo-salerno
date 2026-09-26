@@ -1,0 +1,17 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "-m",
+    "pytest",
+    "-q"
+  ],
+  "cwd": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting",
+  "started_at": "2026-09-26T20:43:12.276002+00:00",
+  "ended_at": "2026-09-26T20:46:11.463386+00:00",
+  "elapsed_seconds": 179.187384,
+  "exit_code": 0,
+  "log": "suite_completa_final.log"
+}

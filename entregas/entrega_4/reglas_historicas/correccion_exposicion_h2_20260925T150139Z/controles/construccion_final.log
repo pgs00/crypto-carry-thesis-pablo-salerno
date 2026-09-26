@@ -1,0 +1,10 @@
+{
+  "status": "built_and_sealed_not_yet_independently_verified",
+  "package": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\correccion_exposicion_h2_20260925T150139Z\\paquete_20260926T204312Z",
+  "parent_manifest_sha256": "77f1cfcaf4fb13044dbcb3b242a2eb19749cf7e88806db023a08bbe4ec272057",
+  "runs": 12,
+  "intervals": 45803,
+  "summaries": 288,
+  "h2": 48,
+  "engine_reexecution": false
+}

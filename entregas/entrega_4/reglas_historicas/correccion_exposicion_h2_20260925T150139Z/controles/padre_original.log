@@ -1,0 +1,15 @@
+{
+  "members_checked": 1087,
+  "manifest_sha256": "77f1cfcaf4fb13044dbcb3b242a2eb19749cf7e88806db023a08bbe4ec272057",
+  "status": "passed",
+  "runs_checked": 12,
+  "run_artifacts_checked": 564,
+  "daily_reconciliations": 20448,
+  "period_reconciliations": 96,
+  "run_code_snapshot_hashes_checked": 456,
+  "code_provenance": "verified_against_packaged_snapshots",
+  "git_provenance": "not_checked_not_required",
+  "market_inputs": "recorded_hashes_not_rehashed_offline",
+  "engine_reexecution": false,
+  "package_read_only": true
+}

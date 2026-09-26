@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "checked_at": "2026-09-26T20:35:10.528909+00:00",
+  "tracked_files_checked": 2033,
+  "unchanged_files": 2030,
+  "allowed_active_changes": [
+    "scripts/report_historical_rules_sensitivity.py",
+    "scripts/verify_rules_sensitivity_package.py",
+    "tests/unit/test_rules_sensitivity_reporting.py"
+  ],
+  "forbidden_changes": [],
+  "missing_files": [],
+  "preserved_groups": {
+    "engine": 36,
+    "configurations": 12,
+    "e3": 294,
+    "sealed_parent": 1089
+  },
+  "head_before": "449f9f5d14d66b0ee1909373d6276785a037ba76",
+  "head_after": "449f9f5d14d66b0ee1909373d6276785a037ba76",
+  "branch_before": "codex/crypto-carry",
+  "branch_after": "codex/crypto-carry",
+  "index_before_sha256": "94fc1341d4df92c9f0dd437a55dc70ac40a7511fe7511a4e6c093f937d970383",
+  "index_after_sha256": "94fc1341d4df92c9f0dd437a55dc70ac40a7511fe7511a4e6c093f937d970383",
+  "index_identical": true,
+  "staged_changes": ""
+}

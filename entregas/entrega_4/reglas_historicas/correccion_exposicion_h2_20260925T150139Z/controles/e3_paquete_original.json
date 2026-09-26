@@ -1,0 +1,15 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-I",
+    "-S",
+    "-B",
+    "Paquete de evidencia/verificar.py"
+  ],
+  "cwd": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting",
+  "started_at": "2026-09-25T15:10:01.166143+00:00",
+  "ended_at": "2026-09-25T15:10:01.987686+00:00",
+  "elapsed_seconds": 0.821543,
+  "exit_code": 0,
+  "log": "e3_paquete_original.log"
+}
