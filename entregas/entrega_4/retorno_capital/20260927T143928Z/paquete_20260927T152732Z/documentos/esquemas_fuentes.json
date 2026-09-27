@@ -1,0 +1,3527 @@
+[
+  {
+    "dependency": "parent",
+    "path": "corridas/run_ad71d751b20623006c195ff3/ledger.parquet",
+    "rows": 2372,
+    "fields": [
+      {
+        "name": "run_id",
+        "type": "string"
+      },
+      {
+        "name": "symbol",
+        "type": "string"
+      },
+      {
+        "name": "strategy",
+        "type": "string"
+      },
+      {
+        "name": "funding_filter_enabled",
+        "type": "bool"
+      },
+      {
+        "name": "time_ns",
+        "type": "int64"
+      },
+      {
+        "name": "timestamp_utc",
+        "type": "string"
+      },
+      {
+        "name": "units",
+        "type": "string"
+      },
+      {
+        "name": "data_kind",
+        "type": "string"
+      },
+      {
+        "name": "event_id",
+        "type": "string"
+      },
+      {
+        "name": "kind",
+        "type": "string"
+      },
+      {
+        "name": "amount_usdt",
+        "type": "string"
+      },
+      {
+        "name": "fee",
+        "type": "string"
+      },
+      {
+        "name": "free_spot",
+        "type": "string"
+      },
+      {
+        "name": "free_futures",
+        "type": "string"
+      },
+      {
+        "name": "debt",
+        "type": "string"
+      },
+      {
+        "name": "spot",
+        "type": "string"
+      },
+      {
+        "name": "short",
+        "type": "string"
+      },
+      {
+        "name": "average",
+        "type": "string"
+      },
+      {
+        "name": "collateral",
+        "type": "string"
+      },
+      {
+        "name": "base_fee_quantity",
+        "type": "string"
+      },
+      {
+        "name": "cash_futures_change",
+        "type": "string"
+      },
+      {
+        "name": "cash_spot_change",
+        "type": "string"
+      },
+      {
+        "name": "collateral_change",
+        "type": "string"
+      },
+      {
+        "name": "debt_change",
+        "type": "string"
+      },
+      {
+        "name": "fee_asset",
+        "type": "string"
+      },
+      {
+        "name": "funding",
+        "type": "string"
+      },
+      {
+        "name": "liquidation_fee",
+        "type": "string"
+      },
+      {
+        "name": "open_loss",
+        "type": "string"
+      },
+      {
+        "name": "pnl",
+        "type": "string"
+      },
+      {
+        "name": "price",
+        "type": "string"
+      },
+      {
+        "name": "quantity",
+        "type": "string"
+      },
+      {
+        "name": "reference_price",
+        "type": "string"
+      },
+      {
+        "name": "spot_cost",
+        "type": "string"
+      },
+      {
+        "name": "spot_proceeds",
+        "type": "string"
+      },
+      {
+        "name": "transfer_futures_to_spot",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "dependency": "parent",
+    "path": "corridas/run_ad71d751b20623006c195ff3/fills.parquet",
+    "rows": 138,
+    "fields": [
+      {
+        "name": "run_id",
+        "type": "string"
+      },
+      {
+        "name": "symbol",
+        "type": "string"
+      },
+      {
+        "name": "strategy",
+        "type": "string"
+      },
+      {
+        "name": "funding_filter_enabled",
+        "type": "bool"
+      },
+      {
+        "name": "time_ns",
+        "type": "int64"
+      },
+      {
+        "name": "timestamp_utc",
+        "type": "string"
+      },
+      {
+        "name": "units",
+        "type": "string"
+      },
+      {
+        "name": "data_kind",
+        "type": "string"
+      },
+      {
+        "name": "fill_id",
+        "type": "string"
+      },
+      {
+        "name": "order_id",
+        "type": "string"
+      },
+      {
+        "name": "market",
+        "type": "string"
+      },
+      {
+        "name": "side",
+        "type": "string"
+      },
+      {
+        "name": "quantity",
+        "type": "string"
+      },
+      {
+        "name": "price",
+        "type": "string"
+      },
+      {
+        "name": "reference_price",
+        "type": "string"
+      },
+      {
+        "name": "trade_id",
+        "type": "string"
+      },
+      {
+        "name": "fee_rate",
+        "type": "string"
+      },
+      {
+        "name": "liquidation",
+        "type": "bool"
+      },
+      {
+        "name": "participation",
+        "type": "string"
+      },
+      {
+        "name": "recent_volume_quantity",
+        "type": "string"
+      },
+      {
+        "name": "partial",
+        "type": "bool"
+      },
+      {
+        "name": "remaining_quantity",
+        "type": "string"
+      },
+      {
+        "name": "window_start",
+        "type": "int64"
+      },
+      {
+        "name": "window_end",
+        "type": "int64"
+      },
+      {
+        "name": "slippage_rate",
+        "type": "string"
+      },
+      {
+        "name": "execution_model",
+        "type": "string"
+      },
+      {
+        "name": "window_base_volume",
+        "type": "string"
+      },
+      {
+        "name": "window_quote_volume",
+        "type": "string"
+      },
+      {
+        "name": "max_volume_participation",
+        "type": "string"
+      },
+      {
+        "name": "capacity_used",
+        "type": "string"
+      },
+      {
+        "name": "fill_reason",
+        "type": "string"
+      },
+      {
+        "name": "source_file",
+        "type": "string"
+      },
+      {
+        "name": "window_end_utc",
+        "type": "string"
+      },
+      {
+        "name": "window_start_utc",
+        "type": "string"
+      },
+      {
+        "name": "participation_window_seconds",
+        "type": "string"
+      },
+      {
+        "name": "purpose",
+        "type": "string"
+      },
+      {
+        "name": "rounding_cost",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "dependency": "parent",
+    "path": "corridas/run_ad71d751b20623006c195ff3/risk_events.parquet",
+    "rows": 574,
+    "fields": [
+      {
+        "name": "run_id",
+        "type": "string"
+      },
+      {
+        "name": "symbol",
+        "type": "string"
+      },
+      {
+        "name": "strategy",
+        "type": "string"
+      },
+      {
+        "name": "funding_filter_enabled",
+        "type": "bool"
+      },
+      {
+        "name": "time_ns",
+        "type": "int64"
+      },
+      {
+        "name": "timestamp_utc",
+        "type": "string"
+      },
+      {
+        "name": "units",
+        "type": "string"
+      },
+      {
+        "name": "data_kind",
+        "type": "string"
+      },
+      {
+        "name": "kind",
+        "type": "string"
+      },
+      {
+        "name": "cause",
+        "type": "string"
+      },
+      {
+        "name": "previous",
+        "type": "string"
+      },
+      {
+        "name": "state",
+        "type": "string"
+      },
+      {
+        "name": "order_id",
+        "type": "string"
+      },
+      {
+        "name": "cycle_id",
+        "type": "string"
+      },
+      {
+        "name": "next_expiry_utc",
+        "type": "string"
+      },
+      {
+        "name": "liquidation",
+        "type": "bool"
+      },
+      {
+        "name": "next_expiry",
+        "type": "string"
+      },
+      {
+        "name": "purpose",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "dependency": "parent",
+    "path": "corridas/run_ad71d751b20623006c195ff3/orders.parquet",
+    "rows": 777,
+    "fields": [
+      {
+        "name": "run_id",
+        "type": "string"
+      },
+      {
+        "name": "symbol",
+        "type": "string"
+      },
+      {
+        "name": "strategy",
+        "type": "string"
+      },
+      {
+        "name": "funding_filter_enabled",
+        "type": "bool"
+      },
+      {
+        "name": "time_ns",
+        "type": "int64"
+      },
+      {
+        "name": "timestamp_utc",
+        "type": "string"
+      },
+      {
+        "name": "units",
+        "type": "string"
+      },
+      {
+        "name": "data_kind",
+        "type": "string"
+      },
+      {
+        "name": "order_id",
+        "type": "string"
+      },
+      {
+        "name": "market",
+        "type": "string"
+      },
+      {
+        "name": "side",
+        "type": "string"
+      },
+      {
+        "name": "quantity",
+        "type": "string"
+      },
+      {
+        "name": "submitted_at",
+        "type": "int64"
+      },
+      {
+        "name": "deadline",
+        "type": "int64"
+      },
+      {
+        "name": "purpose",
+        "type": "string"
+      },
+      {
+        "name": "status",
+        "type": "string"
+      },
+      {
+        "name": "action",
+        "type": "string"
+      },
+      {
+        "name": "record_type",
+        "type": "string"
+      },
+      {
+        "name": "deadline_utc",
+        "type": "string"
+      },
+      {
+        "name": "submitted_at_utc",
+        "type": "string"
+      },
+      {
+        "name": "window_end_utc",
+        "type": "string"
+      },
+      {
+        "name": "window_start_utc",
+        "type": "string"
+      },
+      {
+        "name": "cancel_requested_at",
+        "type": "string"
+      },
+      {
+        "name": "filled_quantity",
+        "type": "string"
+      },
+      {
+        "name": "recent_volume_quantity",
+        "type": "string"
+      },
+      {
+        "name": "reference_ids",
+        "type": "string"
+      },
+      {
+        "name": "remaining_quantity",
+        "type": "string"
+      },
+      {
+        "name": "vwap_notional",
+        "type": "string"
+      },
+      {
+        "name": "vwap_quantity",
+        "type": "string"
+      },
+      {
+        "name": "window_end",
+        "type": "int64"
+      },
+      {
+        "name": "window_start",
+        "type": "int64"
+      }
+    ]
+  },
+  {
+    "dependency": "parent",
+    "path": "corridas/run_ad71d751b20623006c195ff3/signals.parquet",
+    "rows": 10224,
+    "fields": [
+      {
+        "name": "run_id",
+        "type": "string"
+      },
+      {
+        "name": "symbol",
+        "type": "string"
+      },
+      {
+        "name": "strategy",
+        "type": "string"
+      },
+      {
+        "name": "funding_filter_enabled",
+        "type": "bool"
+      },
+      {
+        "name": "time_ns",
+        "type": "int64"
+      },
+      {
+        "name": "timestamp_utc",
+        "type": "string"
+      },
+      {
+        "name": "units",
+        "type": "string"
+      },
+      {
+        "name": "data_kind",
+        "type": "string"
+      },
+      {
+        "name": "anchor",
+        "type": "int64"
+      },
+      {
+        "name": "history_start",
+        "type": "int64"
+      },
+      {
+        "name": "forecast",
+        "type": "string"
+      },
+      {
+        "name": "no_change",
+        "type": "string"
+      },
+      {
+        "name": "valid",
+        "type": "bool"
+      },
+      {
+        "name": "forecast_reason",
+        "type": "string"
+      },
+      {
+        "name": "decision",
+        "type": "string"
+      },
+      {
+        "name": "estimated_cycle_cost",
+        "type": "string"
+      },
+      {
+        "name": "basis",
+        "type": "string"
+      },
+      {
+        "name": "anchor_utc",
+        "type": "string"
+      },
+      {
+        "name": "history_start_utc",
+        "type": "string"
+      },
+      {
+        "name": "mark_available_at_utc",
+        "type": "string"
+      },
+      {
+        "name": "mark_open_time_utc",
+        "type": "string"
+      },
+      {
+        "name": "available_cash",
+        "type": "string"
+      },
+      {
+        "name": "basis_above_max",
+        "type": "string"
+      },
+      {
+        "name": "basis_negative",
+        "type": "string"
+      },
+      {
+        "name": "basis_raw",
+        "type": "string"
+      },
+      {
+        "name": "budget_reason",
+        "type": "string"
+      },
+      {
+        "name": "budget_required_cash",
+        "type": "string"
+      },
+      {
+        "name": "cooldown_until",
+        "type": "string"
+      },
+      {
+        "name": "cost_futures_close_fee",
+        "type": "string"
+      },
+      {
+        "name": "cost_futures_open_fee",
+        "type": "string"
+      },
+      {
+        "name": "cost_slippage_per_order",
+        "type": "string"
+      },
+      {
+        "name": "cost_slippage_total",
+        "type": "string"
+      },
+      {
+        "name": "cost_spot_close_fee",
+        "type": "string"
+      },
+      {
+        "name": "cost_spot_open_fee",
+        "type": "string"
+      },
+      {
+        "name": "current_short",
+        "type": "string"
+      },
+      {
+        "name": "current_spot",
+        "type": "string"
+      },
+      {
+        "name": "data_valid",
+        "type": "string"
+      },
+      {
+        "name": "decision_kind",
+        "type": "string"
+      },
+      {
+        "name": "decision_time",
+        "type": "string"
+      },
+      {
+        "name": "equity_snapshot",
+        "type": "string"
+      },
+      {
+        "name": "filter_basis_above_max",
+        "type": "string"
+      },
+      {
+        "name": "filter_basis_negative",
+        "type": "string"
+      },
+      {
+        "name": "filter_budget",
+        "type": "string"
+      },
+      {
+        "name": "filter_cooldown",
+        "type": "string"
+      },
+      {
+        "name": "filter_coverage",
+        "type": "string"
+      },
+      {
+        "name": "filter_data_valid",
+        "type": "string"
+      },
+      {
+        "name": "filter_debt",
+        "type": "string"
+      },
+      {
+        "name": "filter_forecast",
+        "type": "string"
+      },
+      {
+        "name": "filter_freshness",
+        "type": "string"
+      },
+      {
+        "name": "filter_funding",
+        "type": "string"
+      },
+      {
+        "name": "filter_mark",
+        "type": "string"
+      },
+      {
+        "name": "filter_operational",
+        "type": "string"
+      },
+      {
+        "name": "filter_order",
+        "type": "string"
+      },
+      {
+        "name": "filter_pending_orders",
+        "type": "string"
+      },
+      {
+        "name": "filter_price_alignment",
+        "type": "string"
+      },
+      {
+        "name": "filter_rules",
+        "type": "string"
+      },
+      {
+        "name": "filter_sizing",
+        "type": "string"
+      },
+      {
+        "name": "filter_state_active",
+        "type": "string"
+      },
+      {
+        "name": "forecast_anchor",
+        "type": "string"
+      },
+      {
+        "name": "forecast_available_at",
+        "type": "string"
+      },
+      {
+        "name": "forecast_cost_gap",
+        "type": "string"
+      },
+      {
+        "name": "forecast_history_start",
+        "type": "string"
+      },
+      {
+        "name": "forecast_no_change",
+        "type": "string"
+      },
+      {
+        "name": "funding_anchor",
+        "type": "string"
+      },
+      {
+        "name": "futures_available_at",
+        "type": "string"
+      },
+      {
+        "name": "futures_end_time",
+        "type": "string"
+      },
+      {
+        "name": "futures_open_time",
+        "type": "string"
+      },
+      {
+        "name": "futures_price",
+        "type": "string"
+      },
+      {
+        "name": "futures_price_time",
+        "type": "string"
+      },
+      {
+        "name": "latest_funding_available_at",
+        "type": "string"
+      },
+      {
+        "name": "latest_funding_time",
+        "type": "string"
+      },
+      {
+        "name": "mark_available_at",
+        "type": "int64"
+      },
+      {
+        "name": "mark_open_time",
+        "type": "int64"
+      },
+      {
+        "name": "mark_price",
+        "type": "string"
+      },
+      {
+        "name": "mark_time",
+        "type": "string"
+      },
+      {
+        "name": "planned_hedge_error",
+        "type": "string"
+      },
+      {
+        "name": "portfolio_state",
+        "type": "string"
+      },
+      {
+        "name": "price_alignment_enforced",
+        "type": "string"
+      },
+      {
+        "name": "proposed_futures_quantity",
+        "type": "string"
+      },
+      {
+        "name": "proposed_futures_side",
+        "type": "string"
+      },
+      {
+        "name": "proposed_gross_spot",
+        "type": "string"
+      },
+      {
+        "name": "proposed_net_spot",
+        "type": "string"
+      },
+      {
+        "name": "proposed_short",
+        "type": "string"
+      },
+      {
+        "name": "proposed_short_delta",
+        "type": "string"
+      },
+      {
+        "name": "proposed_spot_delta",
+        "type": "string"
+      },
+      {
+        "name": "proposed_spot_side",
+        "type": "string"
+      },
+      {
+        "name": "prospective_pair_feasible",
+        "type": "string"
+      },
+      {
+        "name": "prospective_sizing_reason",
+        "type": "string"
+      },
+      {
+        "name": "sequential_rejection",
+        "type": "string"
+      },
+      {
+        "name": "simultaneous_not_evaluable",
+        "type": "string"
+      },
+      {
+        "name": "simultaneous_rejections",
+        "type": "string"
+      },
+      {
+        "name": "sizing_enforcement",
+        "type": "string"
+      },
+      {
+        "name": "sizing_feasible",
+        "type": "string"
+      },
+      {
+        "name": "sizing_futures_price",
+        "type": "string"
+      },
+      {
+        "name": "sizing_futures_price_time",
+        "type": "string"
+      },
+      {
+        "name": "sizing_reason",
+        "type": "string"
+      },
+      {
+        "name": "sizing_spot_price",
+        "type": "string"
+      },
+      {
+        "name": "sizing_spot_price_time",
+        "type": "string"
+      },
+      {
+        "name": "spot_available_at",
+        "type": "string"
+      },
+      {
+        "name": "spot_end_time",
+        "type": "string"
+      },
+      {
+        "name": "spot_open_time",
+        "type": "string"
+      },
+      {
+        "name": "spot_price",
+        "type": "string"
+      },
+      {
+        "name": "spot_price_time",
+        "type": "string"
+      },
+      {
+        "name": "target_quantity",
+        "type": "string"
+      },
+      {
+        "name": "target_usdt",
+        "type": "string"
+      },
+      {
+        "name": "unallocated_target_usdt",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "dependency": "parent",
+    "path": "corridas/run_ad71d751b20623006c195ff3/renewal_diagnostics.parquet",
+    "rows": 103,
+    "fields": [
+      {
+        "name": "run_id",
+        "type": "string"
+      },
+      {
+        "name": "symbol",
+        "type": "string"
+      },
+      {
+        "name": "strategy",
+        "type": "string"
+      },
+      {
+        "name": "funding_filter_enabled",
+        "type": "bool"
+      },
+      {
+        "name": "time_ns",
+        "type": "int64"
+      },
+      {
+        "name": "timestamp_utc",
+        "type": "string"
+      },
+      {
+        "name": "units",
+        "type": "string"
+      },
+      {
+        "name": "data_kind",
+        "type": "string"
+      },
+      {
+        "name": "decision_kind",
+        "type": "string"
+      },
+      {
+        "name": "decision",
+        "type": "string"
+      },
+      {
+        "name": "forecast",
+        "type": "string"
+      },
+      {
+        "name": "estimated_cycle_cost",
+        "type": "string"
+      },
+      {
+        "name": "basis",
+        "type": "string"
+      },
+      {
+        "name": "renewal_funding_threshold",
+        "type": "string"
+      },
+      {
+        "name": "actual_outcome",
+        "type": "string"
+      },
+      {
+        "name": "renewal_status_kind",
+        "type": "string"
+      },
+      {
+        "name": "state_after",
+        "type": "string"
+      },
+      {
+        "name": "expiry_after",
+        "type": "string"
+      },
+      {
+        "name": "mark_available_at_utc",
+        "type": "string"
+      },
+      {
+        "name": "mark_open_time_utc",
+        "type": "string"
+      },
+      {
+        "name": "available_cash",
+        "type": "string"
+      },
+      {
+        "name": "basis_above_max",
+        "type": "string"
+      },
+      {
+        "name": "basis_negative",
+        "type": "string"
+      },
+      {
+        "name": "basis_raw",
+        "type": "string"
+      },
+      {
+        "name": "budget_reason",
+        "type": "string"
+      },
+      {
+        "name": "budget_required_cash",
+        "type": "string"
+      },
+      {
+        "name": "cooldown_until",
+        "type": "string"
+      },
+      {
+        "name": "cost_futures_close_fee",
+        "type": "string"
+      },
+      {
+        "name": "cost_futures_open_fee",
+        "type": "string"
+      },
+      {
+        "name": "cost_slippage_per_order",
+        "type": "string"
+      },
+      {
+        "name": "cost_slippage_total",
+        "type": "string"
+      },
+      {
+        "name": "cost_spot_close_fee",
+        "type": "string"
+      },
+      {
+        "name": "cost_spot_open_fee",
+        "type": "string"
+      },
+      {
+        "name": "current_short",
+        "type": "string"
+      },
+      {
+        "name": "current_spot",
+        "type": "string"
+      },
+      {
+        "name": "data_valid",
+        "type": "string"
+      },
+      {
+        "name": "decision_time",
+        "type": "string"
+      },
+      {
+        "name": "entry_basis_filter_applied",
+        "type": "string"
+      },
+      {
+        "name": "entry_filter_order",
+        "type": "string"
+      },
+      {
+        "name": "entry_funding_cost_filter_applied",
+        "type": "string"
+      },
+      {
+        "name": "entry_simultaneous_not_evaluable",
+        "type": "string"
+      },
+      {
+        "name": "entry_simultaneous_rejections",
+        "type": "string"
+      },
+      {
+        "name": "entry_sizing_filter_applied",
+        "type": "string"
+      },
+      {
+        "name": "equity_snapshot",
+        "type": "string"
+      },
+      {
+        "name": "filter_basis_above_max",
+        "type": "string"
+      },
+      {
+        "name": "filter_basis_negative",
+        "type": "string"
+      },
+      {
+        "name": "filter_budget",
+        "type": "string"
+      },
+      {
+        "name": "filter_cooldown",
+        "type": "string"
+      },
+      {
+        "name": "filter_coverage",
+        "type": "string"
+      },
+      {
+        "name": "filter_data_valid",
+        "type": "string"
+      },
+      {
+        "name": "filter_debt",
+        "type": "string"
+      },
+      {
+        "name": "filter_forecast",
+        "type": "string"
+      },
+      {
+        "name": "filter_freshness",
+        "type": "string"
+      },
+      {
+        "name": "filter_funding",
+        "type": "string"
+      },
+      {
+        "name": "filter_funding_positive",
+        "type": "string"
+      },
+      {
+        "name": "filter_mark",
+        "type": "string"
+      },
+      {
+        "name": "filter_operational",
+        "type": "string"
+      },
+      {
+        "name": "filter_order",
+        "type": "string"
+      },
+      {
+        "name": "filter_pending_orders",
+        "type": "string"
+      },
+      {
+        "name": "filter_price_alignment",
+        "type": "string"
+      },
+      {
+        "name": "filter_rules",
+        "type": "string"
+      },
+      {
+        "name": "filter_sizing",
+        "type": "string"
+      },
+      {
+        "name": "filter_state_active",
+        "type": "string"
+      },
+      {
+        "name": "filter_state_holding",
+        "type": "string"
+      },
+      {
+        "name": "forecast_anchor",
+        "type": "string"
+      },
+      {
+        "name": "forecast_available_at",
+        "type": "string"
+      },
+      {
+        "name": "forecast_cost_gap",
+        "type": "string"
+      },
+      {
+        "name": "forecast_history_start",
+        "type": "string"
+      },
+      {
+        "name": "forecast_no_change",
+        "type": "string"
+      },
+      {
+        "name": "forecast_reason",
+        "type": "string"
+      },
+      {
+        "name": "funding_anchor",
+        "type": "string"
+      },
+      {
+        "name": "futures_available_at",
+        "type": "string"
+      },
+      {
+        "name": "futures_end_time",
+        "type": "string"
+      },
+      {
+        "name": "futures_open_time",
+        "type": "string"
+      },
+      {
+        "name": "futures_price",
+        "type": "string"
+      },
+      {
+        "name": "futures_price_time",
+        "type": "string"
+      },
+      {
+        "name": "latest_funding_available_at",
+        "type": "string"
+      },
+      {
+        "name": "latest_funding_time",
+        "type": "string"
+      },
+      {
+        "name": "mark_available_at",
+        "type": "int64"
+      },
+      {
+        "name": "mark_open_time",
+        "type": "int64"
+      },
+      {
+        "name": "mark_price",
+        "type": "string"
+      },
+      {
+        "name": "mark_time",
+        "type": "string"
+      },
+      {
+        "name": "planned_hedge_error",
+        "type": "string"
+      },
+      {
+        "name": "portfolio_state",
+        "type": "string"
+      },
+      {
+        "name": "price_alignment_enforced",
+        "type": "string"
+      },
+      {
+        "name": "proposed_futures_quantity",
+        "type": "string"
+      },
+      {
+        "name": "proposed_futures_side",
+        "type": "string"
+      },
+      {
+        "name": "proposed_gross_spot",
+        "type": "string"
+      },
+      {
+        "name": "proposed_net_spot",
+        "type": "string"
+      },
+      {
+        "name": "proposed_short",
+        "type": "string"
+      },
+      {
+        "name": "proposed_short_delta",
+        "type": "string"
+      },
+      {
+        "name": "proposed_spot_delta",
+        "type": "string"
+      },
+      {
+        "name": "proposed_spot_side",
+        "type": "string"
+      },
+      {
+        "name": "prospective_pair_feasible",
+        "type": "string"
+      },
+      {
+        "name": "prospective_sizing_reason",
+        "type": "string"
+      },
+      {
+        "name": "sequential_rejection",
+        "type": "string"
+      },
+      {
+        "name": "simultaneous_not_evaluable",
+        "type": "string"
+      },
+      {
+        "name": "simultaneous_rejections",
+        "type": "string"
+      },
+      {
+        "name": "sizing_enforcement",
+        "type": "string"
+      },
+      {
+        "name": "sizing_feasible",
+        "type": "string"
+      },
+      {
+        "name": "sizing_futures_price",
+        "type": "string"
+      },
+      {
+        "name": "sizing_futures_price_time",
+        "type": "string"
+      },
+      {
+        "name": "sizing_reason",
+        "type": "string"
+      },
+      {
+        "name": "sizing_spot_price",
+        "type": "string"
+      },
+      {
+        "name": "sizing_spot_price_time",
+        "type": "string"
+      },
+      {
+        "name": "spot_available_at",
+        "type": "string"
+      },
+      {
+        "name": "spot_end_time",
+        "type": "string"
+      },
+      {
+        "name": "spot_open_time",
+        "type": "string"
+      },
+      {
+        "name": "spot_price",
+        "type": "string"
+      },
+      {
+        "name": "spot_price_time",
+        "type": "string"
+      },
+      {
+        "name": "target_quantity",
+        "type": "string"
+      },
+      {
+        "name": "target_usdt",
+        "type": "string"
+      },
+      {
+        "name": "unallocated_target_usdt",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "dependency": "parent",
+    "path": "corridas/run_ad71d751b20623006c195ff3/positions.parquet",
+    "rows": 3800,
+    "fields": [
+      {
+        "name": "run_id",
+        "type": "string"
+      },
+      {
+        "name": "symbol",
+        "type": "string"
+      },
+      {
+        "name": "strategy",
+        "type": "string"
+      },
+      {
+        "name": "funding_filter_enabled",
+        "type": "bool"
+      },
+      {
+        "name": "time_ns",
+        "type": "int64"
+      },
+      {
+        "name": "timestamp_utc",
+        "type": "string"
+      },
+      {
+        "name": "units",
+        "type": "string"
+      },
+      {
+        "name": "data_kind",
+        "type": "string"
+      },
+      {
+        "name": "state",
+        "type": "string"
+      },
+      {
+        "name": "snapshot_kind",
+        "type": "string"
+      },
+      {
+        "name": "spot",
+        "type": "string"
+      },
+      {
+        "name": "short",
+        "type": "string"
+      },
+      {
+        "name": "average",
+        "type": "string"
+      },
+      {
+        "name": "collateral",
+        "type": "string"
+      },
+      {
+        "name": "spot_cost",
+        "type": "string"
+      },
+      {
+        "name": "realized_spot",
+        "type": "string"
+      },
+      {
+        "name": "realized_futures",
+        "type": "string"
+      },
+      {
+        "name": "funding",
+        "type": "string"
+      },
+      {
+        "name": "fees",
+        "type": "string"
+      },
+      {
+        "name": "liquidation_fees",
+        "type": "string"
+      },
+      {
+        "name": "slippage",
+        "type": "string"
+      },
+      {
+        "name": "spot_price",
+        "type": "string"
+      },
+      {
+        "name": "mark_price",
+        "type": "string"
+      },
+      {
+        "name": "dust_spot",
+        "type": "string"
+      },
+      {
+        "name": "tradable_spot",
+        "type": "string"
+      },
+      {
+        "name": "mark_available_at_utc",
+        "type": "string"
+      },
+      {
+        "name": "mark_close_time_ns_utc",
+        "type": "string"
+      },
+      {
+        "name": "spot_price_time_ns_utc",
+        "type": "string"
+      },
+      {
+        "name": "mark_age_seconds",
+        "type": "string"
+      },
+      {
+        "name": "mark_available_at",
+        "type": "int64"
+      },
+      {
+        "name": "mark_close_time_ns",
+        "type": "int64"
+      },
+      {
+        "name": "spot_price_age_seconds",
+        "type": "string"
+      },
+      {
+        "name": "spot_price_time_ns",
+        "type": "int64"
+      }
+    ]
+  },
+  {
+    "dependency": "parent",
+    "path": "corridas/run_dfea4b7ac1475668d5968c97/ledger.parquet",
+    "rows": 10159,
+    "fields": [
+      {
+        "name": "run_id",
+        "type": "string"
+      },
+      {
+        "name": "symbol",
+        "type": "string"
+      },
+      {
+        "name": "strategy",
+        "type": "string"
+      },
+      {
+        "name": "funding_filter_enabled",
+        "type": "bool"
+      },
+      {
+        "name": "time_ns",
+        "type": "int64"
+      },
+      {
+        "name": "timestamp_utc",
+        "type": "string"
+      },
+      {
+        "name": "units",
+        "type": "string"
+      },
+      {
+        "name": "data_kind",
+        "type": "string"
+      },
+      {
+        "name": "event_id",
+        "type": "string"
+      },
+      {
+        "name": "kind",
+        "type": "string"
+      },
+      {
+        "name": "amount_usdt",
+        "type": "string"
+      },
+      {
+        "name": "fee",
+        "type": "string"
+      },
+      {
+        "name": "free_spot",
+        "type": "string"
+      },
+      {
+        "name": "free_futures",
+        "type": "string"
+      },
+      {
+        "name": "debt",
+        "type": "string"
+      },
+      {
+        "name": "spot",
+        "type": "string"
+      },
+      {
+        "name": "short",
+        "type": "string"
+      },
+      {
+        "name": "average",
+        "type": "string"
+      },
+      {
+        "name": "collateral",
+        "type": "string"
+      },
+      {
+        "name": "base_fee_quantity",
+        "type": "string"
+      },
+      {
+        "name": "cash_futures_change",
+        "type": "string"
+      },
+      {
+        "name": "cash_spot_change",
+        "type": "string"
+      },
+      {
+        "name": "collateral_change",
+        "type": "string"
+      },
+      {
+        "name": "debt_change",
+        "type": "string"
+      },
+      {
+        "name": "fee_asset",
+        "type": "string"
+      },
+      {
+        "name": "funding",
+        "type": "string"
+      },
+      {
+        "name": "liquidation_fee",
+        "type": "string"
+      },
+      {
+        "name": "open_loss",
+        "type": "string"
+      },
+      {
+        "name": "pnl",
+        "type": "string"
+      },
+      {
+        "name": "price",
+        "type": "string"
+      },
+      {
+        "name": "quantity",
+        "type": "string"
+      },
+      {
+        "name": "reference_price",
+        "type": "string"
+      },
+      {
+        "name": "spot_cost",
+        "type": "string"
+      },
+      {
+        "name": "spot_proceeds",
+        "type": "string"
+      },
+      {
+        "name": "transfer_futures_to_spot",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "dependency": "parent",
+    "path": "corridas/run_dfea4b7ac1475668d5968c97/fills.parquet",
+    "rows": 332,
+    "fields": [
+      {
+        "name": "run_id",
+        "type": "string"
+      },
+      {
+        "name": "symbol",
+        "type": "string"
+      },
+      {
+        "name": "strategy",
+        "type": "string"
+      },
+      {
+        "name": "funding_filter_enabled",
+        "type": "bool"
+      },
+      {
+        "name": "time_ns",
+        "type": "int64"
+      },
+      {
+        "name": "timestamp_utc",
+        "type": "string"
+      },
+      {
+        "name": "units",
+        "type": "string"
+      },
+      {
+        "name": "data_kind",
+        "type": "string"
+      },
+      {
+        "name": "fill_id",
+        "type": "string"
+      },
+      {
+        "name": "order_id",
+        "type": "string"
+      },
+      {
+        "name": "market",
+        "type": "string"
+      },
+      {
+        "name": "side",
+        "type": "string"
+      },
+      {
+        "name": "quantity",
+        "type": "string"
+      },
+      {
+        "name": "price",
+        "type": "string"
+      },
+      {
+        "name": "reference_price",
+        "type": "string"
+      },
+      {
+        "name": "trade_id",
+        "type": "string"
+      },
+      {
+        "name": "fee_rate",
+        "type": "string"
+      },
+      {
+        "name": "liquidation",
+        "type": "bool"
+      },
+      {
+        "name": "participation",
+        "type": "string"
+      },
+      {
+        "name": "recent_volume_quantity",
+        "type": "string"
+      },
+      {
+        "name": "partial",
+        "type": "bool"
+      },
+      {
+        "name": "remaining_quantity",
+        "type": "string"
+      },
+      {
+        "name": "window_start",
+        "type": "int64"
+      },
+      {
+        "name": "window_end",
+        "type": "int64"
+      },
+      {
+        "name": "slippage_rate",
+        "type": "string"
+      },
+      {
+        "name": "execution_model",
+        "type": "string"
+      },
+      {
+        "name": "window_base_volume",
+        "type": "string"
+      },
+      {
+        "name": "window_quote_volume",
+        "type": "string"
+      },
+      {
+        "name": "max_volume_participation",
+        "type": "string"
+      },
+      {
+        "name": "capacity_used",
+        "type": "string"
+      },
+      {
+        "name": "fill_reason",
+        "type": "string"
+      },
+      {
+        "name": "source_file",
+        "type": "string"
+      },
+      {
+        "name": "window_end_utc",
+        "type": "string"
+      },
+      {
+        "name": "window_start_utc",
+        "type": "string"
+      },
+      {
+        "name": "participation_window_seconds",
+        "type": "string"
+      },
+      {
+        "name": "purpose",
+        "type": "string"
+      },
+      {
+        "name": "rounding_cost",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "dependency": "parent",
+    "path": "corridas/run_dfea4b7ac1475668d5968c97/risk_events.parquet",
+    "rows": 1437,
+    "fields": [
+      {
+        "name": "run_id",
+        "type": "string"
+      },
+      {
+        "name": "symbol",
+        "type": "string"
+      },
+      {
+        "name": "strategy",
+        "type": "string"
+      },
+      {
+        "name": "funding_filter_enabled",
+        "type": "bool"
+      },
+      {
+        "name": "time_ns",
+        "type": "int64"
+      },
+      {
+        "name": "timestamp_utc",
+        "type": "string"
+      },
+      {
+        "name": "units",
+        "type": "string"
+      },
+      {
+        "name": "data_kind",
+        "type": "string"
+      },
+      {
+        "name": "kind",
+        "type": "string"
+      },
+      {
+        "name": "cause",
+        "type": "string"
+      },
+      {
+        "name": "previous",
+        "type": "string"
+      },
+      {
+        "name": "state",
+        "type": "string"
+      },
+      {
+        "name": "order_id",
+        "type": "string"
+      },
+      {
+        "name": "cycle_id",
+        "type": "string"
+      },
+      {
+        "name": "next_expiry_utc",
+        "type": "string"
+      },
+      {
+        "name": "liquidation",
+        "type": "bool"
+      },
+      {
+        "name": "next_expiry",
+        "type": "string"
+      },
+      {
+        "name": "purpose",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "dependency": "parent",
+    "path": "corridas/run_dfea4b7ac1475668d5968c97/orders.parquet",
+    "rows": 2209,
+    "fields": [
+      {
+        "name": "run_id",
+        "type": "string"
+      },
+      {
+        "name": "symbol",
+        "type": "string"
+      },
+      {
+        "name": "strategy",
+        "type": "string"
+      },
+      {
+        "name": "funding_filter_enabled",
+        "type": "bool"
+      },
+      {
+        "name": "time_ns",
+        "type": "int64"
+      },
+      {
+        "name": "timestamp_utc",
+        "type": "string"
+      },
+      {
+        "name": "units",
+        "type": "string"
+      },
+      {
+        "name": "data_kind",
+        "type": "string"
+      },
+      {
+        "name": "order_id",
+        "type": "string"
+      },
+      {
+        "name": "market",
+        "type": "string"
+      },
+      {
+        "name": "side",
+        "type": "string"
+      },
+      {
+        "name": "quantity",
+        "type": "string"
+      },
+      {
+        "name": "submitted_at",
+        "type": "int64"
+      },
+      {
+        "name": "deadline",
+        "type": "int64"
+      },
+      {
+        "name": "purpose",
+        "type": "string"
+      },
+      {
+        "name": "status",
+        "type": "string"
+      },
+      {
+        "name": "action",
+        "type": "string"
+      },
+      {
+        "name": "record_type",
+        "type": "string"
+      },
+      {
+        "name": "deadline_utc",
+        "type": "string"
+      },
+      {
+        "name": "submitted_at_utc",
+        "type": "string"
+      },
+      {
+        "name": "window_end_utc",
+        "type": "string"
+      },
+      {
+        "name": "window_start_utc",
+        "type": "string"
+      },
+      {
+        "name": "cancel_requested_at",
+        "type": "string"
+      },
+      {
+        "name": "filled_quantity",
+        "type": "string"
+      },
+      {
+        "name": "recent_volume_quantity",
+        "type": "string"
+      },
+      {
+        "name": "reference_ids",
+        "type": "string"
+      },
+      {
+        "name": "remaining_quantity",
+        "type": "string"
+      },
+      {
+        "name": "vwap_notional",
+        "type": "string"
+      },
+      {
+        "name": "vwap_quantity",
+        "type": "string"
+      },
+      {
+        "name": "window_end",
+        "type": "int64"
+      },
+      {
+        "name": "window_start",
+        "type": "int64"
+      }
+    ]
+  },
+  {
+    "dependency": "parent",
+    "path": "corridas/run_dfea4b7ac1475668d5968c97/signals.parquet",
+    "rows": 10224,
+    "fields": [
+      {
+        "name": "run_id",
+        "type": "string"
+      },
+      {
+        "name": "symbol",
+        "type": "string"
+      },
+      {
+        "name": "strategy",
+        "type": "string"
+      },
+      {
+        "name": "funding_filter_enabled",
+        "type": "bool"
+      },
+      {
+        "name": "time_ns",
+        "type": "int64"
+      },
+      {
+        "name": "timestamp_utc",
+        "type": "string"
+      },
+      {
+        "name": "units",
+        "type": "string"
+      },
+      {
+        "name": "data_kind",
+        "type": "string"
+      },
+      {
+        "name": "anchor",
+        "type": "int64"
+      },
+      {
+        "name": "history_start",
+        "type": "int64"
+      },
+      {
+        "name": "forecast",
+        "type": "string"
+      },
+      {
+        "name": "no_change",
+        "type": "string"
+      },
+      {
+        "name": "valid",
+        "type": "bool"
+      },
+      {
+        "name": "forecast_reason",
+        "type": "string"
+      },
+      {
+        "name": "decision",
+        "type": "string"
+      },
+      {
+        "name": "estimated_cycle_cost",
+        "type": "string"
+      },
+      {
+        "name": "basis",
+        "type": "string"
+      },
+      {
+        "name": "anchor_utc",
+        "type": "string"
+      },
+      {
+        "name": "history_start_utc",
+        "type": "string"
+      },
+      {
+        "name": "mark_available_at_utc",
+        "type": "string"
+      },
+      {
+        "name": "mark_open_time_utc",
+        "type": "string"
+      },
+      {
+        "name": "available_cash",
+        "type": "string"
+      },
+      {
+        "name": "basis_above_max",
+        "type": "string"
+      },
+      {
+        "name": "basis_negative",
+        "type": "string"
+      },
+      {
+        "name": "basis_raw",
+        "type": "string"
+      },
+      {
+        "name": "budget_reason",
+        "type": "string"
+      },
+      {
+        "name": "budget_required_cash",
+        "type": "string"
+      },
+      {
+        "name": "cooldown_until",
+        "type": "string"
+      },
+      {
+        "name": "cost_futures_close_fee",
+        "type": "string"
+      },
+      {
+        "name": "cost_futures_open_fee",
+        "type": "string"
+      },
+      {
+        "name": "cost_slippage_per_order",
+        "type": "string"
+      },
+      {
+        "name": "cost_slippage_total",
+        "type": "string"
+      },
+      {
+        "name": "cost_spot_close_fee",
+        "type": "string"
+      },
+      {
+        "name": "cost_spot_open_fee",
+        "type": "string"
+      },
+      {
+        "name": "current_short",
+        "type": "string"
+      },
+      {
+        "name": "current_spot",
+        "type": "string"
+      },
+      {
+        "name": "data_valid",
+        "type": "string"
+      },
+      {
+        "name": "decision_kind",
+        "type": "string"
+      },
+      {
+        "name": "decision_time",
+        "type": "string"
+      },
+      {
+        "name": "equity_snapshot",
+        "type": "string"
+      },
+      {
+        "name": "filter_basis_above_max",
+        "type": "string"
+      },
+      {
+        "name": "filter_basis_negative",
+        "type": "string"
+      },
+      {
+        "name": "filter_budget",
+        "type": "string"
+      },
+      {
+        "name": "filter_cooldown",
+        "type": "string"
+      },
+      {
+        "name": "filter_coverage",
+        "type": "string"
+      },
+      {
+        "name": "filter_data_valid",
+        "type": "string"
+      },
+      {
+        "name": "filter_debt",
+        "type": "string"
+      },
+      {
+        "name": "filter_forecast",
+        "type": "string"
+      },
+      {
+        "name": "filter_freshness",
+        "type": "string"
+      },
+      {
+        "name": "filter_funding",
+        "type": "string"
+      },
+      {
+        "name": "filter_mark",
+        "type": "string"
+      },
+      {
+        "name": "filter_operational",
+        "type": "string"
+      },
+      {
+        "name": "filter_order",
+        "type": "string"
+      },
+      {
+        "name": "filter_pending_orders",
+        "type": "string"
+      },
+      {
+        "name": "filter_price_alignment",
+        "type": "string"
+      },
+      {
+        "name": "filter_rules",
+        "type": "string"
+      },
+      {
+        "name": "filter_sizing",
+        "type": "string"
+      },
+      {
+        "name": "filter_state_active",
+        "type": "string"
+      },
+      {
+        "name": "forecast_anchor",
+        "type": "string"
+      },
+      {
+        "name": "forecast_available_at",
+        "type": "string"
+      },
+      {
+        "name": "forecast_cost_gap",
+        "type": "string"
+      },
+      {
+        "name": "forecast_history_start",
+        "type": "string"
+      },
+      {
+        "name": "forecast_no_change",
+        "type": "string"
+      },
+      {
+        "name": "funding_anchor",
+        "type": "string"
+      },
+      {
+        "name": "futures_available_at",
+        "type": "string"
+      },
+      {
+        "name": "futures_end_time",
+        "type": "string"
+      },
+      {
+        "name": "futures_open_time",
+        "type": "string"
+      },
+      {
+        "name": "futures_price",
+        "type": "string"
+      },
+      {
+        "name": "futures_price_time",
+        "type": "string"
+      },
+      {
+        "name": "latest_funding_available_at",
+        "type": "string"
+      },
+      {
+        "name": "latest_funding_time",
+        "type": "string"
+      },
+      {
+        "name": "mark_available_at",
+        "type": "int64"
+      },
+      {
+        "name": "mark_open_time",
+        "type": "int64"
+      },
+      {
+        "name": "mark_price",
+        "type": "string"
+      },
+      {
+        "name": "mark_time",
+        "type": "string"
+      },
+      {
+        "name": "planned_hedge_error",
+        "type": "string"
+      },
+      {
+        "name": "portfolio_state",
+        "type": "string"
+      },
+      {
+        "name": "price_alignment_enforced",
+        "type": "string"
+      },
+      {
+        "name": "proposed_futures_quantity",
+        "type": "string"
+      },
+      {
+        "name": "proposed_futures_side",
+        "type": "string"
+      },
+      {
+        "name": "proposed_gross_spot",
+        "type": "string"
+      },
+      {
+        "name": "proposed_net_spot",
+        "type": "string"
+      },
+      {
+        "name": "proposed_short",
+        "type": "string"
+      },
+      {
+        "name": "proposed_short_delta",
+        "type": "string"
+      },
+      {
+        "name": "proposed_spot_delta",
+        "type": "string"
+      },
+      {
+        "name": "proposed_spot_side",
+        "type": "string"
+      },
+      {
+        "name": "prospective_pair_feasible",
+        "type": "string"
+      },
+      {
+        "name": "prospective_sizing_reason",
+        "type": "string"
+      },
+      {
+        "name": "sequential_rejection",
+        "type": "string"
+      },
+      {
+        "name": "simultaneous_not_evaluable",
+        "type": "string"
+      },
+      {
+        "name": "simultaneous_rejections",
+        "type": "string"
+      },
+      {
+        "name": "sizing_enforcement",
+        "type": "string"
+      },
+      {
+        "name": "sizing_feasible",
+        "type": "string"
+      },
+      {
+        "name": "sizing_futures_price",
+        "type": "string"
+      },
+      {
+        "name": "sizing_futures_price_time",
+        "type": "string"
+      },
+      {
+        "name": "sizing_reason",
+        "type": "string"
+      },
+      {
+        "name": "sizing_spot_price",
+        "type": "string"
+      },
+      {
+        "name": "sizing_spot_price_time",
+        "type": "string"
+      },
+      {
+        "name": "spot_available_at",
+        "type": "string"
+      },
+      {
+        "name": "spot_end_time",
+        "type": "string"
+      },
+      {
+        "name": "spot_open_time",
+        "type": "string"
+      },
+      {
+        "name": "spot_price",
+        "type": "string"
+      },
+      {
+        "name": "spot_price_time",
+        "type": "string"
+      },
+      {
+        "name": "target_quantity",
+        "type": "string"
+      },
+      {
+        "name": "target_usdt",
+        "type": "string"
+      },
+      {
+        "name": "unallocated_target_usdt",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "dependency": "parent",
+    "path": "corridas/run_dfea4b7ac1475668d5968c97/renewal_diagnostics.parquet",
+    "rows": 458,
+    "fields": [
+      {
+        "name": "run_id",
+        "type": "string"
+      },
+      {
+        "name": "symbol",
+        "type": "string"
+      },
+      {
+        "name": "strategy",
+        "type": "string"
+      },
+      {
+        "name": "funding_filter_enabled",
+        "type": "bool"
+      },
+      {
+        "name": "time_ns",
+        "type": "int64"
+      },
+      {
+        "name": "timestamp_utc",
+        "type": "string"
+      },
+      {
+        "name": "units",
+        "type": "string"
+      },
+      {
+        "name": "data_kind",
+        "type": "string"
+      },
+      {
+        "name": "decision_kind",
+        "type": "string"
+      },
+      {
+        "name": "decision",
+        "type": "string"
+      },
+      {
+        "name": "forecast",
+        "type": "string"
+      },
+      {
+        "name": "estimated_cycle_cost",
+        "type": "string"
+      },
+      {
+        "name": "basis",
+        "type": "string"
+      },
+      {
+        "name": "renewal_funding_threshold",
+        "type": "string"
+      },
+      {
+        "name": "actual_outcome",
+        "type": "string"
+      },
+      {
+        "name": "renewal_status_kind",
+        "type": "string"
+      },
+      {
+        "name": "state_after",
+        "type": "string"
+      },
+      {
+        "name": "expiry_after",
+        "type": "string"
+      },
+      {
+        "name": "mark_available_at_utc",
+        "type": "string"
+      },
+      {
+        "name": "mark_open_time_utc",
+        "type": "string"
+      },
+      {
+        "name": "available_cash",
+        "type": "string"
+      },
+      {
+        "name": "basis_above_max",
+        "type": "string"
+      },
+      {
+        "name": "basis_negative",
+        "type": "string"
+      },
+      {
+        "name": "basis_raw",
+        "type": "string"
+      },
+      {
+        "name": "budget_reason",
+        "type": "string"
+      },
+      {
+        "name": "budget_required_cash",
+        "type": "string"
+      },
+      {
+        "name": "cooldown_until",
+        "type": "string"
+      },
+      {
+        "name": "cost_futures_close_fee",
+        "type": "string"
+      },
+      {
+        "name": "cost_futures_open_fee",
+        "type": "string"
+      },
+      {
+        "name": "cost_slippage_per_order",
+        "type": "string"
+      },
+      {
+        "name": "cost_slippage_total",
+        "type": "string"
+      },
+      {
+        "name": "cost_spot_close_fee",
+        "type": "string"
+      },
+      {
+        "name": "cost_spot_open_fee",
+        "type": "string"
+      },
+      {
+        "name": "current_short",
+        "type": "string"
+      },
+      {
+        "name": "current_spot",
+        "type": "string"
+      },
+      {
+        "name": "data_valid",
+        "type": "string"
+      },
+      {
+        "name": "decision_time",
+        "type": "string"
+      },
+      {
+        "name": "entry_basis_filter_applied",
+        "type": "string"
+      },
+      {
+        "name": "entry_filter_order",
+        "type": "string"
+      },
+      {
+        "name": "entry_funding_cost_filter_applied",
+        "type": "string"
+      },
+      {
+        "name": "entry_simultaneous_not_evaluable",
+        "type": "string"
+      },
+      {
+        "name": "entry_simultaneous_rejections",
+        "type": "string"
+      },
+      {
+        "name": "entry_sizing_filter_applied",
+        "type": "string"
+      },
+      {
+        "name": "equity_snapshot",
+        "type": "string"
+      },
+      {
+        "name": "filter_basis_above_max",
+        "type": "string"
+      },
+      {
+        "name": "filter_basis_negative",
+        "type": "string"
+      },
+      {
+        "name": "filter_budget",
+        "type": "string"
+      },
+      {
+        "name": "filter_cooldown",
+        "type": "string"
+      },
+      {
+        "name": "filter_coverage",
+        "type": "string"
+      },
+      {
+        "name": "filter_data_valid",
+        "type": "string"
+      },
+      {
+        "name": "filter_debt",
+        "type": "string"
+      },
+      {
+        "name": "filter_forecast",
+        "type": "string"
+      },
+      {
+        "name": "filter_freshness",
+        "type": "string"
+      },
+      {
+        "name": "filter_funding",
+        "type": "string"
+      },
+      {
+        "name": "filter_funding_positive",
+        "type": "string"
+      },
+      {
+        "name": "filter_mark",
+        "type": "string"
+      },
+      {
+        "name": "filter_operational",
+        "type": "string"
+      },
+      {
+        "name": "filter_order",
+        "type": "string"
+      },
+      {
+        "name": "filter_pending_orders",
+        "type": "string"
+      },
+      {
+        "name": "filter_price_alignment",
+        "type": "string"
+      },
+      {
+        "name": "filter_rules",
+        "type": "string"
+      },
+      {
+        "name": "filter_sizing",
+        "type": "string"
+      },
+      {
+        "name": "filter_state_active",
+        "type": "string"
+      },
+      {
+        "name": "filter_state_holding",
+        "type": "string"
+      },
+      {
+        "name": "forecast_anchor",
+        "type": "string"
+      },
+      {
+        "name": "forecast_available_at",
+        "type": "string"
+      },
+      {
+        "name": "forecast_cost_gap",
+        "type": "string"
+      },
+      {
+        "name": "forecast_history_start",
+        "type": "string"
+      },
+      {
+        "name": "forecast_no_change",
+        "type": "string"
+      },
+      {
+        "name": "forecast_reason",
+        "type": "string"
+      },
+      {
+        "name": "funding_anchor",
+        "type": "string"
+      },
+      {
+        "name": "futures_available_at",
+        "type": "string"
+      },
+      {
+        "name": "futures_end_time",
+        "type": "string"
+      },
+      {
+        "name": "futures_open_time",
+        "type": "string"
+      },
+      {
+        "name": "futures_price",
+        "type": "string"
+      },
+      {
+        "name": "futures_price_time",
+        "type": "string"
+      },
+      {
+        "name": "latest_funding_available_at",
+        "type": "string"
+      },
+      {
+        "name": "latest_funding_time",
+        "type": "string"
+      },
+      {
+        "name": "mark_available_at",
+        "type": "int64"
+      },
+      {
+        "name": "mark_open_time",
+        "type": "int64"
+      },
+      {
+        "name": "mark_price",
+        "type": "string"
+      },
+      {
+        "name": "mark_time",
+        "type": "string"
+      },
+      {
+        "name": "planned_hedge_error",
+        "type": "string"
+      },
+      {
+        "name": "portfolio_state",
+        "type": "string"
+      },
+      {
+        "name": "price_alignment_enforced",
+        "type": "string"
+      },
+      {
+        "name": "proposed_futures_quantity",
+        "type": "string"
+      },
+      {
+        "name": "proposed_futures_side",
+        "type": "string"
+      },
+      {
+        "name": "proposed_gross_spot",
+        "type": "string"
+      },
+      {
+        "name": "proposed_net_spot",
+        "type": "string"
+      },
+      {
+        "name": "proposed_short",
+        "type": "string"
+      },
+      {
+        "name": "proposed_short_delta",
+        "type": "string"
+      },
+      {
+        "name": "proposed_spot_delta",
+        "type": "string"
+      },
+      {
+        "name": "proposed_spot_side",
+        "type": "string"
+      },
+      {
+        "name": "prospective_pair_feasible",
+        "type": "string"
+      },
+      {
+        "name": "prospective_sizing_reason",
+        "type": "string"
+      },
+      {
+        "name": "sequential_rejection",
+        "type": "string"
+      },
+      {
+        "name": "simultaneous_not_evaluable",
+        "type": "string"
+      },
+      {
+        "name": "simultaneous_rejections",
+        "type": "string"
+      },
+      {
+        "name": "sizing_enforcement",
+        "type": "string"
+      },
+      {
+        "name": "sizing_feasible",
+        "type": "string"
+      },
+      {
+        "name": "sizing_futures_price",
+        "type": "string"
+      },
+      {
+        "name": "sizing_futures_price_time",
+        "type": "string"
+      },
+      {
+        "name": "sizing_reason",
+        "type": "string"
+      },
+      {
+        "name": "sizing_spot_price",
+        "type": "string"
+      },
+      {
+        "name": "sizing_spot_price_time",
+        "type": "string"
+      },
+      {
+        "name": "spot_available_at",
+        "type": "string"
+      },
+      {
+        "name": "spot_end_time",
+        "type": "string"
+      },
+      {
+        "name": "spot_open_time",
+        "type": "string"
+      },
+      {
+        "name": "spot_price",
+        "type": "string"
+      },
+      {
+        "name": "spot_price_time",
+        "type": "string"
+      },
+      {
+        "name": "target_quantity",
+        "type": "string"
+      },
+      {
+        "name": "target_usdt",
+        "type": "string"
+      },
+      {
+        "name": "unallocated_target_usdt",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "dependency": "parent",
+    "path": "corridas/run_dfea4b7ac1475668d5968c97/positions.parquet",
+    "rows": 4128,
+    "fields": [
+      {
+        "name": "run_id",
+        "type": "string"
+      },
+      {
+        "name": "symbol",
+        "type": "string"
+      },
+      {
+        "name": "strategy",
+        "type": "string"
+      },
+      {
+        "name": "funding_filter_enabled",
+        "type": "bool"
+      },
+      {
+        "name": "time_ns",
+        "type": "int64"
+      },
+      {
+        "name": "timestamp_utc",
+        "type": "string"
+      },
+      {
+        "name": "units",
+        "type": "string"
+      },
+      {
+        "name": "data_kind",
+        "type": "string"
+      },
+      {
+        "name": "state",
+        "type": "string"
+      },
+      {
+        "name": "snapshot_kind",
+        "type": "string"
+      },
+      {
+        "name": "spot",
+        "type": "string"
+      },
+      {
+        "name": "short",
+        "type": "string"
+      },
+      {
+        "name": "average",
+        "type": "string"
+      },
+      {
+        "name": "collateral",
+        "type": "string"
+      },
+      {
+        "name": "spot_cost",
+        "type": "string"
+      },
+      {
+        "name": "realized_spot",
+        "type": "string"
+      },
+      {
+        "name": "realized_futures",
+        "type": "string"
+      },
+      {
+        "name": "funding",
+        "type": "string"
+      },
+      {
+        "name": "fees",
+        "type": "string"
+      },
+      {
+        "name": "liquidation_fees",
+        "type": "string"
+      },
+      {
+        "name": "slippage",
+        "type": "string"
+      },
+      {
+        "name": "spot_price",
+        "type": "string"
+      },
+      {
+        "name": "mark_price",
+        "type": "string"
+      },
+      {
+        "name": "dust_spot",
+        "type": "string"
+      },
+      {
+        "name": "tradable_spot",
+        "type": "string"
+      },
+      {
+        "name": "mark_available_at_utc",
+        "type": "string"
+      },
+      {
+        "name": "mark_close_time_ns_utc",
+        "type": "string"
+      },
+      {
+        "name": "spot_price_time_ns_utc",
+        "type": "string"
+      },
+      {
+        "name": "mark_age_seconds",
+        "type": "string"
+      },
+      {
+        "name": "mark_available_at",
+        "type": "int64"
+      },
+      {
+        "name": "mark_close_time_ns",
+        "type": "int64"
+      },
+      {
+        "name": "spot_price_age_seconds",
+        "type": "string"
+      },
+      {
+        "name": "spot_price_time_ns",
+        "type": "int64"
+      }
+    ]
+  },
+  {
+    "dependency": "intraday",
+    "path": "evidencia/eventos_financieros.parquet",
+    "rows": 37756,
+    "fields": [
+      {
+        "name": "time_ns",
+        "type": "int64"
+      },
+      {
+        "name": "sequence",
+        "type": "int64"
+      },
+      {
+        "name": "state_index",
+        "type": "int64"
+      },
+      {
+        "name": "phase",
+        "type": "int8"
+      },
+      {
+        "name": "free_spot_usdt",
+        "type": "double"
+      },
+      {
+        "name": "free_futures_usdt",
+        "type": "double"
+      },
+      {
+        "name": "debt_usdt",
+        "type": "double"
+      },
+      {
+        "name": "BTCUSDT_spot_price",
+        "type": "double"
+      },
+      {
+        "name": "BTCUSDT_spot_available_at",
+        "type": "int64"
+      },
+      {
+        "name": "BTCUSDT_spot_open_time",
+        "type": "int64"
+      },
+      {
+        "name": "BTCUSDT_spot_end_time",
+        "type": "int64"
+      },
+      {
+        "name": "BTCUSDT_spot_source_id",
+        "type": "int64"
+      },
+      {
+        "name": "BTCUSDT_spot_estimated",
+        "type": "int64"
+      },
+      {
+        "name": "BTCUSDT_spot_age_ns",
+        "type": "int64"
+      },
+      {
+        "name": "BTCUSDT_spot_evaluable",
+        "type": "bool"
+      },
+      {
+        "name": "BTCUSDT_mark_price",
+        "type": "double"
+      },
+      {
+        "name": "BTCUSDT_mark_available_at",
+        "type": "int64"
+      },
+      {
+        "name": "BTCUSDT_mark_open_time",
+        "type": "int64"
+      },
+      {
+        "name": "BTCUSDT_mark_close_time",
+        "type": "int64"
+      },
+      {
+        "name": "BTCUSDT_mark_source_id",
+        "type": "int64"
+      },
+      {
+        "name": "BTCUSDT_mark_estimated",
+        "type": "int64"
+      },
+      {
+        "name": "BTCUSDT_mark_age_ns",
+        "type": "int64"
+      },
+      {
+        "name": "BTCUSDT_mark_evaluable",
+        "type": "bool"
+      },
+      {
+        "name": "BTCUSDT_futures_price",
+        "type": "double"
+      },
+      {
+        "name": "BTCUSDT_futures_available_at",
+        "type": "int64"
+      },
+      {
+        "name": "BTCUSDT_futures_open_time",
+        "type": "int64"
+      },
+      {
+        "name": "BTCUSDT_futures_end_time",
+        "type": "int64"
+      },
+      {
+        "name": "BTCUSDT_futures_source_id",
+        "type": "int64"
+      },
+      {
+        "name": "BTCUSDT_futures_estimated",
+        "type": "int64"
+      },
+      {
+        "name": "BTCUSDT_futures_age_ns",
+        "type": "int64"
+      },
+      {
+        "name": "BTCUSDT_futures_evaluable",
+        "type": "bool"
+      },
+      {
+        "name": "BTCUSDT_spot_proxy",
+        "type": "double"
+      },
+      {
+        "name": "BTCUSDT_proxy_active",
+        "type": "bool"
+      },
+      {
+        "name": "BTCUSDT_spot",
+        "type": "double"
+      },
+      {
+        "name": "BTCUSDT_short",
+        "type": "double"
+      },
+      {
+        "name": "BTCUSDT_average",
+        "type": "double"
+      },
+      {
+        "name": "BTCUSDT_collateral",
+        "type": "double"
+      },
+      {
+        "name": "BTCUSDT_notional_usdt",
+        "type": "double"
+      },
+      {
+        "name": "BTCUSDT_margin_balance_usdt",
+        "type": "double"
+      },
+      {
+        "name": "BTCUSDT_maintenance_usdt",
+        "type": "double"
+      },
+      {
+        "name": "BTCUSDT_headroom_usdt",
+        "type": "double"
+      },
+      {
+        "name": "BTCUSDT_margin_ratio",
+        "type": "double"
+      },
+      {
+        "name": "BTCUSDT_liquidation_price",
+        "type": "double"
+      },
+      {
+        "name": "BTCUSDT_liquidation_distance",
+        "type": "double"
+      },
+      {
+        "name": "BTCUSDT_preventive_topup_infimum_usdt",
+        "type": "double"
+      },
+      {
+        "name": "BTCUSDT_preventive_topup_strict",
+        "type": "bool"
+      },
+      {
+        "name": "BTCUSDT_maintenance_shortfall_usdt",
+        "type": "double"
+      },
+      {
+        "name": "BTCUSDT_net_exposure_usdt",
+        "type": "double"
+      },
+      {
+        "name": "BTCUSDT_asset_pnl_usdt",
+        "type": "double"
+      },
+      {
+        "name": "ETHUSDT_spot_price",
+        "type": "double"
+      },
+      {
+        "name": "ETHUSDT_spot_available_at",
+        "type": "int64"
+      },
+      {
+        "name": "ETHUSDT_spot_open_time",
+        "type": "int64"
+      },
+      {
+        "name": "ETHUSDT_spot_end_time",
+        "type": "int64"
+      },
+      {
+        "name": "ETHUSDT_spot_source_id",
+        "type": "int64"
+      },
+      {
+        "name": "ETHUSDT_spot_estimated",
+        "type": "int64"
+      },
+      {
+        "name": "ETHUSDT_spot_age_ns",
+        "type": "int64"
+      },
+      {
+        "name": "ETHUSDT_spot_evaluable",
+        "type": "bool"
+      },
+      {
+        "name": "ETHUSDT_mark_price",
+        "type": "double"
+      },
+      {
+        "name": "ETHUSDT_mark_available_at",
+        "type": "int64"
+      },
+      {
+        "name": "ETHUSDT_mark_open_time",
+        "type": "int64"
+      },
+      {
+        "name": "ETHUSDT_mark_close_time",
+        "type": "int64"
+      },
+      {
+        "name": "ETHUSDT_mark_source_id",
+        "type": "int64"
+      },
+      {
+        "name": "ETHUSDT_mark_estimated",
+        "type": "int64"
+      },
+      {
+        "name": "ETHUSDT_mark_age_ns",
+        "type": "int64"
+      },
+      {
+        "name": "ETHUSDT_mark_evaluable",
+        "type": "bool"
+      },
+      {
+        "name": "ETHUSDT_futures_price",
+        "type": "double"
+      },
+      {
+        "name": "ETHUSDT_futures_available_at",
+        "type": "int64"
+      },
+      {
+        "name": "ETHUSDT_futures_open_time",
+        "type": "int64"
+      },
+      {
+        "name": "ETHUSDT_futures_end_time",
+        "type": "int64"
+      },
+      {
+        "name": "ETHUSDT_futures_source_id",
+        "type": "int64"
+      },
+      {
+        "name": "ETHUSDT_futures_estimated",
+        "type": "int64"
+      },
+      {
+        "name": "ETHUSDT_futures_age_ns",
+        "type": "int64"
+      },
+      {
+        "name": "ETHUSDT_futures_evaluable",
+        "type": "bool"
+      },
+      {
+        "name": "ETHUSDT_spot_proxy",
+        "type": "double"
+      },
+      {
+        "name": "ETHUSDT_proxy_active",
+        "type": "bool"
+      },
+      {
+        "name": "ETHUSDT_spot",
+        "type": "double"
+      },
+      {
+        "name": "ETHUSDT_short",
+        "type": "double"
+      },
+      {
+        "name": "ETHUSDT_average",
+        "type": "double"
+      },
+      {
+        "name": "ETHUSDT_collateral",
+        "type": "double"
+      },
+      {
+        "name": "ETHUSDT_notional_usdt",
+        "type": "double"
+      },
+      {
+        "name": "ETHUSDT_margin_balance_usdt",
+        "type": "double"
+      },
+      {
+        "name": "ETHUSDT_maintenance_usdt",
+        "type": "double"
+      },
+      {
+        "name": "ETHUSDT_headroom_usdt",
+        "type": "double"
+      },
+      {
+        "name": "ETHUSDT_margin_ratio",
+        "type": "double"
+      },
+      {
+        "name": "ETHUSDT_liquidation_price",
+        "type": "double"
+      },
+      {
+        "name": "ETHUSDT_liquidation_distance",
+        "type": "double"
+      },
+      {
+        "name": "ETHUSDT_preventive_topup_infimum_usdt",
+        "type": "double"
+      },
+      {
+        "name": "ETHUSDT_preventive_topup_strict",
+        "type": "bool"
+      },
+      {
+        "name": "ETHUSDT_maintenance_shortfall_usdt",
+        "type": "double"
+      },
+      {
+        "name": "ETHUSDT_net_exposure_usdt",
+        "type": "double"
+      },
+      {
+        "name": "ETHUSDT_asset_pnl_usdt",
+        "type": "double"
+      },
+      {
+        "name": "equity_usdt",
+        "type": "double"
+      },
+      {
+        "name": "equity_proxy_usdt",
+        "type": "double"
+      },
+      {
+        "name": "free_cash_usdt",
+        "type": "double"
+      },
+      {
+        "name": "maintenance_need_joint_usdt",
+        "type": "double"
+      },
+      {
+        "name": "preventive_need_joint_infimum_usdt",
+        "type": "double"
+      },
+      {
+        "name": "preventive_joint_strict",
+        "type": "bool"
+      },
+      {
+        "name": "reservations_reserved_cash",
+        "type": "double"
+      },
+      {
+        "name": "reservations_available_known",
+        "type": "bool"
+      },
+      {
+        "name": "reservations_pending_orders_count",
+        "type": "int64"
+      },
+      {
+        "name": "reservations_reason",
+        "type": "string"
+      },
+      {
+        "name": "redistributable_cash_usdt",
+        "type": "double"
+      },
+      {
+        "name": "maintenance_external_deficit_usdt",
+        "type": "double"
+      },
+      {
+        "name": "maintenance_external_lower_bound_usdt",
+        "type": "double"
+      },
+      {
+        "name": "maintenance_external_upper_bound_usdt",
+        "type": "double"
+      },
+      {
+        "name": "preventive_external_deficit_usdt",
+        "type": "double"
+      },
+      {
+        "name": "preventive_external_lower_bound_usdt",
+        "type": "double"
+      },
+      {
+        "name": "preventive_external_upper_bound_usdt",
+        "type": "double"
+      },
+      {
+        "name": "run_id",
+        "type": "string"
+      }
+    ]
+  }
+]

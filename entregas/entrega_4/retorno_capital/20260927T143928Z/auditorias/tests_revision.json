@@ -1,0 +1,20 @@
+{
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "pytest",
+    "-p",
+    "no:cacheprovider",
+    "tests/unit/test_return_capital_accounting.py",
+    "tests/unit/test_return_capital_decisions.py",
+    "tests/unit/test_return_capital_package.py",
+    "tests/unit/test_rules_sensitivity_exposure.py",
+    "tests/unit/test_rules_sensitivity_h2.py",
+    "tests/unit/test_rules_sensitivity_correction_verifier.py",
+    "-q"
+  ],
+  "cwd": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting",
+  "exit_code": 0,
+  "elapsed_seconds": 41.20730686187744
+}

@@ -36,3 +36,6 @@
 # Keep the intraday evidence package byte-identical on later checkouts.
 /entregas/entrega_4/riesgo_intradia/** -text whitespace=cr-at-eol
 /entregas/entrega_4/riesgo_intradia/**/*.svg whitespace=-blank-at-eol,cr-at-eol
+# Preserve this new derivative and its public-source originals without Git EOL conversion.
+/entregas/entrega_4/retorno_capital/** -text whitespace=cr-at-eol
+/entregas/entrega_4/retorno_capital/**/*.svg whitespace=-blank-at-eol,cr-at-eol

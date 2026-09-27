@@ -1,0 +1,11 @@
+{
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\Paquete de evidencia\\verificar.py"
+  ],
+  "exit_code": 0,
+  "seconds": 1.4462092000176199
+}

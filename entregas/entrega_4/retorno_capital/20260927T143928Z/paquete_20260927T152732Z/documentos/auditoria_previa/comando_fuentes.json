@@ -1,0 +1,17 @@
+{
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\correccion_exposicion_h2_20260925T150139Z\\paquete_20260926T204312Z\\herramientas\\verify_rules_sensitivity_correction.py",
+    "--package",
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\correccion_exposicion_h2_20260925T150139Z\\paquete_20260926T204312Z",
+    "--parent",
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\20260925T005436Z",
+    "--output",
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\retorno_capital\\20260927T143928Z\\auditorias\\fuentes_padre_correccion.json"
+  ],
+  "exit_code": 0,
+  "seconds": 39.76379059997271
+}

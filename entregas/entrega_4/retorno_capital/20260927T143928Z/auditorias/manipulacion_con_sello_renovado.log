@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "C:\Users\pablo\AppData\Local\Temp\retorno-capital-tamper-l2t1skd2\paquete_20260927T152732Z\herramientas\scripts\verify_return_capital.py", line 40, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\pablo\AppData\Local\Temp\retorno-capital-tamper-l2t1skd2\paquete_20260927T152732Z\herramientas\scripts\verify_return_capital.py", line 28, in main
+    result = verify(args.package, dependencies)
+  File "C:\Users\pablo\AppData\Local\Temp\retorno-capital-tamper-l2t1skd2\paquete_20260927T152732Z\herramientas\scripts\return_capital\verification.py", line 238, in verify
+    result = check_tables(tables)
+  File "C:\Users\pablo\AppData\Local\Temp\retorno-capital-tamper-l2t1skd2\paquete_20260927T152732Z\herramientas\scripts\return_capital\verification.py", line 43, in check_tables
+    check_relations(tables, same_rows)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pablo\AppData\Local\Temp\retorno-capital-tamper-l2t1skd2\paquete_20260927T152732Z\herramientas\scripts\return_capital\relations.py", line 29, in check_relations
+    raise ValueError("Noncanonical period interval: " + name)
+ValueError: Noncanonical period interval: grupos_excluyentes

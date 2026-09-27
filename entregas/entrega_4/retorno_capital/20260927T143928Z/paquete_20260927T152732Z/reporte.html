@@ -1,0 +1,177 @@
+<!doctype html><html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Retorno y capital · BASE_E3</title><style>body{max-width:1180px;margin:48px auto;padding:0 24px;font:17px/1.65 system-ui;color:#183046;background:#fbfcfe}h1{font-size:36px;line-height:1.15}h2{margin-top:48px;border-top:2px solid #d9e4ed;padding-top:22px}h3{color:#245878}a{color:#075c8c}table{border-collapse:collapse;font-size:14px;width:100%;background:white}td{padding:9px 12px;border-bottom:1px solid #dce5ed;text-align:right}td:first-child{text-align:left}tr:first-child{font-weight:700;background:#e8eff6}.table-wrap{overflow-x:auto}figure{margin:28px 0}img{max-width:100%;height:auto}figcaption{font-size:13px;color:#52677a}</style><main><h1>Retorno, capital y restricciones de entrada</h1>
+<p>Entrega 4 · Bloque técnico local · Muestra continua [01/01/2022,01/09/2026) UTC. Sólo las dos BASE_E3, 10.000 USDT iniciales cada una. Concentración y restricciones: <strong>ejecutado</strong>. Benchmark: <strong>pendiente_aprobacion_benchmark</strong>. Este bloque no completa toda la Entrega 4.</p>
+<p><a href="documentos/protocolo.md">Protocolo</a> · <a href="documentos/mapa_fuentes.md">Mapa de fuentes</a> · <a href="documentos/propuesta_benchmark.md">Propuesta remunerada</a> · <a href="documentos/ficha_benchmark.json">Ficha exacta</a></p>
+<h2>Resultado y concentración</h2>
+<h3>Condicional</h3>
+<p>P&amp;L de cartera: <strong>785,76 USDT</strong>, retorno 7,86% y CAGR 1,63% sobre 1.704 días. Los tres ciclos positivos de mayor contribución reúnen 52,40% de G. G=790,76 y L=5,00 USDT; fuera de ciclo: -0,000811 USDT.</p>
+<div class="table-wrap"><table>
+<tr><td>Signo</td><td>Top solicitado</td><td>Cantidad efectiva</td><td>P&amp;L seleccionado (USDT)</td><td>% de G o L</td><td>% del neto de ciclos</td></tr>
+<tr><td>Ganancia</td><td>1</td><td>1</td><td>156,23</td><td>19,76%</td><td>19,88%</td></tr>
+<tr><td>Ganancia</td><td>3</td><td>3</td><td>414,36</td><td>52,40%</td><td>52,73%</td></tr>
+<tr><td>Ganancia</td><td>5</td><td>5</td><td>593,61</td><td>75,07%</td><td>75,55%</td></tr>
+<tr><td>Pérdida</td><td>1</td><td>1</td><td>-5,00</td><td>100,00%</td><td>-0,64%</td></tr>
+<tr><td>Pérdida</td><td>3</td><td>1</td><td>-5,00</td><td>100,00%</td><td>-0,64%</td></tr>
+<tr><td>Pérdida</td><td>5</td><td>1</td><td>-5,00</td><td>100,00%</td><td>-0,64%</td></tr>
+</table></div>
+<h3>Permanente</h3>
+<p>P&amp;L de cartera: <strong>1.680,07 USDT</strong>, retorno 16,80% y CAGR 3,38% sobre 1.704 días. Los tres ciclos positivos de mayor contribución reúnen 42,27% de G. G=1.707,99 y L=28,02 USDT; fuera de ciclo: 0,096487 USDT.</p>
+<div class="table-wrap"><table>
+<tr><td>Signo</td><td>Top solicitado</td><td>Cantidad efectiva</td><td>P&amp;L seleccionado (USDT)</td><td>% de G o L</td><td>% del neto de ciclos</td></tr>
+<tr><td>Ganancia</td><td>1</td><td>1</td><td>256,49</td><td>15,02%</td><td>15,27%</td></tr>
+<tr><td>Ganancia</td><td>3</td><td>3</td><td>721,94</td><td>42,27%</td><td>42,97%</td></tr>
+<tr><td>Ganancia</td><td>5</td><td>5</td><td>1.062,85</td><td>62,23%</td><td>63,27%</td></tr>
+<tr><td>Pérdida</td><td>1</td><td>1</td><td>-10,70</td><td>38,20%</td><td>-0,64%</td></tr>
+<tr><td>Pérdida</td><td>3</td><td>3</td><td>-25,91</td><td>92,47%</td><td>-1,54%</td></tr>
+<tr><td>Pérdida</td><td>5</td><td>4</td><td>-28,02</td><td>100,00%</td><td>-1,67%</td></tr>
+</table></div>
+<p>Los denominadores G/L incluyen únicamente los ciclos del período. El neto de ciclos puede diferir del de cartera por polvo fuera de ciclo. Los porcentajes sobre neto no son proporciones del capital; no se recortan si superan 100%. En los CSV se advierte neto no positivo o pequeño (menor al 10% de G+L). No se calcula un CAGR hipotético quitando los mejores ciclos.</p>
+<p><figure><img src="figuras/ciclos.png" alt="Vida completa de todos los ciclos, USDT"><figcaption>Vida completa de todos los ciclos, USDT</figcaption></figure></p>
+<p><a href="tablas/ciclos_vida.csv">Ciclos con todos sus componentes</a> · <a href="tablas/contribuciones_ciclo_periodo.csv">Contribución por fecha y período</a> · <a href="tablas/concentracion_ciclos.csv">Top por activo y cartera</a></p>
+<h3>Contribución de cada activo en la muestra completa</h3>
+<div class="table-wrap"><table>
+<tr><td>Cartera</td><td>Activo</td><td>Dentro de ciclos (USDT)</td><td>Fuera de ciclos (USDT)</td><td>Total (USDT)</td></tr>
+<tr><td>Condicional</td><td>BTCUSDT</td><td>316,133835</td><td>-0,071565</td><td>316,062270</td></tr>
+<tr><td>Condicional</td><td>ETHUSDT</td><td>469,630026</td><td>0,070754</td><td>469,700780</td></tr>
+<tr><td>Permanente</td><td>BTCUSDT</td><td>886,965448</td><td>0,100278</td><td>887,065726</td></tr>
+<tr><td>Permanente</td><td>ETHUSDT</td><td>793,007282</td><td>-0,003791</td><td>793,003491</td></tr>
+</table></div>
+<h2>Días de cartera: mejores y peores</h2>
+<p>Cada jornada aparece una sola vez por cartera, aunque operen ambos activos. Se reutiliza el P&amp;L diario conciliado; no se suman retornos porcentuales. Los denominadores diarios son propios de los días positivos y negativos e incluyen todo el resultado de cartera, incluido el polvo.</p>
+<div class="table-wrap"><table>
+<tr><td>Cartera</td><td>Signo</td><td>Top días</td><td>P&amp;L (USDT)</td><td>% de G/L diario</td></tr>
+<tr><td>Condicional</td><td>positive</td><td>1</td><td>35,91</td><td>4,00%</td></tr>
+<tr><td>Condicional</td><td>positive</td><td>5</td><td>88,28</td><td>9,83%</td></tr>
+<tr><td>Condicional</td><td>positive</td><td>10</td><td>138,46</td><td>15,42%</td></tr>
+<tr><td>Condicional</td><td>negative</td><td>1</td><td>-8,30</td><td>7,39%</td></tr>
+<tr><td>Condicional</td><td>negative</td><td>5</td><td>-36,64</td><td>32,63%</td></tr>
+<tr><td>Condicional</td><td>negative</td><td>10</td><td>-61,07</td><td>54,37%</td></tr>
+<tr><td>Permanente</td><td>positive</td><td>1</td><td>73,86</td><td>3,43%</td></tr>
+<tr><td>Permanente</td><td>positive</td><td>5</td><td>135,82</td><td>6,32%</td></tr>
+<tr><td>Permanente</td><td>positive</td><td>10</td><td>188,97</td><td>8,79%</td></tr>
+<tr><td>Permanente</td><td>negative</td><td>1</td><td>-19,45</td><td>4,13%</td></tr>
+<tr><td>Permanente</td><td>negative</td><td>5</td><td>-74,54</td><td>15,84%</td></tr>
+<tr><td>Permanente</td><td>negative</td><td>10</td><td>-118,95</td><td>25,27%</td></tr>
+</table></div>
+<p><figure><img src="figuras/concentracion.png" alt="Concentración diaria y por ciclo, denominadores separados"><figcaption>Concentración diaria y por ciclo, denominadores separados</figcaption></figure></p>
+<p><a href="tablas/concentracion_dias.csv">Fechas seleccionadas y denominadores de todos los períodos</a> · <a href="tablas/diario_reutilizado.csv">Todos los días originales</a></p>
+<h2>Contabilidad, ciclos y remanentes</h2>
+<p>Se reconstruyeron las cuentas de cada activo desde el ledger, conservando compras netas, costo promedio, parciales, rebalanceos, funding, fees y cargos. La atribución es la diferencia de P&amp;L acumulado del activo entre fronteras. No se asigna el cambio total de equity al activo que envió una orden. Las 3.408 jornadas concilian a la tolerancia original de 1E-8 USDT.</p>
+<div class="table-wrap"><table>
+<tr><td>Cartera</td><td>Ciclos</td><td>Cerrados completos</td><td>Apertura incompleta</td><td>Sin fill</td><td>Abiertos al fin</td><td>Intentos fallidos de órdenes</td></tr>
+<tr><td>Condicional</td><td>10</td><td>9</td><td>1</td><td>0</td><td>0</td><td>123</td></tr>
+<tr><td>Permanente</td><td>20</td><td>15</td><td>3</td><td>0</td><td>2</td><td>407</td></tr>
+</table></div>
+<p>Un intento fallido de orden no es necesariamente una apertura fallida: puede ser un rebalanceo, reintento o cierre. Las renovaciones conservan cycle_id. Los abiertos al final incluyen P&amp;L no realizado sin venta ni comisión terminal. El costo y las unidades del polvo se conservan; su variación fuera de ciclo figura como outside_dust. Al ingresar a otro ciclo se toma como base el P&amp;L ya devengado, sin reconocerlo de nuevo. El slippage ya está en los precios.</p>
+<p>Las filas por período atribuyen cambios económicos dentro de cada corte, aunque el ciclo haya comenzado antes o termine después. No son agrupaciones por año de cierre. Tiempo activo excluye polvo según la corrección vigente. Una variación de realizado/no realizado puede ser una reclasificación de una ganancia anterior; sólo su suma es contribución neta nueva.</p>
+<p><a href="tablas/fronteras_contables.csv">Fronteras y precios trazables</a> · <a href="tablas/atribuciones_segmentos.csv">Segmentos contables</a> · <a href="tablas/movimientos_ciclo.csv">Movimientos con event_id/order_id/fill_id</a> · <a href="tablas/conciliaciones.csv">Conciliaciones</a></p>
+<h2>Restricciones: tres poblaciones que no deben confundirse</h2>
+<h3>A. Condiciones simultáneas de funding y basis</h3>
+<p>Las 10.224 evaluaciones de entrada de cada estrategia están emparejadas por activo, instante y clase. Tienen las mismas condiciones de mercado, pero diferentes caja y posiciones. 480 pasan ambos filtros; esto no significa 480 órdenes posibles o enviadas. Los límites de basis 0 y 0,005 son inclusivos. No hubo fallos por basis superior al techo; los fallos de basis observados son negativos. Una fila no evaluable queda fuera de las cuatro celdas.</p>
+<div class="table-wrap"><table>
+<tr><td>Cartera</td><td>Celda</td><td>Filas</td><td>Población</td></tr>
+<tr><td>Condicional</td><td>basis_only_fail</td><td>4</td><td>10224</td></tr>
+<tr><td>Condicional</td><td>both_fail</td><td>8846</td><td>10224</td></tr>
+<tr><td>Condicional</td><td>both_pass</td><td>480</td><td>10224</td></tr>
+<tr><td>Condicional</td><td>funding_only_fail</td><td>893</td><td>10224</td></tr>
+<tr><td>Condicional</td><td>not_evaluable</td><td>1</td><td>10224</td></tr>
+<tr><td>Permanente</td><td>basis_only_fail</td><td>4</td><td>10224</td></tr>
+<tr><td>Permanente</td><td>both_fail</td><td>8846</td><td>10224</td></tr>
+<tr><td>Permanente</td><td>both_pass</td><td>480</td><td>10224</td></tr>
+<tr><td>Permanente</td><td>funding_only_fail</td><td>893</td><td>10224</td></tr>
+<tr><td>Permanente</td><td>not_evaluable</td><td>1</td><td>10224</td></tr>
+</table></div>
+<p><figure><img src="figuras/filtros_mercado.png" alt="Partición de condiciones evaluadas"><figcaption>Partición de condiciones evaluadas</figcaption></figure></p>
+<h3>B. Primer bloqueo y restricciones simultáneas</h3>
+<p>El embudo usa el orden persistido, con grupos excluyentes. La tabla de motivos simultáneos conserva pass/fail/not_evaluable y puede solaparse. En la permanente el fallo de funding es diagnóstico, no aplicado. Un sizing o presupuesto prospectivo con posición abierta no prueba una entrada perdida por falta de fondos.</p>
+<div class="table-wrap"><table>
+<tr><td>Cartera</td><td>Primer bloqueo diagnóstico</td><td>Filas</td><td>Población</td></tr>
+<tr><td>Condicional</td><td>all_pass</td><td>10</td><td>10224</td></tr>
+<tr><td>Condicional</td><td>cooldown</td><td>27</td><td>10224</td></tr>
+<tr><td>Condicional</td><td>freshness</td><td>1</td><td>10224</td></tr>
+<tr><td>Condicional</td><td>funding</td><td>7952</td><td>10224</td></tr>
+<tr><td>Condicional</td><td>state_active</td><td>2234</td><td>10224</td></tr>
+<tr><td>Permanente</td><td>all_pass</td><td>20</td><td>10224</td></tr>
+<tr><td>Permanente</td><td>basis_negative</td><td>323</td><td>10224</td></tr>
+<tr><td>Permanente</td><td>cooldown</td><td>54</td><td>10224</td></tr>
+<tr><td>Permanente</td><td>state_active</td><td>9827</td><td>10224</td></tr>
+</table></div>
+<p><a href="tablas/motivos_simultaneos.csv">Todos los motivos simultáneos, con orden y aplicación</a> · <a href="tablas/grupos_excluyentes.csv">Grupos por activo, estrategia y período</a></p>
+<p>El detalle siguiente usa 10.224 evaluaciones por cartera y conserva el orden registrado (posición mostrada desde 1). Cada filtro particiona su propia población; los fallos de filtros distintos se solapan y no deben sumarse como entradas perdidas. Se muestran también los filtros con cero fallos y los diagnósticos no aplicados.</p>
+<div class="table-wrap"><table>
+<tr><td>Cartera</td><td>Orden</td><td>Filtro</td><td>Aplicado</td><td>Pass</td><td>Fail</td><td>No evaluable</td></tr>
+<tr><td>Condicional</td><td>1</td><td>state_active</td><td>Sí</td><td>7990</td><td>2234</td><td>0</td></tr>
+<tr><td>Condicional</td><td>2</td><td>cooldown</td><td>Sí</td><td>10197</td><td>27</td><td>0</td></tr>
+<tr><td>Condicional</td><td>3</td><td>pending_orders</td><td>Sí</td><td>10224</td><td>0</td><td>0</td></tr>
+<tr><td>Condicional</td><td>4</td><td>debt</td><td>Sí</td><td>10224</td><td>0</td><td>0</td></tr>
+<tr><td>Condicional</td><td>5</td><td>coverage</td><td>Sí</td><td>10224</td><td>0</td><td>0</td></tr>
+<tr><td>Condicional</td><td>6</td><td>forecast</td><td>Sí</td><td>10224</td><td>0</td><td>0</td></tr>
+<tr><td>Condicional</td><td>7</td><td>rules</td><td>Sí</td><td>10224</td><td>0</td><td>0</td></tr>
+<tr><td>Condicional</td><td>8</td><td>operational</td><td>Sí</td><td>10224</td><td>0</td><td>0</td></tr>
+<tr><td>Condicional</td><td>9</td><td>mark</td><td>Sí</td><td>10224</td><td>0</td><td>0</td></tr>
+<tr><td>Condicional</td><td>10</td><td>price_alignment</td><td>Sí</td><td>10224</td><td>0</td><td>0</td></tr>
+<tr><td>Condicional</td><td>11</td><td>freshness</td><td>Sí</td><td>10223</td><td>1</td><td>0</td></tr>
+<tr><td>Condicional</td><td>12</td><td>funding</td><td>Sí</td><td>484</td><td>9740</td><td>0</td></tr>
+<tr><td>Condicional</td><td>13</td><td>basis_negative</td><td>Sí</td><td>1373</td><td>8850</td><td>1</td></tr>
+<tr><td>Condicional</td><td>14</td><td>basis_above_max</td><td>Sí</td><td>10223</td><td>0</td><td>1</td></tr>
+<tr><td>Condicional</td><td>15</td><td>sizing</td><td>Sí</td><td>9842</td><td>382</td><td>0</td></tr>
+<tr><td>Condicional</td><td>16</td><td>budget</td><td>Sí</td><td>9781</td><td>61</td><td>382</td></tr>
+<tr><td>Permanente</td><td>1</td><td>state_active</td><td>Sí</td><td>397</td><td>9827</td><td>0</td></tr>
+<tr><td>Permanente</td><td>2</td><td>cooldown</td><td>Sí</td><td>10170</td><td>54</td><td>0</td></tr>
+<tr><td>Permanente</td><td>3</td><td>pending_orders</td><td>Sí</td><td>10223</td><td>1</td><td>0</td></tr>
+<tr><td>Permanente</td><td>4</td><td>debt</td><td>Sí</td><td>10224</td><td>0</td><td>0</td></tr>
+<tr><td>Permanente</td><td>5</td><td>coverage</td><td>Sí</td><td>10224</td><td>0</td><td>0</td></tr>
+<tr><td>Permanente</td><td>6</td><td>forecast</td><td>Sí</td><td>10224</td><td>0</td><td>0</td></tr>
+<tr><td>Permanente</td><td>7</td><td>rules</td><td>Sí</td><td>10224</td><td>0</td><td>0</td></tr>
+<tr><td>Permanente</td><td>8</td><td>operational</td><td>Sí</td><td>10224</td><td>0</td><td>0</td></tr>
+<tr><td>Permanente</td><td>9</td><td>mark</td><td>Sí</td><td>10224</td><td>0</td><td>0</td></tr>
+<tr><td>Permanente</td><td>10</td><td>price_alignment</td><td>Sí</td><td>10224</td><td>0</td><td>0</td></tr>
+<tr><td>Permanente</td><td>11</td><td>freshness</td><td>Sí</td><td>10223</td><td>1</td><td>0</td></tr>
+<tr><td>Permanente</td><td>12</td><td>funding</td><td>No</td><td>484</td><td>9740</td><td>0</td></tr>
+<tr><td>Permanente</td><td>13</td><td>basis_negative</td><td>Sí</td><td>1373</td><td>8850</td><td>1</td></tr>
+<tr><td>Permanente</td><td>14</td><td>basis_above_max</td><td>Sí</td><td>10223</td><td>0</td><td>1</td></tr>
+<tr><td>Permanente</td><td>15</td><td>sizing</td><td>Sí</td><td>8849</td><td>1375</td><td>0</td></tr>
+<tr><td>Permanente</td><td>16</td><td>budget</td><td>Sí</td><td>4928</td><td>3921</td><td>1375</td></tr>
+</table></div>
+<h3>C. Decisiones y acciones acreditadas</h3>
+<p>Los logs registran 10 entradas aceptadas condicionales y 20 permanentes, enlazadas una a una con la transición y orden inicial originales. En la condicional, 7.952 decisiones registran funding_not_above_cost; en la permanente, 323 registran basis_outside_entry_range. No hay decisiones de entrada con causa insufficient_free_funds: ello no elimina las restricciones de presupuesto en otros estados ni los rebalanceos omitidos. El campo de primer bloqueo diagnóstico y la causa de decisión permanecen separados.</p>
+<p>Las acciones sin evaluación exacta acreditable permanecen como unreconciled en su enlace temporal; incluyen acciones autónomas posteriores a una señal. Coincidir en tiempo no prueba causalidad. Las órdenes iniciales tienen además un vínculo por order_id; cada tabla conserva el ordinal original, sin convertir el historial de evaluaciones en órdenes.</p>
+<p>Renovación se analiza aparte: 103 evaluaciones condicionales y 458 permanentes. Su umbral es forecast positivo, sin costo ni basis de entrada; el registro de resultado puede carecer de causa textual y se contrasta con las transiciones. La cobertura de emparejamiento se entrega sin forzar igualdad. Ninguno de estos conteos equivale a minutos elegibles de H3.</p>
+<p><a href="tablas/decisiones_clasificadas.csv">Registros clasificados</a> · <a href="tablas/diagnostico_vs_decision.csv">Diagnóstico frente a decisión</a> · <a href="tablas/acciones_y_enlaces.csv">Acciones y enlaces, incluidos los no reconciliados</a> · <a href="tablas/entradas_acreditadas.csv">Entradas acreditadas</a> · <a href="tablas/emparejamiento.csv">Emparejamiento</a></p>
+<h2>Retorno anual y capital utilizado</h2>
+<h3>Condicional</h3>
+<p>Capital utilizado al cierre: media de 2.074,62 USDT y máximo de 10.811,78 USDT en la muestra completa. Los valores diarios y por período se conservan en el resumen integrado.</p>
+<div class="table-wrap"><table>
+<tr><td>Período</td><td>Días</td><td>P&amp;L USDT</td><td>Retorno</td><td>CAGR</td><td>Tiempo activo</td><td>Utiliz. media</td><td>Utiliz. máxima</td><td>Ciclos con participación</td><td>Intentos fallidos</td></tr>
+<tr><td>full</td><td>1704</td><td>785,76</td><td>7,858%</td><td>1,633%</td><td>28,32%</td><td>19,81%</td><td>102,74%</td><td>10</td><td>123</td></tr>
+<tr><td>2022-2023</td><td>730</td><td>217,44</td><td>2,174%</td><td>1,081%</td><td>16,47%</td><td>10,42%</td><td>95,49%</td><td>4</td><td>121</td></tr>
+<tr><td>2024+</td><td>974</td><td>568,32</td><td>5,562%</td><td>2,049%</td><td>37,20%</td><td>26,84%</td><td>102,74%</td><td>8</td><td>2</td></tr>
+<tr><td>2022</td><td>365</td><td>0,00</td><td>0,000%</td><td>0,000%</td><td>0,00%</td><td>0,00%</td><td>0,00%</td><td>0</td><td>0</td></tr>
+<tr><td>2023</td><td>365</td><td>217,44</td><td>2,174%</td><td>2,174%</td><td>32,94%</td><td>20,84%</td><td>95,49%</td><td>4</td><td>121</td></tr>
+<tr><td>2024</td><td>366</td><td>535,13</td><td>5,237%</td><td>5,223%</td><td>67,02%</td><td>55,98%</td><td>102,74%</td><td>8</td><td>1</td></tr>
+<tr><td>2025</td><td>365</td><td>33,28</td><td>0,310%</td><td>0,310%</td><td>32,06%</td><td>15,49%</td><td>58,86%</td><td>1</td><td>1</td></tr>
+<tr><td>2026</td><td>243</td><td>-0,09</td><td>-0,001%</td><td>-0,001%</td><td>0,00%</td><td>0,01%</td><td>0,01%</td><td>0</td><td>0</td></tr>
+</table></div>
+<h3>Permanente</h3>
+<p>Capital utilizado al cierre: media de 8.972,08 USDT y máximo de 11.390,84 USDT en la muestra completa. Los valores diarios y por período se conservan en el resumen integrado.</p>
+<div class="table-wrap"><table>
+<tr><td>Período</td><td>Días</td><td>P&amp;L USDT</td><td>Retorno</td><td>CAGR</td><td>Tiempo activo</td><td>Utiliz. media</td><td>Utiliz. máxima</td><td>Ciclos con participación</td><td>Intentos fallidos</td></tr>
+<tr><td>full</td><td>1704</td><td>1.680,07</td><td>16,801%</td><td>3,382%</td><td>98,21%</td><td>82,63%</td><td>101,78%</td><td>20</td><td>407</td></tr>
+<tr><td>2022-2023</td><td>730</td><td>616,66</td><td>6,167%</td><td>3,037%</td><td>96,30%</td><td>81,35%</td><td>100,06%</td><td>9</td><td>319</td></tr>
+<tr><td>2024+</td><td>974</td><td>1.063,41</td><td>10,016%</td><td>3,642%</td><td>99,64%</td><td>83,59%</td><td>101,78%</td><td>13</td><td>88</td></tr>
+<tr><td>2022</td><td>365</td><td>109,16</td><td>1,092%</td><td>1,092%</td><td>98,28%</td><td>78,47%</td><td>100,06%</td><td>4</td><td>8</td></tr>
+<tr><td>2023</td><td>365</td><td>507,50</td><td>5,020%</td><td>5,020%</td><td>94,31%</td><td>84,24%</td><td>99,74%</td><td>7</td><td>311</td></tr>
+<tr><td>2024</td><td>366</td><td>686,80</td><td>6,469%</td><td>6,451%</td><td>99,04%</td><td>87,88%</td><td>101,78%</td><td>12</td><td>88</td></tr>
+<tr><td>2025</td><td>365</td><td>308,14</td><td>2,726%</td><td>2,726%</td><td>100,00%</td><td>86,48%</td><td>99,39%</td><td>3</td><td>0</td></tr>
+<tr><td>2026</td><td>243</td><td>68,46</td><td>0,590%</td><td>0,887%</td><td>100,00%</td><td>72,78%</td><td>90,35%</td><td>2</td><td>0</td></tr>
+</table></div>
+<p><figure><img src="figuras/resumen_anual.png" alt="P&amp;L, tiempo activo y capital utilizado por año"><figcaption>P&amp;L, tiempo activo y capital utilizado por año</figcaption></figure></p>
+<p>CAGR usa duración/365; 2026 es enero–agosto, no doce meses observados. El capital utilizado al cierre es spot valuado más garantía, dividido por equity. Puede superar 100% por la valuación del corto. El tiempo activo es la unión temporal sin polvo: no es utilización de patrimonio. No se divide CAGR por utilización. Los saldos se heredan y los retornos de tramos no se suman.</p>
+<p>La mejora de precisión de H1 no garantiza superar el umbral económico ni permanecer invertido. Los registros muestran pocos ciclos condicionales, concentración de ganancias y menor utilización. Es consistente con una menor captura de ingresos de funding, pero no cuantifica cuánto rendiría eliminar filtros o remunerar su caja: eso alteraría tamaños, margen y decisiones. Son explicaciones posibles, no una prueba causal ni una optimización.</p>
+<p>H1, H2 corregida y H3 se reutilizan sin redefinirlos. H2 sigue no favorable en muestra completa y ambos cortes por Sharpe condicional inferior. En 2022 el Sharpe condicional permanece ND por volatilidad muestral cero. El análisis anual complementa los cortes H3; no sustituye su serie por rechazos. No se rehizo riesgo intradía.</p>
+<p><a href="tablas/resumen_integrado.csv">Resumen completo y capital en USDT</a> · <a href="tablas/componentes_por_activo_periodo_reutilizado.csv">Componentes por activo originales</a> · <a href="tablas/h1_resumen_reutilizado.csv">H1</a> · <a href="tablas/h2_reutilizado.csv">H2</a> · <a href="tablas/h3_regimen_reutilizado.csv">H3</a></p>
+<h2>Propuesta remunerada y límites</h2>
+<p>Se recomienda someter a aprobación una cuenta hipotética bruta USD ligada a SOFR realizada, ACT/360, con paridad nominal 1 USDT=1 USD. SGOV fue la única alternativa real examinada. La serie oficial SOFR descargada contiene 1.166 observaciones entre 30/12/2021 y 01/09/2026; se comprobó cobertura, sin calcular retornos. La ficha enumera supuestos, costos excluidos, acceso hipotético, calendario por acreditar y reglas de frontera. No es una cuenta remunerada disponible para el inversor ni una tasa pagada por el exchange.</p>
+<p><a href="documentos/propuesta_benchmark.md">Propuesta, fuentes primarias y aprobación puntual</a>. Estado pendiente_aprobacion_benchmark. Una aprobación posterior habilitará sólo ese componente en otra versión; no sumará intereses al carry ni cambiará H2.</p>
+<h2>Verificación y portabilidad</h2>
+<p>El paquete contiene código, pruebas, manifiesto y fuentes con hashes. El verificador compacto recalcula aritmética, segmentos, denominadores y clasificaciones. El completo autentica las dependencias por rutas explícitas y vuelve a derivar todas las tablas desde los movimientos originales; comparte los módulos de posprocesamiento y no es una validación independiente del motor. No consulta Git ni escribe en los paquetes fuente. Ver comandos en <a href="README.md">README</a>.</p>
+<p>Se conserva la incertidumbre de valoración spot durante la suspensión de marzo de 2023 y las aproximaciones de mark/funding del estudio. Las fronteras de cierre reutilizan precios del paquete intradía compacto, sin nuevas series masivas. No se afirma leer un PDF E3 ausente. La aprobación del benchmark, su ejecución y el PDF final quedan pendientes. No se hizo commit, push ni publicación GitHub.</p></main></html>

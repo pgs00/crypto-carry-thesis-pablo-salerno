@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "calendar_days": 1707,
+  "business_dates": 1166,
+  "source_rate_records": 1166,
+  "source_index_records": 1166,
+  "nonbusiness_weekdays": 53,
+  "sifma_full_closures": 51,
+  "nyfed_exception_closures": 2,
+  "unexpected_missing_observations": 0,
+  "december_31_2021": {
+    "date": "2021-12-31",
+    "weekday": 4,
+    "sifma_status": "early_close",
+    "nyfed_exception": false,
+    "is_business_day": true,
+    "reason": "New Year's Day 2021/2022",
+    "source_files": [
+      "sifma_archivo.html"
+    ],
+    "sofr_present": true,
+    "index_present": true,
+    "sofr_source_row": 1164,
+    "index_source_row": 1164,
+    "coverage_status": "verified"
+  },
+  "calculation_executed": false
+}

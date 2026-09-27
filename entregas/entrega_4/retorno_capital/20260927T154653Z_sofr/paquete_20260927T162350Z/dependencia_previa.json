@@ -1,0 +1,25 @@
+{
+  "manifest_sha256": "0163cf7622d929c06773700f50d13b2e808afee85a6cf85e48d45dcac03af12b",
+  "original_path": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\retorno_capital\\20260927T143928Z\\paquete_20260927T152732Z",
+  "copies": [
+    {
+      "previous_path": "tablas/metricas_reutilizadas.csv",
+      "package_path": "reutilizado/metricas_reutilizadas.csv",
+      "bytes": 25528,
+      "sha256": "7d46b9f059b6988b9d8bbf4ffb90e33ce662ea1da5902475d3139dd2ebae63f8"
+    },
+    {
+      "previous_path": "tablas/diario_reutilizado.csv",
+      "package_path": "reutilizado/diario_reutilizado.csv",
+      "bytes": 1883187,
+      "sha256": "99098bc63bda71107ebbd0ee69e5ead156a86e938e14e29ff6939a0924775632"
+    },
+    {
+      "previous_path": "tablas/h2_reutilizado.csv",
+      "package_path": "reutilizado/h2_reutilizado.csv",
+      "bytes": 3344,
+      "sha256": "6a321d46b86f5c3d8cae4107237a1632ee0799d0b3cd1f57064088e2f2441079"
+    }
+  ],
+  "previous_diagnostics_recomputed": false
+}

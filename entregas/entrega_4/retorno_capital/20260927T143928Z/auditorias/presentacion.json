@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "html_links_checked": 31,
+  "images": 4,
+  "tables": 10,
+  "missing_local_targets": [],
+  "markdown_table_columns_consistent": true,
+  "source_prompt_byte_identical": true,
+  "visual_png_review": {
+    "ciclos.png": "all 30 cycles, labels and terminal-open legend legible",
+    "concentracion.png": "separate cycle/day denominators and strategy legends legible",
+    "filtros_mercado.png": "market population and legend legible; tiny groups detailed in report table",
+    "resumen_anual.png": "three units distinct; January-August 2026 explicitly labelled"
+  },
+  "manifest_sha256": "0163cf7622d929c06773700f50d13b2e808afee85a6cf85e48d45dcac03af12b"
+}

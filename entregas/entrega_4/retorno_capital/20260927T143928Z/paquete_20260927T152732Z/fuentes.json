@@ -1,0 +1,284 @@
+[
+  {
+    "dependency": "parent",
+    "path": "manifiesto_paquete.json",
+    "bytes": 220576,
+    "sha256": "77f1cfcaf4fb13044dbcb3b242a2eb19749cf7e88806db023a08bbe4ec272057"
+  },
+  {
+    "dependency": "parent",
+    "path": "manifiesto_paquete.sha256",
+    "bytes": 66,
+    "sha256": "ca391f52f38c7d3e2b2800c4f3eb3da7e0a40a900bc90e361d96cc6fee4d43aa"
+  },
+  {
+    "dependency": "parent",
+    "path": "indice_corridas.json",
+    "bytes": 15066,
+    "sha256": "da71a7d34c460b15196eb6a3a5b68fa45a97eed353e9de62b8cab245f07795ad"
+  },
+  {
+    "dependency": "parent",
+    "path": "corridas/run_ad71d751b20623006c195ff3/run_manifest.json",
+    "bytes": 332911,
+    "sha256": "a9510b7ad3a5435e83d062e561507ec0b4f118bceca83719da6162d5cc55209f"
+  },
+  {
+    "dependency": "parent",
+    "path": "corridas/run_ad71d751b20623006c195ff3/run_manifest.sha256",
+    "bytes": 66,
+    "sha256": "7134989745dab8d1fe86ae8aef4d850611030aef000b264630e7fdc70a3225dc"
+  },
+  {
+    "dependency": "parent",
+    "path": "corridas/run_ad71d751b20623006c195ff3/effective_config.toml",
+    "bytes": 1416,
+    "sha256": "f54d659d716b6b76c1a01d0875195440471015034de2c2276ade0403e44da5f1"
+  },
+  {
+    "dependency": "parent",
+    "path": "corridas/run_ad71d751b20623006c195ff3/ledger.parquet",
+    "bytes": 130682,
+    "sha256": "86c6dc8e08790373ad4e78e607d3f31214dd21640922dda31edb2956e0ec6353"
+  },
+  {
+    "dependency": "parent",
+    "path": "corridas/run_ad71d751b20623006c195ff3/fills.parquet",
+    "bytes": 38952,
+    "sha256": "a0058d8310117ce4ccf5b3aa4561f14572f2a18df5adf3ffaf2b4a6949c18b17"
+  },
+  {
+    "dependency": "parent",
+    "path": "corridas/run_ad71d751b20623006c195ff3/risk_events.parquet",
+    "bytes": 16518,
+    "sha256": "dd7ac1779d7eac15932cec37d4558c79b22f604dbdc4fd6bfc567d65282e56a6"
+  },
+  {
+    "dependency": "parent",
+    "path": "corridas/run_ad71d751b20623006c195ff3/orders.parquet",
+    "bytes": 40825,
+    "sha256": "0a344cfb807007cd85701a7ee59233b2b08a69ff3e98f7bef7458d2960d924e3"
+  },
+  {
+    "dependency": "parent",
+    "path": "corridas/run_ad71d751b20623006c195ff3/signals.parquet",
+    "bytes": 2561390,
+    "sha256": "d7a77c69508a2ed2483ccf4d68cc2e78bf2b972edda5eb7c2f5b5dc0fb3d34f3"
+  },
+  {
+    "dependency": "parent",
+    "path": "corridas/run_ad71d751b20623006c195ff3/renewal_diagnostics.parquet",
+    "bytes": 73028,
+    "sha256": "2c0c8fa85b957c07dd63ba65f054ff0c6cbae57410994967fb313f57ba53bfe9"
+  },
+  {
+    "dependency": "parent",
+    "path": "corridas/run_ad71d751b20623006c195ff3/positions.parquet",
+    "bytes": 63282,
+    "sha256": "17142d8ee536b3b59ba71849100a844483f250b3adb400b4cdcd9cb32f109289"
+  },
+  {
+    "dependency": "parent",
+    "path": "corridas/run_ad71d751b20623006c195ff3/equity_daily.csv",
+    "bytes": 3584801,
+    "sha256": "f2f2f809715dc145390c3b732ff37ca0028f3b90bbb83ca70c440918ffa7c589"
+  },
+  {
+    "dependency": "parent",
+    "path": "corridas/run_dfea4b7ac1475668d5968c97/run_manifest.json",
+    "bytes": 332910,
+    "sha256": "d37bb1781a7402b33ef6b006b8df8f44635e84c238da0bbd769894b00ee40261"
+  },
+  {
+    "dependency": "parent",
+    "path": "corridas/run_dfea4b7ac1475668d5968c97/run_manifest.sha256",
+    "bytes": 66,
+    "sha256": "e4a6237fd3ebaa3b6555736830b6c68574cadbc0eb3fc313730646c677bc35a9"
+  },
+  {
+    "dependency": "parent",
+    "path": "corridas/run_dfea4b7ac1475668d5968c97/effective_config.toml",
+    "bytes": 1416,
+    "sha256": "f54d659d716b6b76c1a01d0875195440471015034de2c2276ade0403e44da5f1"
+  },
+  {
+    "dependency": "parent",
+    "path": "corridas/run_dfea4b7ac1475668d5968c97/ledger.parquet",
+    "bytes": 486579,
+    "sha256": "7c6b395dd7753745ef5885fd1fcd6784c78724fecbebc12047de4c3d61142995"
+  },
+  {
+    "dependency": "parent",
+    "path": "corridas/run_dfea4b7ac1475668d5968c97/fills.parquet",
+    "bytes": 63201,
+    "sha256": "4ad115466ddf6d81acb1f846cb0bc0989f82a8b734db87c95a4a4d502b036d19"
+  },
+  {
+    "dependency": "parent",
+    "path": "corridas/run_dfea4b7ac1475668d5968c97/risk_events.parquet",
+    "bytes": 28261,
+    "sha256": "fbdbfc6bf3edc8b6c8ca218814674762fc4cd8e4e6804bb289629e7e3216eea1"
+  },
+  {
+    "dependency": "parent",
+    "path": "corridas/run_dfea4b7ac1475668d5968c97/orders.parquet",
+    "bytes": 76046,
+    "sha256": "9f983551033f1463332d585df066ebee76d1dc995a96486fad094b1b00ec5c8a"
+  },
+  {
+    "dependency": "parent",
+    "path": "corridas/run_dfea4b7ac1475668d5968c97/signals.parquet",
+    "bytes": 2660892,
+    "sha256": "2560a2443877ec93e5fd46ff5991fcba5a909be0eaa9bd1e7cab3b13f88c4204"
+  },
+  {
+    "dependency": "parent",
+    "path": "corridas/run_dfea4b7ac1475668d5968c97/renewal_diagnostics.parquet",
+    "bytes": 186934,
+    "sha256": "b5b3522d4da4403a91392a7f31f07784cd17d78c9b248dbaf4cfb8a980f4c23b"
+  },
+  {
+    "dependency": "parent",
+    "path": "corridas/run_dfea4b7ac1475668d5968c97/positions.parquet",
+    "bytes": 114625,
+    "sha256": "37dbd2875b2b394f872e47be370259be0e66a94696f0b3755d9a0e52f39f35f2"
+  },
+  {
+    "dependency": "parent",
+    "path": "corridas/run_dfea4b7ac1475668d5968c97/equity_daily.csv",
+    "bytes": 3897027,
+    "sha256": "33d9c7977ffabb0d7de7b94db854144fd0444d6d2a526149061df6de4ba9cd03"
+  },
+  {
+    "dependency": "correction",
+    "path": "manifiesto_paquete.json",
+    "bytes": 10065,
+    "sha256": "e735207869c08bbd0b9b04818c8855ecd9576bd979d3127b5ff108f61d3843ce"
+  },
+  {
+    "dependency": "correction",
+    "path": "manifiesto_paquete.sha256",
+    "bytes": 66,
+    "sha256": "3b2ae5753255441a98ce470d9d9e933fc32fff23959c0d4270a8a35a9ae54306"
+  },
+  {
+    "dependency": "correction",
+    "path": "comparacion/metricas_cartera_periodo.csv",
+    "bytes": 146110,
+    "sha256": "480ac5950cd5e26b6f3502502338db4c2aefce1334d8543f654f77425a13188c"
+  },
+  {
+    "dependency": "correction",
+    "path": "comparacion/diario_carteras.csv",
+    "bytes": 11413541,
+    "sha256": "57447b3f445769aab4ef6ea3b7a07eaa3c4a67e6a89412e5385e3d0d821df348"
+  },
+  {
+    "dependency": "correction",
+    "path": "comparacion/h1_resumen.csv",
+    "bytes": 50281,
+    "sha256": "dc7d0c145d2b3784084c75ca458d27a0d4326c17377016b5fb82af8dfa2b1047"
+  },
+  {
+    "dependency": "correction",
+    "path": "comparacion/h1_invariancia.csv",
+    "bytes": 4313,
+    "sha256": "ba71b579ac043e45797bda55499bfe36dfb9b8ef1f95f3683b1ddb4a3bcfcbb5"
+  },
+  {
+    "dependency": "correction",
+    "path": "comparacion/h2.csv",
+    "bytes": 18912,
+    "sha256": "42691b183cd5889812cdcdc8454a08d20b51a0c17c476fc714be5ba9e83bdc18"
+  },
+  {
+    "dependency": "correction",
+    "path": "comparacion/h3_regimen.csv",
+    "bytes": 19780,
+    "sha256": "398608c088ea973ceadc111288766117304499b436b17fe7ad92edd2724b8d0c"
+  },
+  {
+    "dependency": "correction",
+    "path": "comparacion/h3_invariancia.csv",
+    "bytes": 2379,
+    "sha256": "869622e5f6e58cf6e3a55bbb245c79e13402ca20dd50a07a3ba77b96314f832d"
+  },
+  {
+    "dependency": "correction",
+    "path": "comparacion/componentes_por_activo_periodo.csv",
+    "bytes": 60024,
+    "sha256": "f13d2c4f2103036fd78adbaa88565659d092189e0f78b020652490c1f278ac67"
+  },
+  {
+    "dependency": "correction",
+    "path": "comparacion/exposicion_periodo.csv",
+    "bytes": 154800,
+    "sha256": "269e041865df44f70d9b4899d0befec7b00a9006207efaea16331879f40f14ef"
+  },
+  {
+    "dependency": "correction",
+    "path": "comparacion/eventos_periodo.csv",
+    "bytes": 10298,
+    "sha256": "93a96a7f36f0bd0729449c712b023d25b32c95d16e366ab6291174a973289c7f"
+  },
+  {
+    "dependency": "intraday",
+    "path": "manifiesto_paquete.json",
+    "bytes": 36120,
+    "sha256": "78cb03572c5940567852d0255d05a9f8a923f01df01fc0aa8b6cccef70f3b3bb"
+  },
+  {
+    "dependency": "intraday",
+    "path": "manifiesto_paquete.sha256",
+    "bytes": 90,
+    "sha256": "265157efa7719bc64465b1e84908808680130b7c254496dd703ae1e988d65d4f"
+  },
+  {
+    "dependency": "intraday",
+    "path": "evidencia/eventos_financieros.parquet",
+    "bytes": 6383579,
+    "sha256": "0829232fbd7c700309d71afe836d31033f6b26ab6560de52b6b845deed641320"
+  },
+  {
+    "dependency": "e3",
+    "path": "manifest.json",
+    "bytes": 14223,
+    "sha256": "f19b7898ed8136d4d2035dc1fed5f232fcdcdf301e0a5ed808cc3e2087e6d187"
+  },
+  {
+    "dependency": "e3",
+    "path": "manifest.sha256",
+    "bytes": 65,
+    "sha256": "843862e11cb3651f1d16a8429d650a23e044b5d84958de64238e856d5958b59a"
+  },
+  {
+    "dependency": "e3",
+    "path": "tablas/ciclos.csv",
+    "bytes": 7928,
+    "sha256": "53a25e5e9a0d26e11c8fad651c22246126afb51b06981a1552507fd65d4ea66c"
+  },
+  {
+    "dependency": "e3",
+    "path": "codigo/scripts/continuous_delivery/portfolio.py",
+    "bytes": 14155,
+    "sha256": "041805d326936284c44145459431e39b5bc8ff70cf3b032079c8243cb26140f8"
+  },
+  {
+    "dependency": "e3",
+    "path": "codigo/src/crypto_carry/diagnostics.py",
+    "bytes": 22719,
+    "sha256": "88bb6121ee4d65f6045143c9b4adb250ca1a5edf84a9193754ab62939d531484"
+  },
+  {
+    "dependency": "e3",
+    "path": "codigo/src/crypto_carry/ledger.py",
+    "bytes": 17174,
+    "sha256": "611f43ce0f7aabc0caffb2b0dddab366022f2fd51015a1e9253fd007613f7777"
+  },
+  {
+    "dependency": "e3",
+    "path": "codigo/src/crypto_carry/strategy.py",
+    "bytes": 61769,
+    "sha256": "cf009afa7705886a01a2c220c18707aa4c88604e6cdfe00213170a24c6cc584d"
+  }
+]

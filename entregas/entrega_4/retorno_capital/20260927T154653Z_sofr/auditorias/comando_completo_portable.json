@@ -1,0 +1,21 @@
+{
+  "name": "completo_portable",
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\pablo\\AppData\\Local\\Temp\\sofr_portable_pir71zvv\\paquete\\herramientas\\scripts\\verify_sofr_benchmark.py",
+    "--package",
+    "C:\\Users\\pablo\\AppData\\Local\\Temp\\sofr_portable_pir71zvv\\paquete",
+    "--previous",
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\retorno_capital\\20260927T143928Z\\paquete_20260927T152732Z",
+    "--output",
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\retorno_capital\\20260927T154653Z_sofr\\auditorias\\verificacion_completa_portable.json"
+  ],
+  "cwd": "C:\\Users\\pablo\\AppData\\Local\\Temp\\sofr_portable_pir71zvv\\cwd_ajeno",
+  "exit_code": 0,
+  "stdout": "{\n  \"status\": \"passed\",\n  \"calendar_days\": 1707,\n  \"observed_business_dates\": 1166,\n  \"unexplained_missing_dates\": 0,\n  \"absent_weekdays\": 53,\n  \"sifma_full_close_weekdays\": 51,\n  \"nyfed_nonpublication_exceptions\": 2,\n  \"account_days\": 1704,\n  \"business_blocks\": 1164,\n  \"index_checks\": 2326,\n  \"index_anchor\": \"2022-01-03\",\n  \"index_end\": \"2026-09-01\",\n  \"index_quantum\": \"0.00000001\",\n  \"index_tolerance\": \"joint intervals from published eight-decimal rounding; not widened\",\n  \"initial_interest_exact_fraction\": \"1/36 USD\",\n  \"decimal_precision\": 50,\n  \"monetary_tolerance\": \"1E-8\",\n  \"formula_arithmetic_tolerance\": \"1E-40\",\n  \"comparison_rows\": 24,\n  \"difference_rows\": 16,\n  \"carry_metrics_recalculated\": false,\n  \"engine_executed\": false,\n  \"prior_diagnostics_repeated\": false,\n  \"carry_cash_or_collateral_remunerated\": false,\n  \"h2_changed\": false,\n  \"carry_sharpe_rf\": 0,\n  \"benchmark_sharpe_calculated\": false,\n  \"scope\": \"with_previous\",\n  \"manifest_sha256\": \"4769f6c6a80e6fa4b4fd4a4e7c45b94fb10b3773bc3cbbebd36b117f73c938c9\",\n  \"members\": 72,\n  \"previous_manifest_sha256\": \"0163cf7622d929c06773700f50d13b2e808afee85a6cf85e48d45dcac03af12b\",\n  \"previous_entire_seal_checked\": true,\n  \"sources_read_only\": true,\n  \"network_used\": false,\n  \"limits\": \"Shared SOFR postprocessing plus external Index checks; prior engine and diagnostics not rerun\"\n}\n",
+  "stderr": "",
+  "elapsed_seconds": 0.5530277999932878
+}

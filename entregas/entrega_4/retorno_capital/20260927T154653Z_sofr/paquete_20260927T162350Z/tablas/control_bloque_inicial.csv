@@ -1,0 +1,2 @@
+source_start,source_end,accrual_start,accrual_end_exclusive,source_days,account_days,percentRate,direct_formula,expected_interest_usd,actual_interest_usd,arithmetic_error_usd,saturday_official_index_used,passed
+2021-12-31,2022-01-03,2022-01-01,2022-01-03,3,2,0.05,10000*(0.05/100)*2/360 = 1/36 USD,0.027777777777777777777777777777777777777777777777778,0.027777777777777777777777777777777777777777778,2.22222E-46,False,True

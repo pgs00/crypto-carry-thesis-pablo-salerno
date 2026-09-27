@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "protected_files": 48,
+  "protected_modified": [],
+  "index_sha256": "eb64db20ee17ac7c0a0a079d0105665ed254d983e8b21687e864bdc0388e0026",
+  "index_bytes_unchanged": true,
+  "head_unchanged": true,
+  "head": "120f94309e724a7a25e68e5ade67eed43a98f9e7",
+  "staged_paths": [],
+  "sealed_sources": {
+    "parent": {
+      "members": 1087,
+      "manifest_sha256": "77f1cfcaf4fb13044dbcb3b242a2eb19749cf7e88806db023a08bbe4ec272057",
+      "all_member_hashes_match": true
+    },
+    "correction": {
+      "members": 57,
+      "manifest_sha256": "e735207869c08bbd0b9b04818c8855ecd9576bd979d3127b5ff108f61d3843ce",
+      "all_member_hashes_match": true
+    },
+    "intraday": {
+      "members": 199,
+      "manifest_sha256": "78cb03572c5940567852d0255d05a9f8a923f01df01fc0aa8b6cccef70f3b3bb",
+      "all_member_hashes_match": true
+    },
+    "e3": {
+      "members": 120,
+      "manifest_sha256": "f19b7898ed8136d4d2035dc1fed5f232fcdcdf301e0a5ed808cc3e2087e6d187",
+      "all_member_hashes_match": true
+    }
+  },
+  "git_status": "M .gitattributes\n?? entregas/entrega_4/retorno_capital/\n?? scripts/build_return_capital.py\n?? scripts/return_capital/\n?? scripts/verify_return_capital.py\n?? tests/unit/test_return_capital_accounting.py\n?? tests/unit/test_return_capital_decisions.py\n?? tests/unit/test_return_capital_package.py",
+  "git_diff_check": "",
+  "changes_to_gitattributes": "diff --git a/.gitattributes b/.gitattributes\nindex eb7ff19..21a8e3d 100644\n--- a/.gitattributes\n+++ b/.gitattributes\n@@ -36,3 +36,6 @@\n # Keep the intraday evidence package byte-identical on later checkouts.\n /entregas/entrega_4/riesgo_intradia/** -text whitespace=cr-at-eol\n /entregas/entrega_4/riesgo_intradia/**/*.svg whitespace=-blank-at-eol,cr-at-eol\n+# Preserve this new derivative and its public-source originals without Git EOL conversion.\n+/entregas/entrega_4/retorno_capital/** -text whitespace=cr-at-eol\n+/entregas/entrega_4/retorno_capital/**/*.svg whitespace=-blank-at-eol,cr-at-eol"
+}

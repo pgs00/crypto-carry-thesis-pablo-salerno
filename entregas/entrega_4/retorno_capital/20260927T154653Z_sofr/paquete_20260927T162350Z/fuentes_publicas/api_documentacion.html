@@ -1,0 +1,208 @@
+<!-- HTML for static distribution bundle build -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Markets Data APIs</title>
+    <link rel="stylesheet" type="text/css" href="./swagger-ui.css" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" sizes="32x32" />
+    <style>
+
+      table.responses-table.live-responses-table {
+        background-color: #fbf9eb;
+			}
+
+		  .swagger-ui .opblock .opblock-summary-path {
+       max-width: 100% !important;
+      }
+
+      .swagger-ui .opblock .opblock-summary > button {
+       display: flex;
+       align-items: center;
+       width: 100% ;
+      }
+      .swagger-ui .opblock .opblock-summary-description { 
+        text-align: left;
+      }
+      
+
+      html {
+        box-sizing: border-box;
+        overflow: -moz-scrollbars-vertical;
+        overflow-y: scroll;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+
+      body {
+        margin: 0;
+        background: #fafafa;
+      }
+
+      #email-alert {
+          width: 300px;
+          padding: 12px 8px;
+          background-color: #f3eee9;
+          display: block;
+		  margin-left: 80%;
+		  float: right;
+      }
+
+      #email-alert fieldset {
+        border-color: transparent;
+        padding: 0px;
+      }
+
+      #email-alert #email-alert-title {
+          text-transform: uppercase;
+          font-family: 'RobotoCondensedBold', sans-serif;
+          color: #001F33;
+          font-size: 12px;
+          display: block;
+          padding: 0 0 8px 0;
+      }
+
+      #email-alert #email-alert-textbox {
+          float: left;
+          background: #fff;
+          height: 23px;
+      }
+
+      #email-alert #email-alert-button_panel {
+          float: left;
+      }
+
+      #email-alert #email {
+          color: #666;
+          border: 0;
+          padding-left: 5px;
+          margin: 0px;
+          padding-top: 0px;
+          padding-right: 0px;
+          padding-bottom: 0px;
+      }
+
+      #email-alert input[type=submit] {
+          border-radius: 0;
+      }
+
+      #email-alert #form_button {
+          background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #41a8df), color-stop(1, #41a8df) );
+          background: -moz-linear-gradient( center top, #41a8df 5%, #41a8df 100% );
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#41a8df', endColorstr='#41a8df');
+          background-color: #41a8df;
+          -webkit-border-top-left-radius: 0px;
+          -moz-border-radius-topleft: 0px;
+          border-top-left-radius: 0px;
+          -webkit-border-top-right-radius: 0px;
+          -moz-border-radius-topright: 0px;
+          border-top-right-radius: 0px;
+          -webkit-border-bottom-right-radius: 0px;
+          -moz-border-radius-bottomright: 0px;
+          border-bottom-right-radius: 0px;
+          -webkit-border-bottom-left-radius: 0px;
+          -moz-border-radius-bottomleft: 0px;
+          border-bottom-left-radius: 0px;
+          text-indent: 0;
+          border: 0px;
+          display: inline-block;
+          color: #ffffff;
+          text-transform: uppercase;
+          font-family: 'RobotoCondensedRegular', sans-serif;
+          font-size: 12px;
+          font-weight: normal;
+          font-style: normal;
+          text-decoration: none;
+          text-align: center;
+          cursor: pointer;
+          padding: 2px 5px 2px 5px;
+          margin-top: 0px;
+          line-height: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="swagger-ui">
+      <div class="banner"></div>
+      <div class="wrapper">
+        <div class="new-york-fed-logo">
+          <a href="https://www.newyorkfed.org">
+            <img src="./new-york-fed-logo.svg" style="width:782px" alt="New York Fed Logo" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="swagger-ui"></div>
+
+    <script>
+      //detects if user uses Internet Explorer
+      //returns version of IE or false, if browser is not IE
+      //Function to detect IE or not
+      function IEdetection() {
+        var ua = window.navigator.userAgent;
+        var msie = ua.indexOf('MSIE ');
+        if (msie > 0) {
+          // IE 10 or older, return version number
+          return 'IE ' + parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+        }
+        var trident = ua.indexOf('Trident/');
+        if (trident > 0) {
+          // IE 11, return version number
+          var rv = ua.indexOf('rv:');
+          return 'IE ' + parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+        }
+        var edge = ua.indexOf('Edge/');
+        if (edge > 0) {
+          //Edge (IE 12+), return false
+          return false;
+        }
+        // User uses other browser
+        return false;
+      }
+      var isIE = IEdetection();
+      var supportMsg = "<div class=\"swagger-ui\"><div class=\"wrapper\" style=\"padding-left: 30px\"><p>Your browser is not supported. The following is a list of supported browsers: <br><br>Chrome<br>Edge<br>Firefox<br>Safari</p><div></div>"
+      if (isIE) {
+        document.write(supportMsg);
+      }
+    </script>
+    <script src="./swagger-ui-bundle.js" charset="UTF-8"></script>
+    <script src="./swagger-ui-standalone-preset.js" charset="UTF-8"></script>
+    <script>
+      window.onload = function() {
+			
+        // Custom plugin to hide the API definition URL
+        const HideInfoUrlPartsPlugin = () => {
+          return {
+            wrapComponents: {
+              InfoUrl: () => () => null
+            }
+          }
+        }			
+			
+        // Begin Swagger UI call region
+        const ui = SwaggerUIBundle({
+          url: './markets-api.yml',
+          dom_id: '#swagger-ui',
+          deepLinking: true,
+          defaultModelsExpandDepth: -1,
+          docExpansion: 'none',
+          validatorUrl: 'none',
+					syntaxHighlight: {
+						activated: false
+          },
+          presets: [SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset.slice(1)],
+          plugins: [SwaggerUIBundle.plugins.DownloadUrl,HideInfoUrlPartsPlugin],
+          layout: 'StandaloneLayout'
+        });
+        // End Swagger UI call region
+
+        window.ui = ui;
+      };
+    </script>
+  </body>
+</html>

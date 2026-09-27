@@ -1,0 +1,17 @@
+{
+  "portfolio_days": 3408,
+  "cycles": 30,
+  "evaluations": 21009,
+  "segments": 6874,
+  "monetary_tolerance_usdt": "1E-8",
+  "status": "passed",
+  "scope": "complete",
+  "source_recomputed": true,
+  "manifest_sha256": "0163cf7622d929c06773700f50d13b2e808afee85a6cf85e48d45dcac03af12b",
+  "members": 93,
+  "engine_executed": false,
+  "benchmark": "pendiente_aprobacion_benchmark",
+  "sources_read_only": true,
+  "limits": "Compact checks arithmetic/populations; complete also authenticates and recomputes from explicit source dependencies. Shared postprocessing code, no independent engine validation.",
+  "e3_cycle_identity": "exact"
+}

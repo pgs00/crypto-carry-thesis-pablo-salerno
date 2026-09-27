@@ -1,0 +1,9 @@
+{
+  "comparacion_sofr": "ejecutada_tras_aprobacion",
+  "concentracion": "previa_no_repetida",
+  "restricciones": "previas_no_repetidas",
+  "exposicion": "correccion_previa_reutilizada",
+  "H2": "sin_cambios_RF0",
+  "engine_replay": false,
+  "previous_manifest_sha256": "0163cf7622d929c06773700f50d13b2e808afee85a6cf85e48d45dcac03af12b"
+}

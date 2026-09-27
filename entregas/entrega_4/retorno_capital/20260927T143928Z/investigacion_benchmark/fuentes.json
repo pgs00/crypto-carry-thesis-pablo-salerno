@@ -1,0 +1,62 @@
+[
+  {
+    "file": "sofr_metodologia.html",
+    "requested_url": "https://www.newyorkfed.org/markets/reference-rates/additional-information-about-reference-rates",
+    "final_url": "https://www.newyorkfed.org/markets/reference-rates/additional-information-about-reference-rates",
+    "accessed_at_utc": "2026-09-27T14:55:05.246306+00:00",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "last_modified_http": null,
+    "date_http": "Sun, 27 Sep 2026 14:55:06 GMT",
+    "bytes": 142194,
+    "sha256": "ead0ba8a4ae97f1d74c45b57614a84b0062b0e3d0e2b36a502a45e569d692325"
+  },
+  {
+    "file": "sofr_serie.json",
+    "requested_url": "https://markets.newyorkfed.org/api/rates/secured/sofr/search.json?startDate=2021-12-30&endDate=2026-09-01",
+    "final_url": "https://markets.newyorkfed.org/api/rates/secured/sofr/search.json?startDate=2021-12-30&endDate=2026-09-01",
+    "accessed_at_utc": "2026-09-27T14:55:06.660245+00:00",
+    "status_code": 200,
+    "content_type": "application/json;charset=utf-8",
+    "last_modified_http": null,
+    "date_http": "Sun, 27 Sep 2026 14:55:07 GMT",
+    "bytes": 277359,
+    "sha256": "a121afce74fbc966509dc9660a55d6c6d9f1a8f14d646691a24f63dc81657f3a"
+  },
+  {
+    "file": "sofr_indice_lanzamiento.html",
+    "requested_url": "https://www.newyorkfed.org/markets/opolicy/operating_policy_200302",
+    "final_url": "https://www.newyorkfed.org/markets/opolicy/operating_policy_200302",
+    "accessed_at_utc": "2026-09-27T14:55:07.446204+00:00",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "last_modified_http": null,
+    "date_http": "Sun, 27 Sep 2026 14:55:07 GMT",
+    "bytes": 100271,
+    "sha256": "b23432a2e6a7b600078fc8a0405a1298aed26af1e294387350dde3d9c8836c12"
+  },
+  {
+    "file": "sofr_publicacion.html",
+    "requested_url": "https://www.newyorkfed.org/markets/reference-rates/sofr",
+    "final_url": "https://www.newyorkfed.org/markets/reference-rates/sofr",
+    "accessed_at_utc": "2026-09-27T14:55:07.794429+00:00",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "last_modified_http": null,
+    "date_http": "Sun, 27 Sep 2026 14:55:08 GMT",
+    "bytes": 101311,
+    "sha256": "534710a1882dadfabd23ae758365b45af4b3cced135f9d8c8a2c287a862e93ad"
+  },
+  {
+    "file": "sgov_producto.html",
+    "requested_url": "https://www.ishares.com/us/products/314116/ishares-0-3-month-treasury-bond-etf",
+    "final_url": "https://www.ishares.com/us/products/314116/ishares-0-3-month-treasury-bond-etf",
+    "accessed_at_utc": "2026-09-27T14:55:08.357585+00:00",
+    "status_code": 200,
+    "content_type": "text/html;charset=UTF-8",
+    "last_modified_http": null,
+    "date_http": "Sun, 27 Sep 2026 14:55:09 GMT",
+    "bytes": 1686830,
+    "sha256": "824a59adadad038e6559eb13f38460eb9262945d64adcc3ff27fa0aaa619d91e"
+  }
+]

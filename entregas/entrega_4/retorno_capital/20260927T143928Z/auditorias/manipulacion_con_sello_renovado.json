@@ -1,0 +1,18 @@
+{
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\pablo\\AppData\\Local\\Temp\\retorno-capital-tamper-l2t1skd2\\paquete_20260927T152732Z\\herramientas\\scripts\\verify_return_capital.py",
+    "--package",
+    "C:\\Users\\pablo\\AppData\\Local\\Temp\\retorno-capital-tamper-l2t1skd2\\paquete_20260927T152732Z"
+  ],
+  "cwd": "C:\\Users\\pablo\\AppData\\Local\\Temp\\retorno-capital-tamper-l2t1skd2",
+  "expected_nonzero_exit": true,
+  "actual_exit_code": 1,
+  "seconds": 1.5268642902374268,
+  "mutation": "grupos_excluyentes row 1 start_ns=0; member and manifest hashes deliberately renewed",
+  "source_package_modified": false,
+  "status": "passed"
+}

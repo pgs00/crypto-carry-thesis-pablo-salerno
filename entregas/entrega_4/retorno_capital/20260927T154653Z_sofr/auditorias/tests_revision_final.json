@@ -1,0 +1,25 @@
+{
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "tests/unit/test_sofr_calendar.py",
+    "tests/unit/test_sofr_accrual.py",
+    "tests/unit/test_sofr_comparison.py",
+    "tests/unit/test_sofr_package.py"
+  ],
+  "cwd": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting",
+  "started_at": "2026-09-27T16:22:01.718985+00:00",
+  "finished_at": "2026-09-27T16:22:41.618406+00:00",
+  "exit_code": 0,
+  "stdout": "..................................                                       [100%]\n34 passed in 39.22s\n",
+  "stderr": "",
+  "elapsed_seconds": 39.89944210002432,
+  "scope": "SOFR only; no engine or prior carry diagnostics"
+}

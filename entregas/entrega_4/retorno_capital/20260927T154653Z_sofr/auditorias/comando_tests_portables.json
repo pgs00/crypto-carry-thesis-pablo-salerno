@@ -1,0 +1,20 @@
+{
+  "name": "tests_portables",
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "tests/unit"
+  ],
+  "cwd": "C:\\Users\\pablo\\AppData\\Local\\Temp\\sofr_portable_pir71zvv\\paquete\\herramientas",
+  "exit_code": 0,
+  "stdout": "..................................                                       [100%]\n34 passed in 37.78s\n",
+  "stderr": "",
+  "elapsed_seconds": 38.421664199995575
+}

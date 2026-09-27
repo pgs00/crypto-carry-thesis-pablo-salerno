@@ -1,0 +1,18 @@
+{
+  "status": "aprobado",
+  "proposal_id": "SOFR_BRUTO_ACT360_USD_PARIDAD_USDT_20260927",
+  "original_proposal_sha256": "4fbb43c952d8e53a31a023ffbfc112fecbc93e0368c7c2835061fcfdf2e0e312",
+  "original_package_manifest_sha256": "0163cf7622d929c06773700f50d13b2e808afee85a6cf85e48d45dcac03af12b",
+  "recorded_at": "2026-09-27T15:53:37.381604+00:00",
+  "authorization_source": "User message following the sealed proposal; see aprobacion.md",
+  "capital": "10000",
+  "currency": "USD",
+  "USDT_USD_nominal_parity": "1",
+  "accrual_day_basis": 360,
+  "cagr_day_basis": 365,
+  "start_inclusive": "2022-01-01",
+  "end_exclusive": "2026-09-01",
+  "index_rounding_quantum": "0.00000001",
+  "decimal_precision": 50,
+  "monetary_tolerance": "1E-8"
+}

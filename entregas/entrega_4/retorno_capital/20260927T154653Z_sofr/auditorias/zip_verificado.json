@@ -1,0 +1,456 @@
+{
+  "status": "passed",
+  "recorded_at": "2026-09-27T16:26:30.371891+00:00",
+  "archive": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\retorno_capital\\20260927T154653Z_sofr\\paquete_20260927T162350Z.zip",
+  "zip_sha256": "55079fc5b11763e9f5bf2888ad5be6cce156b7f1c94b08cb206f56d2bbfd0f8b",
+  "zip_bytes": 2216971,
+  "manifest_sha256": "4769f6c6a80e6fa4b4fd4a4e7c45b94fb10b3773bc3cbbebd36b117f73c938c9",
+  "members": 74,
+  "all_member_bytes_equal": true,
+  "files": [
+    {
+      "path": "dependencia_previa.json",
+      "bytes": 1041,
+      "sha256": "bc63ba42446c72abd23cc6fa3f33d6d20d88949516d2604045da51e6d9ef6e3e",
+      "binary_equal": true
+    },
+    {
+      "path": "documentos/aprobacion.json",
+      "bytes": 756,
+      "sha256": "e733fe8838971c7af10efe603a9fe1a0bde116ed5e59cdc11c76da540aa322d8",
+      "binary_equal": true
+    },
+    {
+      "path": "documentos/aprobacion.md",
+      "bytes": 1515,
+      "sha256": "a571596b87886305220d720b786d2d56c99b296e1ff744e872ec04cec1a20e76",
+      "binary_equal": true
+    },
+    {
+      "path": "documentos/entorno.json",
+      "bytes": 174,
+      "sha256": "3fa385ef047f470fcc45491c72a551cb781f73f704bd6a93235c948b9bd0cae8",
+      "binary_equal": true
+    },
+    {
+      "path": "documentos/estado_inicial.json",
+      "bytes": 7840,
+      "sha256": "26435dfb3013d35e04a99a1ba9b86cdbc9efaeed168e738dbf629e762617f538",
+      "binary_equal": true
+    },
+    {
+      "path": "documentos/limites_verificacion.md",
+      "bytes": 1594,
+      "sha256": "1d6644daf286520545375372a3c0374f7f9ecc7452d9afef01f81d1ea0751a46",
+      "binary_equal": true
+    },
+    {
+      "path": "documentos/mapa_fuentes.md",
+      "bytes": 3774,
+      "sha256": "05a213a185ab00ed90723f1f2e19038013942133540bea6d9080b23260371e6c",
+      "binary_equal": true
+    },
+    {
+      "path": "documentos/origen_ficha_benchmark.json",
+      "bytes": 4930,
+      "sha256": "4fbb43c952d8e53a31a023ffbfc112fecbc93e0368c7c2835061fcfdf2e0e312",
+      "binary_equal": true
+    },
+    {
+      "path": "documentos/origen_propuesta_benchmark.md",
+      "bytes": 7821,
+      "sha256": "91b9268238074f8cc841632afb1557e63d94a9f8518ba5493b072355474c9394",
+      "binary_equal": true
+    },
+    {
+      "path": "documentos/plan.md",
+      "bytes": 2832,
+      "sha256": "8acab25edd0d11117e13481c366de5c106acff9bc5f18350c2c27bdc9f458dba",
+      "binary_equal": true
+    },
+    {
+      "path": "documentos/progreso.md",
+      "bytes": 3463,
+      "sha256": "4917fc86115328fe744c9dfd262f42cf687ba50d6597623ec5f344d89c2ec191",
+      "binary_equal": true
+    },
+    {
+      "path": "documentos/protocolo.md",
+      "bytes": 4563,
+      "sha256": "6ffc79e107af8a57b159b7313c76af53004d2614c68db48160135d3777ccdae0",
+      "binary_equal": true
+    },
+    {
+      "path": "documentos/revision_independiente.md",
+      "bytes": 1907,
+      "sha256": "4835522791f620071e3ecda8caedca69d1f2c63ae5dfc6c68f8e28b7768077c3",
+      "binary_equal": true
+    },
+    {
+      "path": "estado_bloques.json",
+      "bytes": 347,
+      "sha256": "eb35df4174601345094b95e1bcafbbce1273bc1b80466957bf25833f2681dab0",
+      "binary_equal": true
+    },
+    {
+      "path": "figuras/capital.png",
+      "bytes": 111751,
+      "sha256": "f0b402e77da6681e3de699c7a95b19bc923cb488601e42fefa4695ce48026b53",
+      "binary_equal": true
+    },
+    {
+      "path": "figuras/capital.svg",
+      "bytes": 75006,
+      "sha256": "cbe63a4172d1a881888143d1b361e2c240c29f5d1b6193f0576eaedbcc83c6c0",
+      "binary_equal": true
+    },
+    {
+      "path": "figuras/control_index.png",
+      "bytes": 151441,
+      "sha256": "f13efea56547a1532afafb7ab36939a8eae967dc4ce39825f9b5194c22a1542e",
+      "binary_equal": true
+    },
+    {
+      "path": "figuras/control_index.svg",
+      "bytes": 426433,
+      "sha256": "90e790ae672281da03ff88ae7b75cccabf163b71c4cc9199d09f6927133aeb84",
+      "binary_equal": true
+    },
+    {
+      "path": "figuras/fuentes/capital.csv",
+      "bytes": 290772,
+      "sha256": "df56b41c925350320bba3bc2e933e98d7cee84e2d3d8f19aba401a453cdf0e18",
+      "binary_equal": true
+    },
+    {
+      "path": "figuras/fuentes/control_index.csv",
+      "bytes": 759934,
+      "sha256": "926b5ebefb3ee4f70038b9c75ed45d606d72bc3c904af4e801dbc49039d39f7f",
+      "binary_equal": true
+    },
+    {
+      "path": "figuras/fuentes/resultados_anuales.csv",
+      "bytes": 6410,
+      "sha256": "c0efd3fee2d986f6fb09cf9df4f5a0a2d7a84477bc13a4a530d4c46f9db02a97",
+      "binary_equal": true
+    },
+    {
+      "path": "figuras/resultados_anuales.png",
+      "bytes": 72376,
+      "sha256": "931b60aa2d92e92caa21f0b8bc1715d3f0570969ca63801e7ef53b714f203435",
+      "binary_equal": true
+    },
+    {
+      "path": "figuras/resultados_anuales.svg",
+      "bytes": 61753,
+      "sha256": "b74cabed48c174503b673c4aebfda9f83bff15060217ee18276f2e43ef31dea6",
+      "binary_equal": true
+    },
+    {
+      "path": "fuentes_publicas/api_documentacion.html",
+      "bytes": 6404,
+      "sha256": "c1ab76a0e006e7f16c5ba4660716f2ade0f8a76e58dbbe7124d73a9fbf98cd2c",
+      "binary_equal": true
+    },
+    {
+      "path": "fuentes_publicas/excepciones.json",
+      "bytes": 761,
+      "sha256": "e2a852b9a6fdfd19f29d9140915d2b772ae60ca57d55f7a22f084c00cca06db2",
+      "binary_equal": true
+    },
+    {
+      "path": "fuentes_publicas/fuentes.json",
+      "bytes": 5404,
+      "sha256": "45d0ef4b0cd363a27cf41b78cbce64964955a4f4cfc6125235e6867f1e373930",
+      "binary_equal": true
+    },
+    {
+      "path": "fuentes_publicas/index_serie.json",
+      "bytes": 204068,
+      "sha256": "83798c2d2001f6b81ccc21c0c760f3614d3c2c16c46ce43651d9d50ecb3624cd",
+      "binary_equal": true
+    },
+    {
+      "path": "fuentes_publicas/nyfed_carter_2025.html",
+      "bytes": 98968,
+      "sha256": "e0f19f00ae748a08f260ea6748a107bdc96db87170348ed9fa52006bdb38bb3f",
+      "binary_equal": true
+    },
+    {
+      "path": "fuentes_publicas/nyfed_excepcion_2023.html",
+      "bytes": 99432,
+      "sha256": "5214ff8554684c0dc52a22f56598aa367ac70164e835f42457dfd49bc1615249",
+      "binary_equal": true
+    },
+    {
+      "path": "fuentes_publicas/nyfed_excepcion_2026.html",
+      "bytes": 99430,
+      "sha256": "c9f2ae92a219d12c497f3127590e3ee17b3c317926986a0c29813e0108be0f1e",
+      "binary_equal": true
+    },
+    {
+      "path": "fuentes_publicas/sifma_2026.html",
+      "bytes": 298950,
+      "sha256": "8a9b501db9338e7abacaddbcc1d26cc16292472b0739f315c8c26cf9fc8490d3",
+      "binary_equal": true
+    },
+    {
+      "path": "fuentes_publicas/sifma_archivo.html",
+      "bytes": 338363,
+      "sha256": "37f4b5376837980f10c894045f667ae2feab76575b44f733f3dc6e172453b365",
+      "binary_equal": true
+    },
+    {
+      "path": "fuentes_publicas/sofr_metodologia.html",
+      "bytes": 142194,
+      "sha256": "ead0ba8a4ae97f1d74c45b57614a84b0062b0e3d0e2b36a502a45e569d692325",
+      "binary_equal": true
+    },
+    {
+      "path": "fuentes_publicas/sofr_serie.json",
+      "bytes": 277359,
+      "sha256": "a121afce74fbc966509dc9660a55d6c6d9f1a8f14d646691a24f63dc81657f3a",
+      "binary_equal": true
+    },
+    {
+      "path": "hallazgos.json",
+      "bytes": 3076,
+      "sha256": "0e95df5bbbdbfae56863e619f20585162350c0a204e09b2060cf77ae49388b01",
+      "binary_equal": true
+    },
+    {
+      "path": "herramientas/scripts/build_sofr_benchmark.py",
+      "bytes": 305,
+      "sha256": "6595b1cdb31a23c54a154e51930525cb3aeef7cf3600773cad50862fb50870b6",
+      "binary_equal": true
+    },
+    {
+      "path": "herramientas/scripts/return_capital/__init__.py",
+      "bytes": 81,
+      "sha256": "54100a1d5be7b07b15437b543affd79d174d31b97ba0c974f1c58df3ce50c0b4",
+      "binary_equal": true
+    },
+    {
+      "path": "herramientas/scripts/return_capital/common.py",
+      "bytes": 3402,
+      "sha256": "a7d1717822dd07dc720052ea3299144fa3f219dd914ff7f05db97cd2917f9ef7",
+      "binary_equal": true
+    },
+    {
+      "path": "herramientas/scripts/return_capital/report.py",
+      "bytes": 30764,
+      "sha256": "a43ce89f133e0453cfb0f02a4a2af9d634d96178c0663487c7367288d1e5b656",
+      "binary_equal": true
+    },
+    {
+      "path": "herramientas/scripts/sofr_benchmark/__init__.py",
+      "bytes": 75,
+      "sha256": "e01c9d571f7a584ec8d2af7aa1ed04d1a7a67619779f5b5092dbab3f736eb938",
+      "binary_equal": true
+    },
+    {
+      "path": "herramientas/scripts/sofr_benchmark/accrual.py",
+      "bytes": 8244,
+      "sha256": "98f2772158ccc8ad6610a5a312dbe54e7c2dded73718f929f985701bcf3711d0",
+      "binary_equal": true
+    },
+    {
+      "path": "herramientas/scripts/sofr_benchmark/calculation.py",
+      "bytes": 9345,
+      "sha256": "c7a20e7e8827d95aa67763d70455b841cc6e92a093a352f18b3a973fd1b976de",
+      "binary_equal": true
+    },
+    {
+      "path": "herramientas/scripts/sofr_benchmark/calendar.py",
+      "bytes": 5913,
+      "sha256": "35410ed4eb32e18ca200e2fd34fdb00e93b62f674306e2f0501d15565fcad3fc",
+      "binary_equal": true
+    },
+    {
+      "path": "herramientas/scripts/sofr_benchmark/comparison.py",
+      "bytes": 6054,
+      "sha256": "06b41d1c20c021bcaa965eaa5421f172c3ae4cc86df3bac55642c50f4c796778",
+      "binary_equal": true
+    },
+    {
+      "path": "herramientas/scripts/sofr_benchmark/integrity.py",
+      "bytes": 2879,
+      "sha256": "caa8e9f1d5b8790a94c6a55772a91829ae57b66eb0e2bbc053bb773a6100df99",
+      "binary_equal": true
+    },
+    {
+      "path": "herramientas/scripts/sofr_benchmark/package.py",
+      "bytes": 8146,
+      "sha256": "1fbe68c75720aaa074dc3b685825387ebfda9f7f73522cc1abc1cf7d07a0bbc7",
+      "binary_equal": true
+    },
+    {
+      "path": "herramientas/scripts/sofr_benchmark/report.py",
+      "bytes": 17237,
+      "sha256": "f9555f21a9e7fe0a9cec91e43164c837526ecf190947d9bff913470f8578debc",
+      "binary_equal": true
+    },
+    {
+      "path": "herramientas/scripts/sofr_benchmark/verification.py",
+      "bytes": 3206,
+      "sha256": "1afea323bab1e2e6f346e5f4368a278ac0f7d969f513a724d2f969e73393ad06",
+      "binary_equal": true
+    },
+    {
+      "path": "herramientas/scripts/verify_sofr_benchmark.py",
+      "bytes": 313,
+      "sha256": "2b3b16fbe22dbf6832f18d4eddc20cc9aef440de5b64d4e83cc8434e2d65e1a1",
+      "binary_equal": true
+    },
+    {
+      "path": "herramientas/tests/unit/test_sofr_accrual.py",
+      "bytes": 6049,
+      "sha256": "71867ef1a4c7672b9ecfc1c1b831c3d71b0e0c16a4a5749c023c5a4e4b78e9de",
+      "binary_equal": true
+    },
+    {
+      "path": "herramientas/tests/unit/test_sofr_calendar.py",
+      "bytes": 3967,
+      "sha256": "56692807316f9c3ce4c6606a06df251ecae334d9f205a5b5bf3aaeb696e85377",
+      "binary_equal": true
+    },
+    {
+      "path": "herramientas/tests/unit/test_sofr_comparison.py",
+      "bytes": 4634,
+      "sha256": "86bc8ab8e6a61597d85fa68aa31e51b906d910cc5a9d672892f89a9f3f8cf533",
+      "binary_equal": true
+    },
+    {
+      "path": "herramientas/tests/unit/test_sofr_package.py",
+      "bytes": 4404,
+      "sha256": "ad2a139a442c080c018da0dc9c0316f1c2f81a1c35f04f833c7d28fbf2dc3c52",
+      "binary_equal": true
+    },
+    {
+      "path": "manifiesto_paquete.json",
+      "bytes": 12629,
+      "sha256": "4769f6c6a80e6fa4b4fd4a4e7c45b94fb10b3773bc3cbbebd36b117f73c938c9",
+      "binary_equal": true
+    },
+    {
+      "path": "manifiesto_paquete.sha256",
+      "bytes": 91,
+      "sha256": "15c2208c4d86435ca8e18540522fb1982247e263c31882230766465673eac6c0",
+      "binary_equal": true
+    },
+    {
+      "path": "README.md",
+      "bytes": 4216,
+      "sha256": "686cef938337b0c7c2961b7ccf7e6a8f08b3d11e5810aeca75ca07e353c66ff3",
+      "binary_equal": true
+    },
+    {
+      "path": "reporte.html",
+      "bytes": 14456,
+      "sha256": "fd6fe86e26bf2a360b3b89a7d58d1ab977b68cf39ca6a576c2cc093316ea735c",
+      "binary_equal": true
+    },
+    {
+      "path": "reporte.md",
+      "bytes": 10994,
+      "sha256": "0d4f3565160c2b1a799f1a128aa612b4e58715ccbf0e51ae90bd936fc5a000d0",
+      "binary_equal": true
+    },
+    {
+      "path": "reutilizado/diario_reutilizado.csv",
+      "bytes": 1883187,
+      "sha256": "99098bc63bda71107ebbd0ee69e5ead156a86e938e14e29ff6939a0924775632",
+      "binary_equal": true
+    },
+    {
+      "path": "reutilizado/h2_reutilizado.csv",
+      "bytes": 3344,
+      "sha256": "6a321d46b86f5c3d8cae4107237a1632ee0799d0b3cd1f57064088e2f2441079",
+      "binary_equal": true
+    },
+    {
+      "path": "reutilizado/manifiesto_previo.json",
+      "bytes": 16409,
+      "sha256": "0163cf7622d929c06773700f50d13b2e808afee85a6cf85e48d45dcac03af12b",
+      "binary_equal": true
+    },
+    {
+      "path": "reutilizado/metricas_reutilizadas.csv",
+      "bytes": 25528,
+      "sha256": "7d46b9f059b6988b9d8bbf4ffb90e33ce662ea1da5902475d3139dd2ebae63f8",
+      "binary_equal": true
+    },
+    {
+      "path": "tablas/bloques_sofr.csv",
+      "bytes": 380371,
+      "sha256": "b2bf1e433157062ad37f0f470a1e047e0641da68fd2439256df0b6045b4fdd93",
+      "binary_equal": true
+    },
+    {
+      "path": "tablas/calendario_sifma.csv",
+      "bytes": 10495,
+      "sha256": "b7019f4fddfc20a72a2113f98e779c5fe97f66cfa9533d276fcfe22f086b2078",
+      "binary_equal": true
+    },
+    {
+      "path": "tablas/calendario_verificado.csv",
+      "bytes": 204444,
+      "sha256": "80c3195095e8621e6301daa539722017a3ece0824478600bbd1f69247124bf19",
+      "binary_equal": true
+    },
+    {
+      "path": "tablas/cartera_sofr_diaria.csv",
+      "bytes": 798787,
+      "sha256": "1312f000c2a36818a925a8573d2c34fdc69822e65f05c0d810f199acc6872b8d",
+      "binary_equal": true
+    },
+    {
+      "path": "tablas/comparacion_periodos.csv",
+      "bytes": 10123,
+      "sha256": "2ebee4298bbb11bcf48f9c47266f60ac09ecf61aee40c2079973a6b61557a7bd",
+      "binary_equal": true
+    },
+    {
+      "path": "tablas/control_bloque_inicial.csv",
+      "bytes": 423,
+      "sha256": "2b32f86b30d3b6f0726d13c5045fd3c366520861662e39a35dde03b83ef4494c",
+      "binary_equal": true
+    },
+    {
+      "path": "tablas/control_sofr_index.csv",
+      "bytes": 759934,
+      "sha256": "926b5ebefb3ee4f70038b9c75ed45d606d72bc3c904af4e801dbc49039d39f7f",
+      "binary_equal": true
+    },
+    {
+      "path": "tablas/dias_semana_sin_observacion.csv",
+      "bytes": 6374,
+      "sha256": "c19f3c8c32b955c8066969b0934c1ceac0168c0013589b4b680673dcc554b705",
+      "binary_equal": true
+    },
+    {
+      "path": "tablas/diferencias_periodos.csv",
+      "bytes": 5030,
+      "sha256": "ec1ca03e873a12078865dea16a8bffad2e1ef8af11674c9f6d77aab05fef408d",
+      "binary_equal": true
+    },
+    {
+      "path": "tablas/metricas_sofr_periodos.csv",
+      "bytes": 3314,
+      "sha256": "edc3267046f6f88f04c13e10603760daf202b1a442e2066832a10bbab114a2dd",
+      "binary_equal": true
+    },
+    {
+      "path": "tablas/saldos_alineados.csv",
+      "bytes": 290772,
+      "sha256": "df56b41c925350320bba3bc2e933e98d7cee84e2d3d8f19aba401a453cdf0e18",
+      "binary_equal": true
+    },
+    {
+      "path": "verificacion_construccion.json",
+      "bytes": 951,
+      "sha256": "11deece0cd4d13bdb18d208ec31631c675ea3b27f8cc93b77b2e957b990c4c05",
+      "binary_equal": true
+    }
+  ]
+}

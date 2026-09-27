@@ -1,0 +1,61 @@
+{
+  "original_package": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\retorno_capital\\20260927T143928Z\\paquete_20260927T152732Z",
+  "portable_package": "C:\\Users\\pablo\\AppData\\Local\\Temp\\retorno-capital-verificacion-9tynwro0\\paquete_20260927T152732Z",
+  "cwd": "C:\\Users\\pablo\\AppData\\Local\\Temp\\retorno-capital-verificacion-9tynwro0",
+  "copy_bytes_identical": true,
+  "commands": [
+    {
+      "name": "completa_portable",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "C:\\Users\\pablo\\AppData\\Local\\Temp\\retorno-capital-verificacion-9tynwro0\\paquete_20260927T152732Z\\herramientas\\scripts\\verify_return_capital.py",
+        "--package",
+        "C:\\Users\\pablo\\AppData\\Local\\Temp\\retorno-capital-verificacion-9tynwro0\\paquete_20260927T152732Z",
+        "--output",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\retorno_capital\\20260927T143928Z\\auditorias\\verificacion_completa_portable.json",
+        "--parent",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\20260925T005436Z",
+        "--correction",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\correccion_exposicion_h2_20260925T150139Z\\paquete_20260926T204312Z",
+        "--intraday",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\riesgo_intradia\\20260926T214118Z\\paquete_20260926T220400Z",
+        "--e3",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\Paquete de evidencia"
+      ],
+      "cwd": "C:\\Users\\pablo\\AppData\\Local\\Temp\\retorno-capital-verificacion-9tynwro0",
+      "exit_code": 0,
+      "seconds": 20.814196586608887,
+      "explicit_dependency_env": {
+        "RETURN_CAPITAL_PARENT": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\20260925T005436Z",
+        "RETURN_CAPITAL_CORRECTION": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\correccion_exposicion_h2_20260925T150139Z\\paquete_20260926T204312Z",
+        "RETURN_CAPITAL_INTRADAY": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\riesgo_intradia\\20260926T214118Z\\paquete_20260926T220400Z"
+      }
+    },
+    {
+      "name": "pruebas_portables",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "pytest",
+        "-p",
+        "no:cacheprovider",
+        "tests/unit",
+        "-q"
+      ],
+      "cwd": "C:\\Users\\pablo\\AppData\\Local\\Temp\\retorno-capital-verificacion-9tynwro0\\paquete_20260927T152732Z\\herramientas",
+      "exit_code": 0,
+      "seconds": 41.604716062545776,
+      "explicit_dependency_env": {
+        "RETURN_CAPITAL_PARENT": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\20260925T005436Z",
+        "RETURN_CAPITAL_CORRECTION": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\correccion_exposicion_h2_20260925T150139Z\\paquete_20260926T204312Z",
+        "RETURN_CAPITAL_INTRADAY": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\riesgo_intradia\\20260926T214118Z\\paquete_20260926T220400Z"
+      }
+    }
+  ]
+}

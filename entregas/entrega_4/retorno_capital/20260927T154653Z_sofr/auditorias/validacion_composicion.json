@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "account_days": 1704,
+  "blocks": 1164,
+  "index_checks": 2326,
+  "index_anchor": "2022-01-03",
+  "index_end": "2026-09-01",
+  "all_factors_inside_published_rounding_intervals": true,
+  "rounding_quantum": "0.00000001",
+  "tolerance_widened": false,
+  "same_rate_business_boundaries_preserved": true
+}

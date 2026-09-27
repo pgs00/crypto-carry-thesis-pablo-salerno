@@ -1,0 +1,9 @@
+{
+  "python": "3.14.3",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "dependencies": {
+    "matplotlib": "3.11.2",
+    "numpy": "2.3.5",
+    "pytest": "9.1.1"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "status": "passed",
+  "recorded_at": "2026-09-27T16:25:18.647513+00:00",
+  "manifest_sha256": "4769f6c6a80e6fa4b4fd4a4e7c45b94fb10b3773bc3cbbebd36b117f73c938c9",
+  "local_links_checked": [
+    "documentos/aprobacion.md",
+    "documentos/protocolo.md",
+    "documentos/mapa_fuentes.md",
+    "README.md",
+    "figuras/capital.png",
+    "figuras/resultados_anuales.png",
+    "reutilizado/metricas_reutilizadas.csv",
+    "reutilizado/diario_reutilizado.csv",
+    "reutilizado/h2_reutilizado.csv",
+    "figuras/control_index.png",
+    "tablas/comparacion_periodos.csv",
+    "tablas/diferencias_periodos.csv",
+    "tablas/cartera_sofr_diaria.csv",
+    "tablas/bloques_sofr.csv",
+    "tablas/calendario_verificado.csv",
+    "tablas/dias_semana_sin_observacion.csv",
+    "tablas/control_bloque_inicial.csv",
+    "tablas/control_sofr_index.csv"
+  ],
+  "figures": [
+    {
+      "file": "figuras/capital.png",
+      "pixels": [
+        2140,
+        970
+      ],
+      "sha256": "f0b402e77da6681e3de699c7a95b19bc923cb488601e42fefa4695ce48026b53",
+      "svg_sha256": "cbe63a4172d1a881888143d1b361e2c240c29f5d1b6193f0576eaedbcc83c6c0"
+    },
+    {
+      "file": "figuras/control_index.png",
+      "pixels": [
+        2164,
+        1297
+      ],
+      "sha256": "f13efea56547a1532afafb7ab36939a8eae967dc4ce39825f9b5194c22a1542e",
+      "svg_sha256": "90e790ae672281da03ff88ae7b75cccabf163b71c4cc9199d09f6927133aeb84"
+    },
+    {
+      "file": "figuras/resultados_anuales.png",
+      "pixels": [
+        2140,
+        1243
+      ],
+      "sha256": "931b60aa2d92e92caa21f0b8bc1715d3f0570969ca63801e7ef53b714f203435",
+      "svg_sha256": "b74cabed48c174503b673c4aebfda9f83bff15060217ee18276f2e43ef31dea6"
+    }
+  ],
+  "visual_review": "All three final PNGs viewed; labels, axes, legends and 2026 partial period readable. Legends moved off data before seal.",
+  "html_scope": "Generated report text and local links checked; no claim of browser screenshot QA"
+}

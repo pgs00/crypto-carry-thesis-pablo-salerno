@@ -1,0 +1,13 @@
+{
+  "source_date": "2021-12-31",
+  "source_percent_rate": "0.05",
+  "source_block_days": 3,
+  "account_accrual_days": 2,
+  "interest_expected_fraction": "1/36 USD",
+  "interest_expected_decimal": "0.027777777777777777777777777777777777777777777777778",
+  "interest_calculated": "0.027777777777777777777777777777777777777777778",
+  "absolute_error": "2.22222E-46",
+  "first_business_balance": "10000.027777777777777777777777777777777777777777778",
+  "official_saturday_index_used": false,
+  "status": "passed"
+}

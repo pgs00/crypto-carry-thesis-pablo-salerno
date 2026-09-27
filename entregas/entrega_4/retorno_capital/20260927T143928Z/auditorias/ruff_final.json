@@ -1,0 +1,18 @@
+{
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "ruff",
+    "check",
+    "scripts/return_capital",
+    "scripts/build_return_capital.py",
+    "scripts/verify_return_capital.py",
+    "tests/unit/test_return_capital_accounting.py",
+    "tests/unit/test_return_capital_decisions.py",
+    "tests/unit/test_return_capital_package.py"
+  ],
+  "cwd": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting",
+  "exit_code": 0,
+  "elapsed_seconds": 0.1092977523803711
+}

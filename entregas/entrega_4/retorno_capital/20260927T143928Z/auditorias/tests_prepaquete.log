@@ -1,0 +1,17 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.3, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\pablo\Documentos\UCEMA\Tesina\Backtesting
+configfile: pyproject.toml
+plugins: anyio-4.15.1
+collected 162 items
+
+tests\unit\test_return_capital_accounting.py ......                      [  3%]
+tests\unit\test_return_capital_decisions.py ...........                  [ 10%]
+tests\unit\test_return_capital_package.py .........                      [ 16%]
+tests\unit\test_rules_sensitivity_exposure.py .....................      [ 29%]
+tests\unit\test_rules_sensitivity_h2.py ................................ [ 48%]
+...................                                                      [ 60%]
+tests\unit\test_rules_sensitivity_correction_verifier.py ............... [ 69%]
+.................................................                        [100%]
+
+============================ 162 passed in 22.94s =============================

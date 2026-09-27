@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "recorded_at": "2026-09-27T16:26:07.060599+00:00",
+  "protected_files": 62,
+  "protected_modified": [],
+  "index_sha256": "eb64db20ee17ac7c0a0a079d0105665ed254d983e8b21687e864bdc0388e0026",
+  "index_bytes_unchanged": true,
+  "head_unchanged": true,
+  "head": "120f94309e724a7a25e68e5ade67eed43a98f9e7",
+  "staged_paths": [],
+  "sealed_sources": {
+    "parent": {
+      "path": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\20260925T005436Z",
+      "manifest_sha256": "77f1cfcaf4fb13044dbcb3b242a2eb19749cf7e88806db023a08bbe4ec272057",
+      "members": 1087,
+      "all_member_hashes_match": true
+    },
+    "correction": {
+      "path": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\correccion_exposicion_h2_20260925T150139Z\\paquete_20260926T204312Z",
+      "manifest_sha256": "e735207869c08bbd0b9b04818c8855ecd9576bd979d3127b5ff108f61d3843ce",
+      "members": 57,
+      "all_member_hashes_match": true
+    },
+    "intraday": {
+      "path": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\riesgo_intradia\\20260926T214118Z\\paquete_20260926T220400Z",
+      "manifest_sha256": "78cb03572c5940567852d0255d05a9f8a923f01df01fc0aa8b6cccef70f3b3bb",
+      "members": 199,
+      "all_member_hashes_match": true
+    },
+    "e3": {
+      "path": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\Paquete de evidencia",
+      "manifest_sha256": "f19b7898ed8136d4d2035dc1fed5f232fcdcdf301e0a5ed808cc3e2087e6d187",
+      "members": 120,
+      "all_member_hashes_match": true
+    },
+    "previous_analysis": {
+      "path": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\retorno_capital\\20260927T143928Z\\paquete_20260927T152732Z",
+      "manifest_sha256": "0163cf7622d929c06773700f50d13b2e808afee85a6cf85e48d45dcac03af12b",
+      "members": 93,
+      "all_member_hashes_match": true
+    }
+  },
+  "git_status": "M .gitattributes\n?? entregas/entrega_4/retorno_capital/\n?? scripts/build_return_capital.py\n?? scripts/build_sofr_benchmark.py\n?? scripts/return_capital/\n?? scripts/sofr_benchmark/\n?? scripts/verify_return_capital.py\n?? scripts/verify_sofr_benchmark.py\n?? tests/unit/test_return_capital_accounting.py\n?? tests/unit/test_return_capital_decisions.py\n?? tests/unit/test_return_capital_package.py\n?? tests/unit/test_sofr_accrual.py\n?? tests/unit/test_sofr_calendar.py\n?? tests/unit/test_sofr_comparison.py\n?? tests/unit/test_sofr_package.py",
+  "git_diff_check": "",
+  "new_manifest_sha256": "4769f6c6a80e6fa4b4fd4a4e7c45b94fb10b3773bc3cbbebd36b117f73c938c9",
+  "engine_executed": false,
+  "prior_diagnostics_repeated": false,
+  "published": false
+}

@@ -1,0 +1,21 @@
+{
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "-m",
+    "ruff",
+    "check",
+    "scripts/sofr_benchmark",
+    "scripts/build_sofr_benchmark.py",
+    "scripts/verify_sofr_benchmark.py",
+    "tests\\unit\\test_sofr_accrual.py",
+    "tests\\unit\\test_sofr_calendar.py",
+    "tests\\unit\\test_sofr_comparison.py",
+    "tests\\unit\\test_sofr_package.py"
+  ],
+  "exit_code": 0,
+  "stdout": "All checks passed!\n",
+  "stderr": ""
+}
