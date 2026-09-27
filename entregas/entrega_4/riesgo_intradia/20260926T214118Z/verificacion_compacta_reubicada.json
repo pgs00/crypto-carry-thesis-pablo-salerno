@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "scope": "compact",
+  "schema": "intraday_risk_package_v1",
+  "manifest_sha256": "78cb03572c5940567852d0255d05a9f8a923f01df01fc0aa8b6cccef70f3b3bb",
+  "members_checked": 199,
+  "drawdown_rows_checked": 128,
+  "incidents_checked": 449,
+  "daily_reconciliations_checked": 6816,
+  "compact_evidence_rows_checked": {
+    "eventos_financieros": 37756,
+    "episodios": 2137,
+    "marzo_2023": 17358
+  },
+  "global_drawdown_recomputed": false,
+  "daily_nesting_recomputed": false,
+  "price_quality_rows_checked": 2457592,
+  "price_quality_union_recomputed": false,
+  "price_quality_reason_codes_recomputed": false,
+  "parent_authenticated": true,
+  "correction_authenticated": true,
+  "package_read_only": true,
+  "sources_read_only": true,
+  "engine_replay": false,
+  "external_funding_is_hypothetical": true,
+  "limitations": "compact scope checks exported arithmetic and coverage declarations, not global extrema or minute-price completeness"
+}

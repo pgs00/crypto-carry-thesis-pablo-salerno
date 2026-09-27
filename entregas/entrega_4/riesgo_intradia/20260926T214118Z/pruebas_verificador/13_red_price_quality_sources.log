@@ -1,0 +1,46 @@
+..........................................................FF             [100%]
+================================== FAILURES ===================================
+__ test_complete_quality_links_exact_union_and_calls_explicit_causal_helper ___
+
+    def test_complete_quality_links_exact_union_and_calls_explicit_causal_helper():
+        calls = []
+        prices = {(symbol, source): {"identity": (symbol, source)}
+                  for symbol in ("BTCUSDT", "ETHUSDT") for source in ("spot", "mark", "futures")}
+    
+        def literal_classifier(source, times, *, require_volume):
+            calls.append((source['identity'], require_volume))
+            np.testing.assert_array_equal(times, [10, 20, 30])
+            return np.array([0, 1, 2], dtype=np.uint8)
+    
+>       assert verifier().check_quality_block(quality_fixture(), prices, np.array([10, 20, 20, 30]),
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            10, 31, classifier=literal_classifier) == 3
+E       AttributeError: module 'scripts.verify_intraday_risk' has no attribute 'check_quality_block'. Did you mean: 'check_quality_clock'?
+
+tests\test_intraday_risk_verifier.py:718: AttributeError
+_ test_rehashed_valid_reason_codes_with_unchanged_counts_fail_source_comparison _
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-390/test_rehashed_valid_reason_cod0')
+
+    def test_rehashed_valid_reason_codes_with_unchanged_counts_fail_source_comparison(tmp_path):
+        import pyarrow as pa
+        import pyarrow.parquet as pq
+    
+        values = quality_fixture()
+        values['BTCUSDT_spot_reason_code'] = np.array([2, 1, 0], dtype=np.uint8)
+        path = tmp_path / 'calidad_precios.parquet'
+        pq.write_table(pa.table(values), path)
+        seal(tmp_path)
+        verifier().verify_manifest(tmp_path)
+        verifier().check_quality_values(values, 10, 31)
+        with pytest.raises(ValueError, match="quality"):
+>           verifier().check_quality_block(values, {('BTCUSDT','spot'): {}}, np.array([10,20,30]),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                10,31,classifier=lambda *args,**kwargs:np.array([0,1,2],dtype=np.uint8))
+E           AttributeError: module 'scripts.verify_intraday_risk' has no attribute 'check_quality_block'. Did you mean: 'check_quality_clock'?
+
+tests\test_intraday_risk_verifier.py:738: AttributeError
+=========================== short test summary info ===========================
+FAILED tests/test_intraday_risk_verifier.py::test_complete_quality_links_exact_union_and_calls_explicit_causal_helper
+FAILED tests/test_intraday_risk_verifier.py::test_rehashed_valid_reason_codes_with_unchanged_counts_fail_source_comparison
+2 failed, 58 passed in 1.78s

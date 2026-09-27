@@ -1,0 +1,22 @@
+{
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\riesgo_intradia\\20260926T214118Z\\pruebas_verificador\\relocation_svd_qqi_\\package\\herramientas\\scripts\\verify_intraday_risk.py",
+    "--package",
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\riesgo_intradia\\20260926T214118Z\\pruebas_verificador\\relocation_svd_qqi_\\package",
+    "--scope",
+    "compact",
+    "--parent",
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\20260925T005436Z",
+    "--correction",
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\correccion_exposicion_h2_20260925T150139Z\\paquete_20260926T204312Z"
+  ],
+  "exit_code": 0,
+  "stdout": "{\n  \"status\": \"passed\",\n  \"scope\": \"compact\",\n  \"schema\": \"intraday_risk_package_v1\",\n  \"manifest_sha256\": \"1c3ad245e774f7f7b55d2e334ea1d8242421c16820f799a44db116c768a483e7\",\n  \"members_checked\": 114,\n  \"drawdown_rows_checked\": 128,\n  \"incidents_checked\": 449,\n  \"daily_reconciliations_checked\": 6816,\n  \"compact_evidence_rows_checked\": {\n    \"eventos_financieros\": 37756,\n    \"episodios\": 2137,\n    \"marzo_2023\": 17358\n  },\n  \"global_drawdown_recomputed\": false,\n  \"daily_nesting_recomputed\": false,\n  \"parent_authenticated\": true,\n  \"correction_authenticated\": true,\n  \"package_read_only\": true,\n  \"sources_read_only\": true,\n  \"engine_replay\": false,\n  \"external_funding_is_hypothetical\": true,\n  \"limitations\": \"compact scope checks exported arithmetic and coverage declarations, not global extrema or minute-price completeness\"\n}\n",
+  "stderr": "",
+  "package_files": 116,
+  "package_unchanged": true,
+  "cache_created": false
+}

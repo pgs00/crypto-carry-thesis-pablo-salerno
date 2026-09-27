@@ -1,0 +1,183 @@
+{
+  "schema": "intraday_reservation_audit_v1",
+  "created_at_utc": "2026-09-26T22:02:21.893783+00:00",
+  "status": "pass",
+  "runs": [
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "observation_grid": "union of ledger, signals, renewal diagnostics, order and risk timestamps; post phase only, NOT minute-risk series",
+      "observations": 6963,
+      "known": 6920,
+      "unknown": 43,
+      "validation": {
+        "diagnostics_checked": 10327,
+        "diagnostics_resolved_unknown": 0,
+        "accepted_assignments": 10,
+        "renewal_assignments": 49
+      },
+      "reason_counts": {
+        "missing_spot_close_at_full_fill": 34,
+        "unpriced_pending_futures_commitment": 9,
+        "verified_no_reservation": 6884,
+        "verified_reservation": 36
+      },
+      "cash_bounds_finite": true,
+      "source_changes": []
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "observation_grid": "union of ledger, signals, renewal diagnostics, order and risk timestamps; post phase only, NOT minute-risk series",
+      "observations": 11102,
+      "known": 10885,
+      "unknown": 217,
+      "validation": {
+        "diagnostics_checked": 10682,
+        "diagnostics_resolved_unknown": 0,
+        "accepted_assignments": 20,
+        "renewal_assignments": 129
+      },
+      "reason_counts": {
+        "missing_spot_close_at_full_fill": 89,
+        "unpriced_pending_futures_commitment": 128,
+        "verified_no_reservation": 10800,
+        "verified_reservation": 85
+      },
+      "cash_bounds_finite": true,
+      "source_changes": []
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "observation_grid": "union of ledger, signals, renewal diagnostics, order and risk timestamps; post phase only, NOT minute-risk series",
+      "observations": 6520,
+      "known": 6486,
+      "unknown": 34,
+      "validation": {
+        "diagnostics_checked": 10308,
+        "diagnostics_resolved_unknown": 0,
+        "accepted_assignments": 10,
+        "renewal_assignments": 36
+      },
+      "reason_counts": {
+        "missing_spot_close_at_full_fill": 25,
+        "unpriced_pending_futures_commitment": 9,
+        "verified_no_reservation": 6459,
+        "verified_reservation": 27
+      },
+      "cash_bounds_finite": true,
+      "source_changes": []
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "observation_grid": "union of ledger, signals, renewal diagnostics, order and risk timestamps; post phase only, NOT minute-risk series",
+      "observations": 11084,
+      "known": 10869,
+      "unknown": 215,
+      "validation": {
+        "diagnostics_checked": 10671,
+        "diagnostics_resolved_unknown": 0,
+        "accepted_assignments": 21,
+        "renewal_assignments": 124
+      },
+      "reason_counts": {
+        "missing_spot_close_at_full_fill": 86,
+        "unpriced_pending_futures_commitment": 129,
+        "verified_no_reservation": 10786,
+        "verified_reservation": 83
+      },
+      "cash_bounds_finite": true,
+      "source_changes": []
+    }
+  ],
+  "source_sha256": {
+    "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\corridas\\run_ad71d751b20623006c195ff3\\ledger.parquet": "86c6dc8e08790373ad4e78e607d3f31214dd21640922dda31edb2956e0ec6353",
+    "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\corridas\\run_ad71d751b20623006c195ff3\\signals.parquet": "d7a77c69508a2ed2483ccf4d68cc2e78bf2b972edda5eb7c2f5b5dc0fb3d34f3",
+    "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\corridas\\run_ad71d751b20623006c195ff3\\renewal_diagnostics.parquet": "2c0c8fa85b957c07dd63ba65f054ff0c6cbae57410994967fb313f57ba53bfe9",
+    "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\corridas\\run_ad71d751b20623006c195ff3\\orders.parquet": "0a344cfb807007cd85701a7ee59233b2b08a69ff3e98f7bef7458d2960d924e3",
+    "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\corridas\\run_ad71d751b20623006c195ff3\\risk_events.parquet": "dd7ac1779d7eac15932cec37d4558c79b22f604dbdc4fd6bfc567d65282e56a6",
+    "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\corridas\\run_ad71d751b20623006c195ff3\\fills.parquet": "a0058d8310117ce4ccf5b3aa4561f14572f2a18df5adf3ffaf2b4a6949c18b17",
+    "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\corridas\\run_ad71d751b20623006c195ff3\\positions.parquet": "17142d8ee536b3b59ba71849100a844483f250b3adb400b4cdcd9cb32f109289",
+    "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\corridas\\run_ad71d751b20623006c195ff3\\effective_config.toml": "f54d659d716b6b76c1a01d0875195440471015034de2c2276ade0403e44da5f1",
+    "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\corridas\\run_dfea4b7ac1475668d5968c97\\ledger.parquet": "7c6b395dd7753745ef5885fd1fcd6784c78724fecbebc12047de4c3d61142995",
+    "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\corridas\\run_dfea4b7ac1475668d5968c97\\signals.parquet": "2560a2443877ec93e5fd46ff5991fcba5a909be0eaa9bd1e7cab3b13f88c4204",
+    "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\corridas\\run_dfea4b7ac1475668d5968c97\\renewal_diagnostics.parquet": "b5b3522d4da4403a91392a7f31f07784cd17d78c9b248dbaf4cfb8a980f4c23b",
+    "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\corridas\\run_dfea4b7ac1475668d5968c97\\orders.parquet": "9f983551033f1463332d585df066ebee76d1dc995a96486fad094b1b00ec5c8a",
+    "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\corridas\\run_dfea4b7ac1475668d5968c97\\risk_events.parquet": "fbdbfc6bf3edc8b6c8ca218814674762fc4cd8e4e6804bb289629e7e3216eea1",
+    "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\corridas\\run_dfea4b7ac1475668d5968c97\\fills.parquet": "4ad115466ddf6d81acb1f846cb0bc0989f82a8b734db87c95a4a4d502b036d19",
+    "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\corridas\\run_dfea4b7ac1475668d5968c97\\positions.parquet": "37dbd2875b2b394f872e47be370259be0e66a94696f0b3755d9a0e52f39f35f2",
+    "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\corridas\\run_dfea4b7ac1475668d5968c97\\effective_config.toml": "f54d659d716b6b76c1a01d0875195440471015034de2c2276ade0403e44da5f1",
+    "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\corridas\\run_70383794701c4f0fc157b2ed\\ledger.parquet": "ef485825bd2257273ec48a4eb672d09b891b6f83b740dc618e771b0dba484300",
+    "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\corridas\\run_70383794701c4f0fc157b2ed\\signals.parquet": "e7159adf95a4c2421a6798e5f5ab5f7d6ab898c421585e5d3524af36ba518878",
+    "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\corridas\\run_70383794701c4f0fc157b2ed\\renewal_diagnostics.parquet": "b400c38993c75465c98d89dba1e405e057189488847b28de73bd4c7a32fb5bf3",
+    "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\corridas\\run_70383794701c4f0fc157b2ed\\orders.parquet": "b82fb6a7dc2a9ade53a996836803619d6936241c0c0b0f8bd3d9c87dc9bf4cee",
+    "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\corridas\\run_70383794701c4f0fc157b2ed\\risk_events.parquet": "76b2eccfb69bc23e3bd434bc2186e2631f0e599d801378e69ee6160f4383c825",
+    "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\corridas\\run_70383794701c4f0fc157b2ed\\fills.parquet": "7212ffacd838dcba31c0ed0762be047a67d505667eba29f435a07d4ac23cd80b",
+    "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\corridas\\run_70383794701c4f0fc157b2ed\\positions.parquet": "94777eed9c4e815b3f580479b699de2695364c8d26d036084f7f3001b580e6ef",
+    "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\corridas\\run_70383794701c4f0fc157b2ed\\effective_config.toml": "4824445979ffc3e232fec77991515f8dc525c82b9de95bd057daae1dbea8d619",
+    "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\corridas\\run_3f5d9cce8ff1c2ba5447e3b6\\ledger.parquet": "477c2b17247d1c02b7f37b7cacae015bc36bb7e25ba0414b5202d1eba94a4963",
+    "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\corridas\\run_3f5d9cce8ff1c2ba5447e3b6\\signals.parquet": "4b0a3add9f14fa1bc786e5b8213c1e0e9b40fd109338c09b01f993d7850c478b",
+    "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\corridas\\run_3f5d9cce8ff1c2ba5447e3b6\\renewal_diagnostics.parquet": "4546da63d5b317c1d933713a6027b50dab4104449a78a064cccdd600ae800d33",
+    "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\corridas\\run_3f5d9cce8ff1c2ba5447e3b6\\orders.parquet": "f9709103491b94b02854eab040bff6233ea84bef43b3b5cb5924982401870e99",
+    "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\corridas\\run_3f5d9cce8ff1c2ba5447e3b6\\risk_events.parquet": "78d57d9ec0959b3a308eee570330f13916bfd04235efb4a2e510bc6499b54b9c",
+    "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\corridas\\run_3f5d9cce8ff1c2ba5447e3b6\\fills.parquet": "44b8880c268c3c0a9053624cf3417d6768e7d81947e008bf4f5f5cf810e61455",
+    "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\corridas\\run_3f5d9cce8ff1c2ba5447e3b6\\positions.parquet": "7235d109c9f62f4cbe55e9e57f8427326663d9a589c97185efa4f504fd29fe3d",
+    "entregas\\entrega_4\\reglas_historicas\\20260925T005436Z\\corridas\\run_3f5d9cce8ff1c2ba5447e3b6\\effective_config.toml": "4824445979ffc3e232fec77991515f8dc525c82b9de95bd057daae1dbea8d619"
+  },
+  "implementation_sha256": {
+    "scripts\\intraday_risk_reservations.py": "71db44313d94e1515cd12130867edcfd5866bacdc76cdccfba7761acb784ea52",
+    "tests\\test_intraday_risk_reservations.py": "4d03e1eae41d54c8968a9dc2a6e29752cc67dc79ac955d4e2337b1d1826d5fe2"
+  },
+  "executed_tests": [
+    {
+      "command": ".venv/Scripts/python.exe -B -X utf8 -m pytest tests/test_intraday_risk_reservations.py -q -p no:cacheprovider",
+      "stage": "red_missing_implementation",
+      "exit_code": 1,
+      "observed_result": "8 failed because reservation_grid implementation did not exist"
+    },
+    {
+      "command": ".venv/Scripts/python.exe -B -X utf8 -m pytest tests/test_intraday_risk_reservations.py -q -p no:cacheprovider",
+      "stage": "red_unpriced_futures",
+      "exit_code": 1,
+      "observed_result": "2 failed, 9 passed; finite upper commitment bound and corrective SELL incorrectly available"
+    },
+    {
+      "command": ".venv/Scripts/python.exe -B -X utf8 -m pytest tests/test_intraday_risk_reservations.py -q -p no:cacheprovider",
+      "stage": "red_reason_code_truncation",
+      "exit_code": 1,
+      "observed_result": "1 failed, 10 passed; intermediate reason code truncated by NumPy string dtype"
+    },
+    {
+      "command": ".venv/Scripts/python.exe -B -X utf8 -m pytest tests/test_intraday_risk_reservations.py tests/test_intraday_risk_math.py tests/test_intraday_risk_sources.py -q -p no:cacheprovider",
+      "stage": "green_integrated_math_sources",
+      "exit_code": 0,
+      "observed_result": "50 passed in 1.04s"
+    },
+    {
+      "command": ".venv/Scripts/python.exe -B -X utf8 -m ruff check scripts/intraday_risk_reservations.py tests/test_intraday_risk_reservations.py",
+      "exit_code": 0,
+      "observed_result": "All checks passed!"
+    }
+  ],
+  "accounting_from_other_cwd": {
+    "command": [
+      "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\riesgo_intradia\\20260926T214118Z\\auditoria_contable\\auditar_cuentas.py",
+      "--source-package",
+      "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\20260925T005436Z"
+    ],
+    "cwd": "C:\\Users\\pablo\\AppData\\Local\\Temp",
+    "exit_code": 0,
+    "status": "pass",
+    "daily_closes": 6816,
+    "source_changes": [],
+    "stderr": ""
+  },
+  "scope_limits": [
+    "No full minute-price risk calculation in this audit.",
+    "Not a replay or new strategy trajectory.",
+    "Full repository suite delegated to root acceptance, which is coordinating concurrent implementation.",
+    "Unknown commitments remain NaN; infinite upper commitment bounds are not observed losses. Cash availability bounds are finite."
+  ]
+}

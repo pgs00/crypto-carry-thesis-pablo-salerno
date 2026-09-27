@@ -1,0 +1,108 @@
+...................................FFF                                   [100%]
+================================== FAILURES ===================================
+_____ test_csv_temporal_keys_match_native_integers_without_float_rounding _____
+
+    def test_csv_temporal_keys_match_native_integers_without_float_rounding():
+>       verifier()._compare_rows(
+            [{"time_ns": "1700000000000000001", "amount": "1.25"}],
+            [{"time_ns": 1700000000000000001, "amount": 1.25}],
+            ("time_ns",), "literal clock",
+        )
+
+tests\test_intraday_risk_verifier.py:277: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+actual = [{'time_ns': '1700000000000000001', 'amount': '1.25'}]
+expected = [{'time_ns': 1700000000000000001, 'amount': 1.25}]
+keys = ('time_ns',), label = 'literal clock'
+
+    def _compare_rows(actual, expected, keys, label):
+        observed, calculated = indexed(actual, keys), indexed(expected, keys)
+        if set(observed) != set(calculated):
+>           raise ValueError(f"{label}: row coverage mismatch")
+E           ValueError: literal clock: row coverage mismatch
+
+scripts\verify_intraday_risk.py:424: ValueError
+______ test_debt_reduces_redistributable_cash_before_joint_requirements _______
+
+    def test_debt_reduces_redistributable_cash_before_joint_requirements():
+        values = margin_fixture()
+        values["free_spot_usdt"][:] = 10
+        values["free_cash_usdt"][:] = 10
+        values["debt_usdt"][:] = 8
+        values["equity_usdt"][:] = 122
+        values["equity_proxy_usdt"][:] = 122
+        values["redistributable_cash_usdt"][:] = 2
+        for suffix in ("external_deficit_usdt", "external_lower_bound_usdt", "external_upper_bound_usdt"):
+            values[f"preventive_{suffix}"][:] = [0, 5.006]
+>       assert verifier().check_evidence_columns(values, "run_id") == 2
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_intraday_risk_verifier.py:300: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+scripts\verify_intraday_risk.py:358: in check_evidence_columns
+    array_close(values["redistributable_cash_usdt"], available, "redistributable cash")
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+actual = array([2., 2.]), expected = array([10., 10.])
+label = 'redistributable cash', tolerance = 1e-08
+
+    def array_close(actual, expected, label, tolerance=TOLERANCE):
+        actual, expected = np.asarray(actual), np.asarray(expected)
+        if actual.shape != expected.shape:
+            raise ValueError(f"column shape: {label}")
+        if expected.dtype.kind in "iub" or expected.dtype.kind not in "fc":
+            valid = np.array_equal(actual, expected)
+        else:
+            observed = actual.astype(float)
+            valid = (np.array_equal(np.isnan(observed), np.isnan(expected))
+                     and not np.any(np.isinf(observed))
+                     and np.all(np.abs(observed[np.isfinite(expected)]-expected[np.isfinite(expected)]) <= tolerance))
+        if not valid:
+>           raise ValueError(f"column arithmetic/coverage mismatch: {label}")
+E           ValueError: column arithmetic/coverage mismatch: redistributable cash
+
+scripts\verify_intraday_risk.py:159: ValueError
+_ test_episode_active_extrema_include_intermediate_other_asset_posts_and_exclude_new_inventory _
+
+    def test_episode_active_extrema_include_intermediate_other_asset_posts_and_exclude_new_inventory():
+        values = dict(episode_id=np.array(["e"] * 5), time_ns=np.array([1, 2, 2, 2, 2]),
+                      phase=np.array([2, 1, 2, 2, 2]),
+                      equity_usdt=np.array([100., 90., 80., 40., 30.]),
+                      equity_proxy_usdt=np.array([100., 91., 81., 41., 31.]),
+                      BTCUSDT_asset_pnl_usdt=np.array([10., 9., 9., 1., 0.]),
+                      BTCUSDT_spot=np.array([1., 1., 1., 0., 2.]),
+                      BTCUSDT_short=np.array([0., 0., 0., 1., 2.]),
+                      BTCUSDT_net_exposure_usdt=np.array([10., 9., 9., -100., 0.]),
+                      BTCUSDT_spot_age_ns=np.array([0, 2, 2, 100, 200]))
+        row = dict(episode_id="e", symbol="BTCUSDT", start_ns=1, end_ns=2,
+                   start_post_equity_usdt=100, end_post_equity_usdt=30,
+                   portfolio_change_usdt=-70, worst_portfolio_change_usdt=-20,
+                   asset_change_usdt=-10, worst_asset_change_usdt=-1,
+                   worst_proxy_portfolio_change_usdt=-19, maximum_spot_quantity=1,
+                   maximum_short_quantity=0, maximum_signed_net_exposure_usdt=10,
+                   minimum_signed_net_exposure_usdt=9, maximum_absolute_net_exposure_usdt=10,
+                   maximum_spot_age_seconds=2e-9)
+>       verifier()._episode_values(values, [row])
+
+tests\test_intraday_risk_verifier.py:324: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+scripts\verify_intraday_risk.py:462: in _episode_values
+    close(row[field], amount, "episode evidence " + field)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+actual = -20, expected = np.float64(-70.0)
+label = 'episode evidence worst_portfolio_change_usdt', tolerance = '1E-8'
+
+    def close(actual, expected, label, tolerance="1E-8"):
+        a, b = number(actual), number(expected)
+        if (a is None) != (b is None) or (a is not None and abs(a-b) > D(tolerance)):
+>           raise ValueError(f"arithmetic {label}: {actual!r} != {expected!r}")
+E           ValueError: arithmetic episode evidence worst_portfolio_change_usdt: -20 != np.float64(-70.0)
+
+scripts\verify_intraday_risk.py:144: ValueError
+=========================== short test summary info ===========================
+FAILED tests/test_intraday_risk_verifier.py::test_csv_temporal_keys_match_native_integers_without_float_rounding
+FAILED tests/test_intraday_risk_verifier.py::test_debt_reduces_redistributable_cash_before_joint_requirements
+FAILED tests/test_intraday_risk_verifier.py::test_episode_active_extrema_include_intermediate_other_asset_posts_and_exclude_new_inventory
+3 failed, 35 passed in 1.58s

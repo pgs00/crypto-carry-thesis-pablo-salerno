@@ -1,0 +1,172 @@
+{
+  "checked_at_utc": "2026-09-26T22:40:41.799972+00:00",
+  "scope": "Presentation QA only; not full package certification",
+  "generator_exit_code": 0,
+  "generator_sha256": "b372d3a0d7ca236f2199f8a2d7bcb0ed4d8afaff251b4feddab6c32f8b49af59",
+  "generation_record_sha256": "91b3b2d7fe8d46ac69df6815881dff09ba58ba1c8b2dbd29662c12c750864d8a",
+  "ruff_check": "passed",
+  "html_local_links_checked": 69,
+  "missing_links": [],
+  "input_hash_failures": [],
+  "visual_review": {
+    "method": "The four margin PNG figures were reopened with view_image after conversion to three full UTC calendar days. The other nine PNG figures retain exactly the hashes of the preceding visual review.",
+    "checks": [
+      "Legible axes and legends",
+      "No footer and axis-label overlap after layout repair",
+      "Year shown in minute-window date axes",
+      "Original and hypothetical proxy distinguished",
+      "Peak-to-trough and recovery span shown for all four runs",
+      "Margin contract metrics terminate when short is zero",
+      "Three complete UTC calendar days around each minimum; no truncation in these four observations"
+    ],
+    "html_browser_render_reviewed": false,
+    "figures": [
+      {
+        "path": "figuras/drawdown_muestra_completa.png",
+        "sha256": "801b888d19785ed13edf4b1955f9bf5822fa025596e18218e41c09999e86eec6"
+      },
+      {
+        "path": "figuras/marzo_detalle_conditional.png",
+        "sha256": "3974084270653c6d58e8a805566ffa82e2110860944153397c5cb1098e31018a"
+      },
+      {
+        "path": "figuras/marzo_detalle_permanent.png",
+        "sha256": "1244851f76e8c950206864658067ef944ddefe03e532ce1325c0ff36097607fc"
+      },
+      {
+        "path": "figuras/marzo_tres_dias.png",
+        "sha256": "7f66ab1be5df104aa6f5a867561d34c2da189a3be1afdc75a2bcbcbad41c043b"
+      },
+      {
+        "path": "figuras/menor_holgura_run_3f5d9cce8ff1c2ba5447e3b6.png",
+        "sha256": "c8f7be9e6edbbe567de4c0a3fe7a1fde38cb1f065ec90c9ab9fbaa669b7cc92e"
+      },
+      {
+        "path": "figuras/menor_holgura_run_70383794701c4f0fc157b2ed.png",
+        "sha256": "ec65951fca473cdd7b1cc1f4f7c06e11e8d2e5b1be2808890c71ffd757bfe011"
+      },
+      {
+        "path": "figuras/menor_holgura_run_ad71d751b20623006c195ff3.png",
+        "sha256": "01b73b3481d7b22f44f6c3caee9dee26a4417d29930d1d856ed44cefc956c125"
+      },
+      {
+        "path": "figuras/menor_holgura_run_dfea4b7ac1475668d5968c97.png",
+        "sha256": "e6b5064c8ccb49114fbf5cc3163f7f6caaf65eb7183705b60b222d2779b0e17b"
+      },
+      {
+        "path": "figuras/peor_drawdown_run_3f5d9cce8ff1c2ba5447e3b6.png",
+        "sha256": "b4b2f989bffc3e52025287e61930f367bacbc1af4c9d441ec80e401835de60a1"
+      },
+      {
+        "path": "figuras/peor_drawdown_run_70383794701c4f0fc157b2ed.png",
+        "sha256": "19ccc005a6e56c9201e1add4df7e641f08ce4d2bd96e7a14fbb15ce506dd370c"
+      },
+      {
+        "path": "figuras/peor_drawdown_run_ad71d751b20623006c195ff3.png",
+        "sha256": "79b7580458da6eee29bd7d04efe2f0a7601166e87b358923ef2900356f9f5aa5"
+      },
+      {
+        "path": "figuras/peor_drawdown_run_dfea4b7ac1475668d5968c97.png",
+        "sha256": "abc523a4a3e265d60c86465209fc30180feea7b211150cf88a0af9a8b95334f5"
+      },
+      {
+        "path": "figuras/resumen_anual_base.png",
+        "sha256": "3abb6052f4f7d6cc33e0630b7744fe7afff62c38603b3d854741ff6251e791a2"
+      }
+    ],
+    "four_margin_figures_reinspected": true,
+    "other_nine_png_hashes_unchanged": true
+  },
+  "financial_tables_unchanged": true,
+  "financial_table_hashes": {
+    "tablas/catalogo_incidentes.csv": "4bbbe4014aef9d25c155dba352d227fa20fe3c4ad826037fe7f73374c129ba71",
+    "tablas/conciliaciones_diarias.csv": "d33b7a089c96b8a887e2a9cdae4163fb2585cad0a0c5be034d93159b1507ea90",
+    "tablas/controles_exposicion.csv": "d29f76c858844dbcc59ed0b27c860feabfb85f6a9412700c0641421f66a8d82a",
+    "tablas/drawdown_comparativo.csv": "dcc50b674c39765afecc075dd037e8b348171d000e767fd83883832bbc0de10e",
+    "tablas/garantias_diarias_activo.csv": "141b9a377d8590d14e7078c16a3258d6ddeb9df6da59a3340a19173936bad2b2",
+    "tablas/garantias_periodo.csv": "1775784ddb429b36ed80643089b902ca2a53f7b04d76a2f3cd9bedc6df5f56c1",
+    "tablas/h1_invariancia.csv": "ba71b579ac043e45797bda55499bfe36dfb9b8ef1f95f3683b1ddb4a3bcfcbb5",
+    "tablas/h1_resumen.csv": "dc7d0c145d2b3784084c75ca458d27a0d4326c17377016b5fb82af8dfa2b1047",
+    "tablas/h2.csv": "42691b183cd5889812cdcdc8454a08d20b51a0c17c476fc714be5ba9e83bdc18",
+    "tablas/h3_invariancia.csv": "869622e5f6e58cf6e3a55bbb245c79e13402ca20dd50a07a3ba77b96314f832d",
+    "tablas/h3_regimen.csv": "398608c088ea973ceadc111288766117304499b436b17fe7ad92edd2724b8d0c",
+    "tablas/intervalos_exposicion_reutilizados.csv": "2fe9243ba69a08d2a85eb837fb82e91662ecc230c1b20ef1d25f60be9f92fada",
+    "tablas/metricas_reutilizadas.csv": "47107f6d2d77700cd0981b41326d313bf5e1f9496295c6e4f5ecdb4df7358fab",
+    "tablas/puntos_extremos.csv": "181326fb7a42c837b034edfa467a9fc3f6f24be88daca2fc50a5d5afd6c9a499",
+    "tablas/riesgo_diario.csv": "b1f2176562eae08dca0a0df14e9c735a7cba6f39934b30a1a5c5efad06b1c652"
+  },
+  "calendar_margin_window_checks": [
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "symbol": "BTCUSDT",
+      "center_ns": 1704984120000000000,
+      "requested_lower_ns": 1704844800000000000,
+      "requested_upper_ns_inclusive": 1705103999999999999,
+      "actual_lower_ns": 1704844800000000000,
+      "actual_upper_ns_inclusive": 1705103999999999999,
+      "rows": 4341,
+      "calendar_days": 3,
+      "minute_grid_points": 4320,
+      "missing_minute_points": 0,
+      "regular_minutes_replaced_by_pre_post_states": 11,
+      "truncated": false,
+      "bounds_match": true,
+      "source_csv": "figuras/fuentes/menor_holgura_run_3f5d9cce8ff1c2ba5447e3b6.csv",
+      "sha256": "d7e335845fe2dbf5afd2bfa1ec780a95de1a0682103019c47a91d858a03a6354"
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "symbol": "BTCUSDT",
+      "center_ns": 1709584800000000000,
+      "requested_lower_ns": 1709424000000000000,
+      "requested_upper_ns_inclusive": 1709683199999999999,
+      "actual_lower_ns": 1709424000000000000,
+      "actual_upper_ns_inclusive": 1709683199999999999,
+      "rows": 4342,
+      "calendar_days": 3,
+      "minute_grid_points": 4320,
+      "missing_minute_points": 0,
+      "regular_minutes_replaced_by_pre_post_states": 13,
+      "truncated": false,
+      "bounds_match": true,
+      "source_csv": "figuras/fuentes/menor_holgura_run_70383794701c4f0fc157b2ed.csv",
+      "sha256": "86125021e3af2f56d3fff7acfe60f83a27e34b2a2272a3a9eccb7b5c573012a1"
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "symbol": "BTCUSDT",
+      "center_ns": 1709593440000000000,
+      "requested_lower_ns": 1709424000000000000,
+      "requested_upper_ns_inclusive": 1709683199999999999,
+      "actual_lower_ns": 1709424000000000000,
+      "actual_upper_ns_inclusive": 1709683199999999999,
+      "rows": 4342,
+      "calendar_days": 3,
+      "minute_grid_points": 4320,
+      "missing_minute_points": 0,
+      "regular_minutes_replaced_by_pre_post_states": 13,
+      "truncated": false,
+      "bounds_match": true,
+      "source_csv": "figuras/fuentes/menor_holgura_run_ad71d751b20623006c195ff3.csv",
+      "sha256": "f4a4b5946737af8aabd5636e4e7a3972a4b5c338a4b78534ccbdfc7533cfc216"
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "symbol": "BTCUSDT",
+      "center_ns": 1732108620000000000,
+      "requested_lower_ns": 1731974400000000000,
+      "requested_upper_ns_inclusive": 1732233599999999999,
+      "actual_lower_ns": 1731974400000000000,
+      "actual_upper_ns_inclusive": 1732233599999999999,
+      "rows": 4347,
+      "calendar_days": 3,
+      "minute_grid_points": 4320,
+      "missing_minute_points": 0,
+      "regular_minutes_replaced_by_pre_post_states": 12,
+      "truncated": false,
+      "bounds_match": true,
+      "source_csv": "figuras/fuentes/menor_holgura_run_dfea4b7ac1475668d5968c97.csv",
+      "sha256": "a8ff914c81322f83a8790c540595d4135164af961464c21c85bd0ad314dfe061"
+    }
+  ]
+}

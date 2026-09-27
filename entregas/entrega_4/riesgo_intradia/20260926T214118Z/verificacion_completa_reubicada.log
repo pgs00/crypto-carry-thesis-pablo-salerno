@@ -1,0 +1,88 @@
+verified complete block 2022-01
+verified complete block 2022-02
+verified complete block 2022-03
+verified complete block 2022-04
+verified complete block 2022-05
+verified complete block 2022-06
+verified complete block 2022-07
+verified complete block 2022-08
+verified complete block 2022-09
+verified complete block 2022-10
+verified complete block 2022-11
+verified complete block 2022-12
+verified complete block 2023-01
+verified complete block 2023-02
+verified complete block 2023-03
+verified complete block 2023-04
+verified complete block 2023-05
+verified complete block 2023-06
+verified complete block 2023-07
+verified complete block 2023-08
+verified complete block 2023-09
+verified complete block 2023-10
+verified complete block 2023-11
+verified complete block 2023-12
+verified complete block 2024-01
+verified complete block 2024-02
+verified complete block 2024-03
+verified complete block 2024-04
+verified complete block 2024-05
+verified complete block 2024-06
+verified complete block 2024-07
+verified complete block 2024-08
+verified complete block 2024-09
+verified complete block 2024-10
+verified complete block 2024-11
+verified complete block 2024-12
+verified complete block 2025-01
+verified complete block 2025-02
+verified complete block 2025-03
+verified complete block 2025-04
+verified complete block 2025-05
+verified complete block 2025-06
+verified complete block 2025-07
+verified complete block 2025-08
+verified complete block 2025-09
+verified complete block 2025-10
+verified complete block 2025-11
+verified complete block 2025-12
+verified complete block 2026-01
+verified complete block 2026-02
+verified complete block 2026-03
+verified complete block 2026-04
+verified complete block 2026-05
+verified complete block 2026-06
+verified complete block 2026-07
+verified complete block 2026-08
+{
+  "status": "passed",
+  "scope": "complete",
+  "schema": "intraday_risk_package_v1",
+  "manifest_sha256": "78cb03572c5940567852d0255d05a9f8a923f01df01fc0aa8b6cccef70f3b3bb",
+  "members_checked": 199,
+  "drawdown_rows_checked": 128,
+  "incidents_checked": 449,
+  "daily_reconciliations_checked": 6816,
+  "compact_evidence_rows_checked": {
+    "eventos_financieros": 37756,
+    "episodios": 2137,
+    "marzo_2023": 17358
+  },
+  "global_drawdown_recomputed": true,
+  "daily_nesting_recomputed": true,
+  "price_quality_rows_checked": 2457592,
+  "price_quality_union_recomputed": true,
+  "price_quality_reason_codes_recomputed": true,
+  "parent_authenticated": true,
+  "correction_authenticated": true,
+  "package_read_only": true,
+  "sources_read_only": true,
+  "engine_replay": false,
+  "external_funding_is_hypothetical": true,
+  "limitations": "price convention retains documented carry/estimates; proxy is hypothetical fixed-position valuation",
+  "partitions_reconstructed": 224,
+  "series_rows_reconstructed": 9851104,
+  "source_price_files_checked": 342,
+  "price_quality_dependency": "shared quality_codes causal helper reused against authenticated local price blocks; not an independent classifier",
+  "reconstruction_dependency": "archived producer state/grid/price functions reused; account arithmetic and global DD independently checked"
+}

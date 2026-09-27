@@ -1,0 +1,22 @@
+{
+  "title": "Peor drawdown MARGEN_2X · Permanente",
+  "source_run_ids": [
+    "run_3f5d9cce8ff1c2ba5447e3b6"
+  ],
+  "sources": [
+    {
+      "path": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\riesgo_intradia\\20260926T214118Z\\paquete_20260926T220400Z\\series_locales.json",
+      "sha256": "091c902d959b909ffacd8ed523e4d9e0e52ac202c5d5f553c80c9e06d27a3ab3"
+    },
+    {
+      "path": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\riesgo_intradia\\20260926T214118Z\\paquete_20260926T220400Z\\tablas\\drawdown_comparativo.csv",
+      "sha256": "dcc50b674c39765afecc075dd037e8b348171d000e767fd83883832bbc0de10e"
+    }
+  ],
+  "data_csv": "figuras/fuentes/peor_drawdown_run_3f5d9cce8ff1c2ba5447e3b6.csv",
+  "data_sha256": "58b999cf90d579143aa16b0007e5cb9d13c17ede1de33f22e5e4e82e8bce6cc6",
+  "time_zone": "UTC",
+  "status": "presentation_of_reconstructed_or_reused_evidence",
+  "valuation": "original_reconstructed; hypothetical proxy explicitly labelled",
+  "note": "Envolvente diaria: primero, último, mínimo y máximo en su orden temporal; las métricas proceden de la tabla completa"
+}

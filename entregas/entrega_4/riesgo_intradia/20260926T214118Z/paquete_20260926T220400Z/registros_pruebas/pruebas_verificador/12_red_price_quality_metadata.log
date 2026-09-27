@@ -1,0 +1,190 @@
+..................................................FFFFFFFF               [100%]
+================================== FAILURES ===================================
+__ test_price_quality_metadata_authenticates_tools_counts_and_join_contract ___
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-387/test_price_quality_metadata_au0')
+
+    def test_price_quality_metadata_authenticates_tools_counts_and_join_contract(tmp_path):
+>       assert verifier().check_quality_metadata(tmp_path, *quality_metadata_fixture(tmp_path)) == 3
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'scripts.verify_intraday_risk' has no attribute 'check_quality_metadata'. Did you mean: 'check_quality_values'?
+
+tests\test_intraday_risk_verifier.py:688: AttributeError
+_ test_rehashed_quality_metadata_cannot_forge_codes_counts_or_provenance[row_count] _
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-387/test_rehashed_quality_metadata0')
+change = 'row_count'
+
+    @pytest.mark.parametrize("change", ["row_count", "dictionary", "join", "monthly_counts", "coverage", "script", "source"])
+    def test_rehashed_quality_metadata_cannot_forge_codes_counts_or_provenance(tmp_path, change):
+        values, meta, series, prices, reconstruction = quality_metadata_fixture(tmp_path)
+        if change == "row_count": meta['row_count'] = 2
+        elif change == "dictionary": meta['reason_dictionary']['2']['name'] = "causal_current"
+        elif change == "join": meta['join_contract']['phase_independent'] = False
+        elif change == "monthly_counts": meta['monthly_counts'][0]['reference_counts']['BTCUSDT_spot']['0'] = 3
+        elif change == "coverage": meta['coverage'][0]['matched_observations'] = 3
+        elif change == "script": meta['provenance']['script']['sha256'] = 'd'*64
+        else: meta['provenance']['source_partitions']['sha256_by_source_id']['0'] = 'd'*64
+        (tmp_path/'evidencia/calidad_precios.json').write_text(json.dumps(meta),encoding='utf-8')
+        seal(tmp_path)
+        verifier().verify_manifest(tmp_path)
+        with pytest.raises(ValueError, match="quality"):
+>           verifier().check_quality_metadata(tmp_path, values, meta, series, prices, reconstruction)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           AttributeError: module 'scripts.verify_intraday_risk' has no attribute 'check_quality_metadata'. Did you mean: 'check_quality_values'?
+
+tests\test_intraday_risk_verifier.py:705: AttributeError
+_ test_rehashed_quality_metadata_cannot_forge_codes_counts_or_provenance[dictionary] _
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-387/test_rehashed_quality_metadata1')
+change = 'dictionary'
+
+    @pytest.mark.parametrize("change", ["row_count", "dictionary", "join", "monthly_counts", "coverage", "script", "source"])
+    def test_rehashed_quality_metadata_cannot_forge_codes_counts_or_provenance(tmp_path, change):
+        values, meta, series, prices, reconstruction = quality_metadata_fixture(tmp_path)
+        if change == "row_count": meta['row_count'] = 2
+        elif change == "dictionary": meta['reason_dictionary']['2']['name'] = "causal_current"
+        elif change == "join": meta['join_contract']['phase_independent'] = False
+        elif change == "monthly_counts": meta['monthly_counts'][0]['reference_counts']['BTCUSDT_spot']['0'] = 3
+        elif change == "coverage": meta['coverage'][0]['matched_observations'] = 3
+        elif change == "script": meta['provenance']['script']['sha256'] = 'd'*64
+        else: meta['provenance']['source_partitions']['sha256_by_source_id']['0'] = 'd'*64
+        (tmp_path/'evidencia/calidad_precios.json').write_text(json.dumps(meta),encoding='utf-8')
+        seal(tmp_path)
+        verifier().verify_manifest(tmp_path)
+        with pytest.raises(ValueError, match="quality"):
+>           verifier().check_quality_metadata(tmp_path, values, meta, series, prices, reconstruction)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           AttributeError: module 'scripts.verify_intraday_risk' has no attribute 'check_quality_metadata'. Did you mean: 'check_quality_values'?
+
+tests\test_intraday_risk_verifier.py:705: AttributeError
+_ test_rehashed_quality_metadata_cannot_forge_codes_counts_or_provenance[join] _
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-387/test_rehashed_quality_metadata2')
+change = 'join'
+
+    @pytest.mark.parametrize("change", ["row_count", "dictionary", "join", "monthly_counts", "coverage", "script", "source"])
+    def test_rehashed_quality_metadata_cannot_forge_codes_counts_or_provenance(tmp_path, change):
+        values, meta, series, prices, reconstruction = quality_metadata_fixture(tmp_path)
+        if change == "row_count": meta['row_count'] = 2
+        elif change == "dictionary": meta['reason_dictionary']['2']['name'] = "causal_current"
+        elif change == "join": meta['join_contract']['phase_independent'] = False
+        elif change == "monthly_counts": meta['monthly_counts'][0]['reference_counts']['BTCUSDT_spot']['0'] = 3
+        elif change == "coverage": meta['coverage'][0]['matched_observations'] = 3
+        elif change == "script": meta['provenance']['script']['sha256'] = 'd'*64
+        else: meta['provenance']['source_partitions']['sha256_by_source_id']['0'] = 'd'*64
+        (tmp_path/'evidencia/calidad_precios.json').write_text(json.dumps(meta),encoding='utf-8')
+        seal(tmp_path)
+        verifier().verify_manifest(tmp_path)
+        with pytest.raises(ValueError, match="quality"):
+>           verifier().check_quality_metadata(tmp_path, values, meta, series, prices, reconstruction)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           AttributeError: module 'scripts.verify_intraday_risk' has no attribute 'check_quality_metadata'. Did you mean: 'check_quality_values'?
+
+tests\test_intraday_risk_verifier.py:705: AttributeError
+_ test_rehashed_quality_metadata_cannot_forge_codes_counts_or_provenance[monthly_counts] _
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-387/test_rehashed_quality_metadata3')
+change = 'monthly_counts'
+
+    @pytest.mark.parametrize("change", ["row_count", "dictionary", "join", "monthly_counts", "coverage", "script", "source"])
+    def test_rehashed_quality_metadata_cannot_forge_codes_counts_or_provenance(tmp_path, change):
+        values, meta, series, prices, reconstruction = quality_metadata_fixture(tmp_path)
+        if change == "row_count": meta['row_count'] = 2
+        elif change == "dictionary": meta['reason_dictionary']['2']['name'] = "causal_current"
+        elif change == "join": meta['join_contract']['phase_independent'] = False
+        elif change == "monthly_counts": meta['monthly_counts'][0]['reference_counts']['BTCUSDT_spot']['0'] = 3
+        elif change == "coverage": meta['coverage'][0]['matched_observations'] = 3
+        elif change == "script": meta['provenance']['script']['sha256'] = 'd'*64
+        else: meta['provenance']['source_partitions']['sha256_by_source_id']['0'] = 'd'*64
+        (tmp_path/'evidencia/calidad_precios.json').write_text(json.dumps(meta),encoding='utf-8')
+        seal(tmp_path)
+        verifier().verify_manifest(tmp_path)
+        with pytest.raises(ValueError, match="quality"):
+>           verifier().check_quality_metadata(tmp_path, values, meta, series, prices, reconstruction)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           AttributeError: module 'scripts.verify_intraday_risk' has no attribute 'check_quality_metadata'. Did you mean: 'check_quality_values'?
+
+tests\test_intraday_risk_verifier.py:705: AttributeError
+_ test_rehashed_quality_metadata_cannot_forge_codes_counts_or_provenance[coverage] _
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-387/test_rehashed_quality_metadata4')
+change = 'coverage'
+
+    @pytest.mark.parametrize("change", ["row_count", "dictionary", "join", "monthly_counts", "coverage", "script", "source"])
+    def test_rehashed_quality_metadata_cannot_forge_codes_counts_or_provenance(tmp_path, change):
+        values, meta, series, prices, reconstruction = quality_metadata_fixture(tmp_path)
+        if change == "row_count": meta['row_count'] = 2
+        elif change == "dictionary": meta['reason_dictionary']['2']['name'] = "causal_current"
+        elif change == "join": meta['join_contract']['phase_independent'] = False
+        elif change == "monthly_counts": meta['monthly_counts'][0]['reference_counts']['BTCUSDT_spot']['0'] = 3
+        elif change == "coverage": meta['coverage'][0]['matched_observations'] = 3
+        elif change == "script": meta['provenance']['script']['sha256'] = 'd'*64
+        else: meta['provenance']['source_partitions']['sha256_by_source_id']['0'] = 'd'*64
+        (tmp_path/'evidencia/calidad_precios.json').write_text(json.dumps(meta),encoding='utf-8')
+        seal(tmp_path)
+        verifier().verify_manifest(tmp_path)
+        with pytest.raises(ValueError, match="quality"):
+>           verifier().check_quality_metadata(tmp_path, values, meta, series, prices, reconstruction)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           AttributeError: module 'scripts.verify_intraday_risk' has no attribute 'check_quality_metadata'. Did you mean: 'check_quality_values'?
+
+tests\test_intraday_risk_verifier.py:705: AttributeError
+_ test_rehashed_quality_metadata_cannot_forge_codes_counts_or_provenance[script] _
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-387/test_rehashed_quality_metadata5')
+change = 'script'
+
+    @pytest.mark.parametrize("change", ["row_count", "dictionary", "join", "monthly_counts", "coverage", "script", "source"])
+    def test_rehashed_quality_metadata_cannot_forge_codes_counts_or_provenance(tmp_path, change):
+        values, meta, series, prices, reconstruction = quality_metadata_fixture(tmp_path)
+        if change == "row_count": meta['row_count'] = 2
+        elif change == "dictionary": meta['reason_dictionary']['2']['name'] = "causal_current"
+        elif change == "join": meta['join_contract']['phase_independent'] = False
+        elif change == "monthly_counts": meta['monthly_counts'][0]['reference_counts']['BTCUSDT_spot']['0'] = 3
+        elif change == "coverage": meta['coverage'][0]['matched_observations'] = 3
+        elif change == "script": meta['provenance']['script']['sha256'] = 'd'*64
+        else: meta['provenance']['source_partitions']['sha256_by_source_id']['0'] = 'd'*64
+        (tmp_path/'evidencia/calidad_precios.json').write_text(json.dumps(meta),encoding='utf-8')
+        seal(tmp_path)
+        verifier().verify_manifest(tmp_path)
+        with pytest.raises(ValueError, match="quality"):
+>           verifier().check_quality_metadata(tmp_path, values, meta, series, prices, reconstruction)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           AttributeError: module 'scripts.verify_intraday_risk' has no attribute 'check_quality_metadata'. Did you mean: 'check_quality_values'?
+
+tests\test_intraday_risk_verifier.py:705: AttributeError
+_ test_rehashed_quality_metadata_cannot_forge_codes_counts_or_provenance[source] _
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-387/test_rehashed_quality_metadata6')
+change = 'source'
+
+    @pytest.mark.parametrize("change", ["row_count", "dictionary", "join", "monthly_counts", "coverage", "script", "source"])
+    def test_rehashed_quality_metadata_cannot_forge_codes_counts_or_provenance(tmp_path, change):
+        values, meta, series, prices, reconstruction = quality_metadata_fixture(tmp_path)
+        if change == "row_count": meta['row_count'] = 2
+        elif change == "dictionary": meta['reason_dictionary']['2']['name'] = "causal_current"
+        elif change == "join": meta['join_contract']['phase_independent'] = False
+        elif change == "monthly_counts": meta['monthly_counts'][0]['reference_counts']['BTCUSDT_spot']['0'] = 3
+        elif change == "coverage": meta['coverage'][0]['matched_observations'] = 3
+        elif change == "script": meta['provenance']['script']['sha256'] = 'd'*64
+        else: meta['provenance']['source_partitions']['sha256_by_source_id']['0'] = 'd'*64
+        (tmp_path/'evidencia/calidad_precios.json').write_text(json.dumps(meta),encoding='utf-8')
+        seal(tmp_path)
+        verifier().verify_manifest(tmp_path)
+        with pytest.raises(ValueError, match="quality"):
+>           verifier().check_quality_metadata(tmp_path, values, meta, series, prices, reconstruction)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           AttributeError: module 'scripts.verify_intraday_risk' has no attribute 'check_quality_metadata'. Did you mean: 'check_quality_values'?
+
+tests\test_intraday_risk_verifier.py:705: AttributeError
+=========================== short test summary info ===========================
+FAILED tests/test_intraday_risk_verifier.py::test_price_quality_metadata_authenticates_tools_counts_and_join_contract
+FAILED tests/test_intraday_risk_verifier.py::test_rehashed_quality_metadata_cannot_forge_codes_counts_or_provenance[row_count]
+FAILED tests/test_intraday_risk_verifier.py::test_rehashed_quality_metadata_cannot_forge_codes_counts_or_provenance[dictionary]
+FAILED tests/test_intraday_risk_verifier.py::test_rehashed_quality_metadata_cannot_forge_codes_counts_or_provenance[join]
+FAILED tests/test_intraday_risk_verifier.py::test_rehashed_quality_metadata_cannot_forge_codes_counts_or_provenance[monthly_counts]
+FAILED tests/test_intraday_risk_verifier.py::test_rehashed_quality_metadata_cannot_forge_codes_counts_or_provenance[coverage]
+FAILED tests/test_intraday_risk_verifier.py::test_rehashed_quality_metadata_cannot_forge_codes_counts_or_provenance[script]
+FAILED tests/test_intraday_risk_verifier.py::test_rehashed_quality_metadata_cannot_forge_codes_counts_or_provenance[source]
+8 failed, 50 passed in 1.94s

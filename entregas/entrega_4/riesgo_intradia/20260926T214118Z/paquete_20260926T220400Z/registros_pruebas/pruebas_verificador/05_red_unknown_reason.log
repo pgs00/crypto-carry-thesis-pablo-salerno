@@ -1,0 +1,20 @@
+.........................................F.                              [100%]
+================================== FAILURES ===================================
+_ test_unknown_reservations_preserve_nd_and_hypothetical_bounds_with_a_reason _
+
+    def test_unknown_reservations_preserve_nd_and_hypothetical_bounds_with_a_reason():
+        values = margin_fixture()
+        values["reservations_available_known"][:] = False
+        values["reservations_reason"][:] = "intermediate_order_state_unobservable"
+        values["redistributable_cash_usdt"][:] = np.nan
+        values["preventive_external_deficit_usdt"][1] = np.nan
+        assert verifier().check_evidence_columns(values, "run_id") == 2
+        values["reservations_reason"][:] = ""
+>       with pytest.raises(ValueError, match="reason"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+
+tests\test_intraday_risk_verifier.py:379: Failed
+=========================== short test summary info ===========================
+FAILED tests/test_intraday_risk_verifier.py::test_unknown_reservations_preserve_nd_and_hypothetical_bounds_with_a_reason
+1 failed, 42 passed in 1.60s

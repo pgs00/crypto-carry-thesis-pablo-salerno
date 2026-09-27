@@ -1,0 +1,9 @@
+{
+  "source": "evidencia/episodios.parquet",
+  "source_sha256": "58aec3f5ab9e2b38d0b834547724dc509f10bd4312ffa3bbbb4c85a60f0977d0",
+  "catalogue_sha256": "4bbbe4014aef9d25c155dba352d227fa20fe3c4ad826037fe7f73374c129ba71",
+  "formula": "max(0, 1-min(spot within active episode)/spot at first active state)",
+  "boundary": "start post through end pre; same verified incident_exposure_mask as catalogue",
+  "limits": "Whole episodes with unequal durations; not rates per minute or probabilities. Same market observations may occur in both portfolios.",
+  "new_backtest": false
+}

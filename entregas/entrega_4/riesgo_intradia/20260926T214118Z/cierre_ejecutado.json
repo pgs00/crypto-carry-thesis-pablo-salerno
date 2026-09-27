@@ -1,0 +1,111 @@
+{
+  "status": "passed",
+  "finished_at_utc": "2026-09-26T22:57:24.310672+00:00",
+  "manifest_sha256": "78cb03572c5940567852d0255d05a9f8a923f01df01fc0aa8b6cccef70f3b3bb",
+  "package_identical_to_fully_verified_relocated_copy": true,
+  "main_package_unchanged_by_final_verification": true,
+  "commands": [
+    {
+      "label": "pytest_paquete_reubicado",
+      "argv": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "-p",
+        "no:cacheprovider",
+        "C:\\Users\\pablo\\AppData\\Local\\Temp\\riesgo_intradia_cierre_ziqnplrz\\paquete\\herramientas\\tests"
+      ],
+      "cwd": "C:\\Users\\pablo\\AppData\\Local\\Temp\\riesgo_intradia_cierre_ziqnplrz\\paquete\\herramientas",
+      "started_at_utc": "2026-09-26T22:53:29.968223+00:00",
+      "finished_at_utc": "2026-09-26T22:53:37.370905+00:00",
+      "seconds": 7.4026817999983905,
+      "exit_code": 0,
+      "log": "pytest_paquete_reubicado.log",
+      "log_sha256": "15a909266c0734095caa75f1583cf1e31002b8164b96852ef69656370a3031d6"
+    },
+    {
+      "label": "verificacion_compacta_reubicada",
+      "argv": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "C:\\Users\\pablo\\AppData\\Local\\Temp\\riesgo_intradia_cierre_ziqnplrz\\paquete\\herramientas\\scripts\\verify_intraday_risk.py",
+        "--package",
+        "C:\\Users\\pablo\\AppData\\Local\\Temp\\riesgo_intradia_cierre_ziqnplrz\\paquete",
+        "--parent",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\20260925T005436Z",
+        "--correction",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\correccion_exposicion_h2_20260925T150139Z\\paquete_20260926T204312Z",
+        "--scope",
+        "compact",
+        "--output",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\riesgo_intradia\\20260926T214118Z\\verificacion_compacta_reubicada.json"
+      ],
+      "cwd": "C:\\Users\\pablo\\AppData\\Local\\Temp\\riesgo_intradia_cierre_ziqnplrz",
+      "started_at_utc": "2026-09-26T22:53:37.378526+00:00",
+      "finished_at_utc": "2026-09-26T22:53:41.384825+00:00",
+      "seconds": 4.006303100002697,
+      "exit_code": 0,
+      "log": "verificacion_compacta_reubicada.log",
+      "log_sha256": "70b8eb9c7ab09eeffba4954a55bea6f36acc83e963ebfaa47e3a32dd8c5d0a30"
+    },
+    {
+      "label": "verificacion_completa_reubicada",
+      "argv": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "C:\\Users\\pablo\\AppData\\Local\\Temp\\riesgo_intradia_cierre_ziqnplrz\\paquete\\herramientas\\scripts\\verify_intraday_risk.py",
+        "--package",
+        "C:\\Users\\pablo\\AppData\\Local\\Temp\\riesgo_intradia_cierre_ziqnplrz\\paquete",
+        "--parent",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\20260925T005436Z",
+        "--correction",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\correccion_exposicion_h2_20260925T150139Z\\paquete_20260926T204312Z",
+        "--scope",
+        "complete",
+        "--series-root",
+        "D:\\Backtesting\\outputs\\riesgo_intradia_20260926T214118Z\\completa",
+        "--data-root",
+        "D:\\Backtesting",
+        "--output",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\riesgo_intradia\\20260926T214118Z\\verificacion_completa_reubicada.json"
+      ],
+      "cwd": "C:\\Users\\pablo\\AppData\\Local\\Temp\\riesgo_intradia_cierre_ziqnplrz",
+      "started_at_utc": "2026-09-26T22:53:41.391338+00:00",
+      "finished_at_utc": "2026-09-26T22:57:15.502103+00:00",
+      "seconds": 214.1107711000077,
+      "exit_code": 0,
+      "log": "verificacion_completa_reubicada.log",
+      "log_sha256": "519c2934e8006c8d4eb8dab2269ae301079baad52d66862d39c834e4f839fb99"
+    },
+    {
+      "label": "verificacion_compacta_final",
+      "argv": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\riesgo_intradia\\20260926T214118Z\\paquete_20260926T220400Z\\herramientas\\scripts\\verify_intraday_risk.py",
+        "--package",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\riesgo_intradia\\20260926T214118Z\\paquete_20260926T220400Z",
+        "--scope",
+        "compact",
+        "--parent",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\20260925T005436Z",
+        "--correction",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\correccion_exposicion_h2_20260925T150139Z\\paquete_20260926T204312Z",
+        "--output",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\riesgo_intradia\\20260926T214118Z\\verificacion_compacta_final.json"
+      ],
+      "cwd": "C:\\Users\\pablo\\AppData\\Local\\Temp\\riesgo_intradia_cierre_ziqnplrz",
+      "started_at_utc": "2026-09-26T22:57:20.225447+00:00",
+      "finished_at_utc": "2026-09-26T22:57:24.220368+00:00",
+      "seconds": 3.9949265999894124,
+      "exit_code": 0,
+      "log": "verificacion_compacta_final.log",
+      "log_sha256": "70b8eb9c7ab09eeffba4954a55bea6f36acc83e963ebfaa47e3a32dd8c5d0a30"
+    }
+  ],
+  "full_reconstruction_replayed_engine": false
+}

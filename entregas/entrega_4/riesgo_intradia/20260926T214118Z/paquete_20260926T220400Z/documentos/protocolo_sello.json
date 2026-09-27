@@ -1,0 +1,12 @@
+{
+  "schema": "intraday_protocol_seal_v1",
+  "path": "protocolo.md",
+  "sha256": "b62ead9cc80ebf91f71080383bc613db24a8b81bccef02dfd347572050c2ce15",
+  "sealed_at_utc": "2026-09-26T22:03:09.959459+00:00",
+  "scope": "Sólo protocolo.md; previo a reconstrucción completa; auditorías de entradas ya disponibles.",
+  "supersedes_notation_only": {
+    "sha256": "0f99e61148e6bdab4f3cf3f0f11e36fd91186c78eb9659424b2a41638d3b95a1",
+    "sealed_at_utc": "2026-09-26T22:01:51.631656+00:00",
+    "reason": "DD notation now explicitly includes u<=t, exactly as the original assignment; no criterion changed."
+  }
+}

@@ -1,0 +1,6 @@
+# Entorno observado; el motor economico no es dependencia del verificador.
+numpy==2.3.5
+pyarrow==25.0.1
+matplotlib==3.11.2
+pytest==9.1.1
+ruff==0.16.8

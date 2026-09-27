@@ -1,0 +1,22 @@
+{
+  "title": "Menor holgura MARGEN_2X · Condicional",
+  "source_run_ids": [
+    "run_70383794701c4f0fc157b2ed"
+  ],
+  "sources": [
+    {
+      "path": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\riesgo_intradia\\20260926T214118Z\\paquete_20260926T220400Z\\series_locales.json",
+      "sha256": "091c902d959b909ffacd8ed523e4d9e0e52ac202c5d5f553c80c9e06d27a3ab3"
+    },
+    {
+      "path": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\riesgo_intradia\\20260926T214118Z\\paquete_20260926T220400Z\\tablas\\puntos_extremos.csv",
+      "sha256": "181326fb7a42c837b034edfa467a9fc3f6f24be88daca2fc50a5d5afd6c9a499"
+    }
+  ],
+  "data_csv": "figuras/fuentes/menor_holgura_run_70383794701c4f0fc157b2ed.csv",
+  "data_sha256": "86125021e3af2f56d3fff7acfe60f83a27e34b2a2272a3a9eccb7b5c573012a1",
+  "time_zone": "UTC",
+  "status": "presentation_of_reconstructed_or_reused_evidence",
+  "valuation": "original_reconstructed; hypothetical proxy explicitly labelled",
+  "note": "Tres días calendario UTC: día anterior, día del mínimo y día posterior. Intervalo solicitado inclusivo: 2024-03-03 00:00:00 UTC a 2024-03-05 23:59:59.999999999 UTC. Sin truncamiento por límites de la muestra. ND de caja neta cuando las reservas no son acreditables. No se transfieren fondos."
+}

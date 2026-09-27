@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "ruff",
+    "check",
+    "--no-cache",
+    "src",
+    "scripts",
+    "tests",
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\riesgo_intradia\\20260926T214118Z\\ejecutar_cierre.py"
+  ],
+  "cwd": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting",
+  "started_at_utc": "2026-09-26T22:54:36.827537+00:00",
+  "finished_at_utc": "2026-09-26T22:54:36.974152+00:00",
+  "exit_code": 0,
+  "seconds": 0.14661739999428391
+}

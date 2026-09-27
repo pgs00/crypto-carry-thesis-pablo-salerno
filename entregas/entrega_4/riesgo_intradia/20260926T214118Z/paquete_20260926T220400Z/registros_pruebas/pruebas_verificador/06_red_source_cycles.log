@@ -1,0 +1,18 @@
+...........................................F                             [100%]
+================================== FAILURES ===================================
+_______ test_episode_groups_use_last_physical_cycle_at_tied_event_time ________
+
+    def test_episode_groups_use_last_physical_cycle_at_tied_event_time():
+        intervals, episodes = episode_fixture()
+        run = dict(identity={key: episodes[0][key] for key in verifier().IDENTITY},
+                   intervals=intervals, events=[
+                       dict(time_ns=0, symbol="BTCUSDT", cycle_id="z"),
+                       dict(time_ns=0, symbol="BTCUSDT", cycle_id="a")])
+>       verifier().check_source_episode_groups(episodes, [run])
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'scripts.verify_intraday_risk' has no attribute 'check_source_episode_groups'
+
+tests\test_intraday_risk_verifier.py:401: AttributeError
+=========================== short test summary info ===========================
+FAILED tests/test_intraday_risk_verifier.py::test_episode_groups_use_last_physical_cycle_at_tied_event_time
+1 failed, 43 passed in 1.47s

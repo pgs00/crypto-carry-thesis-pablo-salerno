@@ -1,0 +1,44 @@
+{
+  "generated_at_utc": "2026-09-26T22:38:21.515748+00:00",
+  "script": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\scripts\\intraday_risk_report.py",
+  "script_sha256": "b372d3a0d7ca236f2199f8a2d7bcb0ed4d8afaff251b4feddab6c32f8b49af59",
+  "series_root": "D:\\Backtesting\\outputs\\riesgo_intradia_20260926T214118Z\\completa",
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\scripts\\intraday_risk_report.py",
+    "--package",
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\riesgo_intradia\\20260926T214118Z\\paquete_20260926T220400Z",
+    "--series-root",
+    "D:\\Backtesting\\outputs\\riesgo_intradia_20260926T214118Z\\completa"
+  ],
+  "input_hashes": {
+    "tablas/drawdown_comparativo.csv": "dcc50b674c39765afecc075dd037e8b348171d000e767fd83883832bbc0de10e",
+    "tablas/garantias_periodo.csv": "1775784ddb429b36ed80643089b902ca2a53f7b04d76a2f3cd9bedc6df5f56c1",
+    "tablas/metricas_reutilizadas.csv": "47107f6d2d77700cd0981b41326d313bf5e1f9496295c6e4f5ecdb4df7358fab",
+    "tablas/catalogo_incidentes.csv": "4bbbe4014aef9d25c155dba352d227fa20fe3c4ad826037fe7f73374c129ba71",
+    "tablas/puntos_extremos.csv": "181326fb7a42c837b034edfa467a9fc3f6f24be88daca2fc50a5d5afd6c9a499",
+    "tablas/riesgo_diario.csv": "b1f2176562eae08dca0a0df14e9c735a7cba6f39934b30a1a5c5efad06b1c652",
+    "tablas/h1_resumen.csv": "dc7d0c145d2b3784084c75ca458d27a0d4326c17377016b5fb82af8dfa2b1047",
+    "tablas/h1_invariancia.csv": "ba71b579ac043e45797bda55499bfe36dfb9b8ef1f95f3683b1ddb4a3bcfcbb5",
+    "tablas/h2.csv": "42691b183cd5889812cdcdc8454a08d20b51a0c17c476fc714be5ba9e83bdc18",
+    "tablas/h3_regimen.csv": "398608c088ea973ceadc111288766117304499b436b17fe7ad92edd2724b8d0c",
+    "tablas/h3_invariancia.csv": "869622e5f6e58cf6e3a55bbb245c79e13402ca20dd50a07a3ba77b96314f832d",
+    "series_locales.json": "091c902d959b909ffacd8ed523e4d9e0e52ac202c5d5f553c80c9e06d27a3ab3",
+    "reconstruccion.json": "0f48c886382e5daf8ecb3fd6900813045cac39c4a5de4164e2f22bcf902a608e",
+    "evidencia/marzo_2023.parquet": "f69cafc816cf25a825c0739aae6eb48443b1daf24cc3ed0507f96a2821147d86",
+    "evidencia/episodios.parquet": "58aec3f5ab9e2b38d0b834547724dc509f10bd4312ffa3bbbb4c85a60f0977d0"
+  },
+  "figure_count": 13,
+  "source_run_ids": [
+    "run_ad71d751b20623006c195ff3",
+    "run_dfea4b7ac1475668d5968c97",
+    "run_70383794701c4f0fc157b2ed",
+    "run_3f5d9cce8ff1c2ba5447e3b6"
+  ],
+  "engine_replay": false,
+  "financial_tables_modified": false,
+  "scope": "Presentation only. Whole-sample maxima come from supplied tables; local series support figures."
+}

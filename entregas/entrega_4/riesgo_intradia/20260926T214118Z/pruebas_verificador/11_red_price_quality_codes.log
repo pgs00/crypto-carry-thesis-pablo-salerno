@@ -1,0 +1,88 @@
+..............................................FFFF                       [100%]
+================================== FAILURES ===================================
+_______ test_price_quality_columns_are_strict_and_cover_declared_bounds _______
+
+    def test_price_quality_columns_are_strict_and_cover_declared_bounds():
+>       assert verifier().check_quality_values(quality_fixture(), 10, 31) == 3
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'scripts.verify_intraday_risk' has no attribute 'check_quality_values'. Did you mean: 'check_quality_clock'?
+
+tests\test_intraday_risk_verifier.py:614: AttributeError
+_ test_rehashed_unknown_or_inapplicable_price_reason_is_rejected[BTCUSDT_spot_reason_code-6] _
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-384/test_rehashed_unknown_or_inapp0')
+field = 'BTCUSDT_spot_reason_code', code = 6
+
+    @pytest.mark.parametrize("field,code", [("BTCUSDT_spot_reason_code", 6),
+                                            ("ETHUSDT_mark_reason_code", 3),
+                                            ("BTCUSDT_mark_reason_code", 5)])
+    def test_rehashed_unknown_or_inapplicable_price_reason_is_rejected(tmp_path, field, code):
+        import pyarrow as pa
+        import pyarrow.parquet as pq
+    
+        values = quality_fixture()
+        values[field][1] = code
+        path = tmp_path / "calidad_precios.parquet"
+        pq.write_table(pa.table(values), path)
+        seal(tmp_path)
+        verifier().verify_manifest(tmp_path)
+        with pytest.raises(ValueError, match="quality.*code"):
+>           verifier().check_quality_values(verifier().read_arrays(path), 10, 31)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           AttributeError: module 'scripts.verify_intraday_risk' has no attribute 'check_quality_values'. Did you mean: 'check_quality_clock'?
+
+tests\test_intraday_risk_verifier.py:641: AttributeError
+_ test_rehashed_unknown_or_inapplicable_price_reason_is_rejected[ETHUSDT_mark_reason_code-3] _
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-384/test_rehashed_unknown_or_inapp1')
+field = 'ETHUSDT_mark_reason_code', code = 3
+
+    @pytest.mark.parametrize("field,code", [("BTCUSDT_spot_reason_code", 6),
+                                            ("ETHUSDT_mark_reason_code", 3),
+                                            ("BTCUSDT_mark_reason_code", 5)])
+    def test_rehashed_unknown_or_inapplicable_price_reason_is_rejected(tmp_path, field, code):
+        import pyarrow as pa
+        import pyarrow.parquet as pq
+    
+        values = quality_fixture()
+        values[field][1] = code
+        path = tmp_path / "calidad_precios.parquet"
+        pq.write_table(pa.table(values), path)
+        seal(tmp_path)
+        verifier().verify_manifest(tmp_path)
+        with pytest.raises(ValueError, match="quality.*code"):
+>           verifier().check_quality_values(verifier().read_arrays(path), 10, 31)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           AttributeError: module 'scripts.verify_intraday_risk' has no attribute 'check_quality_values'. Did you mean: 'check_quality_clock'?
+
+tests\test_intraday_risk_verifier.py:641: AttributeError
+_ test_rehashed_unknown_or_inapplicable_price_reason_is_rejected[BTCUSDT_mark_reason_code-5] _
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-384/test_rehashed_unknown_or_inapp2')
+field = 'BTCUSDT_mark_reason_code', code = 5
+
+    @pytest.mark.parametrize("field,code", [("BTCUSDT_spot_reason_code", 6),
+                                            ("ETHUSDT_mark_reason_code", 3),
+                                            ("BTCUSDT_mark_reason_code", 5)])
+    def test_rehashed_unknown_or_inapplicable_price_reason_is_rejected(tmp_path, field, code):
+        import pyarrow as pa
+        import pyarrow.parquet as pq
+    
+        values = quality_fixture()
+        values[field][1] = code
+        path = tmp_path / "calidad_precios.parquet"
+        pq.write_table(pa.table(values), path)
+        seal(tmp_path)
+        verifier().verify_manifest(tmp_path)
+        with pytest.raises(ValueError, match="quality.*code"):
+>           verifier().check_quality_values(verifier().read_arrays(path), 10, 31)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           AttributeError: module 'scripts.verify_intraday_risk' has no attribute 'check_quality_values'. Did you mean: 'check_quality_clock'?
+
+tests\test_intraday_risk_verifier.py:641: AttributeError
+=========================== short test summary info ===========================
+FAILED tests/test_intraday_risk_verifier.py::test_price_quality_columns_are_strict_and_cover_declared_bounds
+FAILED tests/test_intraday_risk_verifier.py::test_rehashed_unknown_or_inapplicable_price_reason_is_rejected[BTCUSDT_spot_reason_code-6]
+FAILED tests/test_intraday_risk_verifier.py::test_rehashed_unknown_or_inapplicable_price_reason_is_rejected[ETHUSDT_mark_reason_code-3]
+FAILED tests/test_intraday_risk_verifier.py::test_rehashed_unknown_or_inapplicable_price_reason_is_rejected[BTCUSDT_mark_reason_code-5]
+4 failed, 46 passed in 5.94s

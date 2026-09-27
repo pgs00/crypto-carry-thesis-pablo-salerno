@@ -1,0 +1,53 @@
+................................FFF                                      [100%]
+================================== FAILURES ===================================
+_ test_complete_scope_requires_explicit_dependencies_without_recorded_path_fallback _
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-369/test_complete_scope_requires_e0')
+
+    def test_complete_scope_requires_explicit_dependencies_without_recorded_path_fallback(tmp_path):
+        (tmp_path / "data.txt").write_text("placeholder", encoding="utf-8")
+        seal(tmp_path)
+>       with pytest.raises(ValueError, match="requires.*parent.*correction.*series.*data"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: Regex pattern did not match.
+E         Expected regex: 'requires.*parent.*correction.*series.*data'
+E         Actual message: 'risk package verification orchestration not yet installed'
+
+tests\test_intraday_risk_verifier.py:244: AssertionError
+______ test_compact_cannot_omit_required_semantic_evidence_by_rehashing _______
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-369/test_compact_cannot_omit_requi0')
+
+    def test_compact_cannot_omit_required_semantic_evidence_by_rehashing(tmp_path):
+        (tmp_path / "data.txt").write_text("placeholder", encoding="utf-8")
+        seal(tmp_path)
+>       with pytest.raises(ValueError, match="missing mandatory"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: Regex pattern did not match.
+E         Expected regex: 'missing mandatory'
+E         Actual message: 'risk package verification orchestration not yet installed'
+
+tests\test_intraday_risk_verifier.py:251: AssertionError
+_ test_complete_drawdown_recomputes_the_nadir_instead_of_trusting_peak_cells __
+
+    def test_complete_drawdown_recomputes_the_nadir_instead_of_trusting_peak_cells():
+        row = dd_row()
+        row.update(start_utc="1970-01-01T00:00:00Z", end_exclusive_utc="1970-01-01T00:00:00.000000004Z",
+                   intraday_peak_time_ns=0, daily_peak_time_ns=3, daily_trough_time_ns=3)
+        run = dict(identity={key: row[key] for key in ("scenario", "strategy", "run_id")},
+                   config=dict(capital="100", start="1970-01-01T00:00:00Z"),
+                   daily=[dict(time_ns=3, equity="101")])
+        metric = dict(run_id="c", period="full", starting_equity_usdt="100",
+                      start_utc=row["start_utc"], end_exclusive_utc=row["end_exclusive_utc"])
+        eq = dict(time_ns=np.array([1, 2, 3]), equity_usdt=np.array([100., 80., 101.]),
+                  equity_proxy_usdt=np.array([100., 80., 101.]))
+>       verifier().check_full_drawdowns([row], [run], [metric], {"c": eq})
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'scripts.verify_intraday_risk' has no attribute 'check_full_drawdowns'
+
+tests\test_intraday_risk_verifier.py:266: AttributeError
+=========================== short test summary info ===========================
+FAILED tests/test_intraday_risk_verifier.py::test_complete_scope_requires_explicit_dependencies_without_recorded_path_fallback
+FAILED tests/test_intraday_risk_verifier.py::test_compact_cannot_omit_required_semantic_evidence_by_rehashing
+FAILED tests/test_intraday_risk_verifier.py::test_complete_drawdown_recomputes_the_nadir_instead_of_trusting_peak_cells
+3 failed, 32 passed in 1.54s

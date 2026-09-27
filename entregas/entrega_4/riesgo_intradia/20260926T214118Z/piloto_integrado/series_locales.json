@@ -1,0 +1,50 @@
+{
+  "root_recorded": "D:\\Backtesting\\outputs\\riesgo_intradia_20260926T214118Z\\piloto",
+  "entries": [
+    {
+      "scenario": "BASE_E3",
+      "strategy": "conditional",
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2023-03.parquet",
+      "sha256": "cf2e450734c139ad0ac23ca6644442fd5af835087702b63066ec081d05867140",
+      "bytes": 1078983,
+      "rows": 4336,
+      "start_ns": 1679529600000000000,
+      "end_exclusive_ns": 1679788800000000000
+    },
+    {
+      "scenario": "BASE_E3",
+      "strategy": "permanent",
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2023-03.parquet",
+      "sha256": "3bdc02573e3c38355a9e48b3b7d8946c07eaa353e58b99c5ddeda7bf62d0e74c",
+      "bytes": 1279136,
+      "rows": 4343,
+      "start_ns": 1679529600000000000,
+      "end_exclusive_ns": 1679788800000000000
+    },
+    {
+      "scenario": "MARGEN_2X",
+      "strategy": "conditional",
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2023-03.parquet",
+      "sha256": "7753daf1ab4fac0f16f628e456ed9e3d7808fb6abc20d8c401bc27f252a1f850",
+      "bytes": 1078974,
+      "rows": 4336,
+      "start_ns": 1679529600000000000,
+      "end_exclusive_ns": 1679788800000000000
+    },
+    {
+      "scenario": "MARGEN_2X",
+      "strategy": "permanent",
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2023-03.parquet",
+      "sha256": "da548d80eedd11fe4051867cf098d173edc149248da091907862cbe99a0d6007",
+      "bytes": 1279047,
+      "rows": 4343,
+      "start_ns": 1679529600000000000,
+      "end_exclusive_ns": 1679788800000000000
+    }
+  ],
+  "full_series_in_compact_package": false
+}

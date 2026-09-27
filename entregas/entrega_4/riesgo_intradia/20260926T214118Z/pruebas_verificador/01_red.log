@@ -1,0 +1,1296 @@
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF                                         [100%]
+================================== FAILURES ===================================
+_ test_literal_drawdown_arithmetic_does_not_claim_complete_series_recomputation _
+
+    def test_literal_drawdown_arithmetic_does_not_claim_complete_series_recomputation():
+>       assert verifier().check_drawdown_rows([dd_row()]) == 1
+               ^^^^^^^^^^
+
+tests\test_intraday_risk_verifier.py:55: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_verifier.py:16: in verifier
+    return importlib.import_module("scripts.verify_intraday_risk")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.verify_intraday_risk'
+import_ = <function _gcd_import at 0x00000251846ABE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.verify_intraday_risk'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+____ test_rehashed_drawdown_corruption_still_fails[intraday_drawdown--0.1] ____
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-367/test_rehashed_drawdown_corrupt0')
+field = 'intraday_drawdown', value = -0.1
+
+    @pytest.mark.parametrize("field,value", [
+        ("intraday_drawdown", -.1), ("intraday_loss_usdt", 10),
+        ("intraday_peak_equity", 90), ("extra_drawdown_pp", 10),
+        ("extra_peak_to_trough_loss_usdt", 0), ("daily_zero_dd", False),
+        ("intraday_recovery_time_ns", 0), ("intraday_missing_observations", 1),
+    ])
+    def test_rehashed_drawdown_corruption_still_fails(tmp_path, field, value):
+        row = dict(dd_row(), **{field: value})
+        path = tmp_path / "drawdown.csv"
+        csv_file(path, [row])
+>       seal(tmp_path)
+
+tests\test_intraday_risk_verifier.py:68: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_verifier.py:27: in seal
+    module = verifier()
+             ^^^^^^^^^^
+tests\test_intraday_risk_verifier.py:16: in verifier
+    return importlib.import_module("scripts.verify_intraday_risk")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.verify_intraday_risk'
+import_ = <function _gcd_import at 0x00000251846ABE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.verify_intraday_risk'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+____ test_rehashed_drawdown_corruption_still_fails[intraday_loss_usdt-10] _____
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-367/test_rehashed_drawdown_corrupt1')
+field = 'intraday_loss_usdt', value = 10
+
+    @pytest.mark.parametrize("field,value", [
+        ("intraday_drawdown", -.1), ("intraday_loss_usdt", 10),
+        ("intraday_peak_equity", 90), ("extra_drawdown_pp", 10),
+        ("extra_peak_to_trough_loss_usdt", 0), ("daily_zero_dd", False),
+        ("intraday_recovery_time_ns", 0), ("intraday_missing_observations", 1),
+    ])
+    def test_rehashed_drawdown_corruption_still_fails(tmp_path, field, value):
+        row = dict(dd_row(), **{field: value})
+        path = tmp_path / "drawdown.csv"
+        csv_file(path, [row])
+>       seal(tmp_path)
+
+tests\test_intraday_risk_verifier.py:68: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_verifier.py:27: in seal
+    module = verifier()
+             ^^^^^^^^^^
+tests\test_intraday_risk_verifier.py:16: in verifier
+    return importlib.import_module("scripts.verify_intraday_risk")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.verify_intraday_risk'
+import_ = <function _gcd_import at 0x00000251846ABE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.verify_intraday_risk'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+___ test_rehashed_drawdown_corruption_still_fails[intraday_peak_equity-90] ____
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-367/test_rehashed_drawdown_corrupt2')
+field = 'intraday_peak_equity', value = 90
+
+    @pytest.mark.parametrize("field,value", [
+        ("intraday_drawdown", -.1), ("intraday_loss_usdt", 10),
+        ("intraday_peak_equity", 90), ("extra_drawdown_pp", 10),
+        ("extra_peak_to_trough_loss_usdt", 0), ("daily_zero_dd", False),
+        ("intraday_recovery_time_ns", 0), ("intraday_missing_observations", 1),
+    ])
+    def test_rehashed_drawdown_corruption_still_fails(tmp_path, field, value):
+        row = dict(dd_row(), **{field: value})
+        path = tmp_path / "drawdown.csv"
+        csv_file(path, [row])
+>       seal(tmp_path)
+
+tests\test_intraday_risk_verifier.py:68: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_verifier.py:27: in seal
+    module = verifier()
+             ^^^^^^^^^^
+tests\test_intraday_risk_verifier.py:16: in verifier
+    return importlib.import_module("scripts.verify_intraday_risk")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.verify_intraday_risk'
+import_ = <function _gcd_import at 0x00000251846ABE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.verify_intraday_risk'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+_____ test_rehashed_drawdown_corruption_still_fails[extra_drawdown_pp-10] _____
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-367/test_rehashed_drawdown_corrupt3')
+field = 'extra_drawdown_pp', value = 10
+
+    @pytest.mark.parametrize("field,value", [
+        ("intraday_drawdown", -.1), ("intraday_loss_usdt", 10),
+        ("intraday_peak_equity", 90), ("extra_drawdown_pp", 10),
+        ("extra_peak_to_trough_loss_usdt", 0), ("daily_zero_dd", False),
+        ("intraday_recovery_time_ns", 0), ("intraday_missing_observations", 1),
+    ])
+    def test_rehashed_drawdown_corruption_still_fails(tmp_path, field, value):
+        row = dict(dd_row(), **{field: value})
+        path = tmp_path / "drawdown.csv"
+        csv_file(path, [row])
+>       seal(tmp_path)
+
+tests\test_intraday_risk_verifier.py:68: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_verifier.py:27: in seal
+    module = verifier()
+             ^^^^^^^^^^
+tests\test_intraday_risk_verifier.py:16: in verifier
+    return importlib.import_module("scripts.verify_intraday_risk")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.verify_intraday_risk'
+import_ = <function _gcd_import at 0x00000251846ABE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.verify_intraday_risk'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+_ test_rehashed_drawdown_corruption_still_fails[extra_peak_to_trough_loss_usdt-0] _
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-367/test_rehashed_drawdown_corrupt4')
+field = 'extra_peak_to_trough_loss_usdt', value = 0
+
+    @pytest.mark.parametrize("field,value", [
+        ("intraday_drawdown", -.1), ("intraday_loss_usdt", 10),
+        ("intraday_peak_equity", 90), ("extra_drawdown_pp", 10),
+        ("extra_peak_to_trough_loss_usdt", 0), ("daily_zero_dd", False),
+        ("intraday_recovery_time_ns", 0), ("intraday_missing_observations", 1),
+    ])
+    def test_rehashed_drawdown_corruption_still_fails(tmp_path, field, value):
+        row = dict(dd_row(), **{field: value})
+        path = tmp_path / "drawdown.csv"
+        csv_file(path, [row])
+>       seal(tmp_path)
+
+tests\test_intraday_risk_verifier.py:68: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_verifier.py:27: in seal
+    module = verifier()
+             ^^^^^^^^^^
+tests\test_intraday_risk_verifier.py:16: in verifier
+    return importlib.import_module("scripts.verify_intraday_risk")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.verify_intraday_risk'
+import_ = <function _gcd_import at 0x00000251846ABE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.verify_intraday_risk'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+_____ test_rehashed_drawdown_corruption_still_fails[daily_zero_dd-False] ______
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-367/test_rehashed_drawdown_corrupt5')
+field = 'daily_zero_dd', value = False
+
+    @pytest.mark.parametrize("field,value", [
+        ("intraday_drawdown", -.1), ("intraday_loss_usdt", 10),
+        ("intraday_peak_equity", 90), ("extra_drawdown_pp", 10),
+        ("extra_peak_to_trough_loss_usdt", 0), ("daily_zero_dd", False),
+        ("intraday_recovery_time_ns", 0), ("intraday_missing_observations", 1),
+    ])
+    def test_rehashed_drawdown_corruption_still_fails(tmp_path, field, value):
+        row = dict(dd_row(), **{field: value})
+        path = tmp_path / "drawdown.csv"
+        csv_file(path, [row])
+>       seal(tmp_path)
+
+tests\test_intraday_risk_verifier.py:68: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_verifier.py:27: in seal
+    module = verifier()
+             ^^^^^^^^^^
+tests\test_intraday_risk_verifier.py:16: in verifier
+    return importlib.import_module("scripts.verify_intraday_risk")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.verify_intraday_risk'
+import_ = <function _gcd_import at 0x00000251846ABE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.verify_intraday_risk'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+_ test_rehashed_drawdown_corruption_still_fails[intraday_recovery_time_ns-0] __
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-367/test_rehashed_drawdown_corrupt6')
+field = 'intraday_recovery_time_ns', value = 0
+
+    @pytest.mark.parametrize("field,value", [
+        ("intraday_drawdown", -.1), ("intraday_loss_usdt", 10),
+        ("intraday_peak_equity", 90), ("extra_drawdown_pp", 10),
+        ("extra_peak_to_trough_loss_usdt", 0), ("daily_zero_dd", False),
+        ("intraday_recovery_time_ns", 0), ("intraday_missing_observations", 1),
+    ])
+    def test_rehashed_drawdown_corruption_still_fails(tmp_path, field, value):
+        row = dict(dd_row(), **{field: value})
+        path = tmp_path / "drawdown.csv"
+        csv_file(path, [row])
+>       seal(tmp_path)
+
+tests\test_intraday_risk_verifier.py:68: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_verifier.py:27: in seal
+    module = verifier()
+             ^^^^^^^^^^
+tests\test_intraday_risk_verifier.py:16: in verifier
+    return importlib.import_module("scripts.verify_intraday_risk")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.verify_intraday_risk'
+import_ = <function _gcd_import at 0x00000251846ABE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.verify_intraday_risk'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+_ test_rehashed_drawdown_corruption_still_fails[intraday_missing_observations-1] _
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-367/test_rehashed_drawdown_corrupt7')
+field = 'intraday_missing_observations', value = 1
+
+    @pytest.mark.parametrize("field,value", [
+        ("intraday_drawdown", -.1), ("intraday_loss_usdt", 10),
+        ("intraday_peak_equity", 90), ("extra_drawdown_pp", 10),
+        ("extra_peak_to_trough_loss_usdt", 0), ("daily_zero_dd", False),
+        ("intraday_recovery_time_ns", 0), ("intraday_missing_observations", 1),
+    ])
+    def test_rehashed_drawdown_corruption_still_fails(tmp_path, field, value):
+        row = dict(dd_row(), **{field: value})
+        path = tmp_path / "drawdown.csv"
+        csv_file(path, [row])
+>       seal(tmp_path)
+
+tests\test_intraday_risk_verifier.py:68: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_verifier.py:27: in seal
+    module = verifier()
+             ^^^^^^^^^^
+tests\test_intraday_risk_verifier.py:16: in verifier
+    return importlib.import_module("scripts.verify_intraday_risk")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.verify_intraday_risk'
+import_ = <function _gcd_import at 0x00000251846ABE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.verify_intraday_risk'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+_____ test_episode_catalog_covers_all_unhedged_time_without_counting_dust _____
+
+    def test_episode_catalog_covers_all_unhedged_time_without_counting_dust():
+        intervals, episodes = episode_fixture()
+>       assert verifier().check_episode_catalog(intervals, episodes, 0, 4_000_000_000) == 1
+               ^^^^^^^^^^
+
+tests\test_intraday_risk_verifier.py:95: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_verifier.py:16: in verifier
+    return importlib.import_module("scripts.verify_intraday_risk")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.verify_intraday_risk'
+import_ = <function _gcd_import at 0x00000251846ABE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.verify_intraday_risk'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+______________ test_rehashed_episode_corruption_fails[seconds-1] ______________
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-367/test_rehashed_episode_corrupti0')
+field = 'seconds', value = 1
+
+    @pytest.mark.parametrize("field,value", [("seconds", 1), ("end_ns", 4_000_000_000),
+                                            ("portfolio_change_usdt", 0), ("states", "FLAT")])
+    def test_rehashed_episode_corruption_fails(tmp_path, field, value):
+        intervals, episodes = episode_fixture()
+        episodes[0][field] = value
+        path = tmp_path / "episodes.csv"
+        csv_file(path, episodes)
+>       seal(tmp_path)
+
+tests\test_intraday_risk_verifier.py:105: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_verifier.py:27: in seal
+    module = verifier()
+             ^^^^^^^^^^
+tests\test_intraday_risk_verifier.py:16: in verifier
+    return importlib.import_module("scripts.verify_intraday_risk")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.verify_intraday_risk'
+import_ = <function _gcd_import at 0x00000251846ABE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.verify_intraday_risk'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+__________ test_rehashed_episode_corruption_fails[end_ns-4000000000] __________
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-367/test_rehashed_episode_corrupti1')
+field = 'end_ns', value = 4000000000
+
+    @pytest.mark.parametrize("field,value", [("seconds", 1), ("end_ns", 4_000_000_000),
+                                            ("portfolio_change_usdt", 0), ("states", "FLAT")])
+    def test_rehashed_episode_corruption_fails(tmp_path, field, value):
+        intervals, episodes = episode_fixture()
+        episodes[0][field] = value
+        path = tmp_path / "episodes.csv"
+        csv_file(path, episodes)
+>       seal(tmp_path)
+
+tests\test_intraday_risk_verifier.py:105: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_verifier.py:27: in seal
+    module = verifier()
+             ^^^^^^^^^^
+tests\test_intraday_risk_verifier.py:16: in verifier
+    return importlib.import_module("scripts.verify_intraday_risk")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.verify_intraday_risk'
+import_ = <function _gcd_import at 0x00000251846ABE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.verify_intraday_risk'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+_______ test_rehashed_episode_corruption_fails[portfolio_change_usdt-0] _______
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-367/test_rehashed_episode_corrupti2')
+field = 'portfolio_change_usdt', value = 0
+
+    @pytest.mark.parametrize("field,value", [("seconds", 1), ("end_ns", 4_000_000_000),
+                                            ("portfolio_change_usdt", 0), ("states", "FLAT")])
+    def test_rehashed_episode_corruption_fails(tmp_path, field, value):
+        intervals, episodes = episode_fixture()
+        episodes[0][field] = value
+        path = tmp_path / "episodes.csv"
+        csv_file(path, episodes)
+>       seal(tmp_path)
+
+tests\test_intraday_risk_verifier.py:105: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_verifier.py:27: in seal
+    module = verifier()
+             ^^^^^^^^^^
+tests\test_intraday_risk_verifier.py:16: in verifier
+    return importlib.import_module("scripts.verify_intraday_risk")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.verify_intraday_risk'
+import_ = <function _gcd_import at 0x00000251846ABE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.verify_intraday_risk'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+_____________ test_rehashed_episode_corruption_fails[states-FLAT] _____________
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-367/test_rehashed_episode_corrupti3')
+field = 'states', value = 'FLAT'
+
+    @pytest.mark.parametrize("field,value", [("seconds", 1), ("end_ns", 4_000_000_000),
+                                            ("portfolio_change_usdt", 0), ("states", "FLAT")])
+    def test_rehashed_episode_corruption_fails(tmp_path, field, value):
+        intervals, episodes = episode_fixture()
+        episodes[0][field] = value
+        path = tmp_path / "episodes.csv"
+        csv_file(path, episodes)
+>       seal(tmp_path)
+
+tests\test_intraday_risk_verifier.py:105: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_verifier.py:27: in seal
+    module = verifier()
+             ^^^^^^^^^^
+tests\test_intraday_risk_verifier.py:16: in verifier
+    return importlib.import_module("scripts.verify_intraday_risk")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.verify_intraday_risk'
+import_ = <function _gcd_import at 0x00000251846ABE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.verify_intraday_risk'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+__ test_missing_episode_duplicate_episode_and_split_same_cycle_are_rejected ___
+
+    def test_missing_episode_duplicate_episode_and_split_same_cycle_are_rejected():
+        intervals, episodes = episode_fixture()
+        for changed in ([], episodes * 2,
+                        [dict(episodes[0], end_ns=2_000_000_000, seconds=1, states="OPENING"),
+                         dict(episodes[0], episode_id="two", start_ns=2_000_000_000,
+                              seconds=1, states="CLOSING")]):
+            with pytest.raises(ValueError):
+>               verifier().check_episode_catalog(intervals, changed, 0, 4_000_000_000)
+                ^^^^^^^^^^
+
+tests\test_intraday_risk_verifier.py:118: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_verifier.py:16: in verifier
+    return importlib.import_module("scripts.verify_intraday_risk")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.verify_intraday_risk'
+import_ = <function _gcd_import at 0x00000251846ABE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.verify_intraday_risk'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+__________ test_compact_equity_and_margin_arithmetic_is_independent ___________
+
+    def test_compact_equity_and_margin_arithmetic_is_independent():
+>       assert verifier().check_evidence_columns(margin_fixture(), "run_id") == 2
+               ^^^^^^^^^^
+
+tests\test_intraday_risk_verifier.py:157: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_verifier.py:16: in verifier
+    return importlib.import_module("scripts.verify_intraday_risk")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.verify_intraday_risk'
+import_ = <function _gcd_import at 0x00000251846ABE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.verify_intraday_risk'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+____ test_rehashed_margin_parquet_corruption_is_detected[equity_usdt-121] _____
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-367/test_rehashed_margin_parquet_c0')
+field = 'equity_usdt', value = 121
+
+    @pytest.mark.parametrize("field,value", [
+        ("equity_usdt", 121), ("BTCUSDT_margin_balance_usdt", 21),
+        ("BTCUSDT_headroom_usdt", 20), ("BTCUSDT_margin_ratio", .01),
+        ("ETHUSDT_maintenance_usdt", 1), ("ETHUSDT_margin_ratio", 0),
+        ("preventive_need_joint_infimum_usdt", 9), ("redistributable_cash_usdt", 1),
+        ("BTCUSDT_liquidation_distance", .5), ("BTCUSDT_net_exposure_usdt", 100),
+    ])
+    def test_rehashed_margin_parquet_corruption_is_detected(tmp_path, field, value):
+        import pyarrow as pa
+        import pyarrow.parquet as pq
+    
+        rows = margin_fixture()
+        rows[field][0] = value
+        path = tmp_path / "margin.parquet"
+        pq.write_table(pa.table(rows), path)
+>       seal(tmp_path)
+
+tests\test_intraday_risk_verifier.py:175: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_verifier.py:27: in seal
+    module = verifier()
+             ^^^^^^^^^^
+tests\test_intraday_risk_verifier.py:16: in verifier
+    return importlib.import_module("scripts.verify_intraday_risk")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.verify_intraday_risk'
+import_ = <function _gcd_import at 0x00000251846ABE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.verify_intraday_risk'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+_ test_rehashed_margin_parquet_corruption_is_detected[BTCUSDT_margin_balance_usdt-21] _
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-367/test_rehashed_margin_parquet_c1')
+field = 'BTCUSDT_margin_balance_usdt', value = 21
+
+    @pytest.mark.parametrize("field,value", [
+        ("equity_usdt", 121), ("BTCUSDT_margin_balance_usdt", 21),
+        ("BTCUSDT_headroom_usdt", 20), ("BTCUSDT_margin_ratio", .01),
+        ("ETHUSDT_maintenance_usdt", 1), ("ETHUSDT_margin_ratio", 0),
+        ("preventive_need_joint_infimum_usdt", 9), ("redistributable_cash_usdt", 1),
+        ("BTCUSDT_liquidation_distance", .5), ("BTCUSDT_net_exposure_usdt", 100),
+    ])
+    def test_rehashed_margin_parquet_corruption_is_detected(tmp_path, field, value):
+        import pyarrow as pa
+        import pyarrow.parquet as pq
+    
+        rows = margin_fixture()
+        rows[field][0] = value
+        path = tmp_path / "margin.parquet"
+        pq.write_table(pa.table(rows), path)
+>       seal(tmp_path)
+
+tests\test_intraday_risk_verifier.py:175: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_verifier.py:27: in seal
+    module = verifier()
+             ^^^^^^^^^^
+tests\test_intraday_risk_verifier.py:16: in verifier
+    return importlib.import_module("scripts.verify_intraday_risk")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.verify_intraday_risk'
+import_ = <function _gcd_import at 0x00000251846ABE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.verify_intraday_risk'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+_ test_rehashed_margin_parquet_corruption_is_detected[BTCUSDT_headroom_usdt-20] _
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-367/test_rehashed_margin_parquet_c2')
+field = 'BTCUSDT_headroom_usdt', value = 20
+
+    @pytest.mark.parametrize("field,value", [
+        ("equity_usdt", 121), ("BTCUSDT_margin_balance_usdt", 21),
+        ("BTCUSDT_headroom_usdt", 20), ("BTCUSDT_margin_ratio", .01),
+        ("ETHUSDT_maintenance_usdt", 1), ("ETHUSDT_margin_ratio", 0),
+        ("preventive_need_joint_infimum_usdt", 9), ("redistributable_cash_usdt", 1),
+        ("BTCUSDT_liquidation_distance", .5), ("BTCUSDT_net_exposure_usdt", 100),
+    ])
+    def test_rehashed_margin_parquet_corruption_is_detected(tmp_path, field, value):
+        import pyarrow as pa
+        import pyarrow.parquet as pq
+    
+        rows = margin_fixture()
+        rows[field][0] = value
+        path = tmp_path / "margin.parquet"
+        pq.write_table(pa.table(rows), path)
+>       seal(tmp_path)
+
+tests\test_intraday_risk_verifier.py:175: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_verifier.py:27: in seal
+    module = verifier()
+             ^^^^^^^^^^
+tests\test_intraday_risk_verifier.py:16: in verifier
+    return importlib.import_module("scripts.verify_intraday_risk")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.verify_intraday_risk'
+import_ = <function _gcd_import at 0x00000251846ABE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.verify_intraday_risk'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+_ test_rehashed_margin_parquet_corruption_is_detected[BTCUSDT_margin_ratio-0.01] _
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-367/test_rehashed_margin_parquet_c3')
+field = 'BTCUSDT_margin_ratio', value = 0.01
+
+    @pytest.mark.parametrize("field,value", [
+        ("equity_usdt", 121), ("BTCUSDT_margin_balance_usdt", 21),
+        ("BTCUSDT_headroom_usdt", 20), ("BTCUSDT_margin_ratio", .01),
+        ("ETHUSDT_maintenance_usdt", 1), ("ETHUSDT_margin_ratio", 0),
+        ("preventive_need_joint_infimum_usdt", 9), ("redistributable_cash_usdt", 1),
+        ("BTCUSDT_liquidation_distance", .5), ("BTCUSDT_net_exposure_usdt", 100),
+    ])
+    def test_rehashed_margin_parquet_corruption_is_detected(tmp_path, field, value):
+        import pyarrow as pa
+        import pyarrow.parquet as pq
+    
+        rows = margin_fixture()
+        rows[field][0] = value
+        path = tmp_path / "margin.parquet"
+        pq.write_table(pa.table(rows), path)
+>       seal(tmp_path)
+
+tests\test_intraday_risk_verifier.py:175: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_verifier.py:27: in seal
+    module = verifier()
+             ^^^^^^^^^^
+tests\test_intraday_risk_verifier.py:16: in verifier
+    return importlib.import_module("scripts.verify_intraday_risk")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.verify_intraday_risk'
+import_ = <function _gcd_import at 0x00000251846ABE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.verify_intraday_risk'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+_ test_rehashed_margin_parquet_corruption_is_detected[ETHUSDT_maintenance_usdt-1] _
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-367/test_rehashed_margin_parquet_c4')
+field = 'ETHUSDT_maintenance_usdt', value = 1
+
+    @pytest.mark.parametrize("field,value", [
+        ("equity_usdt", 121), ("BTCUSDT_margin_balance_usdt", 21),
+        ("BTCUSDT_headroom_usdt", 20), ("BTCUSDT_margin_ratio", .01),
+        ("ETHUSDT_maintenance_usdt", 1), ("ETHUSDT_margin_ratio", 0),
+        ("preventive_need_joint_infimum_usdt", 9), ("redistributable_cash_usdt", 1),
+        ("BTCUSDT_liquidation_distance", .5), ("BTCUSDT_net_exposure_usdt", 100),
+    ])
+    def test_rehashed_margin_parquet_corruption_is_detected(tmp_path, field, value):
+        import pyarrow as pa
+        import pyarrow.parquet as pq
+    
+        rows = margin_fixture()
+        rows[field][0] = value
+        path = tmp_path / "margin.parquet"
+        pq.write_table(pa.table(rows), path)
+>       seal(tmp_path)
+
+tests\test_intraday_risk_verifier.py:175: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_verifier.py:27: in seal
+    module = verifier()
+             ^^^^^^^^^^
+tests\test_intraday_risk_verifier.py:16: in verifier
+    return importlib.import_module("scripts.verify_intraday_risk")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.verify_intraday_risk'
+import_ = <function _gcd_import at 0x00000251846ABE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.verify_intraday_risk'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+_ test_rehashed_margin_parquet_corruption_is_detected[ETHUSDT_margin_ratio-0] _
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-367/test_rehashed_margin_parquet_c5')
+field = 'ETHUSDT_margin_ratio', value = 0
+
+    @pytest.mark.parametrize("field,value", [
+        ("equity_usdt", 121), ("BTCUSDT_margin_balance_usdt", 21),
+        ("BTCUSDT_headroom_usdt", 20), ("BTCUSDT_margin_ratio", .01),
+        ("ETHUSDT_maintenance_usdt", 1), ("ETHUSDT_margin_ratio", 0),
+        ("preventive_need_joint_infimum_usdt", 9), ("redistributable_cash_usdt", 1),
+        ("BTCUSDT_liquidation_distance", .5), ("BTCUSDT_net_exposure_usdt", 100),
+    ])
+    def test_rehashed_margin_parquet_corruption_is_detected(tmp_path, field, value):
+        import pyarrow as pa
+        import pyarrow.parquet as pq
+    
+        rows = margin_fixture()
+        rows[field][0] = value
+        path = tmp_path / "margin.parquet"
+        pq.write_table(pa.table(rows), path)
+>       seal(tmp_path)
+
+tests\test_intraday_risk_verifier.py:175: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_verifier.py:27: in seal
+    module = verifier()
+             ^^^^^^^^^^
+tests\test_intraday_risk_verifier.py:16: in verifier
+    return importlib.import_module("scripts.verify_intraday_risk")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.verify_intraday_risk'
+import_ = <function _gcd_import at 0x00000251846ABE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.verify_intraday_risk'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+_ test_rehashed_margin_parquet_corruption_is_detected[preventive_need_joint_infimum_usdt-9] _
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-367/test_rehashed_margin_parquet_c6')
+field = 'preventive_need_joint_infimum_usdt', value = 9
+
+    @pytest.mark.parametrize("field,value", [
+        ("equity_usdt", 121), ("BTCUSDT_margin_balance_usdt", 21),
+        ("BTCUSDT_headroom_usdt", 20), ("BTCUSDT_margin_ratio", .01),
+        ("ETHUSDT_maintenance_usdt", 1), ("ETHUSDT_margin_ratio", 0),
+        ("preventive_need_joint_infimum_usdt", 9), ("redistributable_cash_usdt", 1),
+        ("BTCUSDT_liquidation_distance", .5), ("BTCUSDT_net_exposure_usdt", 100),
+    ])
+    def test_rehashed_margin_parquet_corruption_is_detected(tmp_path, field, value):
+        import pyarrow as pa
+        import pyarrow.parquet as pq
+    
+        rows = margin_fixture()
+        rows[field][0] = value
+        path = tmp_path / "margin.parquet"
+        pq.write_table(pa.table(rows), path)
+>       seal(tmp_path)
+
+tests\test_intraday_risk_verifier.py:175: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_verifier.py:27: in seal
+    module = verifier()
+             ^^^^^^^^^^
+tests\test_intraday_risk_verifier.py:16: in verifier
+    return importlib.import_module("scripts.verify_intraday_risk")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.verify_intraday_risk'
+import_ = <function _gcd_import at 0x00000251846ABE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.verify_intraday_risk'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+_ test_rehashed_margin_parquet_corruption_is_detected[redistributable_cash_usdt-1] _
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-367/test_rehashed_margin_parquet_c7')
+field = 'redistributable_cash_usdt', value = 1
+
+    @pytest.mark.parametrize("field,value", [
+        ("equity_usdt", 121), ("BTCUSDT_margin_balance_usdt", 21),
+        ("BTCUSDT_headroom_usdt", 20), ("BTCUSDT_margin_ratio", .01),
+        ("ETHUSDT_maintenance_usdt", 1), ("ETHUSDT_margin_ratio", 0),
+        ("preventive_need_joint_infimum_usdt", 9), ("redistributable_cash_usdt", 1),
+        ("BTCUSDT_liquidation_distance", .5), ("BTCUSDT_net_exposure_usdt", 100),
+    ])
+    def test_rehashed_margin_parquet_corruption_is_detected(tmp_path, field, value):
+        import pyarrow as pa
+        import pyarrow.parquet as pq
+    
+        rows = margin_fixture()
+        rows[field][0] = value
+        path = tmp_path / "margin.parquet"
+        pq.write_table(pa.table(rows), path)
+>       seal(tmp_path)
+
+tests\test_intraday_risk_verifier.py:175: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_verifier.py:27: in seal
+    module = verifier()
+             ^^^^^^^^^^
+tests\test_intraday_risk_verifier.py:16: in verifier
+    return importlib.import_module("scripts.verify_intraday_risk")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.verify_intraday_risk'
+import_ = <function _gcd_import at 0x00000251846ABE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.verify_intraday_risk'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+_ test_rehashed_margin_parquet_corruption_is_detected[BTCUSDT_liquidation_distance-0.5] _
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-367/test_rehashed_margin_parquet_c8')
+field = 'BTCUSDT_liquidation_distance', value = 0.5
+
+    @pytest.mark.parametrize("field,value", [
+        ("equity_usdt", 121), ("BTCUSDT_margin_balance_usdt", 21),
+        ("BTCUSDT_headroom_usdt", 20), ("BTCUSDT_margin_ratio", .01),
+        ("ETHUSDT_maintenance_usdt", 1), ("ETHUSDT_margin_ratio", 0),
+        ("preventive_need_joint_infimum_usdt", 9), ("redistributable_cash_usdt", 1),
+        ("BTCUSDT_liquidation_distance", .5), ("BTCUSDT_net_exposure_usdt", 100),
+    ])
+    def test_rehashed_margin_parquet_corruption_is_detected(tmp_path, field, value):
+        import pyarrow as pa
+        import pyarrow.parquet as pq
+    
+        rows = margin_fixture()
+        rows[field][0] = value
+        path = tmp_path / "margin.parquet"
+        pq.write_table(pa.table(rows), path)
+>       seal(tmp_path)
+
+tests\test_intraday_risk_verifier.py:175: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_verifier.py:27: in seal
+    module = verifier()
+             ^^^^^^^^^^
+tests\test_intraday_risk_verifier.py:16: in verifier
+    return importlib.import_module("scripts.verify_intraday_risk")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.verify_intraday_risk'
+import_ = <function _gcd_import at 0x00000251846ABE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.verify_intraday_risk'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+_ test_rehashed_margin_parquet_corruption_is_detected[BTCUSDT_net_exposure_usdt-100] _
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-367/test_rehashed_margin_parquet_c9')
+field = 'BTCUSDT_net_exposure_usdt', value = 100
+
+    @pytest.mark.parametrize("field,value", [
+        ("equity_usdt", 121), ("BTCUSDT_margin_balance_usdt", 21),
+        ("BTCUSDT_headroom_usdt", 20), ("BTCUSDT_margin_ratio", .01),
+        ("ETHUSDT_maintenance_usdt", 1), ("ETHUSDT_margin_ratio", 0),
+        ("preventive_need_joint_infimum_usdt", 9), ("redistributable_cash_usdt", 1),
+        ("BTCUSDT_liquidation_distance", .5), ("BTCUSDT_net_exposure_usdt", 100),
+    ])
+    def test_rehashed_margin_parquet_corruption_is_detected(tmp_path, field, value):
+        import pyarrow as pa
+        import pyarrow.parquet as pq
+    
+        rows = margin_fixture()
+        rows[field][0] = value
+        path = tmp_path / "margin.parquet"
+        pq.write_table(pa.table(rows), path)
+>       seal(tmp_path)
+
+tests\test_intraday_risk_verifier.py:175: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_verifier.py:27: in seal
+    module = verifier()
+             ^^^^^^^^^^
+tests\test_intraday_risk_verifier.py:16: in verifier
+    return importlib.import_module("scripts.verify_intraday_risk")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.verify_intraday_risk'
+import_ = <function _gcd_import at 0x00000251846ABE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.verify_intraday_risk'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+_____________ test_chronological_phase_order_cannot_be_rearranged _____________
+
+    def test_chronological_phase_order_cannot_be_rearranged():
+        rows = margin_fixture()
+        rows["time_ns"] = np.array([0, 0])
+        rows["phase"] = np.array([2, 1])
+        rows["sequence"] = np.array([1, 0])
+        with pytest.raises(ValueError, match="order|phase|sequence"):
+>           verifier().check_evidence_columns(rows, "run_id")
+            ^^^^^^^^^^
+
+tests\test_intraday_risk_verifier.py:187: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_verifier.py:16: in verifier
+    return importlib.import_module("scripts.verify_intraday_risk")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.verify_intraday_risk'
+import_ = <function _gcd_import at 0x00000251846ABE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.verify_intraday_risk'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+_______ test_daily_reconciliation_preserves_existing_monetary_tolerance _______
+
+    def test_daily_reconciliation_preserves_existing_monetary_tolerance():
+        rows = [dict(run_id="c", time_ns=86_399_999_999_999, original_equity="100",
+                     reconstructed_equity="100.000000001", residual_usdt=".000000001", ok=True)]
+>       assert verifier().check_reconciliations(rows) == 1
+               ^^^^^^^^^^
+
+tests\test_intraday_risk_verifier.py:193: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_verifier.py:16: in verifier
+    return importlib.import_module("scripts.verify_intraday_risk")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.verify_intraday_risk'
+import_ = <function _gcd_import at 0x00000251846ABE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.verify_intraday_risk'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+____________ test_reused_financial_metrics_are_exact_and_complete _____________
+
+    def test_reused_financial_metrics_are_exact_and_complete():
+        rows = [dict(scenario="BASE_E3", strategy="conditional", run_id="c", period="2025",
+                     cagr=".001000", sharpe=".2", net_pnl_usdt="10.123456789")]
+>       verifier().check_reused_metrics(rows, rows)
+        ^^^^^^^^^^
+
+tests\test_intraday_risk_verifier.py:202: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_verifier.py:16: in verifier
+    return importlib.import_module("scripts.verify_intraday_risk")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.verify_intraday_risk'
+import_ = <function _gcd_import at 0x00000251846ABE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.verify_intraday_risk'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+______________ test_paths_extras_and_cache_members_are_rejected _______________
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-367/test_paths_extras_and_cache_me0')
+
+    def test_paths_extras_and_cache_members_are_rejected(tmp_path):
+        (tmp_path / "kept.txt").write_text("evidence", encoding="utf-8")
+>       seal(tmp_path)
+
+tests\test_intraday_risk_verifier.py:209: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_verifier.py:27: in seal
+    module = verifier()
+             ^^^^^^^^^^
+tests\test_intraday_risk_verifier.py:16: in verifier
+    return importlib.import_module("scripts.verify_intraday_risk")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.verify_intraday_risk'
+import_ = <function _gcd_import at 0x00000251846ABE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.verify_intraday_risk'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+______ test_relocated_cli_without_bytecode_flag_is_read_only_on_failure _______
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-367/test_relocated_cli_without_byt0')
+
+    def test_relocated_cli_without_bytecode_flag_is_read_only_on_failure(tmp_path):
+        tools = tmp_path / "package/herramientas"
+        tools.mkdir(parents=True)
+        source = Path(__file__).resolve().parents[1] / "scripts/verify_intraday_risk.py"
+>       shutil.copyfile(source, tools / source.name)
+
+tests\test_intraday_risk_verifier.py:225: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+src = WindowsPath('C:/Users/pablo/Documentos/UCEMA/Tesina/Backtesting/scripts/verify_intraday_risk.py')
+dst = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-367/test_relocated_cli_without_byt0/package/herramientas/verify_intraday_risk.py')
+follow_symlinks = True
+
+    def copyfile(src, dst, *, follow_symlinks=True):
+        """Copy data from src to dst in the most efficient way possible.
+    
+        If follow_symlinks is not set and src is a symbolic link, a new
+        symlink will be created instead of copying the file it points to.
+    
+        """
+        sys.audit("shutil.copyfile", src, dst)
+    
+        if _samefile(src, dst):
+            raise SameFileError("{!r} and {!r} are the same file".format(src, dst))
+    
+        file_size = 0
+        for i, fn in enumerate([src, dst]):
+            try:
+                st = _stat(fn)
+            except OSError:
+                # File most likely does not exist
+                pass
+            else:
+                # XXX What about other special files? (sockets, devices...)
+                if stat.S_ISFIFO(st.st_mode):
+                    fn = fn.path if isinstance(fn, os.DirEntry) else fn
+                    raise SpecialFileError("`%s` is a named pipe" % fn)
+                if _WINDOWS and i == 0:
+                    file_size = st.st_size
+    
+        if not follow_symlinks and _islink(src):
+            os.symlink(os.readlink(src), dst)
+        else:
+>           with open(src, 'rb') as fsrc:
+                 ^^^^^^^^^^^^^^^
+E           FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\scripts\\verify_intraday_risk.py'
+
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\shutil.py:313: FileNotFoundError
+__________ test_output_must_be_new_and_external_to_all_sealed_inputs __________
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-367/test_output_must_be_new_and_ex0')
+
+    def test_output_must_be_new_and_external_to_all_sealed_inputs(tmp_path):
+        (tmp_path / "manifest.json").write_text("{}", encoding="utf-8")
+        with pytest.raises(ValueError):
+>           verifier().check_output(tmp_path / "audit/result.json", [tmp_path / "child"])
+            ^^^^^^^^^^
+
+tests\test_intraday_risk_verifier.py:238: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_verifier.py:16: in verifier
+    return importlib.import_module("scripts.verify_intraday_risk")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.verify_intraday_risk'
+import_ = <function _gcd_import at 0x00000251846ABE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.verify_intraday_risk'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+=========================== short test summary info ===========================
+FAILED tests/test_intraday_risk_verifier.py::test_literal_drawdown_arithmetic_does_not_claim_complete_series_recomputation
+FAILED tests/test_intraday_risk_verifier.py::test_rehashed_drawdown_corruption_still_fails[intraday_drawdown--0.1]
+FAILED tests/test_intraday_risk_verifier.py::test_rehashed_drawdown_corruption_still_fails[intraday_loss_usdt-10]
+FAILED tests/test_intraday_risk_verifier.py::test_rehashed_drawdown_corruption_still_fails[intraday_peak_equity-90]
+FAILED tests/test_intraday_risk_verifier.py::test_rehashed_drawdown_corruption_still_fails[extra_drawdown_pp-10]
+FAILED tests/test_intraday_risk_verifier.py::test_rehashed_drawdown_corruption_still_fails[extra_peak_to_trough_loss_usdt-0]
+FAILED tests/test_intraday_risk_verifier.py::test_rehashed_drawdown_corruption_still_fails[daily_zero_dd-False]
+FAILED tests/test_intraday_risk_verifier.py::test_rehashed_drawdown_corruption_still_fails[intraday_recovery_time_ns-0]
+FAILED tests/test_intraday_risk_verifier.py::test_rehashed_drawdown_corruption_still_fails[intraday_missing_observations-1]
+FAILED tests/test_intraday_risk_verifier.py::test_episode_catalog_covers_all_unhedged_time_without_counting_dust
+FAILED tests/test_intraday_risk_verifier.py::test_rehashed_episode_corruption_fails[seconds-1]
+FAILED tests/test_intraday_risk_verifier.py::test_rehashed_episode_corruption_fails[end_ns-4000000000]
+FAILED tests/test_intraday_risk_verifier.py::test_rehashed_episode_corruption_fails[portfolio_change_usdt-0]
+FAILED tests/test_intraday_risk_verifier.py::test_rehashed_episode_corruption_fails[states-FLAT]
+FAILED tests/test_intraday_risk_verifier.py::test_missing_episode_duplicate_episode_and_split_same_cycle_are_rejected
+FAILED tests/test_intraday_risk_verifier.py::test_compact_equity_and_margin_arithmetic_is_independent
+FAILED tests/test_intraday_risk_verifier.py::test_rehashed_margin_parquet_corruption_is_detected[equity_usdt-121]
+FAILED tests/test_intraday_risk_verifier.py::test_rehashed_margin_parquet_corruption_is_detected[BTCUSDT_margin_balance_usdt-21]
+FAILED tests/test_intraday_risk_verifier.py::test_rehashed_margin_parquet_corruption_is_detected[BTCUSDT_headroom_usdt-20]
+FAILED tests/test_intraday_risk_verifier.py::test_rehashed_margin_parquet_corruption_is_detected[BTCUSDT_margin_ratio-0.01]
+FAILED tests/test_intraday_risk_verifier.py::test_rehashed_margin_parquet_corruption_is_detected[ETHUSDT_maintenance_usdt-1]
+FAILED tests/test_intraday_risk_verifier.py::test_rehashed_margin_parquet_corruption_is_detected[ETHUSDT_margin_ratio-0]
+FAILED tests/test_intraday_risk_verifier.py::test_rehashed_margin_parquet_corruption_is_detected[preventive_need_joint_infimum_usdt-9]
+FAILED tests/test_intraday_risk_verifier.py::test_rehashed_margin_parquet_corruption_is_detected[redistributable_cash_usdt-1]
+FAILED tests/test_intraday_risk_verifier.py::test_rehashed_margin_parquet_corruption_is_detected[BTCUSDT_liquidation_distance-0.5]
+FAILED tests/test_intraday_risk_verifier.py::test_rehashed_margin_parquet_corruption_is_detected[BTCUSDT_net_exposure_usdt-100]
+FAILED tests/test_intraday_risk_verifier.py::test_chronological_phase_order_cannot_be_rearranged
+FAILED tests/test_intraday_risk_verifier.py::test_daily_reconciliation_preserves_existing_monetary_tolerance
+FAILED tests/test_intraday_risk_verifier.py::test_reused_financial_metrics_are_exact_and_complete
+FAILED tests/test_intraday_risk_verifier.py::test_paths_extras_and_cache_members_are_rejected
+FAILED tests/test_intraday_risk_verifier.py::test_relocated_cli_without_bytecode_flag_is_read_only_on_failure
+FAILED tests/test_intraday_risk_verifier.py::test_output_must_be_new_and_external_to_all_sealed_inputs
+32 failed in 1.39s

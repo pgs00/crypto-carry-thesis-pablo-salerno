@@ -1,0 +1,24 @@
+............................................FF                           [100%]
+================================== FAILURES ===================================
+____ test_price_quality_clock_is_the_exact_union_of_portfolio_observations ____
+
+    def test_price_quality_clock_is_the_exact_union_of_portfolio_observations():
+        observations = np.array([10, 20, 20, 30], dtype=np.int64)
+>       assert verifier().check_quality_clock(np.array([10, 20, 30]), observations, exact=True) == 3
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'scripts.verify_intraday_risk' has no attribute 'check_quality_clock'
+
+tests\test_intraday_risk_verifier.py:592: AttributeError
+_ test_compact_price_quality_covers_each_exported_observation_without_claiming_union _
+
+    def test_compact_price_quality_covers_each_exported_observation_without_claiming_union():
+        quality = np.array([10, 20, 30, 40])
+>       assert verifier().check_quality_clock(quality, np.array([20, 20, 40]), exact=False) == 4
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'scripts.verify_intraday_risk' has no attribute 'check_quality_clock'
+
+tests\test_intraday_risk_verifier.py:602: AttributeError
+=========================== short test summary info ===========================
+FAILED tests/test_intraday_risk_verifier.py::test_price_quality_clock_is_the_exact_union_of_portfolio_observations
+FAILED tests/test_intraday_risk_verifier.py::test_compact_price_quality_covers_each_exported_observation_without_claiming_union
+2 failed, 44 passed in 1.62s

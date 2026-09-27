@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "window_start": 1679529600000000000,
+  "window_end": 1679788800000000000,
+  "seconds": 1.532511199999135,
+  "runs": [
+    {
+      "scenario": "BASE_E3",
+      "strategy": "conditional",
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "observations": 4335,
+      "daily_checks": 3,
+      "maximum_residual": 0.0,
+      "bytes_arrays": 2999820
+    },
+    {
+      "scenario": "BASE_E3",
+      "strategy": "permanent",
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "observations": 4342,
+      "daily_checks": 3,
+      "maximum_residual": 1.8189894035458565e-12,
+      "bytes_arrays": 3004664
+    },
+    {
+      "scenario": "MARGEN_2X",
+      "strategy": "conditional",
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "observations": 4335,
+      "daily_checks": 3,
+      "maximum_residual": 0.0,
+      "bytes_arrays": 2999820
+    },
+    {
+      "scenario": "MARGEN_2X",
+      "strategy": "permanent",
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "observations": 4342,
+      "daily_checks": 3,
+      "maximum_residual": 1.8189894035458565e-12,
+      "bytes_arrays": 3004664
+    }
+  ],
+  "scope": "valuation_and_daily_reconciliation_only; liquidity integration follows",
+  "engine_replay": false
+}

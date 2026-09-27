@@ -1,0 +1,19 @@
+{
+  "title": "Suspensión: ventana de tres días",
+  "source_run_ids": [
+    "run_ad71d751b20623006c195ff3",
+    "run_dfea4b7ac1475668d5968c97"
+  ],
+  "sources": [
+    {
+      "path": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\riesgo_intradia\\20260926T214118Z\\paquete_20260926T220400Z\\evidencia\\marzo_2023.parquet",
+      "sha256": "f69cafc816cf25a825c0739aae6eb48443b1daf24cc3ed0507f96a2821147d86"
+    }
+  ],
+  "data_csv": "figuras/fuentes/marzo_tres_dias.csv",
+  "data_sha256": "463b75f9f82314bf3f324a2178c5e63e74051bbb83df0b6fa5e42f3f901197af",
+  "time_zone": "UTC",
+  "status": "presentation_of_reconstructed_or_reused_evidence",
+  "valuation": "original_reconstructed; hypothetical proxy explicitly labelled",
+  "note": "La diferencia es de valoración sobre estados originales; no representa operaciones adicionales."
+}

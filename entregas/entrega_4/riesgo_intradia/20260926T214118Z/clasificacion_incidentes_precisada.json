@@ -1,0 +1,1900 @@
+{
+  "financial_values_changed": false,
+  "changes": [
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_ETHUSDT_003",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_ETHUSDT_004",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_ETHUSDT_005",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_ETHUSDT_006",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_ETHUSDT_007",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_ETHUSDT_008",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_BTCUSDT_012",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_ETHUSDT_013",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_BTCUSDT_014",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_BTCUSDT_015",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_ETHUSDT_016",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_close"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_BTCUSDT_017",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_close"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_ETHUSDT_020",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_BTCUSDT_021",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_BTCUSDT_022",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_close"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_ETHUSDT_024",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_ETHUSDT_025",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_close"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_BTCUSDT_027",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_BTCUSDT_028",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_ETHUSDT_029",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_BTCUSDT_030",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_ETHUSDT_031",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_BTCUSDT_032",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_ETHUSDT_033",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_ETHUSDT_034",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_BTCUSDT_035",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_BTCUSDT_036",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_ETHUSDT_037",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_ETHUSDT_038",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_BTCUSDT_039",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_BTCUSDT_040",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_ETHUSDT_041",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_ETHUSDT_042",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_BTCUSDT_043",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_ETHUSDT_044",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_ETHUSDT_045",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_BTCUSDT_046",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_BTCUSDT_048",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_close"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_BTCUSDT_051",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_BTCUSDT_052",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_ETHUSDT_053",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_ETHUSDT_054",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_BTCUSDT_055",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_close"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_ETHUSDT_056",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_ETHUSDT_057",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_ETHUSDT_058",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_ETHUSDT_059",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_ETHUSDT_060",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_ETHUSDT_061",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_ETHUSDT_062",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_ETHUSDT_063",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_ETHUSDT_064",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_ETHUSDT_065",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_ETHUSDT_066",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_ad71d751b20623006c195ff3_ETHUSDT_067",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_003",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_004",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_005",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_006",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_007",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_008",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_009",
+      "before": "partial_fill_or_unwind",
+      "after": "close_retry_or_delay"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_010",
+      "before": "partial_fill_or_unwind",
+      "after": "close_retry_or_delay"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_012",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_013",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_014",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_015",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_017",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_018",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_019",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_020",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_021",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_022",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_023",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_024",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_025",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_026",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_027",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_close"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_031",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_032",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_033",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_034",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_035",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_036",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_037",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_038",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_039",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_040",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_041",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_046",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_047",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_048",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_049",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_050",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_051",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_052",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_053",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_054",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_055",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_056",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_057",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_058",
+      "before": "partial_fill_or_unwind",
+      "after": "close_retry_or_delay"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_060",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_061",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_062",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_063",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_064",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_065",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_close"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_066",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_close"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_069",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_070",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_071",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_072",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_073",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_074",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_075",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_076",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_077",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_078",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_close"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_080",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_close"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_082",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_083",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_084",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_085",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_086",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_087",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_088",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_089",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_090",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_091",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_092",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_093",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_094",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_095",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_096",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_097",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_098",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_099",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_100",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_101",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_102",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_103",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_104",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_105",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_106",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_107",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_108",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_109",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_110",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_111",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_112",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_113",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_114",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_115",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_116",
+      "before": "partial_fill_or_unwind",
+      "after": "close_retry_or_delay"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_117",
+      "before": "partial_fill_or_unwind",
+      "after": "close_retry_or_delay"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_118",
+      "before": "partial_fill_or_unwind",
+      "after": "opening_with_failed_attempt"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_122",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_123",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_close"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_125",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_126",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_close"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_127",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_129",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_130",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_131",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_132",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_133",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_134",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_135",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_136",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_137",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_138",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_139",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_140",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_141",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_142",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_143",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_144",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_145",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_146",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_147",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_148",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_149",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_close"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_151",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_152",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_153",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_154",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_155",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_156",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_157",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_158",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_159",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_160",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_BTCUSDT_161",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_162",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_163",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_164",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_dfea4b7ac1475668d5968c97_ETHUSDT_165",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_ETHUSDT_003",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_ETHUSDT_004",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_ETHUSDT_005",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_ETHUSDT_006",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_ETHUSDT_007",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_ETHUSDT_008",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_BTCUSDT_012",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_ETHUSDT_013",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_BTCUSDT_014",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_BTCUSDT_015",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_ETHUSDT_016",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_close"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_BTCUSDT_017",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_close"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_ETHUSDT_020",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_BTCUSDT_021",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_BTCUSDT_022",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_close"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_ETHUSDT_024",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_ETHUSDT_025",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_close"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_BTCUSDT_027",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_BTCUSDT_028",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_ETHUSDT_029",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_BTCUSDT_030",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_BTCUSDT_031",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_ETHUSDT_032",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_BTCUSDT_033",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_BTCUSDT_034",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_ETHUSDT_035",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_BTCUSDT_036",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_ETHUSDT_037",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_BTCUSDT_038",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_BTCUSDT_039",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_ETHUSDT_040",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_BTCUSDT_041",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_BTCUSDT_042",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_ETHUSDT_043",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_ETHUSDT_044",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_BTCUSDT_045",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_ETHUSDT_046",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_close"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_BTCUSDT_047",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_close"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_BTCUSDT_050",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_BTCUSDT_051",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_ETHUSDT_052",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_ETHUSDT_053",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_BTCUSDT_054",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_close"
+    },
+    {
+      "episode_id": "run_70383794701c4f0fc157b2ed_ETHUSDT_055",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_close"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_003",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_004",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_005",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_006",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_007",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_008",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_009",
+      "before": "partial_fill_or_unwind",
+      "after": "close_retry_or_delay"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_010",
+      "before": "partial_fill_or_unwind",
+      "after": "close_retry_or_delay"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_012",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_013",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_014",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_015",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_017",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_018",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_019",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_020",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_021",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_022",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_023",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_024",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_025",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_026",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_027",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_close"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_031",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_032",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_033",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_034",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_035",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_036",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_037",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_038",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_039",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_040",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_041",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_046",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_047",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_048",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_049",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_050",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_051",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_052",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_053",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_054",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_055",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_056",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_057",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_058",
+      "before": "partial_fill_or_unwind",
+      "after": "close_retry_or_delay"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_060",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_061",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_062",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_063",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_064",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_065",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_close"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_066",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_close"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_069",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_070",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_071",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_072",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_073",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_074",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_075",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_076",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_077",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_close"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_078",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_close"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_081",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_082",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_083",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_084",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_085",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_086",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_087",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_088",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_089",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_090",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_091",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_092",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_093",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_094",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_095",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_096",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_097",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_098",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_099",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_100",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_101",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_102",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_103",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_104",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_105",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_107",
+      "before": "partial_fill_or_unwind",
+      "after": "close_retry_or_delay"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_108",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_109",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_110",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_112",
+      "before": "partial_fill_or_unwind",
+      "after": "close_retry_or_delay"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_113",
+      "before": "partial_fill_or_unwind",
+      "after": "opening_with_failed_attempt"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_117",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_118",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_close"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_120",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_121",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_close"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_122",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_124",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_125",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_126",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_127",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_128",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_129",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_130",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_131",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_132",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_133",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_134",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_135",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_136",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_137",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_138",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_139",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_140",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_141",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_142",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_143",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_144",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_close"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_146",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_147",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_148",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_149",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_150",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_151",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_152",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_153",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_154",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_155",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_156",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_157",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_BTCUSDT_158",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_159",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_160",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    },
+    {
+      "episode_id": "run_3f5d9cce8ff1c2ba5447e3b6_ETHUSDT_161",
+      "before": "sequential_close_or_rebalance",
+      "after": "sequential_rebalance"
+    }
+  ]
+}

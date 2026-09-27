@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "C:\Users\pablo\Documentos\UCEMA\Tesina\Backtesting\entregas\entrega_4\riesgo_intradia\20260926T214118Z\auditoria_precios\auditar_precios.py", line 528, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "C:\Users\pablo\Documentos\UCEMA\Tesina\Backtesting\entregas\entrega_4\riesgo_intradia\20260926T214118Z\auditoria_precios\auditar_precios.py", line 314, in main
+    price_strings = valid_batch.column("close").to_numpy()
+  File "pyarrow/array.pxi", line 1832, in pyarrow.lib.Array.to_numpy
+  File "pyarrow/error.pxi", line 92, in pyarrow.lib.check_status
+pyarrow.lib.ArrowInvalid: Needed to copy 1 chunks with 0 nulls, but zero_copy_only was True

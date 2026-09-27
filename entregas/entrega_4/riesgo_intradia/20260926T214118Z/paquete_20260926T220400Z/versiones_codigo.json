@@ -1,0 +1,59 @@
+{
+  "recorded_at_utc": "2026-09-26T22:53:26.362637+00:00",
+  "files": [
+    {
+      "path": "scripts/build_intraday_risk.py",
+      "sha256": "47f242d7e62ebde969314b9b7f8d8f8e669797b59afe502165538d96921a0849",
+      "archived_path": "herramientas/scripts/build_intraday_risk.py",
+      "executed_version_sha256": "48bda738507c7bf0b4527aee23074e82de3bada48cdc925274aa32d760ee2c30"
+    },
+    {
+      "path": "scripts/intraday_risk_math.py",
+      "sha256": "98f26a8c331e5225e588fcf66e3e17470de702916b40926276282ca2eed0463b",
+      "archived_path": "herramientas/scripts/intraday_risk_math.py",
+      "executed_version_sha256": "98f26a8c331e5225e588fcf66e3e17470de702916b40926276282ca2eed0463b"
+    },
+    {
+      "path": "scripts/intraday_risk_price_quality.py",
+      "sha256": "3364dba43937ced1341fd22540705a915ceadadac5ebefd0ccc441257e1245e6",
+      "archived_path": "herramientas/scripts/intraday_risk_price_quality.py",
+      "executed_version_sha256": "3364dba43937ced1341fd22540705a915ceadadac5ebefd0ccc441257e1245e6"
+    },
+    {
+      "path": "scripts/intraday_risk_report.py",
+      "sha256": "b372d3a0d7ca236f2199f8a2d7bcb0ed4d8afaff251b4feddab6c32f8b49af59",
+      "archived_path": "herramientas/scripts/intraday_risk_report.py",
+      "executed_version_sha256": null
+    },
+    {
+      "path": "scripts/intraday_risk_reservations.py",
+      "sha256": "71db44313d94e1515cd12130867edcfd5866bacdc76cdccfba7761acb784ea52",
+      "archived_path": "herramientas/scripts/intraday_risk_reservations.py",
+      "executed_version_sha256": "71db44313d94e1515cd12130867edcfd5866bacdc76cdccfba7761acb784ea52"
+    },
+    {
+      "path": "scripts/intraday_risk_sources.py",
+      "sha256": "459e90c0a754610463cbce13abd4d91dda2054f27a2e19ac17e052dee2b38665",
+      "archived_path": "herramientas/scripts/intraday_risk_sources.py",
+      "executed_version_sha256": "459e90c0a754610463cbce13abd4d91dda2054f27a2e19ac17e052dee2b38665"
+    },
+    {
+      "path": "scripts/intraday_risk_tables.py",
+      "sha256": "2eb1d99e4b9382f4281ee5bc017f24903e2d9fb189737c33f00fc5a8d4868c4a",
+      "archived_path": "herramientas/scripts/intraday_risk_tables.py",
+      "executed_version_sha256": null
+    },
+    {
+      "path": "scripts/rules_sensitivity_exposure.py",
+      "sha256": "7e6c258275154aca3d8bec5b0520a228567444a48a3cdad5e7243e3cac42c0e8",
+      "archived_path": "herramientas/scripts/rules_sensitivity_exposure.py",
+      "executed_version_sha256": "7e6c258275154aca3d8bec5b0520a228567444a48a3cdad5e7243e3cac42c0e8"
+    },
+    {
+      "path": "scripts/verify_intraday_risk.py",
+      "sha256": "24475e9aaf21f6e5d4a92f129ec4e6883eb54e48ceb1789e15b88040ee7d2f10",
+      "archived_path": "herramientas/scripts/verify_intraday_risk.py",
+      "executed_version_sha256": null
+    }
+  ]
+}

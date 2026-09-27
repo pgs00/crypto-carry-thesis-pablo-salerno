@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-09-26T23:00:26.300685+00:00",
+  "manifest_sha256": "78cb03572c5940567852d0255d05a9f8a923f01df01fc0aa8b6cccef70f3b3bb",
+  "sealed_members_unchanged": 199,
+  "readme_local_links_checked": 36,
+  "missing_links": [],
+  "head_unchanged": true,
+  "index_unchanged": true,
+  "index_sha256": "3f4f5835f05ff29cf482aedd74e31810d4ee3ab500671a424f9e92316ee7442a",
+  "git_status_porcelain": " M .gitattributes\n?? entregas/entrega_4/riesgo_intradia/\n?? scripts/build_intraday_risk.py\n?? scripts/intraday_risk_math.py\n?? scripts/intraday_risk_price_quality.py\n?? scripts/intraday_risk_report.py\n?? scripts/intraday_risk_reservations.py\n?? scripts/intraday_risk_sources.py\n?? scripts/intraday_risk_tables.py\n?? scripts/verify_intraday_risk.py\n?? tests/test_intraday_risk_builder.py\n?? tests/test_intraday_risk_math.py\n?? tests/test_intraday_risk_price_quality.py\n?? tests/test_intraday_risk_reservations.py\n?? tests/test_intraday_risk_sources.py\n?? tests/test_intraday_risk_tables.py\n?? tests/test_intraday_risk_verifier.py\n"
+}

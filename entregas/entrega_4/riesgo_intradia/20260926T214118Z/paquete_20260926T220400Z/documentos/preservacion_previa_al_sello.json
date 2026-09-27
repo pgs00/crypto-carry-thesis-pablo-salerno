@@ -1,0 +1,17 @@
+{
+  "checked_at_utc": "2026-09-26T22:34:52.835158+00:00",
+  "tracked_files_checked": 2178,
+  "changed": [
+    ".gitattributes"
+  ],
+  "missing": [],
+  "expected_changed": [
+    ".gitattributes"
+  ],
+  "head_before": "6be02c00bfc6ebcdbd72b4ff9da386bb68084b5b",
+  "head_after": "6be02c00bfc6ebcdbd72b4ff9da386bb68084b5b",
+  "index_sha256_before": "3f4f5835f05ff29cf482aedd74e31810d4ee3ab500671a424f9e92316ee7442a",
+  "index_sha256_after": "3f4f5835f05ff29cf482aedd74e31810d4ee3ab500671a424f9e92316ee7442a",
+  "protocol_sha256": "b62ead9cc80ebf91f71080383bc613db24a8b81bccef02dfd347572050c2ce15",
+  "status": "passed"
+}

@@ -33,3 +33,6 @@
 /docs/entrega_4/reglas_historicas/** -text whitespace=cr-at-eol
 /entregas/entrega_4/reglas_historicas/** -text whitespace=cr-at-eol
 /entregas/entrega_4/reglas_historicas/**/*.svg whitespace=-blank-at-eol,cr-at-eol
+# Keep the intraday evidence package byte-identical on later checkouts.
+/entregas/entrega_4/riesgo_intradia/** -text whitespace=cr-at-eol
+/entregas/entrega_4/riesgo_intradia/**/*.svg whitespace=-blank-at-eol,cr-at-eol

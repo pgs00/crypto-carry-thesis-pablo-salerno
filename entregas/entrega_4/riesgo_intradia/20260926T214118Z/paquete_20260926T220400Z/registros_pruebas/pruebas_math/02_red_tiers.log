@@ -1,0 +1,28 @@
+..........................FF                                             [100%]
+================================== FAILURES ===================================
+_ test_maintenance_requirement_uses_first_inclusive_match_and_absent_short_zero _
+
+    def test_maintenance_requirement_uses_first_inclusive_match_and_absent_short_zero():
+        tiers = [dict(floor=0, cap=50_000, rate=".01", deduction=0),
+                 dict(floor=50_000, cap=100_000, rate=".02", deduction=0)]
+>       requirement = risk().maintenance_requirement([1, 1, 1, 0],
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                      [49_999, 50_000, 50_001, np.nan], tiers)
+E       AttributeError: module 'scripts.intraday_risk_math' has no attribute 'maintenance_requirement'
+
+tests\test_intraday_risk_math.py:232: AttributeError
+_______ test_whole_maintenance_multiplier_matches_already_scaled_tiers ________
+
+    def test_whole_maintenance_multiplier_matches_already_scaled_tiers():
+        scaled = [dict(row, rate=float(row["rate"]) * 2, deduction=row["deduction"] * 2)
+                  for row in BTC]
+>       np.testing.assert_allclose(risk().maintenance_requirement(1, [50_000, 60_000], BTC, 2),
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                   [400, 600])
+E       AttributeError: module 'scripts.intraday_risk_math' has no attribute 'maintenance_requirement'
+
+tests\test_intraday_risk_math.py:242: AttributeError
+=========================== short test summary info ===========================
+FAILED tests/test_intraday_risk_math.py::test_maintenance_requirement_uses_first_inclusive_match_and_absent_short_zero
+FAILED tests/test_intraday_risk_math.py::test_whole_maintenance_multiplier_matches_already_scaled_tiers
+2 failed, 26 passed in 0.32s

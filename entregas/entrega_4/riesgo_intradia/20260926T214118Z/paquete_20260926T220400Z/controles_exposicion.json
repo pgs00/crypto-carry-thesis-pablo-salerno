@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "source": "verified E3 classification and temporal unions; no financial replay",
+  "checks": [
+    {
+      "scenario": "BASE_E3",
+      "strategy": "conditional",
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "full_unhedged_seconds": "11340.000000000",
+      "full_expected": "11340",
+      "march_union_seconds": "7260",
+      "passed": true
+    },
+    {
+      "scenario": "BASE_E3",
+      "strategy": "permanent",
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "full_unhedged_seconds": "16440.000000000",
+      "full_expected": "16440",
+      "march_union_seconds": "7260",
+      "passed": true
+    }
+  ]
+}

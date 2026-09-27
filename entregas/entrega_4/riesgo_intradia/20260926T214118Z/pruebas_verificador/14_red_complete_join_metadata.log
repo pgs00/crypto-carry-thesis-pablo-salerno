@@ -1,0 +1,54 @@
+..................................................F.........             [100%]
+================================== FAILURES ===================================
+__ test_price_quality_metadata_authenticates_tools_counts_and_join_contract ___
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-393/test_price_quality_metadata_au0')
+
+    def test_price_quality_metadata_authenticates_tools_counts_and_join_contract(tmp_path):
+>       assert verifier().check_quality_metadata(tmp_path, *quality_metadata_fixture(tmp_path)) == 3
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_intraday_risk_verifier.py:769: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+package = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-393/test_price_quality_metadata_au0')
+values = {'time_ns': array([10, 20, 30]), 'BTCUSDT_spot_reason_code': array([0, 1, 2], dtype=uint8), 'BTCUSDT_mark_reason_code': array([0, 1, 2], dtype=uint8), 'BTCUSDT_futures_reason_code': array([0, 1, 2], dtype=uint8), ...}
+meta = {'schema_version': 1, 'row_count': 3, 'columns': {'time_ns': 'int64', 'BTCUSDT_spot_reason_code': 'uint8', 'BTCUSDT_ma..., '3': {'name': 'carried_zero_volume_omitted', 'description': 'Literal reason carried_zero_volume_omitted'}, ...}, ...}
+series = {'entries': [{'run_id': 'c', 'path': 'c/1970-01.parquet', 'sha256': 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'rows': 4, ...}]}
+prices = {'manifest_path': 'external/processed.json', 'manifest_sha256': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb', 'entries': [{'source_id': 0, 'sha256': 'cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc'}]}
+reconstruction = {'start_ns': 10, 'end_exclusive_ns': 31}
+
+    def check_quality_metadata(package, values, meta, series, prices, reconstruction):
+        """Check exported coverage declarations, without claiming source recomputation."""
+        count = check_quality_values(
+            values, reconstruction["start_ns"], reconstruction["end_exclusive_ns"]
+        )
+        columns = {key: "int64" if key == "time_ns" else "uint8" for key in values}
+        if (
+            type(meta["schema_version"]) is not int
+            or meta["schema_version"] != 1
+            or meta["row_count"] != count
+            or meta["columns"] != columns
+        ):
+            raise ValueError("price quality schema/row declaration mismatch")
+        dictionary = meta["reason_dictionary"]
+        if set(dictionary) != set(QUALITY_REASONS) or any(
+            dictionary[code].get("name") != name
+            or not isinstance(dictionary[code].get("description"), str)
+            or not dictionary[code]["description"].strip()
+            for code, name in QUALITY_REASONS.items()
+        ):
+            raise ValueError("price quality reason dictionary mismatch")
+        if meta["join_contract"] != dict(
+            key=["time_ns"],
+            cardinality="many_series_observations_to_one_price_quality_row",
+            series_manifest="series_locales.json",
+            phase_independent=True,
+        ):
+>           raise ValueError("price quality join contract mismatch")
+E           ValueError: price quality join contract mismatch
+
+scripts\verify_intraday_risk.py:784: ValueError
+=========================== short test summary info ===========================
+FAILED tests/test_intraday_risk_verifier.py::test_price_quality_metadata_authenticates_tools_counts_and_join_contract
+1 failed, 59 passed in 2.15s

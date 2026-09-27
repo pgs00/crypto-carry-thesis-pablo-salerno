@@ -1,0 +1,27 @@
+{
+  "recorded_at_utc": "2026-09-26T22:53:40.668149+00:00",
+  "cwd": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting",
+  "argv": [
+    ".venv/Scripts/python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider"
+  ],
+  "exit_code": 0,
+  "pytest_passed": 890,
+  "pytest_reported_seconds": 173.21,
+  "pytest_summary": "890 passed in 173.21s (0:02:53)",
+  "stdout_path": "calidad_precios_suite_general.log",
+  "stdout_sha256": "59f8891c550304189ae31c8b806b09bda0c1438131e8c80eea2d54512f1775df",
+  "capture_method": "Concatenated stdout chunks returned by exec_command and write_stdin. No truncation in this suite capture.",
+  "stable_price_quality_files": {
+    "scripts/intraday_risk_price_quality.py": "3364dba43937ced1341fd22540705a915ceadadac5ebefd0ccc441257e1245e6",
+    "tests/test_intraday_risk_price_quality.py": "e9d6984ff71f9b44f676fcd3b892943777d53b354b714e3ac3992ec6be2ffb30"
+  },
+  "concurrent_work_note": "Price-quality files were stable throughout this run. Verifier work was finalized separately while this suite ran; final verifier byte coverage is established by its separate stable-hash checks."
+}

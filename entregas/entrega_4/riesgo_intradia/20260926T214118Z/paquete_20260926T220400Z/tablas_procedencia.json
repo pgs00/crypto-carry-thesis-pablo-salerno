@@ -1,0 +1,15 @@
+{
+  "status": "postprocessed",
+  "engine_replay": false,
+  "source_run_ids": [
+    "run_ad71d751b20623006c195ff3",
+    "run_dfea4b7ac1475668d5968c97",
+    "run_70383794701c4f0fc157b2ed",
+    "run_3f5d9cce8ff1c2ba5447e3b6"
+  ],
+  "daily_risk_rows": 6816,
+  "margin_daily_asset_rows": 13632,
+  "incidents": 449,
+  "drawdown_rows": 128,
+  "attribution": "fixed persisted positions and cash changes, not causal incident estimates"
+}

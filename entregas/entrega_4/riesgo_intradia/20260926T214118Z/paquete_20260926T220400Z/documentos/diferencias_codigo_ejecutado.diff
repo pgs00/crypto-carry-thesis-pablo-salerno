@@ -1,0 +1,53 @@
+--- codigo_reconstruccion_ejecutado/build_intraday_risk.py
++++ herramientas/scripts/build_intraday_risk.py
+@@ -17,15 +17,37 @@
+ if __package__:
+     from . import intraday_risk_math as risk
+     from .intraday_risk_sources import (
+-        ACCOUNT, POSITION, SYMBOLS, LocalPrices, account_history, iso, observation_grid,
+-        price_at, read_csv, read_parquet, reconcile_daily, sha256, utc_ns,
++        ACCOUNT,
++        POSITION,
++        SYMBOLS,
++        LocalPrices,
++        account_history,
++        iso,
++        observation_grid,
++        price_at,
++        read_csv,
++        read_parquet,
++        reconcile_daily,
++        sha256,
++        utc_ns,
+     )
+     from .rules_sensitivity_exposure import exposure_intervals
+ else:
+     import intraday_risk_math as risk
+     from intraday_risk_sources import (
+-        ACCOUNT, POSITION, SYMBOLS, LocalPrices, account_history, iso, observation_grid,
+-        price_at, read_csv, read_parquet, reconcile_daily, sha256, utc_ns,
++        ACCOUNT,
++        POSITION,
++        SYMBOLS,
++        LocalPrices,
++        account_history,
++        iso,
++        observation_grid,
++        price_at,
++        read_csv,
++        read_parquet,
++        reconcile_daily,
++        sha256,
++        utc_ns,
+     )
+     from rules_sensitivity_exposure import exposure_intervals
+ 
+@@ -177,7 +199,7 @@
+     for key in ("reserved_cash", "available_known", "pending_orders_count", "reason"):
+         output[f"reservations_{key}"] = reservation[key]
+     known = reservation["available_known"]
+-    cash = output["free_cash_usdt"]
++    cash = np.maximum(0., output["free_cash_usdt"] - output["debt_usdt"])
+     output["redistributable_cash_usdt"] = np.where(
+         known, np.maximum(0., cash - reservation["reserved_cash"]), np.nan)
+     for prefix, need_key in (("maintenance", "maintenance_need_joint_usdt"),

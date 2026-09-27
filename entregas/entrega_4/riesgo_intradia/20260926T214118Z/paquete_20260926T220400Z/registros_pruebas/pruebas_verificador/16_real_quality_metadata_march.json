@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "quality_rows": 2457592,
+  "march_quality_rows_verified": 44727,
+  "source_observations_joined": 179378,
+  "helper_reused": true,
+  "engine_replay": false,
+  "sources_read_only": true,
+  "verifier_sha256": "24475e9aaf21f6e5d4a92f129ec4e6883eb54e48ceb1789e15b88040ee7d2f10",
+  "tests_sha256": "b79d374a0d1f219af02d04396f0358258ede286f9ae5ab76717a04c02916ce82"
+}

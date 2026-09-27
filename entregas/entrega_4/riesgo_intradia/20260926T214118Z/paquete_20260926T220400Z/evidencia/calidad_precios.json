@@ -1,0 +1,5795 @@
+{
+  "schema_version": 1,
+  "status": "annotated_from_authenticated_local_prices",
+  "created_at_utc": "2026-09-26T22:49:54.101742+00:00",
+  "elapsed_seconds": 12.696218600001885,
+  "argv": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "scripts/intraday_risk_price_quality.py",
+    "--package",
+    "entregas/entrega_4/riesgo_intradia/20260926T214118Z/paquete_20260926T220400Z",
+    "--series-root",
+    "D:/Backtesting/outputs/riesgo_intradia_20260926T214118Z/completa",
+    "--data-root",
+    "D:/Backtesting"
+  ],
+  "engine_replay": false,
+  "source_series_modified": false,
+  "row_count": 2457592,
+  "columns": {
+    "time_ns": "int64",
+    "BTCUSDT_spot_reason_code": "uint8",
+    "BTCUSDT_mark_reason_code": "uint8",
+    "BTCUSDT_futures_reason_code": "uint8",
+    "ETHUSDT_spot_reason_code": "uint8",
+    "ETHUSDT_mark_reason_code": "uint8",
+    "ETHUSDT_futures_reason_code": "uint8"
+  },
+  "reason_dictionary": {
+    "0": {
+      "name": "causal_current",
+      "description": "La última barra de minuto completamente disponible es válida para esta referencia."
+    },
+    "1": {
+      "name": "no_causal_valid_reference",
+      "description": "No hay ningún cierre válido causal disponible; no se inventa precio ni causa de arrastre."
+    },
+    "2": {
+      "name": "carried_expected_minute_absent",
+      "description": "Existe una referencia válida anterior, pero falta el registro de la última barra esperada."
+    },
+    "3": {
+      "name": "carried_zero_volume_omitted",
+      "description": "La última barra esperada tiene precio válido y volumen cero: se omite según la política original."
+    },
+    "4": {
+      "name": "carried_invalid_price_omitted",
+      "description": "La última barra esperada tiene cierre no finito o no positivo: se mantiene una referencia válida anterior."
+    },
+    "5": {
+      "name": "carried_invalid_volume_omitted",
+      "description": "La última barra esperada tiene precio válido pero volumen negativo o NaN; no satisface volumen > 0."
+    }
+  },
+  "reason_scope": {
+    "expected_available_at_formula": "floor(time_ns / 60000000000) * 60000000000",
+    "expected_open_time_formula": "expected_available_at - 60000000000",
+    "policy": "Last valid available close; spot/futures require base_volume > 0; marks do not.",
+    "precedence": "No causal valid reference first; otherwise missing expected bar, invalid close, rejected volume, or current valid bar.",
+    "causality": "Expected bar availability never exceeds observation time; future records do not explain current carry.",
+    "limits": "Reason explains the latest expected bar. It does not invent a market cause for an absent source record. Estimated flags are orthogonal."
+  },
+  "join_contract": {
+    "key": [
+      "time_ns"
+    ],
+    "cardinality": "many_series_observations_to_one_price_quality_row",
+    "series_manifest": "series_locales.json",
+    "phase_independent": true,
+    "references": [
+      "BTCUSDT_spot",
+      "BTCUSDT_mark",
+      "BTCUSDT_futures",
+      "ETHUSDT_spot",
+      "ETHUSDT_mark",
+      "ETHUSDT_futures"
+    ],
+    "existing_observation_provenance": "{symbol}_{label}_{source_id,open_time,end_time/close_time,available_at,age_ns,estimated,evaluable}",
+    "coverage_definition": "Every physical row, including all PRE/POST phases and daily snapshots, joins to exactly one annotation key."
+  },
+  "coverage": [
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2022-01.parquet",
+      "sha256": "2a243d9ee84594a5af71e1e3f9ba62746af84936627d2df57adc58dc23ace6b9",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2022-01.parquet",
+      "sha256": "d72a8edd8d07d31ccebd05dadf629ca6fea4f7c98e6ec41807d63820e5f900ee",
+      "rows": 44895,
+      "unique_timestamps": 44725,
+      "matched_observations": 44895,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2022-01.parquet",
+      "sha256": "8d27c53a5b18cd31e524df3481e0ec3ff400c9c7481c05ea44b648dccdf286e6",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2022-01.parquet",
+      "sha256": "3320c09ca5e757cecbb84a7a666564ccdedbf75877c34e2f815126de3126fd8b",
+      "rows": 44895,
+      "unique_timestamps": 44725,
+      "matched_observations": 44895,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2022-02.parquet",
+      "sha256": "71ce43f273ba5ca0de178eaf6f4628d68328263a21cd8639315a1eb7845f63d1",
+      "rows": 40348,
+      "unique_timestamps": 40348,
+      "matched_observations": 40348,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2022-02.parquet",
+      "sha256": "ff5474d8f15c4fe9f9131738347f9dfc8b8e95c825eb098c343effecd7f57463",
+      "rows": 40577,
+      "unique_timestamps": 40409,
+      "matched_observations": 40577,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2022-02.parquet",
+      "sha256": "7ad83c4a42dfadc078708ead2b2595f851bed7ae1d482440244b3401996d5492",
+      "rows": 40348,
+      "unique_timestamps": 40348,
+      "matched_observations": 40348,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2022-02.parquet",
+      "sha256": "4766d2745ddc067ed2d5d6a5cb2716ae74cb189896b7aa849a347ccaddf2c86d",
+      "rows": 40577,
+      "unique_timestamps": 40409,
+      "matched_observations": 40577,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2022-03.parquet",
+      "sha256": "d5e27df82ad7c89b3aac5678d3db3398882cf2095d1e59e66b60a877a22908f2",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2022-03.parquet",
+      "sha256": "cc18d1f18372f5dd9cd3c05112f65de8249cb8c9e7101733c68f587110493708",
+      "rows": 44924,
+      "unique_timestamps": 44734,
+      "matched_observations": 44924,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2022-03.parquet",
+      "sha256": "24a2e0b5727601f1c6f12245dc15cc79a5ca146728a52bea35b357e1604282df",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2022-03.parquet",
+      "sha256": "523a1034702c54307aa3bb63f29ffb5a835402f678dfe0ce4ef7bdcdddf89a0b",
+      "rows": 44924,
+      "unique_timestamps": 44734,
+      "matched_observations": 44924,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2022-04.parquet",
+      "sha256": "3065e9acfdbaa657823792f00fa5946c1eca51a54d53b46db8e696e740a3f4e0",
+      "rows": 43230,
+      "unique_timestamps": 43230,
+      "matched_observations": 43230,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2022-04.parquet",
+      "sha256": "d810019ec4ab6e3a8f28a4d9e72455d3145f4ca442e68cf710d26ab664861ec9",
+      "rows": 43473,
+      "unique_timestamps": 43289,
+      "matched_observations": 43473,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2022-04.parquet",
+      "sha256": "cba5cfce1fbdf8b2bf0c76f225ced5a01bd3ac6b0316cb90879bf97900b8e9b1",
+      "rows": 43230,
+      "unique_timestamps": 43230,
+      "matched_observations": 43230,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2022-04.parquet",
+      "sha256": "6b2e2b1a96c4cd5e54844fcdba3a54eb9f2d28edd276afbf9c6cfcbf3cb2250f",
+      "rows": 43473,
+      "unique_timestamps": 43289,
+      "matched_observations": 43473,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2022-05.parquet",
+      "sha256": "d39fa0798c3a2466d21926319902ca82c580e0f90b080eff78d18a74e32e735d",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2022-05.parquet",
+      "sha256": "fc06f499119c0588d32bc701f0292418973f95a131fcb062f3d7b335f6536f1b",
+      "rows": 44903,
+      "unique_timestamps": 44731,
+      "matched_observations": 44903,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2022-05.parquet",
+      "sha256": "6ee572f00b41dc4fdcc6c52e920266ae1929250724b0105f0d2e56cf4a68078b",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2022-05.parquet",
+      "sha256": "14e3410407bc299f2fc493947b88713dac5c4fef7e5544dc1a3921c9c84737db",
+      "rows": 44903,
+      "unique_timestamps": 44731,
+      "matched_observations": 44903,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2022-06.parquet",
+      "sha256": "e1fa85e748a8a8937fee96f7ab2fb91f60ad35166080b5fc60c27abb4a055e28",
+      "rows": 43230,
+      "unique_timestamps": 43230,
+      "matched_observations": 43230,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2022-06.parquet",
+      "sha256": "b3e61b39301ae8d5b0ba84df2d57c7cd5c085b63814322f6a00d843574d1cfd5",
+      "rows": 43386,
+      "unique_timestamps": 43291,
+      "matched_observations": 43386,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2022-06.parquet",
+      "sha256": "468188833b92b2c30a9fc34ed4586a3301b8b9d11b0a02812966878368bea086",
+      "rows": 43230,
+      "unique_timestamps": 43230,
+      "matched_observations": 43230,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2022-06.parquet",
+      "sha256": "eab1884764bc6600ea2bb23005f8df231728bff7bd03eae3d1d4e39501dd1651",
+      "rows": 43386,
+      "unique_timestamps": 43291,
+      "matched_observations": 43386,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2022-07.parquet",
+      "sha256": "08a499798a885cf8460e8e7e44e09fc2dc46bb7f786b0e7a7ff86c9538e83d06",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2022-07.parquet",
+      "sha256": "7993c61a56132fd1dac52a0fbbb04e99b28fbf14077138ef743ad345b44f0c5e",
+      "rows": 44859,
+      "unique_timestamps": 44734,
+      "matched_observations": 44859,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2022-07.parquet",
+      "sha256": "60b7c71cb14897e49eace625fbbcc2ff7ccd86c9d124a58656bf735080cd893f",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2022-07.parquet",
+      "sha256": "316218f7fb87f8a1a350964e7b358ae370b413b48a249d737c3d6df9f8a14511",
+      "rows": 44859,
+      "unique_timestamps": 44734,
+      "matched_observations": 44859,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2022-08.parquet",
+      "sha256": "fb162861819597d3a9887450954935abbe75d6be728debc7ea627ea342895f30",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2022-08.parquet",
+      "sha256": "7c145a51a7528c787936e924a3656dde2854457ff893a12e67c8145e64776588",
+      "rows": 44928,
+      "unique_timestamps": 44734,
+      "matched_observations": 44928,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2022-08.parquet",
+      "sha256": "494863624f5de6c4ba127d196c76ce0bd22d8cf9231268a68ace75aa85bb4ea5",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2022-08.parquet",
+      "sha256": "bbca3538f5c6261a46f07799e9797b26436cd4473e976011113b16b54daa80f0",
+      "rows": 44928,
+      "unique_timestamps": 44734,
+      "matched_observations": 44928,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2022-09.parquet",
+      "sha256": "e9121d17592cd0f534873fefb14fde196bfc5bf5ba4ab771d4da07495db8f0e2",
+      "rows": 43230,
+      "unique_timestamps": 43230,
+      "matched_observations": 43230,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2022-09.parquet",
+      "sha256": "a5aa55ff9e7d37bd9e575b936a27d1e42fec7b5c970c93c5425bfac38ae489bb",
+      "rows": 43472,
+      "unique_timestamps": 43288,
+      "matched_observations": 43472,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2022-09.parquet",
+      "sha256": "6262ad38ce1ad38193a0b56507a22571d5b93dfb6714b86fd559ba3247b4875b",
+      "rows": 43230,
+      "unique_timestamps": 43230,
+      "matched_observations": 43230,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2022-09.parquet",
+      "sha256": "6c17a9a6175d5f34477612f4b5618e4d8e6511df4264711cb7000486fc089fae",
+      "rows": 43472,
+      "unique_timestamps": 43288,
+      "matched_observations": 43472,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2022-10.parquet",
+      "sha256": "6f74dbec38c1fc61d75163c8f7e5d06d728c9943e86aa48106cba3100581e14b",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2022-10.parquet",
+      "sha256": "51d100f3c78f9507106721d484fbf31e0dd3d7ad68975db4e9476d351149a6bb",
+      "rows": 44923,
+      "unique_timestamps": 44735,
+      "matched_observations": 44923,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2022-10.parquet",
+      "sha256": "bec4bf774fb7e2a3c29a08ba9a55068aa38e8697bc115ffd5fe5506401a63eac",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2022-10.parquet",
+      "sha256": "bd62198facc4fe714b398cfe079e20b426335cf37e494bfec5b86d75d07fcea4",
+      "rows": 44923,
+      "unique_timestamps": 44735,
+      "matched_observations": 44923,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2022-11.parquet",
+      "sha256": "0a4f62d006ebe9490f3863e12dfae94523109f4effeb160462622f1ec8050992",
+      "rows": 43230,
+      "unique_timestamps": 43230,
+      "matched_observations": 43230,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2022-11.parquet",
+      "sha256": "2a0762e9b21ea749c0f570a31e607def49c3cb30f545af878ebe58ed9fb72e0d",
+      "rows": 43467,
+      "unique_timestamps": 43287,
+      "matched_observations": 43467,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2022-11.parquet",
+      "sha256": "fe7d4527556668169c991032070fddcbb825a78f075eb3375b043200e8bd2e91",
+      "rows": 43230,
+      "unique_timestamps": 43230,
+      "matched_observations": 43230,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2022-11.parquet",
+      "sha256": "e2050986384abded27db59fb58c656e294b449d0b1ff8124f5bfdd007e0cade4",
+      "rows": 43467,
+      "unique_timestamps": 43287,
+      "matched_observations": 43467,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2022-12.parquet",
+      "sha256": "617cd8f9c2d9a4ca59ac3f3aa8ccbbdbe681dbdff71eea0288b91549664feff8",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2022-12.parquet",
+      "sha256": "2a0ec08001620734fb9fe47f3f9cca57e6bc86682dd6632553f74197e64e0527",
+      "rows": 44922,
+      "unique_timestamps": 44736,
+      "matched_observations": 44922,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2022-12.parquet",
+      "sha256": "f578628ddd350a05d9b31afdc70a2f97303c8a856c6b8b7176620e926bc05651",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2022-12.parquet",
+      "sha256": "fc90b6229ef9c8f07f5c0d6ff41dadf518717fb69881951b01f986ec9e21c501",
+      "rows": 44922,
+      "unique_timestamps": 44736,
+      "matched_observations": 44922,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2023-01.parquet",
+      "sha256": "7347648277e95a157d3c5f80013ffede06141d8e0a401be103f685b76c463fa6",
+      "rows": 44757,
+      "unique_timestamps": 44705,
+      "matched_observations": 44757,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2023-01.parquet",
+      "sha256": "348dde937162c76220c704e74d34030692f966243a86de424c2c162c12d09947",
+      "rows": 44926,
+      "unique_timestamps": 44732,
+      "matched_observations": 44926,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2023-01.parquet",
+      "sha256": "dae918b375bacd8cac8934ef584aca19b92d5be2d0878860c93de95911038acd",
+      "rows": 44757,
+      "unique_timestamps": 44705,
+      "matched_observations": 44757,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2023-01.parquet",
+      "sha256": "75de6372533e482d6b7df033ef9ff6c20f36bb27878fca63db727bc83baf3b12",
+      "rows": 44926,
+      "unique_timestamps": 44732,
+      "matched_observations": 44926,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2023-02.parquet",
+      "sha256": "ecadc57e42b01c5f4c4427be6757767d9ac60f60ef5d7a1620cd24e6b1f83321",
+      "rows": 40509,
+      "unique_timestamps": 40417,
+      "matched_observations": 40509,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2023-02.parquet",
+      "sha256": "9485f41cda57d4a6274ef9203ced62ce6e4430211ff0a8d676a0627b0f90944d",
+      "rows": 40591,
+      "unique_timestamps": 40417,
+      "matched_observations": 40591,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2023-02.parquet",
+      "sha256": "d2224028f895fefc83899d30953849582d0f7fe8a9a798ed01aecd045a8f2d9c",
+      "rows": 40509,
+      "unique_timestamps": 40417,
+      "matched_observations": 40509,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2023-02.parquet",
+      "sha256": "f0290617aa2a33f8d994180b1d7ce8042d05724d1f5dcd33b39609f7cf29af52",
+      "rows": 40591,
+      "unique_timestamps": 40417,
+      "matched_observations": 40591,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2023-03.parquet",
+      "sha256": "b97a224524a26d1162bba111463252b1c8d292104d7e8772bc8bf4f3e5d77ae0",
+      "rows": 44804,
+      "unique_timestamps": 44727,
+      "matched_observations": 44804,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2023-03.parquet",
+      "sha256": "798cebd3c7612228ea5c560fad49cddd75cb3a49000e4fa2e1a3a14505947e04",
+      "rows": 44885,
+      "unique_timestamps": 44727,
+      "matched_observations": 44885,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2023-03.parquet",
+      "sha256": "7078ff3b1fb61246012fca4f6dd49bee2ef4445b96614fe2c3324b8799a2dda2",
+      "rows": 44804,
+      "unique_timestamps": 44727,
+      "matched_observations": 44804,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2023-03.parquet",
+      "sha256": "4ec92a6c2f0bc59ed1667346c76434404cd6c6059a7ac91580c030746d60a5f6",
+      "rows": 44885,
+      "unique_timestamps": 44727,
+      "matched_observations": 44885,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2023-04.parquet",
+      "sha256": "8fd5f2f1b32c9477bdc7ea7ea431eb917a54b2e354e697fa92767a34565a0172",
+      "rows": 43230,
+      "unique_timestamps": 43230,
+      "matched_observations": 43230,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2023-04.parquet",
+      "sha256": "e709868efbb516e53d2c64e54f0ab6b37c833915e204c074dd875622db7b5312",
+      "rows": 43379,
+      "unique_timestamps": 43273,
+      "matched_observations": 43379,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2023-04.parquet",
+      "sha256": "6af4cd0a7c115db366c3575a5f340eae392d078c591c9dc19d588433c124be9a",
+      "rows": 43230,
+      "unique_timestamps": 43230,
+      "matched_observations": 43230,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2023-04.parquet",
+      "sha256": "983722785a96272e9ed1e449c6bfece4c659020d158dc01d3b72222c16f28157",
+      "rows": 43379,
+      "unique_timestamps": 43273,
+      "matched_observations": 43379,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2023-05.parquet",
+      "sha256": "ac5798385512f68a921aa4eb3dc93e2b5d5a1e0a28fa9c2454d0438a5d187e69",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2023-05.parquet",
+      "sha256": "1e715cd032d165e7f5ce1bf97980abb0e7fe3b8e57e864a33fee365fbe117a1f",
+      "rows": 44921,
+      "unique_timestamps": 44733,
+      "matched_observations": 44921,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2023-05.parquet",
+      "sha256": "8f679e77b41ebe6e0155d43f39c9cf5bc9ebc4299db27db675dda98b058b8fcd",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2023-05.parquet",
+      "sha256": "209303206abd0939dc85dfeb381ff741557f250661363fbab160fc242abb799f",
+      "rows": 44921,
+      "unique_timestamps": 44733,
+      "matched_observations": 44921,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2023-06.parquet",
+      "sha256": "cd13229dcd78c75b4df38dffd0728fb229b6f7e0e00e5431518673dcdaa7a41f",
+      "rows": 43230,
+      "unique_timestamps": 43230,
+      "matched_observations": 43230,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2023-06.parquet",
+      "sha256": "2431f15802af8ac6440d5d7991fb85e428771b568aa5d56ce5c115537f300a32",
+      "rows": 43430,
+      "unique_timestamps": 43246,
+      "matched_observations": 43430,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2023-06.parquet",
+      "sha256": "479ed857a77fe1cfb540d6353fbdc261d45cca17d617f188ffd95994f84f1118",
+      "rows": 43230,
+      "unique_timestamps": 43230,
+      "matched_observations": 43230,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2023-06.parquet",
+      "sha256": "6414078cbda9eb03b37a3db2167bae10260281d0bee3e19993962b9e0b040b1c",
+      "rows": 43430,
+      "unique_timestamps": 43246,
+      "matched_observations": 43430,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2023-07.parquet",
+      "sha256": "2ad2b9a416b2f1507a2743aebe919cd4bd6e94074207717e2124df81c3fa9272",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2023-07.parquet",
+      "sha256": "172a6991b1354d0f76cc9b8f53e20fefea47c4afb53b33d92f0cc2aac42b0e89",
+      "rows": 44866,
+      "unique_timestamps": 44680,
+      "matched_observations": 44866,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2023-07.parquet",
+      "sha256": "09413698e6294c761c875153f068c689cdade29781ed212915f5c12f537084f3",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2023-07.parquet",
+      "sha256": "1f3ef8167258bf6df1de0a80bbd2ca9a15e7828887cc01ae71090ccfbe9d015b",
+      "rows": 44866,
+      "unique_timestamps": 44680,
+      "matched_observations": 44866,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2023-08.parquet",
+      "sha256": "d0fec7b3febe68a81534a3160adb12cd827646187fef4ceadac417d1f0cf4ba7",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2023-08.parquet",
+      "sha256": "79b987fab75ca7ea6cc60d66a2bed5bfa056c980478f4337907cef372ced7673",
+      "rows": 44871,
+      "unique_timestamps": 44681,
+      "matched_observations": 44871,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2023-08.parquet",
+      "sha256": "e4c4d3e97f81e84a27a3b15b8a2da74552f6f2d71422f16de54655c1263ba868",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2023-08.parquet",
+      "sha256": "4ef534ef3a4e5466fa3d3c4253b07c3d3d3d9b4c96e7ac7309ffe9cda93728cf",
+      "rows": 44871,
+      "unique_timestamps": 44681,
+      "matched_observations": 44871,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2023-09.parquet",
+      "sha256": "509aa7a587a2455e1e77521eaec2baccfb328791b68de13f321763481f1e6a9f",
+      "rows": 43230,
+      "unique_timestamps": 43230,
+      "matched_observations": 43230,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2023-09.parquet",
+      "sha256": "feeb23e4978566deb78183f46cff2981961ed5c6c98a6070357a45ccf7d5bf23",
+      "rows": 43417,
+      "unique_timestamps": 43237,
+      "matched_observations": 43417,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2023-09.parquet",
+      "sha256": "43889ffd141125b60cad446cd3d947bf743781238fe874d5e59035ef4d776fb9",
+      "rows": 43230,
+      "unique_timestamps": 43230,
+      "matched_observations": 43230,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2023-09.parquet",
+      "sha256": "5c31e4710712df0ac48ba35221bb47b598f7bc37600d8506d190cc3b7bdc4abc",
+      "rows": 43417,
+      "unique_timestamps": 43237,
+      "matched_observations": 43417,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2023-10.parquet",
+      "sha256": "425d2a2a06e7b9d0201315e79c62e429614518b8247ad31b8991abd14375256d",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2023-10.parquet",
+      "sha256": "665aaed392ee946551df4c480bd8cbec424619bfc8e47411945f0d274ddcfc05",
+      "rows": 44873,
+      "unique_timestamps": 44681,
+      "matched_observations": 44873,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2023-10.parquet",
+      "sha256": "4c80dc34a5b503a7b6425859c2995da3218a397c41058222e0512b5666bc6865",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2023-10.parquet",
+      "sha256": "cdaebb3106ebc9a8c98d1fc08c615c9d6f405333d3b67bdfeb97806754cc6661",
+      "rows": 44873,
+      "unique_timestamps": 44681,
+      "matched_observations": 44873,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2023-11.parquet",
+      "sha256": "c720c922d7d32e3837c63e212f25ba5b11054c6f289b319fd495fadf17144002",
+      "rows": 43360,
+      "unique_timestamps": 43239,
+      "matched_observations": 43360,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2023-11.parquet",
+      "sha256": "18447f869d357943090cdf6ce5d20c5272086fa544b8f5a17c9ac3a61fc5241e",
+      "rows": 43429,
+      "unique_timestamps": 43241,
+      "matched_observations": 43429,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2023-11.parquet",
+      "sha256": "003a6a3dc227be4992061998a3be7a682c476e60f5173fb2bf6f8809d137ca62",
+      "rows": 43360,
+      "unique_timestamps": 43239,
+      "matched_observations": 43360,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2023-11.parquet",
+      "sha256": "7c8d3a5be104e0ec5299d350c0c0c79269f9e4be89b79d38e5d60b465b38ecee",
+      "rows": 43429,
+      "unique_timestamps": 43241,
+      "matched_observations": 43429,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2023-12.parquet",
+      "sha256": "8e76e4358a0d6ead497f22aa2fa03b04c059c7b23c12a7d7282b49ab0509a54e",
+      "rows": 44872,
+      "unique_timestamps": 44678,
+      "matched_observations": 44872,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2023-12.parquet",
+      "sha256": "b57a47ce275215c43c3ff6d59f404f76e330dbbb51e052cfc57bad516a78bafc",
+      "rows": 44868,
+      "unique_timestamps": 44678,
+      "matched_observations": 44868,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2023-12.parquet",
+      "sha256": "a7a8baf6cba6f505453b6c2fa0b506345cf19bc8cffb844c7ec2e0472600d5b8",
+      "rows": 44872,
+      "unique_timestamps": 44678,
+      "matched_observations": 44872,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2023-12.parquet",
+      "sha256": "92b0def8f8dafd49d3b8edf618aa98e4ca780fc48f4904d5837aa37c19ce603f",
+      "rows": 44868,
+      "unique_timestamps": 44678,
+      "matched_observations": 44868,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2024-01.parquet",
+      "sha256": "3c1e675ac1664e3a650f213ec6b53f0f9f32846d3dc530f31b29dac3274fb005",
+      "rows": 44743,
+      "unique_timestamps": 44675,
+      "matched_observations": 44743,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2024-01.parquet",
+      "sha256": "f639760005f6ccde7de2718b7edbb44f66ea181e11391b01ebe7d807a45aaf05",
+      "rows": 44879,
+      "unique_timestamps": 44685,
+      "matched_observations": 44879,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2024-01.parquet",
+      "sha256": "c87e8471896f625343904e5c807d7e3b832c4f4a5353b7d05a428e82502cc5b0",
+      "rows": 44743,
+      "unique_timestamps": 44675,
+      "matched_observations": 44743,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2024-01.parquet",
+      "sha256": "2484214b430ec69fd3af8d0b1f366c711ccf9b084cc562be319b823c0ccb8983",
+      "rows": 44879,
+      "unique_timestamps": 44685,
+      "matched_observations": 44879,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2024-02.parquet",
+      "sha256": "36a22be0e2d01c82d9ec0e7f0a213f724a92acaf75d35652f2c400e9deded4db",
+      "rows": 41856,
+      "unique_timestamps": 41793,
+      "matched_observations": 41856,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2024-02.parquet",
+      "sha256": "6e56c5e87693579d7cd6dd4bbe9d0f58b8a5cd5a7736c2214eaad3520c8bcde0",
+      "rows": 41985,
+      "unique_timestamps": 41800,
+      "matched_observations": 41985,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2024-02.parquet",
+      "sha256": "8ddb5134af1f47f934ae461616eac5771e18c588607e0b96414682b4a54a559a",
+      "rows": 41856,
+      "unique_timestamps": 41793,
+      "matched_observations": 41856,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2024-02.parquet",
+      "sha256": "f2c51590eb942fb25c5bbe912f20ab1cfc380797ec1824830bd02273cc99051f",
+      "rows": 41984,
+      "unique_timestamps": 41800,
+      "matched_observations": 41984,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2024-03.parquet",
+      "sha256": "99ad6b1e6b7570e8443f29ad81a667cd28108fb06faf9ed606e26efd7e338e96",
+      "rows": 44882,
+      "unique_timestamps": 44682,
+      "matched_observations": 44882,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2024-03.parquet",
+      "sha256": "54f70946fdba5cd86e381fe8dcfab2b7be6abb93b258ed9c779ae27568792646",
+      "rows": 44881,
+      "unique_timestamps": 44682,
+      "matched_observations": 44881,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2024-03.parquet",
+      "sha256": "1fb4b8dc2af54e512d55b9f1874b367a6693baef99c5be92e2e831d2b79ce76f",
+      "rows": 44880,
+      "unique_timestamps": 44682,
+      "matched_observations": 44880,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2024-03.parquet",
+      "sha256": "8dcbecc27cb17c0abe4cfe351eb11a89b5abd93fcdb7aff06b49c83b6d4c1533",
+      "rows": 44880,
+      "unique_timestamps": 44682,
+      "matched_observations": 44880,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2024-04.parquet",
+      "sha256": "8413af4026395e57bcb5c425e2dceedeb1783fa190e5481294e931b703eba3fa",
+      "rows": 43432,
+      "unique_timestamps": 43246,
+      "matched_observations": 43432,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2024-04.parquet",
+      "sha256": "9fbf5205704808a0052c54626fb2b9868c480879bda47f74ce9489a2583d8d71",
+      "rows": 43438,
+      "unique_timestamps": 43246,
+      "matched_observations": 43438,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2024-04.parquet",
+      "sha256": "41be5d82b582cd17019c6f32e25d5ce2591a0fc4056d5942e2f5d2433d988d92",
+      "rows": 43430,
+      "unique_timestamps": 43246,
+      "matched_observations": 43430,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2024-04.parquet",
+      "sha256": "90f15ec311a708821365ff9bfc2893e34c065866b172d2c4d0cb85c3f9d3c462",
+      "rows": 43434,
+      "unique_timestamps": 43246,
+      "matched_observations": 43434,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2024-05.parquet",
+      "sha256": "3b8cb345b1d27dbee094e3fd9a07c2d443618a5d56788a26bbc5bf8da9a83ed0",
+      "rows": 44870,
+      "unique_timestamps": 44678,
+      "matched_observations": 44870,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2024-05.parquet",
+      "sha256": "07c50bbb4d8c054db8f13c700a25c507b910c0ceef6ebb7f34f421cb67fe68cd",
+      "rows": 44874,
+      "unique_timestamps": 44678,
+      "matched_observations": 44874,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2024-05.parquet",
+      "sha256": "4ba36519964467647bb988664bc37b323f5ec5956196004c826b606b5d632b7c",
+      "rows": 44870,
+      "unique_timestamps": 44678,
+      "matched_observations": 44870,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2024-05.parquet",
+      "sha256": "51f092f07751adc8bbd37f169bd8c3c381865234fffcbd8541c8700c4659374c",
+      "rows": 44874,
+      "unique_timestamps": 44678,
+      "matched_observations": 44874,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2024-06.parquet",
+      "sha256": "c9bcfb3c57ae5d4b09151c86de6bd2fc81fbe64a3706e17422d29578e44cdcf4",
+      "rows": 43429,
+      "unique_timestamps": 43243,
+      "matched_observations": 43429,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2024-06.parquet",
+      "sha256": "e290168fbdd9cedef1b678c73a00edbc15ac6dd2c96b91dd8f05fc275f675749",
+      "rows": 43431,
+      "unique_timestamps": 43243,
+      "matched_observations": 43431,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2024-06.parquet",
+      "sha256": "a094d33297b01131605e3716b3f7343b4868268d94fe26b048c7b11dece4744a",
+      "rows": 43431,
+      "unique_timestamps": 43243,
+      "matched_observations": 43431,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2024-06.parquet",
+      "sha256": "7c7e209ad766a86b4a6f9dfa983181fc694131bb4e4141962ca7e446c34c60cd",
+      "rows": 43431,
+      "unique_timestamps": 43243,
+      "matched_observations": 43431,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2024-07.parquet",
+      "sha256": "ba8782ef7615254bafbbf5fafb9330ec8fabeeaf4fe23fe2bf78ace24d06110a",
+      "rows": 44878,
+      "unique_timestamps": 44684,
+      "matched_observations": 44878,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2024-07.parquet",
+      "sha256": "c0f9a05e45279e2bf83be6f10cb9a6fe22c0eb897849a1d1348f3fe0f951e936",
+      "rows": 44880,
+      "unique_timestamps": 44684,
+      "matched_observations": 44880,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2024-07.parquet",
+      "sha256": "a2f80e738e376208e2722bcbc09e964ba55f7e9634db5d8d0524c7a18502c562",
+      "rows": 44880,
+      "unique_timestamps": 44684,
+      "matched_observations": 44880,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2024-07.parquet",
+      "sha256": "842c24fb0a92080b3a8cff67c71addbcf4c81e8ca1f85fb1acdacca58ddc64f6",
+      "rows": 44880,
+      "unique_timestamps": 44684,
+      "matched_observations": 44880,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2024-08.parquet",
+      "sha256": "5912ca44085a273df966a4919c9dba58261b23da842f28766b250e5252c722f8",
+      "rows": 44777,
+      "unique_timestamps": 44679,
+      "matched_observations": 44777,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2024-08.parquet",
+      "sha256": "a3ff35af84a1e48c03dde5adca19afe21374c50a5a3e02e33bc34b30b28d7e00",
+      "rows": 44880,
+      "unique_timestamps": 44686,
+      "matched_observations": 44880,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2024-08.parquet",
+      "sha256": "bd61f893944c6d109a00608dd01a682660cce52fb4c8d5a8c050c81c0b3aa864",
+      "rows": 44770,
+      "unique_timestamps": 44679,
+      "matched_observations": 44770,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2024-08.parquet",
+      "sha256": "d05ecb7667d7dcc1ba9f882adf116087586886b83d4515bb0b3fdc7662e67216",
+      "rows": 44811,
+      "unique_timestamps": 44686,
+      "matched_observations": 44811,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2024-09.parquet",
+      "sha256": "752262edd49bdd42e934b01f8563fdeb236c216f3090f24f08cbaffc946ddeaf",
+      "rows": 43230,
+      "unique_timestamps": 43230,
+      "matched_observations": 43230,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2024-09.parquet",
+      "sha256": "fd406b2f57be97aabf2df49ec4fce5126db40cbf33835fa4646cf8a41b9d636c",
+      "rows": 43434,
+      "unique_timestamps": 43252,
+      "matched_observations": 43434,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2024-09.parquet",
+      "sha256": "e4e980a4659f98deaa89edd625fa8bd0780f2a64baed4fc9054d6605e4998824",
+      "rows": 43230,
+      "unique_timestamps": 43230,
+      "matched_observations": 43230,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2024-09.parquet",
+      "sha256": "62a9231b8a7bc16e8b60e35c4a8c74e69de06fbdb3ccd3adbdca7bfda23c8a27",
+      "rows": 43344,
+      "unique_timestamps": 43252,
+      "matched_observations": 43344,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2024-10.parquet",
+      "sha256": "a29c595c021d820683f44ddbdeaa40238bc086cd6671a78e2bd98c4ab072a1fd",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2024-10.parquet",
+      "sha256": "213c3372ae0b917588ac53feedc5eed703016a678f096db22cba694c6b91622d",
+      "rows": 44871,
+      "unique_timestamps": 44683,
+      "matched_observations": 44871,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2024-10.parquet",
+      "sha256": "a6f3ddc07a0c680eb69ad011185cdc2c1af6fc19cdb2ab8ad8ff69e444392097",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2024-10.parquet",
+      "sha256": "3c2342532f11d19d7387bcb460e80c724fda90d223c89edea5b899332499a511",
+      "rows": 44783,
+      "unique_timestamps": 44683,
+      "matched_observations": 44783,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2024-11.parquet",
+      "sha256": "75a9d261c5881a24806446a7d4c1308f3137e7f6fcc499704f442a54abbb8c81",
+      "rows": 43369,
+      "unique_timestamps": 43243,
+      "matched_observations": 43369,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2024-11.parquet",
+      "sha256": "51cbce5a9556a7d456bea033850537bfe6c5f6a29346f6e473ebf4643401e8aa",
+      "rows": 43434,
+      "unique_timestamps": 43246,
+      "matched_observations": 43434,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2024-11.parquet",
+      "sha256": "c16cd8810aeaf34c1b9ca58a8dfd06bc1ea1a3d844c21f4fee8cb2b3e77f2500",
+      "rows": 43369,
+      "unique_timestamps": 43243,
+      "matched_observations": 43369,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2024-11.parquet",
+      "sha256": "cfbd9cd40927baf81788fa69132e729a1677e1243079a935e61d4c6bdc531d67",
+      "rows": 43433,
+      "unique_timestamps": 43246,
+      "matched_observations": 43433,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2024-12.parquet",
+      "sha256": "7eda748db7ef1574c9aaee72e72d07850a75e342ca9b3e592138a523ca540dc9",
+      "rows": 44835,
+      "unique_timestamps": 44689,
+      "matched_observations": 44835,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2024-12.parquet",
+      "sha256": "5711a9cac8931b2379a440b54fdbf98d6659d469f376a3dbe494f20553870342",
+      "rows": 44879,
+      "unique_timestamps": 44689,
+      "matched_observations": 44879,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2024-12.parquet",
+      "sha256": "c15b34d4956c4c05a5b82a3d893b8d3fbe35912541276fb0e6cb9fb030f19998",
+      "rows": 44782,
+      "unique_timestamps": 44681,
+      "matched_observations": 44782,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2024-12.parquet",
+      "sha256": "7c43f8e353a0810a16ae710f7b3653fed02ca50de5980804f1bdfdd75f3820d6",
+      "rows": 44879,
+      "unique_timestamps": 44689,
+      "matched_observations": 44879,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2025-01.parquet",
+      "sha256": "0687bc05b44b1767124096dd0c7435d79ae0ad6ced83f6d9afa20f196c6b6ac3",
+      "rows": 44780,
+      "unique_timestamps": 44683,
+      "matched_observations": 44780,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2025-01.parquet",
+      "sha256": "9488f4a0ad8033b3340f59ce3198318f68b77cdcb720d49e0ef2f30ad9ffdefb",
+      "rows": 44875,
+      "unique_timestamps": 44683,
+      "matched_observations": 44875,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2025-01.parquet",
+      "sha256": "cd6c0b102fc7ff5062d223344d4a4d780c5fb72e47010f5742e1867bd292b621",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2025-01.parquet",
+      "sha256": "acd074c0377642ed84319788980808ff78bd3130990e64d58d2686cf6d2fb032",
+      "rows": 44877,
+      "unique_timestamps": 44683,
+      "matched_observations": 44877,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2025-02.parquet",
+      "sha256": "180e7764528d893348c1b06c219d7af4419d32eb3803fd6bbb04c7e5ff31880b",
+      "rows": 40451,
+      "unique_timestamps": 40361,
+      "matched_observations": 40451,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2025-02.parquet",
+      "sha256": "a454e902b0a4d39bac63a0d31834f8e17f5f641ddbe934b0de09234fd62035ea",
+      "rows": 40537,
+      "unique_timestamps": 40361,
+      "matched_observations": 40537,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2025-02.parquet",
+      "sha256": "96914533ebddf3f6db528e666ffe9a73517903c6537751511f89120e5cd3e97f",
+      "rows": 40348,
+      "unique_timestamps": 40348,
+      "matched_observations": 40348,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2025-02.parquet",
+      "sha256": "d7fedede5ebbbbc4a4fa220002e4497f56afbbf7b147db9c708375cc23670c20",
+      "rows": 40535,
+      "unique_timestamps": 40361,
+      "matched_observations": 40535,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2025-03.parquet",
+      "sha256": "3a6b14b4deb945e6c018faf0749e7993fe53f52ff0285cfe791bcf08a2fc2bc3",
+      "rows": 44793,
+      "unique_timestamps": 44690,
+      "matched_observations": 44793,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2025-03.parquet",
+      "sha256": "e0a6bfd27bf3cb5dcd0dc8c06aa67d358c9970421953b7e1586f5831cd7701bc",
+      "rows": 44876,
+      "unique_timestamps": 44690,
+      "matched_observations": 44876,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2025-03.parquet",
+      "sha256": "41b393d42feee9f154f968ae26736ebb124e84a6226e38c901bfaea274ed7d11",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2025-03.parquet",
+      "sha256": "f9482409a85950726834edcab1167c122af9a6a11f7333a4c3856b2410fb2762",
+      "rows": 44876,
+      "unique_timestamps": 44690,
+      "matched_observations": 44876,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2025-04.parquet",
+      "sha256": "c67499584aa9ceb1767f747cb3a06e509859106182820a2298efd5680ce4b4c5",
+      "rows": 43339,
+      "unique_timestamps": 43252,
+      "matched_observations": 43339,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2025-04.parquet",
+      "sha256": "3c410ee4bd7dbdf03f36ae39fd878e1a14bda45b0330304400254d8db585711c",
+      "rows": 43437,
+      "unique_timestamps": 43257,
+      "matched_observations": 43437,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2025-04.parquet",
+      "sha256": "89f1af90db32e0ee835fb2626429362f73213b6ca328681c09ac88913916d8eb",
+      "rows": 43230,
+      "unique_timestamps": 43230,
+      "matched_observations": 43230,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2025-04.parquet",
+      "sha256": "32e1440d04f10254d48ba6d7437654816a867fbfe0da96238872240587245759",
+      "rows": 43437,
+      "unique_timestamps": 43257,
+      "matched_observations": 43437,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2025-05.parquet",
+      "sha256": "d3c2181cc87bd656a495f5ca7122596864469e9057b3109546eb55529d0062ca",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2025-05.parquet",
+      "sha256": "cac1a18a859ecdd4620caabd363f558a075be4ee8bafa3cd8b7967256df3e560",
+      "rows": 44910,
+      "unique_timestamps": 44720,
+      "matched_observations": 44910,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2025-05.parquet",
+      "sha256": "4bd04ee453c7434cb3e4e097b7b1553508bf759b3a840cc18e133a57caef3018",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2025-05.parquet",
+      "sha256": "70620ab4ba621f5e6416b7c17c0d01d8384c6177f6f7e3b8a9d3fca759ffcf28",
+      "rows": 44912,
+      "unique_timestamps": 44720,
+      "matched_observations": 44912,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2025-06.parquet",
+      "sha256": "d9e934dc861e7363e1bbca28478d80e65cd3d0fd4e97e8f6341bf53c716d99f6",
+      "rows": 43230,
+      "unique_timestamps": 43230,
+      "matched_observations": 43230,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2025-06.parquet",
+      "sha256": "b892a865bad01f1b7817afb826fd783e71cc6e0d2147c4b6c67ee02461fa955e",
+      "rows": 43465,
+      "unique_timestamps": 43279,
+      "matched_observations": 43465,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2025-06.parquet",
+      "sha256": "1a2751060caf46783b6753ede86c64b3c768fdf05a2a77aba3b766bf2bb930f8",
+      "rows": 43230,
+      "unique_timestamps": 43230,
+      "matched_observations": 43230,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2025-06.parquet",
+      "sha256": "0ac4d1f8a63458b2987b878243ef8527b6dddeea0434ce73032314bc8d48517a",
+      "rows": 43463,
+      "unique_timestamps": 43279,
+      "matched_observations": 43463,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2025-07.parquet",
+      "sha256": "d0a2c9edac09e8158e03f75fdd5c18e9ed66cd04f19edfbefbdf3d021b1f2187",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2025-07.parquet",
+      "sha256": "09477165ebded17c536d7ae4b3939a0729faf052e0f9129ed064352c6e103fab",
+      "rows": 44920,
+      "unique_timestamps": 44726,
+      "matched_observations": 44920,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2025-07.parquet",
+      "sha256": "78333a8cd9413fff5b9ad17c6748d237e2e6113997727a03bbd4ce1e1474a660",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2025-07.parquet",
+      "sha256": "681153b8c1752e4c5101a21900ed353d41721b6b672384de71fbfd76906ef854",
+      "rows": 44920,
+      "unique_timestamps": 44726,
+      "matched_observations": 44920,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2025-08.parquet",
+      "sha256": "b3ee969358cebd7415940f004eadf54f4e4b513442a75a9177e163389c35a94b",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2025-08.parquet",
+      "sha256": "72dd74122f50517d93fef13bf481b3fedbb7be910edda8d7433b45a152efd9b6",
+      "rows": 44907,
+      "unique_timestamps": 44724,
+      "matched_observations": 44907,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2025-08.parquet",
+      "sha256": "e04f98ae327b958a80782ce8766e0de4cc396817481c3a205a45370d8030d8fe",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2025-08.parquet",
+      "sha256": "4fe706f0e76fe2c958872b11485218b460deb71cd27a2df50112787a7b1af5a3",
+      "rows": 44904,
+      "unique_timestamps": 44724,
+      "matched_observations": 44904,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2025-09.parquet",
+      "sha256": "e88380f56e0426a0bd0d7a424cea442c26ea59dbe7b26bc6bb03a6b7b7a0963a",
+      "rows": 43230,
+      "unique_timestamps": 43230,
+      "matched_observations": 43230,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2025-09.parquet",
+      "sha256": "d0bf42f702b1755d052f675acf84b3f1a525d23418650ad8150cd91615ebd845",
+      "rows": 43458,
+      "unique_timestamps": 43274,
+      "matched_observations": 43458,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2025-09.parquet",
+      "sha256": "5f50e323693d415aa5f15a9b9a1bfdf6ab328f878ee9151389bddd1221af00db",
+      "rows": 43230,
+      "unique_timestamps": 43230,
+      "matched_observations": 43230,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2025-09.parquet",
+      "sha256": "c9d4c68d5ba684b9396e468e599246aa5e43e73234a51bd2edb6105a6203d53c",
+      "rows": 43464,
+      "unique_timestamps": 43274,
+      "matched_observations": 43464,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2025-10.parquet",
+      "sha256": "ebed584cfd7ba57056081bdc643d199f4aa1fd8ce62171d2a9e1c768b07b2677",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2025-10.parquet",
+      "sha256": "ae1ce322aee4a777dc9a8c65bcc8face17621d4b8ac004dd4bb7611a2d05d191",
+      "rows": 44919,
+      "unique_timestamps": 44725,
+      "matched_observations": 44919,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2025-10.parquet",
+      "sha256": "db6e534cebf4ef758e269688d7981ab98c8229d04949915ef85fe5502bea50b8",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2025-10.parquet",
+      "sha256": "f21381a7ab33b5dc1566f976b61c8a37662b9c6c14eade39cdc5b6a2670081cc",
+      "rows": 44919,
+      "unique_timestamps": 44725,
+      "matched_observations": 44919,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2025-11.parquet",
+      "sha256": "64194bfe6f9b43c1ca294fa52b3517edb12da9dc51df7114a57c9f734648f4db",
+      "rows": 43230,
+      "unique_timestamps": 43230,
+      "matched_observations": 43230,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2025-11.parquet",
+      "sha256": "5fb1b06f0c91602b62f4a7f60e806a37ee4ea3ab4ebef41690e475df2176077c",
+      "rows": 43467,
+      "unique_timestamps": 43281,
+      "matched_observations": 43467,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2025-11.parquet",
+      "sha256": "49941b116cbae10a3cb712f9414ed49ba49129358043b74b0ccee3e26273320a",
+      "rows": 43230,
+      "unique_timestamps": 43230,
+      "matched_observations": 43230,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2025-11.parquet",
+      "sha256": "77bf97522bebcd32aa828e5e174dd628829b32b61857199f4b092330fbd3574c",
+      "rows": 43467,
+      "unique_timestamps": 43281,
+      "matched_observations": 43467,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2025-12.parquet",
+      "sha256": "c85db87162941723ea605e018924d675185da6f70ce9f1e607f0993b4a2553d1",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2025-12.parquet",
+      "sha256": "9e3eeda4fb6bb28e248de3677107115f1f922a20581f5be723ba5938e4476fc8",
+      "rows": 44914,
+      "unique_timestamps": 44726,
+      "matched_observations": 44914,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2025-12.parquet",
+      "sha256": "b67c58472ade88656de5921038006a53a36d13120f7b6d28f6ec4e7e71cd4870",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2025-12.parquet",
+      "sha256": "0ebde287584c4f4eec99cc9c1f4a05abb6de7f727bc82e13d645e1a80e94d1e2",
+      "rows": 44912,
+      "unique_timestamps": 44726,
+      "matched_observations": 44912,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2026-01.parquet",
+      "sha256": "319044484061846ca60158136b7c59f804c2e1c8d39ef64de6e35720d232bd08",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2026-01.parquet",
+      "sha256": "d4985957c38cd74c154c45e346f28b1dfd8acbd13a3e9cbde4d682c5ea06fe86",
+      "rows": 44913,
+      "unique_timestamps": 44727,
+      "matched_observations": 44913,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2026-01.parquet",
+      "sha256": "5c5a3e75eae00c7246b247b321e869a34561ef7c5cad1baa69494c16cf4e00f7",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2026-01.parquet",
+      "sha256": "a2bc9376ee85d72843010e914c7d79fe3dc89d081cb54a2d53ab38adc40214ab",
+      "rows": 44915,
+      "unique_timestamps": 44727,
+      "matched_observations": 44915,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2026-02.parquet",
+      "sha256": "122b66fb837597e87357e739d9c867f475a7e5034ec96dc82f114bc83f8b8423",
+      "rows": 40348,
+      "unique_timestamps": 40348,
+      "matched_observations": 40348,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2026-02.parquet",
+      "sha256": "ab64475a2a68673d89fff29a96190d844f6a4714f4539a517eea8b8142ef8065",
+      "rows": 40564,
+      "unique_timestamps": 40396,
+      "matched_observations": 40564,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2026-02.parquet",
+      "sha256": "437c6cc02b4462ca664954ba25090161330de1f61cb4616f32abc839aa57ba14",
+      "rows": 40348,
+      "unique_timestamps": 40348,
+      "matched_observations": 40348,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2026-02.parquet",
+      "sha256": "83f05b9719c5b3f15ed0c3591fe2fd08c30f1c67eac5c400ffa94adb8538c553",
+      "rows": 40564,
+      "unique_timestamps": 40396,
+      "matched_observations": 40564,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2026-03.parquet",
+      "sha256": "72d311f68703873ef73b235a2582c00433e056af3ad2c7f54dfafc998909cf89",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2026-03.parquet",
+      "sha256": "298feedca46e72ef1b2da4305de38d7b773b0d32ca823e6df2dce7371f74c483",
+      "rows": 44909,
+      "unique_timestamps": 44723,
+      "matched_observations": 44909,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2026-03.parquet",
+      "sha256": "2d3c4b751bc3b0a68a0124f7711443edb6cd9fc75dc0f208a11433a7f1aa73de",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2026-03.parquet",
+      "sha256": "faaaf00a4f212e9e47abcc7b29682dcf09d910116e578543b65ed553234be268",
+      "rows": 44909,
+      "unique_timestamps": 44723,
+      "matched_observations": 44909,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2026-04.parquet",
+      "sha256": "a1b1590e32eaca6c1e7db67aca4d98489d83b8a39c9611a632832aeb86894c4a",
+      "rows": 43230,
+      "unique_timestamps": 43230,
+      "matched_observations": 43230,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2026-04.parquet",
+      "sha256": "7c291d05246d61b3227e841e21ea93d166104d5546b8d6e9c21d44bdd3f8bdde",
+      "rows": 43459,
+      "unique_timestamps": 43279,
+      "matched_observations": 43459,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2026-04.parquet",
+      "sha256": "2acbfead3243e009139bc0858d9db9186c47b50bbf29742306ce97f375141a99",
+      "rows": 43230,
+      "unique_timestamps": 43230,
+      "matched_observations": 43230,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2026-04.parquet",
+      "sha256": "939c9dfb1faaddad90130b0f6c8bacd40087ee0e8cd9b9cb70f34b51c0b9f3f9",
+      "rows": 43459,
+      "unique_timestamps": 43279,
+      "matched_observations": 43459,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2026-05.parquet",
+      "sha256": "537bfa8620cde0a6b5a4587fd1df55f9c3b97c373b71ff9d0f573b0d66ab5f35",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2026-05.parquet",
+      "sha256": "9250c7058376a14e04c922ea5bfc8c6682f278bb55556fa05760ebb5973e6543",
+      "rows": 44913,
+      "unique_timestamps": 44727,
+      "matched_observations": 44913,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2026-05.parquet",
+      "sha256": "8d505ff8e271281f9099aad9e50147f95646903bb83450955866423a3e4b4acf",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2026-05.parquet",
+      "sha256": "860779b139a8a0fedb979202b3645edf5313221b9bcd45a93f310359fca15338",
+      "rows": 44913,
+      "unique_timestamps": 44727,
+      "matched_observations": 44913,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2026-06.parquet",
+      "sha256": "5fbcb9cddba1aa5a9d0c2ae109e935b5344504e176ea455f40797853316126e4",
+      "rows": 43230,
+      "unique_timestamps": 43230,
+      "matched_observations": 43230,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2026-06.parquet",
+      "sha256": "a3ba846bc27ad9c919f2b4d428f601955f4f4c238d969592642135846b603c67",
+      "rows": 43457,
+      "unique_timestamps": 43277,
+      "matched_observations": 43457,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2026-06.parquet",
+      "sha256": "4e07a15f8b587852eae251ca84d89dab7c4520e7e74388ba24123724b03b3e46",
+      "rows": 43230,
+      "unique_timestamps": 43230,
+      "matched_observations": 43230,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2026-06.parquet",
+      "sha256": "5f71b119af2cc1bc1c7353ab23d356104b038bb6271a3ba81dda9b3c574d8b8f",
+      "rows": 43457,
+      "unique_timestamps": 43277,
+      "matched_observations": 43457,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2026-07.parquet",
+      "sha256": "a01af5d4fc4e9d5e99fdaf101550b20f4b8a05ef61ac1adc005f759cd3853e46",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2026-07.parquet",
+      "sha256": "29e39a3a01a02d40015e9598c09eacdeb51dfcdef104798c3ad74613be338e2f",
+      "rows": 44893,
+      "unique_timestamps": 44705,
+      "matched_observations": 44893,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2026-07.parquet",
+      "sha256": "366b707188e2d54d6d03995209121f995de6374d72048017efdb4ed8331233cf",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2026-07.parquet",
+      "sha256": "17801966885e8a86de875520b608eebf38f262a99682db741ef92f652f006b52",
+      "rows": 44893,
+      "unique_timestamps": 44705,
+      "matched_observations": 44893,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "path": "run_ad71d751b20623006c195ff3/2026-08.parquet",
+      "sha256": "79aeaaf842d396d08e7273bc1ae16bd7115731320fc41087a843a6a79bfcfa7f",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "path": "run_dfea4b7ac1475668d5968c97/2026-08.parquet",
+      "sha256": "423960a0e645c64bfd5d332eb7d1090772e528735b9a380b3c4d3f67a12877ec",
+      "rows": 44902,
+      "unique_timestamps": 44714,
+      "matched_observations": 44902,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_70383794701c4f0fc157b2ed",
+      "path": "run_70383794701c4f0fc157b2ed/2026-08.parquet",
+      "sha256": "9afac9f3c30759a7d9e1d9ab070f65917107fbd2846d2b5edbe8fbadee6acb1d",
+      "rows": 44671,
+      "unique_timestamps": 44671,
+      "matched_observations": 44671,
+      "missing_observations": 0
+    },
+    {
+      "run_id": "run_3f5d9cce8ff1c2ba5447e3b6",
+      "path": "run_3f5d9cce8ff1c2ba5447e3b6/2026-08.parquet",
+      "sha256": "9db097105e96aad73d7dba0d71c7a3004d7219f738488ac14b8fd7aa6cb8a11f",
+      "rows": 44900,
+      "unique_timestamps": 44714,
+      "matched_observations": 44900,
+      "missing_observations": 0
+    }
+  ],
+  "monthly_counts": [
+    {
+      "month": "2022-01",
+      "start_ns": 1640995200000000000,
+      "end_exclusive_ns": 1643673600000000000,
+      "row_count": 44725,
+      "first_time_ns": 1640995200000000000,
+      "last_time_ns": 1643673599999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 44725,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 44725,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 44725,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 44725,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 44725,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 44725,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.5702194000041345
+    },
+    {
+      "month": "2022-02",
+      "start_ns": 1643673600000000000,
+      "end_exclusive_ns": 1646092800000000000,
+      "row_count": 40409,
+      "first_time_ns": 1643673600000000000,
+      "last_time_ns": 1646092799999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 40409,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 40409,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 40409,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 40409,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 40409,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 40409,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.1921450000081677
+    },
+    {
+      "month": "2022-03",
+      "start_ns": 1646092800000000000,
+      "end_exclusive_ns": 1648771200000000000,
+      "row_count": 44734,
+      "first_time_ns": 1646092800000000000,
+      "last_time_ns": 1648771199999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 44734,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 44734,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 44734,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 44734,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 44734,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 44734,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.1999366999953054
+    },
+    {
+      "month": "2022-04",
+      "start_ns": 1648771200000000000,
+      "end_exclusive_ns": 1651363200000000000,
+      "row_count": 43289,
+      "first_time_ns": 1648771200000000000,
+      "last_time_ns": 1651363199999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 43289,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 43289,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 43289,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 43289,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 43289,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 43289,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.20084330000099726
+    },
+    {
+      "month": "2022-05",
+      "start_ns": 1651363200000000000,
+      "end_exclusive_ns": 1654041600000000000,
+      "row_count": 44731,
+      "first_time_ns": 1651363200000000000,
+      "last_time_ns": 1654041599999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 44731,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 44731,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 44667,
+          "1": 0,
+          "2": 0,
+          "3": 64,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 44731,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 44731,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 44667,
+          "1": 0,
+          "2": 0,
+          "3": 64,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.2030181000009179
+    },
+    {
+      "month": "2022-06",
+      "start_ns": 1654041600000000000,
+      "end_exclusive_ns": 1656633600000000000,
+      "row_count": 43291,
+      "first_time_ns": 1654041600000000000,
+      "last_time_ns": 1656633599999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 43291,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 43291,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 43291,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 43291,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 43291,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 43291,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.19911260000662878
+    },
+    {
+      "month": "2022-07",
+      "start_ns": 1656633600000000000,
+      "end_exclusive_ns": 1659312000000000000,
+      "row_count": 44734,
+      "first_time_ns": 1656633600000000000,
+      "last_time_ns": 1659311999999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 44734,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 44734,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 44734,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 44734,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 44734,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 44734,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.20747059999848716
+    },
+    {
+      "month": "2022-08",
+      "start_ns": 1659312000000000000,
+      "end_exclusive_ns": 1661990400000000000,
+      "row_count": 44734,
+      "first_time_ns": 1659312000000000000,
+      "last_time_ns": 1661990399999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 44734,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 44734,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 44734,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 44734,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 44734,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 44734,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.20961639999586623
+    },
+    {
+      "month": "2022-09",
+      "start_ns": 1661990400000000000,
+      "end_exclusive_ns": 1664582400000000000,
+      "row_count": 43288,
+      "first_time_ns": 1661990400000000000,
+      "last_time_ns": 1664582399999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 43288,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 43288,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 43288,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 43288,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 43288,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 43288,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.1995385000045644
+    },
+    {
+      "month": "2022-10",
+      "start_ns": 1664582400000000000,
+      "end_exclusive_ns": 1667260800000000000,
+      "row_count": 44735,
+      "first_time_ns": 1664582400000000000,
+      "last_time_ns": 1667260799999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 44735,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 44735,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 44735,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 44735,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 44735,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 44735,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.20244879998790566
+    },
+    {
+      "month": "2022-11",
+      "start_ns": 1667260800000000000,
+      "end_exclusive_ns": 1669852800000000000,
+      "row_count": 43287,
+      "first_time_ns": 1667260800000000000,
+      "last_time_ns": 1669852799999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 43287,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 43287,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 43287,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 43287,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 43287,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 43287,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.20194460000493564
+    },
+    {
+      "month": "2022-12",
+      "start_ns": 1669852800000000000,
+      "end_exclusive_ns": 1672531200000000000,
+      "row_count": 44736,
+      "first_time_ns": 1669852800000000000,
+      "last_time_ns": 1672531199999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 44736,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 44736,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 44736,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 44736,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 44736,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 44736,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.1993739000026835
+    },
+    {
+      "month": "2023-01",
+      "start_ns": 1672531200000000000,
+      "end_exclusive_ns": 1675209600000000000,
+      "row_count": 44733,
+      "first_time_ns": 1672531200000000000,
+      "last_time_ns": 1675209599999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 44733,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 44733,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 44733,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 44733,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 44733,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 44733,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.21531790000153705
+    },
+    {
+      "month": "2023-02",
+      "start_ns": 1675209600000000000,
+      "end_exclusive_ns": 1677628800000000000,
+      "row_count": 40417,
+      "first_time_ns": 1675209600000000000,
+      "last_time_ns": 1677628799999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 40417,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 40417,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 40417,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 40417,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 40417,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 40417,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.20216719999734778
+    },
+    {
+      "month": "2023-03",
+      "start_ns": 1677628800000000000,
+      "end_exclusive_ns": 1680307200000000000,
+      "row_count": 44727,
+      "first_time_ns": 1677628800000000000,
+      "last_time_ns": 1680307199999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 44575,
+          "1": 0,
+          "2": 80,
+          "3": 72,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 44727,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 44727,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 44575,
+          "1": 0,
+          "2": 80,
+          "3": 72,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 44727,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 44727,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.20132659999944735
+    },
+    {
+      "month": "2023-04",
+      "start_ns": 1680307200000000000,
+      "end_exclusive_ns": 1682899200000000000,
+      "row_count": 43273,
+      "first_time_ns": 1680307200000000000,
+      "last_time_ns": 1682899199999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 43273,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 43273,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 43273,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 43273,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 43273,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 43273,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.20508650000556372
+    },
+    {
+      "month": "2023-05",
+      "start_ns": 1682899200000000000,
+      "end_exclusive_ns": 1685577600000000000,
+      "row_count": 44733,
+      "first_time_ns": 1682899200000000000,
+      "last_time_ns": 1685577599999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 44733,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 44733,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 44733,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 44733,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 44733,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 44733,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.20581850000598934
+    },
+    {
+      "month": "2023-06",
+      "start_ns": 1685577600000000000,
+      "end_exclusive_ns": 1688169600000000000,
+      "row_count": 43246,
+      "first_time_ns": 1685577600000000000,
+      "last_time_ns": 1688169599999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 43246,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 43246,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 43246,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 43246,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 43246,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 43246,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.20021940000879113
+    },
+    {
+      "month": "2023-07",
+      "start_ns": 1688169600000000000,
+      "end_exclusive_ns": 1690848000000000000,
+      "row_count": 44680,
+      "first_time_ns": 1688169600000000000,
+      "last_time_ns": 1690847999999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 44680,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 44680,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 44680,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 44680,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 44680,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 44680,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.20009260000369977
+    },
+    {
+      "month": "2023-08",
+      "start_ns": 1690848000000000000,
+      "end_exclusive_ns": 1693526400000000000,
+      "row_count": 44681,
+      "first_time_ns": 1690848000000000000,
+      "last_time_ns": 1693526399999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 44681,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 44681,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 44681,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 44681,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 44681,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 44681,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.20049269999435637
+    },
+    {
+      "month": "2023-09",
+      "start_ns": 1693526400000000000,
+      "end_exclusive_ns": 1696118400000000000,
+      "row_count": 43237,
+      "first_time_ns": 1693526400000000000,
+      "last_time_ns": 1696118399999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 43237,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 43237,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 43218,
+          "1": 0,
+          "2": 0,
+          "3": 19,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 43237,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 43237,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 43218,
+          "1": 0,
+          "2": 0,
+          "3": 19,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.20093890000134706
+    },
+    {
+      "month": "2023-10",
+      "start_ns": 1696118400000000000,
+      "end_exclusive_ns": 1698796800000000000,
+      "row_count": 44681,
+      "first_time_ns": 1696118400000000000,
+      "last_time_ns": 1698796799999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 44681,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 44681,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 44681,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 44681,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 44681,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 44681,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.20532890000322368
+    },
+    {
+      "month": "2023-11",
+      "start_ns": 1698796800000000000,
+      "end_exclusive_ns": 1701388800000000000,
+      "row_count": 43242,
+      "first_time_ns": 1698796800000000000,
+      "last_time_ns": 1701388799999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 43242,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 43242,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 43143,
+          "1": 0,
+          "2": 0,
+          "3": 99,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 43242,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 43242,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 43239,
+          "1": 0,
+          "2": 0,
+          "3": 3,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.2109422000066843
+    },
+    {
+      "month": "2023-12",
+      "start_ns": 1701388800000000000,
+      "end_exclusive_ns": 1704067200000000000,
+      "row_count": 44678,
+      "first_time_ns": 1701388800000000000,
+      "last_time_ns": 1704067199999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 44678,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 44678,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 44678,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 44678,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 44678,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 44678,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.21150559998932295
+    },
+    {
+      "month": "2024-01",
+      "start_ns": 1704067200000000000,
+      "end_exclusive_ns": 1706745600000000000,
+      "row_count": 44685,
+      "first_time_ns": 1704067200000000000,
+      "last_time_ns": 1706745599999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 44685,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 44685,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 44685,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 44685,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 44685,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 44685,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.20812160000787117
+    },
+    {
+      "month": "2024-02",
+      "start_ns": 1706745600000000000,
+      "end_exclusive_ns": 1709251200000000000,
+      "row_count": 41800,
+      "first_time_ns": 1706745600000000000,
+      "last_time_ns": 1709251199999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 41800,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 41800,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 41800,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 41800,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 41800,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 41800,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.20481089998793323
+    },
+    {
+      "month": "2024-03",
+      "start_ns": 1709251200000000000,
+      "end_exclusive_ns": 1711929600000000000,
+      "row_count": 44682,
+      "first_time_ns": 1709251200000000000,
+      "last_time_ns": 1711929599999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 44682,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 44682,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 44682,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 44682,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 44682,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 44682,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.21522649998951238
+    },
+    {
+      "month": "2024-04",
+      "start_ns": 1711929600000000000,
+      "end_exclusive_ns": 1714521600000000000,
+      "row_count": 43246,
+      "first_time_ns": 1711929600000000000,
+      "last_time_ns": 1714521599999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 43246,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 43246,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 43246,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 43246,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 43246,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 43246,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.2152885000105016
+    },
+    {
+      "month": "2024-05",
+      "start_ns": 1714521600000000000,
+      "end_exclusive_ns": 1717200000000000000,
+      "row_count": 44678,
+      "first_time_ns": 1714521600000000000,
+      "last_time_ns": 1717199999999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 44678,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 44678,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 44678,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 44678,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 44678,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 44678,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.21624500000325497
+    },
+    {
+      "month": "2024-06",
+      "start_ns": 1717200000000000000,
+      "end_exclusive_ns": 1719792000000000000,
+      "row_count": 43243,
+      "first_time_ns": 1717200000000000000,
+      "last_time_ns": 1719791999999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 43243,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 43243,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 43243,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 43243,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 43243,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 43243,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.20945189999474678
+    },
+    {
+      "month": "2024-07",
+      "start_ns": 1719792000000000000,
+      "end_exclusive_ns": 1722470400000000000,
+      "row_count": 44684,
+      "first_time_ns": 1719792000000000000,
+      "last_time_ns": 1722470399999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 44684,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 44684,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 44684,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 44684,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 44684,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 44684,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.21863249999296386
+    },
+    {
+      "month": "2024-08",
+      "start_ns": 1722470400000000000,
+      "end_exclusive_ns": 1725148800000000000,
+      "row_count": 44686,
+      "first_time_ns": 1722470400000000000,
+      "last_time_ns": 1725148799999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 44686,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 44686,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 44686,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 44686,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 44686,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 44686,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.22117309999885038
+    },
+    {
+      "month": "2024-09",
+      "start_ns": 1725148800000000000,
+      "end_exclusive_ns": 1727740800000000000,
+      "row_count": 43252,
+      "first_time_ns": 1725148800000000000,
+      "last_time_ns": 1727740799999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 43252,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 43252,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 43252,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 43252,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 43252,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 43252,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.21361690000048839
+    },
+    {
+      "month": "2024-10",
+      "start_ns": 1727740800000000000,
+      "end_exclusive_ns": 1730419200000000000,
+      "row_count": 44683,
+      "first_time_ns": 1727740800000000000,
+      "last_time_ns": 1730419199999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 44683,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 44683,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 44594,
+          "1": 0,
+          "2": 0,
+          "3": 89,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 44683,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 44683,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 44594,
+          "1": 0,
+          "2": 0,
+          "3": 89,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.2050429999944754
+    },
+    {
+      "month": "2024-11",
+      "start_ns": 1730419200000000000,
+      "end_exclusive_ns": 1733011200000000000,
+      "row_count": 43248,
+      "first_time_ns": 1730419200000000000,
+      "last_time_ns": 1733011199999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 43248,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 43248,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 43248,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 43248,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 43248,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 43248,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.21141570000327192
+    },
+    {
+      "month": "2024-12",
+      "start_ns": 1733011200000000000,
+      "end_exclusive_ns": 1735689600000000000,
+      "row_count": 44689,
+      "first_time_ns": 1733011200000000000,
+      "last_time_ns": 1735689599999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 44689,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 44689,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 44689,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 44689,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 44689,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 44689,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.2125386000116123
+    },
+    {
+      "month": "2025-01",
+      "start_ns": 1735689600000000000,
+      "end_exclusive_ns": 1738368000000000000,
+      "row_count": 44683,
+      "first_time_ns": 1735689600000000000,
+      "last_time_ns": 1738367999999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 44683,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 44683,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 44664,
+          "1": 0,
+          "2": 0,
+          "3": 19,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 44683,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 44683,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 44663,
+          "1": 0,
+          "2": 0,
+          "3": 20,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.21116859999892768
+    },
+    {
+      "month": "2025-02",
+      "start_ns": 1738368000000000000,
+      "end_exclusive_ns": 1740787200000000000,
+      "row_count": 40361,
+      "first_time_ns": 1738368000000000000,
+      "last_time_ns": 1740787199999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 40361,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 40361,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 40361,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 40361,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 40361,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 40361,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.19574029999785125
+    },
+    {
+      "month": "2025-03",
+      "start_ns": 1740787200000000000,
+      "end_exclusive_ns": 1743465600000000000,
+      "row_count": 44690,
+      "first_time_ns": 1740787200000000000,
+      "last_time_ns": 1743465599999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 44690,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 44690,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 44690,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 44690,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 44690,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 44690,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.20858099999895785
+    },
+    {
+      "month": "2025-04",
+      "start_ns": 1743465600000000000,
+      "end_exclusive_ns": 1746057600000000000,
+      "row_count": 43257,
+      "first_time_ns": 1743465600000000000,
+      "last_time_ns": 1746057599999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 43257,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 43257,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 43257,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 43257,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 43257,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 43257,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.20609089999925345
+    },
+    {
+      "month": "2025-05",
+      "start_ns": 1746057600000000000,
+      "end_exclusive_ns": 1748736000000000000,
+      "row_count": 44720,
+      "first_time_ns": 1746057600000000000,
+      "last_time_ns": 1748735999999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 44720,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 44720,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 44720,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 44720,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 44720,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 44720,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.21951070000068285
+    },
+    {
+      "month": "2025-06",
+      "start_ns": 1748736000000000000,
+      "end_exclusive_ns": 1751328000000000000,
+      "row_count": 43279,
+      "first_time_ns": 1748736000000000000,
+      "last_time_ns": 1751327999999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 43279,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 43279,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 43279,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 43279,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 43279,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 43279,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.20981979998759925
+    },
+    {
+      "month": "2025-07",
+      "start_ns": 1751328000000000000,
+      "end_exclusive_ns": 1754006400000000000,
+      "row_count": 44726,
+      "first_time_ns": 1751328000000000000,
+      "last_time_ns": 1754006399999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 44726,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 44726,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 44726,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 44726,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 44726,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 44726,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.20664079999551177
+    },
+    {
+      "month": "2025-08",
+      "start_ns": 1754006400000000000,
+      "end_exclusive_ns": 1756684800000000000,
+      "row_count": 44725,
+      "first_time_ns": 1754006400000000000,
+      "last_time_ns": 1756684799999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 44725,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 44725,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 44707,
+          "1": 0,
+          "2": 0,
+          "3": 18,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 44725,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 44725,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 44707,
+          "1": 0,
+          "2": 0,
+          "3": 18,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.2078144999977667
+    },
+    {
+      "month": "2025-09",
+      "start_ns": 1756684800000000000,
+      "end_exclusive_ns": 1759276800000000000,
+      "row_count": 43274,
+      "first_time_ns": 1756684800000000000,
+      "last_time_ns": 1759276799999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 43274,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 43274,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 43274,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 43274,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 43274,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 43274,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.2093992000009166
+    },
+    {
+      "month": "2025-10",
+      "start_ns": 1759276800000000000,
+      "end_exclusive_ns": 1761955200000000000,
+      "row_count": 44725,
+      "first_time_ns": 1759276800000000000,
+      "last_time_ns": 1761955199999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 44725,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 44725,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 44725,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 44725,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 44725,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 44725,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.20772569999098778
+    },
+    {
+      "month": "2025-11",
+      "start_ns": 1761955200000000000,
+      "end_exclusive_ns": 1764547200000000000,
+      "row_count": 43281,
+      "first_time_ns": 1761955200000000000,
+      "last_time_ns": 1764547199999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 43281,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 43281,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 43281,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 43281,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 43281,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 43281,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.204772299999604
+    },
+    {
+      "month": "2025-12",
+      "start_ns": 1764547200000000000,
+      "end_exclusive_ns": 1767225600000000000,
+      "row_count": 44726,
+      "first_time_ns": 1764547200000000000,
+      "last_time_ns": 1767225599999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 44726,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 44726,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 44726,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 44726,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 44726,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 44726,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.20670270000118762
+    },
+    {
+      "month": "2026-01",
+      "start_ns": 1767225600000000000,
+      "end_exclusive_ns": 1769904000000000000,
+      "row_count": 44727,
+      "first_time_ns": 1767225600000000000,
+      "last_time_ns": 1769903999999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 44727,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 44727,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 44727,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 44727,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 44727,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 44727,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.20823040000686888
+    },
+    {
+      "month": "2026-02",
+      "start_ns": 1769904000000000000,
+      "end_exclusive_ns": 1772323200000000000,
+      "row_count": 40396,
+      "first_time_ns": 1769904000000000000,
+      "last_time_ns": 1772323199999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 40396,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 40396,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 40396,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 40396,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 40396,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 40396,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.1962883999949554
+    },
+    {
+      "month": "2026-03",
+      "start_ns": 1772323200000000000,
+      "end_exclusive_ns": 1775001600000000000,
+      "row_count": 44723,
+      "first_time_ns": 1772323200000000000,
+      "last_time_ns": 1775001599999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 44723,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 44723,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 44723,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 44723,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 44723,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 44723,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.20841089999885298
+    },
+    {
+      "month": "2026-04",
+      "start_ns": 1775001600000000000,
+      "end_exclusive_ns": 1777593600000000000,
+      "row_count": 43279,
+      "first_time_ns": 1775001600000000000,
+      "last_time_ns": 1777593599999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 43279,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 43279,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 43279,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 43279,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 43279,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 43279,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.20352040001307614
+    },
+    {
+      "month": "2026-05",
+      "start_ns": 1777593600000000000,
+      "end_exclusive_ns": 1780272000000000000,
+      "row_count": 44727,
+      "first_time_ns": 1777593600000000000,
+      "last_time_ns": 1780271999999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 44727,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 44727,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 44727,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 44727,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 44727,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 44727,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.20581550001224969
+    },
+    {
+      "month": "2026-06",
+      "start_ns": 1780272000000000000,
+      "end_exclusive_ns": 1782864000000000000,
+      "row_count": 43277,
+      "first_time_ns": 1780272000000000000,
+      "last_time_ns": 1782863999999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 43277,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 43277,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 43277,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 43277,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 43277,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 43277,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.19942590000573546
+    },
+    {
+      "month": "2026-07",
+      "start_ns": 1782864000000000000,
+      "end_exclusive_ns": 1785542400000000000,
+      "row_count": 44705,
+      "first_time_ns": 1782864000000000000,
+      "last_time_ns": 1785542399999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 44705,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 44705,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 44705,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 44705,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 44705,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 44705,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.20632169999589678
+    },
+    {
+      "month": "2026-08",
+      "start_ns": 1785542400000000000,
+      "end_exclusive_ns": 1788220800000000000,
+      "row_count": 44714,
+      "first_time_ns": 1785542400000000000,
+      "last_time_ns": 1788220799999999999,
+      "reference_counts": {
+        "BTCUSDT_spot": {
+          "0": 44714,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_mark": {
+          "0": 44714,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "BTCUSDT_futures": {
+          "0": 44714,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_spot": {
+          "0": 44714,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_mark": {
+          "0": 44714,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "ETHUSDT_futures": {
+          "0": 44714,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "elapsed_seconds": 0.205960999999661
+    }
+  ],
+  "provenance": {
+    "series_manifest": {
+      "path": "series_locales.json",
+      "sha256": "091c902d959b909ffacd8ed523e4d9e0e52ac202c5d5f553c80c9e06d27a3ab3"
+    },
+    "price_sources": {
+      "path": "fuentes_precios.json",
+      "sha256": "200be9938c5071dd9d1c61c0b4f718296bff5816f92f4f188753f8e58093bbab"
+    },
+    "processed_manifest": {
+      "path": "D:\\Backtesting\\data\\minutes\\2022_2026_continuous\\derived_marks\\futures_scaled\\manifests\\processed.json",
+      "sha256": "cc5cd0821513fd98d39a4f299a62ce77d94e0865595805db2f9e806b513e3cc5"
+    },
+    "script": {
+      "path": "herramientas/scripts/intraday_risk_price_quality.py",
+      "executed_path": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\scripts\\intraday_risk_price_quality.py",
+      "sha256": "3364dba43937ced1341fd22540705a915ceadadac5ebefd0ccc441257e1245e6"
+    },
+    "reader_script": {
+      "path": "herramientas/scripts/intraday_risk_sources.py",
+      "executed_path": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\scripts\\intraday_risk_sources.py",
+      "sha256": "459e90c0a754610463cbce13abd4d91dda2054f27a2e19ac17e052dee2b38665"
+    },
+    "source_partitions": {
+      "count": 342,
+      "all_manifest_hashes_match": true,
+      "sha256_by_source_id": {
+        "2": "5a448261c63e3c33ac2f3ff446b7c63eb1a6cf722f3d94531a1562b2e9819e27",
+        "5": "f6b4d4a0b567274945e55e5daeee93171fa4bfa8c080d8081de6879c1909211c",
+        "6": "cfc858627db4a2374648caa0f0b7d7077231120af26381f443cba0bcbd77db09",
+        "9": "ff4db0879f932cf455794ad0eb7f1c3171951cfa7d7e72d31a1ad2af24033609",
+        "12": "b0388ca1e22d93ab7795adf957ac7bfa8990cb8dbf4ed8e8aacdbe5443e6c2e5",
+        "13": "ad3cf35103a63a7c8c52a2d561be4bf017750ce9925c988e4919bbfe0ed8f238",
+        "16": "0089bf55f086d8bad075e665401ab4ff91b4b80c3fce1cf1c9cefa055cbde030",
+        "19": "1456b1fe60caa7a79645a8d968a7c31fc9185275256189972ba2f9cefc8aeebb",
+        "20": "72000fc99ef7c4a9ec574b86c85151a1c153c1b88b2f696264bd2f866b7c0032",
+        "23": "c86071b08ce1a8aca535003a9fe3b751588db0cb9dd42dd7a3a32b0ead4fe9fd",
+        "26": "e346441324f0d2b5f205b2191c3827aef48f3a748df4785e78f46803cb4de51d",
+        "27": "da3b2aa74a3989a9bd64f64f2d1b59df7051738dc65f37539250044f835c88fe",
+        "30": "336755652fdf12c69d9bec530a0e2572df6e79e10db7f38c45d4597c85f55807",
+        "33": "3f609dc5f8e2cf6eb177612c81ba176a86f5e06aecc68efc9145727a4d7b5749",
+        "34": "8424dc80a8c28b5aa9c3cd507243a2c293f0b71c2cba4aaf7821ccc3815a2ed7",
+        "37": "1ac21dc82ab9c440566d29a0d173b2bc1f2df189c63c0ca2d5681c6f9418355f",
+        "40": "2abee78033cc744f4a3a94b1972093a6b8264a5428066904482aac9fa0c7e170",
+        "41": "f9cb0727012a1c249ea4ba285623826722cea067fa8a6422cd0a02d194b8c81a",
+        "44": "eac6b54a4f595f9ce8b24a1b7f1c6599a523e51c20c9c8711c5432a657f6da7c",
+        "47": "28052e4a91d3b45979bd80afdd504980f6d6628f636d84dba290d3c85e24f01b",
+        "48": "ffa048770354f346a0aa42611fb8661528fa2389c65bd9dd2dcc34a94bdd769c",
+        "51": "571bbf21ed031a354d198749d325b65a3b23fd4fe8787d696987c856aa1be7cc",
+        "54": "6ab24230329f32ba38ad3ca39073c3b01744e10547a0ba6477532c68183e4f61",
+        "55": "8900ca85af64ca26ed1885c2a9c8ef526a5a3cd0b697011a8d0b837e1c2b8927",
+        "58": "883df929fdb8608504cfafc9a2df69642e19bf65b72055d01265d54cba0f0103",
+        "61": "9f31efc5613a60bc2d9f91bcc006925042668fb879b4bfd7790cfd571e32f4e8",
+        "62": "85b5f44c32f6561e4bcf80adf8d75f37027cb963d74466d057bdd3485d4696ab",
+        "65": "ec542c38775afe64be2512b87f39edb8874a00dd0d4f3937dd574d2edc023d0d",
+        "68": "20ecb47742241467ad4365a7dbbebb84f7b7762ce47871cff0920ce7e6a1e79f",
+        "69": "4ce41e420771a3f288c08afb4dbaa6ffa2ddbd1c04a515712e4d797c73f93d8b",
+        "72": "d5ea7acd08e23d8e4d00b48ecd3e6b4e11fc5f40fb150930f15514493fea094f",
+        "75": "f9729b4c4442b74e04682448840a25839f315637ad222a80869ec0d79075f955",
+        "76": "1f23e0d795ff88a3236faba6bfd8786fec403a8db3fe78fb7f7dbd41bf6afb03",
+        "79": "7a8440fd65068bb8cbc89f92277dad863569e3b7096274b0a09d490e7da28353",
+        "82": "1afb4b8e39735b629f608af9a44937e06ce22266458d22682474fcf1688f522a",
+        "83": "75f37471245a12abad285565f607dc4b962e2a90aefa3cebe7eaab0b609bc733",
+        "86": "f2328e613f620db37e40b086f926b2d56bd6f35391ad3a74406c86e0359935f8",
+        "89": "4701a5849dcd60d01e2d77f6ec1ec1c241b59388d9789aaa3c6e492e2673fba8",
+        "90": "b3f2145ef5357efd1cf63384ab89cc7f9102af707d12894752bd513f66626a86",
+        "93": "9f559104baf8a566ae6ae46b73ed133918d072f52c5dcd20a1ed3a8886266d43",
+        "96": "d7d88d17de39ddd9bac7a0304b7380c3f4b03c2f784d3dc42f6485654c6cb5e2",
+        "97": "bc79ef562fc3cc96a3aef22ece92184df06d0fcafceaa26bd4af77af623d26df",
+        "100": "92084a19cb2a818b1fb17c739b16f52af6b27f95f2b9d64be6855f38547c329d",
+        "103": "3215a8ea10f62a6e1216d4513e98e0ebedd19c12603d083f7cb1583bf0b8d8a0",
+        "104": "7569fd229ff55e937c6c3345c122dcadefaab6ac3a098b76a7968b1732b5408a",
+        "107": "15530b8c735a284538eb5e80388cf15b22c56f9f55395aa0c01467851c7a43fa",
+        "110": "732c48557015c4fed379f45fdac6c3b57f98ebd31015c57ba73f0e47d9527a61",
+        "111": "c9f948a4ae812885c52e15112c1bde5f895a4d3eac28ee6cee4b1bfb9579b25d",
+        "114": "641dcbb29a4ebda19b5ddb77d24ad754c2f823b8c336fd7129184650828992dc",
+        "117": "04a22b5719012e550c6f834342b91516b247856deb4c955c3e45a15ba221b11f",
+        "118": "c37c4ccfd81577ae9f84c245bdc670b4902d2a61050b9eef66900ba329b144be",
+        "121": "597e015dead2492cf0b3243eb5c29f5b178dc90436d0963e4956eef738dfb99d",
+        "124": "0890ea1a78d8003b42d3edaab50cfe84ac55efe32db2dbccf3dfdd9d0c24e9e5",
+        "125": "9b19238210a6f9b49cdb9edce61200a465a4a4bc5d46cdd1c8d1ba031119347d",
+        "128": "c7e8967bc15263460ed83ac8bf5c0fdd35646e9c84b8115d825a6228d48510b7",
+        "131": "c3631d3f455f444d228db39fb663591292e01da579dde91da3d9511c33ec16e6",
+        "132": "b08ee2bc1bec25c351bc6e3b848b689c762e92059eb2f8ea453bcef3986cdfdb",
+        "135": "90deba035b36cce7ae2e427a0299e53dfeb0f8c4c1413524280b47aae5385df3",
+        "138": "00cd001106767a2a576ac8bbfc63266eab3c626a5f216d51762cfcd7577647cb",
+        "139": "f00883b27686e644b671f2b61a86b83f85a9babfa9f94c9e19b0dd9523b636c6",
+        "142": "c1d11baece84506ac7d7912946c780d0652483d768e4e2f72a17e58eb0dcb8df",
+        "145": "c23f3ba3a0c76cd2913422ba909807a401667f24d4d5081b928f0dd8eb353e2a",
+        "146": "718f37e0c30b9c9b4b70c5ce87acb3851312a2ecc6e73507a4142955abe5c965",
+        "149": "abf9d5bdec728bb71d83684f9d0cd720482e7180c65b0cc7b52e49c95c1bf0f2",
+        "152": "be08bf709900bd86ec3942ffc8892179f9ad858fadae9e82d142177e81c4280c",
+        "153": "90a23795596d9e9166df3375add288184fd8528608d3d71323a0920efea575e6",
+        "156": "e675f1cb3028e37d79e8ab977db075e6edecc425cf29f26ae07e25013fc3cb56",
+        "159": "f5ffef0516f6c55f90432ecf1cd824714f89ae42d806b7966086f737791202b4",
+        "160": "7be8fcef62c368c571ee61478897aff4b1cd7428b4a0ae09a0a64c2ac54fd9c1",
+        "163": "0449ed4df3f3678eb3b334e6ab2966c12dbc209aa67b2249fbde60797f58522e",
+        "166": "220a95c0542b923941541b77f936a2aed02d7f5d33ac8c54ec85a30c09ae7ee2",
+        "167": "046fb72b99df509d7b2dddb73b419092e270ab8bbe672646e168e2e2e23e4a71",
+        "170": "f74e505c141c3e76d072832d327c38550b920d1c20ea21c5970883a5aaae5b39",
+        "173": "b65ffab03592c062d0dc7ebd12a557cc615597959af5c22843f2631d8af2f725",
+        "174": "7aba7fb26477d40f72ce362c847e600f68857df73ae72d7d5b1d7f996f4f0e0c",
+        "177": "3e97e3a85feb854d3de5e1190169c0a37fee9861de040aab83c5bf3560ed24a9",
+        "180": "a9a31d044bfa25fa0823354625b3eed7d668751c15b77f4cd8f017a086c04219",
+        "181": "ca1929b4d9a6ccfa0acf3c4b6dfcbcf3adf0fa2d1b5df008fd21905c77a02af3",
+        "184": "66bd0140c24cac84622caa14d2549297bd5ab76111c3cb7dbb192d1f674b5715",
+        "187": "5784b25b0a1d8a708321106b6c224814c2569fb2b3083eb7ca9180c4078177b2",
+        "188": "d8d0f70f3a1c0f46b71ed6ca99c439e2c3e9037eb342a827358105d174bcf0f2",
+        "191": "fefd2ef6bcbdd0e8871726276a30fdac7b6f1fc59a27f27623f54340914f3d01",
+        "194": "8aea2a16f96643c559b00deaaefde6c845db2e4a0b5e2a0b12168edd79e40239",
+        "195": "830dc1b4b9e717736b5c9a277e95dc7257057306a2fedf1a10664d2f98cc9eb8",
+        "198": "09011af080676778c45d4cf0c28dd5c92229884e1a455f90db9cf70a54a7c4ec",
+        "201": "5e4d0f8292b2260c8873ef8ac655bbc666b3dc19a31bf105b6d07e6ab2d0a2fe",
+        "202": "3d5373fcfe71f96bb944d95b9a4448e0d2af2453eb5585df91c559084d29656f",
+        "205": "06d733e9c09779d18da51d655501cb77fda46d4cd20d3e29a17219f99dbf6759",
+        "208": "5248c1dcf4500fd2e9f64d4d09b29b4904b3cbb86833bb6a3302f3f61d07574b",
+        "209": "4a256d3f7bf30660650f26a8979753c375dc003fe8514ee1520b5e89e8d53af9",
+        "212": "038d640d07a849d237c2f03a7668e25bd00fc13ce2039c11446547eb46de259d",
+        "215": "96a9a7ed06ba04f368d44e2f199b1a48a77834be2376b538c30f929f600b2ff2",
+        "216": "a6db36b7e386d2275d74ef2c558bb456e51719529a8983ef0f9bfe4eeb41d100",
+        "219": "f2ecf90b0dc73314f07ac0a956fc7e33136e90164779829242ca93bde6277359",
+        "222": "79894b01973ff6122e1d5cd32cde0e205f290b890f18f06890176f43bf6644e9",
+        "223": "c861768314fdf07a4b887a77eb92b7596745f553270427542327300e3c73bd6b",
+        "226": "12f44d8135af7163de90675e1026decba8b3103f3f0c2f003fc8b35a4f5c19ab",
+        "229": "e0a5824f092675ccc35ea1c252d63d8c1a6b685fc7036bdc06bfdd3673690916",
+        "230": "2aebe1d99b37ce39bc863fde937a590e7084050e8072ba6cb4f60e095b98e456",
+        "233": "13571eadc508cd0461ae880f8fbff6f547ab33a08a2bcac085d4b2f1b7aa9c2e",
+        "236": "d4b954723c8a54645388f23adc3bbe2ea6a0e81bb9762ab91b265f5ddbc2b007",
+        "237": "158d9c7bec3ecf13601ff57032a6e77c65a29d0a09a8ebad84e19b89a82d7710",
+        "240": "807373aa5c1040631b75157e08e1ef02ef5dd04bf52915864ca08cd0f1281a19",
+        "243": "24aed9c4d1a06cfbcbf15097bed20d3baf4f5eb485259e050f64c10016d6d397",
+        "244": "bf4df62baae135af307913904d60641fda7942d8cdc32bb7f6dbe39d8b05a6e8",
+        "247": "ebc2a5b60ec1813150826b3a108865682f669aafb0dd05555b6733cea0ad268d",
+        "250": "09e60185f8883f547c04a9563f3ed0e52e308e721e52234ede61bf53179dc739",
+        "251": "082921f84d1b87f8ecfa78ec4a4435d7877e4b4461f025028d04a3235d67d59b",
+        "254": "208a1ce16d7a6bf3671e877d34a8a6fed605be3262d2c516221821f5b2892ac7",
+        "257": "0acf0aaed9808a7c2f86a8c374712b61bb332f7063aaea9fd2a9514373404b76",
+        "258": "20cf9b77a930fd66dac8b027f630285ec5c28dc4ed568f4d154abfa799a33552",
+        "261": "53c5a80d8ef484b3d983769bbbafd9d23d8a9373cf8b5431c10f35cc9510a104",
+        "264": "09ccde20ab6d91054497d1dc74d1892446ba90f158bf4824d24581b4c2051b88",
+        "265": "6fb0794f3dc1f8be4fa393b6d1f0d7e9bcae48f6b32b1dc27a36889d0dd77723",
+        "268": "43ae2f27dd79a0561aa580dd0aeeef69878890fbcb50f4e2ecf17ba882c4437d",
+        "271": "6942fad5f6fb8156c9eef4b2831eb5e419ca05867ccde169bba7e8ec260461e8",
+        "272": "090eac55f596c63b712f89aa06c7ff21bce4f09a98ca81bb7d00f0154b8dfbd1",
+        "275": "e445d5f0f6f1a2569d43616e5efb82547d1bdfdbc6e00df20bd38d0c04d2440d",
+        "278": "462b6aff097bd1934162155e2bb4957ff909164ad668d1d12da389e8fcb08a88",
+        "279": "eb44dc1ffb1bf39589e3b8735b31878747bc3e622e48214e238eb3d4e1783f15",
+        "282": "e19b5d996dbb93deff6981bbd966b2e5f04be49575c6568e6e247f7e3725ccf2",
+        "285": "b319dc731ee5de9b3f7d4216d72333b77d1b28a6b5792ae95a02a4c7769598d9",
+        "286": "24c86d745be99331d40eec72d1b65c260ac51d3c134a5f1bf235555dc63e3789",
+        "289": "4f8067ac4dee0db7acc10d570bc01ea94ccb1ed64fa37b896e0633417a4b7e2b",
+        "292": "4481dc52946d50cea6a45e441ab69226f79b6e4de7fe988ac1e26d36c7f2f5f7",
+        "293": "de440bbbc900d20359f46acf69dba05da421d1715ed711c6d7c206d6c424a304",
+        "296": "714b6cff2abe106d64aeb1370fcf124271cbfaf661a6d39d0af3908c55b8f16c",
+        "299": "894cbd4ff9afc2334b9a76772ac180c0f467b23d2e98b8b62c800ff4e7065600",
+        "300": "d42f5049b17a7022f681f4382bdc42f206c3f5adb025e41f9f954740162ce1c6",
+        "303": "abcf5150a678d577782edcb0047196d4d413da3d5394654c57e25ae9b7cd7011",
+        "306": "b217770f9fb861f8aee0fa3a5f2c5691c18bc4031c572fba8e0d14c7f26a5d46",
+        "307": "4d5ba19cbc3fd5f1d192b9e3a84bc6212901a0071b28836d2f4303eb38db2f33",
+        "310": "2cb1d7cfa2fce6c085674940e18105e1d42eb38277d9c660767c906515578e08",
+        "313": "1098b1ea6a5abe6eac6e6825f0883d1a0b81bb29b7e1cde74364b0882b054f9a",
+        "314": "64ea8b47ae6f9a05d74797412fa2dd1c047e66eabcde6410ef16f3f77695e8c5",
+        "317": "d8c794daa536e3c4ecb7e965ba9548315344fbc8991bd96b1a410584b92d10e7",
+        "320": "d718a139d55d46e4499b87c55cfa139cb0dedb51e7a08fe46e742c873c4deac1",
+        "321": "60d9e2ada8df9d6342d61b6f9f981bc2351f505f5f7851451b52ebb02bb54ad7",
+        "324": "fc739ccf53d5782083a2c7035babf82dfbc4b239b048a4ca16022111fdb59d2e",
+        "327": "12e2052a0a7d0d64d8cf11e9f9d53e72154a700b8f38bb3ed6dbb80bd8f24ab8",
+        "328": "b49c673743669aedbddcf89c100e705505fe498d69f85f7bd803d8e09631a2ce",
+        "331": "1d67ecd2e01d06a33ee266c849ec1dd53aa8c8c803831414a94fb05bfcc3e1c9",
+        "334": "49e0670ed807adbb0d014e07d7fdf450ef4173da4eb1adb6280d5fa0d60f4bc1",
+        "335": "5f7cc5890514d27299813bc355913acf3bfc342dfc69ea0172fa82997cc9a2b7",
+        "338": "c0f862686f4f90dcd08dcfc9e69430deaab5f05ee32149090cb739ffc4954021",
+        "341": "25fcbac03848251e4ff04230b3000552f702a4d5559ead35c557dc3c2033f86f",
+        "342": "cc6fbab83075d267d05e97d6e198df98db781bd80a08f991262a0fe5313f68b4",
+        "345": "773b5869ea18aed9b0c5752cacf5acae60f1bcd94ff6e63e1635faa426075bdf",
+        "348": "2bc23850c3c1f01bf79c46a8da7cb697addda5aa0d69313366701826ab293fbc",
+        "349": "0db661723879ee41c99bf9aadb4b25f673de04008e54a58bf027c62a57ec8978",
+        "352": "e0f2e0d8abd60ae682dbc91ab1b4ab7ee34a69b8198d6c465307136ea79af161",
+        "355": "67bbe107989e312c83c33cc4bb40b17b31f6019a89372bdb8b139b62d09b9d48",
+        "356": "a8dbac0a779a4461e22021c52f7c1cbd684b8f5eb8d05f5afa862f132efa69f8",
+        "359": "ae9982eaf73f59eaf96b12a744bc7a78b7e6978d18bec9e6a85d05938ed43cea",
+        "362": "ca1f509c3883617044c8908bea466dd7ada262417e4a3de0e986b4a4a2e49402",
+        "363": "9644d090fd73f2691d61126df0dbba7f4f3f07d57f448b5da4661f19f6435569",
+        "366": "8bf330dba3ac24865bb1536c7f820275b46d2c5daceac0dd40468ec2839d6c6d",
+        "369": "0fc3c581c1e3a0717a140179fd7e45468f025f62b90f78703620568ca98b278a",
+        "370": "aa8d3275a0e06ac3e5844c6fec1a09411658ab487d086aa0513b800b90e0af67",
+        "373": "0967ecd6dcb001d6bae386dc4176c5d0ab592b7aab60a222d74f7786f362a583",
+        "376": "6375a3a860b226634d7adeab5f70705a2cb71ab83dbd81b5c4fd9bf21f593be9",
+        "377": "eabb8b7d91474ed15f3c7057310c9ad7a80ddb8d96abb340ce12968bbcd9b0c5",
+        "380": "ddd8e18f54b50171b0b2ce67310c337ad8ce7cf48c731d20118b6851ccffbce5",
+        "383": "64caba4a9b3f06a96e05f371850a7bd7a317dfc453267c17ae8aad360b159991",
+        "384": "ca0f8fbfe296403b13adabee880ec10e79aed8705ec736962efa3670c59d296f",
+        "387": "1f6abafaad46fcba4b99b769033e5f45735024ca3dd0046c6bbe368d641a48db",
+        "390": "a394e9ae093b7b55afd4d83b38f536b0c661bc7b254d7f0b2ad772c4212981a5",
+        "391": "3774c2000c91b5323d67c99f5f1bd7bf6d2c498ba8b5527099696395d9cf1436",
+        "394": "ec342cbb659e99199b3762e99e1ead58004e1cc66c761330d6351fa99a910487",
+        "397": "0b4106df068e89b7babd3605f307aab4e31e3440e3bd934f284a686a899d7342",
+        "398": "6d0d1786fec318a4a68e14b3b150c331e7500942f34b016d9f11fac9acd61a5a",
+        "401": "19990a2e4d518a52dc821f417056e7fd1f41bf12d04594f5ede08be6b5b0439c",
+        "404": "3b2e3eabf692efe2cec5d76e2dc16592b4fde19127342c60e79619b862576570",
+        "405": "20967e2e8f72bb1b8d6e712af7a8466699fa3ca5284712ec727b39dae2a157e6",
+        "408": "93f166438228d0178272a24dfd94b94c13911c35d893f062247140542dc41564",
+        "411": "57d45f05443313fff16542ac52a7b55c5b82d6d53fb101e68aa7f9660adba7f8",
+        "412": "408c1d79ce1b55c51000524e2dbf6fdaf704fe7a2606e3b40b8dcc55049ac4f5",
+        "415": "228e55f619fd1b3716b7968cb8729da698052929899f4459fde13e3ed92a5f0d",
+        "418": "220c4dd26564aacb08047c33c617adb2e982f5accaf865eb4d28dd5672319349",
+        "419": "bbc203fa8a22091ded46713ac714d7a02da9c4bcb30ff84bc27da9fe3fb1ab0a",
+        "422": "51a85d374f853f9125975a2bf254bca04885eed9319a8e0b21b9f44fcdf6f8fd",
+        "425": "d7fac295a33da784a56ebc0dde744bd5b1f89dc445a44d0cdf82cca0070370d7",
+        "426": "a364d81b37ee226a4a4e3d7a2c9c12151bab754b20300a4269369da0c77ba862",
+        "429": "58de83d9eb3647ec6aa95be5d62407c53916fe10fe5a074328b86308e23b8b98",
+        "432": "e8150ccaf5a20cd5efbaf73898b44107c78b93779b92c8ff187341375cf869ee",
+        "433": "a9e901504cb9e8adfe5a72c673d1f65e86b5e40c7070a65c6e1937c7ebb1b3a6",
+        "436": "a8ac1e55910590c7062ef9d65d92f55c3d784b8310a78df5f8a82b5f3ce438d7",
+        "439": "d9159a69a2ac0f68265710913b758fbe59f97ec6cedc455332b81fd55a2f442a",
+        "440": "8f6168b8f441d2aee7818fc96f66220096f143e70c14f5f1d74f3e8902f42dfb",
+        "443": "66eaf34bc2180d8354475be2d6c04facc8aee16950089cc679b99265ee02ad5b",
+        "446": "f9a426b7f67d31a05271d6317de4ca91f2b9a946467a3656ffeebc7d51a1cd8f",
+        "447": "3cc871824452822a21d26b3c3f4dc9fc8a2a38d405b877cbd72f0f1af254ce94",
+        "450": "bc051a0f39e787b3cef6969e5f368a4952b54687acda9bd415d34f85d6d41c1b",
+        "453": "d671fcbc2bb8bd13561b6de9d1a346901159206a1c20db5f9cd06974979aab28",
+        "454": "4fafc8ad66cc7a912a938323b4c8a6e732f828bf220d45ade5dcae95e96dfdcb",
+        "457": "a2506d4c0d71b4946c01716e834fe7336f74a73fdccd2d80cb41ac4ae811e4b4",
+        "460": "0441321da99d553cf5b700835e9e2c934daf0b04d23e2d6ecb22d3e99b120d4c",
+        "461": "57d33b8c174f5b56952f1d3cf2dcf7680e62ce1b655a2ede4500046ec41a6fb3",
+        "464": "faa8b70e8be861c6464aaf18da84622808f7b6f5fbf599bd876e557742dfb129",
+        "467": "a348233e2e3cf69bd768d879b0404d8e64ce4c56ac738106b41c288b241ac5bf",
+        "468": "4f51c126648f53be3ce423f1cea460101f55c141576edafa38fc3829a580f14e",
+        "471": "849b71f71db34d042401ad258e99e007f975e8ba77bcb7b314446c67ffb9c168",
+        "474": "ac655423c1a43a6328620b2b39360936f071a602869622880a490281114fd315",
+        "475": "f9c23e5d5a6198d27f28aa21e22a079de461662c91ebf755be620a5d639b61bd",
+        "478": "929a2a68df3a0bad42ea329e6ae04b39ab0c1eb36ede270ae0bdd44fc8eb0458",
+        "481": "9ff4c48039c1263d351c1dfa077d3cf391ac922853b1c2ac17b99cacfe24419a",
+        "482": "98367bb5bdf764241feeeb9136fc128a46049ed694b335469446844e72b80266",
+        "485": "4d02a9ef680a58328347d920b3f98813357b6858617d7752c8cf6f6f80f050e0",
+        "488": "5f8b83ded8f3e17908e9683d9b122717392f731f7390f125ddf66ba9df3fb720",
+        "489": "435a7b6183d06b0598356451ae18eac02c2ce2e24395d0781d12927c3e9b4d6d",
+        "492": "e447eabc70a6b5c52a3c5a0d64ac09cbb20d850a91bd6e52672cd1e2c57c91ea",
+        "495": "a206caef79b8cb783c3061c9252f9018c9d995d4af65400280fcd7e85186a322",
+        "496": "5422aa92c2bd7faa6c9ed72f8c03e87c9ff1dd6f9521be445e6f4c2167241eb6",
+        "499": "a019410b415a1ee7a3b82f8932b04eb3d65ce9a4fb5d250326d8e1eb5215be78",
+        "502": "06988452f748aeaf4e22997cc099655773446690ae486c5e7322d43114cd016d",
+        "503": "723d39c0189f009345f5b0bfb0a31b087d3862f889f4f6e9b4108152bf56822c",
+        "506": "f5d1b724892af6b2620e98fd776fdb5eee903b7c8c24e787571c1e4542f19d48",
+        "509": "115f3b4ee99b65bd4623da8da7a58e8f44fcb0a18ded3742ce5f237bba3ac38a",
+        "510": "1bbc0095392fde4a081325c0e146522223fa3fd3ca9b32a8aae3289db336c309",
+        "513": "703af1f46e555206af54961e64a7c2895d07968b98fba43f8040e381432032f1",
+        "516": "6e5a8c56c084f833618874a3008852d7d64ab69c04f298a6c178ec5d69356e86",
+        "517": "ff22a32e62d0e3313ed1f822622970fd880c2bf623af116730a0eaf27908c293",
+        "520": "ceeb351a58d25fcea117bca27f238ffdc81c5fcae98bb0b58526707fce61dbca",
+        "523": "e9cb141d8e872b16fed6648e793174ea71e13f8dad836e8eaa07b1b17c0bc152",
+        "524": "8272c239bbdb0cdcdf4fa1cfe5499f152ee72020b8c71c47643ab12121d7644d",
+        "527": "557b96b6059188a3c80ec6f3e73a79166093dc4fa8e5c48ebf1c44ffec1bb8bb",
+        "530": "200538c5961882d1419302c6e89b5ce64367799b154150fa1172478e9aee58f4",
+        "531": "3779347b1dcb194743afc89113c85fec760c12cc91a57d84a13924a19662376d",
+        "534": "780a73c5d4b66550deecf33f5b8554e6444883492fd6a81915703392e87731d1",
+        "537": "f437074cc0fd24a6d2606ab515b5b507c989b161fa166c7c536ef8d42564561f",
+        "538": "b1c0bc42fcc1d734053476917e7e73473be4c6db51db339904cc15ed4689fbc4",
+        "541": "f1ab12484cde6021b844dd2964268e6394ec9ae922c43f7279d531af2c0c5934",
+        "544": "ac4791060eb96f4771bf77a1bc616a5b4a2daf9e3802a928b9b67a517b5373aa",
+        "545": "59bfe4bcbbe822fb039d520e5f45768265f6a0551aec6fd3df379aa4f1d798b7",
+        "548": "bd8e110db661320c05651c26109ce4427dfa14326304865df797782534eb73b3",
+        "551": "f9c388e4ebe03dc51246472266bc072709fb861d7940858206ab5a74e70ac32a",
+        "552": "41ace00118323423d53e827687748f7d64e6d4994f336273a01d129fa77fc4e1",
+        "555": "2b9583d07c57906359a29307e4363b2d5d9ae02a6a384f16c500f6103cc61bed",
+        "558": "5eae0d2253d6e51ac55e863341f70c79843495d46e9ea9adb1289e0004858785",
+        "559": "719a8e00a76624f1bd44552eaedb92135c2d5e8c7b516ad98a7907973419135a",
+        "562": "188b50722a872e543f9e1d946385aa1642fc61e1fa5a4e8ad64c664f70d18ccd",
+        "565": "477c0ed1f65f93205184630485b1da77c8554f1f4a6585bb5760c208c5acb36f",
+        "566": "499746a3375db3eb1f4326071b65c0dafdb47a1c6b1b68f0b9c6be85099fc90f",
+        "569": "1c576b6cbd9be8aad54e59084f75e1acebabab1b5d2a680f876c86eeaf555623",
+        "572": "1a89de49e60ee132d1d322ba748a34219e52469f89933dbadfb1425fb2eb7135",
+        "573": "891eac46eae210dff0e9fb0647b466a7633f6c8b794e5ce922358be64d483d85",
+        "576": "0543987efde8041291f91cf7c2e9bb4f69b5b8cf09db1fa5be22b66adb86fc39",
+        "579": "8694aec3ad2c4cc74232c4696b2aedf54fe2910490d55e8c2651545903f7cc8f",
+        "580": "8dae529e553cccad0d3aa97779219a0d8295892cd85b0d60db484e9b2d5f6de5",
+        "583": "7b77e7d4adc599d4b91e30b301f532663fd822e894abc242b45e188e02e17893",
+        "586": "2285a3c0afd90dace675f7a2547cc5646e013957ae760b73c3536b5de5196d03",
+        "587": "a050513ea0868161398677f16b3ed8292ec60639e40e59829aec71d0a9015fc1",
+        "590": "071a1f00ff46bc1e3be980d1db0866d7275fb4faf951cf4b25273ed51a6091fe",
+        "593": "1593576904d4e6d13907160e0d330a519b927ff2d55b38efd321de15704bf491",
+        "594": "64535542ad35b6a0cc44489a166e2e0065c47857d145a41450dc87a546aeecf1",
+        "597": "ac7084af0ad59927cb0ada1b27d9de3ada7b0c84467210513bd38d01b3368df5",
+        "600": "4811f2d40e79bb1a6ec5b7c53e31ca08a4a5c43902d9e7717cba97a8a99bab18",
+        "601": "009dd59f6fab04ad2c455a641abbf9295eca289c5a91c5e2aab496079637ee0d",
+        "604": "1d91f9654e22d6411573dfee290881c2ca48056678b8bca5a0870514f27f3727",
+        "607": "e3d85a76eb5e03724ff9c3edc428f2f5595f00b753d8de7adafe987c267d6587",
+        "608": "f4a483bf30410a634598c328bc3975e8ba2272cac1a67378d093115f47c66346",
+        "611": "2743e5fa9a524a08caef099a068c10e6c72e0e61387b99e87623b46f27678036",
+        "614": "7f8c34a329024f95a015d2a4f9b02f482e9436f7880bea660f20a9a4b44e0f5b",
+        "615": "6798b345f665e46e42bd0d1885ab49787239487e59c12c0c0af62140de7bf06d",
+        "618": "c41a5e701916673f3d52f554bc11ded94f74ad803661e92ce253754a15a402ca",
+        "621": "d35ad90a1783c76d2a1f4ae910e4ef073f78c91f31e8550dd56ef67dc0bd3cf4",
+        "622": "ca12d4e58ee9477f15ad21f978fab41eb9c8469bcc594e81e0f5cbea6c5b43e5",
+        "625": "edcdd57526d5d0c61818a60a68706daea4b02d6dccd7c08bbf42e9a65ec90265",
+        "628": "d958b85dec9932b3cb7bf4c1fda585f27cea9bb80cad646c01bd5fa5a63ba34b",
+        "629": "0eb84eeceecd0a4fbc243e0f9d5d4005e4f1fea63556557e3f292c0dcb00a33d",
+        "632": "7535751bd8bb6cd18925d47ee3bbedae9d5e445b5d8840ff2f2654e8e5129424",
+        "635": "f12c33f67dd5eb2f3081c21fc40a03c2c548f988258c7936d7043badab5cd6b5",
+        "636": "3261d6ea34b1f0c6d6fc5bb3f9a7ccb427e9147dd53d5b414ea4fbd958317bd5",
+        "639": "76d3e5748deb8470be12b8d1dd76a542a6c8e813c91ba0777ca3170054e6db01",
+        "642": "30ba802643bd625d75caf6aa64b36803b67e0c526a243aacc380eb0c6925a43f",
+        "643": "c84526a6a98b6ccdae43f4e1db20fcbecd541b1567412e76efb4271fb0af71bf",
+        "646": "9d972026e6c48734aa064f58dde92b2a54ea6074365c8132f573a53831ce5f2b",
+        "649": "6dd12fec77f40ea925d285fcd3875569ce867531d3e6df7187a0f49af0f8d55d",
+        "650": "7cf2723c0ae4e059f5eb01ed09b50fa647ecd86b92c8f7b4019afd5f766af922",
+        "653": "1a32d0e77b0fbb41802ccb5c955b2ff563b67faf68604d0d09ca9bdb738abff9",
+        "656": "33ba3e6c61e7e8e0639ce56e9a7f75e3bf5d5ee45f5d720bf2d8821e04799911",
+        "657": "223f19c359d501a4d6520c4ab692e344b10d8b88b5edc6c11afc4922beeccdae",
+        "660": "7539f410ba12fedcd5d58dfe32fe6ccca13a59f531e74d0093ae55963310752b",
+        "663": "43db461c2428fcc07c4fe935212224a26381e8f732ae748a36fa12b1a773adc3",
+        "664": "a290d8648edbc89e7c658532a3d1a1f6c2084832bfde7fca6d051a6c28a2c2a8",
+        "667": "636e731caea526d34a160065be52a50221712bb9e8926160d0f3bdfb88a19a6b",
+        "670": "8531b4d185a769d2bcf02d091d30a100c2729faa4067e80ac540e3bb2ed719ed",
+        "671": "fda1168c8d69b1b960d7fa05b08685a561ed62006405d7d0f07d2004c48bb7cb",
+        "674": "4c38ad32077526ed3cb0556f5999911ba136b237683e330fd66ffba3b55aa437",
+        "677": "d902370a396acc0a1eb5aa5c961408500484eb5c9148cf3c6e39dfe2c8e717c4",
+        "678": "2d3e1ec0a9524d7e73e0cb1ef647536d05fc0f3d121b7033dbc7d9dbfb68f5b8",
+        "681": "f47ea5b1f0d3340f5ecd7506e37fa39ddee033ed25149cb768244c6484824f60",
+        "684": "c68e955b51a2d16fe8e855aa5534ddeb2ac722dea308ab24faea70715eb5d8b8",
+        "685": "4ea4ef0385cfcd2c3f6f67e8f4fe313d0fed7c74f43300d55de7c1220ea513cc",
+        "688": "dee6340266fa3fb188b42dab4557db1ec215eea1981a0623a02f8d2208088093",
+        "691": "64f5a1c0d1ce597334fc9971fa91cd3ce0397e284c393b40c3dd64cc2d6656c2",
+        "692": "a84d147c75e06e56a77ca37ba6f4e4da5a20ac1a1a2af601d2ea1531428d0c4b",
+        "695": "0ef58951c4d5abaeffbf08f07cca1788aae5160d27b4f3557b406c977241473a",
+        "698": "4ecfbbd95d3f3da2de94ace602c86a9bcfd4b36e9ecaaedd29423dffc44386d6",
+        "699": "db6d3646f5130fabf8008fda445adc3a8e4ca898d6c8db7a3e55b2eefd19c16f",
+        "702": "baeab103a9fb8209d3f09c260d6676cd9e812bb33631c1c66df466103b6dbaa2",
+        "705": "6fd6915b515c02ec31089c964d7e563c05c447fd9131080dffcab2384aa7428e",
+        "706": "abeec7cdb20789d95ecb4858cdfc199b45c0475984215d2de7dea0fd2600572d",
+        "709": "8743495b0ebb4d2f7dda7d8196a78e21350894193657cbaafd28829ce16a53ba",
+        "712": "d7547876c031390523c164ba5775c65220e4144d65b41472d882bf4d75acdd87",
+        "713": "3ffd6080163a60611923b7ddbacc317f770f198ab8c2da09797bcba9c5114a9e",
+        "716": "5f68fb2eda168d39e0285ece07eb63d1f821c725d1b4d0987d373b57822a48da",
+        "719": "3c69e561975a37ce7460caa6058a4a9404ee89c77b3d6101e71d847831f5de55",
+        "720": "5a61101da48616bf1e45fa30e11e9f54c1450a0352b02790fcb7326275c1f788",
+        "723": "6ab12c0851c138f1d65f7e3d1c08d5dc9dbac2fde8b216aa118abd5c496ce55b",
+        "726": "6d127e0e272631de86d8bffb57f68b0dfbc10ee8f283af6476d373a68655632a",
+        "727": "fe1d94bfe6f32f28a843fb73f465340c0d8c15372447fa314c41cc339c180de4",
+        "730": "e584f20decc9d52e97e375218a086a335e2304d658ab0db52a8a77013ec02c92",
+        "733": "1beb3306e7f470f8ce21378e9c6af7db02de4ed9e9af1e9442030ca81e49c8d7",
+        "734": "d211522da5d9193e8439f010e9b5fb9eebd73cfde3a1fa5e540bc4ae31efd24e",
+        "737": "d979c4d4a32548f048f880b4cf9de29cb681dba548f5cc035cd4245ac54d19e0",
+        "740": "ff3bc82f743484657fc467666440e8279f405f641f9b0d401524f0a72d574ddc",
+        "741": "9b94d822f7e1851e6ca7ab0815581296796a6be5f4a844743fc3ca73b364a8f1",
+        "744": "193ff489e7f179d10a257b31c7a40bd860ac25fbfabebef0bba7e413a9ed5834",
+        "747": "41b0ab4d737eea140e8355e75863b90e4b53b0ee3fc33139607cf722b03fc4f7",
+        "748": "7be4508cd418f38ceeae36259769a95c47f9a67f97e678b3b72526f404cff794",
+        "751": "12f4c76796b0ee303f0c77c9940d0d10565cadaa94a31ee483e1f8643cbdc2aa",
+        "754": "a20e4610d3bb78f6a640c2f995c5391b955db550ed1f11d27f18394f6d480749",
+        "755": "0a0fda679b0705879a057b8d2541764111ce0d4b003ec7cc86518503032134ce",
+        "758": "1205805cc23743c561edebb5f8b690f61cb2a6c6a69b2c3bb26b99eedc9d884d",
+        "761": "ab52c982a5ed820c20ee88de98e1235ba2351bac40aa5b5dbc73afaf5192b515",
+        "762": "264343d082729875733a0a21190151e9ba02f9209fd67124f2933f69e1faf100",
+        "765": "45532530b3a6717e0e80790230a8283b60c9d9bfdb9c97c153d1b981a7db4cf1",
+        "768": "3e248686eb9660f645c581d4e60c1a0b51ed472234fa913287639ac85591e577",
+        "769": "82883a5269284ca04041e9c9a84411bedf474a309ff06aea9767316555c83518",
+        "772": "c4b28531cc3551369aa9ed67a4d3bc0fb9fbd37e7693e3e9d36cb764f4199e5a",
+        "775": "b4f03be02b6dcc705ec89b5ea34ef1a1094ba358e10be39adb7e572c89d7d456",
+        "776": "aad9f6754023568dbb33055242116733b9232e6060b8bc6b15a466a9f71e20da",
+        "779": "ccf482f6d0b5b7323dbb015ccfcf9a845922f24b900e6f4d876f6b5f672ba007",
+        "782": "b75b316fdb6847cd82a414acb6db8f19b22c004a9abc7d5ba5df18eb81858fc4",
+        "783": "7b89a97c349f4cfb645e13d7ef449648799d92ff0cd0bf621f70d733c6602d4d",
+        "786": "acc663203764f1e740c6403680692649c32c3da1a9448028abb0a9a4ad650bf3",
+        "789": "abc80a890e6ae229dec75ab17352bd2d039847562177bf2335f8a80a2f5a48d8",
+        "790": "a6a83d1e7484bdd4f1b7d192ba909f787591f22851d05fb4ab48133fc68f6ac4",
+        "793": "6d4650318b619d0a76350e3648674bebe3880f6695858fe93a8ae57f2fe90d2f",
+        "796": "62077378a65db8dfa0c99de0a2c456b3f5fa6029dd5e679ebd7e3d4faf5e2004",
+        "797": "35cc99a9c26cb3c090cbe8260eb412dd6e055c1dc37f598a87b70433ed3c2d70"
+      }
+    },
+    "series_partitions": {
+      "count": 224,
+      "all_manifest_hashes_match": true
+    },
+    "run_ids": [
+      "run_3f5d9cce8ff1c2ba5447e3b6",
+      "run_70383794701c4f0fc157b2ed",
+      "run_ad71d751b20623006c195ff3",
+      "run_dfea4b7ac1475668d5968c97"
+    ],
+    "source_root_recorded": "D:\\Backtesting"
+  },
+  "parquet": {
+    "path": "evidencia/calidad_precios.parquet",
+    "sha256": "e51174c996e4ceffbb36b776a6d574dce1ede0bb45eb2c2dc506cec44b079c76",
+    "bytes": 16149037
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "captured_at_utc": "2026-09-26T22:05:39.495246+00:00",
+  "files": [
+    {
+      "path": "build_intraday_risk.py",
+      "sha256": "48bda738507c7bf0b4527aee23074e82de3bada48cdc925274aa32d760ee2c30"
+    },
+    {
+      "path": "intraday_risk_sources.py",
+      "sha256": "459e90c0a754610463cbce13abd4d91dda2054f27a2e19ac17e052dee2b38665"
+    },
+    {
+      "path": "intraday_risk_math.py",
+      "sha256": "98f26a8c331e5225e588fcf66e3e17470de702916b40926276282ca2eed0463b"
+    },
+    {
+      "path": "intraday_risk_reservations.py",
+      "sha256": "71db44313d94e1515cd12130867edcfd5866bacdc76cdccfba7761acb784ea52"
+    },
+    {
+      "path": "rules_sensitivity_exposure.py",
+      "sha256": "7e6c258275154aca3d8bec5b0520a228567444a48a3cdad5e7243e3cac42c0e8"
+    }
+  ],
+  "scope": "exact postprocessor source used for complete reconstruction; no engine code executed"
+}

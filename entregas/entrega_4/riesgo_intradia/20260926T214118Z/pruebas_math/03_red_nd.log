@@ -1,0 +1,26 @@
+..............................FF                                         [100%]
+================================== FAILURES ===================================
+_ test_unknown_quantity_is_not_a_safe_margin_state_and_no_short_has_no_shortfall _
+
+    def test_unknown_quantity_is_not_a_safe_margin_state_and_no_short_has_no_shortfall():
+        unknown = risk().short_margin(np.nan, 100, 20, 100, .004, 0)
+>       assert unknown["unsafe"]
+E       assert np.False_
+
+tests\test_intraday_risk_math.py:268: AssertionError
+__________ test_infinite_need_is_nd_and_cannot_claim_sufficient_cash __________
+
+    def test_infinite_need_is_nd_and_cannot_claim_sufficient_cash():
+        liquidity = risk().joint_liquidity([[np.inf, 1]], 100)
+>       assert np.isnan(liquidity["total_need"]).all()
+E       AssertionError: assert np.False_
+E        +  where np.False_ = <built-in method all of numpy.ndarray object at 0x000001FA7F981F50>()
+E        +    where <built-in method all of numpy.ndarray object at 0x000001FA7F981F50> = array([False]).all
+E        +      where array([False]) = <ufunc 'isnan'>(array([inf]))
+E        +        where <ufunc 'isnan'> = np.isnan
+
+tests\test_intraday_risk_math.py:277: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_intraday_risk_math.py::test_unknown_quantity_is_not_a_safe_margin_state_and_no_short_has_no_shortfall
+FAILED tests/test_intraday_risk_math.py::test_infinite_need_is_nd_and_cannot_claim_sufficient_cash
+2 failed, 30 passed in 0.33s

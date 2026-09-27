@@ -1,0 +1,43 @@
+......................................FFF                                [100%]
+================================== FAILURES ===================================
+_ test_compact_evidence_must_match_original_reconstruction_even_if_equity_arithmetic_agrees _
+
+    def test_compact_evidence_must_match_original_reconstruction_even_if_equity_arithmetic_agrees():
+        source = margin_fixture()
+        compact = {key: value.copy() for key, value in source.items()}
+>       verifier().check_series_evidence(compact, source, np.arange(2), "fixture")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'scripts.verify_intraday_risk' has no attribute 'check_series_evidence'
+
+tests\test_intraday_risk_verifier.py:332: AttributeError
+___ test_complete_evidence_checks_exact_sequence_coverage_and_missing_rows ____
+
+    def test_complete_evidence_checks_exact_sequence_coverage_and_missing_rows():
+        source = margin_fixture()
+        source["time_ns"][:] = 0
+        source["sequence"][:] = [0, 1]
+        compact = {key: value[:1].copy() for key, value in source.items()}
+        with pytest.raises(ValueError, match="coverage"):
+>           verifier().check_series_evidence(compact, source, np.arange(2), "missing post")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           AttributeError: module 'scripts.verify_intraday_risk' has no attribute 'check_series_evidence'
+
+tests\test_intraday_risk_verifier.py:351: AttributeError
+______ test_extreme_point_margin_fields_and_drawdown_timing_are_checked _______
+
+    def test_extreme_point_margin_fields_and_drawdown_timing_are_checked():
+        source = margin_fixture()
+        row = {key: value[0] for key, value in source.items()}
+        row.update(scenario="BASE_E3", strategy="conditional", label="worst_equity_drawdown",
+                   timestamp_utc="1970-01-01T00:00:00Z")
+        dd = dict(dd_row(), intraday_trough_time_ns=0, intraday_trough_equity=120)
+>       assert verifier().check_extreme_points([row], [dd], []) == 1
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'scripts.verify_intraday_risk' has no attribute 'check_extreme_points'
+
+tests\test_intraday_risk_verifier.py:363: AttributeError
+=========================== short test summary info ===========================
+FAILED tests/test_intraday_risk_verifier.py::test_compact_evidence_must_match_original_reconstruction_even_if_equity_arithmetic_agrees
+FAILED tests/test_intraday_risk_verifier.py::test_complete_evidence_checks_exact_sequence_coverage_and_missing_rows
+FAILED tests/test_intraday_risk_verifier.py::test_extreme_point_margin_fields_and_drawdown_timing_are_checked
+3 failed, 38 passed in 1.47s

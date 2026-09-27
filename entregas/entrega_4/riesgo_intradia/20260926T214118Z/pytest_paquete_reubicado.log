@@ -1,0 +1,16 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.3, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\pablo\AppData\Local\Temp\riesgo_intradia_cierre_ziqnplrz\paquete\herramientas
+plugins: anyio-4.15.1
+collected 140 items
+
+tests\test_intraday_risk_builder.py ...                                  [  2%]
+tests\test_intraday_risk_math.py ................................        [ 25%]
+tests\test_intraday_risk_price_quality.py ...............                [ 35%]
+tests\test_intraday_risk_reservations.py ...........                     [ 43%]
+tests\test_intraday_risk_sources.py .......                              [ 48%]
+tests\test_intraday_risk_tables.py ...........                           [ 56%]
+tests\test_intraday_risk_verifier.py ................................... [ 81%]
+..........................                                               [100%]
+
+============================= 140 passed in 6.76s =============================

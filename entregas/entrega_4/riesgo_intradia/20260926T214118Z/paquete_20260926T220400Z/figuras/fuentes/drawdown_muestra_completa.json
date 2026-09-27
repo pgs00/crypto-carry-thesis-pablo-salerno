@@ -1,0 +1,21 @@
+{
+  "title": "Drawdown diario, intradía original y proxy hipotético",
+  "source_run_ids": [
+    "run_ad71d751b20623006c195ff3",
+    "run_dfea4b7ac1475668d5968c97",
+    "run_70383794701c4f0fc157b2ed",
+    "run_3f5d9cce8ff1c2ba5447e3b6"
+  ],
+  "sources": [
+    {
+      "path": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\riesgo_intradia\\20260926T214118Z\\paquete_20260926T220400Z\\tablas\\drawdown_comparativo.csv",
+      "sha256": "dcc50b674c39765afecc075dd037e8b348171d000e767fd83883832bbc0de10e"
+    }
+  ],
+  "data_csv": "figuras/fuentes/drawdown_muestra_completa.csv",
+  "data_sha256": "b1013df257bf94a0813f7c279d36f903bce0e81af67b0fa244f819c319683f81",
+  "time_zone": "UTC",
+  "status": "presentation_of_reconstructed_or_reused_evidence",
+  "valuation": "original_reconstructed; hypothetical proxy explicitly labelled",
+  "note": "Misma muestra y capital inicial; minutos más eventos y cierres diarios. No ticks."
+}

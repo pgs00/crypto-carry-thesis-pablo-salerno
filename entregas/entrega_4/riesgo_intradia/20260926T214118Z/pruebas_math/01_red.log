@@ -1,0 +1,779 @@
+FFFFFFFFFFFFFFFFFFFFFFFFFF                                               [100%]
+================================== FAILURES ===================================
+_______ test_intraday_loss_is_visible_even_when_daily_drawdown_is_zero ________
+
+    def test_intraday_loss_is_visible_even_when_daily_drawdown_is_zero():
+>       module = risk()
+                 ^^^^^^
+
+tests\test_intraday_risk_math.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_math.py:20: in risk
+    return importlib.import_module("scripts.intraday_risk_math")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.intraday_risk_math'
+import_ = <function _gcd_import at 0x000002281398BE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.intraday_risk_math'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+_______ test_equal_peaks_and_troughs_choose_first_persisted_observation _______
+
+    def test_equal_peaks_and_troughs_choose_first_persisted_observation():
+>       summary = risk().drawdown_summary([1, 2, 2, 3, 4], [110, 110, 88, 88, 111], 100, 0)
+                  ^^^^^^
+
+tests\test_intraday_risk_math.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_math.py:20: in risk
+    return importlib.import_module("scripts.intraday_risk_math")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.intraday_risk_math'
+import_ = <function _gcd_import at 0x000002281398BE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.intraday_risk_math'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+__________ test_unrecovered_drawdown_and_exact_nanosecond_timestamps __________
+
+    def test_unrecovered_drawdown_and_exact_nanosecond_timestamps():
+        start = 1_700_000_000_000_000_000
+>       summary = risk().drawdown_summary([start + 1, start + 2], [100, 90], 100, start)
+                  ^^^^^^
+
+tests\test_intraday_risk_math.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_math.py:20: in risk
+    return importlib.import_module("scripts.intraday_risk_math")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.intraday_risk_math'
+import_ = <function _gcd_import at 0x000002281398BE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.intraday_risk_math'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+_____ test_gaps_are_nd_for_complete_maximum_but_observed_risk_is_retained _____
+
+    def test_gaps_are_nd_for_complete_maximum_but_observed_risk_is_retained():
+>       summary = risk().drawdown_summary([1, 2, 3, 4], [100, np.nan, 80, 101], 100, 0)
+                  ^^^^^^
+
+tests\test_intraday_risk_math.py:56: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_math.py:20: in risk
+    return importlib.import_module("scripts.intraday_risk_math")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.intraday_risk_math'
+import_ = <function _gcd_import at 0x000002281398BE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.intraday_risk_math'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+___________ test_nonpositive_equity_is_not_clipped_to_zero_or_safe ____________
+
+    def test_nonpositive_equity_is_not_clipped_to_zero_or_safe():
+>       np.testing.assert_allclose(risk().drawdown_path([0, -20], 100), [-1, -1.2])
+                                   ^^^^^^
+
+tests\test_intraday_risk_math.py:68: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_math.py:20: in risk
+    return importlib.import_module("scripts.intraday_risk_math")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.intraday_risk_math'
+import_ = <function _gcd_import at 0x000002281398BE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.intraday_risk_math'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+____ test_drawdown_rejects_reordered_or_misaligned_states[times0-equity0] _____
+
+times = [2, 1], equity = [100, 90]
+
+    @pytest.mark.parametrize("times,equity", [([2, 1], [100, 90]), ([1], [100, 90])])
+    def test_drawdown_rejects_reordered_or_misaligned_states(times, equity):
+        with pytest.raises(ValueError):
+>           risk().drawdown_summary(times, equity, 100, 0)
+            ^^^^^^
+
+tests\test_intraday_risk_math.py:81: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_math.py:20: in risk
+    return importlib.import_module("scripts.intraday_risk_math")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.intraday_risk_math'
+import_ = <function _gcd_import at 0x000002281398BE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.intraday_risk_math'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+____ test_drawdown_rejects_reordered_or_misaligned_states[times1-equity1] _____
+
+times = [1], equity = [100, 90]
+
+    @pytest.mark.parametrize("times,equity", [([2, 1], [100, 90]), ([1], [100, 90])])
+    def test_drawdown_rejects_reordered_or_misaligned_states(times, equity):
+        with pytest.raises(ValueError):
+>           risk().drawdown_summary(times, equity, 100, 0)
+            ^^^^^^
+
+tests\test_intraday_risk_math.py:81: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_math.py:20: in risk
+    return importlib.import_module("scripts.intraday_risk_math")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.intraday_risk_math'
+import_ = <function _gcd_import at 0x000002281398BE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.intraday_risk_math'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+_______ test_paired_spot_short_can_preserve_equity_while_margin_worsens _______
+
+    def test_paired_spot_short_can_preserve_equity_while_margin_worsens():
+>       module = risk()
+                 ^^^^^^
+
+tests\test_intraday_risk_math.py:85: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_math.py:20: in risk
+    return importlib.import_module("scripts.intraday_risk_math")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.intraday_risk_math'
+import_ = <function _gcd_import at 0x000002281398BE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.intraday_risk_math'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+____ test_transfer_of_ten_from_common_cash_to_collateral_creates_no_equity ____
+
+    def test_transfer_of_ten_from_common_cash_to_collateral_creates_no_equity():
+>       values = risk().equity_value([20, 10], 0, 0, [[0], [0]], 0, 0, [[0], [10]], 100, 100)
+                 ^^^^^^
+
+tests\test_intraday_risk_math.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_math.py:20: in risk
+    return importlib.import_module("scripts.intraday_risk_math")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.intraday_risk_math'
+import_ = <function _gcd_import at 0x000002281398BE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.intraday_risk_math'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+________ test_symbol_axis_sums_assets_once_and_preserves_account_axis _________
+
+    def test_symbol_axis_sums_assets_once_and_preserves_account_axis():
+>       equity = risk().equity_value([10, 20], [2, 3], [1, 2], [[1, 2], [2, 1]],
+                 ^^^^^^
+                                     [[1, 0], [0, 1]], 100, [[5, 7], [11, 13]],
+                                     [[100, 10], [110, 20]], [[101, 11], [111, 21]])
+
+tests\test_intraday_risk_math.py:101: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_math.py:20: in risk
+    return importlib.import_module("scripts.intraday_risk_math")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.intraday_risk_math'
+import_ = <function _gcd_import at 0x000002281398BE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.intraday_risk_math'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+___ test_closed_future_retains_spot_price_risk_but_requires_no_maintenance ____
+
+    def test_closed_future_retains_spot_price_risk_but_requires_no_maintenance():
+>       margin = risk().short_margin(0, np.nan, 0, np.nan, .004, 0)
+                 ^^^^^^
+
+tests\test_intraday_risk_math.py:108: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_math.py:20: in risk
+    return importlib.import_module("scripts.intraday_risk_math")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.intraday_risk_math'
+import_ = <function _gcd_import at 0x000002281398BE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.intraday_risk_math'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+_______ test_financial_posting_states_include_funding_and_each_fee_once _______
+
+    def test_financial_posting_states_include_funding_and_each_fee_once():
+>       equity = risk().equity_value([200, 79, 79, 200], [0, 0, 2, 0], 0,
+                 ^^^^^^
+                                     [[0], [1], [1], [0]], [[0], [1], [1], [0]],
+                                     100, [[0], [20], [20], [0]], 100, 100)
+
+tests\test_intraday_risk_math.py:122: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_math.py:20: in risk
+    return importlib.import_module("scripts.intraday_risk_math")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.intraday_risk_math'
+import_ = <function _gcd_import at 0x000002281398BE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.intraday_risk_math'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+__ test_simultaneous_liquidity_shares_cash_once_and_does_not_sum_across_time __
+
+    def test_simultaneous_liquidity_shares_cash_once_and_does_not_sum_across_time():
+>       result = risk().joint_liquidity([[60, 60], [60, 0], [0, 60]], 100)
+                 ^^^^^^
+
+tests\test_intraday_risk_math.py:131: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_math.py:20: in risk
+    return importlib.import_module("scripts.intraday_risk_math")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.intraday_risk_math'
+import_ = <function _gcd_import at 0x000002281398BE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.intraday_risk_math'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+_____ test_unknown_commitments_or_needs_do_not_assert_available_liquidity _____
+
+    def test_unknown_commitments_or_needs_do_not_assert_available_liquidity():
+>       result = risk().joint_liquidity([[60, 60], [60, np.nan]], 100, reserved_cash=[np.nan, 0])
+                 ^^^^^^
+
+tests\test_intraday_risk_math.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_math.py:20: in risk
+    return importlib.import_module("scripts.intraday_risk_math")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.intraday_risk_math'
+import_ = <function _gcd_import at 0x000002281398BE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.intraday_risk_math'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+_______ test_proxy_uses_fixed_causal_anchor_and_available_futures_only ________
+
+    def test_proxy_uses_fixed_causal_anchor_and_available_futures_only():
+>       result = risk().causal_spot_proxy(100, 200, [180, 220, 230], 10, [11, 12, 14], [11, 12, 13])
+                 ^^^^^^
+
+tests\test_intraday_risk_math.py:148: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_math.py:20: in risk
+    return importlib.import_module("scripts.intraday_risk_math")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.intraday_risk_math'
+import_ = <function _gcd_import at 0x000002281398BE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.intraday_risk_math'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+_ test_proxy_absent_or_future_evidence_is_nd[nan-1-110-missing_or_nonpositive_anchor] _
+
+anchor = nan, anchor_time = 1, futures = 110
+reason = 'missing_or_nonpositive_anchor'
+
+    @pytest.mark.parametrize("anchor,anchor_time,futures,reason", [
+        (np.nan, 1, 110, "missing_or_nonpositive_anchor"),
+        (100, 9, 110, "future_anchor"),
+        (100, 1, np.nan, "missing_or_nonpositive_futures_price"),
+    ])
+    def test_proxy_absent_or_future_evidence_is_nd(anchor, anchor_time, futures, reason):
+>       result = risk().causal_spot_proxy(anchor, 100, futures, anchor_time, 5, 5)
+                 ^^^^^^
+
+tests\test_intraday_risk_math.py:160: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_math.py:20: in risk
+    return importlib.import_module("scripts.intraday_risk_math")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.intraday_risk_math'
+import_ = <function _gcd_import at 0x000002281398BE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.intraday_risk_math'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+_____ test_proxy_absent_or_future_evidence_is_nd[100-9-110-future_anchor] _____
+
+anchor = 100, anchor_time = 9, futures = 110, reason = 'future_anchor'
+
+    @pytest.mark.parametrize("anchor,anchor_time,futures,reason", [
+        (np.nan, 1, 110, "missing_or_nonpositive_anchor"),
+        (100, 9, 110, "future_anchor"),
+        (100, 1, np.nan, "missing_or_nonpositive_futures_price"),
+    ])
+    def test_proxy_absent_or_future_evidence_is_nd(anchor, anchor_time, futures, reason):
+>       result = risk().causal_spot_proxy(anchor, 100, futures, anchor_time, 5, 5)
+                 ^^^^^^
+
+tests\test_intraday_risk_math.py:160: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_math.py:20: in risk
+    return importlib.import_module("scripts.intraday_risk_math")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.intraday_risk_math'
+import_ = <function _gcd_import at 0x000002281398BE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.intraday_risk_math'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+_ test_proxy_absent_or_future_evidence_is_nd[100-1-nan-missing_or_nonpositive_futures_price] _
+
+anchor = 100, anchor_time = 1, futures = nan
+reason = 'missing_or_nonpositive_futures_price'
+
+    @pytest.mark.parametrize("anchor,anchor_time,futures,reason", [
+        (np.nan, 1, 110, "missing_or_nonpositive_anchor"),
+        (100, 9, 110, "future_anchor"),
+        (100, 1, np.nan, "missing_or_nonpositive_futures_price"),
+    ])
+    def test_proxy_absent_or_future_evidence_is_nd(anchor, anchor_time, futures, reason):
+>       result = risk().causal_spot_proxy(anchor, 100, futures, anchor_time, 5, 5)
+                 ^^^^^^
+
+tests\test_intraday_risk_math.py:160: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_math.py:20: in risk
+    return importlib.import_module("scripts.intraday_risk_math")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.intraday_risk_math'
+import_ = <function _gcd_import at 0x000002281398BE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.intraday_risk_math'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+_______________ test_nonpositive_margin_is_unsafe_with_nd_ratio _______________
+
+    def test_nonpositive_margin_is_unsafe_with_nd_ratio():
+>       margin = risk().short_margin(1, 100, 10, [110, 111], .004, 0)
+                 ^^^^^^
+
+tests\test_intraday_risk_math.py:167: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_math.py:20: in risk
+    return importlib.import_module("scripts.intraday_risk_math")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.intraday_risk_math'
+import_ = <function _gcd_import at 0x000002281398BE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.intraday_risk_math'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+_ test_maintenance_at_inclusive_first_tier_boundary_and_m2_deduction[tiers0-200] _
+
+tiers = [{'floor': 0, 'cap': 50000, 'rate': '.004', 'deduction': 0}, {'floor': 50000, 'cap': 100000000, 'rate': '.01', 'deduction': 300}]
+expected = 200
+
+    @pytest.mark.parametrize("tiers,expected", [(BTC, 200), (ETH, 325)])
+    def test_maintenance_at_inclusive_first_tier_boundary_and_m2_deduction(tiers, expected):
+>       result = risk().preventive_topup(1, 50_000, 20_000, 50_000, tiers)
+                 ^^^^^^
+
+tests\test_intraday_risk_math.py:176: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_math.py:20: in risk
+    return importlib.import_module("scripts.intraday_risk_math")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.intraday_risk_math'
+import_ = <function _gcd_import at 0x000002281398BE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.intraday_risk_math'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+_ test_maintenance_at_inclusive_first_tier_boundary_and_m2_deduction[tiers1-325] _
+
+tiers = [{'floor': 0, 'cap': 50000, 'rate': '.0065', 'deduction': 0}, {'floor': 50000, 'cap': 100000000, 'rate': '.01', 'deduction': 175}]
+expected = 325
+
+    @pytest.mark.parametrize("tiers,expected", [(BTC, 200), (ETH, 325)])
+    def test_maintenance_at_inclusive_first_tier_boundary_and_m2_deduction(tiers, expected):
+>       result = risk().preventive_topup(1, 50_000, 20_000, 50_000, tiers)
+                 ^^^^^^
+
+tests\test_intraday_risk_math.py:176: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_math.py:20: in risk
+    return importlib.import_module("scripts.intraday_risk_math")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.intraday_risk_math'
+import_ = <function _gcd_import at 0x000002281398BE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.intraday_risk_math'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+_____ test_liquidation_searches_all_tiers_and_scales_whole_m2_requirement _____
+
+    def test_liquidation_searches_all_tiers_and_scales_whole_m2_requirement():
+>       normal = risk().liquidation_distance(1, 50_000, 200, 40_000, BTC)
+                 ^^^^^^
+
+tests\test_intraday_risk_math.py:184: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_math.py:20: in risk
+    return importlib.import_module("scripts.intraday_risk_math")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.intraday_risk_math'
+import_ = <function _gcd_import at 0x000002281398BE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.intraday_risk_math'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+____________ test_preventive_distance_crosses_tier_at_adverse_mark ____________
+
+    def test_preventive_distance_crosses_tier_at_adverse_mark():
+>       normal = risk().preventive_topup(1, 49_900, 1000, 49_900, BTC)
+                 ^^^^^^
+
+tests\test_intraday_risk_math.py:192: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_math.py:20: in risk
+    return importlib.import_module("scripts.intraday_risk_math")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.intraday_risk_math'
+import_ = <function _gcd_import at 0x000002281398BE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.intraday_risk_math'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+___ test_ratio_equality_requires_strictly_more_without_an_invented_quantum ____
+
+    def test_ratio_equality_requires_strictly_more_without_an_invented_quantum():
+        tiers = [dict(floor=0, cap=100_000_000, rate=".2", deduction=0)]
+        collateral = [np.nextafter(40.0, -np.inf), 40.0, np.nextafter(40.0, np.inf)]
+>       result = risk().preventive_topup(1, 100, collateral, 100, tiers)
+                 ^^^^^^
+
+tests\test_intraday_risk_math.py:202: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_math.py:20: in risk
+    return importlib.import_module("scripts.intraday_risk_math")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.intraday_risk_math'
+import_ = <function _gcd_import at 0x000002281398BE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.intraday_risk_math'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+_ test_distance_equality_passes_and_both_immediate_neighbours_are_distinguished _
+
+    def test_distance_equality_passes_and_both_immediate_neighbours_are_distinguished():
+        collateral = [np.nextafter(15.46, -np.inf), 15.46, np.nextafter(15.46, np.inf)]
+>       result = risk().preventive_topup(1, 100, collateral, 100, BTC)
+                 ^^^^^^
+
+tests\test_intraday_risk_math.py:211: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_math.py:20: in risk
+    return importlib.import_module("scripts.intraday_risk_math")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.intraday_risk_math'
+import_ = <function _gcd_import at 0x000002281398BE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.intraday_risk_math'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+_________ test_closed_future_needs_no_topup_and_uncovered_tier_is_nd __________
+
+    def test_closed_future_needs_no_topup_and_uncovered_tier_is_nd():
+>       closed = risk().preventive_topup(0, np.nan, 0, np.nan, BTC)
+                 ^^^^^^
+
+tests\test_intraday_risk_math.py:220: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_intraday_risk_math.py:20: in risk
+    return importlib.import_module("scripts.intraday_risk_math")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'scripts.intraday_risk_math'
+import_ = <function _gcd_import at 0x000002281398BE20>
+
+>   ???
+E   ModuleNotFoundError: No module named 'scripts.intraday_risk_math'
+
+<frozen importlib._bootstrap>:1335: ModuleNotFoundError
+=========================== short test summary info ===========================
+FAILED tests/test_intraday_risk_math.py::test_intraday_loss_is_visible_even_when_daily_drawdown_is_zero
+FAILED tests/test_intraday_risk_math.py::test_equal_peaks_and_troughs_choose_first_persisted_observation
+FAILED tests/test_intraday_risk_math.py::test_unrecovered_drawdown_and_exact_nanosecond_timestamps
+FAILED tests/test_intraday_risk_math.py::test_gaps_are_nd_for_complete_maximum_but_observed_risk_is_retained
+FAILED tests/test_intraday_risk_math.py::test_nonpositive_equity_is_not_clipped_to_zero_or_safe
+FAILED tests/test_intraday_risk_math.py::test_drawdown_rejects_reordered_or_misaligned_states[times0-equity0]
+FAILED tests/test_intraday_risk_math.py::test_drawdown_rejects_reordered_or_misaligned_states[times1-equity1]
+FAILED tests/test_intraday_risk_math.py::test_paired_spot_short_can_preserve_equity_while_margin_worsens
+FAILED tests/test_intraday_risk_math.py::test_transfer_of_ten_from_common_cash_to_collateral_creates_no_equity
+FAILED tests/test_intraday_risk_math.py::test_symbol_axis_sums_assets_once_and_preserves_account_axis
+FAILED tests/test_intraday_risk_math.py::test_closed_future_retains_spot_price_risk_but_requires_no_maintenance
+FAILED tests/test_intraday_risk_math.py::test_financial_posting_states_include_funding_and_each_fee_once
+FAILED tests/test_intraday_risk_math.py::test_simultaneous_liquidity_shares_cash_once_and_does_not_sum_across_time
+FAILED tests/test_intraday_risk_math.py::test_unknown_commitments_or_needs_do_not_assert_available_liquidity
+FAILED tests/test_intraday_risk_math.py::test_proxy_uses_fixed_causal_anchor_and_available_futures_only
+FAILED tests/test_intraday_risk_math.py::test_proxy_absent_or_future_evidence_is_nd[nan-1-110-missing_or_nonpositive_anchor]
+FAILED tests/test_intraday_risk_math.py::test_proxy_absent_or_future_evidence_is_nd[100-9-110-future_anchor]
+FAILED tests/test_intraday_risk_math.py::test_proxy_absent_or_future_evidence_is_nd[100-1-nan-missing_or_nonpositive_futures_price]
+FAILED tests/test_intraday_risk_math.py::test_nonpositive_margin_is_unsafe_with_nd_ratio
+FAILED tests/test_intraday_risk_math.py::test_maintenance_at_inclusive_first_tier_boundary_and_m2_deduction[tiers0-200]
+FAILED tests/test_intraday_risk_math.py::test_maintenance_at_inclusive_first_tier_boundary_and_m2_deduction[tiers1-325]
+FAILED tests/test_intraday_risk_math.py::test_liquidation_searches_all_tiers_and_scales_whole_m2_requirement
+FAILED tests/test_intraday_risk_math.py::test_preventive_distance_crosses_tier_at_adverse_mark
+FAILED tests/test_intraday_risk_math.py::test_ratio_equality_requires_strictly_more_without_an_invented_quantum
+FAILED tests/test_intraday_risk_math.py::test_distance_equality_passes_and_both_immediate_neighbours_are_distinguished
+FAILED tests/test_intraday_risk_math.py::test_closed_future_needs_no_topup_and_uncovered_tier_is_nd
+26 failed in 0.69s

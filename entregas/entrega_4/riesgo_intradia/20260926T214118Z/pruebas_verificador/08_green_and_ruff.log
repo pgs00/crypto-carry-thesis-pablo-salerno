@@ -1,0 +1,6 @@
+COMMAND: C:\Users\pablo\Documentos\UCEMA\Tesina\Backtesting\.venv\Scripts\python.exe -B -m pytest tests/test_intraday_risk_verifier.py -q
+............................................                             [100%]
+44 passed in 1.24s
+
+COMMAND: C:\Users\pablo\Documentos\UCEMA\Tesina\Backtesting\.venv\Scripts\python.exe -B -m ruff check scripts/verify_intraday_risk.py tests/test_intraday_risk_verifier.py
+All checks passed!

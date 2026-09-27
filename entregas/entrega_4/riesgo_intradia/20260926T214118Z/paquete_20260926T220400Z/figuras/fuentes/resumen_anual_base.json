@@ -1,0 +1,23 @@
+{
+  "title": "Resumen anual BASE",
+  "source_run_ids": [
+    "run_ad71d751b20623006c195ff3",
+    "run_dfea4b7ac1475668d5968c97"
+  ],
+  "sources": [
+    {
+      "path": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\riesgo_intradia\\20260926T214118Z\\paquete_20260926T220400Z\\tablas\\metricas_reutilizadas.csv",
+      "sha256": "47107f6d2d77700cd0981b41326d313bf5e1f9496295c6e4f5ecdb4df7358fab"
+    },
+    {
+      "path": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\riesgo_intradia\\20260926T214118Z\\paquete_20260926T220400Z\\tablas\\drawdown_comparativo.csv",
+      "sha256": "dcc50b674c39765afecc075dd037e8b348171d000e767fd83883832bbc0de10e"
+    }
+  ],
+  "data_csv": "figuras/fuentes/resumen_anual_base.csv",
+  "data_sha256": "e746c16638c3bfd0c2bd7bc3d32fa6864c99afeaabbaa5e1be0150b8ab0647a7",
+  "time_zone": "UTC",
+  "status": "presentation_of_reconstructed_or_reused_evidence",
+  "valuation": "original_reconstructed; hypothetical proxy explicitly labelled",
+  "note": "Retorno parcial 2026 sin equipararlo a doce meses; DD con pico reiniciado al saldo real."
+}

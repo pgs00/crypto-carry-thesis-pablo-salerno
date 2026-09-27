@@ -1,0 +1,15 @@
+{
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+  "packages": {
+    "numpy": "2.3.5",
+    "pyarrow": "25.0.1",
+    "matplotlib": "3.11.2",
+    "pandas": "2.3.3",
+    "pytest": "9.1.1",
+    "ruff": "0.16.8"
+  },
+  "platform": "win32",
+  "head": "6be02c00bfc6ebcdbd72b4ff9da386bb68084b5b",
+  "scope": "environment only; no historical economic replay"
+}

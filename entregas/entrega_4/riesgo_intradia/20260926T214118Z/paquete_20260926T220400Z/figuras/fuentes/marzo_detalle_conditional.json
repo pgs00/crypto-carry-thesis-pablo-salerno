@@ -1,0 +1,18 @@
+{
+  "title": "Detalle suspensión BASE · Condicional",
+  "source_run_ids": [
+    "run_ad71d751b20623006c195ff3"
+  ],
+  "sources": [
+    {
+      "path": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\riesgo_intradia\\20260926T214118Z\\paquete_20260926T220400Z\\evidencia\\marzo_2023.parquet",
+      "sha256": "f69cafc816cf25a825c0739aae6eb48443b1daf24cc3ed0507f96a2821147d86"
+    }
+  ],
+  "data_csv": "figuras/fuentes/marzo_detalle_conditional.csv",
+  "data_sha256": "7ee00dd4007eef66644a61a9ebb89eaeb0111e7c7a88ceb00a72ba72408ce3cc",
+  "time_zone": "UTC",
+  "status": "presentation_of_reconstructed_or_reused_evidence",
+  "valuation": "original_reconstructed; hypothetical proxy explicitly labelled",
+  "note": "Sombreado: spot sin observación nueva; línea 12:00: referencia del tramo descubierto. Posiciones originales."
+}
