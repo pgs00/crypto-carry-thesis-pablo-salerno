@@ -1,0 +1,39 @@
+VERIFIED H1/H3 BASE_E3
+VERIFIED H1/H3 H072
+VERIFIED H1/H3 H336
+VERIFIED H1/H3 V012
+VERIFIED H1/H3 V048
+VERIFIED H1/H3 B025
+VERIFIED H1/H3 B100
+VERIFIED financials/exposure/decisions BASE_E3/conditional
+VERIFIED financials/exposure/decisions BASE_E3/permanent
+VERIFIED financials/exposure/decisions H072/conditional
+VERIFIED financials/exposure/decisions H072/permanent
+VERIFIED financials/exposure/decisions H336/conditional
+VERIFIED financials/exposure/decisions H336/permanent
+VERIFIED financials/exposure/decisions V012/conditional
+VERIFIED financials/exposure/decisions V012/permanent
+VERIFIED financials/exposure/decisions V048/conditional
+VERIFIED financials/exposure/decisions V048/permanent
+VERIFIED financials/exposure/decisions B025/conditional
+VERIFIED financials/exposure/decisions B025/permanent
+VERIFIED financials/exposure/decisions B100/conditional
+VERIFIED financials/exposure/decisions B100/permanent
+{
+  "passed": true,
+  "authentication": {
+    "members": 498,
+    "sha256": "f03624b6bdb40a3c9dfb31705a9c5c3552308200a953f9f5e80cce2137140095"
+  },
+  "portfolios": 14,
+  "new_economic_replays": 12,
+  "reused_portfolios": 2,
+  "daily_reconciliations": 23856,
+  "financial_periods": 112,
+  "h1_summary_rows": 168,
+  "h3_summary_rows": 56,
+  "local_market_h3_recomputed": false,
+  "builder_logic_shared": true,
+  "read_only": true,
+  "engine_replay": false
+}

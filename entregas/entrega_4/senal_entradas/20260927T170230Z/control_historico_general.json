@@ -1,0 +1,10 @@
+{
+  "passed": false,
+  "scope": "Historical repository cleanup check only",
+  "reason": "Protected source changed: src/crypto_carry/config.py",
+  "old_manifest_untouched": true,
+  "current_sha256": "e04aba786423696e5bdba811600402ef465b97bf8ac06147b7a9c74f7b069dd5",
+  "pre_task_sha256": "e04aba786423696e5bdba811600402ef465b97bf8ac06147b7a9c74f7b069dd5",
+  "mismatch_preexists_this_block": true,
+  "interpretation": "Historical cleanup manifest expects an earlier source version. Current source bytes equal pre-task bytes. This check does not certify the current economic engine; it was not repaired by changing the historical manifest."
+}

@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "authentication": {
+    "members": 498,
+    "sha256": "f03624b6bdb40a3c9dfb31705a9c5c3552308200a953f9f5e80cce2137140095"
+  },
+  "scope": "Exact original sealed inventory/hash; numerical verification performed before seal and in final exported copy",
+  "read_only": true
+}

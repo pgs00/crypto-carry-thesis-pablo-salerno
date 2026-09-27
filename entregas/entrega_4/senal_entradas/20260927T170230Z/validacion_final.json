@@ -1,0 +1,116 @@
+{
+  "passed": true,
+  "created_at": "2026-09-27T19:18:59.682954+00:00",
+  "block": "2: signal and entries",
+  "block_complete": true,
+  "entrega_4_complete": false,
+  "package": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\senal_entradas\\20260927T170230Z\\paquete_20260927T185305Z",
+  "manifest_sha256": "f03624b6bdb40a3c9dfb31705a9c5c3552308200a953f9f5e80cce2137140095",
+  "sealed_members": 498,
+  "total_package_files": 500,
+  "new_economic_portfolios": 12,
+  "reused_verified_base_portfolios": 2,
+  "economic_states": {
+    "complete": 14
+  },
+  "daily_reconciliations": 23856,
+  "financial_periods": 112,
+  "money_tolerance": "1E-8 USDT",
+  "full_local_sources_h3_verified": true,
+  "final_sealed_offline_numeric_verification": true,
+  "final_export_exact_bytes": true,
+  "included_code_only": true,
+  "regression": {
+    "passed": 994,
+    "skipped_at_that_time": 13,
+    "later_actual_package_tests_passed": 13,
+    "post_report_targeted_tests_passed": 8,
+    "counts_overlap_do_not_sum": true
+  },
+  "ruff": "passed",
+  "user_index_sha256": "d1a7ea6f7d66832fa2a8d19a778c706735108079cb05bbb7a32f1fcfa3f66ecc",
+  "head": "70b03969afed2637ae6819acc5c0c439dbdac1f0",
+  "publication": "local files only; no commit, push or user-index modification",
+  "old_packages_preserved": [
+    {
+      "dependency": "parent",
+      "manifest_sha256": "77f1cfcaf4fb13044dbcb3b242a2eb19749cf7e88806db023a08bbe4ec272057",
+      "checked_files": 1087
+    },
+    {
+      "dependency": "correction",
+      "manifest_sha256": "e735207869c08bbd0b9b04818c8855ecd9576bd979d3127b5ff108f61d3843ce",
+      "checked_files": 57
+    },
+    {
+      "dependency": "intraday",
+      "manifest_sha256": "78cb03572c5940567852d0255d05a9f8a923f01df01fc0aa8b6cccef70f3b3bb",
+      "checked_files": 199
+    },
+    {
+      "dependency": "capital",
+      "manifest_sha256": "0163cf7622d929c06773700f50d13b2e808afee85a6cf85e48d45dcac03af12b",
+      "checked_files": 93
+    },
+    {
+      "dependency": "sofr",
+      "manifest_sha256": "4769f6c6a80e6fa4b4fd4a4e7c45b94fb10b3773bc3cbbebd36b117f73c938c9",
+      "checked_files": 72
+    }
+  ],
+  "original_market_inputs_checked": 1731,
+  "original_base_files_checked": 98,
+  "engine_and_frozen_runner_unchanged": true,
+  "limitations": [
+    "Builder and verifier share helpers; no claim of fully independent engine validation",
+    "General historical cleanup verifier has a pre-existing obsolete config.py hash; old manifest retained",
+    "Compact offline mode recalculates from included evidence; full minute H3 additionally checked with explicit local data",
+    "No new SOFR, concentration, intraday risk reconstruction, parameter search or statistical inference"
+  ],
+  "artifacts": [
+    {
+      "path": "verificacion_sello_original.json",
+      "sha256": "f83130467ca4fc66c1ff78c04883d2f82a792273a271b8f2b9f5a85b44289a7f"
+    },
+    {
+      "path": "verificacion_portable_final.json",
+      "sha256": "017523a418c66822325ce8c1c02ffaa3a32303a1db938ff4089136f6ed74db0e"
+    },
+    {
+      "path": "control_portable_final.json",
+      "sha256": "a82a941b74f97e488e749d5d1f0efc2ead296c18ddd761d55d6ff1a074d99037"
+    },
+    {
+      "path": "modulos_portable_final.json",
+      "sha256": "fd651fd1f4148e3da0abcab1ea800444d24028e7cc0c8fcacfa5b01f70b3f5bf"
+    },
+    {
+      "path": "preservacion_exportacion_final.json",
+      "sha256": "d8f6dba9fa60b7e3cc6beaf0f30f833a6c648782979ea921d64ae6a15f8b5e0d"
+    },
+    {
+      "path": "estado_git_final.json",
+      "sha256": "5245e96e5727e4957db2aab068a4759ea4dd0f3e6844dbaf8122d44038bb2fc9"
+    },
+    {
+      "path": "verificacion_candidato_datos.json",
+      "sha256": "335c4c0de7c5c252c12af7a48de9f1748143ff8642a54491a060e5f946463229"
+    },
+    {
+      "path": "pytest_paquete_historico.txt",
+      "sha256": "9069f7c932bbca92a654bb22999cebe90e8080e85aa791f5c8d993ab4a1fa623"
+    },
+    {
+      "path": "pytest_regresion_final.txt",
+      "sha256": "05bbd6f01e648c833c9f73900604802cbe1b6dffc168442f97ccd1fc53af5ed2"
+    },
+    {
+      "path": "pytest_conclusion_final.txt",
+      "sha256": "837d6e58bcc3d969852bbfd13e557efe3a8acdee3c9c3b8d6d943c39f579f322"
+    },
+    {
+      "path": "ruff_pre_construccion.txt",
+      "sha256": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af"
+    }
+  ]
+}

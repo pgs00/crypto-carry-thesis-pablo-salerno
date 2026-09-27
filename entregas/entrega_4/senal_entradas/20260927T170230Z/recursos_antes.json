@@ -1,0 +1,9 @@
+{
+  "control_peak_bytes": 943222784,
+  "chosen_workers": 2,
+  "materialization_workers": 1,
+  "reason": "Small deterministic control measured; two replays bounded conservatively, single writer to limit table/JSON peak. Full-run RAM will be monitored.",
+  "free_c": 259343253504,
+  "free_d": 844238032896,
+  "archive_technical_digests_exact": true
+}

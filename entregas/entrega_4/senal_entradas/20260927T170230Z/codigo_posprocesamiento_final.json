@@ -1,0 +1,15 @@
+{
+  "created_at": "2026-09-27T19:08:42.285369+00:00",
+  "scope": "Executed builder/verifier/report snapshot; economic identity recorded separately",
+  "files": {
+    "scripts/build_signal_sensitivity.py": "bf636ec010d8e86d62f3a52c2973667e6d3f4b3551d111b8e8ab6a64c84606f8",
+    "scripts/run_signal_sensitivity.py": "fb1700d60bd32c9b3b579a3a3bcd3406aeabf31ecbdd6920f7899977df7d2fa1",
+    "scripts/signal_sensitivity.py": "de14523061a51fa1534f7f687dadbe31ac46aab87c664cbc85fdb48c82cfcc62",
+    "scripts/signal_sensitivity_delivery.py": "623a1f8dae583ee14cd0f69e397f7ce130c35faebf649fa7da507ee6067f5a88",
+    "scripts/signal_sensitivity_docs.py": "f6ce21df7ffa24ceb3ed25ba465db05cfa186c32f98fdcf95557f541c9c07ed2",
+    "scripts/signal_sensitivity_hypotheses.py": "30c0497c2f7f9c59af6ed9b63f6182d9c5b9a49d39de82426f5873c9d76aeaa7",
+    "scripts/signal_sensitivity_integrity.py": "514b5e05ab4983096cd12518d3a1d467a26fa4a81a1bf29332bc3653fdf9e10f",
+    "scripts/signal_sensitivity_report.py": "c4b3fa45ecc87bf3cef525d384d74b15a72aeff6282e6694aa3af4f54f54c16a",
+    "scripts/verify_signal_sensitivity.py": "1a104de098c2698cbc0ab8e0b73a458fb8cf21bf0f668a0c710f156edfc221f5"
+  }
+}

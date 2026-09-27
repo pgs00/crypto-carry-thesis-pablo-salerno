@@ -1,0 +1,9 @@
+period,orders_submitted,failed_attempts,fills,partial_fills,openings,completed_openings,renewals,rebalances,corrections,close_requests,margin_close_requests,liquidation_fills,blocked_orders,turnover_usdt,scenario,strategy,run_id,horizon_hours
+full,258,123,138,3,10,9,100,49,0,98,5,0,0,151394.8450414,BASE_E3,conditional,run_ad71d751b20623006c195ff3,168
+2022-2023,150,121,30,1,4,3,23,10,0,2,0,0,0,35149.6756140,BASE_E3,conditional,run_ad71d751b20623006c195ff3,168
+2024+,108,2,108,2,6,6,77,39,0,96,5,0,0,116245.1694274,BASE_E3,conditional,run_ad71d751b20623006c195ff3,168
+2022,0,0,0,0,0,0,0,0,0,0,0,0,0,0,BASE_E3,conditional,run_ad71d751b20623006c195ff3,168
+2023,150,121,30,1,4,3,23,10,0,2,0,0,0,35149.6756140,BASE_E3,conditional,run_ad71d751b20623006c195ff3,168
+2024,83,1,83,1,6,6,61,28,0,95,5,0,0,101542.7136104,BASE_E3,conditional,run_ad71d751b20623006c195ff3,168
+2025,25,1,25,1,0,0,16,11,0,1,0,0,0,14702.455817,BASE_E3,conditional,run_ad71d751b20623006c195ff3,168
+2026,0,0,0,0,0,0,0,0,0,0,0,0,0,0,BASE_E3,conditional,run_ad71d751b20623006c195ff3,168

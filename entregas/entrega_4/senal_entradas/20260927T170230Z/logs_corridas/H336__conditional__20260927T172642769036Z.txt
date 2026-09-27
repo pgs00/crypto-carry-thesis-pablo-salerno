@@ -1,0 +1,30 @@
+START H336/conditional 20260927T172644673151Z
+[futures_scaled/conditional] 5.4% | UTC 2022-04-03T12:16:00.000000000Z | fills 22
+[futures_scaled/conditional] 11.5% | UTC 2022-07-15T10:19:00.000000000Z | fills 36
+[futures_scaled/conditional] 17.5% | UTC 2022-10-26T03:49:00.000000000Z | fills 40
+[futures_scaled/conditional] 23.6% | UTC 2023-02-07T04:23:00.000000000Z | fills 55
+[futures_scaled/conditional] 28.9% | UTC 2023-05-08T07:31:00.000000000Z | fills 71
+[futures_scaled/conditional] 33.9% | UTC 2023-08-01T00:34:00.000000000Z | fills 79
+[futures_scaled/conditional] 38.3% | UTC 2023-10-14T23:17:00.000000000Z | fills 86
+[futures_scaled/conditional] 42.8% | UTC 2023-12-30T18:29:00.000000000Z | fills 100
+[futures_scaled/conditional] 47.1% | UTC 2024-03-13T04:26:00.000000000Z | fills 130
+[futures_scaled/conditional] 50.5% | UTC 2024-05-10T05:57:00.000000000Z | fills 146
+[futures_scaled/conditional] 53.3% | UTC 2024-06-27T20:19:00.000000000Z | fills 154
+[futures_scaled/conditional] 56.3% | UTC 2024-08-17T03:19:00.000000000Z | fills 168
+[futures_scaled/conditional] 59.2% | UTC 2024-10-06T08:01:00.001000000Z | fills 172
+[futures_scaled/conditional] 61.8% | UTC 2024-11-18T08:01:00.000000000Z | fills 194
+[futures_scaled/conditional] 64.3% | UTC 2025-01-01T06:40:00.000000000Z | fills 204
+[futures_scaled/conditional] 67.3% | UTC 2025-02-21T09:02:00.000000000Z | fills 212
+[futures_scaled/conditional] 70.1% | UTC 2025-04-08T21:18:00.000000000Z | fills 218
+[futures_scaled/conditional] 72.9% | UTC 2025-05-27T16:42:00.000000000Z | fills 226
+[futures_scaled/conditional] 75.9% | UTC 2025-07-16T19:06:00.000000000Z | fills 232
+[futures_scaled/conditional] 78.4% | UTC 2025-08-29T12:39:00.000000000Z | fills 242
+[futures_scaled/conditional] 81.0% | UTC 2025-10-12T10:25:00.000000000Z | fills 248
+[futures_scaled/conditional] 83.7% | UTC 2025-11-26T22:37:00.000000000Z | fills 250
+[futures_scaled/conditional] 86.4% | UTC 2026-01-12T10:44:00.000000000Z | fills 250
+[futures_scaled/conditional] 89.2% | UTC 2026-02-28T11:39:00.000000000Z | fills 250
+[futures_scaled/conditional] 92.2% | UTC 2026-04-21T18:35:00.000000000Z | fills 250
+[futures_scaled/conditional] 95.0% | UTC 2026-06-08T11:08:00.000000000Z | fills 250
+[futures_scaled/conditional] 98.2% | UTC 2026-07-31T18:37:00.000000000Z | fills 250
+REPLAY_COMPLETE seconds=831.38 peak_bytes=2499149824
+{"scenario": "H336", "strategy": "conditional", "status": "ejecutado", "attempt": "20260927T172644673151Z", "started_utc": "2026-09-27T17:26:44.673172+00:00", "config_hash": "db79e4d133f4bb8dec7c0cdc25ca6919baab3098726ba5f12f3924995b41a87f", "code_hash": "314631c24b36bbee58eb55a9b17505af656de453b60d1496c067e6f30b33de97", "pid": 26328, "engine_status": "complete", "run_id": "run_6f4c063a073e12ce6959b807", "path": "D:\\Backtesting\\outputs\\senal_entradas\\20260927T170230Z\\H336\\conditional\\20260927T172644673151Z\\run_6f4c063a073e12ce6959b807", "manifest_sha256": "5bd127a407e553ccd8db97e38a96c4371a3ef29ef78122b9491a275ec20b913f", "replay_seconds": 831.3796114000143, "total_seconds": 929.2235696999996, "peak_replay_bytes": 2499149824, "peak_process_bytes": 3028373504, "final_equity": "11223.14794789563003509400000", "ledger_difference": "2E-24", "daily_reconciled": 1704, "max_daily_residual": "1.04E-23", "fills": 252, "native_fills": 252, "finished_utc": "2026-09-27T17:42:13.899701+00:00"}

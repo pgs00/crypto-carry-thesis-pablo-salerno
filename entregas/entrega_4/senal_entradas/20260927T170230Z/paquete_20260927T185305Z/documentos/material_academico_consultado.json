@@ -1,0 +1,21 @@
+{
+  "sources": [
+    {
+      "path": "docs/methodology.md",
+      "sha256": "8d4ee1ccf08fcc74284bcf31bb0a5b5ddc824c293fce37cf1bb2e7a2dbfe2121",
+      "form": "text read locally"
+    },
+    {
+      "path": "entregas/entrega_3/archivo/paquete_redaccion/antecedentes/parrafos_fuente.txt",
+      "sha256": "3732ae482cbf8170238457fb0f04483a99c86b05d7715cfe6a112b242d135262",
+      "form": "text read locally"
+    },
+    {
+      "path": "entregas/entrega_3/archivo/paquete_redaccion/antecedentes/bibliografia_consolidada.md",
+      "sha256": "f05dac365fda48c4dc158daf84d32f7950b53491c2f1c74198952260e759f34b",
+      "form": "text read locally"
+    }
+  ],
+  "scope": "Source paragraph extraction from E1/E2 DOCX and archived bibliography; current methodology, E3 evidence and previous E4 read. No claim of having read an absent final E3 PDF; no new bibliographic research or updated references.",
+  "precedence": "Current explicit block specification and verified effective BASE configurations govern; preliminary E1 significance/trades proposals are not reinstated."
+}

@@ -1,0 +1,40 @@
+{
+  "preservation": {
+    "passed": true,
+    "tracked_files_checked": 2877,
+    "scoped_attributes_only": true,
+    "original_base_files_checked": 98,
+    "previous_packages": [
+      {
+        "dependency": "parent",
+        "manifest_sha256": "77f1cfcaf4fb13044dbcb3b242a2eb19749cf7e88806db023a08bbe4ec272057",
+        "checked_files": 1087
+      },
+      {
+        "dependency": "correction",
+        "manifest_sha256": "e735207869c08bbd0b9b04818c8855ecd9576bd979d3127b5ff108f61d3843ce",
+        "checked_files": 57
+      },
+      {
+        "dependency": "intraday",
+        "manifest_sha256": "78cb03572c5940567852d0255d05a9f8a923f01df01fc0aa8b6cccef70f3b3bb",
+        "checked_files": 199
+      },
+      {
+        "dependency": "capital",
+        "manifest_sha256": "0163cf7622d929c06773700f50d13b2e808afee85a6cf85e48d45dcac03af12b",
+        "checked_files": 93
+      },
+      {
+        "dependency": "sofr",
+        "manifest_sha256": "4769f6c6a80e6fa4b4fd4a4e7c45b94fb10b3773bc3cbbebd36b117f73c938c9",
+        "checked_files": 72
+      }
+    ],
+    "market_inputs_checked": 1731,
+    "user_index_sha256": "d1a7ea6f7d66832fa2a8d19a778c706735108079cb05bbb7a32f1fcfa3f66ecc",
+    "head": "70b03969afed2637ae6819acc5c0c439dbdac1f0",
+    "engine_and_frozen_runner_preserved": true
+  },
+  "passed": true
+}

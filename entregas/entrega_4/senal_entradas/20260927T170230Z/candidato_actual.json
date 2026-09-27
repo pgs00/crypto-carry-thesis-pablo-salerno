@@ -1,0 +1,19 @@
+{
+  "path": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\senal_entradas\\20260927T170230Z\\paquete_20260927T185305Z",
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-u",
+    "-X",
+    "utf8",
+    "scripts/build_signal_sensitivity.py",
+    "--work",
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\senal_entradas\\20260927T170230Z",
+    "--data-root",
+    "D:/Backtesting",
+    "--destination",
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\senal_entradas\\20260927T170230Z\\paquete_20260927T185305Z",
+    "--draft"
+  ],
+  "created_at": "2026-09-27T18:53:05.079141+00:00"
+}

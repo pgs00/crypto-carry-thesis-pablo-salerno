@@ -1,0 +1,36 @@
+{
+  "scope": "Stored engine forecasts/opportunity only; final minute-source and exact group verification pending",
+  "rows": [
+    {
+      "scenario": "B025",
+      "forecast_inputs_equal_base": true,
+      "h3_engine_changed_days": 13,
+      "first_changed_dates": [
+        "2023-11-09",
+        "2024-01-02",
+        "2024-02-26",
+        "2024-02-27",
+        "2024-02-28",
+        "2024-02-29",
+        "2024-03-04",
+        "2024-03-05",
+        "2024-03-08",
+        "2024-03-11"
+      ],
+      "mean_opportunity_delta_bps": "-0.003501699378433412558685446009"
+    },
+    {
+      "scenario": "B100",
+      "forecast_inputs_equal_base": true,
+      "h3_engine_changed_days": 5,
+      "first_changed_dates": [
+        "2024-02-27",
+        "2024-02-28",
+        "2024-03-05",
+        "2024-03-08",
+        "2024-12-05"
+      ],
+      "mean_opportunity_delta_bps": "0.0001623553147298444835680751174"
+    }
+  ]
+}

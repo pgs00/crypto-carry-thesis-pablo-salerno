@@ -39,10 +39,3 @@
 # Preserve this new derivative and its public-source originals without Git EOL conversion.
 /entregas/entrega_4/retorno_capital/** -text whitespace=cr-at-eol
 /entregas/entrega_4/retorno_capital/**/*.svg whitespace=-blank-at-eol,cr-at-eol
-# Preserve only the new block-2 evidence, configurations and hashed tooling.
-/entregas/entrega_4/senal_entradas/** -text whitespace=cr-at-eol
-/entregas/entrega_4/senal_entradas/**/*.svg whitespace=-blank-at-eol,cr-at-eol
-/configs/entrega_4/senal_entradas/** -text whitespace=cr-at-eol
-/scripts/*signal_sensitivity*.py -text whitespace=cr-at-eol
-/tests/unit/test_signal_sensitivity*.py -text whitespace=cr-at-eol
-/tests/integration/test_signal_sensitivity*.py -text whitespace=cr-at-eol

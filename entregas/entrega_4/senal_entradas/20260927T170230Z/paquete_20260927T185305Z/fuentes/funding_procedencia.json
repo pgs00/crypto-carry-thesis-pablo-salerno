@@ -1,0 +1,8 @@
+{
+  "run_id": "run_ad71d751b20623006c195ff3",
+  "source_name": "funding_mark_audit.json",
+  "path": "fuentes/funding_base_original.json",
+  "transfer": "exact_bytes",
+  "sha256": "d36cd2288820f44ecc126e49beb80f3b9d96a44445e0a6476a35118d6f004181",
+  "projection": "consumed: symbol,funding_time,available_at,funding_rate,interval_hours,interval_verified"
+}

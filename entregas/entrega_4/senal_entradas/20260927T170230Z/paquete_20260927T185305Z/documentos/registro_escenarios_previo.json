@@ -1,0 +1,100 @@
+[
+  {
+    "scenario": "H072",
+    "diff": {
+      "horizon_hours": {
+        "before": 168,
+        "after": 72
+      },
+      "holding_hours": {
+        "before": 168,
+        "after": 72
+      }
+    },
+    "config_hash": "e71aba74bf05098799410a1394ef6da37aed15897386f8412700a4879d83922d",
+    "strategies": [
+      "conditional",
+      "permanent"
+    ],
+    "status_before_execution": "pendiente"
+  },
+  {
+    "scenario": "H336",
+    "diff": {
+      "horizon_hours": {
+        "before": 168,
+        "after": 336
+      },
+      "holding_hours": {
+        "before": 168,
+        "after": 336
+      }
+    },
+    "config_hash": "db79e4d133f4bb8dec7c0cdc25ca6919baab3098726ba5f12f3924995b41a87f",
+    "strategies": [
+      "conditional",
+      "permanent"
+    ],
+    "status_before_execution": "pendiente"
+  },
+  {
+    "scenario": "V012",
+    "diff": {
+      "half_life_hours": {
+        "before": 24,
+        "after": 12
+      }
+    },
+    "config_hash": "c6c25ce3c4c32a7f89213a043646c8ff69a38fa068e0cf42f7b6489d3ac86fcf",
+    "strategies": [
+      "conditional",
+      "permanent"
+    ],
+    "status_before_execution": "pendiente"
+  },
+  {
+    "scenario": "V048",
+    "diff": {
+      "half_life_hours": {
+        "before": 24,
+        "after": 48
+      }
+    },
+    "config_hash": "6a9ac0349e030817d758920b8df83a6cf1c66875c9598a1d39b9ff078fddfb54",
+    "strategies": [
+      "conditional",
+      "permanent"
+    ],
+    "status_before_execution": "pendiente"
+  },
+  {
+    "scenario": "B025",
+    "diff": {
+      "basis_max": {
+        "before": "0.005",
+        "after": "0.0025"
+      }
+    },
+    "config_hash": "ba97e4b75e3fa4c07957629d5ad96129b80cb58c00f6427545fdae0da132b8a8",
+    "strategies": [
+      "conditional",
+      "permanent"
+    ],
+    "status_before_execution": "pendiente"
+  },
+  {
+    "scenario": "B100",
+    "diff": {
+      "basis_max": {
+        "before": "0.005",
+        "after": "0.01"
+      }
+    },
+    "config_hash": "2d692162b0ac024186e1226c6e32de292ae1029b288d4d1f22f49bb4e3c9f1e0",
+    "strategies": [
+      "conditional",
+      "permanent"
+    ],
+    "status_before_execution": "pendiente"
+  }
+]

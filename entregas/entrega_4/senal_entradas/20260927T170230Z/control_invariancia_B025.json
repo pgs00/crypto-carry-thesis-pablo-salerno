@@ -1,0 +1,105 @@
+{
+  "passed": true,
+  "all_equal": true,
+  "rows": [
+    {
+      "strategy": "conditional",
+      "filename": "equity_daily.csv",
+      "base_digest": "28801042ae0dc723d0f7f3bf6311b8a17ca0f3aa7dac617fd8e15ef20b4e0af3",
+      "new_digest": "28801042ae0dc723d0f7f3bf6311b8a17ca0f3aa7dac617fd8e15ef20b4e0af3",
+      "equal": true
+    },
+    {
+      "strategy": "conditional",
+      "filename": "positions.parquet",
+      "base_digest": "dfddc831c04b053cbe9763e1270f25c380ae9bb3f738b7d96e11dd577ca32967",
+      "new_digest": "dfddc831c04b053cbe9763e1270f25c380ae9bb3f738b7d96e11dd577ca32967",
+      "equal": true
+    },
+    {
+      "strategy": "conditional",
+      "filename": "fills.parquet",
+      "base_digest": "79d7660e18c8dae67b89da246081ed0408fa96f2d304eb0451a4eed88574e2f3",
+      "new_digest": "79d7660e18c8dae67b89da246081ed0408fa96f2d304eb0451a4eed88574e2f3",
+      "equal": true
+    },
+    {
+      "strategy": "conditional",
+      "filename": "orders.parquet",
+      "base_digest": "31c2d9cb5051d4be9072dc825cad07a4df76368ffd2a2085fe1e033a92619226",
+      "new_digest": "31c2d9cb5051d4be9072dc825cad07a4df76368ffd2a2085fe1e033a92619226",
+      "equal": true
+    },
+    {
+      "strategy": "conditional",
+      "filename": "risk_events.parquet",
+      "base_digest": "e332e63eb8ea1b616f979bb7f941eedb5b49ba89f902244d7c575b3ceb6a7baa",
+      "new_digest": "e332e63eb8ea1b616f979bb7f941eedb5b49ba89f902244d7c575b3ceb6a7baa",
+      "equal": true
+    },
+    {
+      "strategy": "conditional",
+      "filename": "ledger.parquet",
+      "base_digest": "1cb6ecfa22dbe36a71b0781b1acaf0977bf771bbbbd66b42244f9e5e4e277b87",
+      "new_digest": "1cb6ecfa22dbe36a71b0781b1acaf0977bf771bbbbd66b42244f9e5e4e277b87",
+      "equal": true
+    },
+    {
+      "strategy": "conditional",
+      "filename": "funding_payments.parquet",
+      "base_digest": "cbc01444cecc03714a9ba7637a4a8bbbe7b1f04fd606be98b406984e5b196eca",
+      "new_digest": "cbc01444cecc03714a9ba7637a4a8bbbe7b1f04fd606be98b406984e5b196eca",
+      "equal": true
+    },
+    {
+      "strategy": "permanent",
+      "filename": "equity_daily.csv",
+      "base_digest": "41e4d97fae1056b7535e4bf9c519b1f6eb7b98481ae6ddcbb3af5c7e935b9d63",
+      "new_digest": "41e4d97fae1056b7535e4bf9c519b1f6eb7b98481ae6ddcbb3af5c7e935b9d63",
+      "equal": true
+    },
+    {
+      "strategy": "permanent",
+      "filename": "positions.parquet",
+      "base_digest": "35ddb572ac4e9bbfe64694a60bff82fb908e913499dbdecc7e69444a383d748b",
+      "new_digest": "35ddb572ac4e9bbfe64694a60bff82fb908e913499dbdecc7e69444a383d748b",
+      "equal": true
+    },
+    {
+      "strategy": "permanent",
+      "filename": "fills.parquet",
+      "base_digest": "9fed0f982cd666a6054c939cd339bf00c0120e117ac847426271fc64c0f2bcde",
+      "new_digest": "9fed0f982cd666a6054c939cd339bf00c0120e117ac847426271fc64c0f2bcde",
+      "equal": true
+    },
+    {
+      "strategy": "permanent",
+      "filename": "orders.parquet",
+      "base_digest": "ee4b6a027c0a73a4faae7cb2ef97c3a2188c4d4c601b37657f720df803bca51e",
+      "new_digest": "ee4b6a027c0a73a4faae7cb2ef97c3a2188c4d4c601b37657f720df803bca51e",
+      "equal": true
+    },
+    {
+      "strategy": "permanent",
+      "filename": "risk_events.parquet",
+      "base_digest": "25f745fcabad028be4e878a29e29da46116b8e633bf95ffa077ce0836862a39c",
+      "new_digest": "25f745fcabad028be4e878a29e29da46116b8e633bf95ffa077ce0836862a39c",
+      "equal": true
+    },
+    {
+      "strategy": "permanent",
+      "filename": "ledger.parquet",
+      "base_digest": "f1662370c7f02463c288ef1e0d5ba5e014a889f6d8bbbd115aafb4627f96cd0c",
+      "new_digest": "f1662370c7f02463c288ef1e0d5ba5e014a889f6d8bbbd115aafb4627f96cd0c",
+      "equal": true
+    },
+    {
+      "strategy": "permanent",
+      "filename": "funding_payments.parquet",
+      "base_digest": "c85503bde860a9e0638e21e1612e0995474e34d88a2cf4d7b07b0dbd510b6393",
+      "new_digest": "c85503bde860a9e0638e21e1612e0995474e34d88a2cf4d7b07b0dbd510b6393",
+      "equal": true
+    }
+  ],
+  "scope": "Seven economic files; H3 and decisions verified separately in final package"
+}

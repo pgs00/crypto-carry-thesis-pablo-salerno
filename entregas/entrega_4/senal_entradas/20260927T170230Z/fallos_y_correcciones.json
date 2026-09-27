@@ -1,0 +1,43 @@
+{
+  "economic_engine_changed": false,
+  "frozen_runner_changed": false,
+  "money_tolerance": "1E-8",
+  "items": [
+    {
+      "issue": "Existing Decimal precision in forecast ratio fixture",
+      "action": "Assert expected ratio at 26 decimal places; no monetary tolerance or engine change"
+    },
+    {
+      "issue": "Period residual could accumulate beyond 1E-8 although daily residuals passed",
+      "action": "New report helper rejects each period residual; negative and positive tests retained"
+    },
+    {
+      "issue": "Review identity, protocol, H3 uniqueness, ND and destination guards",
+      "action": "Explicit validation added outside frozen runner; reviewer rechecked six findings"
+    },
+    {
+      "issue": "Risk fixture expected one close request per asset",
+      "action": "Existing engine repeats diagnostic requests; test now checks first at actual expiry, no renewal and exactly eight fills"
+    },
+    {
+      "issue": "Prior intraday manifest uses files inventory key",
+      "action": "New preservation audit reads documented files and members schemas; every original hash verified"
+    },
+    {
+      "issue": "Synthetic Git fixture lacked CRLF whitespace allowance",
+      "action": "Fixture now uses actual scoped -text whitespace=cr-at-eol attributes; binary export/index tests pass"
+    },
+    {
+      "issue": "Delivery CLI import bootstrap and sealed audit output guard",
+      "action": "Direct CLI now works and negative destination test rejects before writes"
+    },
+    {
+      "issue": "Combined detailed decisions would exceed 100 MiB as repeated CSV",
+      "action": "Lossless compressed Parquet of exact string cells; numeric/UTC nanosecond round-trip passed"
+    },
+    {
+      "issue": "Final review found missing explicit synthesis of changed and stable findings",
+      "action": "Computed conclusion now compares H2/H3, annual/cut verdicts, capital/activity and distinct basis economics/H3; eight targeted tests passed"
+    }
+  ]
+}

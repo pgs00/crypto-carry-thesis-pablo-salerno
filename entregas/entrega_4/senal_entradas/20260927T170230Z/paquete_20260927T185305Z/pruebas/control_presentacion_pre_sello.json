@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "html_local_links": 15,
+  "missing_links": [],
+  "matrix_pending_only": [
+    "pruebas/validaciones_pre_sello.json"
+  ],
+  "figures": [
+    {
+      "name": "horizonte",
+      "width": 1920,
+      "height": 720,
+      "title_dark_pixels": 1942
+    },
+    {
+      "name": "vida_media",
+      "width": 1920,
+      "height": 720,
+      "title_dark_pixels": 1942
+    },
+    {
+      "name": "basis",
+      "width": 1920,
+      "height": 720,
+      "title_dark_pixels": 1942
+    },
+    {
+      "name": "anual_capital",
+      "width": 2080,
+      "height": 1280,
+      "title_dark_pixels": 1861
+    }
+  ],
+  "visual_review": "Four PNGs inspected: readable axes, legends, inherited daily equity and annual capital. Overlapping curves retained.",
+  "bytes": 308681308,
+  "files": 469,
+  "largest": [
+    {
+      "path": "tablas/diario.csv",
+      "bytes": 12253040
+    },
+    {
+      "path": "tablas/exposicion_intervalos.csv",
+      "bytes": 12136525
+    },
+    {
+      "path": "tablas/componentes_diarios.csv",
+      "bytes": 11625397
+    },
+    {
+      "path": "fuentes/funding_base_original.json",
+      "bytes": 11350595
+    },
+    {
+      "path": "tablas/acciones.csv",
+      "bytes": 7005285
+    },
+    {
+      "path": "tablas/decisiones.parquet",
+      "bytes": 6738784
+    },
+    {
+      "path": "hipotesis/BASE_E3/h3_muestra_minutos.csv",
+      "bytes": 5774149
+    },
+    {
+      "path": "hipotesis/H072/h3_muestra_minutos.csv",
+      "bytes": 5719537
+    }
+  ]
+}

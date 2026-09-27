@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "authentication": {
+    "members": 498,
+    "sha256": "f03624b6bdb40a3c9dfb31705a9c5c3552308200a953f9f5e80cce2137140095"
+  },
+  "portfolios": 14,
+  "new_economic_replays": 12,
+  "reused_portfolios": 2,
+  "daily_reconciliations": 23856,
+  "financial_periods": 112,
+  "h1_summary_rows": 168,
+  "h3_summary_rows": 56,
+  "local_market_h3_recomputed": false,
+  "builder_logic_shared": true,
+  "read_only": true,
+  "engine_replay": false
+}

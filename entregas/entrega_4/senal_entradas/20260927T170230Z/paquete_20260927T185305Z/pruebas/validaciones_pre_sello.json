@@ -1,0 +1,140 @@
+{
+  "passed": true,
+  "created_at": "2026-09-27T19:10:49.958592+00:00",
+  "scope": "Real candidate before final proof attachments and seal; numerical core and executed code unchanged. Final sealed inventory/export audit is external.",
+  "full_regression": {
+    "passed": 994,
+    "skipped": 13,
+    "reason": "Actual package fixture not yet available at that time; all thirteen later passed"
+  },
+  "actual_package_tests": {
+    "passed": 13,
+    "semantic_rehashed_corruptions": 11,
+    "read_only_test": true,
+    "protected_output_test": true
+  },
+  "targeted_after_final_report_change": {
+    "passed": 8
+  },
+  "ruff": "passed",
+  "money_tolerance": "1E-8 USDT",
+  "full_local_input_and_h3_verification": true,
+  "portable_offline_copy": true,
+  "included_code_only": true,
+  "temporary_git_index_only": true,
+  "user_index_unchanged": true,
+  "previous_packages_preserved": true,
+  "shared_builder_verifier_logic": true,
+  "no_engine_replay_during_verification": true,
+  "prior_global_cleanup_check": "pre-existing hash mismatch, documented separately; not counted as passing",
+  "artifacts": [
+    {
+      "path": "pruebas/pytest_regresion_final.txt",
+      "sha256": "05bbd6f01e648c833c9f73900604802cbe1b6dffc168442f97ccd1fc53af5ed2"
+    },
+    {
+      "path": "pruebas/pytest_etapa_A.txt",
+      "sha256": "b4db955f8131b0be80a5a80e75e45b0d4dbe97de7befbe427f07ffb480e413a4"
+    },
+    {
+      "path": "pruebas/pytest_relojes_riesgo_H_green.txt",
+      "sha256": "e666ca004ef6d2b4eebaab8e953870a4a7b09a096c83630879d327e02369796c"
+    },
+    {
+      "path": "pruebas/pytest_guardas_entrega_green.txt",
+      "sha256": "c3accef068c69f0cc28995f1d806c1ada35870c0170e5662567222ce536c6a30"
+    },
+    {
+      "path": "pruebas/pytest_conclusion_final.txt",
+      "sha256": "837d6e58bcc3d969852bbfd13e557efe3a8acdee3c9c3b8d6d943c39f579f322"
+    },
+    {
+      "path": "pruebas/pytest_paquete_historico.txt",
+      "sha256": "9069f7c932bbca92a654bb22999cebe90e8080e85aa791f5c8d993ab4a1fa623"
+    },
+    {
+      "path": "pruebas/ruff_pre_construccion.txt",
+      "sha256": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af"
+    },
+    {
+      "path": "pruebas/verificacion_e3.txt",
+      "sha256": "059de7dc7360f338f6b91ab424cfada07b84bc76f0dfb881cdfd8ea9868a7cf1"
+    },
+    {
+      "path": "pruebas/diagnostico_base_control.log",
+      "sha256": "155007f3cc3e593582694a3099f4d67275935f53f0196d0bb047ec4006a3b846"
+    },
+    {
+      "path": "pruebas/control_compatibilidad.log",
+      "sha256": "777bdd1b65847882ae31a40e551b192cf85b2ae3a721152390c2bab94b1738ce"
+    },
+    {
+      "path": "pruebas/control_H1_horizontes.json",
+      "sha256": "715e149bed181b0a80bc370036a705f455d2a039f43199c731668b61ab6b20d8"
+    },
+    {
+      "path": "pruebas/control_H1_vidas_medias.json",
+      "sha256": "68e0a4357108114d9b6f04faa643a74e4bba44537c4b74ebb4a169da5be887f1"
+    },
+    {
+      "path": "pruebas/control_presentacion_pre_sello.json",
+      "sha256": "b47b73119ebe7b01c8bc83d0d2dc9c425cd4744b1bb17ebfb2703237b43b8a3e"
+    },
+    {
+      "path": "pruebas/verificacion_candidato_datos.json",
+      "sha256": "335c4c0de7c5c252c12af7a48de9f1748143ff8642a54491a060e5f946463229"
+    },
+    {
+      "path": "pruebas/verificacion_candidato_datos.log",
+      "sha256": "e7d7c0f0cf704e27b7296ceceab3d48c34db674b3164f36193d9970630952ae6"
+    },
+    {
+      "path": "pruebas/verificacion_copia_limpia.json",
+      "sha256": "be33bfaa366405d757a33de8e778ea0b409a10d0ec9ba3a9c70cb61a8ed228ba"
+    },
+    {
+      "path": "pruebas/verificacion_copia_limpia.log",
+      "sha256": "29aa3371e0757d106182d7e5c7011114ce3a30eac81b058a6c41c112c782c44e"
+    },
+    {
+      "path": "pruebas/modulos_copia_limpia.json",
+      "sha256": "8ae1e08881a9c1c832c7a3314a3a2ebcb663e6e1106803a84f8ca074d8c9df19"
+    },
+    {
+      "path": "pruebas/control_copia_limpia.json",
+      "sha256": "8bc226220197f7013562878b3f4f67564bf844d5cab44947e88dd60c3b595c82"
+    },
+    {
+      "path": "pruebas/preservacion_exportacion_pre_sello.json",
+      "sha256": "ee6a6cef28d96b998723af40c332c35b554c6d152aa35f753534a828611fd035"
+    },
+    {
+      "path": "pruebas/preservacion_exportacion_pre_sello.log",
+      "sha256": "4d9308e96e0d2a35cc3d2a65bfa4dc0cc8e7c34ab6f96f91ac56fbbdc1ef0d63"
+    },
+    {
+      "path": "pruebas/fallos_y_correcciones.json",
+      "sha256": "0be0b3a3afa404a461b6c2523bcb4cf1201cd8d28cba33ce31e81d506fe0329e"
+    },
+    {
+      "path": "pruebas/tdd_conclusion_red.txt",
+      "sha256": "4a95dfc6bd39c0ff1fae276bde97eb357a05a78a471be8abc64dfbd2ec47767b"
+    },
+    {
+      "path": "pruebas/tdd_conclusion_green.txt",
+      "sha256": "8a8c6f7032a476cfacb4755f1415871c1c888d3e91084d62609ba842c600e88e"
+    },
+    {
+      "path": "pruebas/codigo_posprocesamiento_final.json",
+      "sha256": "0e6e2b687769f374f3b182a4e2d6101e31ddc86bc708c50e3c01f013f649e0af"
+    },
+    {
+      "path": "pruebas/gitattributes_original.bin",
+      "sha256": "df047a72869f4026278d6fd10cde72c491056ac706960d815b64ed23ead2db1a"
+    },
+    {
+      "path": "pruebas/gitattributes_adicion.txt",
+      "sha256": "e82b248e4edc1f72e8d1a2070590911d5cf2500974eb8012fc49e12af7a868d0"
+    }
+  ]
+}

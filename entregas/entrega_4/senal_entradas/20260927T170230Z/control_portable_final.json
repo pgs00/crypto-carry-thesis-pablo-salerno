@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "files_checked": 500,
+  "read_only": true,
+  "exported_package": "C:\\Users\\pablo\\AppData\\Local\\Temp\\senal_git_export_yi02_jzv\\checkout\\entregas\\entrega_4\\senal_entradas\\20260927T170230Z\\paquete_20260927T185305Z",
+  "cwd": "C:\\Users\\pablo\\AppData\\Local\\Temp\\senal_git_export_yi02_jzv\\checkout",
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-I",
+    "-B",
+    "-u",
+    "-X",
+    "utf8",
+    "-c",
+    "import json,runpy,sys\nfrom pathlib import Path\npackage=Path(sys.argv[1]).resolve()\naudit=Path(sys.argv[2]); origins=Path(sys.argv[3])\nentry=package/'herramientas/scripts/verify_signal_sensitivity.py'\nsys.argv=[str(entry),'--package',str(package),'--output',str(audit)]\nrunpy.run_path(str(entry),run_name='__main__')\nloaded={name:str(Path(module.__file__).resolve()) for name,module in sys.modules.items() if (name=='crypto_carry' or name.startswith(('scripts.','crypto_carry.'))) and getattr(module,'__file__',None)}\nwrong={name:path for name,path in loaded.items() if not Path(path).is_relative_to(package/'herramientas')}\nassert not wrong,wrong\norigins.write_text(json.dumps(dict(passed=True,isolated_python=True,loaded_modules=loaded),indent=2)+'\\n',encoding='utf-8')\n",
+    "C:\\Users\\pablo\\AppData\\Local\\Temp\\senal_git_export_yi02_jzv\\checkout\\entregas\\entrega_4\\senal_entradas\\20260927T170230Z\\paquete_20260927T185305Z",
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\senal_entradas\\20260927T170230Z\\verificacion_portable_final.json",
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\senal_entradas\\20260927T170230Z\\modulos_portable_final.json"
+  ],
+  "authentication": {
+    "members": 498,
+    "sha256": "f03624b6bdb40a3c9dfb31705a9c5c3552308200a953f9f5e80cce2137140095"
+  },
+  "scope": "Final sealed package from a fresh isolated Git index; exact exported bytes, offline numeric check, included code only, file inventory unchanged"
+}

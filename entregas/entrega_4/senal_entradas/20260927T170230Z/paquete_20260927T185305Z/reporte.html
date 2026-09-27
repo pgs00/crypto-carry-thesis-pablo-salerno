@@ -1,0 +1,182 @@
+<!doctype html><html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Bloque 2 · Señal y entradas</title><style>body{max-width:1180px;margin:48px auto;padding:0 24px;font:17px/1.65 system-ui;color:#183046;background:#fbfcfe}h1{font-size:36px;line-height:1.15}h2{margin-top:48px;border-top:2px solid #d9e4ed;padding-top:22px}h3{color:#245878}a{color:#075c8c}table{border-collapse:collapse;font-size:14px;width:100%;background:white}td{padding:9px 12px;border-bottom:1px solid #dce5ed;text-align:right}td:first-child{text-align:left}tr:first-child{font-weight:700;background:#e8eff6}.table-wrap{overflow-x:auto}figure{margin:28px 0}img{max-width:100%;height:auto}figcaption{font-size:13px;color:#52677a}</style><main><h1>Bloque 2: señal y selección de entradas</h1>
+<p>Entrega 4 técnica preliminar. Sensibilidad exploratoria de historia ya observada: doce carteras nuevas, seis variantes sin cruces y dos referencias BASE reutilizadas con sus run_id. El feedback de E3 ya fue recibido. Este bloque no reemplaza las hipótesis/cifras de E3 ni completa toda E4.</p>
+<h2>Síntesis</h2>
+<p>Muestra UTC [2022-01-01,2026-09-01), 10.000 USDT por cartera, BTCUSDT y ETHUSDT, sin reinicios. Se conservan window=336 h, precarga=360 h, disponibilidad de funding=60 s, costo de ciclo=34 pb, ejecución next_minute_vwap/joint_quantity y participación 1%. No hubo cambios del código económico en este bloque.</p>
+<p>En la muestra completa, H2 de las seis variantes: {&#x27;no_favorable&#x27;: 6}. H2 requiere CAGR condicional positivo y Sharpe superior a la permanente del mismo escenario; no exige un CAGR superior a ella ni un Sharpe positivo. ND conserva su motivo.</p>
+<div class="table-wrap"><table>
+<tr><td>Escenario</td><td>Cartera</td><td>Equity final USDT</td><td>P&amp;L USDT</td><td>Retorno</td><td>CAGR365</td><td>Sharpe RF0</td><td>Activo sin polvo</td><td>Capital medio USDT</td><td>Uso medio diario</td></tr>
+<tr><td>BASE_E3</td><td>conditional</td><td>10785.76</td><td>785.76</td><td>7.8576%</td><td>1.6335%</td><td>4.9624</td><td>28.3178%</td><td>2074.62</td><td>19.8068%</td></tr>
+<tr><td>BASE_E3</td><td>permanent</td><td>11680.07</td><td>1680.07</td><td>16.8007%</td><td>3.3825%</td><td>6.5336</td><td>98.2083%</td><td>8972.08</td><td>82.6309%</td></tr>
+<tr><td>H072</td><td>conditional</td><td>10487.80</td><td>487.80</td><td>4.8780%</td><td>1.0254%</td><td>4.3364</td><td>13.4238%</td><td>1209.89</td><td>11.7509%</td></tr>
+<tr><td>H072</td><td>permanent</td><td>11633.10</td><td>1633.10</td><td>16.3310%</td><td>3.2933%</td><td>6.2325</td><td>98.2082%</td><td>8919.46</td><td>82.3031%</td></tr>
+<tr><td>H336</td><td>conditional</td><td>11223.15</td><td>1223.15</td><td>12.2315%</td><td>2.5025%</td><td>5.8568</td><td>66.9234%</td><td>5073.57</td><td>47.8552%</td></tr>
+<tr><td>H336</td><td>permanent</td><td>11687.45</td><td>1687.45</td><td>16.8745%</td><td>3.3965%</td><td>6.0137</td><td>98.2378%</td><td>8951.23</td><td>82.3841%</td></tr>
+<tr><td>V012</td><td>conditional</td><td>10828.25</td><td>828.25</td><td>8.2825%</td><td>1.7191%</td><td>4.8206</td><td>32.6176%</td><td>2460.44</td><td>23.5398%</td></tr>
+<tr><td>V012</td><td>permanent</td><td>11680.07</td><td>1680.07</td><td>16.8007%</td><td>3.3825%</td><td>6.5336</td><td>98.2083%</td><td>8972.08</td><td>82.6309%</td></tr>
+<tr><td>V048</td><td>conditional</td><td>10791.99</td><td>791.99</td><td>7.9199%</td><td>1.6460%</td><td>4.6143</td><td>27.9117%</td><td>2179.97</td><td>20.8138%</td></tr>
+<tr><td>V048</td><td>permanent</td><td>11680.07</td><td>1680.07</td><td>16.8007%</td><td>3.3825%</td><td>6.5336</td><td>98.2083%</td><td>8972.08</td><td>82.6309%</td></tr>
+<tr><td>B025</td><td>conditional</td><td>10785.76</td><td>785.76</td><td>7.8576%</td><td>1.6335%</td><td>4.9624</td><td>28.3178%</td><td>2074.62</td><td>19.8068%</td></tr>
+<tr><td>B025</td><td>permanent</td><td>11680.07</td><td>1680.07</td><td>16.8007%</td><td>3.3825%</td><td>6.5336</td><td>98.2083%</td><td>8972.08</td><td>82.6309%</td></tr>
+<tr><td>B100</td><td>conditional</td><td>10785.76</td><td>785.76</td><td>7.8576%</td><td>1.6335%</td><td>4.9624</td><td>28.3178%</td><td>2074.62</td><td>19.8068%</td></tr>
+<tr><td>B100</td><td>permanent</td><td>11680.07</td><td>1680.07</td><td>16.8007%</td><td>3.3825%</td><td>6.5336</td><td>98.2083%</td><td>8972.08</td><td>82.6309%</td></tr>
+</table></div>
+<p>Las medias/máximos de capital y garantías se miden en cierres diarios. Tiempo activo es la unión temporal BTC/ETH después de clasificar la trayectoria completa y excluir polvo de la actividad; el polvo conserva su valor/riesgo en equity. No se divide CAGR por utilización.</p>
+<h2>Horizonte y tenencia</h2>
+<p>Cambia conjuntamente horizonte del forecast, objetivo realizado de H1 y reloj de tenencia/renovación. El costo sigue siendo 34 pb por ciclo y la renovación condicional exige sólo forecast &gt;0. Es una dimensión económica compuesta. El final financiero permanece fijo; las exclusiones H1 no provocan cierres ficticios ni recortan entradas cerca del final.</p>
+<p><strong>H072</strong>: P&amp;L condicional 487.80 USDT (delta BASE -297.97); permanente 1633.10 (delta -46.97). Actividad condicional 13.4238%, capital medio 1209.89 USDT. H2 completo: no_favorable. Economía idéntica a BASE: condicional=False, permanente=False.</p>
+<p>En la condicional, CAGR 2022–2023 / 2024–agosto 2026: 0.0653% / 1.7510%; uso medio diario del capital: 0.4234% / 20.2407%. P&amp;L anual 2022, 2023, 2024, 2025 y enero–agosto 2026 (USDT): 0.00, 13.07, 474.93, -0.08, -0.12. Targets H1 iguales a BASE=False; no-change igual=False; H3 diario igual=False.</p>
+<p><strong>H336</strong>: P&amp;L condicional 1223.15 USDT (delta BASE 437.38); permanente 1687.45 (delta 7.38). Actividad condicional 66.9234%, capital medio 5073.57 USDT. H2 completo: no_favorable. Economía idéntica a BASE: condicional=False, permanente=False.</p>
+<p>En la condicional, CAGR 2022–2023 / 2024–agosto 2026: 2.1229% / 2.7880%; uso medio diario del capital: 47.8183% / 47.8829%. P&amp;L anual 2022, 2023, 2024, 2025 y enero–agosto 2026 (USDT): 11.11, 417.97, 644.96, 154.47, -5.36. Targets H1 iguales a BASE=False; no-change igual=False; H3 diario igual=False.</p>
+<p><figure><img src="figuras/horizonte.png" alt="Curvas de patrimonio: Horizonte y tenencia"><figcaption>Curvas de patrimonio: Horizonte y tenencia</figcaption></figure></p>
+<h2>Vida media EWMA</h2>
+<p>Cambia sólo el peso de observaciones dentro de la ventana de 336 h. Horizonte/tenencia=168 h; targets y no-change se comparan por igualdad de inputs. La permanente omite los filtros de funding para entrar y renovar; la igualdad de su economía se comprueba sobre trayectorias y operaciones.</p>
+<p><strong>V012</strong>: P&amp;L condicional 828.25 USDT (delta BASE 42.49); permanente 1680.07 (delta 0.00). Actividad condicional 32.6176%, capital medio 2460.44 USDT. H2 completo: no_favorable. Economía idéntica a BASE: condicional=False, permanente=True.</p>
+<p>En la condicional, CAGR 2022–2023 / 2024–agosto 2026: 1.1327% / 2.1608%; uso medio diario del capital: 14.5418% / 30.2836%. P&amp;L anual 2022, 2023, 2024, 2025 y enero–agosto 2026 (USDT): 0.00, 227.82, 573.39, 27.11, -0.08. Targets H1 iguales a BASE=True; no-change igual=True; H3 diario igual=False.</p>
+<p><strong>V048</strong>: P&amp;L condicional 791.99 USDT (delta BASE 6.23); permanente 1680.07 (delta 0.00). Actividad condicional 27.9117%, capital medio 2179.97 USDT. H2 completo: no_favorable. Economía idéntica a BASE: condicional=False, permanente=True.</p>
+<p>En la condicional, CAGR 2022–2023 / 2024–agosto 2026: 1.1028% / 2.0551%; uso medio diario del capital: 10.3777% / 28.6355%. P&amp;L anual 2022, 2023, 2024, 2025 y enero–agosto 2026 (USDT): 0.00, 221.77, 506.72, 63.59, -0.10. Targets H1 iguales a BASE=True; no-change igual=True; H3 diario igual=False.</p>
+<p><figure><img src="figuras/vida_media.png" alt="Curvas de patrimonio: Vida media EWMA"><figcaption>Curvas de patrimonio: Vida media EWMA</figcaption></figure></p>
+<h2>Techo del basis de entrada</h2>
+<p>Se conserva el piso cero y los extremos inclusivos; los techos son 0,0025 y 0,01. No cambia el stop de ampliación ni se impone basis de entrada a renovaciones. Decisiones de entrada, economía y todos los minutos H3 son poblaciones distintas.</p>
+<p><strong>B025</strong>: P&amp;L condicional 785.76 USDT (delta BASE 0.00); permanente 1680.07 (delta 0.00). Actividad condicional 28.3178%, capital medio 2074.62 USDT. H2 completo: no_favorable. Economía idéntica a BASE: condicional=True, permanente=True.</p>
+<p>En la condicional, CAGR 2022–2023 / 2024–agosto 2026: 1.0814% / 2.0492%; uso medio diario del capital: 10.4220% / 26.8406%. P&amp;L anual 2022, 2023, 2024, 2025 y enero–agosto 2026 (USDT): 0.00, 217.44, 535.13, 33.28, -0.09. Targets H1 iguales a BASE=True; no-change igual=True; H3 diario igual=False.</p>
+<p><strong>B100</strong>: P&amp;L condicional 785.76 USDT (delta BASE 0.00); permanente 1680.07 (delta 0.00). Actividad condicional 28.3178%, capital medio 2074.62 USDT. H2 completo: no_favorable. Economía idéntica a BASE: condicional=True, permanente=True.</p>
+<p>En la condicional, CAGR 2022–2023 / 2024–agosto 2026: 1.0814% / 2.0492%; uso medio diario del capital: 10.4220% / 26.8406%. P&amp;L anual 2022, 2023, 2024, 2025 y enero–agosto 2026 (USDT): 0.00, 217.44, 535.13, 33.28, -0.09. Targets H1 iguales a BASE=True; no-change igual=True; H3 diario igual=False.</p>
+<p><figure><img src="figuras/basis.png" alt="Curvas de patrimonio: Techo del basis de entrada"><figcaption>Curvas de patrimonio: Techo del basis de entrada</figcaption></figure></p>
+<h2>H1: capacidad predictiva</h2>
+<p>Todos los pronósticos elegibles, independientemente de entrada/posición/caja. EWMA y no-change usan las mismas observaciones dentro de cada escenario; MAE por activo y promedio 50/50. El target suma funding real en (señal,señal+H], con calendario acreditado y fin global exclusivo. Se conservan inválidos y motivos. La habilidad 1−MAE_EWMA/MAE_no_change es descriptiva, con denominador positivo, y no es rentabilidad. Un MAE menor con 72 h no demuestra mejor modelo que con 168/336 h.</p>
+<p>Los períodos H1 se asignan por fecha de la señal. Un target puede cruzar enero o el corte de 2024; esa realización futura sirve para evaluar, no para decidir ni entrenar antes de tiempo.</p>
+<div class="table-wrap"><table>
+<tr><td>Escenario</td><td>Unidad</td><td>Válidas</td><td>Excluidas</td><td>MAE EWMA</td><td>MAE no-change</td><td>Habilidad</td></tr>
+<tr><td>BASE_E3</td><td>pb/168 h</td><td>10180</td><td>44</td><td>6.298978</td><td>8.703322</td><td>0.2763</td></tr>
+<tr><td>H072</td><td>pb/72 h</td><td>10204</td><td>20</td><td>2.594311</td><td>3.444331</td><td>0.2468</td></tr>
+<tr><td>H336</td><td>pb/336 h</td><td>10138</td><td>86</td><td>13.998192</td><td>18.884736</td><td>0.2588</td></tr>
+<tr><td>V012</td><td>pb/168 h</td><td>10180</td><td>44</td><td>6.745373</td><td>8.703322</td><td>0.2250</td></tr>
+<tr><td>V048</td><td>pb/168 h</td><td>10180</td><td>44</td><td>6.170673</td><td>8.703322</td><td>0.2910</td></tr>
+<tr><td>B025</td><td>pb/168 h</td><td>10180</td><td>44</td><td>6.298978</td><td>8.703322</td><td>0.2763</td></tr>
+<tr><td>B100</td><td>pb/168 h</td><td>10180</td><td>44</td><td>6.298978</td><td>8.703322</td><td>0.2763</td></tr>
+</table></div>
+<p>H1 se calculó desde funding consumido y señales guardadas para cada configuración. Ambas estrategias se contrastaron por igualdad de inputs; se publica una población común por escenario, sin duplicarla como observaciones independientes. Los horizontes solapados tampoco son observaciones independientes.</p>
+<h2>H2 y H3</h2>
+<div class="table-wrap"><table>
+<tr><td>Escenario</td><td>H2 full</td><td>Motivo H2</td><td>H3</td><td>Oportunidad 2022–23</td><td>Oportunidad 2024–ago26</td><td>Unidad</td></tr>
+<tr><td>BASE_E3</td><td>no_favorable</td><td>sharpe_not_superior</td><td>contraria</td><td>1.340415</td><td>4.019674</td><td>pb/168 h</td></tr>
+<tr><td>H072</td><td>no_favorable</td><td>sharpe_not_superior</td><td>contraria</td><td>0.101257</td><td>0.763546</td><td>pb/72 h</td></tr>
+<tr><td>H336</td><td>no_favorable</td><td>sharpe_not_superior</td><td>contraria</td><td>6.417066</td><td>11.960302</td><td>pb/336 h</td></tr>
+<tr><td>V012</td><td>no_favorable</td><td>sharpe_not_superior</td><td>contraria</td><td>1.512034</td><td>4.029508</td><td>pb/168 h</td></tr>
+<tr><td>V048</td><td>no_favorable</td><td>sharpe_not_superior</td><td>contraria</td><td>1.137950</td><td>4.078573</td><td>pb/168 h</td></tr>
+<tr><td>B025</td><td>no_favorable</td><td>sharpe_not_superior</td><td>contraria</td><td>1.340370</td><td>4.013582</td><td>pb/168 h</td></tr>
+<tr><td>B100</td><td>no_favorable</td><td>sharpe_not_superior</td><td>contraria</td><td>1.340415</td><td>4.019958</td><td>pb/168 h</td></tr>
+</table></div>
+<p>H3 usa todos los minutos, independientemente de posiciones. Forecast completo si pasa costo, basis y operatividad; cero para fallas conocidas, desconocido no es cero. Se promedian 1.440 minutos por activo/día y después BTC/ETH 50/50. Se mantiene la publicación real, incluidos milisegundos, y la interrupción documentada. H3 es favorable sólo si bajan oportunidad media y CAGR condicional entre los cortes; contraria si ambos suben; mixta en los demás casos evaluables. Los resultados H072/H336 son sensibilidades en su propia unidad, no nuevos valores de H3 original de 168 h. No se resta el costo al indicador.</p>
+<p>En la tabla H3, el veredicto compara siempre 2022–2023 con 2024–agosto 2026; los años son desgloses del indicador y del CAGR, no hipótesis temporales nuevas.</p>
+<h2>Años, saldos heredados y capital</h2>
+<p>El tramo 2026 incluye enero–agosto. CAGR se anualiza con 365 días, mientras retorno y P&amp;L corresponden al tramo observado. No se suman retornos anuales. Las tablas completas también incluyen volatilidad, drawdown diario, ND/motivos, componentes P&amp;L y ambos cortes H3.</p>
+<div class="table-wrap"><table>
+<tr><td>Escenario</td><td>Cartera</td><td>Año</td><td>Inicio USDT</td><td>P&amp;L USDT</td><td>Retorno</td><td>CAGR</td><td>Sharpe</td><td>Uso medio diario</td><td>Activo</td></tr>
+<tr><td>BASE_E3</td><td>conditional</td><td>2022</td><td>10000.00</td><td>0.00</td><td>0.0000%</td><td>0.0000%</td><td>ND</td><td>0.0000%</td><td>0.0000%</td></tr>
+<tr><td>BASE_E3</td><td>conditional</td><td>2023</td><td>10000.00</td><td>217.44</td><td>2.1744%</td><td>2.1744%</td><td>4.7904</td><td>20.8441%</td><td>32.9448%</td></tr>
+<tr><td>BASE_E3</td><td>conditional</td><td>2024</td><td>10217.44</td><td>535.13</td><td>5.2374%</td><td>5.2227%</td><td>10.4588</td><td>55.9750%</td><td>67.0171%</td></tr>
+<tr><td>BASE_E3</td><td>conditional</td><td>2025</td><td>10752.57</td><td>33.28</td><td>0.3096%</td><td>0.3096%</td><td>3.2918</td><td>15.4917%</td><td>32.0561%</td></tr>
+<tr><td>BASE_E3</td><td>conditional</td><td>2026</td><td>10785.85</td><td>-0.09</td><td>-0.0008%</td><td>-0.0012%</td><td>-0.4358</td><td>0.0059%</td><td>0.0000%</td></tr>
+<tr><td>BASE_E3</td><td>permanent</td><td>2022</td><td>10000.00</td><td>109.16</td><td>1.0916%</td><td>1.0916%</td><td>2.6217</td><td>78.4727%</td><td>98.2787%</td></tr>
+<tr><td>BASE_E3</td><td>permanent</td><td>2023</td><td>10109.16</td><td>507.50</td><td>5.0202%</td><td>5.0202%</td><td>6.0766</td><td>84.2354%</td><td>94.3147%</td></tr>
+<tr><td>BASE_E3</td><td>permanent</td><td>2024</td><td>10616.66</td><td>686.80</td><td>6.4691%</td><td>6.4509%</td><td>11.7600</td><td>87.8768%</td><td>99.0449%</td></tr>
+<tr><td>BASE_E3</td><td>permanent</td><td>2025</td><td>11303.46</td><td>308.14</td><td>2.7261%</td><td>2.7261%</td><td>13.6610</td><td>86.4822%</td><td>100.0000%</td></tr>
+<tr><td>BASE_E3</td><td>permanent</td><td>2026</td><td>11611.60</td><td>68.46</td><td>0.5896%</td><td>0.8870%</td><td>6.3525</td><td>72.7804%</td><td>100.0000%</td></tr>
+<tr><td>H072</td><td>conditional</td><td>2022</td><td>10000.00</td><td>0.00</td><td>0.0000%</td><td>0.0000%</td><td>ND</td><td>0.0000%</td><td>0.0000%</td></tr>
+<tr><td>H072</td><td>conditional</td><td>2023</td><td>10000.00</td><td>13.07</td><td>0.1307%</td><td>0.1307%</td><td>1.3509</td><td>0.8468%</td><td>1.0042%</td></tr>
+<tr><td>H072</td><td>conditional</td><td>2024</td><td>10013.07</td><td>474.93</td><td>4.7431%</td><td>4.7299%</td><td>10.2451</td><td>53.8485%</td><td>61.4963%</td></tr>
+<tr><td>H072</td><td>conditional</td><td>2025</td><td>10488.00</td><td>-0.08</td><td>-0.0008%</td><td>-0.0008%</td><td>-0.1590</td><td>0.0109%</td><td>0.0000%</td></tr>
+<tr><td>H072</td><td>conditional</td><td>2026</td><td>10487.92</td><td>-0.12</td><td>-0.0012%</td><td>-0.0017%</td><td>-0.4539</td><td>0.0078%</td><td>0.0000%</td></tr>
+<tr><td>H072</td><td>permanent</td><td>2022</td><td>10000.00</td><td>106.03</td><td>1.0603%</td><td>1.0603%</td><td>2.5050</td><td>78.6186%</td><td>98.2787%</td></tr>
+<tr><td>H072</td><td>permanent</td><td>2023</td><td>10106.03</td><td>509.77</td><td>5.0442%</td><td>5.0442%</td><td>5.9848</td><td>84.4429%</td><td>94.3147%</td></tr>
+<tr><td>H072</td><td>permanent</td><td>2024</td><td>10615.80</td><td>665.90</td><td>6.2728%</td><td>6.2551%</td><td>11.0621</td><td>87.7562%</td><td>99.0441%</td></tr>
+<tr><td>H072</td><td>permanent</td><td>2025</td><td>11281.71</td><td>282.99</td><td>2.5084%</td><td>2.5084%</td><td>12.1182</td><td>84.7880%</td><td>100.0000%</td></tr>
+<tr><td>H072</td><td>permanent</td><td>2026</td><td>11564.69</td><td>68.41</td><td>0.5916%</td><td>0.8899%</td><td>6.4230</td><td>72.6777%</td><td>100.0000%</td></tr>
+<tr><td>H336</td><td>conditional</td><td>2022</td><td>10000.00</td><td>11.11</td><td>0.1111%</td><td>0.1111%</td><td>0.3988</td><td>26.4387%</td><td>42.0263%</td></tr>
+<tr><td>H336</td><td>conditional</td><td>2023</td><td>10011.11</td><td>417.97</td><td>4.1751%</td><td>4.1751%</td><td>6.9803</td><td>69.1979%</td><td>91.0339%</td></tr>
+<tr><td>H336</td><td>conditional</td><td>2024</td><td>10429.08</td><td>644.96</td><td>6.1842%</td><td>6.1668%</td><td>11.0726</td><td>79.4491%</td><td>99.0439%</td></tr>
+<tr><td>H336</td><td>conditional</td><td>2025</td><td>11074.04</td><td>154.47</td><td>1.3949%</td><td>1.3949%</td><td>6.5064</td><td>48.1037%</td><td>80.0557%</td></tr>
+<tr><td>H336</td><td>conditional</td><td>2026</td><td>11228.51</td><td>-5.36</td><td>-0.0477%</td><td>-0.0717%</td><td>-1.2490</td><td>0.0070%</td><td>0.0003%</td></tr>
+<tr><td>H336</td><td>permanent</td><td>2022</td><td>10000.00</td><td>107.17</td><td>1.0717%</td><td>1.0717%</td><td>2.5132</td><td>78.0319%</td><td>98.2787%</td></tr>
+<tr><td>H336</td><td>permanent</td><td>2023</td><td>10107.17</td><td>536.71</td><td>5.3102%</td><td>5.3102%</td><td>6.0872</td><td>84.6298%</td><td>94.3147%</td></tr>
+<tr><td>H336</td><td>permanent</td><td>2024</td><td>10643.89</td><td>662.22</td><td>6.2216%</td><td>6.2041%</td><td>9.1333</td><td>86.9919%</td><td>99.1818%</td></tr>
+<tr><td>H336</td><td>permanent</td><td>2025</td><td>11306.11</td><td>312.75</td><td>2.7662%</td><td>2.7662%</td><td>14.2614</td><td>86.1694%</td><td>100.0000%</td></tr>
+<tr><td>H336</td><td>permanent</td><td>2026</td><td>11618.85</td><td>68.60</td><td>0.5904%</td><td>0.8881%</td><td>6.3220</td><td>72.9227%</td><td>100.0000%</td></tr>
+<tr><td>V012</td><td>conditional</td><td>2022</td><td>10000.00</td><td>0.00</td><td>0.0000%</td><td>0.0000%</td><td>ND</td><td>0.0000%</td><td>0.0000%</td></tr>
+<tr><td>V012</td><td>conditional</td><td>2023</td><td>10000.00</td><td>227.82</td><td>2.2782%</td><td>2.2782%</td><td>4.3662</td><td>29.0836%</td><td>35.0453%</td></tr>
+<tr><td>V012</td><td>conditional</td><td>2024</td><td>10227.82</td><td>573.39</td><td>5.6062%</td><td>5.5905%</td><td>10.8265</td><td>71.3760%</td><td>96.5077%</td></tr>
+<tr><td>V012</td><td>conditional</td><td>2025</td><td>10801.22</td><td>27.11</td><td>0.2510%</td><td>0.2510%</td><td>2.9693</td><td>9.2371%</td><td>20.4578%</td></tr>
+<tr><td>V012</td><td>conditional</td><td>2026</td><td>10828.33</td><td>-0.08</td><td>-0.0007%</td><td>-0.0011%</td><td>-0.4745</td><td>0.0045%</td><td>0.0000%</td></tr>
+<tr><td>V012</td><td>permanent</td><td>2022</td><td>10000.00</td><td>109.16</td><td>1.0916%</td><td>1.0916%</td><td>2.6217</td><td>78.4727%</td><td>98.2787%</td></tr>
+<tr><td>V012</td><td>permanent</td><td>2023</td><td>10109.16</td><td>507.50</td><td>5.0202%</td><td>5.0202%</td><td>6.0766</td><td>84.2354%</td><td>94.3147%</td></tr>
+<tr><td>V012</td><td>permanent</td><td>2024</td><td>10616.66</td><td>686.80</td><td>6.4691%</td><td>6.4509%</td><td>11.7600</td><td>87.8768%</td><td>99.0449%</td></tr>
+<tr><td>V012</td><td>permanent</td><td>2025</td><td>11303.46</td><td>308.14</td><td>2.7261%</td><td>2.7261%</td><td>13.6610</td><td>86.4822%</td><td>100.0000%</td></tr>
+<tr><td>V012</td><td>permanent</td><td>2026</td><td>11611.60</td><td>68.46</td><td>0.5896%</td><td>0.8870%</td><td>6.3525</td><td>72.7804%</td><td>100.0000%</td></tr>
+<tr><td>V048</td><td>conditional</td><td>2022</td><td>10000.00</td><td>0.00</td><td>0.0000%</td><td>0.0000%</td><td>ND</td><td>0.0000%</td><td>0.0000%</td></tr>
+<tr><td>V048</td><td>conditional</td><td>2023</td><td>10000.00</td><td>221.77</td><td>2.2177%</td><td>2.2177%</td><td>4.9292</td><td>20.7555%</td><td>33.2186%</td></tr>
+<tr><td>V048</td><td>conditional</td><td>2024</td><td>10221.77</td><td>506.72</td><td>4.9573%</td><td>4.9434%</td><td>8.4411</td><td>57.5186%</td><td>64.5799%</td></tr>
+<tr><td>V048</td><td>conditional</td><td>2025</td><td>10728.50</td><td>63.59</td><td>0.5927%</td><td>0.5927%</td><td>4.6925</td><td>18.7335%</td><td>32.3301%</td></tr>
+<tr><td>V048</td><td>conditional</td><td>2026</td><td>10792.09</td><td>-0.10</td><td>-0.0009%</td><td>-0.0014%</td><td>-0.4735</td><td>0.0058%</td><td>0.0000%</td></tr>
+<tr><td>V048</td><td>permanent</td><td>2022</td><td>10000.00</td><td>109.16</td><td>1.0916%</td><td>1.0916%</td><td>2.6217</td><td>78.4727%</td><td>98.2787%</td></tr>
+<tr><td>V048</td><td>permanent</td><td>2023</td><td>10109.16</td><td>507.50</td><td>5.0202%</td><td>5.0202%</td><td>6.0766</td><td>84.2354%</td><td>94.3147%</td></tr>
+<tr><td>V048</td><td>permanent</td><td>2024</td><td>10616.66</td><td>686.80</td><td>6.4691%</td><td>6.4509%</td><td>11.7600</td><td>87.8768%</td><td>99.0449%</td></tr>
+<tr><td>V048</td><td>permanent</td><td>2025</td><td>11303.46</td><td>308.14</td><td>2.7261%</td><td>2.7261%</td><td>13.6610</td><td>86.4822%</td><td>100.0000%</td></tr>
+<tr><td>V048</td><td>permanent</td><td>2026</td><td>11611.60</td><td>68.46</td><td>0.5896%</td><td>0.8870%</td><td>6.3525</td><td>72.7804%</td><td>100.0000%</td></tr>
+<tr><td>B025</td><td>conditional</td><td>2022</td><td>10000.00</td><td>0.00</td><td>0.0000%</td><td>0.0000%</td><td>ND</td><td>0.0000%</td><td>0.0000%</td></tr>
+<tr><td>B025</td><td>conditional</td><td>2023</td><td>10000.00</td><td>217.44</td><td>2.1744%</td><td>2.1744%</td><td>4.7904</td><td>20.8441%</td><td>32.9448%</td></tr>
+<tr><td>B025</td><td>conditional</td><td>2024</td><td>10217.44</td><td>535.13</td><td>5.2374%</td><td>5.2227%</td><td>10.4588</td><td>55.9750%</td><td>67.0171%</td></tr>
+<tr><td>B025</td><td>conditional</td><td>2025</td><td>10752.57</td><td>33.28</td><td>0.3096%</td><td>0.3096%</td><td>3.2918</td><td>15.4917%</td><td>32.0561%</td></tr>
+<tr><td>B025</td><td>conditional</td><td>2026</td><td>10785.85</td><td>-0.09</td><td>-0.0008%</td><td>-0.0012%</td><td>-0.4358</td><td>0.0059%</td><td>0.0000%</td></tr>
+<tr><td>B025</td><td>permanent</td><td>2022</td><td>10000.00</td><td>109.16</td><td>1.0916%</td><td>1.0916%</td><td>2.6217</td><td>78.4727%</td><td>98.2787%</td></tr>
+<tr><td>B025</td><td>permanent</td><td>2023</td><td>10109.16</td><td>507.50</td><td>5.0202%</td><td>5.0202%</td><td>6.0766</td><td>84.2354%</td><td>94.3147%</td></tr>
+<tr><td>B025</td><td>permanent</td><td>2024</td><td>10616.66</td><td>686.80</td><td>6.4691%</td><td>6.4509%</td><td>11.7600</td><td>87.8768%</td><td>99.0449%</td></tr>
+<tr><td>B025</td><td>permanent</td><td>2025</td><td>11303.46</td><td>308.14</td><td>2.7261%</td><td>2.7261%</td><td>13.6610</td><td>86.4822%</td><td>100.0000%</td></tr>
+<tr><td>B025</td><td>permanent</td><td>2026</td><td>11611.60</td><td>68.46</td><td>0.5896%</td><td>0.8870%</td><td>6.3525</td><td>72.7804%</td><td>100.0000%</td></tr>
+<tr><td>B100</td><td>conditional</td><td>2022</td><td>10000.00</td><td>0.00</td><td>0.0000%</td><td>0.0000%</td><td>ND</td><td>0.0000%</td><td>0.0000%</td></tr>
+<tr><td>B100</td><td>conditional</td><td>2023</td><td>10000.00</td><td>217.44</td><td>2.1744%</td><td>2.1744%</td><td>4.7904</td><td>20.8441%</td><td>32.9448%</td></tr>
+<tr><td>B100</td><td>conditional</td><td>2024</td><td>10217.44</td><td>535.13</td><td>5.2374%</td><td>5.2227%</td><td>10.4588</td><td>55.9750%</td><td>67.0171%</td></tr>
+<tr><td>B100</td><td>conditional</td><td>2025</td><td>10752.57</td><td>33.28</td><td>0.3096%</td><td>0.3096%</td><td>3.2918</td><td>15.4917%</td><td>32.0561%</td></tr>
+<tr><td>B100</td><td>conditional</td><td>2026</td><td>10785.85</td><td>-0.09</td><td>-0.0008%</td><td>-0.0012%</td><td>-0.4358</td><td>0.0059%</td><td>0.0000%</td></tr>
+<tr><td>B100</td><td>permanent</td><td>2022</td><td>10000.00</td><td>109.16</td><td>1.0916%</td><td>1.0916%</td><td>2.6217</td><td>78.4727%</td><td>98.2787%</td></tr>
+<tr><td>B100</td><td>permanent</td><td>2023</td><td>10109.16</td><td>507.50</td><td>5.0202%</td><td>5.0202%</td><td>6.0766</td><td>84.2354%</td><td>94.3147%</td></tr>
+<tr><td>B100</td><td>permanent</td><td>2024</td><td>10616.66</td><td>686.80</td><td>6.4691%</td><td>6.4509%</td><td>11.7600</td><td>87.8768%</td><td>99.0449%</td></tr>
+<tr><td>B100</td><td>permanent</td><td>2025</td><td>11303.46</td><td>308.14</td><td>2.7261%</td><td>2.7261%</td><td>13.6610</td><td>86.4822%</td><td>100.0000%</td></tr>
+<tr><td>B100</td><td>permanent</td><td>2026</td><td>11611.60</td><td>68.46</td><td>0.5896%</td><td>0.8870%</td><td>6.3525</td><td>72.7804%</td><td>100.0000%</td></tr>
+</table></div>
+<p><figure><img src="figuras/anual_capital.png" alt="CAGR y capital por año"><figcaption>CAGR y capital por año</figcaption></figure></p>
+<h2>Entradas, ciclos, exposición y conciliación</h2>
+<p>Se conservan evaluaciones excluyentes funding/basis, no evaluables, primer bloqueo, motivos simultáneos y acciones enlazadas. Un fallo de funding en la permanente es descriptivo y no un rechazo aplicado. Las renovaciones tienen su tabla y su condición de funding cero. Intentos de órdenes no son ciclos; renovar no crea un ciclo. Las tablas distinguen aperturas completas, parciales, fallas, ciclos heredados/abiertos y motivos de cierre.</p>
+<div class="table-wrap"><table>
+<tr><td>Escenario</td><td>Cartera</td><td>Intentos de ciclo</td><td>Aperturas completas</td><td>Renovaciones</td><td>Fills parciales</td><td>Ciclos fallidos</td><td>Minutos sin cobertura (unión)</td></tr>
+<tr><td>BASE_E3</td><td>conditional</td><td>10</td><td>9</td><td>100</td><td>3</td><td>1</td><td>189.00</td></tr>
+<tr><td>BASE_E3</td><td>permanent</td><td>20</td><td>17</td><td>458</td><td>4</td><td>3</td><td>274.00</td></tr>
+<tr><td>H072</td><td>conditional</td><td>4</td><td>4</td><td>146</td><td>0</td><td>0</td><td>40.00</td></tr>
+<tr><td>H072</td><td>permanent</td><td>20</td><td>17</td><td>1079</td><td>5</td><td>3</td><td>341.00</td></tr>
+<tr><td>H336</td><td>conditional</td><td>31</td><td>26</td><td>112</td><td>8</td><td>5</td><td>246.00</td></tr>
+<tr><td>H336</td><td>permanent</td><td>19</td><td>17</td><td>228</td><td>1</td><td>2</td><td>227.00</td></tr>
+<tr><td>V012</td><td>conditional</td><td>13</td><td>11</td><td>120</td><td>2</td><td>2</td><td>203.00</td></tr>
+<tr><td>V012</td><td>permanent</td><td>20</td><td>17</td><td>458</td><td>4</td><td>3</td><td>274.00</td></tr>
+<tr><td>V048</td><td>conditional</td><td>9</td><td>9</td><td>106</td><td>1</td><td>0</td><td>184.00</td></tr>
+<tr><td>V048</td><td>permanent</td><td>20</td><td>17</td><td>458</td><td>4</td><td>3</td><td>274.00</td></tr>
+<tr><td>B025</td><td>conditional</td><td>10</td><td>9</td><td>100</td><td>3</td><td>1</td><td>189.00</td></tr>
+<tr><td>B025</td><td>permanent</td><td>20</td><td>17</td><td>458</td><td>4</td><td>3</td><td>274.00</td></tr>
+<tr><td>B100</td><td>conditional</td><td>10</td><td>9</td><td>100</td><td>3</td><td>1</td><td>189.00</td></tr>
+<tr><td>B100</td><td>permanent</td><td>20</td><td>17</td><td>458</td><td>4</td><td>3</td><td>274.00</td></tr>
+</table></div>
+<p>Cada cierre y cada período se concilian con patrimonio y componentes a 1E-8 USDT. Transferencias/colateral no son P&amp;L; slippage ya integra precios y no se resta dos veces. Las posiciones abiertas al final se valúan sin venta ni fee ficticio. El polvo no se descuenta de equity. Los eventos de margen/liquidación/deuda disponibles están en eventos, ledger y margen_cierre_diario; los extremos de esta última tabla son exclusivamente de cierres diarios.</p>
+<h2>Lectura y límites</h2>
+<p>H2 completo conserva el resultado BASE (no_favorable) en H072, H336, V012, V048, B025, B100; cambia en ninguna. H3 conserva el veredicto BASE (contraria) en H072, H336, V012, V048, B025, B100; cambia en ninguna.</p>
+<p>En años y cortes, los cambios de veredicto H2 frente al mismo período BASE son: H336/2022: no_favorable; H336/2023: favorable; H336/2024: favorable. El agregado no sustituye este desglose.</p>
+<p>La sensibilidad al horizonte combina predicción y tenencia. En la condicional, H072: P&amp;L 487.80 USDT, actividad 13.4238%, uso medio diario 11.7509%; BASE_E3: P&amp;L 785.76 USDT, actividad 28.3178%, uso medio diario 19.8068%; H336: P&amp;L 1223.15 USDT, actividad 66.9234%, uso medio diario 47.8552%. Estos cambios se leen conjuntamente con el capital utilizado; los MAE de 72/168/336 h evalúan objetivos distintos y no ordenan la calidad de un único target.</p>
+<p>V012, con target común de 168 h: MAE EWMA 6.745373 frente a 6.298978 pb/168 h de BASE; P&amp;L condicional 828.25 USDT, actividad 32.6176% y uso medio diario 23.5398%. Economía permanente igual a BASE=True. La relación entre error, actividad y resultado no establece causalidad ni un parámetro óptimo.</p>
+<p>V048, con target común de 168 h: MAE EWMA 6.170673 frente a 6.298978 pb/168 h de BASE; P&amp;L condicional 791.99 USDT, actividad 27.9117% y uso medio diario 20.8138%. Economía permanente igual a BASE=True. La relación entre error, actividad y resultado no establece causalidad ni un parámetro óptimo.</p>
+<p>B025: economía igual a BASE en condicional=True y permanente=True; H3 diario igual=False, delta de oportunidad media completa -0.003502 pb/168 h. La igualdad de operaciones no se extiende automáticamente a los minutos de mercado de H3.</p>
+<p>B100: economía igual a BASE en condicional=True y permanente=True; H3 diario igual=False, delta de oportunidad media completa 0.000162 pb/168 h. La igualdad de operaciones no se extiende automáticamente a los minutos de mercado de H3.</p>
+<p>Las diferencias describen simultáneamente predicción, actividad, capital y resultado. No se atribuye causalmente toda variación de P&amp;L a un contador de entradas. Una invariancia comprobada es un resultado y no motiva cambiar el experimento. Seis sensibilidades no establecen robustez universal, significancia ni un parámetro óptimo. Los años complementan el agregado y permiten observar cambios que éste oculta.</p>
+<p>La tabla de <a href="tablas/deltas_hipotesis.csv">deltas de hipótesis</a> compara vidas medias y basis con BASE. En H072/H336 no calcula diferencias de MAE ni tasa de oportunidad entre horizontes distintos. Mantiene valores, unidad/horizonte y el motivo de no comparabilidad. La habilidad contra no-change sólo describe cada target; no selecciona un horizonte ganador.</p>
+<p>Se mantienen las tarifas/reglas prescritas, 15 marks futures_scaled y tratamiento original de precios de funding. No se certifica una reconstrucción histórica completa de reglas ni liquidez ejecutable real. Los drawdowns nuevos son diarios. No se recalcularon concentración, riesgo intradía, SOFR ni remuneración de caja/garantía. SOFR no sustituye RF=0 ni la permanente en H2. La ficha SOFR pendiente conservada en un paquete antiguo es histórica: la versión posterior aprobada se conserva sólo como contexto terminado.</p>
+<h2>Evidencia y reproducción</h2>
+<p><a href="indice_corridas.json">Índice de corridas</a>, <a href="tablas/metricas.csv">métricas de los ocho períodos</a>, <a href="tablas/deltas.csv">deltas sin redondear</a>, <a href="tablas/invariancias.csv">invariancias</a>, <a href="tablas/h2.csv">H2 completo</a>, <a href="tablas/h3_resumen.csv">H3 por período</a>, <a href="fuentes/archivos_originales.csv">fuentes exactas</a> y <a href="matriz_requisitos.csv">matriz de requisitos</a>. Las observaciones H1, agregados H3 por activo, grupos de disponibilidad y muestra fija de minutos están en hipotesis/&lt;escenario&gt;/. Las fuentes de figuras están en figuras/fuentes/.</p>
+<p>Verificación y alcance: <a href="README.md">README</a>. El verificador recalcula desde evidencia persistida; con --data-root contrasta H3 contra los minutos locales. Constructor y verificador comparten algunos helpers: no se afirma independencia total ni se ejecuta un nuevo replay al verificar. No hubo commit, push ni modificación del índice del usuario.</p>
+<p>El <a href="documentos/control_historico_general.json">control histórico de limpieza del repositorio</a> no pasó: espera un hash anterior de src/crypto_carry/config.py. El archivo actual coincide con el registrado antes de este bloque; no se modificó ese manifiesto para forzar su pase. Los controles de este bloque tienen alcance propio y no certifican todo el motor ni todas las versiones históricas del repositorio.</p></main></html>

@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "tracked_changes": [
+    ".gitattributes"
+  ],
+  "staged_changes": [],
+  "user_index_sha256": "d1a7ea6f7d66832fa2a8d19a778c706735108079cb05bbb7a32f1fcfa3f66ecc",
+  "head": "70b03969afed2637ae6819acc5c0c439dbdac1f0",
+  "status": " M .gitattributes\n?? configs/entrega_4/senal_entradas/\n?? entregas/entrega_4/senal_entradas/\n?? scripts/build_signal_sensitivity.py\n?? scripts/run_signal_sensitivity.py\n?? scripts/signal_sensitivity.py\n?? scripts/signal_sensitivity_delivery.py\n?? scripts/signal_sensitivity_docs.py\n?? scripts/signal_sensitivity_hypotheses.py\n?? scripts/signal_sensitivity_integrity.py\n?? scripts/signal_sensitivity_report.py\n?? scripts/verify_signal_sensitivity.py\n?? tests/integration/test_signal_sensitivity_contracts.py\n?? tests/unit/test_signal_sensitivity.py\n?? tests/unit/test_signal_sensitivity_delivery.py\n?? tests/unit/test_signal_sensitivity_integrity.py\n?? tests/unit/test_signal_sensitivity_package.py\n?? tests/unit/test_signal_sensitivity_reporting.py\n?? tests/unit/test_signal_sensitivity_verifier.py\n",
+  "publication": "local only; no commit or push; new evidence/tooling untracked; user index unchanged"
+}

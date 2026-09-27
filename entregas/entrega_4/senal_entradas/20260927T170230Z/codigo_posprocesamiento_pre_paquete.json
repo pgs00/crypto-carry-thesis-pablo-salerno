@@ -1,0 +1,22 @@
+{
+  "created_at": "2026-09-27T18:29:33.289287+00:00",
+  "files": {
+    "scripts/build_signal_sensitivity.py": "bf636ec010d8e86d62f3a52c2973667e6d3f4b3551d111b8e8ab6a64c84606f8",
+    "scripts/run_signal_sensitivity.py": "fb1700d60bd32c9b3b579a3a3bcd3406aeabf31ecbdd6920f7899977df7d2fa1",
+    "scripts/signal_sensitivity.py": "de14523061a51fa1534f7f687dadbe31ac46aab87c664cbc85fdb48c82cfcc62",
+    "scripts/signal_sensitivity_delivery.py": "623a1f8dae583ee14cd0f69e397f7ce130c35faebf649fa7da507ee6067f5a88",
+    "scripts/signal_sensitivity_docs.py": "7c26df2e96d5e6b2caa7b59bc7e5aa7d731b3953edc162a086f631b24dfe818e",
+    "scripts/signal_sensitivity_hypotheses.py": "30c0497c2f7f9c59af6ed9b63f6182d9c5b9a49d39de82426f5873c9d76aeaa7",
+    "scripts/signal_sensitivity_integrity.py": "514b5e05ab4983096cd12518d3a1d467a26fa4a81a1bf29332bc3653fdf9e10f",
+    "scripts/signal_sensitivity_report.py": "c4b3fa45ecc87bf3cef525d384d74b15a72aeff6282e6694aa3af4f54f54c16a",
+    "scripts/verify_signal_sensitivity.py": "1a104de098c2698cbc0ab8e0b73a458fb8cf21bf0f668a0c710f156edfc221f5",
+    "tests/integration/test_signal_sensitivity_contracts.py": "898a5a76a5616d0418971c6a2358b9cea8e4f0ebc357d414b77f19003cfee82e",
+    "tests/unit/test_signal_sensitivity.py": "d9c7e64d9510e984d1e8558b944f2f2cb7fa6a6cf1f7c05fb19bce29d4579297",
+    "tests/unit/test_signal_sensitivity_delivery.py": "b3aaaefd0eaf1a03082d8f359e071f3e974bdcb2a9ca71a7735b5d15ea5c415d",
+    "tests/unit/test_signal_sensitivity_integrity.py": "43728663feb69bf352ee54c69b2bb800c080a34f11966ff75369b3ebe9160f35",
+    "tests/unit/test_signal_sensitivity_package.py": "c71974b3b80b4bf60383a021a462674bb81066172b86680ee83eaf2f7e3f2218",
+    "tests/unit/test_signal_sensitivity_reporting.py": "0827937a11c20f248e8b43801ed91f761f1d42c1ab588897dfe15c7951f1203d",
+    "tests/unit/test_signal_sensitivity_verifier.py": "80fa3d5e4dd89d4e25d11f76dedc2f00a3ea8628d47ecd5d4a6510a74e1688ae"
+  },
+  "scope": "Postprocessing and verifier candidate before actual package integration; frozen economic runner governed separately by protocolo_previo.json"
+}
