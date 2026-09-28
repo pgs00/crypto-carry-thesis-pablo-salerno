@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "package": "entregas\\entrega_4\\costos_capacidad\\20260927T200204Z\\candidato_parcial_04",
+  "utf8_documents": [
+    "README.md",
+    "reporte.md",
+    "reporte.html",
+    "sintesis.md",
+    "casos_extremos.md",
+    "auditoria_ejecucion.md"
+  ],
+  "resolved_local_links": 36,
+  "word_pdf_files": 0,
+  "visual_inspection": "costos.png inspected; remaining final figures still pending"
+}

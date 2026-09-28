@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "data_root": "D:\\Backtesting",
+  "identities_checked": 1731,
+  "processed_manifest_semantics": "72c244106197fac1e6d4b48d488c0aabeb4a2ccbae2f4f84233bf8629b728445",
+  "protocol_v1": "ab88061ce023b90e22fc1da3480aaff18ed9505be7a9e1252b42b4c8c639cc3b",
+  "protocol_v2": "4ad632a4c8502f30afccf9f30e36d5168ca473feee62b7197faf0f9ae01031f8",
+  "economic_identity": "aff0e047e4638219c5fba35959e160291802dcfad2269ecfc69a8f0e08495308",
+  "economic_change": false
+}

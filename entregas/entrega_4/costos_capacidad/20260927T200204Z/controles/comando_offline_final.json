@@ -1,0 +1,22 @@
+{
+  "package": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\costos_capacidad\\20260927T200204Z\\paquete_20260927T231610Z",
+  "manifest_sha256": "db68d839aa5837db72314b4f3de5509ecff283cc34d13a36e3c4f9d30298e1fb",
+  "cwd": "C:\\Users\\pablo\\AppData\\Local\\Temp\\cost_capacity_git_export_to5bvilv",
+  "environment": {
+    "PYTHONPATH": "",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "argv": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-u",
+    "-X",
+    "utf8",
+    "C:\\Users\\pablo\\AppData\\Local\\Temp\\cost_capacity_git_export_to5bvilv\\checkout\\entregas\\entrega_4\\costos_capacidad\\20260927T200204Z\\paquete_20260927T231610Z\\herramientas\\scripts\\verify_cost_capacity.py",
+    "--package",
+    "C:\\Users\\pablo\\AppData\\Local\\Temp\\cost_capacity_git_export_to5bvilv\\checkout\\entregas\\entrega_4\\costos_capacidad\\20260927T200204Z\\paquete_20260927T231610Z",
+    "--output",
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\costos_capacidad\\20260927T200204Z\\controles\\verificacion_offline_final_02.json"
+  ],
+  "data_root_argument_absent": true
+}

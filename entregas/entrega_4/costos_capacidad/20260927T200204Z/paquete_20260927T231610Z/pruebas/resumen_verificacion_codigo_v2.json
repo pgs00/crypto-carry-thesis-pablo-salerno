@@ -1,0 +1,36 @@
+{
+  "records": [
+    {
+      "log": "regresion_extendida_02.log",
+      "encoding": "utf-16",
+      "summary": "1061 passed, 24 skipped in 822.28s (0:13:42)"
+    },
+    {
+      "log": "focalizadas_finales_02.log",
+      "encoding": "utf-16",
+      "summary": "68 passed in 10.15s"
+    },
+    {
+      "log": "deltas_cobertura_green.log",
+      "encoding": "utf-16",
+      "summary": "5 passed in 8.87s"
+    },
+    {
+      "log": "ruff_consolidacion_03.log",
+      "encoding": "utf-16",
+      "summary": "All checks passed!"
+    },
+    {
+      "log": "ruff_consolidacion_04.log",
+      "encoding": "utf-16",
+      "summary": "All checks passed!"
+    },
+    {
+      "log": "ruff_documentacion_05.log",
+      "encoding": "utf-16",
+      "summary": "All checks passed!"
+    }
+  ],
+  "overlap": "No sumar suites solapadas",
+  "pending": "11 pruebas del sello final; 13 pruebas de artefacto del bloque 2 fuera del lote actual"
+}

@@ -1,0 +1,72 @@
+{
+  "passed": true,
+  "completed_at": "2026-09-27T23:24:59.795383+00:00",
+  "package": "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z",
+  "package_manifest_sha256": "db68d839aa5837db72314b4f3de5509ecff283cc34d13a36e3c4f9d30298e1fb",
+  "runs": 18,
+  "executed": 16,
+  "reused": 2,
+  "failed": 0,
+  "blocked": 0,
+  "engine_status": "complete",
+  "financial_periods": 144,
+  "daily_closes": 30672,
+  "orders": 8903,
+  "fills": 4887,
+  "semantic_corruptions_passed": 11,
+  "read_only_exported_verification": true,
+  "work_document_links_checked": 31,
+  "user_index_unchanged": true,
+  "user_index_sha256": "dc7be151021bd02dd5089c292704da68de93e609abe5cf9e0a438a1fb0a458fe",
+  "head": "af9fc227915a340665fce2f917d810dec6507d12",
+  "commit_or_push": false,
+  "global_matrix": {
+    "path": "docs/entrega_4/matriz_avance.csv",
+    "sha256": "a25de0623c445d13140b8b3456c17b25002a8571f8272f87965616817bc352e3",
+    "block3": "ejecutado",
+    "remaining": [
+      "B4",
+      "B5",
+      "B6",
+      "REVISION"
+    ]
+  },
+  "external_evidence": [
+    {
+      "path": "controles/preservacion_exportacion_final_02.json",
+      "sha256": "f2cb95b3654c637cb21743db495eca334293c7cd057cd448da2b679c8e7e2911"
+    },
+    {
+      "path": "controles/verificacion_offline_final_02.json",
+      "sha256": "1a11c7cd51681b92cabba8023b2a579ff1e4c42efde59de9d353b0fd72782ca0"
+    },
+    {
+      "path": "controles/integridad_tras_pruebas.json",
+      "sha256": "1f3636100f17388f30b11bbc331535c14990baca569f759a20f662d9d9e91449"
+    },
+    {
+      "path": "controles/qa_documentos_final_03.json",
+      "sha256": "ddc25a6aa5a02ec3d403f0372b29d6059e908e0b5aa5fc6ac12b6289e3a232eb"
+    },
+    {
+      "path": "controles/derivacion_final.json",
+      "sha256": "5c052fbcdc7b5afdd85fbc655dcf311c69766e7f2036dc40f59f828f37ed74ea"
+    },
+    {
+      "path": "pruebas/resumen_final.json",
+      "sha256": "519388d870180bf04cce9fab31c5c5752b0069ed3ac6e22a983d39acef66f346"
+    },
+    {
+      "path": "README.md",
+      "sha256": "0e4c94845282c7cd2e7a74627950fe5a9e48958c37830dd1728a6d840ebd93d3"
+    },
+    {
+      "path": "plan.md",
+      "sha256": "6e22f93c418f28c623e1a15bbee3f2f79add2923055f8a0b2f527c1baa380e5e"
+    },
+    {
+      "path": "progreso.md",
+      "sha256": "786e64c58bbdeaf43c3570020ef29f8ae3dbd461dfc401c86cb407ee0abb15be"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "first_control_sequential": true,
+  "control_peak_bytes": 938655744,
+  "control_seconds": [
+    12.04692399999476,
+    14.196939999994356,
+    19.473650999978418,
+    19.60175159998471
+  ],
+  "chosen_workers": 2,
+  "materialization_workers": 1,
+  "total_memory_kib": 29208636,
+  "free_memory_kib": 17692432,
+  "reason": "First short replay completed sequentially and measured before a second control launched. At most two historical replays; single writer; RAM monitored. Full suite still running, targeted fixtures and all deterministic comparisons passed."
+}

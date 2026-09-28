@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "crypto-carry"
+version = "0.1.0"
+description = "Auditable event-driven Binance crypto carry research"
+requires-python = ">=3.14,<3.15"
+dependencies = [
+  "nautilus_trader==1.231.0",
+  "pandas>=2.3.3,<3",
+  "numpy>=2.3,<2.4",
+  "matplotlib>=3.10,<4",
+  "pyarrow>=25,<26",
+  "httpx>=0.28,<1",
+]
+
+[dependency-groups]
+dev = ["pytest>=8,<10", "ruff>=0.12,<1"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/crypto_carry"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]

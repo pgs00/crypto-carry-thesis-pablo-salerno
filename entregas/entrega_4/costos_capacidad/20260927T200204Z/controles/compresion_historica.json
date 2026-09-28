@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "original_bytes": 16375811,
+      "compressed_bytes": 905089,
+      "original_sha256": "c2b3f7f4ac9b6b41800604fe5855b452dc168f9b32c38baad6ee96df9529a773",
+      "compressed_sha256": "d24ed38baa07689d099b52edbdc3ffe41c6b73559b420406925363f0b1a788c8",
+      "rows": 10224,
+      "exact_bytes": true,
+      "exact_rows": true
+    },
+    {
+      "run_id": "run_a0ed2769328f20cec70e1730",
+      "original_bytes": 16375811,
+      "compressed_bytes": 905084,
+      "original_sha256": "e8a70065cc0755564ee85e2c28fd97d1d3074305fdf0ba1722cc2b31ee6cb94d",
+      "compressed_sha256": "f422237e712a16b27ae5a66b7b56624e00ad1f26005bd9044d4168335c6e85f6",
+      "rows": 10224,
+      "exact_bytes": true,
+      "exact_rows": true
+    },
+    {
+      "run_id": "run_30970a364f24039caa24b1cd",
+      "original_bytes": 16375811,
+      "compressed_bytes": 905082,
+      "original_sha256": "3f2644fb50b48df1f3916d03ab42083adc23f0a1d1658e9ec93b5d21140f9056",
+      "compressed_sha256": "ff895afd291c46dec07f93f2a98388e739365eb9e1b10a2fcef8e36f72ac9a23",
+      "rows": 10224,
+      "exact_bytes": true,
+      "exact_rows": true
+    }
+  ]
+}

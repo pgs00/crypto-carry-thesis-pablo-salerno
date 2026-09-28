@@ -1,0 +1,52 @@
+{
+  "stage": "participacion",
+  "runs": [
+    {
+      "scenario": "P050",
+      "strategy": "conditional",
+      "status": "ejecutado",
+      "attempt": "20260927T213224016118Z",
+      "started_utc": "2026-09-27T21:32:24.016149+00:00",
+      "config_hash": "c25b1060b016f797b29587b3a5c4c1d599c658681c645b6867edf44367b90e60",
+      "code_hash": "aff0e047e4638219c5fba35959e160291802dcfad2269ecfc69a8f0e08495308",
+      "pid": 3192,
+      "engine_status": "complete",
+      "run_id": "run_0bf8ede3c7b7c8f038888a67",
+      "path": "D:\\Backtesting\\outputs\\costos_capacidad\\20260927T200204Z\\P050\\conditional\\20260927T213224016118Z\\run_0bf8ede3c7b7c8f038888a67",
+      "manifest_sha256": "c599d947e39c351ce73fb8e646d791519b9dd834ca69302655b1a0d271eb2a80",
+      "replay_seconds": 1189.9090396999964,
+      "total_seconds": 1271.6265088999935,
+      "peak_replay_bytes": 2540535808,
+      "peak_process_bytes": 3070107648,
+      "final_equity": "10771.05321475207800480310000",
+      "ledger_difference": "1E-24",
+      "daily_reconciled": 1704,
+      "max_daily_residual": "1.0E-23",
+      "fills": 141,
+      "native_fills": 141,
+      "h3_path": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\costos_capacidad\\20260927T200204Z\\intentos\\20260927T213224016118Z\\h3_minutos\\run_0bf8ede3c7b7c8f038888a67.csv",
+      "h3_sha256": "293aff50416fd2228398ed52a558673de99d0c8813f649dde40018700692c98b",
+      "finished_utc": "2026-09-27T21:53:35.563463+00:00",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-u",
+        "-X",
+        "utf8",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\scripts\\run_cost_capacity.py",
+        "--package",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\costos_capacidad\\20260927T200204Z",
+        "--data-root",
+        "D:\\Backtesting",
+        "--raw-root",
+        "D:\\Backtesting\\outputs\\costos_capacidad\\20260927T200204Z",
+        "--scenario",
+        "P050",
+        "--strategy",
+        "conditional"
+      ],
+      "log": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\costos_capacidad\\20260927T200204Z\\logs_corridas\\P050__conditional__20260927T213214325482Z.txt",
+      "exit_code": 0
+    }
+  ]
+}

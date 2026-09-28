@@ -46,3 +46,9 @@
 /scripts/*signal_sensitivity*.py -text whitespace=cr-at-eol
 /tests/unit/test_signal_sensitivity*.py -text whitespace=cr-at-eol
 /tests/integration/test_signal_sensitivity*.py -text whitespace=cr-at-eol
+
+# Preserve only the new cost/capacity evidence across Git EOL conversion.
+/entregas/entrega_4/costos_capacidad/** -text whitespace=cr-at-eol
+/entregas/entrega_4/costos_capacidad/**/*.svg whitespace=-blank-at-eol,cr-at-eol
+# Unified diffs retain the space prefix on empty context lines.
+/entregas/entrega_4/costos_capacidad/**/*.patch whitespace=-blank-at-eol,cr-at-eol

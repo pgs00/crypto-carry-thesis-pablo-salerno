@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "complete_matrix": true,
+  "runs_checked": 18,
+  "members_checked": 880,
+  "daily_closes": 30672,
+  "financial_periods": 144,
+  "orders": 8903,
+  "fills": 4887,
+  "capacity_keys": 4887,
+  "h1_observations_reused_once": 10224,
+  "economic_replay": false,
+  "volume_scope": "recalculated from included authenticated windows; massive source files not read",
+  "shared_builder_verifier_logic": true,
+  "tool_root": "C:\\Users\\pablo\\AppData\\Local\\Temp\\cost_capacity_git_export_to5bvilv\\checkout\\entregas\\entrega_4\\costos_capacidad\\20260927T200204Z\\paquete_20260927T231610Z\\herramientas",
+  "config_module_file": "C:\\Users\\pablo\\AppData\\Local\\Temp\\cost_capacity_git_export_to5bvilv\\checkout\\entregas\\entrega_4\\costos_capacidad\\20260927T200204Z\\paquete_20260927T231610Z\\herramientas\\src\\crypto_carry\\config.py",
+  "package_manifest_sha256": "db68d839aa5837db72314b4f3de5509ecff283cc34d13a36e3c4f9d30298e1fb"
+}

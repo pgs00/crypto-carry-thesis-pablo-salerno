@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "package": "entregas\\entrega_4\\costos_capacidad\\20260927T200204Z\\paquete_20260927T231610Z",
+  "package_manifest_sha256": "db68d839aa5837db72314b4f3de5509ecff283cc34d13a36e3c4f9d30298e1fb",
+  "records": [
+    {
+      "log": "regresion_extendida_02.log",
+      "encoding": "utf-16",
+      "sha256": "8b1a008bcd8012d57ed20d7fda625e8bd11c22d5ae4a1fc81b908b6d7167c742",
+      "summary": "1061 passed, 24 skipped in 822.28s (0:13:42)"
+    },
+    {
+      "log": "focalizadas_finales_04.log",
+      "encoding": "utf-16",
+      "sha256": "e795ef71575fcb15510404169fccf3d3ac241a592f844bf213d83ddb9f04fc10",
+      "summary": "72 passed in 7.22s"
+    },
+    {
+      "log": "ruff_final_10.log",
+      "encoding": "utf-16",
+      "sha256": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af",
+      "summary": "All checks passed!"
+    },
+    {
+      "log": "corrupciones_finales_v2_grupo_1.log",
+      "encoding": "utf-16",
+      "sha256": "3c07476fd26a617907d2d45edaba237fa28eb8806b7df82bcc2c47d4f9359fe5",
+      "summary": "================= 5 passed, 6 deselected in 73.98s (0:01:13) =================="
+    },
+    {
+      "log": "corrupciones_finales_v2_grupo_2.log",
+      "encoding": "utf-16",
+      "sha256": "319d5d4f89f3c6a294973d8b0654f33be9bb223dd17e3a9587a4e1b155cc8a40",
+      "summary": "================= 6 passed, 5 deselected in 154.79s (0:02:34) ================="
+    }
+  ],
+  "semantic_cases": 11,
+  "semantic_groups_disjoint": true,
+  "overlap": "No sumar regresion y focalizadas. Los dos grupos negativos son disjuntos y cubren once casos, sin omisiones.",
+  "omissions": "La regresion general original omitio 13 tests dependientes de artefacto del bloque 2 y 11 dependientes de este paquete. Estos ultimos once se ejecutaron y pasaron sobre el sello final.",
+  "economic_replays_added_for_final_checks": 0
+}

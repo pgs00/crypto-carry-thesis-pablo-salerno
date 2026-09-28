@@ -1,0 +1,233 @@
+{
+  "passed": true,
+  "runs": [
+    {
+      "passed": true,
+      "run_id": "run_0bf8ede3c7b7c8f038888a67",
+      "raw_check": {
+        "valid": true,
+        "status": "complete",
+        "run_id": "run_0bf8ede3c7b7c8f038888a67",
+        "checked_files": 47,
+        "mismatches": []
+      },
+      "daily_closes": 1704,
+      "periods": 8,
+      "max_daily_residual": "1.0462E-23",
+      "max_period_residual": "4.1E-24",
+      "orders": 261,
+      "fills": 141,
+      "capacity_keys": 141,
+      "source_windows": 261,
+      "ledger_link": {
+        "passed": true,
+        "ledger_rows": 2366,
+        "daily_links": 1704,
+        "position_links": 3805,
+        "final_free_spot": "5663.828355970000000000000000",
+        "final_free_futures": "5106.509731670078004803100001",
+        "final_debt": "0E-27",
+        "final_inventory": {
+          "BTCUSDT": {
+            "spot": "0.00000898",
+            "short": "0.000",
+            "average": "0",
+            "spot_cost": "0.721947766402914332079820",
+            "realized_spot": "2516.606860390302914332079819",
+            "realized_futures": "-2511.677700000000000000000000",
+            "funding": "350.5555319175850134462",
+            "fees": "48.5186711506",
+            "liquidation_fees": "0",
+            "collateral": "0E-24"
+          },
+          "ETHUSDT": {
+            "spot": "0.0000039",
+            "short": "0.000",
+            "average": "0",
+            "spot_cost": "0.009965348538081817776077",
+            "realized_spot": "-334.379510324461918182223922",
+            "realized_futures": "369.487929999999999999999999",
+            "funding": "495.9682186231929913569",
+            "fees": "66.972658701",
+            "liquidation_fees": "0",
+            "collateral": "0E-24"
+          }
+        },
+        "scope": "cash waterfall, debt, base inventory, fees, collateral and daily/state links; original opening-loss buffer retained"
+      },
+      "scenario": "P050",
+      "strategy": "conditional"
+    },
+    {
+      "passed": true,
+      "run_id": "run_42614245ad3f090a4da31f8d",
+      "raw_check": {
+        "valid": true,
+        "status": "complete",
+        "run_id": "run_42614245ad3f090a4da31f8d",
+        "checked_files": 47,
+        "mismatches": []
+      },
+      "daily_closes": 1704,
+      "periods": 8,
+      "max_daily_residual": "1.0176E-23",
+      "max_period_residual": "5E-24",
+      "orders": 761,
+      "fills": 359,
+      "capacity_keys": 359,
+      "source_windows": 761,
+      "ledger_link": {
+        "passed": true,
+        "ledger_rows": 10147,
+        "daily_links": 1704,
+        "position_links": 4189,
+        "final_free_spot": "0E-27",
+        "final_free_futures": "25.24414070323656287610000000",
+        "final_debt": "0E-27",
+        "final_inventory": {
+          "BTCUSDT": {
+            "spot": "0.03200661",
+            "short": "0.032",
+            "average": "116990.9794354838709677419355",
+            "spot_cost": "3746.065793008042194296982741",
+            "realized_spot": "4008.913247453442194296982741",
+            "realized_futures": "-3972.547241935483870967741941",
+            "funding": "938.2795054834326093392",
+            "fees": "134.1489599450",
+            "liquidation_fees": "0",
+            "collateral": "1871.016423928769245709313852"
+          },
+          "ETHUSDT": {
+            "spot": "0.8930116",
+            "short": "0.893",
+            "average": "4475.618593833682263011831151",
+            "spot_cost": "3994.086269407451670298627318",
+            "realized_spot": "2305.652628651451670298627319",
+            "realized_futures": "-2225.889274293478260869565220",
+            "funding": "845.3725386966567266397",
+            "fees": "130.041659081",
+            "liquidation_fees": "0",
+            "collateral": "1999.178157982521395556178986"
+          }
+        },
+        "scope": "cash waterfall, debt, base inventory, fees, collateral and daily/state links; original opening-loss buffer retained"
+      },
+      "scenario": "P050",
+      "strategy": "permanent"
+    },
+    {
+      "passed": true,
+      "run_id": "run_d946c24cbcf58f0bdb0c7cbe",
+      "raw_check": {
+        "valid": true,
+        "status": "complete",
+        "run_id": "run_d946c24cbcf58f0bdb0c7cbe",
+        "checked_files": 47,
+        "mismatches": []
+      },
+      "daily_closes": 1704,
+      "periods": 8,
+      "max_daily_residual": "5E-25",
+      "max_period_residual": "2E-24",
+      "orders": 153,
+      "fills": 152,
+      "capacity_keys": 152,
+      "source_windows": 153,
+      "ledger_link": {
+        "passed": true,
+        "ledger_rows": 2008,
+        "daily_links": 1704,
+        "position_links": 3964,
+        "final_free_spot": "6719.519840593000000000000000",
+        "final_free_futures": "3895.306744192805948471400000",
+        "final_debt": "0E-27",
+        "final_inventory": {
+          "BTCUSDT": {
+            "spot": "0.00000114",
+            "short": "0.000",
+            "average": "0",
+            "spot_cost": "0.102902670450306860451698",
+            "realized_spot": "594.4562793440503068604517000",
+            "realized_futures": "-593.5058999999999999999999991",
+            "funding": "361.0911297776696591188",
+            "fees": "81.0822138382",
+            "liquidation_fees": "0",
+            "collateral": "0E-24"
+          },
+          "ETHUSDT": {
+            "spot": "0.0000760",
+            "short": "0.000",
+            "average": "0",
+            "spot_cost": "0.2556821973232675884130577",
+            "realized_spot": "579.8843805153232675884130581",
+            "realized_futures": "-571.1425199999999999999999997",
+            "funding": "385.3279509367362893526",
+            "fees": "59.843937082",
+            "liquidation_fees": "0",
+            "collateral": "0E-24"
+          }
+        },
+        "scope": "cash waterfall, debt, base inventory, fees, collateral and daily/state links; original opening-loss buffer retained"
+      },
+      "scenario": "P025",
+      "strategy": "conditional"
+    },
+    {
+      "passed": true,
+      "run_id": "run_dc400ae8f255b3c15916429e",
+      "raw_check": {
+        "valid": true,
+        "status": "complete",
+        "run_id": "run_dc400ae8f255b3c15916429e",
+        "checked_files": 47,
+        "mismatches": []
+      },
+      "daily_closes": 1704,
+      "periods": 8,
+      "max_daily_residual": "1.0443E-23",
+      "max_period_residual": "6E-24",
+      "orders": 817,
+      "fills": 415,
+      "capacity_keys": 415,
+      "source_windows": 817,
+      "ledger_link": {
+        "passed": true,
+        "ledger_rows": 9793,
+        "daily_links": 1704,
+        "position_links": 4298,
+        "final_free_spot": "0E-26",
+        "final_free_futures": "31.02590126142898455224743990",
+        "final_debt": "0E-27",
+        "final_inventory": {
+          "BTCUSDT": {
+            "spot": "0.03200633",
+            "short": "0.032",
+            "average": "99396.31389705882352941176469",
+            "spot_cost": "3180.875033127083358514370346",
+            "realized_spot": "2988.402693340083358514370346",
+            "realized_futures": "-2942.209344705882352941176474",
+            "funding": "894.4924580929243866611",
+            "fees": "105.7369709338",
+            "liquidation_fees": "0",
+            "collateral": "1590.468986353614932662133333"
+          },
+          "ETHUSDT": {
+            "spot": "1.0390034",
+            "short": "1.039",
+            "average": "4314.295413820906216568416863",
+            "spot_cost": "4479.504750144894330076247914",
+            "realized_spot": "1589.286059859894330076247914",
+            "realized_futures": "-1523.090404959921559014585120",
+            "funding": "804.1231410643046775640",
+            "fees": "180.540315364",
+            "liquidation_fees": "0",
+            "collateral": "2242.852645506581235054957630"
+          }
+        },
+        "scope": "cash waterfall, debt, base inventory, fees, collateral and daily/state links; original opening-loss buffer retained"
+      },
+      "scenario": "P025",
+      "strategy": "permanent"
+    }
+  ]
+}

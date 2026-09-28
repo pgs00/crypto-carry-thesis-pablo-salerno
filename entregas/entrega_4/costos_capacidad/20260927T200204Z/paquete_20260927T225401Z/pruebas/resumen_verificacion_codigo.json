@@ -1,0 +1,30 @@
+{
+  "records": [
+    {
+      "log": "regresion_extendida_02.log",
+      "encoding": "utf-16",
+      "summary": "1061 passed, 24 skipped in 822.28s (0:13:42)",
+      "counts": [
+        "1061",
+        "24"
+      ]
+    },
+    {
+      "log": "focalizadas_finales_01.log",
+      "encoding": "utf-16",
+      "summary": "67 passed in 23.94s",
+      "counts": [
+        "67",
+        ""
+      ]
+    },
+    {
+      "log": "ruff_extendido_02.log",
+      "encoding": "utf-16",
+      "summary": "All checks passed!",
+      "counts": null
+    }
+  ],
+  "overlap": "Do not sum suite counts; focused suite includes latest final-state linkage added during general run",
+  "omitted": "13 prior block-2 artifact tests; 11 block-3 sealed-artifact mutation tests to execute after final seal"
+}

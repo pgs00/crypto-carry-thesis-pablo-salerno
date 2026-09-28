@@ -1,0 +1,22 @@
+{
+  "source_package": "paquete_20260927T230722Z",
+  "source_manifest_sha256": "fb8a718fd544e93934cbe379db0ad6194234e13f5c6b00bb0cb3295bb2442f5e",
+  "destination_package": "paquete_20260927T231610Z",
+  "changed_members": [
+    {
+      "path": "controles/revision_independiente.md",
+      "before": "1a0bfdf6be28d226f424de97056911edb667f59ff17d882551b55baa87d5c78e",
+      "after": "1d13b774da6dda53f9d36c175ce99c06475d6a8ccd7ebdcbf8ea23fe5598681e"
+    },
+    {
+      "path": "documentos/gitattributes_adicion.txt",
+      "before": "9bb4d59654c177498240aa62b9741e3e9e8c5da1de977aecfc057616052ce57c",
+      "after": "f6013704aa6cbaaebce46d10a6d0fbce51b17b8e9b48ccb8d0ec156981eae4cd"
+    }
+  ],
+  "unchanged_members": 876,
+  "unchanged_financial_evidence": true,
+  "economic_replay": false,
+  "reason": "Presentation-only derivative: remove final empty line in review note; preserve unified diff whitespace with scoped attributes. Original sealed package retained unchanged.",
+  "preseal_local_verification": "verificacion_final_sin_sello_02.json"
+}

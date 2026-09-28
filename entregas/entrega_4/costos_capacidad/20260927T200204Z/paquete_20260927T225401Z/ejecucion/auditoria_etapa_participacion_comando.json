@@ -1,0 +1,18 @@
+{
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-u",
+    "-X",
+    "utf8",
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\scripts\\audit_cost_capacity_stage.py",
+    "--work",
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\costos_capacidad\\20260927T200204Z",
+    "--data-root",
+    "D:\\Backtesting",
+    "--stage",
+    "participacion"
+  ],
+  "exit_code": 0,
+  "log": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\costos_capacidad\\20260927T200204Z\\auditoria_etapa_participacion.log"
+}

@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "packages": [
+    {
+      "package": "paquete_20260927T230722Z",
+      "passed": true,
+      "members": 878,
+      "manifest_sha256": "fb8a718fd544e93934cbe379db0ad6194234e13f5c6b00bb0cb3295bb2442f5e",
+      "unlisted_members": []
+    },
+    {
+      "package": "paquete_20260927T231610Z",
+      "passed": true,
+      "members": 880,
+      "manifest_sha256": "db68d839aa5837db72314b4f3de5509ecff283cc34d13a36e3c4f9d30298e1fb",
+      "unlisted_members": []
+    }
+  ]
+}

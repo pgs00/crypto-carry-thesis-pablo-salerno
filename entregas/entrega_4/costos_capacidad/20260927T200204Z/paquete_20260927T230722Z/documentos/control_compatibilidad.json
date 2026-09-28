@@ -1,0 +1,179 @@
+{
+  "passed": true,
+  "comparisons": [
+    {
+      "control": "disabled",
+      "window": [
+        "2022-01-01",
+        "2022-01-15"
+      ],
+      "mode": "realized",
+      "strategy": "conditional",
+      "passed": true,
+      "differences": [],
+      "previous_status": "complete",
+      "current_status": "complete",
+      "fills": 0
+    },
+    {
+      "control": "disabled",
+      "window": [
+        "2022-01-01",
+        "2022-01-15"
+      ],
+      "mode": "realized",
+      "strategy": "permanent",
+      "passed": true,
+      "differences": [],
+      "previous_status": "complete",
+      "current_status": "complete",
+      "fills": 8
+    },
+    {
+      "control": "disabled",
+      "window": [
+        "2024-03-01",
+        "2024-03-15"
+      ],
+      "mode": "realized",
+      "strategy": "conditional",
+      "passed": true,
+      "differences": [],
+      "previous_status": "complete",
+      "current_status": "complete",
+      "fills": 8
+    },
+    {
+      "control": "disabled",
+      "window": [
+        "2024-03-01",
+        "2024-03-15"
+      ],
+      "mode": "realized",
+      "strategy": "permanent",
+      "passed": true,
+      "differences": [],
+      "previous_status": "complete",
+      "current_status": "complete",
+      "fills": 8
+    },
+    {
+      "control": "disabled",
+      "window": [
+        "2024-03-01",
+        "2024-03-15"
+      ],
+      "mode": "base_e3",
+      "strategy": "conditional",
+      "passed": true,
+      "differences": [],
+      "previous_status": "complete",
+      "current_status": "complete",
+      "fills": 8
+    },
+    {
+      "control": "disabled",
+      "window": [
+        "2024-03-01",
+        "2024-03-15"
+      ],
+      "mode": "base_e3",
+      "strategy": "permanent",
+      "passed": true,
+      "differences": [],
+      "previous_status": "complete",
+      "current_status": "complete",
+      "fills": 8
+    },
+    {
+      "control": "disabled",
+      "window": [
+        "2023-03-20",
+        "2023-03-26"
+      ],
+      "mode": "base_e3_promo",
+      "strategy": "conditional",
+      "passed": true,
+      "differences": [],
+      "previous_status": "complete",
+      "current_status": "complete",
+      "fills": 0
+    },
+    {
+      "control": "disabled",
+      "window": [
+        "2023-03-20",
+        "2023-03-26"
+      ],
+      "mode": "base_e3_promo",
+      "strategy": "permanent",
+      "passed": true,
+      "differences": [],
+      "previous_status": "complete",
+      "current_status": "complete",
+      "fills": 0
+    },
+    {
+      "control": "fixed_on_base",
+      "window": [
+        "2022-01-01",
+        "2022-01-15"
+      ],
+      "mode": "realized",
+      "strategy": "conditional",
+      "passed": true,
+      "differences": [],
+      "previous_status": "complete",
+      "current_status": "complete",
+      "fills": 0
+    },
+    {
+      "control": "fixed_on_base",
+      "window": [
+        "2022-01-01",
+        "2022-01-15"
+      ],
+      "mode": "realized",
+      "strategy": "permanent",
+      "passed": true,
+      "differences": [],
+      "previous_status": "complete",
+      "current_status": "complete",
+      "fills": 8
+    },
+    {
+      "control": "fixed_on_base",
+      "window": [
+        "2024-03-01",
+        "2024-03-15"
+      ],
+      "mode": "realized",
+      "strategy": "conditional",
+      "passed": true,
+      "differences": [],
+      "previous_status": "complete",
+      "current_status": "complete",
+      "fills": 8
+    },
+    {
+      "control": "fixed_on_base",
+      "window": [
+        "2024-03-01",
+        "2024-03-15"
+      ],
+      "mode": "realized",
+      "strategy": "permanent",
+      "passed": true,
+      "differences": [],
+      "previous_status": "complete",
+      "current_status": "complete",
+      "fills": 8
+    }
+  ],
+  "scope": "Exact complete projections for three deterministic windows and old modes; new mode ignores only four explicit diagnostic metadata fields; no full financial BASE replay",
+  "control_files": [
+    "controles/compat_previo.json",
+    "controles/compat_nuevo.json",
+    "controles/compat_fijo.json"
+  ]
+}

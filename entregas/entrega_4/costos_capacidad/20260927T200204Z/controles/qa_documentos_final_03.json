@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "package": "entregas\\entrega_4\\costos_capacidad\\20260927T200204Z\\paquete_20260927T231610Z",
+  "package_manifest_sha256": "db68d839aa5837db72314b4f3de5509ecff283cc34d13a36e3c4f9d30298e1fb",
+  "utf8_documents": [
+    "README.md",
+    "reporte.md",
+    "reporte.html",
+    "sintesis.md",
+    "auditoria_ejecucion.md",
+    "casos_extremos.md"
+  ],
+  "links_checked": 42,
+  "figures_exactly_equal_to_visually_reviewed_version": true,
+  "prior_visual_qa": "qa_documentos_final_02.json",
+  "forbidden_formats": [],
+  "source": "all rendered documents and figures byte-identical to reviewed source version"
+}

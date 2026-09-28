@@ -1,0 +1,47 @@
+{
+  "runs": [
+    {
+      "scenario": "C02",
+      "strategy": "conditional",
+      "run_id": "run_f7473a5631a2b3c8d6a8a38b",
+      "no_word_pdf": true
+    },
+    {
+      "scenario": "C02",
+      "strategy": "permanent",
+      "run_id": "run_ee33680946eec3de1f7e7257",
+      "no_word_pdf": true
+    },
+    {
+      "scenario": "C03",
+      "strategy": "conditional",
+      "run_id": "run_a0ed2769328f20cec70e1730",
+      "no_word_pdf": true
+    },
+    {
+      "scenario": "C03",
+      "strategy": "permanent",
+      "run_id": "run_bf973138c8fc39e40edc6aec",
+      "no_word_pdf": true
+    },
+    {
+      "scenario": "S02",
+      "strategy": "conditional",
+      "run_id": "run_c1d79e4939c0e3701ad86502",
+      "no_word_pdf": true
+    },
+    {
+      "scenario": "S02",
+      "strategy": "permanent",
+      "run_id": "run_34c912c4b25808961d018bce",
+      "no_word_pdf": true
+    },
+    {
+      "scenario": "S05",
+      "strategy": "conditional",
+      "run_id": "run_5d468c6eb4e33916e6c3c91e",
+      "no_word_pdf": true
+    }
+  ],
+  "passed": true
+}

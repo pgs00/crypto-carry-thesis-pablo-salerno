@@ -1,0 +1,39 @@
+{
+  "package": "entregas\\entrega_4\\costos_capacidad\\20260927T200204Z\\paquete_20260927T230722Z",
+  "package_manifest_sha256": "fb8a718fd544e93934cbe379db0ad6194234e13f5c6b00bb0cb3295bb2442f5e",
+  "commands": [
+    {
+      "purpose": "preseal verification with local volume sources",
+      "command": ".venv/Scripts/python.exe -B -u -X utf8 entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T230722Z/herramientas/scripts/verify_cost_capacity.py --package entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T230722Z --unsealed --data-root D:/Backtesting --output entregas\\entrega_4\\costos_capacidad\\20260927T200204Z/controles/verificacion_final_sin_sello_02.json",
+      "log": "controles/verificacion_final_sin_sello_02.log"
+    },
+    {
+      "purpose": "seal the verified version",
+      "command": ".venv/Scripts/python.exe -B -X utf8 scripts/build_cost_capacity.py --destination entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T230722Z --seal-only"
+    },
+    {
+      "purpose": "renewed-hash corruption group 1",
+      "environment": {
+        "COST_CAPACITY_PACKAGE": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\costos_capacidad\\20260927T200204Z\\paquete_20260927T230722Z",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "command": ".venv/Scripts/python.exe -B -m pytest entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T230722Z/herramientas/tests/integration/test_cost_capacity_package_integration.py -q -vv -p no:cacheprovider -k \"configuration or participation or period or h2 or h3\"",
+      "log": "pruebas/corrupciones_finales_grupo_1.log"
+    },
+    {
+      "purpose": "renewed-hash corruption group 2",
+      "environment": {
+        "COST_CAPACITY_PACKAGE": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\costos_capacidad\\20260927T200204Z\\paquete_20260927T230722Z",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "command": ".venv/Scripts/python.exe -B -m pytest entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T230722Z/herramientas/tests/integration/test_cost_capacity_package_integration.py -q -vv -p no:cacheprovider -k \"not (configuration or participation or period or h2 or h3)\"",
+      "log": "pruebas/corrupciones_finales_grupo_2.log"
+    },
+    {
+      "purpose": "preservation and isolated Git export",
+      "command": ".venv/Scripts/python.exe -B -u -X utf8 scripts/cost_capacity_delivery.py --work entregas\\entrega_4\\costos_capacidad\\20260927T200204Z --package entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T230722Z --output entregas\\entrega_4\\costos_capacidad\\20260927T200204Z/controles/preservacion_exportacion_final_01.json",
+      "log": "controles/preservacion_exportacion_final_01.log"
+    }
+  ],
+  "note": "Read execution outputs for actual results; the command record alone is not a passing control. The seal includes read-only pytest invocation without cacheprovider."
+}

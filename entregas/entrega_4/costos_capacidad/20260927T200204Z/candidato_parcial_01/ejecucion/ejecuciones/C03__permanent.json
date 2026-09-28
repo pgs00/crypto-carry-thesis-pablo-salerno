@@ -1,0 +1,10 @@
+{
+  "scenario": "C03",
+  "strategy": "permanent",
+  "status": "en_ejecucion",
+  "attempt": "20260927T202957179042Z",
+  "started_utc": "2026-09-27T20:29:57.179063+00:00",
+  "config_hash": "a727076a2d84c2f15cfc64d4d467fb28b9b2b9c9d84db81737dd4c1d8a6917ab",
+  "code_hash": "aff0e047e4638219c5fba35959e160291802dcfad2269ecfc69a8f0e08495308",
+  "pid": 5468
+}

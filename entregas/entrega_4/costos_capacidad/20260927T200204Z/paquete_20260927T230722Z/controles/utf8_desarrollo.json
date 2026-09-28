@@ -1,0 +1,145 @@
+{
+  "passed": true,
+  "files": [
+    {
+      "path": "docs\\entrega_4\\matriz_avance.csv",
+      "sha256": "979bdc69d6f9175fb8865ee2616eb15912696c16f49294d2c3a537e3c2d56d65",
+      "utf8_valid": true
+    },
+    {
+      "path": "entregas\\entrega_4\\costos_capacidad\\20260927T200204Z\\progreso.md",
+      "sha256": "f6f55ea8936bb9ec81cad93682a4ffca9407a4cb1b4fd662002895d14a5838f2",
+      "utf8_valid": true
+    },
+    {
+      "path": "entregas\\entrega_4\\costos_capacidad\\20260927T200204Z\\plan.md",
+      "sha256": "bd9537c3cf48ebd3ebd71db47126456bd73eacf5554376fe1bf70b12fa2281e6",
+      "utf8_valid": true
+    },
+    {
+      "path": "scripts\\audit_cost_capacity_stage.py",
+      "sha256": "78599abaa5513a2c672e2bd9a3fc7d6024758eaed3554b4510b3a807f212c40b",
+      "utf8_valid": true
+    },
+    {
+      "path": "scripts\\build_cost_capacity.py",
+      "sha256": "8ce788c33090f221decad7d05b6200004291e24741af9f2b092f15f4edcaf4f2",
+      "utf8_valid": true
+    },
+    {
+      "path": "scripts\\check_cost_capacity_compatibility.py",
+      "sha256": "8e8df5039a3441ff6dd17f772ddfa17a75b6fb7b495f1541e3f31423c33b9aa9",
+      "utf8_valid": true
+    },
+    {
+      "path": "scripts\\continue_cost_capacity.py",
+      "sha256": "e8901f2868cb577c17a570776474bc57172f1cf541fa1f7a341dd6b606bc4ebe",
+      "utf8_valid": true
+    },
+    {
+      "path": "scripts\\cost_capacity.py",
+      "sha256": "302a4d42ff355414f2b7fe7c27fe9e9d5360b857b9110977a740bb77f67f7ec8",
+      "utf8_valid": true
+    },
+    {
+      "path": "scripts\\cost_capacity_audit.py",
+      "sha256": "93a3497c63bbd4ffbafc1e9d79237ccebdf8aabbca4fe7475bba17e5185a4e62",
+      "utf8_valid": true
+    },
+    {
+      "path": "scripts\\cost_capacity_delivery.py",
+      "sha256": "c4873fa99dc9a8ad26b4c190793c562433f83636d0582a9ff26a6405d2fd91de",
+      "utf8_valid": true
+    },
+    {
+      "path": "scripts\\cost_capacity_docs.py",
+      "sha256": "0492c2e0e75ca1d56daf561ae327d493173ae1b98db5525cd17def21fc316e2f",
+      "utf8_valid": true
+    },
+    {
+      "path": "scripts\\cost_capacity_guards.py",
+      "sha256": "59346e115b3150af52508753a020d64024715f66c53222f18ae7793697f71785",
+      "utf8_valid": true
+    },
+    {
+      "path": "scripts\\cost_capacity_incomplete.py",
+      "sha256": "2ea0a50a2b1b688ffc47bc94cd3dee5e116951581ed7f6ae3264ba175e016579",
+      "utf8_valid": true
+    },
+    {
+      "path": "scripts\\cost_capacity_ledger.py",
+      "sha256": "ee287d53b240f12060e08c0258438ad441b498d78cede57ba968ee7fb8e34f5e",
+      "utf8_valid": true
+    },
+    {
+      "path": "scripts\\cost_capacity_progress.py",
+      "sha256": "91c4fdda3f3a605c5f20f64aaff4ccc4b6fd7ce5c635cb56104ba35168d8fb66",
+      "utf8_valid": true
+    },
+    {
+      "path": "scripts\\cost_capacity_report.py",
+      "sha256": "f70f305d69c756f4aa67220fb5dd22502305938d4b91d7eccb2a193bd8fea7ab",
+      "utf8_valid": true
+    },
+    {
+      "path": "scripts\\cost_capacity_sources.py",
+      "sha256": "1c07d4306fb30341c2734a931bd24bcbe1f0782dd0a9320fd1170464c7e42bcc",
+      "utf8_valid": true
+    },
+    {
+      "path": "scripts\\prepare_cost_capacity.py",
+      "sha256": "073b9705e6957d4aadb38330dd4cff52f72f1d469e8795661e3fcc83609067f1",
+      "utf8_valid": true
+    },
+    {
+      "path": "scripts\\run_cost_capacity.py",
+      "sha256": "851303968119f0b17fef40098cca96fdcfc9a759d028816fba867c8bdb7662d9",
+      "utf8_valid": true
+    },
+    {
+      "path": "scripts\\verify_cost_capacity.py",
+      "sha256": "c15462a6b63440e06c9e7eeeaebf2552de141a9405042e03c732a2dc4ff9741e",
+      "utf8_valid": true
+    },
+    {
+      "path": "tests\\unit\\test_cost_capacity.py",
+      "sha256": "aa45183322ebb5774ee2006a9ac63d80cc6829dbe6ebb2e0db3de8737b7ef46b",
+      "utf8_valid": true
+    },
+    {
+      "path": "tests\\unit\\test_cost_capacity_audit.py",
+      "sha256": "9838a15d0f76e3f857e58519e3c06e28213b1bab8aad96d5d563dd01287df8d3",
+      "utf8_valid": true
+    },
+    {
+      "path": "tests\\unit\\test_cost_capacity_guards.py",
+      "sha256": "4bf14f292c33e2ac8e11b52753bc0e9027567440c25e9c30aa267c6d57a617c7",
+      "utf8_valid": true
+    },
+    {
+      "path": "tests\\unit\\test_cost_capacity_incomplete.py",
+      "sha256": "45217f59a60ffe5871d263e74260f19cf149dd3cf98acdac8c20f6c9dddd82b4",
+      "utf8_valid": true
+    },
+    {
+      "path": "tests\\unit\\test_cost_capacity_ledger.py",
+      "sha256": "96659eb4cf8e41def61b4237947d6a75d218b4519d2d69d634e5feaf557e0e28",
+      "utf8_valid": true
+    },
+    {
+      "path": "tests\\unit\\test_cost_capacity_package.py",
+      "sha256": "7104c1c404eb124983d87a6eb82125e4a053713c7dd02413e8aa6f239367de99",
+      "utf8_valid": true
+    },
+    {
+      "path": "tests\\integration\\test_cost_capacity_execution.py",
+      "sha256": "035472a5be111fc828827d2e484dc284eac377427300494a307efbf8217a84f9",
+      "utf8_valid": true
+    },
+    {
+      "path": "tests\\integration\\test_cost_capacity_package_integration.py",
+      "sha256": "4b9e852b8204f62de126d2e0d3703b43400ff3aa5ed5a2be00bfeba733b0f0fe",
+      "utf8_valid": true
+    }
+  ]
+}

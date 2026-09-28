@@ -1,0 +1,17 @@
+{
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\pablo\\AppData\\Local\\Temp\\cost_capacity_git_export_3yffqk_j\\checkout\\entregas\\entrega_4\\costos_capacidad\\20260927T200204Z\\candidato_parcial_03\\herramientas\\scripts\\verify_cost_capacity.py",
+    "--package",
+    "C:\\Users\\pablo\\AppData\\Local\\Temp\\cost_capacity_git_export_3yffqk_j\\checkout\\entregas\\entrega_4\\costos_capacidad\\20260927T200204Z\\candidato_parcial_03",
+    "--unsealed",
+    "--output",
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\costos_capacidad\\20260927T200204Z\\controles\\offline_parcial_03.json"
+  ],
+  "cwd": "C:\\Users\\pablo\\AppData\\Local\\Temp\\cost_capacity_git_export_3yffqk_j\\checkout\\entregas\\entrega_4\\costos_capacidad\\20260927T200204Z",
+  "exit_code": 0,
+  "tools": "included only; environment dependencies explicit"
+}
