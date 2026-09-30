@@ -1,0 +1,5 @@
+
+# Preserve only new execution/delay evidence across Git EOL conversion.
+/entregas/entrega_4/ejecucion_demoras/** -text whitespace=cr-at-eol
+/entregas/entrega_4/ejecucion_demoras/**/*.svg whitespace=-blank-at-eol,cr-at-eol
+/entregas/entrega_4/ejecucion_demoras/**/*.patch whitespace=-blank-at-eol,cr-at-eol

@@ -1,0 +1,36 @@
+ M .gitattributes
+ M docs/entrega_4/historial_avance/cambios.md
+ M docs/entrega_4/matriz_avance.csv
+ M src/crypto_carry/config.py
+ M src/crypto_carry/data/prescribed.py
+ M src/crypto_carry/execution.py
+ M src/crypto_carry/reporting.py
+ M src/crypto_carry/strategy.py
+?? configs/entrega_4/ejecucion_demoras/
+?? docs/entrega_4/historial_avance/20260929T224338893583Z_anterior.csv
+?? entregas/entrega_4/ejecucion_demoras/
+?? scripts/audit_execution_delays_stage.py
+?? scripts/build_execution_delays.py
+?? scripts/check_execution_delays_artifacts.py
+?? scripts/check_execution_delays_base.py
+?? scripts/check_execution_delays_compatibility.py
+?? scripts/check_execution_delays_fixtures.py
+?? scripts/coordinate_execution_delays.py
+?? scripts/execution_delays.py
+?? scripts/execution_delays_audit.py
+?? scripts/execution_delays_delivery.py
+?? scripts/execution_delays_docs.py
+?? scripts/execution_delays_guards.py
+?? scripts/execution_delays_incidents.py
+?? scripts/execution_delays_progress.py
+?? scripts/execution_delays_report.py
+?? scripts/execution_delays_sources.py
+?? scripts/prepare_execution_delays.py
+?? scripts/run_execution_delays.py
+?? scripts/verify_execution_delays.py
+?? tests/integration/test_execution_delays_native.py
+?? tests/integration/test_execution_delays_package.py
+?? tests/unit/test_execution_delays.py
+?? tests/unit/test_execution_delays_audit.py
+?? tests/unit/test_execution_delays_incidents.py
+?? tests/unit/test_execution_delays_integrity.py

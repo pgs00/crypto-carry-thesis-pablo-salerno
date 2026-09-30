@@ -1,0 +1,58 @@
+[
+  {
+    "dependency": "parent",
+    "path": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\20260925T005436Z",
+    "manifest_sha256": "77f1cfcaf4fb13044dbcb3b242a2eb19749cf7e88806db023a08bbe4ec272057",
+    "files_checked": 1087,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "dependency": "correction",
+    "path": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\reglas_historicas\\correccion_exposicion_h2_20260925T150139Z\\paquete_20260926T204312Z",
+    "manifest_sha256": "e735207869c08bbd0b9b04818c8855ecd9576bd979d3127b5ff108f61d3843ce",
+    "files_checked": 57,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "dependency": "intraday",
+    "path": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\riesgo_intradia\\20260926T214118Z\\paquete_20260926T220400Z",
+    "manifest_sha256": "78cb03572c5940567852d0255d05a9f8a923f01df01fc0aa8b6cccef70f3b3bb",
+    "files_checked": 199,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "dependency": "capital",
+    "path": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\retorno_capital\\20260927T143928Z\\paquete_20260927T152732Z",
+    "manifest_sha256": "0163cf7622d929c06773700f50d13b2e808afee85a6cf85e48d45dcac03af12b",
+    "files_checked": 93,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "dependency": "sofr",
+    "path": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\retorno_capital\\20260927T154653Z_sofr\\paquete_20260927T162350Z",
+    "manifest_sha256": "4769f6c6a80e6fa4b4fd4a4e7c45b94fb10b3773bc3cbbebd36b117f73c938c9",
+    "files_checked": 72,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "dependency": "block2",
+    "path": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\senal_entradas\\20260927T170230Z\\paquete_20260927T185305Z",
+    "manifest_sha256": "f03624b6bdb40a3c9dfb31705a9c5c3552308200a953f9f5e80cce2137140095",
+    "files_checked": 498,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "dependency": "block3_current",
+    "path": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\costos_capacidad\\20260927T200204Z\\paquete_20260927T231610Z",
+    "manifest_sha256": "db68d839aa5837db72314b4f3de5509ecff283cc34d13a36e3c4f9d30298e1fb",
+    "files_checked": 880,
+    "errors": [],
+    "passed": true
+  }
+]

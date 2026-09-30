@@ -1,0 +1,147 @@
+{
+  "commands": [
+    {
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-u",
+        "-X",
+        "utf8",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\scripts\\check_execution_delays_base.py",
+        "--work",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\ejecucion_demoras\\20260929T221620Z",
+        "--data-root",
+        "D:\\Backtesting"
+      ],
+      "log": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\ejecucion_demoras\\20260929T221620Z\\logs_corridas\\base_completa__20260929T234243579214Z.txt",
+      "exit_code": 0,
+      "finished_utc": "2026-09-29T23:43:09.782355+00:00"
+    },
+    {
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-u",
+        "-X",
+        "utf8",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\scripts\\run_execution_delays.py",
+        "--package",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\ejecucion_demoras\\20260929T221620Z",
+        "--data-root",
+        "D:\\Backtesting",
+        "--raw-root",
+        "D:\\Backtesting\\outputs\\ejecucion_demoras\\20260929T221620Z",
+        "--stage",
+        "precio",
+        "--workers",
+        "2"
+      ],
+      "log": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\ejecucion_demoras\\20260929T221620Z\\logs_corridas\\precio__20260929T234309804741Z.txt",
+      "exit_code": 0,
+      "finished_utc": "2026-09-30T00:10:09.865463+00:00"
+    },
+    {
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-u",
+        "-X",
+        "utf8",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\scripts\\audit_execution_delays_stage.py",
+        "--work",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\ejecucion_demoras\\20260929T221620Z",
+        "--data-root",
+        "D:\\Backtesting",
+        "--stage",
+        "precio"
+      ],
+      "log": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\ejecucion_demoras\\20260929T221620Z\\logs_corridas\\auditoria_precio__20260930T001009866599Z.txt",
+      "exit_code": 0,
+      "finished_utc": "2026-09-30T00:10:17.037937+00:00"
+    },
+    {
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-u",
+        "-X",
+        "utf8",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\scripts\\run_execution_delays.py",
+        "--package",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\ejecucion_demoras\\20260929T221620Z",
+        "--data-root",
+        "D:\\Backtesting",
+        "--raw-root",
+        "D:\\Backtesting\\outputs\\ejecucion_demoras\\20260929T221620Z",
+        "--stage",
+        "general",
+        "--workers",
+        "2"
+      ],
+      "log": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\ejecucion_demoras\\20260929T221620Z\\logs_corridas\\general__20260930T001017039526Z.txt",
+      "exit_code": 0,
+      "finished_utc": "2026-09-30T00:39:41.661618+00:00"
+    },
+    {
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-u",
+        "-X",
+        "utf8",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\scripts\\audit_execution_delays_stage.py",
+        "--work",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\ejecucion_demoras\\20260929T221620Z",
+        "--data-root",
+        "D:\\Backtesting",
+        "--stage",
+        "general"
+      ],
+      "log": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\ejecucion_demoras\\20260929T221620Z\\logs_corridas\\auditoria_general__20260930T003941663088Z.txt",
+      "exit_code": 0,
+      "finished_utc": "2026-09-30T00:39:52.012400+00:00"
+    },
+    {
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-u",
+        "-X",
+        "utf8",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\scripts\\run_execution_delays.py",
+        "--package",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\ejecucion_demoras\\20260929T221620Z",
+        "--data-root",
+        "D:\\Backtesting",
+        "--raw-root",
+        "D:\\Backtesting\\outputs\\ejecucion_demoras\\20260929T221620Z",
+        "--stage",
+        "cierre",
+        "--workers",
+        "2"
+      ],
+      "log": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\ejecucion_demoras\\20260929T221620Z\\logs_corridas\\cierre__20260930T003952013572Z.txt",
+      "exit_code": 0,
+      "finished_utc": "2026-09-30T01:18:58.752024+00:00"
+    },
+    {
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-u",
+        "-X",
+        "utf8",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\scripts\\audit_execution_delays_stage.py",
+        "--work",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\ejecucion_demoras\\20260929T221620Z",
+        "--data-root",
+        "D:\\Backtesting",
+        "--stage",
+        "cierre"
+      ],
+      "log": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\ejecucion_demoras\\20260929T221620Z\\logs_corridas\\auditoria_cierre__20260930T011858753097Z.txt",
+      "exit_code": 0,
+      "finished_utc": "2026-09-30T01:19:13.522189+00:00"
+    }
+  ]
+}

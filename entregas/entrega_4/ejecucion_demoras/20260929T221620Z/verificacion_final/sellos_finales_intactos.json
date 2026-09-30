@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "packages": [
+    {
+      "package": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\ejecucion_demoras\\20260929T221620Z\\paquete_20260930T012056Z",
+      "sha256": "955205887cf139bc41fd1edcdf9e63a482d0b498d8998680890cd6273ccc5603",
+      "members": 1200,
+      "passed": true
+    },
+    {
+      "package": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\ejecucion_demoras\\20260929T221620Z\\paquete_20260930T013915Z_v2",
+      "sha256": "88af2936e2dc243080abdf3909cc578c184778527eb847d6b021ce76d357335b",
+      "members": 1204,
+      "passed": true
+    }
+  ]
+}

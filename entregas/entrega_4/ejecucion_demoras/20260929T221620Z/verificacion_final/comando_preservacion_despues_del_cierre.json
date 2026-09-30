@@ -1,0 +1,18 @@
+{
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "scripts/execution_delays_delivery.py",
+    "--work",
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\ejecucion_demoras\\20260929T221620Z",
+    "--data-root",
+    "D:/Backtesting",
+    "--output",
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\ejecucion_demoras\\20260929T221620Z\\verificacion_final\\preservacion_despues_del_cierre.json"
+  ],
+  "started_at": "2026-09-30T01:50:12.543972+00:00",
+  "exit_code": 0,
+  "finished_at": "2026-09-30T01:50:23.829615+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "path": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\docs\\entrega_4\\matriz_avance.csv",
+  "sha256": "49297630d486f9a35ba1dafaa8b9d6f85a8d0f45d7e0ecd4c4c93b2419df86ad",
+  "block4": "ejecutado",
+  "package": "entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T013915Z_v2",
+  "remaining": {
+    "B5": "pendiente",
+    "B6": "pendiente",
+    "REVISION": "pendiente"
+  },
+  "other_rows_unchanged": true
+}

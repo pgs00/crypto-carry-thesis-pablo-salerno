@@ -1,0 +1,2775 @@
+{
+  "exit_code": 1,
+  "issues": 460,
+  "all_unchanged": false,
+  "new_or_modified_file_issues": [
+    {
+      "file": "entregas/entrega_4/ejecucion_demoras/20260929T221620Z/codigo_ejecutado/scripts/execution_delays_guards.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": false
+    }
+  ],
+  "details": [
+    {
+      "file": "data/research/funding-calendar-h1-20260918/run_h1.py",
+      "rule": "F401",
+      "line": 7,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/funding-calendar-h1-20260918/run_h1.py",
+      "rule": "E402",
+      "line": 24,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/funding-calendar-h1-20260918/run_h1.py",
+      "rule": "I001",
+      "line": 24,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/funding-calendar-h1-20260918/run_h1.py",
+      "rule": "E402",
+      "line": 25,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/funding-calendar-h1-20260918/run_h1.py",
+      "rule": "E402",
+      "line": 26,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/funding-calendar-h1-20260918/run_h1.py",
+      "rule": "E402",
+      "line": 27,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "I001",
+      "line": 2,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "F401",
+      "line": 11,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 57,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 58,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 59,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 59,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 62,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 68,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 73,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 73,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 75,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 82,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 83,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 84,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 86,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 86,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 93,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 95,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 97,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 97,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 100,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 102,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 108,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 113,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 119,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 127,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 129,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 132,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 146,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 147,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 160,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 162,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 163,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 166,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 168,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 172,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 173,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 174,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 177,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 177,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 179,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 179,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 195,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 198,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 199,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 200,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 205,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 206,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 208,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 210,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 211,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 216,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 216,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 222,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 223,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 233,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 236,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 240,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/recuperar_fuentes.py",
+      "rule": "I001",
+      "line": 2,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "I001",
+      "line": 6,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "F401",
+      "line": 16,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 40,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 51,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 51,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 51,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 51,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 51,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 51,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 51,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 51,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 53,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 54,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 55,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 56,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 57,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 59,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 60,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 61,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 63,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 63,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 64,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 65,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 65,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 66,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 66,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 67,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 67,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 70,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 70,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 77,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 80,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 81,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 82,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 83,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 91,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 95,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 104,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 113,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 113,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 115,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 118,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 118,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 118,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 125,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 126,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 128,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 133,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 134,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 141,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 142,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 151,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 152,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 154,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 158,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 158,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 160,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 161,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E721",
+      "line": 162,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 166,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 167,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 173,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 175,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 175,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 179,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 188,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 189,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 193,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 193,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 193,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 195,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 195,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 197,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 204,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 208,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 213,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 219,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 220,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 224,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 224,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 224,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 224,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 228,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 229,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 230,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 231,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 233,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 234,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 235,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 240,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 248,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 254,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 256,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 256,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 257,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 270,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 270,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 272,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 273,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 273,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 274,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 275,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 276,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 281,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 281,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 281,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 287,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 288,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 288,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 289,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 293,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 295,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 299,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 301,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 302,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 306,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 309,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 312,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 316,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 317,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 319,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 320,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 321,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 322,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 323,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 328,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 331,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 338,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 340,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/candidato_parcial_01/herramientas/tests/test_intraday_risk_builder.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/candidato_parcial_01/herramientas/tests/test_intraday_risk_builder.py",
+      "rule": "I001",
+      "line": 55,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/candidato_parcial_01/herramientas/tests/test_intraday_risk_sources.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/candidato_parcial_01/herramientas/tests/test_intraday_risk_tables.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/candidato_parcial_01/herramientas/tests/unit/test_funding_price_analysis.py",
+      "rule": "I001",
+      "line": 1,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/candidato_parcial_01/herramientas/tests/unit/test_return_capital_accounting.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/candidato_parcial_01/herramientas/tests/unit/test_return_capital_package.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/candidato_parcial_01/herramientas/tests/unit/test_return_capital_package.py",
+      "rule": "I001",
+      "line": 84,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/candidato_parcial_01/herramientas/tests/unit/test_sofr_accrual.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/candidato_parcial_01/herramientas/tests/unit/test_sofr_calendar.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/candidato_parcial_01/herramientas/tests/unit/test_sofr_comparison.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/candidato_parcial_01/herramientas/tests/unit/test_sofr_package.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/candidato_parcial_03/herramientas/tests/test_intraday_risk_builder.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/candidato_parcial_03/herramientas/tests/test_intraday_risk_builder.py",
+      "rule": "I001",
+      "line": 55,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/candidato_parcial_03/herramientas/tests/test_intraday_risk_sources.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/candidato_parcial_03/herramientas/tests/test_intraday_risk_tables.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/candidato_parcial_03/herramientas/tests/unit/test_cost_capacity_package.py",
+      "rule": "I001",
+      "line": 8,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/candidato_parcial_03/herramientas/tests/unit/test_funding_price_analysis.py",
+      "rule": "I001",
+      "line": 1,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/candidato_parcial_03/herramientas/tests/unit/test_return_capital_accounting.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/candidato_parcial_03/herramientas/tests/unit/test_return_capital_package.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/candidato_parcial_03/herramientas/tests/unit/test_return_capital_package.py",
+      "rule": "I001",
+      "line": 84,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/candidato_parcial_03/herramientas/tests/unit/test_sofr_accrual.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/candidato_parcial_03/herramientas/tests/unit/test_sofr_calendar.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/candidato_parcial_03/herramientas/tests/unit/test_sofr_comparison.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/candidato_parcial_03/herramientas/tests/unit/test_sofr_package.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/candidato_parcial_04/herramientas/tests/test_intraday_risk_builder.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/candidato_parcial_04/herramientas/tests/test_intraday_risk_builder.py",
+      "rule": "I001",
+      "line": 55,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/candidato_parcial_04/herramientas/tests/test_intraday_risk_sources.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/candidato_parcial_04/herramientas/tests/test_intraday_risk_tables.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/candidato_parcial_04/herramientas/tests/unit/test_funding_price_analysis.py",
+      "rule": "I001",
+      "line": 1,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/candidato_parcial_04/herramientas/tests/unit/test_return_capital_accounting.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/candidato_parcial_04/herramientas/tests/unit/test_return_capital_package.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/candidato_parcial_04/herramientas/tests/unit/test_return_capital_package.py",
+      "rule": "I001",
+      "line": 84,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/candidato_parcial_04/herramientas/tests/unit/test_sofr_accrual.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/candidato_parcial_04/herramientas/tests/unit/test_sofr_calendar.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/candidato_parcial_04/herramientas/tests/unit/test_sofr_comparison.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/candidato_parcial_04/herramientas/tests/unit/test_sofr_package.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T225401Z/herramientas/tests/test_intraday_risk_builder.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T225401Z/herramientas/tests/test_intraday_risk_builder.py",
+      "rule": "I001",
+      "line": 55,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T225401Z/herramientas/tests/test_intraday_risk_sources.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T225401Z/herramientas/tests/test_intraday_risk_tables.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T225401Z/herramientas/tests/unit/test_funding_price_analysis.py",
+      "rule": "I001",
+      "line": 1,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T225401Z/herramientas/tests/unit/test_return_capital_accounting.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T225401Z/herramientas/tests/unit/test_return_capital_package.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T225401Z/herramientas/tests/unit/test_return_capital_package.py",
+      "rule": "I001",
+      "line": 84,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T225401Z/herramientas/tests/unit/test_sofr_accrual.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T225401Z/herramientas/tests/unit/test_sofr_calendar.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T225401Z/herramientas/tests/unit/test_sofr_comparison.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T225401Z/herramientas/tests/unit/test_sofr_package.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T230722Z/herramientas/tests/test_intraday_risk_builder.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T230722Z/herramientas/tests/test_intraday_risk_builder.py",
+      "rule": "I001",
+      "line": 55,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T230722Z/herramientas/tests/test_intraday_risk_sources.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T230722Z/herramientas/tests/test_intraday_risk_tables.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T230722Z/herramientas/tests/unit/test_funding_price_analysis.py",
+      "rule": "I001",
+      "line": 1,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T230722Z/herramientas/tests/unit/test_return_capital_accounting.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T230722Z/herramientas/tests/unit/test_return_capital_package.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T230722Z/herramientas/tests/unit/test_return_capital_package.py",
+      "rule": "I001",
+      "line": 84,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T230722Z/herramientas/tests/unit/test_sofr_accrual.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T230722Z/herramientas/tests/unit/test_sofr_calendar.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T230722Z/herramientas/tests/unit/test_sofr_comparison.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T230722Z/herramientas/tests/unit/test_sofr_package.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z/herramientas/tests/test_intraday_risk_builder.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z/herramientas/tests/test_intraday_risk_builder.py",
+      "rule": "I001",
+      "line": 55,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z/herramientas/tests/test_intraday_risk_sources.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z/herramientas/tests/test_intraday_risk_tables.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z/herramientas/tests/unit/test_funding_price_analysis.py",
+      "rule": "I001",
+      "line": 1,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z/herramientas/tests/unit/test_return_capital_accounting.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z/herramientas/tests/unit/test_return_capital_package.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z/herramientas/tests/unit/test_return_capital_package.py",
+      "rule": "I001",
+      "line": 84,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z/herramientas/tests/unit/test_sofr_accrual.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z/herramientas/tests/unit/test_sofr_calendar.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z/herramientas/tests/unit/test_sofr_comparison.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z/herramientas/tests/unit/test_sofr_package.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/ejecucion_demoras/20260929T221620Z/codigo_ejecutado/scripts/execution_delays_guards.py",
+      "rule": "I001",
+      "line": 3,
+      "unchanged_since_start": false
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "I001",
+      "line": 2,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "F401",
+      "line": 11,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 57,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 58,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 59,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 59,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 62,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 68,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 73,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 73,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 75,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 82,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 83,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 84,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 86,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 86,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 93,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 95,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 97,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 97,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 100,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 102,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 108,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 113,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 119,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 127,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 129,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 132,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 146,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 147,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 160,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 162,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 163,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 166,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 168,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 172,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 173,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 174,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 177,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 177,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 179,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 179,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 195,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 198,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 199,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 200,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 205,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 206,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 208,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 210,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 211,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 216,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 216,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 222,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 223,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E702",
+      "line": 233,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 236,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/construir_registro.py",
+      "rule": "E701",
+      "line": 240,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/recuperar_fuentes.py",
+      "rule": "I001",
+      "line": 2,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "I001",
+      "line": 6,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "F401",
+      "line": 16,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 40,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 51,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 51,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 51,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 51,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 51,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 51,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 51,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 51,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 53,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 54,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 55,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 56,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 57,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 59,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 60,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 61,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 63,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 63,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 64,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 65,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 65,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 66,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 66,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 67,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 67,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 70,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 70,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 77,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 80,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 81,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 82,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 83,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 91,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 95,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 104,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 113,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 113,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 115,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 118,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 118,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 118,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 125,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 126,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 128,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 133,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 134,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 141,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 142,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 151,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 152,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 154,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 158,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 158,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 160,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 161,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E721",
+      "line": 162,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 166,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 167,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 173,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 175,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 175,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 179,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 188,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 189,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 193,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 193,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 193,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 195,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 195,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 197,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 204,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 208,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 213,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 219,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 220,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 224,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 224,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 224,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 224,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 228,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 229,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 230,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 231,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 233,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 234,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 235,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 240,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 248,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 254,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 256,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 256,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 257,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 270,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 270,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 272,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 273,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 273,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 274,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 275,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 276,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 281,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 281,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 281,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 287,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 288,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 288,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 289,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 293,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 295,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 299,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 301,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 302,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 306,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 309,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 312,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 316,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 317,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 319,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 320,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 321,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 322,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 323,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 328,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 331,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E702",
+      "line": 338,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/reglas_historicas/20260925T005436Z/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/verificar_fuentes.py",
+      "rule": "E701",
+      "line": 340,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/riesgo_intradia/20260926T214118Z/codigo_reconstruccion_ejecutado/build_intraday_risk.py",
+      "rule": "I001",
+      "line": 18,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/riesgo_intradia/20260926T214118Z/codigo_reconstruccion_ejecutado/build_intraday_risk.py",
+      "rule": "I001",
+      "line": 25,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/riesgo_intradia/20260926T214118Z/paquete_20260926T220400Z/codigo_reconstruccion_ejecutado/build_intraday_risk.py",
+      "rule": "I001",
+      "line": 18,
+      "unchanged_since_start": true
+    },
+    {
+      "file": "entregas/entrega_4/riesgo_intradia/20260926T214118Z/paquete_20260926T220400Z/codigo_reconstruccion_ejecutado/build_intraday_risk.py",
+      "rule": "I001",
+      "line": 25,
+      "unchanged_since_start": true
+    }
+  ]
+}

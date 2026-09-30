@@ -1,0 +1,50 @@
+[
+  {
+    "strategy": "conditional",
+    "started_utc": "2026-09-29T22:48:18.419367+00:00",
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "-u",
+      "-X",
+      "utf8",
+      "scripts/run_execution_delays.py",
+      "--package",
+      "entregas/entrega_4/ejecucion_demoras/20260929T221620Z",
+      "--data-root",
+      "D:/Backtesting",
+      "--raw-root",
+      "D:/Backtesting/outputs/ejecucion_demoras/20260929T221620Z",
+      "--scenario",
+      "CONTROL_BASE",
+      "--strategy",
+      "conditional"
+    ],
+    "stdout_log": "logs_corridas/CONTROL_BASE__conditional.txt",
+    "representation": "Original launch arguments transcribed after launch; process command line independently observed"
+  },
+  {
+    "strategy": "permanent",
+    "started_utc": "2026-09-29T22:55:00.259903+00:00",
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "-u",
+      "-X",
+      "utf8",
+      "scripts/run_execution_delays.py",
+      "--package",
+      "entregas/entrega_4/ejecucion_demoras/20260929T221620Z",
+      "--data-root",
+      "D:/Backtesting",
+      "--raw-root",
+      "D:/Backtesting/outputs/ejecucion_demoras/20260929T221620Z",
+      "--scenario",
+      "CONTROL_BASE",
+      "--strategy",
+      "permanent"
+    ],
+    "stdout_log": "logs_corridas/CONTROL_BASE__permanent.txt",
+    "representation": "Original launch arguments transcribed after launch; process command line independently observed"
+  }
+]

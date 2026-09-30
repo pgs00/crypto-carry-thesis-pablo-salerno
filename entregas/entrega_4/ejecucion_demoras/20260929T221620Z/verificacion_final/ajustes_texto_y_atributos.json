@@ -1,0 +1,8 @@
+{
+  "gitattributes_scope": "new execution/delay *.txt only; original logs preserved byte-for-byte",
+  "original_prefix_sha256": "861ca4a6485fee153b0a4d9826768d6a6c3aab659342db243b75b6d2ac9f70c0",
+  "addition_sha256": "98449c5302820d54cedcd93f5c3008bca48f848f5aada5615075b52be7992826",
+  "review_note_before_sha256": "53e9612d9ec2faae6c4e246f2f31551823d6978e0c0aafa943a8226a50df62f0",
+  "review_note_after_sha256": "5222835695436ff82e48ce7d86b64cfd5b8d36796d8fba26bac2e94db524e46e",
+  "economic_change": false
+}

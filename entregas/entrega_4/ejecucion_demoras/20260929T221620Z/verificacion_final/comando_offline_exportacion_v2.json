@@ -1,0 +1,20 @@
+{
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-u",
+    "-X",
+    "utf8",
+    "C:\\Users\\pablo\\AppData\\Local\\Temp\\execution_delays_git_export_5i16c5uh\\checkout\\entregas\\entrega_4\\ejecucion_demoras\\20260929T221620Z\\paquete_20260930T013915Z_v2\\herramientas\\scripts\\verify_execution_delays.py",
+    "--package",
+    "C:\\Users\\pablo\\AppData\\Local\\Temp\\execution_delays_git_export_5i16c5uh\\checkout\\entregas\\entrega_4\\ejecucion_demoras\\20260929T221620Z\\paquete_20260930T013915Z_v2",
+    "--output",
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\ejecucion_demoras\\20260929T221620Z\\verificacion_final\\offline_exportacion_v2.json"
+  ],
+  "cwd": "C:\\Users\\pablo\\AppData\\Local\\Temp\\execution_delays_export_verification_0zi256l7",
+  "started_at": "2026-09-30T01:43:13.250326+00:00",
+  "status": "passed",
+  "source": "binary blobs reconstructed from isolated temporary Git index",
+  "exit_code": 0,
+  "finished_at": "2026-09-30T01:45:24.477863+00:00"
+}

@@ -1,0 +1,53 @@
+{
+  "utc": "2026-09-30T01:28:52.101554+00:00",
+  "passed": true,
+  "reviewed": [
+    {
+      "path": "figuras/precio.png",
+      "sha256": "a4264ad7302da782c04ddfd77d1ab80d99bacf77cf034de690abe60fefc6ae6b"
+    },
+    {
+      "path": "figuras/precio_diferencia.png",
+      "sha256": "9bfbfb5a31ce7d85ca3d11dd127399d90fd6a9367d43e6ecbbd479608f5bc056"
+    },
+    {
+      "path": "figuras/general.png",
+      "sha256": "88fd112dc7209493e8c81ae916f58f692cdeba69c61e8d010d2515142a852d54"
+    },
+    {
+      "path": "figuras/general_diferencia.png",
+      "sha256": "34ed3fe0b9801b0fe9a38676c9dbe9956f0baf2b4df1722701ab673f74b7b401"
+    },
+    {
+      "path": "figuras/cierre.png",
+      "sha256": "51b9208a670af715773f671097cf2d9b99c550acbfdb8ebb1e6d78664680d0c8"
+    },
+    {
+      "path": "figuras/cierre_diferencia.png",
+      "sha256": "80c5b06955b8a25fc01e1b1c548dc7ec302b8982730a3fb0f585ffb3b9f274db"
+    },
+    {
+      "path": "figuras/cronologia.png",
+      "sha256": "1b6fbbc4ec0024e538e28ad6f31f362c6430fee6f6a3f81f46515dc13c6bbd59"
+    },
+    {
+      "path": "figuras/incidente_LC15_conditional.png",
+      "sha256": "da471059fcbba2e1421eef79f04d69b37d715d06c57561b48db07ef54c18a27b"
+    },
+    {
+      "path": "figuras/incidente_LC15_permanent.png",
+      "sha256": "6747d8d6c5303134411f12f349e9a507a48121f3a2fc07a8bd4c50d0f1a516c9"
+    },
+    {
+      "path": "figuras/incidente_L05_permanent.png",
+      "sha256": "ba437e2898e9c75cd062c78ae589800def04077b7b63fa21e4e45fec975f981e"
+    }
+  ],
+  "scope": "Visual inspection of all seven main plots and three incident examples; all 21 PNG decoded and dimensions checked separately",
+  "observations": "Legible axes, units and legends; no clipping. Carried valuation limits retained in case tables and interpretation.",
+  "interpretation": {
+    "path": "lectura_resultados.md",
+    "sha256": "841df82dd5e21e08fcd934178a1d2ee562280e623f19157e74b16060b67a44f2",
+    "authorship": "written after full source verification from final comparative tables; no economic replay"
+  }
+}

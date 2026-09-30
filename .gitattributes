@@ -52,3 +52,14 @@
 /entregas/entrega_4/costos_capacidad/**/*.svg whitespace=-blank-at-eol,cr-at-eol
 # Unified diffs retain the space prefix on empty context lines.
 /entregas/entrega_4/costos_capacidad/**/*.patch whitespace=-blank-at-eol,cr-at-eol
+
+# Preserve only new execution/delay evidence across Git EOL conversion.
+/entregas/entrega_4/ejecucion_demoras/** -text whitespace=cr-at-eol
+/entregas/entrega_4/ejecucion_demoras/**/*.svg whitespace=-blank-at-eol,cr-at-eol
+/entregas/entrega_4/ejecucion_demoras/**/*.patch whitespace=-blank-at-eol,cr-at-eol
+# Stored diagnostic logs retain their original whitespace.
+/entregas/entrega_4/ejecucion_demoras/**/*.txt whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+# Preserve whitespace in the archived first candidate and its original failure log.
+/entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/controles/revision_independiente.md whitespace=-blank-at-eof,cr-at-eol
+/entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/documentos/controles/revision_independiente.md whitespace=-blank-at-eof,cr-at-eol
+/entregas/entrega_4/ejecucion_demoras/20260929T221620Z/verificacion_final/adulteraciones_1.xml whitespace=-blank-at-eol,cr-at-eol

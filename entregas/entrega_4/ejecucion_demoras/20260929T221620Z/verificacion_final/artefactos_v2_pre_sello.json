@@ -1,0 +1,434 @@
+{
+  "passed": true,
+  "utf8_files": 848,
+  "links": [
+    {
+      "document": "auditoria_ejecucion.md",
+      "target": "documentos/control_compatibilidad_base_completa.json"
+    },
+    {
+      "document": "auditoria_ejecucion.md",
+      "target": "documentos/control_compatibilidad.json"
+    },
+    {
+      "document": "auditoria_ejecucion.md",
+      "target": "indice_corridas.json"
+    },
+    {
+      "document": "incidentes.md",
+      "target": "tablas/incidentes_seleccion.csv"
+    },
+    {
+      "document": "incidentes.md",
+      "target": "tablas/incidentes_detalle.parquet"
+    },
+    {
+      "document": "incidentes.md",
+      "target": "tablas/incidentes_resumen.csv"
+    },
+    {
+      "document": "incidentes.md",
+      "target": "tablas/incidentes_eventos.parquet"
+    },
+    {
+      "document": "incidentes.md",
+      "target": "figuras/incidente_BASE_E3_conditional.png"
+    },
+    {
+      "document": "incidentes.md",
+      "target": "figuras/incidente_BASE_E3_permanent.png"
+    },
+    {
+      "document": "incidentes.md",
+      "target": "figuras/incidente_E_OHLC4_conditional.png"
+    },
+    {
+      "document": "incidentes.md",
+      "target": "figuras/incidente_E_OHLC4_permanent.png"
+    },
+    {
+      "document": "incidentes.md",
+      "target": "figuras/incidente_L01_conditional.png"
+    },
+    {
+      "document": "incidentes.md",
+      "target": "figuras/incidente_L01_permanent.png"
+    },
+    {
+      "document": "incidentes.md",
+      "target": "figuras/incidente_L05_conditional.png"
+    },
+    {
+      "document": "incidentes.md",
+      "target": "figuras/incidente_L05_permanent.png"
+    },
+    {
+      "document": "incidentes.md",
+      "target": "figuras/incidente_LC01_conditional.png"
+    },
+    {
+      "document": "incidentes.md",
+      "target": "figuras/incidente_LC01_permanent.png"
+    },
+    {
+      "document": "incidentes.md",
+      "target": "figuras/incidente_LC05_conditional.png"
+    },
+    {
+      "document": "incidentes.md",
+      "target": "figuras/incidente_LC05_permanent.png"
+    },
+    {
+      "document": "incidentes.md",
+      "target": "figuras/incidente_LC15_conditional.png"
+    },
+    {
+      "document": "incidentes.md",
+      "target": "figuras/incidente_LC15_permanent.png"
+    },
+    {
+      "document": "lectura_resultados.md",
+      "target": "tablas/metricas.csv"
+    },
+    {
+      "document": "lectura_resultados.md",
+      "target": "tablas/deltas.csv"
+    },
+    {
+      "document": "lectura_resultados.md",
+      "target": "tablas/comparacion_L_LC.csv"
+    },
+    {
+      "document": "lectura_resultados.md",
+      "target": "tablas/cronologia_resumen.csv"
+    },
+    {
+      "document": "lectura_resultados.md",
+      "target": "tablas/ordenes.csv"
+    },
+    {
+      "document": "lectura_resultados.md",
+      "target": "tablas/actividad.csv"
+    },
+    {
+      "document": "lectura_resultados.md",
+      "target": "tablas/ejecucion_resumen.csv"
+    },
+    {
+      "document": "lectura_resultados.md",
+      "target": "tablas/episodios_descubiertos.csv"
+    },
+    {
+      "document": "lectura_resultados.md",
+      "target": "tablas/metricas.csv"
+    },
+    {
+      "document": "lectura_resultados.md",
+      "target": "tablas/eventos.csv"
+    },
+    {
+      "document": "lectura_resultados.md",
+      "target": "incidentes.md"
+    },
+    {
+      "document": "lectura_resultados.md",
+      "target": "tablas/h2.csv"
+    },
+    {
+      "document": "lectura_resultados.md",
+      "target": "tablas/h3_resumen.csv"
+    },
+    {
+      "document": "lectura_resultados.md",
+      "target": "tablas/invariancias.csv"
+    },
+    {
+      "document": "README.md",
+      "target": "reporte.md"
+    },
+    {
+      "document": "README.md",
+      "target": "reporte.html"
+    },
+    {
+      "document": "README.md",
+      "target": "sintesis.md"
+    },
+    {
+      "document": "README.md",
+      "target": "incidentes.md"
+    },
+    {
+      "document": "README.md",
+      "target": "documentos/revision_tecnica_paquete.md"
+    },
+    {
+      "document": "reporte.md",
+      "target": "lectura_resultados.md"
+    },
+    {
+      "document": "reporte.md",
+      "target": "sintesis.md"
+    },
+    {
+      "document": "reporte.md",
+      "target": "documentos/protocolo.md"
+    },
+    {
+      "document": "reporte.md",
+      "target": "indice_corridas.json"
+    },
+    {
+      "document": "reporte.md",
+      "target": "auditoria_ejecucion.md"
+    },
+    {
+      "document": "reporte.md",
+      "target": "incidentes.md"
+    },
+    {
+      "document": "reporte.md",
+      "target": "README.md"
+    },
+    {
+      "document": "reporte.md",
+      "target": "tablas/metricas.csv"
+    },
+    {
+      "document": "reporte.md",
+      "target": "tablas/diario.csv"
+    },
+    {
+      "document": "reporte.md",
+      "target": "tablas/deltas.csv"
+    },
+    {
+      "document": "reporte.md",
+      "target": "controles/aprobacion_reparacion_transcripcion_utf8.md"
+    },
+    {
+      "document": "reporte.md",
+      "target": "documentos/control_compatibilidad_base_completa.json"
+    },
+    {
+      "document": "reporte.md",
+      "target": "figuras/precio.png"
+    },
+    {
+      "document": "reporte.md",
+      "target": "figuras/precio_diferencia.png"
+    },
+    {
+      "document": "reporte.md",
+      "target": "figuras/general.png"
+    },
+    {
+      "document": "reporte.md",
+      "target": "figuras/general_diferencia.png"
+    },
+    {
+      "document": "reporte.md",
+      "target": "figuras/cierre.png"
+    },
+    {
+      "document": "reporte.md",
+      "target": "figuras/cierre_diferencia.png"
+    },
+    {
+      "document": "reporte.md",
+      "target": "tablas/actividad.csv"
+    },
+    {
+      "document": "reporte.md",
+      "target": "tablas/eventos.csv"
+    },
+    {
+      "document": "reporte.md",
+      "target": "tablas/motivos_cierre.csv"
+    },
+    {
+      "document": "reporte.md",
+      "target": "tablas/ciclos.csv"
+    },
+    {
+      "document": "reporte.md",
+      "target": "tablas/demoras_ciclos.csv"
+    },
+    {
+      "document": "reporte.md",
+      "target": "tablas/ordenes.csv"
+    },
+    {
+      "document": "reporte.md",
+      "target": "tablas/capacidad.csv"
+    },
+    {
+      "document": "reporte.md",
+      "target": "tablas/causas_faltantes.csv"
+    },
+    {
+      "document": "reporte.md",
+      "target": "tablas/conciliacion_ledger.csv"
+    },
+    {
+      "document": "reporte.md",
+      "target": "figuras/cronologia.png"
+    },
+    {
+      "document": "reporte.md",
+      "target": "tablas/cronologia_resumen.csv"
+    },
+    {
+      "document": "reporte.md",
+      "target": "tablas/comparacion_L_LC.csv"
+    },
+    {
+      "document": "reporte.md",
+      "target": "tablas/episodios_descubiertos.csv"
+    },
+    {
+      "document": "reporte.md",
+      "target": "incidentes.md"
+    },
+    {
+      "document": "reporte.md",
+      "target": "tablas/invariancias.csv"
+    },
+    {
+      "document": "reporte.md",
+      "target": "hipotesis_base/h1_resumen.csv"
+    },
+    {
+      "document": "reporte.md",
+      "target": "tablas/h2.csv"
+    },
+    {
+      "document": "reporte.md",
+      "target": "tablas/h3_resumen.csv"
+    },
+    {
+      "document": "reporte.md",
+      "target": "matriz_cumplimiento.md"
+    },
+    {
+      "document": "reporte.md",
+      "target": "figuras/fuentes.json"
+    },
+    {
+      "document": "reporte.md",
+      "target": "documentos/revision_tecnica_paquete.md"
+    },
+    {
+      "document": "sintesis.md",
+      "target": "lectura_resultados.md"
+    }
+  ],
+  "images": [
+    {
+      "path": "figuras/cierre.png",
+      "width": 1980,
+      "height": 1155
+    },
+    {
+      "path": "figuras/cierre_diferencia.png",
+      "width": 1980,
+      "height": 660
+    },
+    {
+      "path": "figuras/cronologia.png",
+      "width": 1980,
+      "height": 742
+    },
+    {
+      "path": "figuras/general.png",
+      "width": 1980,
+      "height": 1155
+    },
+    {
+      "path": "figuras/general_diferencia.png",
+      "width": 1980,
+      "height": 660
+    },
+    {
+      "path": "figuras/incidente_BASE_E3_conditional.png",
+      "width": 1350,
+      "height": 825
+    },
+    {
+      "path": "figuras/incidente_BASE_E3_permanent.png",
+      "width": 1350,
+      "height": 825
+    },
+    {
+      "path": "figuras/incidente_E_OHLC4_conditional.png",
+      "width": 1350,
+      "height": 825
+    },
+    {
+      "path": "figuras/incidente_E_OHLC4_permanent.png",
+      "width": 1350,
+      "height": 825
+    },
+    {
+      "path": "figuras/incidente_L01_conditional.png",
+      "width": 1350,
+      "height": 825
+    },
+    {
+      "path": "figuras/incidente_L01_permanent.png",
+      "width": 1350,
+      "height": 825
+    },
+    {
+      "path": "figuras/incidente_L05_conditional.png",
+      "width": 1350,
+      "height": 825
+    },
+    {
+      "path": "figuras/incidente_L05_permanent.png",
+      "width": 1350,
+      "height": 825
+    },
+    {
+      "path": "figuras/incidente_LC01_conditional.png",
+      "width": 1350,
+      "height": 825
+    },
+    {
+      "path": "figuras/incidente_LC01_permanent.png",
+      "width": 1350,
+      "height": 825
+    },
+    {
+      "path": "figuras/incidente_LC05_conditional.png",
+      "width": 1350,
+      "height": 825
+    },
+    {
+      "path": "figuras/incidente_LC05_permanent.png",
+      "width": 1350,
+      "height": 825
+    },
+    {
+      "path": "figuras/incidente_LC15_conditional.png",
+      "width": 1350,
+      "height": 825
+    },
+    {
+      "path": "figuras/incidente_LC15_permanent.png",
+      "width": 1350,
+      "height": 825
+    },
+    {
+      "path": "figuras/precio.png",
+      "width": 1980,
+      "height": 1155
+    },
+    {
+      "path": "figuras/precio_diferencia.png",
+      "width": 1980,
+      "height": 660
+    }
+  ],
+  "scope": "encoding, portable document targets and image decoding; visual review is separate"
+}

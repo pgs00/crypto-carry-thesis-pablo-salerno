@@ -1,0 +1,517 @@
+{
+  "records": [
+    {
+      "path": "pruebas/anclas_originales_GREEN.txt",
+      "original_sha256": "b8b08e18d25de2eddf37afae017d6c86e0c1971901755ef71f73619baad2a82e",
+      "utf8_sha256": "a5813520d06c67a771e3369fc6bb775f5c183c3905dc7a440d78ba41a171061b",
+      "original_bytes_path": "logs_originales_binarios/pruebas/anclas_originales_GREEN.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/anclas_originales_RED.txt",
+      "original_sha256": "eba47e4704753ad9151f141399fdff2acc22a62138261fae2d9afb539712880f",
+      "utf8_sha256": "959186b1b8c70e2ec16739c48b82c391a65bc7c466b0639a003fe75f840f4ae3",
+      "original_bytes_path": "logs_originales_binarios/pruebas/anclas_originales_RED.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/atomic_ohlc_red.txt",
+      "original_sha256": "20fd0e8534998092843f89a4af5a684b14a5c0eaf91ac866cafb8a9bd8557945",
+      "utf8_sha256": "9118d1386018b8ee88468dc73614421417e905bc2ca2f2e5a2031ed1b28b9da3",
+      "original_bytes_path": "logs_originales_binarios/pruebas/atomic_ohlc_red.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/auditoria_cruzada_green_01.txt",
+      "original_sha256": "193bce5eb587594f536a0b7eb90581d5266943385b84fb84eec21c86712bc254",
+      "utf8_sha256": "0c136f6ef9fd8c65b02360347261d2344ebf03c178d6ca4427f67ba95c4f4ee8",
+      "original_bytes_path": "logs_originales_binarios/pruebas/auditoria_cruzada_green_01.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/auditoria_cruzada_green_02.txt",
+      "original_sha256": "83a8ec4aae6b8e12a2361477f0ca2d736a3ea770cff1ea54ba9588d9ba4c924e",
+      "utf8_sha256": "e46665c273bacd1a2a4b035d4d148b30db980500fb68947a4c7f908556aaf806",
+      "original_bytes_path": "logs_originales_binarios/pruebas/auditoria_cruzada_green_02.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/auditoria_cruzada_green_03.txt",
+      "original_sha256": "5d9dfc751979b97d2ac8ebc7dfc6a02de122179b758ee82eb9e734aece6eb608",
+      "utf8_sha256": "9f56ab6e9b59396598f8c9a6b5bd083f320c11cb2505b2079be0070709e4ef79",
+      "original_bytes_path": "logs_originales_binarios/pruebas/auditoria_cruzada_green_03.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/auditoria_cruzada_red.txt",
+      "original_sha256": "170d4afcb97b3b5b7ad4bc1aaa2009b3b6725a39e0b98d9e7f013a03833682ea",
+      "utf8_sha256": "7d654b33221193808c55cfa616c7b7b2c7acb3ed334071452bb2f709a5e90dd2",
+      "original_bytes_path": "logs_originales_binarios/pruebas/auditoria_cruzada_red.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/auditoria_cruzada_red_02.txt",
+      "original_sha256": "d49cad0120de0803a1d85ffb46f2f883c76cbde4cf62d7a13a4139f81fb6db45",
+      "utf8_sha256": "791060a54fa21bf4e5758f3b2ace255c428e0ad7438a100fe035d3e3cf65de5f",
+      "original_bytes_path": "logs_originales_binarios/pruebas/auditoria_cruzada_red_02.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/auditoria_final_pendiente_green.txt",
+      "original_sha256": "f6397a39bac9fffe5c160373e7b64db51e7277193448e72178e339415e72af9e",
+      "utf8_sha256": "57ed3530cdcaa3b0c27c8275903351ad5d83a49630facab47b4a568548486af6",
+      "original_bytes_path": "logs_originales_binarios/pruebas/auditoria_final_pendiente_green.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/auditoria_final_pendiente_red.txt",
+      "original_sha256": "45aae0d623aecf395fb592e05a79e7f9de68a4068b585adef8b1323abf1b9a55",
+      "utf8_sha256": "949abd27248da88effcc14135bf7f76f2226df40f22554691018eed4cf37d0f6",
+      "original_bytes_path": "logs_originales_binarios/pruebas/auditoria_final_pendiente_red.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/audit_green_01.txt",
+      "original_sha256": "ff18dc9278069d97e960d261ab100c69ba2ab345e23c27cbca0947b25c452546",
+      "utf8_sha256": "3d6ab818649613c66b47730c85cd89ecee06eba1ee4ce7a8ccf1496abcabd133",
+      "original_bytes_path": "logs_originales_binarios/pruebas/audit_green_01.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/audit_red.txt",
+      "original_sha256": "060c13a2e52dcb66944c2c97a67e7376d9c72a5ee088b81615b7dd1bfd4794d5",
+      "utf8_sha256": "14366b29efdd377d617557e7900ff24b44a499dbe640158c71c436c2435aa2be",
+      "original_bytes_path": "logs_originales_binarios/pruebas/audit_red.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/bloque4_focalizado_final.txt",
+      "original_sha256": "3ed04e558aebc2affd416f2e3d34f4023b3de83051d4f2f045df8fcc9e1db1ff",
+      "utf8_sha256": "edbc0f4db5adab04001d7ef75cc6f1f3df9b1b41a95c5733e96bc53c4999b53e",
+      "original_bytes_path": "logs_originales_binarios/pruebas/bloque4_focalizado_final.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/coleccion.txt",
+      "original_sha256": "b6d5447f0ea8a1a9b463ccec63272d909a7ab8b21a5539d63bbdee8e44068179",
+      "utf8_sha256": "1a78889a6751d3fa7ac1ad016e12e6b007d765cdfaeb0f71e6bfd56938fa8146",
+      "original_bytes_path": "logs_originales_binarios/pruebas/coleccion.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/compatibilidad_base_orden_persistido.txt",
+      "original_sha256": "018af4edc1b3ca2609fb36a773f689f60539f324dd28837957dcdb0b6637c481",
+      "utf8_sha256": "5e6d8ed912535ffef4686b881f83aadd7263330b873700935798d43aa66633f2",
+      "original_bytes_path": "logs_originales_binarios/pruebas/compatibilidad_base_orden_persistido.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/focalizadas_fuente_final_01.txt",
+      "original_sha256": "be76b8bc68de7b26d832fe56c3523404d06e579c0e2a04da660326d6918f09cc",
+      "utf8_sha256": "b404fb07cbb0264b313edee80a37a11399e41baf5f4c7362e92b3b62de078639",
+      "original_bytes_path": "logs_originales_binarios/pruebas/focalizadas_fuente_final_01.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/incidentes_exportacion_GREEN.txt",
+      "original_sha256": "896899e96eed71e6776055c0c1b085777d457a51b0863323379f98f180dc3083",
+      "utf8_sha256": "d53faf6e11f801cfea9fa6db8b543685204c8b16c8e0a1286f4a83217cfefab9",
+      "original_bytes_path": "logs_originales_binarios/pruebas/incidentes_exportacion_GREEN.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/incidentes_exportacion_RED.txt",
+      "original_sha256": "bcc712df4d9cbc4140d1120dc930f3a45ac64b78bd41b8d0e4cd3e562ff4cad7",
+      "utf8_sha256": "edc719b2b9bd8cfa76e27eb1b9c83dcbe749c10e2d5ad0f4bd140f27fb262e40",
+      "original_bytes_path": "logs_originales_binarios/pruebas/incidentes_exportacion_RED.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/incidentes_fronteras_GREEN.txt",
+      "original_sha256": "2d8ce25416444b9008fe97fe50c94aa449472f71c3e8dae094bee85942adeef2",
+      "utf8_sha256": "78f19119a291bb1d6ea81fd545b23662abd7bf620af80d227c956d35ad99bdcb",
+      "original_bytes_path": "logs_originales_binarios/pruebas/incidentes_fronteras_GREEN.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/incidentes_fronteras_RED.txt",
+      "original_sha256": "a0e10cbc6e9231dcaf930952af129cab95b8014cb0cecb3b80309d89147dce68",
+      "utf8_sha256": "183e290b9709c81e1c0028bfb05b27f8b961f836aaf09729e3c71f1eaba0104a",
+      "original_bytes_path": "logs_originales_binarios/pruebas/incidentes_fronteras_RED.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/incidentes_green_01.txt",
+      "original_sha256": "388bc6412dbe4b7c049c0fe50f4978690004c591cfd0e82b9f0e0debadf6d8c5",
+      "utf8_sha256": "306ec37c374b0e6593bcdaba374dd57e6de0562017e2e7968a4e373463f1e314",
+      "original_bytes_path": "logs_originales_binarios/pruebas/incidentes_green_01.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/incidentes_green_02.txt",
+      "original_sha256": "e4d5c95b75e8afea14c9d5b46714a615a13ae41a373247fbb64910303f7f1608",
+      "utf8_sha256": "1d52dbb17e3e9e9cc417ef8793241807580d7b211611088b7639c4def31f512f",
+      "original_bytes_path": "logs_originales_binarios/pruebas/incidentes_green_02.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/incidentes_polvo_integridad_GREEN.txt",
+      "original_sha256": "dac18a2f3681196726669c6544e5d661856bdcc121d18f806093c34cfd1ceb14",
+      "utf8_sha256": "15fbf53faeabf79210a653f426adf64a6810852ca41d43daf13064ffa12b0296",
+      "original_bytes_path": "logs_originales_binarios/pruebas/incidentes_polvo_integridad_GREEN.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/incidentes_polvo_RED.txt",
+      "original_sha256": "02f21579584e41aaa8264bb5a3494fb20c437a5d67b5c86915d6605f91284feb",
+      "utf8_sha256": "02ed6d53cb68831ecfb8deeca45d6830ff6b2553ded3c1e4005dca549e7447c5",
+      "original_bytes_path": "logs_originales_binarios/pruebas/incidentes_polvo_RED.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/incidentes_red.txt",
+      "original_sha256": "0d55bac1fd16de5d5520bc0b88ff8777e673947f14734ffa8eb30ea5000df1af",
+      "utf8_sha256": "1b63e5db40c649b8a11c626b520a8ee0e71d6fd7a24fe8378a84d503890f071e",
+      "original_bytes_path": "logs_originales_binarios/pruebas/incidentes_red.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/incidentes_terminal_GREEN.txt",
+      "original_sha256": "0a3f61613f5eddc122f0f78ad41c5c4b3b7223a271702b35086d29d9b21bbc37",
+      "utf8_sha256": "3145e86fc4a46e314c13aeb883e5f2d086c314342f6ebc0c571b79f982bf987b",
+      "original_bytes_path": "logs_originales_binarios/pruebas/incidentes_terminal_GREEN.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/incidentes_terminal_RED.txt",
+      "original_sha256": "74081eae9694f1949f08e87ee45e78329c1373d3cd663d88a688f688d7d67774",
+      "utf8_sha256": "09a01bb8be6236f81b38aba64ba068019b67558ad361c00ff6bb93255506b237",
+      "original_bytes_path": "logs_originales_binarios/pruebas/incidentes_terminal_RED.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/incidente_calidad_ND_green.txt",
+      "original_sha256": "acde3518fc9ef188b7edae763d782fd02b735123db8311b2774dd355c6d5a152",
+      "utf8_sha256": "5dcaa386f42885f63e61bf5c21ef385b7027d0b2e89c58ea3e79543b884f5fca",
+      "original_bytes_path": "logs_originales_binarios/pruebas/incidente_calidad_ND_green.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/incidente_calidad_ND_red.txt",
+      "original_sha256": "2e3d3928a93258d927356a8f580720818868a1f2c0ece048fce0568705359ee4",
+      "utf8_sha256": "58b18ebc468e4be43f041bcace7fb9c56df47688552725170f042daffda8e231",
+      "original_bytes_path": "logs_originales_binarios/pruebas/incidente_calidad_ND_red.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/incidente_cubierto_red.txt",
+      "original_sha256": "6e5f13401bfd85d2131f9337963b2fc346c7c546e5a3abcbf85cb8175b9439ea",
+      "utf8_sha256": "6b618f3982ef129b4b3354722ca3b797414cfcb03b6dfdd3263c4f328392a5b4",
+      "original_bytes_path": "logs_originales_binarios/pruebas/incidente_cubierto_red.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/incidente_ND_green.txt",
+      "original_sha256": "007793555f0ffab5793e0f1789dc4c1af6382788fea5f36600ee1bfe2fbcfefc",
+      "utf8_sha256": "0bdf60b88e99b96d9274d76aa3618985f3a7f3fde19b3a30c7a41c9a0dd51033",
+      "original_bytes_path": "logs_originales_binarios/pruebas/incidente_ND_green.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/incidente_ND_red.txt",
+      "original_sha256": "eb3d4661e4a52272afcf63fcf6688cf6a3bc0ae3eee3bc5610f20c7aa954ac8b",
+      "utf8_sha256": "c492c0b662a8e7c51f2c3416c30bb3a1f034337fa5414d77d0e9000df4fdb94e",
+      "original_bytes_path": "logs_originales_binarios/pruebas/incidente_ND_red.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/liquidacion_autorizada_red.txt",
+      "original_sha256": "d6c52ed8da5d1ac041737d94fafcee5421a72a3ddf24f4ee20618271fb9d7740",
+      "utf8_sha256": "e43071f6ba79f1efc79702c75420b662383828c7327dbaeecaa0b328d50ff3d9",
+      "original_bytes_path": "logs_originales_binarios/pruebas/liquidacion_autorizada_red.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/nativas_revision_final.txt",
+      "original_sha256": "29a8786e2e8fe1763cc438d6ee3a43d2c4d7efd91216a4872651c65ff0292240",
+      "utf8_sha256": "eeabf9a74ba9d615bd95afb4cc64ce246e2f794a54b7e0ab74f88f7a8e751bf9",
+      "original_bytes_path": "logs_originales_binarios/pruebas/nativas_revision_final.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/nuevas_02.txt",
+      "original_sha256": "97f355d6c4633dc5bcb536d9eb5acf0c282b7e5c70b359e554519b0ec2996982",
+      "utf8_sha256": "023ad7e881f140591df2162a601cb9da66eefa5b13adc2012fcab163b7845004",
+      "original_bytes_path": "logs_originales_binarios/pruebas/nuevas_02.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/nuevas_03.txt",
+      "original_sha256": "1821d2997884c266aeb2b693fd650c8c2f67d2d007ce147689a755a982ad4cba",
+      "utf8_sha256": "de9efe909ad59b6f5d7288c6a0b1520bb31b31e75a55009b1b2e90f97d297e6a",
+      "original_bytes_path": "logs_originales_binarios/pruebas/nuevas_03.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/nuevas_04.txt",
+      "original_sha256": "b3424bca1e939a67b5aa4437c37636d26ab6a2447171a0d92d506c55477ca35a",
+      "utf8_sha256": "16456a3d131ee5a64d2e4137fb29d4b3d43fbf547aba869595702e29898833b2",
+      "original_bytes_path": "logs_originales_binarios/pruebas/nuevas_04.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/orden_catalogo_GREEN.txt",
+      "original_sha256": "720717d22a33bee59873cd1ff6ee2966a7cc32bd26c9e23d80852a7862e4f98e",
+      "utf8_sha256": "f68bb23632657e81b514b76d7145d616ee34d203d5ea1fe1f48e1006c4badb47",
+      "original_bytes_path": "logs_originales_binarios/pruebas/orden_catalogo_GREEN.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/orden_catalogo_RED.txt",
+      "original_sha256": "690d401fb1345a76de2cc66c6a263d39573c5a03f9201f172fa22f114a839ef3",
+      "utf8_sha256": "a88ca6913a68f3f900c8c5fd3c79a8dd4b1fe5e782baf778d46c48edc6b98e76",
+      "original_bytes_path": "logs_originales_binarios/pruebas/orden_catalogo_RED.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/paquetes_historicos_01.txt",
+      "original_sha256": "8761ab5a2286539abac581a99435135c7cb2e11200321783ce7e14a9da41ea79",
+      "utf8_sha256": "0e6aeb990f3101e4c7afbe59265706ba15d8a1081d0df9cf7cf0cb62e92b2e95",
+      "original_bytes_path": "logs_originales_binarios/pruebas/paquetes_historicos_01.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/regresion_01.txt",
+      "original_sha256": "35b99e3d7b324db7278473af0d706a59a06d1fa09d1169f125390522c4be7b7a",
+      "utf8_sha256": "fa065ffd48bbf4553c2fd3de223dd31cf4ad0fc0a59de74fe7c429be1c8e0002",
+      "original_bytes_path": "logs_originales_binarios/pruebas/regresion_01.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/regresion_02.txt",
+      "original_sha256": "71aeeb00d6e5e3734803908b6f7c0d4aad94de5262a686f911b35a9b4458c001",
+      "utf8_sha256": "043929842d16c139f820cb88daa68a75b06648580b04b1c4ba23843aef516f70",
+      "original_bytes_path": "logs_originales_binarios/pruebas/regresion_02.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/ruff_01.txt",
+      "original_sha256": "ddc18369fddac64bb31eb1187c8d21dd15a764e11d828eb62fd520ade628ebdf",
+      "utf8_sha256": "2526d0f109efc6d11b00cd42187bffc5feb34292a52f6b252f6ac8376b5bea73",
+      "original_bytes_path": "logs_originales_binarios/pruebas/ruff_01.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/ruff_fuente_final_01.txt",
+      "original_sha256": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af",
+      "utf8_sha256": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0",
+      "original_bytes_path": "logs_originales_binarios/pruebas/ruff_fuente_final_01.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/ruff_global.txt",
+      "original_sha256": "ea64b52b01b025701e812f773328dc6111c68fafd6011077564e074e5265ce1b",
+      "utf8_sha256": "7bebc5d0e9e71c9eee59f60a69982219580c9f64cc3a83eabe3d18a9cd6a3677",
+      "original_bytes_path": "logs_originales_binarios/pruebas/ruff_global.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/ruff_proyecto.txt",
+      "original_sha256": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af",
+      "utf8_sha256": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0",
+      "original_bytes_path": "logs_originales_binarios/pruebas/ruff_proyecto.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/tdd_green_01.txt",
+      "original_sha256": "42d6f856a5060304669e60c5b2e22354f2df5a38dcfb3c4147d0dbfc3f2d3031",
+      "utf8_sha256": "c13502007f3fc820d723c90e133f2f591280d8276f58de82c22262b6d4eeb697",
+      "original_bytes_path": "logs_originales_binarios/pruebas/tdd_green_01.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/tdd_green_02.txt",
+      "original_sha256": "69943aa6dc766ac82c4a0a27aa99410368c020dcba16bf3ac09e03a0098b85cd",
+      "utf8_sha256": "461054b68fc443a26df96c49bc2a3622b4623fbc1f72510bfef04d5257aae3a6",
+      "original_bytes_path": "logs_originales_binarios/pruebas/tdd_green_02.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/tdd_integration_red.txt",
+      "original_sha256": "24e1a2b0ebf511218ed9fd56a6501635be7de9a27303fd5cbf97e9128f50e315",
+      "utf8_sha256": "0b44b175481ace738d5a0f6c57bd89a80f60ffac6455505a2a3731093b7dc67d",
+      "original_bytes_path": "logs_originales_binarios/pruebas/tdd_integration_red.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "pruebas/tdd_unit_red.txt",
+      "original_sha256": "9d819a8a49738fea861ad85e004fc79c2b811a512c02d597f094efe4c3ae9f4f",
+      "utf8_sha256": "ec9f5ade02923374e24e1bb3749c8298f8d0c0819b81e25e875b0d26d3770424",
+      "original_bytes_path": "logs_originales_binarios/pruebas/tdd_unit_red.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "logs_corridas/CONTROL_BASE__conditional.txt",
+      "original_sha256": "58ae4146d74974f1bf880d0c10bedd03ae69dd51dae0c5b9be9221b8680c124a",
+      "utf8_sha256": "05a109b3bd882b25c07881c44b6ce94daaaf69e2135e74174819e51b576f5a9c",
+      "original_bytes_path": "logs_originales_binarios/logs_corridas/CONTROL_BASE__conditional.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "logs_corridas/CONTROL_BASE__permanent.txt",
+      "original_sha256": "6ec06c04c54d4f7d3569c95b1fa64e8c1f87e88cd4ba111eead482ae06b48d08",
+      "utf8_sha256": "1d222560b81e223532be68259e18e33495e117005a86c0c52d65958d1c621b30",
+      "original_bytes_path": "logs_originales_binarios/logs_corridas/CONTROL_BASE__permanent.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "logs_corridas/coordinador_01.txt",
+      "original_sha256": "d27b75dd964d5a592bdfbd59a87a788b205f41c896824309a283f80de47aa54a",
+      "utf8_sha256": "6fa00dab4344d12e61187ce1d677877f49daf9142a7eea9d91236caf8f21e2c1",
+      "original_bytes_path": "logs_originales_binarios/logs_corridas/coordinador_01.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "controles/autenticacion_log.txt",
+      "original_sha256": "69339dbaa07a988ce4b2ff6224afa6db86c3a2dd94d500b6f4decee3b6ee752f",
+      "utf8_sha256": "a6bb41ee9267b6020e5f1a0ab07971f74eb452cd36da3932e478f4e72b228ace",
+      "original_bytes_path": "logs_originales_binarios/controles/autenticacion_log.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "controles/compatibilidad_actual_log.txt",
+      "original_sha256": "cac06a09e5d20162d72db321b9bccce36d898a51bc545ade9d0445dba3203834",
+      "utf8_sha256": "fb8566769e00e694eec6cc065de7a063d86e4081638589aa2ef63d70864d8379",
+      "original_bytes_path": "logs_originales_binarios/controles/compatibilidad_actual_log.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "controles/compatibilidad_actual_reparado_log.txt",
+      "original_sha256": "838a673f3ff55e5130b4fc3a0328e3f99d00ccf30d3ff39783be45ead0a78d53",
+      "utf8_sha256": "88e50125649246d238d3af2914000647d79fd496ab00764c5666a3fad01d2539",
+      "original_bytes_path": "logs_originales_binarios/controles/compatibilidad_actual_reparado_log.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    },
+    {
+      "path": "controles/compatibilidad_previo_log.txt",
+      "original_sha256": "9298ff3f2b534d066525f47ed60932ee5507ceccfc8dc0fc5c57028b88c85b08",
+      "utf8_sha256": "e534e8321d33a2a39ba0387251c9930632638dc28275e42f847cdbe0bf880ee1",
+      "original_bytes_path": "logs_originales_binarios/controles/compatibilidad_previo_log.txt.bin",
+      "source_encoding": "PowerShell UTF-16 BOM",
+      "target_encoding": "UTF-8",
+      "text_preserved": true
+    }
+  ]
+}

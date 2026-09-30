@@ -1,0 +1,17 @@
+{
+  "head": "d43d155c1a8f0444022b0226e75bcf5bd5dd926a",
+  "user_index_sha256": "02c819872c5891bed1fde6bacc46ef56b100e562295bc8620c8d0ebab67cb99b",
+  "head_unchanged": true,
+  "user_index_unchanged": true,
+  "staged_diff": "",
+  "tracked_changes": [
+    ".gitattributes",
+    "docs/entrega_4/historial_avance/cambios.md",
+    "docs/entrega_4/matriz_avance.csv",
+    "src/crypto_carry/config.py",
+    "src/crypto_carry/data/prescribed.py",
+    "src/crypto_carry/execution.py",
+    "src/crypto_carry/reporting.py",
+    "src/crypto_carry/strategy.py"
+  ]
+}

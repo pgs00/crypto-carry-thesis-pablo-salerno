@@ -1,0 +1,624 @@
+Traceback (most recent call last):
+  File "C:\Users\pablo\Documentos\UCEMA\Tesina\Backtesting\scripts\execution_delays_delivery.py", line 148, in <module>
+    result["export"]=export_bytes(root,a.package.resolve())
+                     ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pablo\Documentos\UCEMA\Tesina\Backtesting\scripts\execution_delays_delivery.py", line 126, in export_bytes
+    git(project,["diff","--cached","--check","--",package.relative_to(project).as_posix()],index=index)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pablo\Documentos\UCEMA\Tesina\Backtesting\scripts\signal_sensitivity_delivery.py", line 37, in git
+    raise ValueError("Git command failed: "+" ".join(args[:4])+"\n"+
+                     (result.stdout+result.stderr).decode("utf-8", errors="replace"))
+ValueError: Git command failed: diff --cached --check --
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/controles/revision_independiente.md:62: new blank line at EOF.
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/documentos/controles/revision_independiente.md:62: new blank line at EOF.
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/anclas_originales_RED.txt:23: trailing whitespace.
++tests\unit\test_execution_delays_integrity.py:23: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/anclas_originales_RED.txt:31: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/atomic_ohlc_red.txt:15: trailing whitespace.
++tests\integration\test_execution_delays_native.py:164: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/audit_green_01.txt:10: trailing whitespace.
++tests\unit\test_execution_delays_audit.py:50: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/auditoria_cruzada_green_02.txt:21: trailing whitespace.
++tests\unit\test_execution_delays_audit.py:141: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/auditoria_cruzada_red_02.txt:21: trailing whitespace.
++tests\unit\test_execution_delays_audit.py:141: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/incidentes_exportacion_RED.txt:18: trailing whitespace.
++tests\unit\test_execution_delays_incidents.py:174: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/incidentes_fronteras_RED.txt:43: trailing whitespace.
++E         
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/incidentes_terminal_RED.txt:7: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/liquidacion_autorizada_red.txt:26: trailing whitespace.
++E         
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/liquidacion_autorizada_red.txt:54: trailing whitespace.
++E         
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/paquetes_historicos_01.txt:73: trailing whitespace.
++E         
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/paquetes_historicos_01.txt:153: trailing whitespace.
++E         
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/paquetes_historicos_01.txt:233: trailing whitespace.
++E         
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/paquetes_historicos_01.txt:313: trailing whitespace.
++E         
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/paquetes_historicos_01.txt:393: trailing whitespace.
++E         
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/paquetes_historicos_01.txt:412: trailing whitespace.
++tests\unit\test_signal_sensitivity_package.py:48: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:14: trailing whitespace.
++tests\integration\test_execution_delays.py:22: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:32: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:35: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:40: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:48: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:54: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:76: trailing whitespace.
++tests\integration\test_execution_delays.py:22: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:94: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:97: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:102: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:110: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:116: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:138: trailing whitespace.
++tests\integration\test_execution_delays.py:22: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:156: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:159: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:164: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:172: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:178: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:200: trailing whitespace.
++tests\integration\test_execution_delays.py:45: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:218: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:221: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:226: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:234: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:240: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:262: trailing whitespace.
++tests\integration\test_execution_delays.py:45: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:280: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:283: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:288: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:296: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:302: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:324: trailing whitespace.
++tests\integration\test_execution_delays.py:45: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:342: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:345: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:350: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:358: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:364: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:384: trailing whitespace.
++tests\integration\test_execution_delays.py:55: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:402: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:405: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:410: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:418: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:424: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:444: trailing whitespace.
++tests\integration\test_execution_delays.py:65: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:462: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:465: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:470: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:478: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:484: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:513: trailing whitespace.
++tests\integration\test_execution_delays.py:89: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:531: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:534: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:539: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:547: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:553: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:582: trailing whitespace.
++tests\integration\test_execution_delays.py:89: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:600: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:603: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:608: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:616: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:622: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:651: trailing whitespace.
++tests\integration\test_execution_delays.py:89: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:669: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:672: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:677: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:685: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:691: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:711: trailing whitespace.
++tests\integration\test_execution_delays.py:102: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:729: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:732: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:737: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:745: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:751: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:771: trailing whitespace.
++tests\integration\test_execution_delays.py:121: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:789: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:792: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:797: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:805: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:811: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:832: trailing whitespace.
++tests\integration\test_execution_delays.py:138: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:850: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:853: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:858: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:866: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_integration_red.txt:872: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:11: trailing whitespace.
++tests\unit\test_execution_delays.py:18: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:27: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:30: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:35: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:43: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:49: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:76: trailing whitespace.
++tests\unit\test_execution_delays.py:36: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:92: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:95: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:100: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:108: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:114: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:141: trailing whitespace.
++tests\unit\test_execution_delays.py:36: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:157: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:160: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:165: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:173: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:179: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:206: trailing whitespace.
++tests\unit\test_execution_delays.py:36: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:222: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:225: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:230: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:238: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:244: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:271: trailing whitespace.
++tests\unit\test_execution_delays.py:36: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:287: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:290: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:295: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:303: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:309: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:336: trailing whitespace.
++tests\unit\test_execution_delays.py:36: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:352: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:355: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:360: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:368: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:374: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:401: trailing whitespace.
++tests\unit\test_execution_delays.py:36: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:417: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:420: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:425: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:433: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:439: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:462: trailing whitespace.
++tests\unit\test_execution_delays.py:44: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:478: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:481: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:486: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:494: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:500: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:523: trailing whitespace.
++tests\unit\test_execution_delays.py:44: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:539: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:542: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:547: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:555: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:561: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:584: trailing whitespace.
++tests\unit\test_execution_delays.py:44: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:600: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:603: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:608: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:616: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:622: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:645: trailing whitespace.
++tests\unit\test_execution_delays.py:44: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:661: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:664: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:669: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:677: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:683: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:706: trailing whitespace.
++tests\unit\test_execution_delays.py:44: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:722: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:725: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:730: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:738: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:744: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:767: trailing whitespace.
++tests\unit\test_execution_delays.py:44: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:783: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:786: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:791: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:799: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:805: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:828: trailing whitespace.
++tests\unit\test_execution_delays.py:44: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:844: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:847: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:852: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:860: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:866: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:889: trailing whitespace.
++tests\unit\test_execution_delays.py:44: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:905: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:908: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:913: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:921: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:927: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:950: trailing whitespace.
++tests\unit\test_execution_delays.py:44: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:966: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:969: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:974: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:982: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:988: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1011: trailing whitespace.
++tests\unit\test_execution_delays.py:44: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1027: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1030: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1035: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1043: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1049: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1072: trailing whitespace.
++tests\unit\test_execution_delays.py:44: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1088: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1091: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1096: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1104: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1110: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1133: trailing whitespace.
++tests\unit\test_execution_delays.py:44: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1149: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1152: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1157: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1165: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1171: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1194: trailing whitespace.
++tests\unit\test_execution_delays.py:44: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1210: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1213: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1218: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1226: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1232: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1255: trailing whitespace.
++tests\unit\test_execution_delays.py:44: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1271: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1274: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1279: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1287: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1293: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1316: trailing whitespace.
++tests\unit\test_execution_delays.py:44: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1332: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1335: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1340: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1348: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1354: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1377: trailing whitespace.
++tests\unit\test_execution_delays.py:44: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1393: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1396: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1401: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1409: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1415: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1438: trailing whitespace.
++tests\unit\test_execution_delays.py:44: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1454: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1457: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1462: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1470: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1476: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1499: trailing whitespace.
++tests\unit\test_execution_delays.py:44: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1515: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1518: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1523: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1531: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1537: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1560: trailing whitespace.
++tests\unit\test_execution_delays.py:44: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1576: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1579: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1584: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1592: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1598: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1621: trailing whitespace.
++tests\unit\test_execution_delays.py:44: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1637: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1640: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1645: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1653: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1659: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1684: trailing whitespace.
++tests\unit\test_execution_delays.py:60: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1700: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1703: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1708: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1716: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1722: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1747: trailing whitespace.
++tests\unit\test_execution_delays.py:60: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1763: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1766: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1771: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1779: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1785: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1810: trailing whitespace.
++tests\unit\test_execution_delays.py:60: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1826: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1829: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1834: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1842: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1848: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1873: trailing whitespace.
++tests\unit\test_execution_delays.py:60: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1889: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1892: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1897: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1905: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1911: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1936: trailing whitespace.
++tests\unit\test_execution_delays.py:60: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1952: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1955: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1960: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1968: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1974: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:1999: trailing whitespace.
++tests\unit\test_execution_delays.py:60: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:2015: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:2018: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:2023: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:2031: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:2037: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:2062: trailing whitespace.
++tests\unit\test_execution_delays.py:60: 
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:2078: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:2081: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:2086: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:2094: trailing whitespace.
++    
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/pruebas/tdd_unit_red.txt:2100: trailing whitespace.
++    
+

@@ -1,0 +1,3 @@
+CONCILIADO BASE_E3 conditional
+CONCILIADO BASE_E3 permanent
+C:\Users\pablo\AppData\Local\Temp\execution_delays_preflight_2kf1l99x\partial_base

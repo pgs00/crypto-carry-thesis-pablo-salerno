@@ -1,0 +1,60 @@
+F..............                                                          [100%]
+================================== FAILURES ===================================
+________ test_audit_independently_checks_reference_and_eligible_window ________
+
+    def test_audit_independently_checks_reference_and_eligible_window():
+        from scripts.execution_delays_audit import audit_execution
+>       a=audit_execution(*fixture())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\unit\test_execution_delays_audit.py:50: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+config = Config(symbols=('BTCUSDT', 'ETHUSDT'), history_start='2022-01-01T00:00:00Z', start='2022-01-01T00:00:00Z', end='2026-0..._client', sample_start='2022-01-01T00:00:00Z', sample_end='2022-01-02T00:00:00Z', accounting_tolerance=Decimal('1E-8'))
+orders = [{'order_id': 'a', 'symbol': 'BTCUSDT', 'market': 'spot', 'side': 'BUY', ...}, {'order_id': 'a', 'symbol': 'BTCUSDT', 'market': 'spot', 'side': 'BUY', ...}, {'order_id': 'a', 'symbol': 'BTCUSDT', 'market': 'spot', 'side': 'BUY', ...}]
+fills = [{'order_id': 'a', 'fill_id': 'fa', 'symbol': 'BTCUSDT', 'market': 'spot', ...}]
+ledger = [{'event_id': 'fill:fa', 'symbol': 'BTCUSDT', 'kind': 'spot_buy', 'quantity': '.05', ...}]
+windows = [{'symbol': 'BTCUSDT', 'market': 'spot', 'open_time': 1640995200000000000, 'end_time': 1640995260000000000, ...}]
+
+    def audit_execution(config, orders, fills, ledger, windows):
+        validate_records(config, orders, fills)
+        rules = prescribed_rules(config)
+        window_map = {key(r): r for r in windows}
+        if len(window_map) != len(windows):
+            raise ValueError("Duplicate source window denominator")
+        ledger_map = {r["event_id"]: r for r in ledger if str(r["event_id"]).startswith("fill:")}
+        if len(ledger_map) != sum(str(r["event_id"]).startswith("fill:") for r in ledger):
+            raise ValueError("Duplicate ledger fill identity")
+        if len({f["fill_id"] for f in fills}) != len(fills):
+            raise ValueError("Duplicate fill identity")
+        grouped_orders, grouped_fills, capacity = defaultdict(list), defaultdict(list), {}
+        for row in orders:
+            grouped_orders[row["order_id"]].append(row)
+        fill_audit = []
+        for fill in fills:
+            oid, fid = fill["order_id"], fill["fill_id"]
+            if oid not in grouped_orders:
+                raise ValueError("Fill has no authenticated order")
+            original = grouped_orders[oid][0]
+            for field in ("symbol", "market", "side", "purpose", "window_start", "window_end"):
+                if str(fill[field]) != str(original[field]):
+                    raise ValueError("Fill differs from original order "+field)
+            if (int(original["window_start"]), int(original["window_end"])) != expected_window(config, original):
+                raise ValueError("Order window does not follow eligibility")
+            k = key(fill)
+            window = window_map.get(k)
+            if window is None or not is_true(window["present"]):
+                raise ValueError("Executed fill has no source volume window")
+            volume, quote = number(window["base_volume"]), number(window["quote_volume"])
+            if volume <= 0 or quote <= 0:
+                raise ValueError("Execution on zero or invalid volume")
+            q, price, fee = number(fill["quantity"]), number(fill["price"]), number(fill["fee_rate"])
+            rule = rules.get(fill["symbol"], fill["market"], int(fill["time_ns"]))
+            if rule is None or not valid_quantity(q, price, rule):
+>               raise ValueError("Executed quantity violates prescribed rule")
+E               ValueError: Executed quantity violates prescribed rule
+
+scripts\execution_delays_audit.py:163: ValueError
+=========================== short test summary info ===========================
+FAILED tests/unit/test_execution_delays_audit.py::test_audit_independently_checks_reference_and_eligible_window
+1 failed, 14 passed in 0.52s

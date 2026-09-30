@@ -1,0 +1,22 @@
+{
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-u",
+    "-X",
+    "utf8",
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\ejecucion_demoras\\20260929T221620Z\\paquete_20260930T012056Z\\herramientas\\scripts\\verify_execution_delays.py",
+    "--package",
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\ejecucion_demoras\\20260929T221620Z\\paquete_20260930T012056Z",
+    "--output",
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\ejecucion_demoras\\20260929T221620Z\\verificacion_final\\fuentes_completas.json",
+    "--unsealed",
+    "--data-root",
+    "D:/Backtesting"
+  ],
+  "cwd": "C:\\Users\\pablo\\AppData\\Local\\Temp\\execution_delays_full_sources_zv9pzp4l",
+  "started_at": "2026-09-30T01:24:31.652162+00:00",
+  "status": "passed",
+  "exit_code": 0,
+  "finished_at": "2026-09-30T01:26:38.425159+00:00"
+}

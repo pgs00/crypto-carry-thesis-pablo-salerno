@@ -1,0 +1,26 @@
+{
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "scripts/execution_delays_delivery.py",
+    "--work",
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\ejecucion_demoras\\20260929T221620Z",
+    "--data-root",
+    "D:/Backtesting",
+    "--package",
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\ejecucion_demoras\\20260929T221620Z\\paquete_20260930T013915Z_v2",
+    "--output",
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\ejecucion_demoras\\20260929T221620Z\\verificacion_final\\preservacion_y_exportacion_v2.json"
+  ],
+  "environment_overrides": {
+    "GIT_CONFIG_COUNT": "1",
+    "GIT_CONFIG_KEY_0": "core.longpaths",
+    "GIT_CONFIG_VALUE_0": "true"
+  },
+  "scope": "process only; no repository/global Git config mutation",
+  "started_at": "2026-09-30T01:40:34.840048+00:00",
+  "exit_code": 0,
+  "finished_at": "2026-09-30T01:42:13.232141+00:00"
+}

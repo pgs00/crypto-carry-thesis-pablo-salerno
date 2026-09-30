@@ -1,0 +1,8 @@
+2022-01-01 realized conditional fills 0 seconds 3.4249536999850534
+2022-01-01 realized permanent fills 0 seconds 3.4298024000017904
+2024-03-01 realized conditional fills 4 seconds 5.646764200006146
+2024-03-01 realized permanent fills 4 seconds 5.323487300018314
+2024-03-01 base_e3_total conditional fills 4 seconds 5.250125200022012
+2024-03-01 base_e3_total permanent fills 4 seconds 5.19000960001722
+2023-03-20 base_e3_promo conditional fills 0 seconds 5.3096327999955975
+2023-03-20 base_e3_promo permanent fills 0 seconds 5.143715500016697

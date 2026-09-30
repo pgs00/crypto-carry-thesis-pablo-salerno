@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "files_checked": 1730,
+  "errors": [],
+  "semantic_manifest_identity_reused_from_authenticated_block2": true,
+  "scope": "Every byte-addressed original input rehashed; no downloads or data writes"
+}

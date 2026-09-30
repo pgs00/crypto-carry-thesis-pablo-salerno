@@ -1,0 +1,241 @@
+FFFFFFFFFFFFFFF                                                          [100%]
+================================== FAILURES ===================================
+________ test_audit_independently_checks_reference_and_eligible_window ________
+
+    def test_audit_independently_checks_reference_and_eligible_window():
+>       from scripts.execution_delays_audit import audit_execution
+E       ModuleNotFoundError: No module named 'scripts.execution_delays_audit'
+
+tests\unit\test_execution_delays_audit.py:49: ModuleNotFoundError
+_________ test_semantic_mutations_are_rejected[2-reference_price-102] _________
+
+target = 2, field = 'reference_price', value = '102'
+
+    @pytest.mark.parametrize('target,field,value',[
+        (2,'reference_price','102'),(2,'reference_price_model','vwap'),
+        (2,'quantity','.2'),(2,'fee_rate','.1'),(2,'fill_sequence',99),
+        (2,'purpose','liquidate'),(2,'window_ohlc4','102'),(4,'low','105'),
+        (4,'base_volume','1'),(1,'deadline',1),(1,'event_sequence',20),
+        (1,'delay_applied_seconds',60),(1,'eligible_at',1),
+    ])
+    def test_semantic_mutations_are_rejected(target,field,value):
+>       from scripts.execution_delays_audit import audit_execution
+E       ModuleNotFoundError: No module named 'scripts.execution_delays_audit'
+
+tests\unit\test_execution_delays_audit.py:65: ModuleNotFoundError
+_____ test_semantic_mutations_are_rejected[2-reference_price_model-vwap] ______
+
+target = 2, field = 'reference_price_model', value = 'vwap'
+
+    @pytest.mark.parametrize('target,field,value',[
+        (2,'reference_price','102'),(2,'reference_price_model','vwap'),
+        (2,'quantity','.2'),(2,'fee_rate','.1'),(2,'fill_sequence',99),
+        (2,'purpose','liquidate'),(2,'window_ohlc4','102'),(4,'low','105'),
+        (4,'base_volume','1'),(1,'deadline',1),(1,'event_sequence',20),
+        (1,'delay_applied_seconds',60),(1,'eligible_at',1),
+    ])
+    def test_semantic_mutations_are_rejected(target,field,value):
+>       from scripts.execution_delays_audit import audit_execution
+E       ModuleNotFoundError: No module named 'scripts.execution_delays_audit'
+
+tests\unit\test_execution_delays_audit.py:65: ModuleNotFoundError
+_____________ test_semantic_mutations_are_rejected[2-quantity-.2] _____________
+
+target = 2, field = 'quantity', value = '.2'
+
+    @pytest.mark.parametrize('target,field,value',[
+        (2,'reference_price','102'),(2,'reference_price_model','vwap'),
+        (2,'quantity','.2'),(2,'fee_rate','.1'),(2,'fill_sequence',99),
+        (2,'purpose','liquidate'),(2,'window_ohlc4','102'),(4,'low','105'),
+        (4,'base_volume','1'),(1,'deadline',1),(1,'event_sequence',20),
+        (1,'delay_applied_seconds',60),(1,'eligible_at',1),
+    ])
+    def test_semantic_mutations_are_rejected(target,field,value):
+>       from scripts.execution_delays_audit import audit_execution
+E       ModuleNotFoundError: No module named 'scripts.execution_delays_audit'
+
+tests\unit\test_execution_delays_audit.py:65: ModuleNotFoundError
+_____________ test_semantic_mutations_are_rejected[2-fee_rate-.1] _____________
+
+target = 2, field = 'fee_rate', value = '.1'
+
+    @pytest.mark.parametrize('target,field,value',[
+        (2,'reference_price','102'),(2,'reference_price_model','vwap'),
+        (2,'quantity','.2'),(2,'fee_rate','.1'),(2,'fill_sequence',99),
+        (2,'purpose','liquidate'),(2,'window_ohlc4','102'),(4,'low','105'),
+        (4,'base_volume','1'),(1,'deadline',1),(1,'event_sequence',20),
+        (1,'delay_applied_seconds',60),(1,'eligible_at',1),
+    ])
+    def test_semantic_mutations_are_rejected(target,field,value):
+>       from scripts.execution_delays_audit import audit_execution
+E       ModuleNotFoundError: No module named 'scripts.execution_delays_audit'
+
+tests\unit\test_execution_delays_audit.py:65: ModuleNotFoundError
+__________ test_semantic_mutations_are_rejected[2-fill_sequence-99] ___________
+
+target = 2, field = 'fill_sequence', value = 99
+
+    @pytest.mark.parametrize('target,field,value',[
+        (2,'reference_price','102'),(2,'reference_price_model','vwap'),
+        (2,'quantity','.2'),(2,'fee_rate','.1'),(2,'fill_sequence',99),
+        (2,'purpose','liquidate'),(2,'window_ohlc4','102'),(4,'low','105'),
+        (4,'base_volume','1'),(1,'deadline',1),(1,'event_sequence',20),
+        (1,'delay_applied_seconds',60),(1,'eligible_at',1),
+    ])
+    def test_semantic_mutations_are_rejected(target,field,value):
+>       from scripts.execution_delays_audit import audit_execution
+E       ModuleNotFoundError: No module named 'scripts.execution_delays_audit'
+
+tests\unit\test_execution_delays_audit.py:65: ModuleNotFoundError
+__________ test_semantic_mutations_are_rejected[2-purpose-liquidate] __________
+
+target = 2, field = 'purpose', value = 'liquidate'
+
+    @pytest.mark.parametrize('target,field,value',[
+        (2,'reference_price','102'),(2,'reference_price_model','vwap'),
+        (2,'quantity','.2'),(2,'fee_rate','.1'),(2,'fill_sequence',99),
+        (2,'purpose','liquidate'),(2,'window_ohlc4','102'),(4,'low','105'),
+        (4,'base_volume','1'),(1,'deadline',1),(1,'event_sequence',20),
+        (1,'delay_applied_seconds',60),(1,'eligible_at',1),
+    ])
+    def test_semantic_mutations_are_rejected(target,field,value):
+>       from scripts.execution_delays_audit import audit_execution
+E       ModuleNotFoundError: No module named 'scripts.execution_delays_audit'
+
+tests\unit\test_execution_delays_audit.py:65: ModuleNotFoundError
+__________ test_semantic_mutations_are_rejected[2-window_ohlc4-102] ___________
+
+target = 2, field = 'window_ohlc4', value = '102'
+
+    @pytest.mark.parametrize('target,field,value',[
+        (2,'reference_price','102'),(2,'reference_price_model','vwap'),
+        (2,'quantity','.2'),(2,'fee_rate','.1'),(2,'fill_sequence',99),
+        (2,'purpose','liquidate'),(2,'window_ohlc4','102'),(4,'low','105'),
+        (4,'base_volume','1'),(1,'deadline',1),(1,'event_sequence',20),
+        (1,'delay_applied_seconds',60),(1,'eligible_at',1),
+    ])
+    def test_semantic_mutations_are_rejected(target,field,value):
+>       from scripts.execution_delays_audit import audit_execution
+E       ModuleNotFoundError: No module named 'scripts.execution_delays_audit'
+
+tests\unit\test_execution_delays_audit.py:65: ModuleNotFoundError
+_______________ test_semantic_mutations_are_rejected[4-low-105] _______________
+
+target = 4, field = 'low', value = '105'
+
+    @pytest.mark.parametrize('target,field,value',[
+        (2,'reference_price','102'),(2,'reference_price_model','vwap'),
+        (2,'quantity','.2'),(2,'fee_rate','.1'),(2,'fill_sequence',99),
+        (2,'purpose','liquidate'),(2,'window_ohlc4','102'),(4,'low','105'),
+        (4,'base_volume','1'),(1,'deadline',1),(1,'event_sequence',20),
+        (1,'delay_applied_seconds',60),(1,'eligible_at',1),
+    ])
+    def test_semantic_mutations_are_rejected(target,field,value):
+>       from scripts.execution_delays_audit import audit_execution
+E       ModuleNotFoundError: No module named 'scripts.execution_delays_audit'
+
+tests\unit\test_execution_delays_audit.py:65: ModuleNotFoundError
+____________ test_semantic_mutations_are_rejected[4-base_volume-1] ____________
+
+target = 4, field = 'base_volume', value = '1'
+
+    @pytest.mark.parametrize('target,field,value',[
+        (2,'reference_price','102'),(2,'reference_price_model','vwap'),
+        (2,'quantity','.2'),(2,'fee_rate','.1'),(2,'fill_sequence',99),
+        (2,'purpose','liquidate'),(2,'window_ohlc4','102'),(4,'low','105'),
+        (4,'base_volume','1'),(1,'deadline',1),(1,'event_sequence',20),
+        (1,'delay_applied_seconds',60),(1,'eligible_at',1),
+    ])
+    def test_semantic_mutations_are_rejected(target,field,value):
+>       from scripts.execution_delays_audit import audit_execution
+E       ModuleNotFoundError: No module named 'scripts.execution_delays_audit'
+
+tests\unit\test_execution_delays_audit.py:65: ModuleNotFoundError
+_____________ test_semantic_mutations_are_rejected[1-deadline-1] ______________
+
+target = 1, field = 'deadline', value = 1
+
+    @pytest.mark.parametrize('target,field,value',[
+        (2,'reference_price','102'),(2,'reference_price_model','vwap'),
+        (2,'quantity','.2'),(2,'fee_rate','.1'),(2,'fill_sequence',99),
+        (2,'purpose','liquidate'),(2,'window_ohlc4','102'),(4,'low','105'),
+        (4,'base_volume','1'),(1,'deadline',1),(1,'event_sequence',20),
+        (1,'delay_applied_seconds',60),(1,'eligible_at',1),
+    ])
+    def test_semantic_mutations_are_rejected(target,field,value):
+>       from scripts.execution_delays_audit import audit_execution
+E       ModuleNotFoundError: No module named 'scripts.execution_delays_audit'
+
+tests\unit\test_execution_delays_audit.py:65: ModuleNotFoundError
+__________ test_semantic_mutations_are_rejected[1-event_sequence-20] __________
+
+target = 1, field = 'event_sequence', value = 20
+
+    @pytest.mark.parametrize('target,field,value',[
+        (2,'reference_price','102'),(2,'reference_price_model','vwap'),
+        (2,'quantity','.2'),(2,'fee_rate','.1'),(2,'fill_sequence',99),
+        (2,'purpose','liquidate'),(2,'window_ohlc4','102'),(4,'low','105'),
+        (4,'base_volume','1'),(1,'deadline',1),(1,'event_sequence',20),
+        (1,'delay_applied_seconds',60),(1,'eligible_at',1),
+    ])
+    def test_semantic_mutations_are_rejected(target,field,value):
+>       from scripts.execution_delays_audit import audit_execution
+E       ModuleNotFoundError: No module named 'scripts.execution_delays_audit'
+
+tests\unit\test_execution_delays_audit.py:65: ModuleNotFoundError
+______ test_semantic_mutations_are_rejected[1-delay_applied_seconds-60] _______
+
+target = 1, field = 'delay_applied_seconds', value = 60
+
+    @pytest.mark.parametrize('target,field,value',[
+        (2,'reference_price','102'),(2,'reference_price_model','vwap'),
+        (2,'quantity','.2'),(2,'fee_rate','.1'),(2,'fill_sequence',99),
+        (2,'purpose','liquidate'),(2,'window_ohlc4','102'),(4,'low','105'),
+        (4,'base_volume','1'),(1,'deadline',1),(1,'event_sequence',20),
+        (1,'delay_applied_seconds',60),(1,'eligible_at',1),
+    ])
+    def test_semantic_mutations_are_rejected(target,field,value):
+>       from scripts.execution_delays_audit import audit_execution
+E       ModuleNotFoundError: No module named 'scripts.execution_delays_audit'
+
+tests\unit\test_execution_delays_audit.py:65: ModuleNotFoundError
+____________ test_semantic_mutations_are_rejected[1-eligible_at-1] ____________
+
+target = 1, field = 'eligible_at', value = 1
+
+    @pytest.mark.parametrize('target,field,value',[
+        (2,'reference_price','102'),(2,'reference_price_model','vwap'),
+        (2,'quantity','.2'),(2,'fee_rate','.1'),(2,'fill_sequence',99),
+        (2,'purpose','liquidate'),(2,'window_ohlc4','102'),(4,'low','105'),
+        (4,'base_volume','1'),(1,'deadline',1),(1,'event_sequence',20),
+        (1,'delay_applied_seconds',60),(1,'eligible_at',1),
+    ])
+    def test_semantic_mutations_are_rejected(target,field,value):
+>       from scripts.execution_delays_audit import audit_execution
+E       ModuleNotFoundError: No module named 'scripts.execution_delays_audit'
+
+tests\unit\test_execution_delays_audit.py:65: ModuleNotFoundError
+________ test_no_fill_latency_is_none_and_preventive_deadline_is_named ________
+
+    def test_no_fill_latency_is_none_and_preventive_deadline_is_named():
+>       from scripts.execution_delays_audit import audit_execution
+E       ModuleNotFoundError: No module named 'scripts.execution_delays_audit'
+
+tests\unit\test_execution_delays_audit.py:73: ModuleNotFoundError
+=========================== short test summary info ===========================
+FAILED tests/unit/test_execution_delays_audit.py::test_audit_independently_checks_reference_and_eligible_window
+FAILED tests/unit/test_execution_delays_audit.py::test_semantic_mutations_are_rejected[2-reference_price-102]
+FAILED tests/unit/test_execution_delays_audit.py::test_semantic_mutations_are_rejected[2-reference_price_model-vwap]
+FAILED tests/unit/test_execution_delays_audit.py::test_semantic_mutations_are_rejected[2-quantity-.2]
+FAILED tests/unit/test_execution_delays_audit.py::test_semantic_mutations_are_rejected[2-fee_rate-.1]
+FAILED tests/unit/test_execution_delays_audit.py::test_semantic_mutations_are_rejected[2-fill_sequence-99]
+FAILED tests/unit/test_execution_delays_audit.py::test_semantic_mutations_are_rejected[2-purpose-liquidate]
+FAILED tests/unit/test_execution_delays_audit.py::test_semantic_mutations_are_rejected[2-window_ohlc4-102]
+FAILED tests/unit/test_execution_delays_audit.py::test_semantic_mutations_are_rejected[4-low-105]
+FAILED tests/unit/test_execution_delays_audit.py::test_semantic_mutations_are_rejected[4-base_volume-1]
+FAILED tests/unit/test_execution_delays_audit.py::test_semantic_mutations_are_rejected[1-deadline-1]
+FAILED tests/unit/test_execution_delays_audit.py::test_semantic_mutations_are_rejected[1-event_sequence-20]
+FAILED tests/unit/test_execution_delays_audit.py::test_semantic_mutations_are_rejected[1-delay_applied_seconds-60]
+FAILED tests/unit/test_execution_delays_audit.py::test_semantic_mutations_are_rejected[1-eligible_at-1]
+FAILED tests/unit/test_execution_delays_audit.py::test_no_fill_latency_is_none_and_preventive_deadline_is_named
+15 failed in 0.36s

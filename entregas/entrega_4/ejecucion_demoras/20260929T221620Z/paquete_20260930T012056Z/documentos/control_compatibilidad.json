@@ -1,0 +1,106 @@
+{
+  "passed": true,
+  "synthetic_fixtures": 8,
+  "synthetic_complete_projections": 11,
+  "comparisons": [
+    {
+      "window": [
+        "2022-01-01",
+        "2022-01-04"
+      ],
+      "mode": "realized",
+      "strategy": "conditional",
+      "passed": true,
+      "differences": [],
+      "fills": 0
+    },
+    {
+      "window": [
+        "2022-01-01",
+        "2022-01-04"
+      ],
+      "mode": "realized",
+      "strategy": "permanent",
+      "passed": true,
+      "differences": [],
+      "fills": 0
+    },
+    {
+      "window": [
+        "2024-03-01",
+        "2024-03-04"
+      ],
+      "mode": "realized",
+      "strategy": "conditional",
+      "passed": true,
+      "differences": [],
+      "fills": 4
+    },
+    {
+      "window": [
+        "2024-03-01",
+        "2024-03-04"
+      ],
+      "mode": "realized",
+      "strategy": "permanent",
+      "passed": true,
+      "differences": [],
+      "fills": 4
+    },
+    {
+      "window": [
+        "2024-03-01",
+        "2024-03-04"
+      ],
+      "mode": "base_e3_total",
+      "strategy": "conditional",
+      "passed": true,
+      "differences": [],
+      "fills": 4
+    },
+    {
+      "window": [
+        "2024-03-01",
+        "2024-03-04"
+      ],
+      "mode": "base_e3_total",
+      "strategy": "permanent",
+      "passed": true,
+      "differences": [],
+      "fills": 4
+    },
+    {
+      "window": [
+        "2023-03-20",
+        "2023-03-26"
+      ],
+      "mode": "base_e3_promo",
+      "strategy": "conditional",
+      "passed": true,
+      "differences": [],
+      "fills": 0
+    },
+    {
+      "window": [
+        "2023-03-20",
+        "2023-03-26"
+      ],
+      "mode": "base_e3_promo",
+      "strategy": "permanent",
+      "passed": true,
+      "differences": [],
+      "fills": 0
+    }
+  ],
+  "scope": "Exact Decimal/string projections with no excluded metadata; disabled extension matches previous code; controls separate from scenarios",
+  "control_files": [
+    "controles/fixtures_previo.json",
+    "controles/fixtures_actual.json",
+    "controles/compatibilidad_previo.json",
+    "controles/compatibilidad_actual.json",
+    "controles/fixtures_actual_reparado.json",
+    "controles/compatibilidad_actual_reparado.json"
+  ],
+  "approved_economic_exception": "Liquidation priority on committed-order timeout; explicit approval in controles/aprobacion_reparacion.md",
+  "full_BASE_controls_required_before_scenarios": true
+}

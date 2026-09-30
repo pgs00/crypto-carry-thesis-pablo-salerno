@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "previous_tracked_files": 8594,
+  "authorized_economic_paths": [
+    "src/crypto_carry/config.py",
+    "src/crypto_carry/data/prescribed.py",
+    "src/crypto_carry/execution.py",
+    "src/crypto_carry/reporting.py",
+    "src/crypto_carry/strategy.py"
+  ],
+  "previous_packages": [
+    {
+      "dependency": "parent",
+      "members": 1087,
+      "sha256": "77f1cfcaf4fb13044dbcb3b242a2eb19749cf7e88806db023a08bbe4ec272057"
+    },
+    {
+      "dependency": "correction",
+      "members": 57,
+      "sha256": "e735207869c08bbd0b9b04818c8855ecd9576bd979d3127b5ff108f61d3843ce"
+    },
+    {
+      "dependency": "intraday",
+      "members": 199,
+      "sha256": "78cb03572c5940567852d0255d05a9f8a923f01df01fc0aa8b6cccef70f3b3bb"
+    },
+    {
+      "dependency": "capital",
+      "members": 93,
+      "sha256": "0163cf7622d929c06773700f50d13b2e808afee85a6cf85e48d45dcac03af12b"
+    },
+    {
+      "dependency": "sofr",
+      "members": 72,
+      "sha256": "4769f6c6a80e6fa4b4fd4a4e7c45b94fb10b3773bc3cbbebd36b117f73c938c9"
+    },
+    {
+      "dependency": "block2",
+      "members": 498,
+      "sha256": "f03624b6bdb40a3c9dfb31705a9c5c3552308200a953f9f5e80cce2137140095"
+    },
+    {
+      "dependency": "block3_current",
+      "members": 880,
+      "sha256": "db68d839aa5837db72314b4f3de5509ecff283cc34d13a36e3c4f9d30298e1fb"
+    }
+  ],
+  "original_base_ids": [
+    "run_ad71d751b20623006c195ff3",
+    "run_dfea4b7ac1475668d5968c97"
+  ],
+  "input_identities": 1731,
+  "user_index_sha256": "02c819872c5891bed1fde6bacc46ef56b100e562295bc8620c8d0ebab67cb99b",
+  "head": "d43d155c1a8f0444022b0226e75bcf5bd5dd926a",
+  "engine_code_hash": "e7effba8baf808562d4a1f7340eba6c8f9352860484bfd2a199c6013660a09ce"
+}

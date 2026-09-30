@@ -1,0 +1,16 @@
+{
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-u",
+    "-X",
+    "utf8",
+    "C:\\Users\\pablo\\AppData\\Local\\Temp\\execution_delays_preflight_2kf1l99x\\partial_base\\herramientas\\scripts\\verify_execution_delays.py",
+    "--package",
+    "C:\\Users\\pablo\\AppData\\Local\\Temp\\execution_delays_preflight_2kf1l99x\\partial_base",
+    "--unsealed",
+    "--output",
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\ejecucion_demoras\\20260929T221620Z\\controles\\preflight_verificador_offline_02.json"
+  ],
+  "scope": "Unsealed disposable candidate, updated verifier and order-sensitive control proof; untouched evidence/tables"
+}

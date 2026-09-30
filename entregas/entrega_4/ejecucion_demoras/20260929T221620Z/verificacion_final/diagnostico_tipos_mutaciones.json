@@ -1,0 +1,9 @@
+{
+  "source": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\ejecucion_demoras\\20260929T221620Z\\paquete_20260930T012056Z\\evidencia\\run_877714c21697899d1a109f52\\fills.parquet",
+  "field": "delay_applied_seconds",
+  "physical_type": "string",
+  "attempted_python_type": "int",
+  "error_type": "ArrowTypeError",
+  "error": "Expected bytes, got a 'int' object",
+  "scope": "in-memory reproduction; source not written"
+}

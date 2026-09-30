@@ -1,0 +1,10 @@
+{
+  "utc": "2026-09-30T01:04:59.133473+00:00",
+  "cpu_count": 16,
+  "free_bytes_c": 256160026624,
+  "free_bytes_d": 842032312320,
+  "preflight_four_results_bytes": 135609488,
+  "preflight_files": 869,
+  "planned_artifact_test_workers": 2,
+  "replay_workers_unchanged": 2
+}

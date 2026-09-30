@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "C:\Users\pablo\AppData\Local\Temp\execution_delays_preflight_h3fzbq4b\partial_base\herramientas\scripts\verify_execution_delays.py", line 322, in <module>
+    result = verify(a.package, unsealed=a.unsealed, data_root=a.data_root)
+  File "C:\Users\pablo\AppData\Local\Temp\execution_delays_preflight_h3fzbq4b\partial_base\herramientas\scripts\verify_execution_delays.py", line 271, in verify
+    portfolios.append(attach_cases(result,run,item,case_sources))
+                      ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pablo\AppData\Local\Temp\execution_delays_preflight_h3fzbq4b\partial_base\herramientas\scripts\execution_delays_incidents.py", line 256, in attach_cases
+    details,summaries=derive_cases(config,parquet(run/'ledger.parquet'),cases,source_rows)
+                      ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pablo\AppData\Local\Temp\execution_delays_preflight_h3fzbq4b\partial_base\herramientas\scripts\execution_delays_incidents.py", line 239, in derive_cases
+    prices=price_arrays(source_rows)
+  File "C:\Users\pablo\AppData\Local\Temp\execution_delays_preflight_h3fzbq4b\partial_base\herramientas\scripts\execution_delays_incidents.py", line 92, in price_arrays
+    values['base_volume']=np.asarray([float(r['base_volume']) for r in rows])
+                                            ~^^^^^^^^^^^^^^^
+KeyError: 'base_volume'

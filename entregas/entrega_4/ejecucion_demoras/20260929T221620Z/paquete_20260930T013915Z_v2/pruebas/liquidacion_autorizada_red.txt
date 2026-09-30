@@ -1,0 +1,94 @@
+FFF                                                                      [100%]
+================================== FAILURES ===================================
+___ test_partial_committed_close_retries_as_liquidation_after_escalation[0] ___
+
+start = 1704067200000000000
+rules = <conftest.FixedRules object at 0x000001AE7A0E17F0>, delay = 0
+
+    @pytest.mark.parametrize('delay',[0,300])
+    def test_partial_committed_close_retries_as_liquidation_after_escalation(start,rules,delay):
+        cfg=config(start,seconds=1800,research_execution_delay_seconds=delay,
+                   research_execution_delay_scope='close_only')
+        risk_second,end_second=270+delay,300+delay
+        market=[replace(r,open=D(200),high=D(200),low=D(200),close=D(200))
+            if isinstance(r,Mark) and r.symbol=='BTCUSDT' and r.available_at>=start+risk_second*SECOND
+            else r for r in rows(start,1800)]
+        market=[replace(r,base_volume=D(1000),quote_volume=D(100300))
+            if isinstance(r,MinuteBar) and r.symbol=='BTCUSDT' and r.market=='futures'
+            and r.end_time==start+end_second*SECOND else r for r in market]
+        t=start+risk_second*SECOND
+        market.append(Mark('BTCUSDT',t-60*SECOND,t-1,t,D(200),D(200),D(200),D(200)))
+        result=CloseAt240(cfg,rules).run(sorted(market,key=event_key))
+        retry=next(r for r in result.order_rows if r['symbol']=='BTCUSDT'
+            and r['action']=='submitted' and r['submitted_at']==start+end_second*SECOND)
+>       assert retry['purpose']=='liquidate'
+E       AssertionError: assert 'close_perp' == 'liquidate'
+E         
+E         - liquidate
+E         + close_perp
+
+tests\integration\test_execution_delays_native.py:203: AssertionError
+__ test_partial_committed_close_retries_as_liquidation_after_escalation[300] __
+
+start = 1704067200000000000
+rules = <conftest.FixedRules object at 0x000001AE604BAC10>, delay = 300
+
+    @pytest.mark.parametrize('delay',[0,300])
+    def test_partial_committed_close_retries_as_liquidation_after_escalation(start,rules,delay):
+        cfg=config(start,seconds=1800,research_execution_delay_seconds=delay,
+                   research_execution_delay_scope='close_only')
+        risk_second,end_second=270+delay,300+delay
+        market=[replace(r,open=D(200),high=D(200),low=D(200),close=D(200))
+            if isinstance(r,Mark) and r.symbol=='BTCUSDT' and r.available_at>=start+risk_second*SECOND
+            else r for r in rows(start,1800)]
+        market=[replace(r,base_volume=D(1000),quote_volume=D(100300))
+            if isinstance(r,MinuteBar) and r.symbol=='BTCUSDT' and r.market=='futures'
+            and r.end_time==start+end_second*SECOND else r for r in market]
+        t=start+risk_second*SECOND
+        market.append(Mark('BTCUSDT',t-60*SECOND,t-1,t,D(200),D(200),D(200),D(200)))
+        result=CloseAt240(cfg,rules).run(sorted(market,key=event_key))
+        retry=next(r for r in result.order_rows if r['symbol']=='BTCUSDT'
+            and r['action']=='submitted' and r['submitted_at']==start+end_second*SECOND)
+>       assert retry['purpose']=='liquidate'
+E       AssertionError: assert 'close_perp' == 'liquidate'
+E         
+E         - liquidate
+E         + close_perp
+
+tests\integration\test_execution_delays_native.py:203: AssertionError
+______ test_partial_correction_cannot_restore_holding_after_liquidation _______
+
+start = 1704067200000000000
+rules = <conftest.FixedRules object at 0x000001AE60658CD0>
+
+    def test_partial_correction_cannot_restore_holding_after_liquidation(start,rules):
+        cfg=config(start,seconds=300,research_execution_delay_scope='close_only',
+                   research_execution_delay_seconds=300)
+        result=Backtest(cfg,rules)
+        result.now=start-1
+        result.resuming=True
+        result.pairs['BTCUSDT'].state=State.HOLDING
+        for market,side,q in [('spot','BUY',D(1)),('futures','SELL',D('.979'))]:
+            result.ledger.apply_fill(Fill('seed-'+market,'seed-'+market,'BTCUSDT',market,side,q,
+                D('100.3'),D('100.3'),start-1,'synthetic',D(0)),
+                rules.items['BTCUSDT',market],D('100.3'))
+        market=[replace(r,base_volume=D('1.7'),quote_volume=D('170.51'))
+            if isinstance(r,MinuteBar) and r.symbol=='BTCUSDT' and r.market=='futures'
+            and r.end_time==start+60*SECOND else r for r in bars(start,range(0,301,60))]
+        market=[replace(r,open=D(200),high=D(200),low=D(200),close=D(200))
+            if isinstance(r,Mark) and r.symbol=='BTCUSDT' and r.available_at>=start+30*SECOND
+            else r for r in market]
+        t=start+30*SECOND
+        market.append(Mark('BTCUSDT',t-60*SECOND,t-1,t,D(200),D(200),D(200),D(200)))
+        result.run(sorted(market,key=event_key))
+>       assert any(r['action']=='submitted' and r['purpose']=='liquidate' and
+                   r['submitted_at']==start+60*SECOND for r in result.order_rows)
+E       assert False
+E        +  where False = any(<generator object test_partial_correction_cannot_restore_holding_after_liquidation.<locals>.<genexpr> at 0x000001AE60633D30>)
+
+tests\integration\test_execution_delays_native.py:232: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/integration/test_execution_delays_native.py::test_partial_committed_close_retries_as_liquidation_after_escalation[0]
+FAILED tests/integration/test_execution_delays_native.py::test_partial_committed_close_retries_as_liquidation_after_escalation[300]
+FAILED tests/integration/test_execution_delays_native.py::test_partial_correction_cannot_restore_holding_after_liquidation
+3 failed, 19 deselected in 1.93s

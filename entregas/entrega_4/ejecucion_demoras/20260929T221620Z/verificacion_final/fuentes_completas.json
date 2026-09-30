@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "complete_matrix": true,
+  "runs_checked": 14,
+  "members_checked": 0,
+  "daily_closes": 23856,
+  "financial_periods": 112,
+  "orders": 4994,
+  "full_base_controls": 2,
+  "local_incident_cases": 91,
+  "local_incident_observations": 33397,
+  "fills": 3255,
+  "capacity_keys": 3255,
+  "h1_observations_reused_once": 10224,
+  "economic_replay": false,
+  "volume_scope": "re-extracted from local sources",
+  "shared_builder_verifier_logic": true,
+  "tool_root": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\ejecucion_demoras\\20260929T221620Z\\paquete_20260930T012056Z\\herramientas",
+  "config_module_file": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\ejecucion_demoras\\20260929T221620Z\\paquete_20260930T012056Z\\herramientas\\src\\crypto_carry\\config.py",
+  "package_manifest_sha256": null
+}

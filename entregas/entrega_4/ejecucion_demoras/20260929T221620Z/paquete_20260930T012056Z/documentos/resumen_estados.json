@@ -1,0 +1,11 @@
+{
+  "technical": {
+    "reutilizado_verificado": 2,
+    "ejecutado": 12
+  },
+  "economic": {
+    "complete": 14
+  },
+  "partial": false,
+  "publication": "local only; no commit or push"
+}

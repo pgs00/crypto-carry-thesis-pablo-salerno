@@ -1,0 +1,30 @@
+FF                                                                       [100%]
+================================== FAILURES ===================================
+__ test_reused_hypotheses_require_all_original_members[h1_observaciones.csv] __
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-471/test_reused_hypotheses_require0')
+missing = 'h1_observaciones.csv'
+
+    @pytest.mark.parametrize('missing',['h1_observaciones.csv','h1_resumen.csv'])
+    def test_reused_hypotheses_require_all_original_members(tmp_path,missing):
+        from scripts.return_capital.common import sha256
+>       from scripts.verify_execution_delays import verify_reused_hypotheses
+E       ImportError: cannot import name 'verify_reused_hypotheses' from 'scripts.verify_execution_delays' (C:\Users\pablo\Documentos\UCEMA\Tesina\Backtesting\scripts\verify_execution_delays.py)
+
+tests\unit\test_execution_delays_integrity.py:59: ImportError
+_____ test_reused_hypotheses_require_all_original_members[h1_resumen.csv] _____
+
+tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/pytest-of-pablo/pytest-471/test_reused_hypotheses_require1')
+missing = 'h1_resumen.csv'
+
+    @pytest.mark.parametrize('missing',['h1_observaciones.csv','h1_resumen.csv'])
+    def test_reused_hypotheses_require_all_original_members(tmp_path,missing):
+        from scripts.return_capital.common import sha256
+>       from scripts.verify_execution_delays import verify_reused_hypotheses
+E       ImportError: cannot import name 'verify_reused_hypotheses' from 'scripts.verify_execution_delays' (C:\Users\pablo\Documentos\UCEMA\Tesina\Backtesting\scripts\verify_execution_delays.py)
+
+tests\unit\test_execution_delays_integrity.py:59: ImportError
+=========================== short test summary info ===========================
+FAILED tests/unit/test_execution_delays_integrity.py::test_reused_hypotheses_require_all_original_members[h1_observaciones.csv]
+FAILED tests/unit/test_execution_delays_integrity.py::test_reused_hypotheses_require_all_original_members[h1_resumen.csv]
+2 failed, 7 deselected in 2.31s

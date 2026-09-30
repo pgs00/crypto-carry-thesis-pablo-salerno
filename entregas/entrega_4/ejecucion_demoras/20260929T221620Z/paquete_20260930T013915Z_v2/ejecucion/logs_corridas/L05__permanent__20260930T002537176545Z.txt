@@ -1,0 +1,28 @@
+START L05/permanent 20260930T002541290421Z
+[futures_scaled/permanent] 5.0% | UTC 2022-03-26T11:18:00.000000000Z | fills 10
+[futures_scaled/permanent] 10.6% | UTC 2022-06-30T06:25:00.000000000Z | fills 26
+[futures_scaled/permanent] 15.9% | UTC 2022-09-28T10:06:00.000000000Z | fills 50
+[futures_scaled/permanent] 19.7% | UTC 2022-12-02T16:01:00.017000000Z | fills 50
+[futures_scaled/permanent] 23.0% | UTC 2023-01-27T12:13:00.000000000Z | fills 60
+[futures_scaled/permanent] 26.5% | UTC 2023-03-27T17:05:00.000000000Z | fills 84
+[futures_scaled/permanent] 30.3% | UTC 2023-06-02T00:01:00.000000000Z | fills 94
+[futures_scaled/permanent] 33.9% | UTC 2023-08-02T10:00:00.000000000Z | fills 98
+[futures_scaled/permanent] 37.4% | UTC 2023-09-29T22:20:00.000000000Z | fills 102
+[futures_scaled/permanent] 40.7% | UTC 2023-11-24T22:23:00.000000000Z | fills 120
+[futures_scaled/permanent] 44.0% | UTC 2024-01-20T04:01:00.000000000Z | fills 140
+[futures_scaled/permanent] 46.9% | UTC 2024-03-09T19:33:00.000000000Z | fills 164
+[futures_scaled/permanent] 49.9% | UTC 2024-04-29T20:40:00.000000000Z | fills 184
+[futures_scaled/permanent] 53.1% | UTC 2024-06-23T15:20:00.000000000Z | fills 200
+[futures_scaled/permanent] 56.6% | UTC 2024-08-22T21:08:00.000000000Z | fills 218
+[futures_scaled/permanent] 61.0% | UTC 2024-11-06T00:19:00.000000000Z | fills 230
+[futures_scaled/permanent] 65.0% | UTC 2025-01-13T01:05:00.000000000Z | fills 250
+[futures_scaled/permanent] 69.0% | UTC 2025-03-21T00:01:00.000000000Z | fills 264
+[futures_scaled/permanent] 72.9% | UTC 2025-05-28T00:18:00.000000000Z | fills 266
+[futures_scaled/permanent] 77.2% | UTC 2025-08-08T18:07:00.000000000Z | fills 281
+[futures_scaled/permanent] 81.2% | UTC 2025-10-15T17:09:00.000000000Z | fills 300
+[futures_scaled/permanent] 85.3% | UTC 2025-12-24T09:48:00.000000000Z | fills 308
+[futures_scaled/permanent] 89.2% | UTC 2026-02-28T11:39:00.000000000Z | fills 310
+[futures_scaled/permanent] 93.1% | UTC 2026-05-07T03:27:00.000000000Z | fills 310
+[futures_scaled/permanent] 96.9% | UTC 2026-07-10T08:06:00.000000000Z | fills 310
+REPLAY_COMPLETE seconds=776.37 peak_bytes=2497847296
+{"scenario": "L05", "strategy": "permanent", "status": "ejecutado", "attempt": "20260930T002541290421Z", "started_utc": "2026-09-30T00:25:41.290441+00:00", "config_hash": "5d5721476bf522e3eb5ae0a577366ff8e88d8644b2da5250bd4b27778d7c7f72", "code_hash": "e7effba8baf808562d4a1f7340eba6c8f9352860484bfd2a199c6013660a09ce", "pid": 10004, "engine_status": "complete", "run_id": "run_c89a516fe95ffc8c2b205f86", "path": "D:\\Backtesting\\outputs\\ejecucion_demoras\\20260929T221620Z\\L05\\permanent\\20260930T002541290421Z\\run_c89a516fe95ffc8c2b205f86", "manifest_sha256": "0467322fb37ef36f11f75d941d71022cf3720c7456c5d8c132b8a5b8785477b3", "replay_seconds": 776.3712565999595, "total_seconds": 835.6946809999645, "peak_replay_bytes": 2497847296, "peak_process_bytes": 3029950464, "final_equity": "11544.95127314488558804570000", "ledger_difference": "-6E-24", "daily_reconciled": 1704, "max_daily_residual": "1.01E-23", "fills": 312, "native_fills": 312, "h3_path": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\ejecucion_demoras\\20260929T221620Z\\intentos\\20260930T002541290421Z\\h3_minutos\\run_c89a516fe95ffc8c2b205f86.csv", "h3_sha256": "809aa1b0e188712ca4bee6a37d7040c1d1dba1ea988743bd474dd4c7d099077e", "finished_utc": "2026-09-30T00:39:36.993920+00:00"}

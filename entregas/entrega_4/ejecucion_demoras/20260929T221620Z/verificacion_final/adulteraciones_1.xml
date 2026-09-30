@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="12" time="408.911" timestamp="2026-09-29T22:30:38.931525-03:00" hostname="Legion"><testcase classname="tests.integration.test_execution_delays_package" name="test_semantic_corruption_with_renewed_hashes[configuration-configuration]" time="29.074" /><testcase classname="tests.integration.test_execution_delays_package" name="test_semantic_corruption_with_renewed_hashes[delay-execution metadata]" time="1.454"><failure message="pyarrow.lib.ArrowTypeError: Expected bytes, got a 'int' object">tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/execution_delays_artifact_tests_l6g_8n_w/batch_1/test_semantic_corruption_with_1')
+mutation = 'delay', expected = 'execution metadata'
+
+    @pytest.mark.parametrize("mutation,expected", [
+        ("configuration", "configuration"), ("reference", "Selected reference"),
+        ("delay", "execution metadata"), ("purpose", "causal"),
+        ("window", "window"), ("quantity", "quantity"), ("volume", "Unmodified VWAP"),
+        ("fee", "Scenario fee"), ("sequence", "sequence"),
+        ("cancel_then_fill", "sequence"), ("early_expiration", "deadline"),
+        ("fill_metadata", "timestamp"), ("period", "period denominator"),
+        ("h2", "H2"), ("h3", "H3 contract"),
+        ("ledger_cash", "Ledger flow"), ("incident", "incidentes_resumen"),
+        ("parquet_result", "Parquet table metricas"),
+        ("control_duplicate", "control strategy coverage"),
+        ("base_manifest", "Preserved BASE"),
+        ("control_sequence", "Complete BASE controls"),
+        ("catalog_missing", "transfer catalog"),
+        ("catalog_label", "transfer catalog"),
+        ("h1_missing", "Reused H1/H3 population"),
+    ])
+    def test_semantic_corruption_with_renewed_hashes(tmp_path,mutation,expected):
+        package=tmp_path/'discardable'
+        shutil.copytree(Path(PACKAGE),package)
+        index=read(package/'indice_corridas.json')
+        # Earliest variant so all failures exercise packaged code without stale imports.
+        item=next(r for r in index['runs'] if r['scenario']=='E_OHLC4' and r['strategy']=='conditional')
+        run=package/item['path']
+        changed=None
+    
+        def alter(name,callback):
+            path=run/(name+'.parquet')
+            source=pq.read_table(path)
+            rows=source.to_pylist()
+            callback(rows)
+            pq.write_table(pa.Table.from_pylist(rows,schema=source.schema),path)
+    
+        if mutation=='configuration':
+            path=run/'effective_config.toml'
+            path.write_text(path.read_text(encoding='utf8').replace('research_execution_delay_seconds = 0',
+                            'research_execution_delay_seconds = 60'),encoding='utf8')
+            changed=run
+        elif mutation in {'reference','delay','quantity','fee','fill_metadata'}:
+            field,value={'reference':('reference_price','1'),'delay':('delay_applied_seconds',999),
+                'quantity':('quantity','999999'),'fee':('fee_rate','.009'),
+                'fill_metadata':('fill_at',1)}[mutation]
+&gt;           alter('fills',lambda rows:rows[0].update({field:value}))
+
+..\..\..\..\Documentos\UCEMA\Tesina\Backtesting\entregas\entrega_4\ejecucion_demoras\20260929T221620Z\paquete_20260930T012056Z\herramientas\tests\integration\test_execution_delays_package.py:121: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\..\..\Documentos\UCEMA\Tesina\Backtesting\entregas\entrega_4\ejecucion_demoras\20260929T221620Z\paquete_20260930T012056Z\herramientas\tests\integration\test_execution_delays_package.py:110: in alter
+    pq.write_table(pa.Table.from_pylist(rows,schema=source.schema),path)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyarrow/table.pxi:2047: in pyarrow.lib._Tabular.from_pylist
+    ???
+pyarrow/table.pxi:6484: in pyarrow.lib._from_pylist
+    ???
+pyarrow/table.pxi:4869: in pyarrow.lib.Table.from_arrays
+    ???
+pyarrow/table.pxi:1629: in pyarrow.lib._sanitize_arrays
+    ???
+pyarrow/array.pxi:448: in pyarrow.lib.asarray
+    ???
+pyarrow/array.pxi:418: in pyarrow.lib.array
+    ???
+pyarrow/array.pxi:46: in pyarrow.lib._sequence_to_array
+    ???
+pyarrow/error.pxi:155: in pyarrow.lib.pyarrow_internal_check_status
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   ???
+E   pyarrow.lib.ArrowTypeError: Expected bytes, got a 'int' object
+
+pyarrow/error.pxi:92: ArrowTypeError</failure></testcase><testcase classname="tests.integration.test_execution_delays_package" name="test_semantic_corruption_with_renewed_hashes[window-window]" time="30.714" /><testcase classname="tests.integration.test_execution_delays_package" name="test_semantic_corruption_with_renewed_hashes[volume-Unmodified VWAP]" time="30.826" /><testcase classname="tests.integration.test_execution_delays_package" name="test_semantic_corruption_with_renewed_hashes[sequence-sequence]" time="1.115"><failure message="pyarrow.lib.ArrowTypeError: Expected bytes, got a 'int' object">tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/execution_delays_artifact_tests_l6g_8n_w/batch_1/test_semantic_corruption_with_4')
+mutation = 'sequence', expected = 'sequence'
+
+    @pytest.mark.parametrize("mutation,expected", [
+        ("configuration", "configuration"), ("reference", "Selected reference"),
+        ("delay", "execution metadata"), ("purpose", "causal"),
+        ("window", "window"), ("quantity", "quantity"), ("volume", "Unmodified VWAP"),
+        ("fee", "Scenario fee"), ("sequence", "sequence"),
+        ("cancel_then_fill", "sequence"), ("early_expiration", "deadline"),
+        ("fill_metadata", "timestamp"), ("period", "period denominator"),
+        ("h2", "H2"), ("h3", "H3 contract"),
+        ("ledger_cash", "Ledger flow"), ("incident", "incidentes_resumen"),
+        ("parquet_result", "Parquet table metricas"),
+        ("control_duplicate", "control strategy coverage"),
+        ("base_manifest", "Preserved BASE"),
+        ("control_sequence", "Complete BASE controls"),
+        ("catalog_missing", "transfer catalog"),
+        ("catalog_label", "transfer catalog"),
+        ("h1_missing", "Reused H1/H3 population"),
+    ])
+    def test_semantic_corruption_with_renewed_hashes(tmp_path,mutation,expected):
+        package=tmp_path/'discardable'
+        shutil.copytree(Path(PACKAGE),package)
+        index=read(package/'indice_corridas.json')
+        # Earliest variant so all failures exercise packaged code without stale imports.
+        item=next(r for r in index['runs'] if r['scenario']=='E_OHLC4' and r['strategy']=='conditional')
+        run=package/item['path']
+        changed=None
+    
+        def alter(name,callback):
+            path=run/(name+'.parquet')
+            source=pq.read_table(path)
+            rows=source.to_pylist()
+            callback(rows)
+            pq.write_table(pa.Table.from_pylist(rows,schema=source.schema),path)
+    
+        if mutation=='configuration':
+            path=run/'effective_config.toml'
+            path.write_text(path.read_text(encoding='utf8').replace('research_execution_delay_seconds = 0',
+                            'research_execution_delay_seconds = 60'),encoding='utf8')
+            changed=run
+        elif mutation in {'reference','delay','quantity','fee','fill_metadata'}:
+            field,value={'reference':('reference_price','1'),'delay':('delay_applied_seconds',999),
+                'quantity':('quantity','999999'),'fee':('fee_rate','.009'),
+                'fill_metadata':('fill_at',1)}[mutation]
+            alter('fills',lambda rows:rows[0].update({field:value}))
+            changed=run
+        elif mutation=='sequence':
+            def reverse(rows):
+                pair=next((i for i in range(len(rows)-1) if rows[i]['time_ns']==rows[i+1]['time_ns']),None)
+                assert pair is not None,'Need actual simultaneous fills for this attack'
+                rows[pair],rows[pair+1]=rows[pair+1],rows[pair]
+                for i,row in enumerate(rows):
+                    row['fill_sequence']=i
+&gt;           alter('fills',reverse)
+
+..\..\..\..\Documentos\UCEMA\Tesina\Backtesting\entregas\entrega_4\ejecucion_demoras\20260929T221620Z\paquete_20260930T012056Z\herramientas\tests\integration\test_execution_delays_package.py:130: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\..\..\Documentos\UCEMA\Tesina\Backtesting\entregas\entrega_4\ejecucion_demoras\20260929T221620Z\paquete_20260930T012056Z\herramientas\tests\integration\test_execution_delays_package.py:110: in alter
+    pq.write_table(pa.Table.from_pylist(rows,schema=source.schema),path)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyarrow/table.pxi:2047: in pyarrow.lib._Tabular.from_pylist
+    ???
+pyarrow/table.pxi:6484: in pyarrow.lib._from_pylist
+    ???
+pyarrow/table.pxi:4869: in pyarrow.lib.Table.from_arrays
+    ???
+pyarrow/table.pxi:1629: in pyarrow.lib._sanitize_arrays
+    ???
+pyarrow/array.pxi:448: in pyarrow.lib.asarray
+    ???
+pyarrow/array.pxi:418: in pyarrow.lib.array
+    ???
+pyarrow/array.pxi:46: in pyarrow.lib._sequence_to_array
+    ???
+pyarrow/error.pxi:155: in pyarrow.lib.pyarrow_internal_check_status
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   ???
+E   pyarrow.lib.ArrowTypeError: Expected bytes, got a 'int' object
+
+pyarrow/error.pxi:92: ArrowTypeError</failure></testcase><testcase classname="tests.integration.test_execution_delays_package" name="test_semantic_corruption_with_renewed_hashes[early_expiration-deadline]" time="1.160"><failure message="pyarrow.lib.ArrowTypeError: Expected bytes, got a 'int' object">tmp_path = WindowsPath('C:/Users/pablo/AppData/Local/Temp/execution_delays_artifact_tests_l6g_8n_w/batch_1/test_semantic_corruption_with_5')
+mutation = 'early_expiration', expected = 'deadline'
+
+    @pytest.mark.parametrize("mutation,expected", [
+        ("configuration", "configuration"), ("reference", "Selected reference"),
+        ("delay", "execution metadata"), ("purpose", "causal"),
+        ("window", "window"), ("quantity", "quantity"), ("volume", "Unmodified VWAP"),
+        ("fee", "Scenario fee"), ("sequence", "sequence"),
+        ("cancel_then_fill", "sequence"), ("early_expiration", "deadline"),
+        ("fill_metadata", "timestamp"), ("period", "period denominator"),
+        ("h2", "H2"), ("h3", "H3 contract"),
+        ("ledger_cash", "Ledger flow"), ("incident", "incidentes_resumen"),
+        ("parquet_result", "Parquet table metricas"),
+        ("control_duplicate", "control strategy coverage"),
+        ("base_manifest", "Preserved BASE"),
+        ("control_sequence", "Complete BASE controls"),
+        ("catalog_missing", "transfer catalog"),
+        ("catalog_label", "transfer catalog"),
+        ("h1_missing", "Reused H1/H3 population"),
+    ])
+    def test_semantic_corruption_with_renewed_hashes(tmp_path,mutation,expected):
+        package=tmp_path/'discardable'
+        shutil.copytree(Path(PACKAGE),package)
+        index=read(package/'indice_corridas.json')
+        # Earliest variant so all failures exercise packaged code without stale imports.
+        item=next(r for r in index['runs'] if r['scenario']=='E_OHLC4' and r['strategy']=='conditional')
+        run=package/item['path']
+        changed=None
+    
+        def alter(name,callback):
+            path=run/(name+'.parquet')
+            source=pq.read_table(path)
+            rows=source.to_pylist()
+            callback(rows)
+            pq.write_table(pa.Table.from_pylist(rows,schema=source.schema),path)
+    
+        if mutation=='configuration':
+            path=run/'effective_config.toml'
+            path.write_text(path.read_text(encoding='utf8').replace('research_execution_delay_seconds = 0',
+                            'research_execution_delay_seconds = 60'),encoding='utf8')
+            changed=run
+        elif mutation in {'reference','delay','quantity','fee','fill_metadata'}:
+            field,value={'reference':('reference_price','1'),'delay':('delay_applied_seconds',999),
+                'quantity':('quantity','999999'),'fee':('fee_rate','.009'),
+                'fill_metadata':('fill_at',1)}[mutation]
+            alter('fills',lambda rows:rows[0].update({field:value}))
+            changed=run
+        elif mutation=='sequence':
+            def reverse(rows):
+                pair=next((i for i in range(len(rows)-1) if rows[i]['time_ns']==rows[i+1]['time_ns']),None)
+                assert pair is not None,'Need actual simultaneous fills for this attack'
+                rows[pair],rows[pair+1]=rows[pair+1],rows[pair]
+                for i,row in enumerate(rows):
+                    row['fill_sequence']=i
+            alter('fills',reverse)
+            changed=run
+        elif mutation=='purpose':
+            orders=pq.read_table(run/'orders.parquet').to_pylist()
+            target=next(r for r in orders if r.get('action')=='submitted' and r['purpose']=='open_spot')
+            def change_purpose(rows):
+                for row in rows:
+                    if row['order_id']==target['order_id']:
+                        row['purpose']='increase_spot'
+            alter('orders',change_purpose)
+            alter('fills',change_purpose)
+            changed=run
+        elif mutation in {'window','cancel_then_fill','early_expiration'}:
+            def change_order(rows):
+                if mutation=='window':
+                    rows[0]['window_start']+=1
+                elif mutation=='cancel_then_fill':
+                    row=next(r for r in rows if r.get('action') in ('filled','partial_fill'))
+                    row.update(action='fabricated_cancellation',status='cancelled')
+                else:
+                    row=next(r for r in rows if r.get('action')=='timeout')
+                    row['time_ns']-=60_000_000_000
+                    row['expired_at']=row['time_ns']
+                    events=sorted((r for r in rows if r['record_type']=='event'),
+                                  key=lambda r:(r['time_ns'],r['event_sequence']))
+                    for i,event in enumerate(events):
+                        event['event_sequence']=i
+                    rows[:]=events+[r for r in rows if r['record_type']!='event']
+&gt;           alter('orders',change_order)
+
+..\..\..\..\Documentos\UCEMA\Tesina\Backtesting\entregas\entrega_4\ejecucion_demoras\20260929T221620Z\paquete_20260930T012056Z\herramientas\tests\integration\test_execution_delays_package.py:158: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\..\..\Documentos\UCEMA\Tesina\Backtesting\entregas\entrega_4\ejecucion_demoras\20260929T221620Z\paquete_20260930T012056Z\herramientas\tests\integration\test_execution_delays_package.py:110: in alter
+    pq.write_table(pa.Table.from_pylist(rows,schema=source.schema),path)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyarrow/table.pxi:2047: in pyarrow.lib._Tabular.from_pylist
+    ???
+pyarrow/table.pxi:6484: in pyarrow.lib._from_pylist
+    ???
+pyarrow/table.pxi:4869: in pyarrow.lib.Table.from_arrays
+    ???
+pyarrow/table.pxi:1629: in pyarrow.lib._sanitize_arrays
+    ???
+pyarrow/array.pxi:448: in pyarrow.lib.asarray
+    ???
+pyarrow/array.pxi:418: in pyarrow.lib.array
+    ???
+pyarrow/array.pxi:46: in pyarrow.lib._sequence_to_array
+    ???
+pyarrow/error.pxi:155: in pyarrow.lib.pyarrow_internal_check_status
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   ???
+E   pyarrow.lib.ArrowTypeError: Expected bytes, got a 'int' object
+
+pyarrow/error.pxi:92: ArrowTypeError</failure></testcase><testcase classname="tests.integration.test_execution_delays_package" name="test_semantic_corruption_with_renewed_hashes[period-period denominator]" time="17.449" /><testcase classname="tests.integration.test_execution_delays_package" name="test_semantic_corruption_with_renewed_hashes[h3-H3 contract]" time="17.891" /><testcase classname="tests.integration.test_execution_delays_package" name="test_semantic_corruption_with_renewed_hashes[incident-incidentes_resumen]" time="132.642" /><testcase classname="tests.integration.test_execution_delays_package" name="test_semantic_corruption_with_renewed_hashes[control_duplicate-control strategy coverage]" time="10.286" /><testcase classname="tests.integration.test_execution_delays_package" name="test_semantic_corruption_with_renewed_hashes[control_sequence-Complete BASE controls]" time="13.408" /><testcase classname="tests.integration.test_execution_delays_package" name="test_semantic_corruption_with_renewed_hashes[catalog_label-transfer catalog]" time="122.489" /></testsuite></testsuites>

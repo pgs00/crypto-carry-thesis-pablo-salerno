@@ -1,0 +1,12 @@
+LAUNCHED LC01/conditional pid=27548
+LAUNCHED LC01/permanent pid=8000
+FINISHED LC01/conditional exit=0
+LAUNCHED LC05/conditional pid=22744
+FINISHED LC01/permanent exit=0
+LAUNCHED LC05/permanent pid=27748
+FINISHED LC05/conditional exit=0
+LAUNCHED LC15/conditional pid=29952
+FINISHED LC05/permanent exit=0
+LAUNCHED LC15/permanent pid=29092
+FINISHED LC15/conditional exit=0
+FINISHED LC15/permanent exit=0

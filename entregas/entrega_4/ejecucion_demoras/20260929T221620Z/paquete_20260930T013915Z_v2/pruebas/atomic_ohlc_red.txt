@@ -1,0 +1,95 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+____ test_invalid_ohlc_in_delayed_vwap_halts_before_any_inventory_mutation ____
+
+start = 1704067200000000000
+rules = <conftest.FixedRules object at 0x000001E58706D550>
+
+    def test_invalid_ohlc_in_delayed_vwap_halts_before_any_inventory_mutation(start,rules):
+        cfg=config(start,seconds=600,research_execution_delay_seconds=60)
+        market=[replace(r,high=D(99)) if isinstance(r,MinuteBar) and r.symbol=='BTCUSDT'
+                and r.market=='spot' and r.end_time==start+180*SECOND else r for r in rows(start,600)]
+>       result=Backtest(cfg,rules).run(market)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\integration\test_execution_delays_native.py:164: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src\crypto_carry\strategy.py:1439: in run
+    native.replay(batches(), callback, chunk_size=chunk_size, next_timer=self.next_timer)
+src\crypto_carry\nautilus_adapter.py:256: in replay
+    self.engine.run(
+nautilus_trader/backtest/engine.pyx:1374: in nautilus_trader.backtest.engine.BacktestEngine.run
+    ???
+nautilus_trader/backtest/engine.pyx:1724: in nautilus_trader.backtest.engine.BacktestEngine._run
+    ???
+nautilus_trader/data/engine.pyx:859: in nautilus_trader.data.engine.DataEngine.process
+    ???
+nautilus_trader/data/engine.pyx:2571: in nautilus_trader.data.engine.DataEngine._handle_data
+    ???
+nautilus_trader/data/engine.pyx:2848: in nautilus_trader.data.engine.DataEngine._handle_custom_data
+    ???
+nautilus_trader/common/component.pyx:2834: in nautilus_trader.common.component.MessageBus.publish_c
+    ???
+nautilus_trader/common/actor.pyx:4698: in nautilus_trader.common.actor.Actor.handle_data
+    cpdef void handle_data(self, Data data):
+nautilus_trader/common/actor.pyx:4721: in nautilus_trader.common.actor.Actor.handle_data
+    raise
+nautilus_trader/common/actor.pyx:4718: in nautilus_trader.common.actor.Actor.handle_data
+    self.on_data(data)
+nautilus_trader/common/actor.pyx:589: in nautilus_trader.common.actor.Actor.on_data
+    cpdef void on_data(self, data):
+src\crypto_carry\nautilus_adapter.py:79: in on_data
+    self.owner.dispatch(data.time_ns, data.records)
+src\crypto_carry\nautilus_adapter.py:217: in dispatch
+    self.callback(time_ns, records, self)
+src\crypto_carry\strategy.py:1436: in callback
+    self.process(t, rows, adapter)
+src\crypto_carry\strategy.py:1070: in process
+    self._fill_minute_windows(bars)
+src\crypto_carry\strategy.py:880: in _fill_minute_windows
+    window_ohlc4=str(minute_ohlc4(bar)),
+                     ^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+bar = MinuteBar(symbol='BTCUSDT', market='spot', open_time=1704067320000000000, end_time=1704067380000000000, available_at=1...ase_volume=Decimal('100000'), quote_volume=Decimal('10000000'), trade_count=100, source_file='synthetic:closed-minute')
+
+    def minute_ohlc4(bar) -> Decimal | None:
+        """Closed-candle sensitivity; never an executable price without activity."""
+        values = (bar.open, bar.high, bar.low, bar.close)
+        if (any(not v.is_finite() or v <= 0 for v in values)
+                or not bar.low <= bar.open <= bar.high
+                or not bar.low <= bar.close <= bar.high):
+>           raise ValueError("Invalid OHLC execution candle")
+E           ValueError: Invalid OHLC execution candle
+
+src\crypto_carry\execution.py:47: ValueError
+---------------------------- Captured stderr call -----------------------------
+[1m2024-01-01T00:03:00.000000000Z[0m [1;31m[ERROR] BACKTESTER-001.ReplayStrategy: Error on handling <crypto_carry.nautilus_adapter.TimestampBatch object at 0x000001E5ED5B91F0>
+ValueError(Invalid OHLC execution candle)
+Traceback (most recent call last):
+  File "nautilus_trader/common/actor.pyx", line 4718, in nautilus_trader.common.actor.Actor.handle_data
+  File "nautilus_trader/common/actor.pyx", line 589, in nautilus_trader.common.actor.Actor.on_data
+    cpdef void on_data(self, data):
+  File "C:\Users\pablo\Documentos\UCEMA\Tesina\Backtesting\src\crypto_carry\nautilus_adapter.py", line 79, in on_data
+    self.owner.dispatch(data.time_ns, data.records)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pablo\Documentos\UCEMA\Tesina\Backtesting\src\crypto_carry\nautilus_adapter.py", line 217, in dispatch
+    self.callback(time_ns, records, self)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pablo\Documentos\UCEMA\Tesina\Backtesting\src\crypto_carry\strategy.py", line 1436, in callback
+    self.process(t, rows, adapter)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pablo\Documentos\UCEMA\Tesina\Backtesting\src\crypto_carry\strategy.py", line 1070, in process
+    self._fill_minute_windows(bars)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\pablo\Documentos\UCEMA\Tesina\Backtesting\src\crypto_carry\strategy.py", line 880, in _fill_minute_windows
+    window_ohlc4=str(minute_ohlc4(bar)),
+                     ~~~~~~~~~~~~^^^^^
+  File "C:\Users\pablo\Documentos\UCEMA\Tesina\Backtesting\src\crypto_carry\execution.py", line 47, in minute_ohlc4
+    raise ValueError("Invalid OHLC execution candle")
+[0m
+[1m2024-01-01T00:03:00.000000000Z[0m [1;31m[ERROR] BACKTESTER-001.BACKTESTER-001: InvalidStateTrigger('RUNNING -> DISPOSE') state RUNNING[0m
+[1m2024-01-01T00:03:00.000000000Z[0m [1;31m[ERROR] BACKTESTER-001.BACKTESTER-001: InvalidStateTrigger('RUNNING -> DISPOSE_COMPLETED') state RUNNING[0m
+=========================== short test summary info ===========================
+FAILED tests/integration/test_execution_delays_native.py::test_invalid_ohlc_in_delayed_vwap_halts_before_any_inventory_mutation
+1 failed in 2.00s

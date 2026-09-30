@@ -1,0 +1,11 @@
+{
+  "package": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\ejecucion_demoras\\20260929T221620Z\\paquete_20260930T013915Z_v2",
+  "sealed_at": "2026-09-30T01:39:30.163084+00:00",
+  "manifest_sha256": "88af2936e2dc243080abdf3909cc578c184778527eb847d6b021ce76d357335b",
+  "members": 1204,
+  "bytes": 334181037,
+  "previous_manifest_sha256": "955205887cf139bc41fd1edcdf9e63a482d0b498d8998680890cd6273ccc5603",
+  "identical_previous_members": 1193,
+  "changed_previous_members": 7,
+  "economic_replays": 0
+}

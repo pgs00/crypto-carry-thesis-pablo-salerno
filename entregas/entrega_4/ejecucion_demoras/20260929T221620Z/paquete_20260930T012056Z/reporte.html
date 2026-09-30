@@ -1,0 +1,113 @@
+<!doctype html><html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Retorno y capital · BASE_E3</title><style>body{max-width:1180px;margin:48px auto;padding:0 24px;font:17px/1.65 system-ui;color:#183046;background:#fbfcfe}h1{font-size:36px;line-height:1.15}h2{margin-top:48px;border-top:2px solid #d9e4ed;padding-top:22px}h3{color:#245878}a{color:#075c8c}table{border-collapse:collapse;font-size:14px;width:100%;background:white}td{padding:9px 12px;border-bottom:1px solid #dce5ed;text-align:right}td:first-child{text-align:left}tr:first-child{font-weight:700;background:#e8eff6}.table-wrap{overflow-x:auto}figure{margin:28px 0}img{max-width:100%;height:auto}figcaption{font-size:13px;color:#52677a}</style><main><h1>Bloque 4: precio de ejecución y demoras</h1>
+<p><a href="lectura_resultados.md">Lectura comparada de precio, actividad, capital, riesgo e hipótesis</a>.</p>
+<p><strong>Seis variantes separadas, doce carteras nuevas y dos BASE reutilizadas verificadas.</strong> BTCUSDT/ETHUSDT, UTC [01/01/2022,01/09/2026), 10.000 USDT por cartera. Cada trayectoria es continua y conserva saldos entre los ocho períodos. Las cifras y archivos son locales; no acreditan publicación en GitHub ni completan toda la Entrega 4.</p>
+<p><a href="sintesis.md">Síntesis</a> · <a href="documentos/protocolo.md">Protocolo</a> · <a href="indice_corridas.json">Corridas y comandos</a> · <a href="auditoria_ejecucion.md">Auditoría</a> · <a href="incidentes.md">Casos</a> · <a href="README.md">Reproducción</a></p>
+<h2>Resultados principales</h2>
+<p><strong>E_OHLC4</strong> — conditional: P&amp;L 793.09 USDT, diferencia con BASE 7.33 USDT; permanent: P&amp;L 1657.44 USDT, diferencia con BASE -22.63 USDT.</p>
+<p><strong>L01</strong> — conditional: P&amp;L 805.46 USDT, diferencia con BASE 19.70 USDT; permanent: P&amp;L 1518.50 USDT, diferencia con BASE -161.57 USDT.</p>
+<p><strong>L05</strong> — conditional: P&amp;L 616.45 USDT, diferencia con BASE -169.31 USDT; permanent: P&amp;L 1544.95 USDT, diferencia con BASE -135.12 USDT.</p>
+<p><strong>LC01</strong> — conditional: P&amp;L 760.21 USDT, diferencia con BASE -25.56 USDT; permanent: P&amp;L 1517.24 USDT, diferencia con BASE -162.83 USDT.</p>
+<p><strong>LC05</strong> — conditional: P&amp;L 738.41 USDT, diferencia con BASE -47.35 USDT; permanent: P&amp;L 1421.23 USDT, diferencia con BASE -258.84 USDT.</p>
+<p><strong>LC15</strong> — conditional: P&amp;L 604.49 USDT, diferencia con BASE -181.28 USDT; permanent: P&amp;L 1512.01 USDT, diferencia con BASE -168.06 USDT.</p>
+<p>H2, muestra completa: BASE_E3 no_favorable, E_OHLC4 no_favorable, L01 favorable, L05 no_favorable, LC01 no_favorable, LC05 no_favorable, LC15 no_favorable.</p>
+<p>H3, contraste original: BASE_E3 contraria, E_OHLC4 contraria, L01 contraria, L05 contraria, LC01 contraria, LC05 contraria, LC15 contraria.</p>
+<p>Las sensibilidades no son estimaciones probabilísticas ni seleccionan una política ganadora. Una demora cambia toda la trayectoria; no se exige deterioro monótono.</p>
+<div class="table-wrap"><table>
+<tr><td>Escenario</td><td>Cartera</td><td>Equity inicial</td><td>Equity final</td><td>P&amp;L</td><td>Retorno</td><td>CAGR365</td><td>Sharpe RF=0</td><td>Vol. anual</td><td>DD diario</td></tr>
+<tr><td>BASE_E3</td><td>conditional</td><td>10000.00</td><td>10785.76</td><td>785.76</td><td>7.8576%</td><td>1.6335%</td><td>4.9624</td><td>0.3266%</td><td>-0.2062%</td></tr>
+<tr><td>BASE_E3</td><td>permanent</td><td>10000.00</td><td>11680.07</td><td>1680.07</td><td>16.8007%</td><td>3.3825%</td><td>6.5336</td><td>0.5094%</td><td>-0.4827%</td></tr>
+<tr><td>E_OHLC4</td><td>conditional</td><td>10000.00</td><td>10793.09</td><td>793.09</td><td>7.9309%</td><td>1.6482%</td><td>4.6804</td><td>0.3494%</td><td>-0.1848%</td></tr>
+<tr><td>E_OHLC4</td><td>permanent</td><td>10000.00</td><td>11657.44</td><td>1657.44</td><td>16.5744%</td><td>3.3395%</td><td>6.0784</td><td>0.5407%</td><td>-0.4824%</td></tr>
+<tr><td>L01</td><td>conditional</td><td>10000.00</td><td>10805.46</td><td>805.46</td><td>8.0546%</td><td>1.6732%</td><td>4.7413</td><td>0.3501%</td><td>-0.2208%</td></tr>
+<tr><td>L01</td><td>permanent</td><td>10000.00</td><td>11518.50</td><td>1518.50</td><td>15.1850%</td><td>3.0745%</td><td>4.2051</td><td>0.7208%</td><td>-1.0807%</td></tr>
+<tr><td>L05</td><td>conditional</td><td>10000.00</td><td>10616.45</td><td>616.45</td><td>6.1645%</td><td>1.2896%</td><td>2.6082</td><td>0.4918%</td><td>-0.7147%</td></tr>
+<tr><td>L05</td><td>permanent</td><td>10000.00</td><td>11544.95</td><td>1544.95</td><td>15.4495%</td><td>3.1251%</td><td>5.9355</td><td>0.5187%</td><td>-0.6678%</td></tr>
+<tr><td>LC01</td><td>conditional</td><td>10000.00</td><td>10760.21</td><td>760.21</td><td>7.6021%</td><td>1.5818%</td><td>4.0507</td><td>0.3876%</td><td>-0.3631%</td></tr>
+<tr><td>LC01</td><td>permanent</td><td>10000.00</td><td>11517.24</td><td>1517.24</td><td>15.1724%</td><td>3.0721%</td><td>4.1904</td><td>0.7227%</td><td>-1.1540%</td></tr>
+<tr><td>LC05</td><td>conditional</td><td>10000.00</td><td>10738.41</td><td>738.41</td><td>7.3841%</td><td>1.5377%</td><td>4.5852</td><td>0.3329%</td><td>-0.4768%</td></tr>
+<tr><td>LC05</td><td>permanent</td><td>10000.00</td><td>11421.23</td><td>1421.23</td><td>14.2123%</td><td>2.8874%</td><td>5.3324</td><td>0.5341%</td><td>-0.7761%</td></tr>
+<tr><td>LC15</td><td>conditional</td><td>10000.00</td><td>10604.49</td><td>604.49</td><td>6.0449%</td><td>1.2651%</td><td>2.5099</td><td>0.5014%</td><td>-0.8990%</td></tr>
+<tr><td>LC15</td><td>permanent</td><td>10000.00</td><td>11512.01</td><td>1512.01</td><td>15.1201%</td><td>3.0620%</td><td>5.7604</td><td>0.5238%</td><td>-0.9257%</td></tr>
+</table></div>
+<p><a href="tablas/metricas.csv">Todos los períodos y motivos ND</a> · <a href="tablas/diario.csv">Componentes diarios</a> · <a href="tablas/deltas.csv">Diferencias con BASE</a>. 2026 comprende enero–agosto; los retornos anuales no se suman. El drawdown principal es diario. Slippage y redondeo ya integran los precios; no se deducen otra vez. Garantías y transferencias no son P&amp;L. La conciliación conserva 1E-8 USDT.</p>
+<h2>Contrato económico y temporal</h2>
+<div class="table-wrap"><table>
+<tr><td>Escenario</td><td>Referencia</td><td>Demora añadida</td><td>Propósitos afectados</td></tr>
+<tr><td>BASE_E3</td><td>VWAP</td><td>0 s</td><td>referencia sellada</td></tr>
+<tr><td>E_OHLC4</td><td>(O+H+L+C)/4</td><td>0 s</td><td>misma ruta de minuto</td></tr>
+<tr><td>L01</td><td>VWAP</td><td>60 s</td><td>todas las órdenes cliente</td></tr>
+<tr><td>L05</td><td>VWAP</td><td>300 s</td><td>todas las órdenes cliente</td></tr>
+<tr><td>LC01</td><td>VWAP</td><td>60 s</td><td>close_perp y close_spot</td></tr>
+<tr><td>LC05</td><td>VWAP</td><td>300 s</td><td>close_perp y close_spot</td></tr>
+<tr><td>LC15</td><td>VWAP</td><td>900 s</td><td>close_perp y close_spot</td></tr>
+</table></div>
+<p>LC es una regla global para todo cierre cliente, cualquiera sea su motivo; sustituye el alcance por episodios de la antigua propuesta. Liquidate tiene cero demora adicional. El cierre spot posterior conserva su demora cliente. Las seis variantes no se cruzan entre sí ni adoptan parámetros de otros bloques; se conserva el modo BASE `realized`, umbral de entrada 34 pb, horizonte/holding 168 h, sizing joint_quantity, costos, cupos y calendario.</p>
+<p>Generación significa creación de la orden y coincide con su envío; la decisión/señal es otro registro. Elegibilidad = envío + demora aplicable. Inicio de ventana = techo al minuto de la elegibilidad, fin = inicio + 60 s; fill y vencimiento del intento están en ese fin. El reloj conserva nanosegundos. No se usa el high/low/close de la ventana futura al decidir o dimensionar. OHLC4 reemplaza sólo la referencia de ejecución; el slippage y el tick adverso se aplican una vez.</p>
+<p>Durante la espera siguen funding, garantías, reservas, inventario, deuda y controles de riesgo. Funding precede al fill simultáneo. No se trasladan holding, cooldown ni correction_deadline. Una corrección cancelada por su plazo preventivo no es una expiración contra una ventana antigua. Cancelar antes o exactamente al inicio anula el intento; dentro de una ventana comprometida se conserva la política diferida original, sin nueva latencia de cancelación. Ningún fill se admite en o después del final exclusivo.</p>
+<p>La liquidación BASE sigue usando ventana y cupo de volumen: no es un motor independiente del exchange. Se aprobó reparar la prioridad de los reintentos ya escalados a liquidación; se congeló una identidad nueva y se ejecutaron controles BASE completos separados. <a href="controles/aprobacion_reparacion_transcripcion_utf8.md">Aprobación y transcripción UTF-8</a> · <a href="documentos/control_compatibilidad_base_completa.json">Comparación exacta de controles</a>. Las referencias selladas se conservan.</p>
+<p><figure><img src="figuras/precio.png" alt="Curvas y drawdown diario: precio"><figcaption>Curvas y drawdown diario: precio</figcaption></figure></p>
+<p><figure><img src="figuras/precio_diferencia.png" alt="Diferencia diaria de patrimonio con BASE: precio"><figcaption>Diferencia diaria de patrimonio con BASE: precio</figcaption></figure></p>
+<p><figure><img src="figuras/general.png" alt="Curvas y drawdown diario: general"><figcaption>Curvas y drawdown diario: general</figcaption></figure></p>
+<p><figure><img src="figuras/general_diferencia.png" alt="Diferencia diaria de patrimonio con BASE: general"><figcaption>Diferencia diaria de patrimonio con BASE: general</figcaption></figure></p>
+<p><figure><img src="figuras/cierre.png" alt="Curvas y drawdown diario: cierre"><figcaption>Curvas y drawdown diario: cierre</figcaption></figure></p>
+<p><figure><img src="figuras/cierre_diferencia.png" alt="Diferencia diaria de patrimonio con BASE: cierre"><figcaption>Diferencia diaria de patrimonio con BASE: cierre</figcaption></figure></p>
+<h2>Actividad, capital y ejecución</h2>
+<div class="table-wrap"><table>
+<tr><td>Escenario</td><td>Cartera</td><td>Activo sin polvo</td><td>Descubierto</td><td>Capital usado medio</td><td>Uso diario medio</td><td>Garantía media</td><td>Deuda máxima diaria</td></tr>
+<tr><td>BASE_E3</td><td>conditional</td><td>28.3178%</td><td>0.0077%</td><td>2074.62</td><td>19.8068%</td><td>705.72</td><td>0.00</td></tr>
+<tr><td>BASE_E3</td><td>permanent</td><td>98.2083%</td><td>0.0112%</td><td>8972.08</td><td>82.6309%</td><td>3308.11</td><td>0.00</td></tr>
+<tr><td>E_OHLC4</td><td>conditional</td><td>28.3178%</td><td>0.0077%</td><td>2075.35</td><td>19.8026%</td><td>705.93</td><td>0.00</td></tr>
+<tr><td>E_OHLC4</td><td>permanent</td><td>98.2083%</td><td>0.0111%</td><td>8958.58</td><td>82.6490%</td><td>3302.10</td><td>0.00</td></tr>
+<tr><td>L01</td><td>conditional</td><td>28.3962%</td><td>0.0103%</td><td>2077.00</td><td>19.8192%</td><td>706.21</td><td>0.00</td></tr>
+<tr><td>L01</td><td>permanent</td><td>98.2689%</td><td>0.0161%</td><td>8877.41</td><td>82.7663%</td><td>3273.35</td><td>0.00</td></tr>
+<tr><td>L05</td><td>conditional</td><td>28.3197%</td><td>0.0223%</td><td>2022.20</td><td>19.5250%</td><td>684.30</td><td>0.00</td></tr>
+<tr><td>L05</td><td>permanent</td><td>98.2867%</td><td>0.0396%</td><td>8657.55</td><td>80.6315%</td><td>3186.24</td><td>0.00</td></tr>
+<tr><td>LC01</td><td>conditional</td><td>28.3182%</td><td>0.0081%</td><td>2070.78</td><td>19.7809%</td><td>704.55</td><td>0.00</td></tr>
+<tr><td>LC01</td><td>permanent</td><td>98.2195%</td><td>0.0122%</td><td>8872.27</td><td>82.6541%</td><td>3265.15</td><td>0.00</td></tr>
+<tr><td>LC05</td><td>conditional</td><td>28.3194%</td><td>0.0095%</td><td>2067.41</td><td>19.8209%</td><td>703.35</td><td>0.00</td></tr>
+<tr><td>LC05</td><td>permanent</td><td>98.2097%</td><td>0.0142%</td><td>8768.88</td><td>81.9998%</td><td>3229.64</td><td>0.00</td></tr>
+<tr><td>LC15</td><td>conditional</td><td>28.3223%</td><td>0.0128%</td><td>2053.95</td><td>19.8257%</td><td>698.46</td><td>0.00</td></tr>
+<tr><td>LC15</td><td>permanent</td><td>98.2273%</td><td>0.0208%</td><td>8880.94</td><td>82.6795%</td><td>3267.15</td><td>0.00</td></tr>
+</table></div>
+<p>La actividad integra la unión BTC/ETH sobre toda la trayectoria antes de recortar períodos. El polvo sigue valorado, pero no cuenta como tiempo activo. El capital utilizado proviene de cada cartera, no de escalar la referencia. <a href="tablas/actividad.csv">Actividad, renovaciones y fallos</a>, <a href="tablas/eventos.csv">eventos y liquidaciones</a>, <a href="tablas/motivos_cierre.csv">motivos de cierre</a>, <a href="tablas/ciclos.csv">ciclos</a>, <a href="tablas/demoras_ciclos.csv">demoras de apertura/cierre</a>, <a href="tablas/ordenes.csv">órdenes completas</a>, <a href="tablas/capacidad.csv">capacidad</a>, <a href="tablas/causas_faltantes.csv">faltantes</a> y <a href="tablas/conciliacion_ledger.csv">conciliación del ledger</a>.</p>
+<div class="table-wrap"><table>
+<tr><td>Escenario</td><td>Cartera</td><td>Órdenes</td><td>Completas</td><td>Parciales</td><td>Sin fill</td><td>Canceladas</td><td>Expiradas</td><td>Pendientes</td><td>Reintentos</td></tr>
+<tr><td>BASE_E3</td><td>conditional</td><td>258</td><td>135</td><td>3</td><td>120</td><td>0</td><td>123</td><td>0</td><td>122</td></tr>
+<tr><td>BASE_E3</td><td>permanent</td><td>735</td><td>328</td><td>4</td><td>403</td><td>0</td><td>407</td><td>0</td><td>404</td></tr>
+<tr><td>E_OHLC4</td><td>conditional</td><td>258</td><td>135</td><td>3</td><td>120</td><td>0</td><td>123</td><td>0</td><td>122</td></tr>
+<tr><td>E_OHLC4</td><td>permanent</td><td>735</td><td>328</td><td>4</td><td>403</td><td>0</td><td>407</td><td>0</td><td>404</td></tr>
+<tr><td>L01</td><td>conditional</td><td>194</td><td>134</td><td>1</td><td>59</td><td>0</td><td>60</td><td>0</td><td>60</td></tr>
+<tr><td>L01</td><td>permanent</td><td>503</td><td>303</td><td>2</td><td>198</td><td>0</td><td>200</td><td>0</td><td>199</td></tr>
+<tr><td>L05</td><td>conditional</td><td>164</td><td>142</td><td>3</td><td>19</td><td>0</td><td>22</td><td>0</td><td>20</td></tr>
+<tr><td>L05</td><td>permanent</td><td>368</td><td>309</td><td>3</td><td>56</td><td>0</td><td>59</td><td>0</td><td>56</td></tr>
+<tr><td>LC01</td><td>conditional</td><td>197</td><td>135</td><td>3</td><td>59</td><td>0</td><td>62</td><td>0</td><td>61</td></tr>
+<tr><td>LC01</td><td>permanent</td><td>541</td><td>338</td><td>4</td><td>199</td><td>0</td><td>203</td><td>0</td><td>200</td></tr>
+<tr><td>LC05</td><td>conditional</td><td>157</td><td>137</td><td>1</td><td>19</td><td>0</td><td>20</td><td>0</td><td>19</td></tr>
+<tr><td>LC05</td><td>permanent</td><td>389</td><td>327</td><td>5</td><td>57</td><td>0</td><td>62</td><td>0</td><td>56</td></tr>
+<tr><td>LC15</td><td>conditional</td><td>142</td><td>135</td><td>1</td><td>6</td><td>0</td><td>7</td><td>0</td><td>6</td></tr>
+<tr><td>LC15</td><td>permanent</td><td>353</td><td>326</td><td>6</td><td>21</td><td>0</td><td>27</td><td>0</td><td>24</td></tr>
+</table></div>
+<p>Cada pata y cada nuevo intento tienen envío y demora propios. La capacidad usa el minuto realmente elegido, consumo bruto compartido y orden persistido. BTC/ETH y spot/futuros mantienen cupos separados. La columna reintentos identifica una nueva orden de igual propósito emitida en el vencimiento de la anterior; las escaladas a liquidate conservan su propósito distinto y sus eventos de riesgo. Se distinguen volumen, filtros, cancelación preventiva, plazo de corrección, fin de muestra y fondos/inventario/reservas cuando la evidencia no permite una causa más específica. No se atribuye falsamente cada parcial al cupo.</p>
+<p><figure><img src="figuras/cronologia.png" alt="Distribución de latencia realizada"><figcaption>Distribución de latencia realizada</figcaption></figure></p>
+<p><a href="tablas/cronologia_resumen.csv">Cronología por propósito y período</a>: percentiles sólo sobre órdenes con fill; una orden no ejecutada conserva latencia ND. La elegibilidad no equivale a ejecución ni a confirmación del exchange.</p>
+<p><a href="tablas/comparacion_L_LC.csv">L frente a LC de igual demora</a> presenta ambos valores y LC−L. Es una comparación descriptiva de políticas con trayectorias distintas, no un efecto aditivo aislado de la apertura.</p>
+<h2>Incidentes y límites de valoración</h2>
+<p>El <a href="tablas/episodios_descubiertos.csv">catálogo completo</a> acompaña la selección previa de los cinco episodios de mayor duración por cartera, con desempate por inicio y activo. Se agrega el 24/03/2023 cuando existe inventario en esa variante, incluso polvo con riesgo de precio; las clases se registran sin convertir polvo en tiempo activo. No se impone una duración de 121 minutos. <a href="incidentes.md">Detalle e interpretación</a>.</p>
+<p>Los casos usan minutos y cada estado del ledger original. El episodio comienza después del movimiento de su activo y termina antes del movimiento que lo cierra, conservando funding y movimientos simultáneos intermedios. Las fronteras sin cambio de cantidades y la ventana calendario tienen políticas explícitas en el resumen. La valoración usa precios disponibles causalmente y reglas BASE. La pérdida desde el inicio corresponde al patrimonio de la cartera; spot/corto y holgura se muestran por el activo del caso. No se infiere un máximo intradía global. Un spot arrastrado acredita valoración, no venta durante una suspensión. La estimación futures_scaled del mark se identifica por separado; no se trata como mark oficial. Al extinguirse el corto, margen de ese contrato es ND.</p>
+<h2>H1, H2 y H3</h2>
+<p>H1 reutiliza una sola evaluación BASE autenticada, después de comparar forecast, historia, targets y disponibilidad por corrida. No multiplica el tamaño de muestra por las variantes. La oportunidad H3 mantiene forecast, basis, umbral y operatividad, independientemente de llegada de órdenes, fondos o posiciones. <a href="tablas/invariancias.csv">Invariancias</a> · <a href="hipotesis_base/h1_resumen.csv">H1 original</a>.</p>
+<p>H2 compara ambas estrategias del mismo escenario y período: CAGR condicional finito, definido y positivo; Sharpe definido y superior al permanente. RF sigue en cero. H3 conserva los cortes 2022–2023 y enero 2024–agosto 2026: ambos indicadores bajan = favorable; ambos suben = contraria; otros casos evaluables = mixta; faltantes = no concluyente.</p>
+<div class="table-wrap"><table>
+<tr><td>Escenario</td><td>H2 completo</td><td>CAGR condicional</td><td>H3 contraste original</td></tr>
+<tr><td>BASE_E3</td><td>no_favorable</td><td>1.6335%</td><td>contraria</td></tr>
+<tr><td>E_OHLC4</td><td>no_favorable</td><td>1.6482%</td><td>contraria</td></tr>
+<tr><td>L01</td><td>favorable</td><td>1.6732%</td><td>contraria</td></tr>
+<tr><td>L05</td><td>no_favorable</td><td>1.2896%</td><td>contraria</td></tr>
+<tr><td>LC01</td><td>no_favorable</td><td>1.5818%</td><td>contraria</td></tr>
+<tr><td>LC05</td><td>no_favorable</td><td>1.5377%</td><td>contraria</td></tr>
+<tr><td>LC15</td><td>no_favorable</td><td>1.2651%</td><td>contraria</td></tr>
+</table></div>
+<p><a href="tablas/h2.csv">H2: todos los períodos y razones</a> · <a href="tablas/h3_resumen.csv">H3: cortes y desglose anual</a>.</p>
+<h2>Evidencia y alcance</h2>
+<p>CSV y Parquet preservan precisión textual; las tablas de decisiones voluminosas se incluyen sólo en Parquet. El verificador incluido recalcula resultados desde registros y extractos compactos; comparte funciones con el constructor. La opción con raíz de datos vuelve a extraer ventanas y casos desde fuentes masivas; el modo offline no afirma leer archivos ausentes. Los hashes, código, configuraciones, pruebas y logs enlazan las identidades. La incompatibilidad histórica de inventario/config permanece separada de los cambios nuevos autorizados.</p>
+<p>No se recalcularon SOFR, concentración completa ni la serie intradía sellada. Shocks y contrafactual sin interrupción no se ejecutaron: bloques 5 y 6 pendientes, igual que la revisión transversal/redacción. <a href="matriz_cumplimiento.md">Matriz de cumplimiento</a> · <a href="figuras/fuentes.json">Fuentes de figuras</a>.</p></main></html>

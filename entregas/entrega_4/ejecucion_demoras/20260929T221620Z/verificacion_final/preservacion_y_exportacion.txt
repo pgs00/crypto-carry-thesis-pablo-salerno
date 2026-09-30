@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "C:\Users\pablo\Documentos\UCEMA\Tesina\Backtesting\scripts\execution_delays_delivery.py", line 148, in <module>
+    result["export"]=export_bytes(root,a.package.resolve())
+                     ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pablo\Documentos\UCEMA\Tesina\Backtesting\scripts\execution_delays_delivery.py", line 103, in export_bytes
+    git(project, ["add", "--", *names[offset:offset+60]], index=index)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pablo\Documentos\UCEMA\Tesina\Backtesting\scripts\signal_sensitivity_delivery.py", line 37, in git
+    raise ValueError("Git command failed: "+" ".join(args[:4])+"\n"+
+                     (result.stdout+result.stderr).decode("utf-8", errors="replace"))
+ValueError: Git command failed: add -- entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/documentos/controles/cache_ruff_accidental/block3_current/codigo_previo/ruff_cache_archivado/.gitignore.bin entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/documentos/controles/cache_ruff_accidental/block3_current/codigo_previo/ruff_cache_archivado/0.16.8/12275496764885132216.bin
+error: open("entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/documentos/controles/cache_ruff_accidental/block3_current/codigo_referencia_base/ruff_cache_archivado/0.16.8/16786732725382071127.bin"): Filename too long
+error: unable to index file 'entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/documentos/controles/cache_ruff_accidental/block3_current/codigo_referencia_base/ruff_cache_archivado/0.16.8/16786732725382071127.bin'
+fatal: adding files failed
+

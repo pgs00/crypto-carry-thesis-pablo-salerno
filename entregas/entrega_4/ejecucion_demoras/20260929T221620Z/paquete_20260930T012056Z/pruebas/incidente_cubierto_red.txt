@@ -1,0 +1,19 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+_____________ test_march_day_is_selected_for_covered_exposure_too _____________
+
+    def test_march_day_is_selected_for_covered_exposure_too():
+        from scripts.execution_delays_incidents import select_cases
+        cfg=Config.load(Path(__file__).resolve().parents[2]/
+            'configs/entrega_4/reglas_historicas/BASE_E3.toml')
+        t=timestamp('2023-03-24T00:00:00Z')
+        cases=select_cases([], [dict(symbol='BTCUSDT',exposure='covered',start_ns=t,
+                                     end_ns=t+60*SECOND)],cfg)
+>       assert len(cases)==1 and cases[0]['selection']=='prespecified_2023_03_24'
+E       assert (0 == 1)
+E        +  where 0 = len([])
+
+tests\unit\test_execution_delays_incidents.py:60: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/unit/test_execution_delays_incidents.py::test_march_day_is_selected_for_covered_exposure_too
+1 failed in 1.20s

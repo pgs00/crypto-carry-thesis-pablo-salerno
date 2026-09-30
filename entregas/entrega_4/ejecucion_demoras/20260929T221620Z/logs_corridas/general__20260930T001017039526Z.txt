@@ -1,0 +1,8 @@
+LAUNCHED L01/conditional pid=14468
+LAUNCHED L01/permanent pid=23132
+FINISHED L01/conditional exit=0
+LAUNCHED L05/conditional pid=30380
+FINISHED L01/permanent exit=0
+LAUNCHED L05/permanent pid=164
+FINISHED L05/conditional exit=0
+FINISHED L05/permanent exit=0

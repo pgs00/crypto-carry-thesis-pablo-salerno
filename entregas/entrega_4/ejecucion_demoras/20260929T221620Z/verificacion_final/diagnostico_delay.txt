@@ -1,0 +1,15 @@
+VERIFIED BASE_E3 conditional
+VERIFIED BASE_E3 permanent
+VERIFIED E_OHLC4 conditional
+VERIFIED E_OHLC4 permanent
+VERIFIED L01 conditional
+VERIFIED L01 permanent
+VERIFIED L05 conditional
+VERIFIED L05 permanent
+VERIFIED LC01 conditional
+VERIFIED LC01 permanent
+VERIFIED LC05 conditional
+VERIFIED LC05 permanent
+VERIFIED LC15 conditional
+VERIFIED LC15 permanent
+{"passed": true, "complete_matrix": true, "runs_checked": 14, "members_checked": 1200, "daily_closes": 23856, "financial_periods": 112, "orders": 4994, "full_base_controls": 2, "local_incident_cases": 91, "local_incident_observations": 33397, "fills": 3255, "capacity_keys": 3255, "h1_observations_reused_once": 10224, "economic_replay": false, "volume_scope": "recalculated from included authenticated windows; massive source files not read", "shared_builder_verifier_logic": true, "tool_root": "C:\\Users\\pablo\\AppData\\Local\\Temp\\execution_delays_artifact_tests_l6g_8n_w\\batch_1\\test_semantic_corruption_with_1\\discardable\\herramientas", "config_module_file": "C:\\Users\\pablo\\AppData\\Local\\Temp\\execution_delays_artifact_tests_l6g_8n_w\\batch_1\\test_semantic_corruption_with_1\\discardable\\herramientas\\src\\crypto_carry\\config.py", "package_manifest_sha256": "955205887cf139bc41fd1edcdf9e63a482d0b498d8998680890cd6273ccc5603"}

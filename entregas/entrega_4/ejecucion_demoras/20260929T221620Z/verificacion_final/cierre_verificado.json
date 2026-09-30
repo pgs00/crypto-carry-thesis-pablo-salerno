@@ -1,0 +1,73 @@
+{
+  "status": "ejecutado",
+  "completed_at": "2026-09-30T01:53:26.217665+00:00",
+  "package": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\ejecucion_demoras\\20260929T221620Z\\paquete_20260930T013915Z_v2",
+  "package_manifest_sha256": "88af2936e2dc243080abdf3909cc578c184778527eb847d6b021ce76d357335b",
+  "scenario_replays": 12,
+  "reused_base_results": 2,
+  "separate_base_control_replays": 2,
+  "financial_periods": 112,
+  "daily_closes": 23856,
+  "orders": 4994,
+  "fills": 3255,
+  "incident_cases": 91,
+  "incident_observations": 33397,
+  "artifact_corruption_tests": 24,
+  "artifact_test_skips": 0,
+  "source_regression_passed": 1175,
+  "latest_focused_passed": 110,
+  "distinct_historical_artifact_tests_passed": 24,
+  "overlapping_test_counts_not_summed": true,
+  "head": "d43d155c1a8f0444022b0226e75bcf5bd5dd926a",
+  "user_index_sha256": "02c819872c5891bed1fde6bacc46ef56b100e562295bc8620c8d0ebab67cb99b",
+  "publication": "local only; no commit/push",
+  "remaining": {
+    "B5": "pendiente",
+    "B6": "pendiente",
+    "REVISION": "pendiente"
+  },
+  "receipt_sha256": "2f0a5d20c788f7131d1e6eccd4c232ba684fc06a3961b721d5c6599bff5cb0a0",
+  "receipt_local_links_checked": 25,
+  "evidence": [
+    {
+      "path": "sello_v2.json",
+      "sha256": "7e6b17900a25e4ad6fee344b7025867233e19c6de470666ede0267db9d64cd61"
+    },
+    {
+      "path": "fuentes_completas.json",
+      "sha256": "de9444bf2f055869cd5c1e242f3765036ecd9d62bf6f3b9e3c4efbe9d79bc258"
+    },
+    {
+      "path": "offline_exportacion_v2.json",
+      "sha256": "b31b1c25470db3291ae92ec0fa27fa226bf8c1440c215670b2908ae656d204cd"
+    },
+    {
+      "path": "adulteraciones_v2_resumen.json",
+      "sha256": "413ea8e1f8f0970df63fdd21dc222bed108205c07996bbdf25fd880863524182"
+    },
+    {
+      "path": "preservacion_y_exportacion_v2.json",
+      "sha256": "92c53d4a3c16aa74a46dea1e3dbea1980a443eb18e8c136244dfe9a7247ea54e"
+    },
+    {
+      "path": "preservacion_despues_del_cierre.json",
+      "sha256": "a4c878c59b5f47758380fd6a8828c10aa193834da94ba1422d15ae1daf0afcbb"
+    },
+    {
+      "path": "artefactos_finales_v2.json",
+      "sha256": "7a5f5274ade641d534a1b87190010b790f85c399ee0474724babb3bd8317253d"
+    },
+    {
+      "path": "sellos_finales_intactos.json",
+      "sha256": "62ea98c4bc2fc9d56e7d3eadbead132e03cff1223459310a321f05b85bff5088"
+    },
+    {
+      "path": "matriz_global_actualizada.json",
+      "sha256": "a78f3796c4cdf6327ae9c074a1df947668de0689071ba2b62463969dc0647013"
+    },
+    {
+      "path": "comando_ruff_final.json",
+      "sha256": "5f733436b907721338824ba54db9d62ce16ee07726cf5a062b04b6bf2a6f010d"
+    }
+  ]
+}
