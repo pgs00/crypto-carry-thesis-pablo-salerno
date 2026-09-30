@@ -1,0 +1,21 @@
+{
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_20260930T214617Z_limpieza\\v2\\herramientas\\scripts\\verify_execution_delays.py",
+    "--package",
+    "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_20260930T214617Z_limpieza\\v2",
+    "--output",
+    "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_20260930T214617Z_limpieza\\control_v2_sin_anterior.json"
+  ],
+  "exit_code": 0,
+  "isolated": "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_20260930T214617Z_limpieza",
+  "copy_is_real": true,
+  "previous_package_present": false,
+  "original_repository_present": false,
+  "git_index_present": false,
+  "massive_data_argument": false,
+  "scope": "verificador compacto; procedencia y enlaces se evalúan por separado"
+}

@@ -1,0 +1,80 @@
+{
+  "reason": "La ventana inicial de inspeccion 28d atraviesa el fin de la promocion BTC el 22/03. Antes de especificar o simular resultados se fija 48h completas postpromocion y mediana por hora UTC (120 observaciones).",
+  "previous_coverage": {
+    "passed": true,
+    "coverage": [
+      {
+        "symbol": "BTCUSDT",
+        "calibration_minutes": 40320,
+        "calibration_missing": 0,
+        "full_closed_minutes": 152,
+        "zero_volume": 72,
+        "absent": 80,
+        "future_minutes": 153
+      },
+      {
+        "symbol": "ETHUSDT",
+        "calibration_minutes": 40320,
+        "calibration_missing": 0,
+        "full_closed_minutes": 152,
+        "zero_volume": 72,
+        "absent": 80,
+        "future_minutes": 153
+      }
+    ],
+    "sources": [
+      {
+        "path": "data/minutes/2022_2026_continuous/processed/dataset=minute_bars/symbol=BTCUSDT/market=spot/month=2023-02/part-00000.parquet",
+        "sha256": "09011af080676778c45d4cf0c28dd5c92229884e1a455f90db9cf70a54a7c4ec",
+        "bytes": 2579403
+      },
+      {
+        "path": "data/minutes/2022_2026_continuous/processed/dataset=minute_bars/symbol=BTCUSDT/market=futures/month=2023-02/part-00000.parquet",
+        "sha256": "5e4d0f8292b2260c8873ef8ac655bbc666b3dc19a31bf105b6d07e6ab2d0a2fe",
+        "bytes": 2194150
+      },
+      {
+        "path": "data/minutes/2022_2026_continuous/processed/dataset=minute_bars/symbol=ETHUSDT/market=spot/month=2023-02/part-00000.parquet",
+        "sha256": "06d733e9c09779d18da51d655501cb77fda46d4cd20d3e29a17219f99dbf6759",
+        "bytes": 2195333
+      },
+      {
+        "path": "data/minutes/2022_2026_continuous/processed/dataset=minute_bars/symbol=ETHUSDT/market=futures/month=2023-02/part-00000.parquet",
+        "sha256": "5248c1dcf4500fd2e9f64d4d09b29b4904b3cbb86833bb6a3302f3f61d07574b",
+        "bytes": 2180981
+      },
+      {
+        "path": "data/minutes/2022_2026_continuous/processed/dataset=minute_bars/symbol=BTCUSDT/market=spot/month=2023-03/part-00000.parquet",
+        "sha256": "038d640d07a849d237c2f03a7668e25bd00fc13ce2039c11446547eb46de259d",
+        "bytes": 2850587
+      },
+      {
+        "path": "data/minutes/2022_2026_continuous/processed/dataset=minute_bars/symbol=BTCUSDT/market=futures/month=2023-03/part-00000.parquet",
+        "sha256": "96a9a7ed06ba04f368d44e2f199b1a48a77834be2376b538c30f929f600b2ff2",
+        "bytes": 2497933
+      },
+      {
+        "path": "data/minutes/2022_2026_continuous/processed/dataset=minute_bars/symbol=ETHUSDT/market=spot/month=2023-03/part-00000.parquet",
+        "sha256": "f2ecf90b0dc73314f07ac0a956fc7e33136e90164779829242ca93bde6277359",
+        "bytes": 2484567
+      },
+      {
+        "path": "data/minutes/2022_2026_continuous/processed/dataset=minute_bars/symbol=ETHUSDT/market=futures/month=2023-03/part-00000.parquet",
+        "sha256": "79894b01973ff6122e1d5cd32cde0e205f290b890f18f06890176f43bf6644e9",
+        "bytes": 2468991
+      }
+    ],
+    "window_start": "2023-02-24T00:00:00.000000000Z",
+    "window_end": "2023-03-24T00:00:00.000000000Z",
+    "intervention_start": "2023-03-24T11:27:00.000000000Z",
+    "intervention_end": "2023-03-24T14:00:00.000000000Z",
+    "source_manifest_sha256": "cc5cd0821513fd98d39a4f299a62ce77d94e0865595805db2f9e806b513e3cc5",
+    "economic_simulations": 0
+  },
+  "previous_tables_sha256": {
+    "tablas/anclas_cf.csv": "1fce06f5b9ff8b8999ebcbb0381c6e99d9b825b1a11b7255183e647f88e5620e",
+    "tablas/volumen_cf_propuesto.csv": "72f01be4487208486a0d3e574221623e4b692391ac827dfed58ce8f049004b85",
+    "tablas/muestra_volumen_previa.csv": "44850e7fa192d7d6c76c55d9ff0fa6c1ab4b3754d512c66c433b98a2b325da79"
+  },
+  "economic_runs": 0
+}

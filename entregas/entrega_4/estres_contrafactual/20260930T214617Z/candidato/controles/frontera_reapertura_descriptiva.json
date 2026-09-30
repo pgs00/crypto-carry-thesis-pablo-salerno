@@ -1,0 +1,22 @@
+[
+  {
+    "symbol": "BTCUSDT",
+    "last_futures_close": "27963.90",
+    "synthetic_reference_at14": "27978.94169685282155295023473",
+    "observed_open": "28079.99000000",
+    "observed_close": "27925.59000000",
+    "open_gap_fraction": "0.003611584177915662440306217",
+    "available_close_gap_fraction": "-0.0019068518541865633183490841",
+    "economic_results": false
+  },
+  {
+    "symbol": "ETHUSDT",
+    "last_futures_close": "1766.08",
+    "synthetic_reference_at14": "1766.870236590413334079087197",
+    "observed_open": "1789.51000000",
+    "observed_close": "1763.69000000",
+    "open_gap_fraction": "0.012813483945077568301813139",
+    "available_close_gap_fraction": "-0.0017999265167035353598332418",
+    "economic_results": false
+  }
+]

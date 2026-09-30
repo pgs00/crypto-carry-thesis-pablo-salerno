@@ -1,0 +1,13 @@
+path,bytes,files,published_exact,local,differing,incoming_references
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z,333819291,1202,1202,0,0,14
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T013915Z_v2,334413461,1206,1206,0,0,15
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/controles_base,2781,2,2,0,0,5
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/controles,453264,83,83,0,0,243
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/verificacion_final,659076,50,50,0,0,42
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/intentos,4008560,14,14,0,0,228
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/ejecuciones,16486,12,12,0,0,48
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/logs_corridas,77753,22,22,0,0,103
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/logs_originales_binarios,1526650,57,57,0,0,10
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/pruebas,872575,70,70,0,0,274
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/codigo_previo,560092,42,39,3,0,21
+entregas/entrega_4/ejecucion_demoras/20260929T221620Z/codigo_ejecutado,702891,50,45,5,0,75
