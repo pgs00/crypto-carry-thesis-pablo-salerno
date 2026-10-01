@@ -1,0 +1,15 @@
+{
+  "scenario": "CONTROL_APAGADO",
+  "strategy": "permanent",
+  "run_id": "run_45b6457b38c85255d1e85684",
+  "files": {
+    "conciliacion_ledger.json": "df747976c5f8a106920bc2b115242b769a32f3222e7d9bd950ba944ab286f9f2",
+    "estado_capa.json": "b757db649646ca979b784d6ba0c207b2010d772f545718a1083e8ffe01c18c0c",
+    "intervenciones.parquet": "e7f8bd9a8a21540242afecc4eb839d62bba76f9b8c414c5b572053571333613a",
+    "observaciones_ventanas.parquet": "e7f8bd9a8a21540242afecc4eb839d62bba76f9b8c414c5b572053571333613a",
+    "oportunidad_ventanas.parquet": "e7f8bd9a8a21540242afecc4eb839d62bba76f9b8c414c5b572053571333613a",
+    "h3_minutos/run_45b6457b38c85255d1e85684.csv": "e6889ab9c5c9d65990a2fd14a970cd44b987cb632aa02b2f79d05334d49e57db"
+  },
+  "run_manifest_sha256": "ec7d80f4414096d4c09450f00abf0a8dd219b0a3aa61d4e0b2f221dd74f099c1",
+  "interpretation": "Hypothetical continuous scenario; no calibrated changes after execution"
+}

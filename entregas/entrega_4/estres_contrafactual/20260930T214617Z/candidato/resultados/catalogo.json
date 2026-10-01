@@ -1,0 +1,242 @@
+{
+  "metricas": {
+    "rows": 64,
+    "semantic_sha256": "041b0b1145dba23f5d9ce9020aaf9f0054c506c283d372b9ec6806b1163ce501",
+    "csv_export": true
+  },
+  "semantica_metricas": {
+    "rows": 0,
+    "semantic_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "csv_export": false
+  },
+  "diario": {
+    "rows": 13632,
+    "semantic_sha256": "7e49be2eedb5c6ac8c98e5726434a5dcdaf49a9d14f57e6cbfdbf7a85abee499",
+    "csv_export": true
+  },
+  "componentes_diarios": {
+    "rows": 27264,
+    "semantic_sha256": "7be9df16d40ce21ab6c9e8bf3f50c659b32992f0fcd5e9d6f29f6435a4c3eb99",
+    "csv_export": true
+  },
+  "componentes_periodo": {
+    "rows": 128,
+    "semantic_sha256": "8d41c9ce0f91efbdc70c640759dcf8a3c219e92459869bea8ae282a8f62c04b8",
+    "csv_export": true
+  },
+  "exposicion_intervalos": {
+    "rows": 30482,
+    "semantic_sha256": "e387439d8540dcfb0ca439f624aa7535f3f2a950602d8e184793bcdcf41ff926",
+    "csv_export": true
+  },
+  "exposicion_periodo": {
+    "rows": 192,
+    "semantic_sha256": "59f66f704782ca35b801454920c4c83fd7db8c6919fcff4fa07e3c0c06d57a55",
+    "csv_export": true
+  },
+  "ciclos": {
+    "rows": 120,
+    "semantic_sha256": "e79b443d01db6e0a0342c90bc809dcb6450525712283e910a7b3ae6974efcdd6",
+    "csv_export": true
+  },
+  "actividad": {
+    "rows": 192,
+    "semantic_sha256": "f65920a6ca0abd64f948706d6ce0502db1286d3861654366fa5c66270577e4aa",
+    "csv_export": true
+  },
+  "eventos": {
+    "rows": 64,
+    "semantic_sha256": "0b99504009bb6a9f2e1bc488cc091300440dcfe37f30ff653936fa0daa7aa180",
+    "csv_export": true
+  },
+  "motivos_cierre": {
+    "rows": 219,
+    "semantic_sha256": "a4e8b98664fe6394bed4d7417f5c2a7f422846bad19449db20f680085554420e",
+    "csv_export": true
+  },
+  "margen_cierre_diario": {
+    "rows": 13632,
+    "semantic_sha256": "6943a7526bcc91a07ecc984537b51d6aef7cb9ba36f2e8e5a6283216d5ed3e6c",
+    "csv_export": true
+  },
+  "decisiones": {
+    "rows": 84044,
+    "semantic_sha256": "841106e7fc18a0353f1dea679fda05538eecdd924842fba0ea8ec32254b8aff0",
+    "csv_export": false
+  },
+  "grupos_entradas": {
+    "rows": 2864,
+    "semantic_sha256": "4c650c68028a927ceab5f36bd809800ee111a167b023fb1d4c808485d5850928",
+    "csv_export": true
+  },
+  "motivos_simultaneos": {
+    "rows": 5232,
+    "semantic_sha256": "0e4c9331f36a40652a1fd847898d94c0138a5576e7c714413361a52c98318102",
+    "csv_export": true
+  },
+  "diagnostico_vs_decision": {
+    "rows": 828,
+    "semantic_sha256": "a7de6de2678bd4cdc8de3258de316d94510574b473a9c16fe5a61693cb92c214",
+    "csv_export": true
+  },
+  "acciones": {
+    "rows": 13153,
+    "semantic_sha256": "deadcac16b386a5c83b91d02afb45020e98b7b30e0391ec9b85be5f4968e5a8b",
+    "csv_export": true
+  },
+  "ordenes": {
+    "rows": 3602,
+    "semantic_sha256": "33e3a306e63b9dea114b4408821d3c067fc67f3aa5fd36ae7eaa54c44a3a8ddd",
+    "csv_export": true
+  },
+  "fills_conciliados": {
+    "rows": 1870,
+    "semantic_sha256": "adf3fe63d81a64d3afdbb2f86461a4fff8eb275f83ed07ea0aaecb1cd42ce73d",
+    "csv_export": true
+  },
+  "capacidad": {
+    "rows": 1870,
+    "semantic_sha256": "e86f6fe73e0f84500d1bd11b933b909f6844f13aa1424ed40964b04b961cf39a",
+    "csv_export": true
+  },
+  "conciliacion_ledger": {
+    "rows": 8,
+    "semantic_sha256": "33cd0e2bf02cee0241bc0993b664e3b8dc48233c8c391fd883b0bf6e0453d79f",
+    "csv_export": true
+  },
+  "funding_importes": {
+    "rows": 48417,
+    "semantic_sha256": "cf3a38137c6e6a9e7c16a8281a2bf00ae8b4c2bde2a49366cbace91423b3f358",
+    "csv_export": false
+  },
+  "funding_fuentes": {
+    "rows": 8,
+    "semantic_sha256": "86db4c24935a0e12bf4ec4d41e5eb1ca3ebf7ddbe5ef3f479cd6727bd105ba14",
+    "csv_export": true
+  },
+  "ejecucion_resumen": {
+    "rows": 320,
+    "semantic_sha256": "bba093571ce30a3e8bce37f0bb96a7c317261c017637fa4414ed26beb4916e60",
+    "csv_export": true
+  },
+  "episodios_descubiertos": {
+    "rows": 927,
+    "semantic_sha256": "358c6f66990b0db11742980f59a7386b86c6676206f6ab381b2686028b19af63",
+    "csv_export": true
+  },
+  "cobertura_calendario_fijo": {
+    "rows": 464,
+    "semantic_sha256": "92037ddcb98c7d15583e656fa69f78a6f47062be1e51188fadaa93578c550a5d",
+    "csv_export": true
+  },
+  "h1_observaciones": {
+    "rows": 81792,
+    "semantic_sha256": "f4afbc2d63a79dae28219cd2d14c48030e88fbb506277a32f7c0d6bfdee6b946",
+    "csv_export": false
+  },
+  "h1_resumen": {
+    "rows": 192,
+    "semantic_sha256": "b69a8d39fa074b8d69875591f64e14557c2d36c9730b6c1f5a7e68bde5e88b3c",
+    "csv_export": true
+  },
+  "h1_controles": {
+    "rows": 8,
+    "semantic_sha256": "0cf638957fcff5520435565739fb72bc1a01ccd91a0f3dd66fa723d93921b718",
+    "csv_export": true
+  },
+  "h3_diario": {
+    "rows": 13632,
+    "semantic_sha256": "ce5b711c843b38d3294bf19232dcafdbda589102c9820f74779237a678eb5604",
+    "csv_export": true
+  },
+  "control_transformaciones": {
+    "rows": 6,
+    "semantic_sha256": "e6e717e9f463f803a7e4d0a02a6f9e20555efb5f1949c65ce829757848a5c61d",
+    "csv_export": true
+  },
+  "cobertura_testigos": {
+    "rows": 6,
+    "semantic_sha256": "25a8e25836faf6992aa1f2d80c35c702a9b788f98608dd9d1dfa2e8bf7b8aa61",
+    "csv_export": true
+  },
+  "h3_testigos": {
+    "rows": 110504,
+    "semantic_sha256": "e5fb77bf99d4cc523077835c87c08718bf7e3c1b233206ffadca75f49fd0fd4a",
+    "csv_export": false
+  },
+  "h3_por_activo": {
+    "rows": 20448,
+    "semantic_sha256": "cb87d95d63617d2590a2555ff8d33d7df18fcdf4efdb0248d7c4443cbe9c4ce5",
+    "csv_export": true
+  },
+  "h3_controles": {
+    "rows": 6,
+    "semantic_sha256": "08b735547e987fac172974fe03df7f7681f24b59182c6e81205c50eac09c2054",
+    "csv_export": true
+  },
+  "atribucion_valoracion": {
+    "rows": 109896,
+    "semantic_sha256": "2ac6a4acddb3544ce564d35456e50d1582256c38cbd67b9fe76f406dcf58ec2f",
+    "csv_export": false
+  },
+  "garantias_ventanas": {
+    "rows": 442080,
+    "semantic_sha256": "b7c9745954cce4338e31593fa2a845c368985cd7420f0ec99241cd8de8411167",
+    "csv_export": false
+  },
+  "garantias_simultaneas": {
+    "rows": 221040,
+    "semantic_sha256": "4f73ecaf9aac5b9f0fa76e9244f16801e3ba217bd00e8fdc1d2ab6c28ec47528",
+    "csv_export": false
+  },
+  "trayectoria_ventanas": {
+    "rows": 55260,
+    "semantic_sha256": "ceddf9bd58d14caa370d9990522f01b2d0fd4292a65ad2c2eff7a41572b68439",
+    "csv_export": false
+  },
+  "ventanas_resumen": {
+    "rows": 850,
+    "semantic_sha256": "3ee9175931bb598a819c1de280ec0b0dca1a2a24ed2b4bafa07c3d3f9f6ceae4",
+    "csv_export": true
+  },
+  "uniones_contrafactual": {
+    "rows": 8,
+    "semantic_sha256": "7bd9abecf276f5b24079e4a9f15f899123994afd47657bc3fd5760f4d692d67f",
+    "csv_export": true
+  },
+  "operaciones_ventanas": {
+    "rows": 850,
+    "semantic_sha256": "eda6d3d98cf5270ac457cc578ccb76791cffa2df854e00178ef54250a087db37",
+    "csv_export": true
+  },
+  "cf_contraste_diario": {
+    "rows": 3408,
+    "semantic_sha256": "6a08988825fa420b36a47982d841dea21e9ea040c16419b0cee323258e505e0a",
+    "csv_export": true
+  },
+  "cf_decisiones_ejecuciones": {
+    "rows": 24,
+    "semantic_sha256": "969e8a2cf162e705d50e3368451fdc30b85609aba89943f4b4f7639f4deecfb0",
+    "csv_export": true
+  },
+  "garantias_resumen": {
+    "rows": 6,
+    "semantic_sha256": "687cbc53632f14574505feecf6e0ad941f1891fa5aacb62c9bbbfcf4eed8dc13",
+    "csv_export": true
+  },
+  "h2": {
+    "rows": 32,
+    "semantic_sha256": "196443015a7c2b2a6eb6511064c26e356c9990dce7730efae0afd22ff5a29231",
+    "csv_export": true
+  },
+  "h3_resumen": {
+    "rows": 32,
+    "semantic_sha256": "ddfd7ef5e3453e35a14fb3e237166b3529071ce966754ac023c232dd3adb45af",
+    "csv_export": true
+  },
+  "deltas": {
+    "rows": 384,
+    "semantic_sha256": "207c704ac5fc0b08961211bd804f8c83611e2fe105699b787db3ce563cb0c864",
+    "csv_export": true
+  }
+}

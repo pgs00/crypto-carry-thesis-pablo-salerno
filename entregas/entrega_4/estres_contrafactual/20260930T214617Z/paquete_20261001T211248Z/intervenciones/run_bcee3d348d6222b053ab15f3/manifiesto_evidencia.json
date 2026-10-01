@@ -1,0 +1,15 @@
+{
+  "scenario": "SH_MAX",
+  "strategy": "conditional",
+  "run_id": "run_bcee3d348d6222b053ab15f3",
+  "files": {
+    "conciliacion_ledger.json": "46bb4152e22e51075558e4613046ae310ba9338c8606ac0a8f0684dfe1af2e86",
+    "estado_capa.json": "7b8fdabdebc54ba4edb2edba1726e542ab30ecf39440261a289c82776e7dd010",
+    "intervenciones.parquet": "045256fc1b4b8cf496ca668b9d2d6a977ab32b0fef8ce6c085ab82fa722e75b3",
+    "observaciones_ventanas.parquet": "ef2ea92179dab454a58dd23996d911c8f6d86d199d89c5ea156043343355bd29",
+    "oportunidad_ventanas.parquet": "4974eb1dfe65a7728265d7b5d4fee1878d9c0a1c94c2e769b8533a8eef6de7c9",
+    "h3_minutos/run_bcee3d348d6222b053ab15f3.csv": "cfd3194dbd27a1efe9fe0ca8236d1a15d0db0d3cf21fb11801ec5283b3f18075"
+  },
+  "run_manifest_sha256": "183d0a29b65e8fbf93f42aa9d4224b118f5196c09c04ec54d94cb9e1b2b48c20",
+  "interpretation": "Hypothetical continuous scenario; no calibrated changes after execution"
+}

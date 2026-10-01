@@ -1,0 +1,60 @@
+[
+  {
+    "strategy": "conditional",
+    "rows": 1704,
+    "changed_cells": 2,
+    "fields": {
+      "BTCUSDT_spot_price": 2
+    },
+    "numeric_unequal": 0,
+    "differences": [
+      {
+        "row": 793,
+        "field": "BTCUSDT_spot_price",
+        "old": "68246.01000000",
+        "new": "68246.01000000000000000000000",
+        "numeric_equal": true,
+        "delta": "0E-23",
+        "time_ns": "1709596799999999999"
+      },
+      {
+        "row": 1079,
+        "field": "BTCUSDT_spot_price",
+        "old": "104375.24000000",
+        "new": "104375.2400000000000000000000",
+        "numeric_equal": true,
+        "delta": "0E-22",
+        "time_ns": "1734307199999999999"
+      }
+    ]
+  },
+  {
+    "strategy": "permanent",
+    "rows": 1704,
+    "changed_cells": 2,
+    "fields": {
+      "BTCUSDT_spot_price": 2
+    },
+    "numeric_unequal": 0,
+    "differences": [
+      {
+        "row": 793,
+        "field": "BTCUSDT_spot_price",
+        "old": "68246.01000000",
+        "new": "68246.01000000000000000000000",
+        "numeric_equal": true,
+        "delta": "0E-23",
+        "time_ns": "1709596799999999999"
+      },
+      {
+        "row": 1079,
+        "field": "BTCUSDT_spot_price",
+        "old": "104375.24000000",
+        "new": "104375.2400000000000000000000",
+        "numeric_equal": true,
+        "delta": "0E-22",
+        "time_ns": "1734307199999999999"
+      }
+    ]
+  }
+]

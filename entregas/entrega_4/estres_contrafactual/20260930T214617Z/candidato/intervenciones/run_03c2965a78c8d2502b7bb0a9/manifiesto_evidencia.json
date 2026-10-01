@@ -1,0 +1,15 @@
+{
+  "scenario": "SH_MAX",
+  "strategy": "permanent",
+  "run_id": "run_03c2965a78c8d2502b7bb0a9",
+  "files": {
+    "conciliacion_ledger.json": "73338c99c1848c89a72ffd8f18225aeb28989206a6c8a958bd004a02313a09e7",
+    "estado_capa.json": "7b8fdabdebc54ba4edb2edba1726e542ab30ecf39440261a289c82776e7dd010",
+    "intervenciones.parquet": "045256fc1b4b8cf496ca668b9d2d6a977ab32b0fef8ce6c085ab82fa722e75b3",
+    "observaciones_ventanas.parquet": "7c47d8b145aefaae74ce2e45ef3958692df0aa43e1d1b4689a239b8fc62d7ac7",
+    "oportunidad_ventanas.parquet": "4974eb1dfe65a7728265d7b5d4fee1878d9c0a1c94c2e769b8533a8eef6de7c9",
+    "h3_minutos/run_03c2965a78c8d2502b7bb0a9.csv": "a059dc47f07578908911e693fef3763a084bdec1b299c05002c2820b89761c3a"
+  },
+  "run_manifest_sha256": "47f8a830d6bdabdf482730870655b2261a41a311a2abc8f4560474e9fd0fc420",
+  "interpretation": "Hypothetical continuous scenario; no calibrated changes after execution"
+}

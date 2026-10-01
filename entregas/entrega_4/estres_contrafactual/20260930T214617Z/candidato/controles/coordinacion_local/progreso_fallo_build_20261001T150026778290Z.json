@@ -1,0 +1,128 @@
+{
+  "pid": 22752,
+  "started_utc": "2026-10-01T14:08:46.556526+00:00",
+  "status": "fallido",
+  "engine_code_hash": "ac1a148ac22eaa6498cdf9e35d6a825f6d81ad29a015fc6d892b57f71ce8a998",
+  "coordinator_sha256": "9dcdd5b79a5cb9226a616dbbd9b9104e3f828f0ac533d05b3f674f2fca1d105b",
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "reserve_gib": 6,
+  "worker_budget_gib": 4,
+  "target_workers": 4,
+  "maximum_workers": 6,
+  "lock_path": "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5-coordinator-b63b822ecb0c9155.lock",
+  "reused": [
+    {
+      "scenario": "CONTROL_APAGADO",
+      "strategy": "conditional",
+      "run_id": "run_222075dee518f3a8828c45b8",
+      "total_seconds": 589.5466619000072
+    },
+    {
+      "scenario": "CONTROL_APAGADO",
+      "strategy": "permanent",
+      "run_id": "run_d6d5fded4f0aacb891e78011",
+      "total_seconds": 1637.4906249000342
+    },
+    {
+      "scenario": "CONTROL_CERO",
+      "strategy": "conditional",
+      "run_id": "run_13e0d5ceea1478f9b76a3919",
+      "total_seconds": 1468.734868300031
+    },
+    {
+      "scenario": "CONTROL_CERO",
+      "strategy": "permanent",
+      "run_id": "run_f910ce26ea7776b215d017a5",
+      "total_seconds": 990.6462571999873
+    },
+    {
+      "scenario": "SH_P90",
+      "strategy": "conditional",
+      "run_id": "run_92eccb60683bed405bffd9c6",
+      "total_seconds": 640.6259559000027
+    }
+  ],
+  "completed": [
+    {
+      "task": [
+        "SH_MAX",
+        "conditional"
+      ],
+      "run_id": "run_bcee3d348d6222b053ab15f3",
+      "total_seconds": 856.9903531000018
+    },
+    {
+      "task": [
+        "SH_P90",
+        "permanent"
+      ],
+      "run_id": "run_e9c1423ed2dc13006c8f09c4",
+      "total_seconds": 1179.1389278999995
+    },
+    {
+      "task": [
+        "CF_SIN_INTERRUPCION",
+        "conditional"
+      ],
+      "run_id": "run_478a6647e78b9a24f13733a0",
+      "total_seconds": 790.9314586999826
+    },
+    {
+      "task": [
+        "SH_MAX",
+        "permanent"
+      ],
+      "run_id": "run_03c2965a78c8d2502b7bb0a9",
+      "total_seconds": 1248.076495699992
+    },
+    {
+      "task": [
+        "CF_SIN_INTERRUPCION",
+        "permanent"
+      ],
+      "run_id": "run_4ca498777b23a4815d4fca47",
+      "total_seconds": 917.8238254999742
+    }
+  ],
+  "active": [],
+  "stages": [
+    {
+      "name": "build",
+      "seconds": 65.62490620004246,
+      "exit_code": 1,
+      "log": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\estres_contrafactual\\20260930T214617Z\\candidato\\controles\\coordinacion_local\\build_20261001T145510418536Z.txt"
+    }
+  ],
+  "elapsed_seconds": 2783.858925999957,
+  "resources": {
+    "physical": 8,
+    "logical": 16,
+    "cpu": 3,
+    "available_gib": 19.40131378173828,
+    "total_gib": 27.855525970458984,
+    "python": [
+      {
+        "ProcessId": 29116,
+        "ParentProcessId": 16668,
+        "WorkingSetSize": 3997696
+      },
+      {
+        "ProcessId": 22752,
+        "ParentProcessId": 29116,
+        "WorkingSetSize": 127254528
+      }
+    ]
+  },
+  "launch_cap": 1,
+  "pending": [],
+  "aggregate_portfolios_per_hour": 1.0569911599708013,
+  "stage_log": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\estres_contrafactual\\20260930T214617Z\\candidato\\controles\\coordinacion_local\\build_20261001T145510418536Z.txt",
+  "qa_path": "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_qa_final_20261001T145510418490Z",
+  "stage_pid": 22584,
+  "reason": "RuntimeError: Delivery stage failed; no seal: build"
+}

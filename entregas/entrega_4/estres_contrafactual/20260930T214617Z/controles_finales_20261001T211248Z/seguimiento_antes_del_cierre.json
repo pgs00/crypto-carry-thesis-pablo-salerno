@@ -1,0 +1,21 @@
+{
+  "utc": "2026-10-01T21:16:09.050932+00:00",
+  "files": [
+    {
+      "path": "docs/entrega_4/matriz_avance.csv",
+      "sha256": "617500ef366f275e4d8d3f7634691c1d85194457d43d9a28d1398a75f5c92cbf",
+      "backup": "matriz_avance_previa.csv"
+    },
+    {
+      "path": "entregas/entrega_4/estres_contrafactual/indice_versiones.json",
+      "sha256": "b30f2d1748db7db9e98e795e6066ff34d67855cc51bb24ec735d625241c7bd69",
+      "backup": "indice_versiones_previo.json"
+    }
+  ],
+  "updates_permitted_only": [
+    "B5",
+    "B5_SHOCKS",
+    "B5_CF"
+  ],
+  "other_rows_preserved": true
+}

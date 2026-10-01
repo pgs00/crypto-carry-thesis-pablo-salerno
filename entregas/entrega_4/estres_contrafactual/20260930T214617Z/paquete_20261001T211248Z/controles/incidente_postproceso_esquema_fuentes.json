@@ -1,0 +1,24 @@
+{
+  "utc": "2026-10-01T15:00:26.808745+00:00",
+  "cause": "Fresh missing-minute source rows omitted null columns added by persisted Parquet schema; strict dictionary comparison differed",
+  "fix": "Return persisted Parquet representation on first extraction as on subsequent reads; exact comparison retained",
+  "engine_code_hash": "ac1a148ac22eaa6498cdf9e35d6a825f6d81ad29a015fc6d892b57f71ce8a998",
+  "economic_code_unchanged": true,
+  "new_replays_required": 0,
+  "completed_economic_portfolios": 6,
+  "previous_progress": "entregas\\entrega_4\\estres_contrafactual\\20260930T214617Z\\candidato\\controles\\coordinacion_local\\progreso_fallo_build_20261001T150026778290Z.json",
+  "failure_log_sha256": "ece2466ab975d98b33211808dd5eade1a38c1198d709d4580b6931fe46ea4b31",
+  "source_sha256": "5c467bc182ca73c3c5d022567a4a44e53c39cead4a0db388472cb850be539161",
+  "red_test": "controles/esquema_fuentes_rojo.txt",
+  "focused_tests_passed": 16,
+  "ruff_passed": true,
+  "original_extract_sha256": "ec1faaca0f8438915cb874a3a4ddcdc171c6fe3e219a162e754be4195d4edc00",
+  "existing_witness_sha256": "fa719917b057a172e8752d621af212b6dfa182e36316dc98b36595feb5bbd5e4",
+  "user_git_index_sha256": "650e0e68ef402d854d191d15fb40e6733c43c34e32708908bf92efb8e3e4751e",
+  "review": {
+    "reviewer": "/root/revisar_capa_b5",
+    "passed": true,
+    "critical_or_important_findings": 0,
+    "scope": "Persisted schema representation only; strict comparison, hashes, missing-source semantics and population checks retained"
+  }
+}

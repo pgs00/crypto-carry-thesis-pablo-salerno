@@ -1,0 +1,10 @@
+{
+  "final_package": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\estres_contrafactual\\20260930T214617Z\\paquete_20261001T211248Z",
+  "final_audit": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\estres_contrafactual\\20260930T214617Z\\controles_finales_20261001T211248Z",
+  "status_path": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\estres_contrafactual\\20260930T214617Z\\controles_finales_20261001T211248Z\\estado_cierre.json",
+  "pid": null,
+  "status": "completado",
+  "passed": true,
+  "finalizer_pid": 2868,
+  "completed_utc": "2026-10-01T21:24:10.315709+00:00"
+}

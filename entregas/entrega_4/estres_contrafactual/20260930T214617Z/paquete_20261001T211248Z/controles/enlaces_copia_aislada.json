@@ -1,0 +1,6 @@
+{
+  "missing": [],
+  "absolute_historical_paths": "registradas en comparacion y controles; no se reescriben",
+  "provenance_recalculation_without_old_package": false,
+  "explanation": "v2 autentica la comparacion preservada; recalcular sus 1200 filas exige el paquete anterior o un archivo intacto recuperado"
+}

@@ -1,0 +1,15 @@
+{
+  "scenario": "SH_P90",
+  "strategy": "conditional",
+  "run_id": "run_92eccb60683bed405bffd9c6",
+  "files": {
+    "conciliacion_ledger.json": "48958a4ad6976b28f84ca7f715f1326c967e30f24fa6e8b0e55826d2718e2fba",
+    "estado_capa.json": "64a4f7a2fe2e74497c760214ab2a5fad4caa7f759e649fcc13891288b35044d9",
+    "intervenciones.parquet": "840238046ce819486798e35751f7d2a4fbb438492de50eeac3bf797e17661ccc",
+    "observaciones_ventanas.parquet": "64e8a01ab1d923bd3e68f25a9cf1fe8fd054d981b6db19ff9b205090779e72ea",
+    "oportunidad_ventanas.parquet": "cf0c07a75d8b7a1ee8f3527dcf1bd03a23178f75e829914b348a7ef3f2d837e1",
+    "h3_minutos/run_92eccb60683bed405bffd9c6.csv": "662a1b0f9534920a7dcdf2e8596e9fa39b2439805e59d922852584566b2393ac"
+  },
+  "run_manifest_sha256": "c7c49157cc9b591f2664e302f6948fbfa6256ba039d1098f3d551ffbf208ac7e",
+  "interpretation": "Hypothetical continuous scenario; no calibrated changes after execution"
+}

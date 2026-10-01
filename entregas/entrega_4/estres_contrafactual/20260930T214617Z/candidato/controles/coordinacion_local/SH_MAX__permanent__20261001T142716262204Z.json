@@ -1,0 +1,12 @@
+{
+  "pid": 28328,
+  "utc": "2026-10-01T14:27:16.262233+00:00",
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "runner_file": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\scripts\\run_stress_counterfactual.py",
+  "change": "Only portfolio-specific writer lock; existing run_one and economic code unchanged"
+}

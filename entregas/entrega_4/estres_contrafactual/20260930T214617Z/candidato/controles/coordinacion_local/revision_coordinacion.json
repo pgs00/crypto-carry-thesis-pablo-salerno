@@ -1,0 +1,15 @@
+{
+  "utc": "2026-10-01T14:10:47.355286+00:00",
+  "passed": true,
+  "scope": "Bounded coordination-only review; no economic or final-report approval",
+  "reviewer": "/root/revisar_capa_b5",
+  "critical": 0,
+  "important": 0,
+  "minor": "4 GiB is a measured-growth budget, not an OS hard cap; no active jobs killed",
+  "coordinator_sha256": "9dcdd5b79a5cb9226a616dbbd9b9104e3f828f0ac533d05b3f674f2fca1d105b",
+  "ruff_passed": true,
+  "memory_growth_assertions_passed": 3,
+  "economic_contract_verified": true,
+  "user_git_index_sha256": "650e0e68ef402d854d191d15fb40e6733c43c34e32708908bf92efb8e3e4751e",
+  "full_regression_repeated": false
+}

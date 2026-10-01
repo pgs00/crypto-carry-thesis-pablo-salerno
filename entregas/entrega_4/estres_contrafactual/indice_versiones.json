@@ -1,9 +1,22 @@
 {
   "current_candidate": "entregas/entrega_4/estres_contrafactual/20260930T214617Z/candidato",
-  "sealed": false,
-  "status": "protocolo_preparado_pendiente_aprobacion",
+  "sealed": true,
+  "status": "ejecutado",
   "replaces": null,
-  "reason": "Primera ficha B5 con referencia corregida, calibraci?n y supuestos previos a ejecuci?n",
-  "economic_runs": 0,
-  "approval_received": false
+  "reason": "Six approved economic portfolios and four technical controls complete; one final package sealed and verified; originals preserved",
+  "economic_runs": 6,
+  "approval_received": true,
+  "execution_protocol": "entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/protocolo_ejecucion.json",
+  "incident": "entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/controles/incidente_control_cero.md",
+  "engine_code_hash": "ac1a148ac22eaa6498cdf9e35d6a825f6d81ad29a015fc6d892b57f71ce8a998",
+  "preserved_initial_technical_attempts": 4,
+  "technical_controls_completed_current_code": 4,
+  "economic_runs_in_progress": 0,
+  "coordinator_pid": null,
+  "progress_path": "C:/Users/pablo/Documentos/UCEMA/Tesina/Backtesting/entregas/entrega_4/estres_contrafactual/20260930T214617Z/candidato/progreso_local.json",
+  "current_package": "entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z",
+  "candidate_is_sealed": false,
+  "completed_utc": "2026-10-01T21:24:10.315709+00:00",
+  "final_manifest_sha256": "091fe38bba57ad5be62275cabb03579b1c47f2d96784ed7c5e2ce6377467a8de",
+  "final_verification": "entregas/entrega_4/estres_contrafactual/20260930T214617Z/controles_finales_20261001T211248Z/verificacion_sello.json"
 }

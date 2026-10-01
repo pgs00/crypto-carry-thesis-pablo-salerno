@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "ledger_rows": 2374,
+  "daily_links": 1704,
+  "position_links": 3804,
+  "final_free_spot": "5428.128182831000000000000000",
+  "final_free_futures": "4899.009762489119719514799998",
+  "final_debt": "0E-27",
+  "final_inventory": {
+    "BTCUSDT": {
+      "spot": "7.5E-7",
+      "short": "0.000",
+      "average": "0",
+      "spot_cost": "0.060295953769946981819105",
+      "realized_spot": "2404.896678112669946981819105",
+      "realized_futures": "-2501.878000000000000000000000",
+      "funding": "347.6111389983570623144",
+      "fees": "44.4817712689",
+      "liquidation_fees": "0",
+      "collateral": "0E-24"
+    },
+    "ETHUSDT": {
+      "spot": "0.0000247",
+      "short": "0.000",
+      "average": "0",
+      "spot_cost": "0.063117721240466244915869",
+      "realized_spot": "-610.9098649017595337550841307",
+      "realized_futures": "315.006349999999999999999999",
+      "funding": "484.9010565297626572004",
+      "fees": "67.884228475",
+      "liquidation_fees": "0",
+      "collateral": "0E-24"
+    }
+  },
+  "scope": "cash waterfall, debt, base inventory, fees, collateral and daily/state links; original opening-loss buffer retained"
+}

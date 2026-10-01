@@ -1,0 +1,65 @@
+{
+  "case": "omitted_minute_snapshot",
+  "construction_passed": true,
+  "bytes_changed": true,
+  "verifier_invoked": true,
+  "rejected": true,
+  "construction": "valid changed cells/row population; journal hashes and identity references refreshed in test copy",
+  "changed_files": [
+    {
+      "path": "intervenciones/run_92eccb60683bed405bffd9c6/observaciones_ventanas.parquet",
+      "before_sha256": "64e8a01ab1d923bd3e68f25a9cf1fe8fd054d981b6db19ff9b205090779e72ea",
+      "after_sha256": "c103ca7740927081aa8bcacab162440cab9c2d82c77b831f7499ca30880c72d9",
+      "before_bytes": 11418091,
+      "after_bytes": 11417259,
+      "retained_mutated_bytes": "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_qa_final_20261001T150046955795Z\\evidencia_adulterada\\omitted_minute_snapshot\\intervenciones\\run_92eccb60683bed405bffd9c6\\observaciones_ventanas.parquet"
+    },
+    {
+      "path": "intervenciones/run_92eccb60683bed405bffd9c6/estado_capa.json",
+      "before_sha256": "64a4f7a2fe2e74497c760214ab2a5fad4caa7f759e649fcc13891288b35044d9",
+      "after_sha256": "e583c9a4fa45bf55f239682af0b697bdfe02e37b3ba205eabc2b855ea9ad2d5d",
+      "before_bytes": 2865160,
+      "after_bytes": 2865160,
+      "retained_mutated_bytes": "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_qa_final_20261001T150046955795Z\\evidencia_adulterada\\omitted_minute_snapshot\\intervenciones\\run_92eccb60683bed405bffd9c6\\estado_capa.json"
+    },
+    {
+      "path": "intervenciones/run_92eccb60683bed405bffd9c6/manifiesto_evidencia.json",
+      "before_sha256": "5f6ce8c24300c5598472889fd887ed9187d190dd45886d01ec7f26dd655ddaea",
+      "after_sha256": "0aff183947c13af24a20496529fc1dc7e7950e045b649073ee432f7ad0084af5",
+      "before_bytes": 924,
+      "after_bytes": 924,
+      "retained_mutated_bytes": "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_qa_final_20261001T150046955795Z\\evidencia_adulterada\\omitted_minute_snapshot\\intervenciones\\run_92eccb60683bed405bffd9c6\\manifiesto_evidencia.json"
+    },
+    {
+      "path": "indice_corridas.json",
+      "before_sha256": "edd23f703e340244ed88a342b914b4d280dac0d7d635c7548461d3a12fb104e7",
+      "after_sha256": "ea4cd0864a3db22041038061e1c3632b2dd4015400a7a7f55f5fbb35d85daf91",
+      "before_bytes": 21890,
+      "after_bytes": 21508,
+      "retained_mutated_bytes": "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_qa_final_20261001T150046955795Z\\evidencia_adulterada\\omitted_minute_snapshot\\indice_corridas.json"
+    },
+    {
+      "path": "evidencia_mercado/testigos/run_92eccb60683bed405bffd9c6.json",
+      "before_sha256": "3e8bd00a1f86b19700aa7e2bc01122b1aaec805df6a5c1e9425efea42fa29ac3",
+      "after_sha256": "f4aa6a58eaa31cd35ea1c8c7711639623f152b1f403df3624d710c86da5cc184",
+      "before_bytes": 355,
+      "after_bytes": 348,
+      "retained_mutated_bytes": "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_qa_final_20261001T150046955795Z\\evidencia_adulterada\\omitted_minute_snapshot\\evidencia_mercado\\testigos\\run_92eccb60683bed405bffd9c6.json"
+    }
+  ],
+  "verifier_command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-I",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_qa_final_20261001T150046955795Z\\paquete_prueba\\herramientas\\scripts\\check_stress_verifier_case.py",
+    "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_qa_final_20261001T150046955795Z\\paquete_prueba",
+    "--output",
+    "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_qa_final_20261001T150046955795Z\\omitted_minute_snapshot_verifier.json"
+  ],
+  "verifier_attempt_sha256": "6283ccc3113da02e5d0b321a38369fc6b41a727b047f94c836fd809e732e897a",
+  "rejection_type": "ValueError",
+  "reason": "Window witness source extract population differs",
+  "seconds": 20891.306634499982
+}

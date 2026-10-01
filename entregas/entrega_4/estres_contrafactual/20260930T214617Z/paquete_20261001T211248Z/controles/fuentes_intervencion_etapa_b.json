@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "source_rows": 14656,
+  "checks": [
+    {
+      "scenario": "SH_P90",
+      "passed": true,
+      "counts": {
+        "ETHUSDT_calendar_minutes": 8117,
+        "ETHUSDT_observed_transformed": 8037,
+        "ETHUSDT_absent_documented_closure": 80,
+        "BTCUSDT_calendar_minutes": 6163,
+        "BTCUSDT_observed_transformed": 6083,
+        "BTCUSDT_absent_documented_closure": 80
+      }
+    },
+    {
+      "scenario": "SH_MAX",
+      "passed": true,
+      "counts": {
+        "ETHUSDT_calendar_minutes": 8117,
+        "ETHUSDT_observed_transformed": 8037,
+        "ETHUSDT_absent_documented_closure": 80,
+        "BTCUSDT_calendar_minutes": 6163,
+        "BTCUSDT_observed_transformed": 6083,
+        "BTCUSDT_absent_documented_closure": 80
+      }
+    },
+    {
+      "scenario": "CF_SIN_INTERRUPCION",
+      "passed": true,
+      "synthetic_bars": 306,
+      "basis_by_symbol": {
+        "BTCUSDT": {
+          "min": "-0.0005376077843042040643718525",
+          "max": "-0.0005376077843042040643718521",
+          "basis_nonnegative_minutes": 0
+        },
+        "ETHUSDT": {
+          "min": "-0.0004472521943310784368535808",
+          "max": "-0.0004472521943310784368535803",
+          "basis_nonnegative_minutes": 0
+        }
+      }
+    }
+  ],
+  "source_extract_sha256": "ec1faaca0f8438915cb874a3a4ddcdc171c6fe3e219a162e754be4195d4edc00",
+  "economic_replay": false,
+  "scope": "Exact approved minutes and anchors; unchanged full inputs authenticated separately"
+}

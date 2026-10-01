@@ -1,0 +1,16 @@
+{
+  "utc": "2026-10-01T15:03:43.986272+00:00",
+  "tracked_files": 11541,
+  "changed": [
+    ".gitattributes",
+    "docs/entrega_4/historial_avance/cambios.md",
+    "docs/entrega_4/matriz_avance.csv",
+    "entregas/entrega_4/estres_contrafactual/20260930T214617Z/candidato/README.md",
+    "entregas/entrega_4/estres_contrafactual/indice_versiones.json"
+  ],
+  "missing": [],
+  "unexpected": [],
+  "index_sha256": "650e0e68ef402d854d191d15fb40e6733c43c34e32708908bf92efb8e3e4751e",
+  "index_unchanged": true,
+  "passed": true
+}

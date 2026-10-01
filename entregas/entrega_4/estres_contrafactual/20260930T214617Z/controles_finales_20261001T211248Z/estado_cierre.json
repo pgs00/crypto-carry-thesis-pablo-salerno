@@ -1,0 +1,50 @@
+{
+  "status": "sellado_verificado",
+  "pid": 2868,
+  "started_utc": "2026-10-01T21:12:48.202352+00:00",
+  "candidate": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\estres_contrafactual\\20260930T214617Z\\candidato",
+  "final_package": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\estres_contrafactual\\20260930T214617Z\\paquete_20261001T211248Z",
+  "stages": [
+    {
+      "name": "seal",
+      "seconds": 302.7627336999867,
+      "exit_code": 0,
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-u",
+        "-X",
+        "utf8",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\scripts\\package_stress_counterfactual.py",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\estres_contrafactual\\20260930T214617Z\\candidato",
+        "--destination",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\estres_contrafactual\\20260930T214617Z\\paquete_20261001T211248Z",
+        "--gate",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\estres_contrafactual\\20260930T214617Z\\candidato\\controles\\puerta_sellado_final.json"
+      ]
+    },
+    {
+      "name": "verify_seal",
+      "seconds": 288.38882410002407,
+      "exit_code": 0,
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-I",
+        "-B",
+        "-u",
+        "-X",
+        "utf8",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\estres_contrafactual\\20260930T214617Z\\paquete_20261001T211248Z\\herramientas\\scripts\\verify_stress_counterfactual.py",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\estres_contrafactual\\20260930T214617Z\\paquete_20261001T211248Z",
+        "--output",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\estres_contrafactual\\20260930T214617Z\\controles_finales_20261001T211248Z\\verificacion_sello.json"
+      ]
+    }
+  ],
+  "stage_pid": null,
+  "passed": true,
+  "completed_utc": "2026-10-01T21:22:39.367608+00:00",
+  "tracking_updated": true,
+  "tracking_completed_utc": "2026-10-01T21:24:10.315709+00:00",
+  "active_pid": null
+}

@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "partial": false,
+  "report_code_sha256": "37a3067320208a00c67374208582ec5583884cab62aa4e7944e8c3b7dbcdff46",
+  "table_count": 48,
+  "portfolios": 8,
+  "interpreted_scenarios": [
+    "BASE_E3",
+    "SH_P90",
+    "SH_MAX",
+    "CF_SIN_INTERRUPCION"
+  ],
+  "economic_replay": false,
+  "raw_runs_preserved": true,
+  "common_builder_verifier_logic": "scripts/stress_counterfactual_report.py and delivery.py"
+}

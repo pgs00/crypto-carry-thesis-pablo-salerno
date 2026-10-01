@@ -1,0 +1,33 @@
+{
+  "case": "approved_protocol",
+  "construction_passed": true,
+  "bytes_changed": true,
+  "verifier_invoked": true,
+  "rejected": true,
+  "construction": "approved bytes changed, outer seal refreshed only",
+  "changed_files": [
+    {
+      "path": "protocolo_tecnico.md",
+      "before_sha256": "ad8fb7ecc22e233a26e6cc6b8c0d2b6d440e560ec411a21c651ee272e84055f9",
+      "after_sha256": "ac08670c9758f0c1855fcb7e9cb6ee977e383ad94980b30238bc4e144531152d",
+      "before_bytes": 16359,
+      "after_bytes": 16383,
+      "retained_mutated_bytes": "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_qa_final_20261001T150046955795Z\\evidencia_adulterada\\approved_protocol\\protocolo_tecnico.md"
+    }
+  ],
+  "verifier_command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-I",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_qa_final_20261001T150046955795Z\\paquete_prueba\\herramientas\\scripts\\check_stress_verifier_case.py",
+    "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_qa_final_20261001T150046955795Z\\paquete_prueba",
+    "--output",
+    "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_qa_final_20261001T150046955795Z\\approved_protocol_verifier.json"
+  ],
+  "verifier_attempt_sha256": "c83822929b3c929f93273c55e5ef0c43867ae49aaae13e0b99bce6fe0d38d4a4",
+  "rejection_type": "ValueError",
+  "reason": "An approved file changed: protocolo_tecnico.md",
+  "seconds": 2.1013293999712914
+}

@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "before_sha256": "0249e1b6ca7c687a10fa967a9f2fadda78ce72620d87e63a41aa897678130ab2",
+  "current_sha256": "37023040bbfc84065f3c9dfb411ded5384970175666a6059ec0f671a46e9689b",
+  "changed_ids": [
+    "B5",
+    "B5_SHOCKS",
+    "B5_CF"
+  ],
+  "all_other_rows_identical": true
+}

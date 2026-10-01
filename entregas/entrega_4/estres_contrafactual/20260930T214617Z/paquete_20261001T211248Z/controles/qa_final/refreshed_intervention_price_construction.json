@@ -1,0 +1,42 @@
+{
+  "case": "refreshed_intervention_price",
+  "construction_passed": true,
+  "bytes_changed": true,
+  "verifier_invoked": false,
+  "rejected": false,
+  "construction": "valid changed cells/row population; journal hashes and identity references refreshed in test copy",
+  "changed_files": [
+    {
+      "path": "intervenciones/run_92eccb60683bed405bffd9c6/intervenciones.parquet",
+      "before_sha256": "840238046ce819486798e35751f7d2a4fbb438492de50eeac3bf797e17661ccc",
+      "after_sha256": "65302350089cb574d97b420aa681ee4578462bbcfdc4fef9aa7733464d6e79a3",
+      "before_bytes": 4224282,
+      "after_bytes": 4224286,
+      "retained_mutated_bytes": "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_qa_final_20261001T150046955795Z\\evidencia_adulterada\\refreshed_intervention_price\\intervenciones\\run_92eccb60683bed405bffd9c6\\intervenciones.parquet"
+    },
+    {
+      "path": "intervenciones/run_92eccb60683bed405bffd9c6/manifiesto_evidencia.json",
+      "before_sha256": "5f6ce8c24300c5598472889fd887ed9187d190dd45886d01ec7f26dd655ddaea",
+      "after_sha256": "9999f8ed3e3d1e23a6017ed2db7234fe1a0c7278a3827758bcafd664ddafe6fc",
+      "before_bytes": 924,
+      "after_bytes": 924,
+      "retained_mutated_bytes": "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_qa_final_20261001T150046955795Z\\evidencia_adulterada\\refreshed_intervention_price\\intervenciones\\run_92eccb60683bed405bffd9c6\\manifiesto_evidencia.json"
+    },
+    {
+      "path": "indice_corridas.json",
+      "before_sha256": "edd23f703e340244ed88a342b914b4d280dac0d7d635c7548461d3a12fb104e7",
+      "after_sha256": "a289fb9d5620ecc205aa28553f453c5d9c53bff9376208c14f10023f3668aed0",
+      "before_bytes": 21890,
+      "after_bytes": 21508,
+      "retained_mutated_bytes": "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_qa_final_20261001T150046955795Z\\evidencia_adulterada\\refreshed_intervention_price\\indice_corridas.json"
+    },
+    {
+      "path": "evidencia_mercado/testigos/run_92eccb60683bed405bffd9c6.json",
+      "before_sha256": "3e8bd00a1f86b19700aa7e2bc01122b1aaec805df6a5c1e9425efea42fa29ac3",
+      "after_sha256": "996369e49ce0d62423f015d30f5cc899290f61636372617a42ca5c8e48221e7f",
+      "before_bytes": 355,
+      "after_bytes": 348,
+      "retained_mutated_bytes": "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_qa_final_20261001T150046955795Z\\evidencia_adulterada\\refreshed_intervention_price\\evidencia_mercado\\testigos\\run_92eccb60683bed405bffd9c6.json"
+    }
+  ]
+}

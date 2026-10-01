@@ -1,0 +1,21 @@
+{
+  "previous_manifest_sha256": "955205887cf139bc41fd1edcdf9e63a482d0b498d8998680890cd6273ccc5603",
+  "current_manifest_sha256": "88af2936e2dc243080abdf3909cc578c184778527eb847d6b021ce76d357335b",
+  "identical": 1193,
+  "changed": [
+    "controles/revision_independiente.md",
+    "documentos/controles/revision_independiente.md",
+    "documentos/gitattributes_adicion.txt",
+    "herramientas/tests/integration/test_execution_delays_package.py",
+    "README.md",
+    "reporte.html",
+    "reporte.md"
+  ],
+  "added": [
+    "documentos/comparacion_con_candidato_anterior.json",
+    "documentos/revision_tecnica_paquete.md",
+    "referencias/manifiesto_candidato_anterior.json",
+    "referencias/manifiesto_candidato_anterior.sha256"
+  ],
+  "unsuffixed_exists": false
+}

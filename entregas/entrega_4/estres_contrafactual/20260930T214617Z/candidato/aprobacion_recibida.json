@@ -1,0 +1,25 @@
+{
+  "status": "aprobado",
+  "recorded_utc": "2026-09-30T22:50:57.628954+00:00",
+  "message_timestamp": "no disponible; recorded_utc es hora de registro",
+  "families": [
+    "SH_P90",
+    "SH_MAX",
+    "CF_SIN_INTERRUPCION"
+  ],
+  "user_response": "Apruebo ambas familias de esta ficha y su protocolo técnico:\nSH_P90, SH_MAX y CF_SIN_INTERRUPCION.\n\nContinuá con la etapa B y los controles previstos, sin cambiar\nmagnitudes, calendario, recuperación, anclas ni volumen después\nde observar resultados.\n\nEn el reporte, explicitá que:\n\n1. La recuperación de 60 minutos es impuesta. Separá su efecto\n   de las pérdidas transitorias y del resultado de las operaciones.\n\n2. El calendario BASE no estresa automáticamente las exposiciones\n   nuevas que aparezcan en las trayectorias modificadas.\n\n3. Las anclas del contrafactual implican basis negativo constante\n   durante las velas sintéticas y restringen nuevas entradas.\n   No alteres las anclas para conseguir operaciones.\n\nNo autoriza limpieza, borrados ni archivado.\nConservá las referencias y un único candidato editable.\nNo hagas commit, push ni cambios en el índice del usuario.",
+  "approved_files_sha256": {
+    "ficha_decision.md": "ca88c6502f80f6ab66ff71343e6635b214d5015b1862c487bed13fcec86639f9",
+    "protocolo_tecnico.md": "ad8fb7ecc22e233a26e6cc6b8c0d2b6d440e560ec411a21c651ee272e84055f9",
+    "protocolo_propuesto.json": "c2c9ad1813dd072d75189783b20ec2703be9066720eaeb93f0efb66b0d77a052",
+    "plan_ejecucion.md": "a8ffe940aaf575aae6c9d4cfbcbf6f0fde43a86491df7b5fbd7b215765341c70",
+    "tablas/calibracion_escenarios_pendientes.csv": "0bf0a9d71097d99b9b6a580a0076b1b03cf7580f1236512c471922d7df15f18c",
+    "tablas/calendario_shocks_propuesto.csv": "44182c6952b33423e63a504f0f7717da0077afc760937c76056f3ebbce9fcb34",
+    "tablas/anclas_cf.csv": "f92e0784230c417bfbbb926382ce3821942b8626f989d0bc264113729da5a38d",
+    "tablas/volumen_cf_propuesto.csv": "09fae62c0db351576b0f13f74e35ffcb702a25589381198c341cf51a736db387",
+    "tablas/muestra_volumen_previa.csv": "eb0f4ce0bebc36c4a626191420c5f3b365bfb1b99379566b4813f9eeeb08d3e0"
+  },
+  "proposal_identity_sha256": "e7d2bb92faf6707b25fba30dd388aba55565b3c337fd9cb2688082ed216e3fad",
+  "cleanup_authorized": false,
+  "commit_push_index_authorized": false
+}

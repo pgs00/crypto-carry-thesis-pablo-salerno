@@ -1,0 +1,15 @@
+{
+  "scenario": "CF_SIN_INTERRUPCION",
+  "strategy": "permanent",
+  "run_id": "run_4ca498777b23a4815d4fca47",
+  "files": {
+    "conciliacion_ledger.json": "ede1f012cd02e1598ae43ccb8f1088ac7f56bb78db8f897c2b8e5331719b4b60",
+    "estado_capa.json": "f6ade9e25018a3b227f1317a8e201ec2e05d2481157e1f7e8e7b560b6a0a3aac",
+    "intervenciones.parquet": "d6c13d0b6ed5c86b6a3a3c3349e38bd2fd1753e8a4e6b27ec48ce91a71894a6b",
+    "observaciones_ventanas.parquet": "32fb6e738f3260c1cb3218955ac4aa9c346152c17f0dc464e2f373b81cd6913a",
+    "oportunidad_ventanas.parquet": "e9b7a12c0f3e6f263d9aeaca809aca0879420848874b60e78824bae92d17aaec",
+    "h3_minutos/run_4ca498777b23a4815d4fca47.csv": "b7d3b39bbfe8447527021f8f3b17b8343112d79770343007cfa4435238642ca1"
+  },
+  "run_manifest_sha256": "ca68248867d926bb9e0b229e442f8da10634a4a0e2230cc7b654f24b32373af9",
+  "interpretation": "Hypothetical continuous scenario; no calibrated changes after execution"
+}

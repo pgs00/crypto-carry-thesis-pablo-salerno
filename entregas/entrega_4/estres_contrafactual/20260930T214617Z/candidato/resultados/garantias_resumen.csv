@@ -1,0 +1,7 @@
+scenario,strategy,simultaneous_observations,unknown_external_need_observations,max_known_external_shortfall_infimum_usdt,peak_event_time_ns,peak_state_time_ns,peak_phase,active_short_asset_observations,max_maintenance_shortfall_usdt,max_preventive_topup_infimum_usdt,scope
+CF_SIN_INTERRUPCION,conditional,624,0,0,1679657220000000000,1679657160000000000,before,624,0,0,"only intervention windows/phases; simultaneous needs, not summed per-asset maxima"
+CF_SIN_INTERRUPCION,permanent,624,0,0,1679657220000000000,1679657160000000000,before,1248,0,0,"only intervention windows/phases; simultaneous needs, not summed per-asset maxima"
+SH_MAX,conditional,54948,0,0,1641254520000000000,1641254460000000000,before,53496,0,20.0021044799999999999999999,"only intervention windows/phases; simultaneous needs, not summed per-asset maxima"
+SH_MAX,permanent,54948,0,0,1641254520000000000,1641254460000000000,before,101636,0,14.683429396686680000000000,"only intervention windows/phases; simultaneous needs, not summed per-asset maxima"
+SH_P90,conditional,54948,0,0,1641254520000000000,1641254460000000000,before,53492,0,18.9379540795422239999999998,"only intervention windows/phases; simultaneous needs, not summed per-asset maxima"
+SH_P90,permanent,54948,0,0,1641254520000000000,1641254460000000000,before,101592,0,15.102955950877728000000000,"only intervention windows/phases; simultaneous needs, not summed per-asset maxima"

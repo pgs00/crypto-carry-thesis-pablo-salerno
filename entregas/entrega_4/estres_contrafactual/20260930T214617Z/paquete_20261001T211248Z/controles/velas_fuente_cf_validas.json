@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "counts": {
+    "data/minutes/2022_2026_continuous/processed/dataset=minute_bars/symbol=BTCUSDT/market=futures/month=2023-03/part-00000.parquet": 153,
+    "data/minutes/2022_2026_continuous/processed/dataset=minute_bars/symbol=ETHUSDT/market=futures/month=2023-03/part-00000.parquet": 153
+  },
+  "scope": "OHLC, positive volume, VWAP range, availability of existing futures source bars; no simulation"
+}

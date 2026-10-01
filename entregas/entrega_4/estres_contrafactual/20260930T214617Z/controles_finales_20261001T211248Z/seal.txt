@@ -1,0 +1,9 @@
+RECOMPUTED BASE_E3 conditional
+RECOMPUTED BASE_E3 permanent
+RECOMPUTED SH_P90 conditional
+RECOMPUTED SH_P90 permanent
+RECOMPUTED SH_MAX conditional
+RECOMPUTED SH_MAX permanent
+RECOMPUTED CF_SIN_INTERRUPCION conditional
+RECOMPUTED CF_SIN_INTERRUPCION permanent
+SEALED C:\Users\pablo\Documentos\UCEMA\Tesina\Backtesting\entregas\entrega_4\estres_contrafactual\20260930T214617Z\paquete_20261001T211248Z 091fe38bba57ad5be62275cabb03579b1c47f2d96784ed7c5e2ce6377467a8de

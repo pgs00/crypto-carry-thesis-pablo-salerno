@@ -63,3 +63,15 @@
 /entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/controles/revision_independiente.md whitespace=-blank-at-eof,cr-at-eol
 /entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/documentos/controles/revision_independiente.md whitespace=-blank-at-eof,cr-at-eol
 /entregas/entrega_4/ejecucion_demoras/20260929T221620Z/verificacion_final/adulteraciones_1.xml whitespace=-blank-at-eol,cr-at-eol
+# Preserve the approved block-5 protocol, compact evidence and new hashed tools.
+/entregas/entrega_4/estres_contrafactual/** -text whitespace=cr-at-eol
+/entregas/entrega_4/estres_contrafactual/**/*.svg whitespace=-blank-at-eol,cr-at-eol
+/entregas/entrega_4/estres_contrafactual/**/*.patch whitespace=-blank-at-eol,cr-at-eol
+/entregas/entrega_4/estres_contrafactual/**/*.txt whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+/configs/entrega_4/estres_contrafactual/** -text whitespace=cr-at-eol
+/scripts/*stress_counterfactual*.py -text whitespace=cr-at-eol
+/scripts/check_stress_verifier_case.py -text whitespace=cr-at-eol
+/src/crypto_carry/stress_counterfactual.py -text whitespace=cr-at-eol
+/src/crypto_carry/data/stress_counterfactual.py -text whitespace=cr-at-eol
+/tests/unit/test_stress_*.py -text whitespace=cr-at-eol
+/tests/integration/test_stress_*.py -text whitespace=cr-at-eol

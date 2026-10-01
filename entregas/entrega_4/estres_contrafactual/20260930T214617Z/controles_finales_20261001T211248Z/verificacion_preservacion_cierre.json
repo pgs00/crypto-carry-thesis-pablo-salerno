@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "utc": "2026-10-01T21:24:10.315709+00:00",
+  "manifest_sha256": "091fe38bba57ad5be62275cabb03579b1c47f2d96784ed7c5e2ce6377467a8de",
+  "verification_sha256": "adbcee3040a34ee8ce591dd1e3a2a46958b16bc9a561f014767f99a26940d914",
+  "head": "6c014d347795a963a4cb17b84f517c6fb2e87ff2",
+  "user_index_sha256": "650e0e68ef402d854d191d15fb40e6733c43c34e32708908bf92efb8e3e4751e",
+  "index_unchanged": true,
+  "global_matrix_changed_rows": [
+    "B5",
+    "B5_SHOCKS",
+    "B5_CF"
+  ],
+  "other_matrix_rows_byte_identical": true,
+  "preserved_references_and_attempts_evidence": {
+    "path": "entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/controles/preservacion_referencias_e_intentos_postreplays.json",
+    "sha256": "7ff2ad2134c64e9d25a3ec06132dc50b65e3ecfb852673a4d7facbcfc261682b"
+  },
+  "tracked_preservation_evidence": {
+    "path": "entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/controles/preservacion_tracked_postreplays.json",
+    "sha256": "5dd9bb4850421da5f7654a3659f10b30708b193018eaf9f0d205f3dd42c85474"
+  },
+  "full_preservation_checks_reused": true,
+  "cleanup": false,
+  "commit": false,
+  "push": false,
+  "final_package_edited_after_seal": false,
+  "final_package": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\estres_contrafactual\\20260930T214617Z\\paquete_20261001T211248Z"
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "b5_stage_a_proposal_v1",
+  "status": "protocolo_preparado_pendiente_aprobacion",
+  "approval_received": false,
+  "economic_runs": 0,
+  "sample": ["2022-01-01T00:00:00Z", "2026-09-01T00:00:00Z"],
+  "capital_per_strategy_usdt": "10000",
+  "strategies": ["conditional", "permanent"],
+  "shared_exogenous_market": true,
+  "shocks": {
+    "ids": ["SH_P90", "SH_MAX"],
+    "magnitudes_fraction": {
+      "SH_P90": {"BTCUSDT": "0.0009944179003125626", "ETHUSDT": "0.001214060739531364"},
+      "SH_MAX": {"BTCUSDT": "0.005498931623931669", "ETHUSDT": "0.014434038177835395"}
+    },
+    "calibration": "original_reconstructed",
+    "percentile": "numpy.quantile 0.9 linear",
+    "schedule": "tablas/calendario_shocks_propuesto.csv",
+    "plateau": "ceil start to max(ceil end,ceil start+1minute)",
+    "recovery_minutes": 60,
+    "overlap": "max intensity, never product",
+    "stale_valuation": "last positive original spot close times factor for latest fully completed minute; original age retained; never tradable",
+    "closure_preserved": true,
+    "future_mark_funding_unchanged": true
+  },
+  "counterfactual": {
+    "id": "CF_SIN_INTERRUPCION",
+    "symbols": ["BTCUSDT", "ETHUSDT"],
+    "bar_opens": ["2023-03-24T11:27:00Z", "2023-03-24T14:00:00Z"],
+    "synthetic_bars_per_symbol": 153,
+    "anchor_open": "2023-03-24T11:26:00Z",
+    "anchor_available": "2023-03-24T11:27:00Z",
+    "anchor_prices": {
+      "BTCUSDT": {"spot": "28068.79000000", "futures": "28053.70"},
+      "ETHUSDT": {"spot": "1788.70000000", "futures": "1787.90"}
+    },
+    "price": "k * contemporaneous futures OHLC and quote/base VWAP",
+    "volume_window": ["2023-03-22T00:00:00Z", "2023-03-24T00:00:00Z"],
+    "volume_statistic": "median spot base_volume of same UTC hour; 120 observations; zero included",
+    "volume_table": "tablas/volumen_cf_propuesto.csv",
+    "quote_volume": "synthetic base * synthetic VWAP",
+    "trade_count": "floor median original same hour; zero with zero volume",
+    "availability": "bar end only",
+    "reopen": "observed bar 14:00 available14:01, no smoothing",
+    "future_mark_funding_unchanged": true
+  },
+  "technical_controls": {"disabled_full": 2, "zero_shock_full": 2, "not_economic_scenarios": true},
+  "economic_portfolios_proposed": 6,
+  "replay_budget_hours": [6, 10],
+  "space_budget_bytes": 5000000000,
+  "engine_repair_scope_b2_b3": "pending separate"
+}

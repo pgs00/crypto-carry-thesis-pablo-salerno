@@ -1,0 +1,28 @@
+START CONTROL_CERO conditional 20261001T000752770467Z
+[futures_scaled/conditional] 2.4% | UTC 2022-02-11T13:54:00.000000000Z | fills 0
+[futures_scaled/conditional] 5.2% | UTC 2022-03-31T03:31:00.000000000Z | fills 0
+[futures_scaled/conditional] 7.9% | UTC 2022-05-14T19:30:00.000000000Z | fills 0
+[futures_scaled/conditional] 10.6% | UTC 2022-06-29T21:49:00.000000000Z | fills 0
+[futures_scaled/conditional] 13.3% | UTC 2022-08-15T00:40:00.000000000Z | fills 0
+[futures_scaled/conditional] 15.6% | UTC 2022-09-23T16:01:00.005000000Z | fills 0
+[futures_scaled/conditional] 18.0% | UTC 2022-11-04T02:50:00.000000000Z | fills 0
+[futures_scaled/conditional] 23.2% | UTC 2023-01-31T05:57:00.000000000Z | fills 4
+[futures_scaled/conditional] 28.6% | UTC 2023-05-03T01:03:00.000000000Z | fills 18
+[futures_scaled/conditional] 33.9% | UTC 2023-08-01T00:28:00.000000000Z | fills 18
+[futures_scaled/conditional] 39.1% | UTC 2023-10-29T08:01:00.000000000Z | fills 18
+[futures_scaled/conditional] 43.8% | UTC 2024-01-16T22:27:00.000000000Z | fills 34
+[futures_scaled/conditional] 48.3% | UTC 2024-04-03T01:46:00.000000000Z | fills 64
+[futures_scaled/conditional] 52.5% | UTC 2024-06-13T23:05:00.000000000Z | fills 74
+[futures_scaled/conditional] 55.6% | UTC 2024-08-06T06:16:00.000000000Z | fills 90
+[futures_scaled/conditional] 58.9% | UTC 2024-09-30T23:25:00.000000000Z | fills 97
+[futures_scaled/conditional] 62.0% | UTC 2024-11-21T16:01:00.001000000Z | fills 103
+[futures_scaled/conditional] 66.4% | UTC 2025-02-04T23:47:00.000000000Z | fills 119
+[futures_scaled/conditional] 70.9% | UTC 2025-04-23T01:18:00.000000000Z | fills 135
+[futures_scaled/conditional] 76.0% | UTC 2025-07-18T12:07:00.000000000Z | fills 138
+[futures_scaled/conditional] 81.0% | UTC 2025-10-12T18:23:00.000000000Z | fills 138
+[futures_scaled/conditional] 86.0% | UTC 2026-01-04T21:20:00.000000000Z | fills 138
+[futures_scaled/conditional] 91.1% | UTC 2026-04-02T01:50:00.000000000Z | fills 138
+[futures_scaled/conditional] 94.5% | UTC 2026-05-30T19:57:00.000000000Z | fills 138
+[futures_scaled/conditional] 98.9% | UTC 2026-08-13T23:27:00.000000000Z | fills 138
+REPLAY_COMPLETE status=complete seconds=758.79 peak=2538196992
+{"scenario": "CONTROL_CERO", "strategy": "conditional", "technical_control": true, "status": "ejecutado", "attempt": "20261001T000752770467Z", "pid": 19772, "started_utc": "2026-10-01T00:07:52.770604+00:00", "code_hash": "cb47486a847ffdce4309bc72d3d642b687cc3f925462d788685b139f9c9d461c", "config_hash": "1595bbdcf3555b7aedfc9f570b61c232ef1f6dfcef501a38ef8d32c6ef4ab3c1", "protocol_sha256": "010d46e31876b8cff1842ef86b6b66efcae2cb2d5143818778edd44df66c720b", "engine_status": "complete", "run_id": "run_7649ecbb6dce5f3ccf4fa65a", "path": "D:\\Backtesting\\outputs\\estres_contrafactual\\20260930T214617Z\\CONTROL_CERO\\conditional\\20261001T000752770467Z\\run_7649ecbb6dce5f3ccf4fa65a", "manifest_sha256": "37c433c3b1fe1c14384bce685be9f316c9dcdf2004932b2119f6e84661637287", "evidence_manifest": "D:\\Backtesting\\outputs\\estres_contrafactual\\20260930T214617Z\\CONTROL_CERO\\conditional\\20261001T000752770467Z\\evidencia_intervencion\\manifiesto_evidencia.json", "evidence_manifest_sha256": "75a23cb887845502dfd04eba048365c92ef44f9de43f955e7d7eb72f143336ae", "h3_path": "D:\\Backtesting\\outputs\\estres_contrafactual\\20260930T214617Z\\CONTROL_CERO\\conditional\\20261001T000752770467Z\\evidencia_intervencion\\h3_minutos\\run_7649ecbb6dce5f3ccf4fa65a.csv", "replay_seconds": 758.7856644999702, "total_seconds": 826.9527141000144, "peak_replay_bytes": 2538196992, "peak_process_bytes": 3064815616, "daily_reconciled": 1704, "max_daily_residual": "1.1E-23", "fills": 138, "native_fills": 138, "ledger_difference": "-1E-24", "final_equity": "10785.76304964716593690000000", "intervention_rows": 0, "observation_rows": 0, "finished_utc": "2026-10-01T00:21:39.729336+00:00"}

@@ -1,0 +1,42 @@
+{
+  "case": "future_availability",
+  "construction_passed": true,
+  "bytes_changed": true,
+  "verifier_invoked": false,
+  "rejected": false,
+  "construction": "valid changed cells/row population; journal hashes and identity references refreshed in test copy",
+  "changed_files": [
+    {
+      "path": "intervenciones/run_92eccb60683bed405bffd9c6/oportunidad_ventanas.parquet",
+      "before_sha256": "cf0c07a75d8b7a1ee8f3527dcf1bd03a23178f75e829914b348a7ef3f2d837e1",
+      "after_sha256": "055ac8741bca6e1d1fec8f7ca228d14ab67f971345f762eaf42ac9a6dfd95bc5",
+      "before_bytes": 3545834,
+      "after_bytes": 3545841,
+      "retained_mutated_bytes": "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_qa_final_20261001T150046955795Z\\evidencia_adulterada\\future_availability\\intervenciones\\run_92eccb60683bed405bffd9c6\\oportunidad_ventanas.parquet"
+    },
+    {
+      "path": "intervenciones/run_92eccb60683bed405bffd9c6/manifiesto_evidencia.json",
+      "before_sha256": "5f6ce8c24300c5598472889fd887ed9187d190dd45886d01ec7f26dd655ddaea",
+      "after_sha256": "8954af32e1a6d0444631ebb643f6dd8b865dc961da7b98846a54ea091cd2a5aa",
+      "before_bytes": 924,
+      "after_bytes": 924,
+      "retained_mutated_bytes": "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_qa_final_20261001T150046955795Z\\evidencia_adulterada\\future_availability\\intervenciones\\run_92eccb60683bed405bffd9c6\\manifiesto_evidencia.json"
+    },
+    {
+      "path": "indice_corridas.json",
+      "before_sha256": "edd23f703e340244ed88a342b914b4d280dac0d7d635c7548461d3a12fb104e7",
+      "after_sha256": "05e671ae7139b534f57ecc645a36f2c2314c494ae6542ae2d883564c8fff261e",
+      "before_bytes": 21890,
+      "after_bytes": 21508,
+      "retained_mutated_bytes": "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_qa_final_20261001T150046955795Z\\evidencia_adulterada\\future_availability\\indice_corridas.json"
+    },
+    {
+      "path": "evidencia_mercado/testigos/run_92eccb60683bed405bffd9c6.json",
+      "before_sha256": "3e8bd00a1f86b19700aa7e2bc01122b1aaec805df6a5c1e9425efea42fa29ac3",
+      "after_sha256": "5d8aae74fc4d92398e051194d62345e43a41b66b96039228b48cca71065459bc",
+      "before_bytes": 355,
+      "after_bytes": 348,
+      "retained_mutated_bytes": "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_qa_final_20261001T150046955795Z\\evidencia_adulterada\\future_availability\\evidencia_mercado\\testigos\\run_92eccb60683bed405bffd9c6.json"
+    }
+  ]
+}

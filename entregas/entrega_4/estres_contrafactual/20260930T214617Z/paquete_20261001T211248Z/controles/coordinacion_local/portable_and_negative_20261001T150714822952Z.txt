@@ -1,0 +1,12 @@
+PORTABLE VERIFIED C:\Users\pablo\AppData\Local\Temp\b5_qa_final_20261001T150046955795Z\paquete_prueba
+REJECTED approved_protocol An approved file changed: protocolo_tecnico.md
+REJECTED redirected_run Run path is not canonical authenticated evidence
+REJECTED false_technical_label Scenario technical classification differs from closed matrix
+REJECTED altered_fill_cell Exported evidence bytes changed
+REJECTED refreshed_intervention_price Intervention transformation differs from approved equation
+REJECTED omitted_minute_snapshot Window witness source extract population differs
+REJECTED omitted_h3_witness Intervention opportunity witness population differs from required minutes/assets
+REJECTED future_availability H3 witness hides or changes the current available source bar
+REJECTED h3_aggregate H3 daily value differs from persisted replay
+REJECTED refreshed_report_metrics Table differs from recomputed evidence: metricas
+{"passed": true, "cases": 10}

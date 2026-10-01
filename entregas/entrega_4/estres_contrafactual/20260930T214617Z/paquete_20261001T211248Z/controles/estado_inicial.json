@@ -1,0 +1,22 @@
+{
+  "root": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting",
+  "branch": "codex/crypto-carry",
+  "head": "65ff8c412366817c68bdf1f37ca62a1cbfcfea6e",
+  "initial_status_porcelain": [],
+  "initial_index_sha256": "5d8977509bce1f8dd69f7d5867637ea66f2e54914866e3f5fb11e327cae1fbb6",
+  "initial_AGENTS_found": [],
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+  "data_root": "D:/Backtesting",
+  "source_prompt": {
+    "path": "C:\\Users\\pablo\\Downloads\\Prompt_Codex_Bloque_5_Estres_Contrafactual.md",
+    "sha256": "8da27076746cace0ec39a2b7023edc429b6b1725b104335c0b5e1d88cd29fd39"
+  },
+  "academic_source": {
+    "path": "C:\\Users\\pablo\\Downloads\\Entregables - Track Finanzas Computacionales(2).docx",
+    "sha256": "0ae0a81b621930cb1e68f18daba414a2274381d7830eb96e02c252d7ec5b6dce",
+    "read_scope": "texto completo OOXML; no revisi?n de maquetaci?n"
+  },
+  "started_utc": "2026-09-30T21:46:17Z",
+  "no_scenario_runs": true
+}

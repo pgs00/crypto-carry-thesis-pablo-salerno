@@ -1,0 +1,33 @@
+{
+  "case": "altered_fill_cell",
+  "construction_passed": true,
+  "bytes_changed": true,
+  "verifier_invoked": true,
+  "rejected": true,
+  "construction": "real price cell changed with original Parquet schema; inner original manifest preserved",
+  "changed_files": [
+    {
+      "path": "evidencia/run_92eccb60683bed405bffd9c6/fills.parquet",
+      "before_sha256": "32e00f72d4418c7ae9044d6c9042f10dade8833e1a3d99319e6ac8208cf32322",
+      "after_sha256": "9cf445944a6a3494bb96b2a529b3eb92c06cc34b54025be3c57aa70ab055e573",
+      "before_bytes": 39562,
+      "after_bytes": 39562,
+      "retained_mutated_bytes": "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_qa_final_20261001T150046955795Z\\evidencia_adulterada\\altered_fill_cell\\evidencia\\run_92eccb60683bed405bffd9c6\\fills.parquet"
+    }
+  ],
+  "verifier_command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-I",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_qa_final_20261001T150046955795Z\\paquete_prueba\\herramientas\\scripts\\check_stress_verifier_case.py",
+    "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_qa_final_20261001T150046955795Z\\paquete_prueba",
+    "--output",
+    "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_qa_final_20261001T150046955795Z\\altered_fill_cell_verifier.json"
+  ],
+  "verifier_attempt_sha256": "065fb362be3f3477178eb9f79e38413b75cd1c0296748dbe2d49feb2187a8596",
+  "rejection_type": "ValueError",
+  "reason": "Exported evidence bytes changed",
+  "seconds": 2.800717700039968
+}

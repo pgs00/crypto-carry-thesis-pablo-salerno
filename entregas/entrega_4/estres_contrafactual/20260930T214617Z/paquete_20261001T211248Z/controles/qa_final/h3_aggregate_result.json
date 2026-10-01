@@ -1,0 +1,57 @@
+{
+  "case": "h3_aggregate",
+  "construction_passed": true,
+  "bytes_changed": true,
+  "verifier_invoked": true,
+  "rejected": true,
+  "construction": "valid changed cells/row population; journal hashes and identity references refreshed in test copy",
+  "changed_files": [
+    {
+      "path": "intervenciones/run_92eccb60683bed405bffd9c6/h3_minutos/run_92eccb60683bed405bffd9c6.csv",
+      "before_sha256": "662a1b0f9534920a7dcdf2e8596e9fa39b2439805e59d922852584566b2393ac",
+      "after_sha256": "76a91dac63fe42767a9fdd09385247aaab958835a52bdbb81e5ef57bf3b7674e",
+      "before_bytes": 292168,
+      "after_bytes": 288759,
+      "retained_mutated_bytes": "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_qa_final_20261001T150046955795Z\\evidencia_adulterada\\h3_aggregate\\intervenciones\\run_92eccb60683bed405bffd9c6\\h3_minutos\\run_92eccb60683bed405bffd9c6.csv"
+    },
+    {
+      "path": "intervenciones/run_92eccb60683bed405bffd9c6/manifiesto_evidencia.json",
+      "before_sha256": "5f6ce8c24300c5598472889fd887ed9187d190dd45886d01ec7f26dd655ddaea",
+      "after_sha256": "db209d67f5b8c76aaa4f36e6bbdfd5c31b93719580f57febd6ce7dc3a069157f",
+      "before_bytes": 924,
+      "after_bytes": 924,
+      "retained_mutated_bytes": "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_qa_final_20261001T150046955795Z\\evidencia_adulterada\\h3_aggregate\\intervenciones\\run_92eccb60683bed405bffd9c6\\manifiesto_evidencia.json"
+    },
+    {
+      "path": "indice_corridas.json",
+      "before_sha256": "edd23f703e340244ed88a342b914b4d280dac0d7d635c7548461d3a12fb104e7",
+      "after_sha256": "6953963c7bf7eaa015a03097488d5efa3a605f25f729a84e662aa197076776c7",
+      "before_bytes": 21890,
+      "after_bytes": 21508,
+      "retained_mutated_bytes": "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_qa_final_20261001T150046955795Z\\evidencia_adulterada\\h3_aggregate\\indice_corridas.json"
+    },
+    {
+      "path": "evidencia_mercado/testigos/run_92eccb60683bed405bffd9c6.json",
+      "before_sha256": "3e8bd00a1f86b19700aa7e2bc01122b1aaec805df6a5c1e9425efea42fa29ac3",
+      "after_sha256": "9ad81cfea97de86183f661fab5970bbce951c59f15941c511960e74beeb68c1f",
+      "before_bytes": 355,
+      "after_bytes": 348,
+      "retained_mutated_bytes": "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_qa_final_20261001T150046955795Z\\evidencia_adulterada\\h3_aggregate\\evidencia_mercado\\testigos\\run_92eccb60683bed405bffd9c6.json"
+    }
+  ],
+  "verifier_command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-I",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_qa_final_20261001T150046955795Z\\paquete_prueba\\herramientas\\scripts\\check_stress_verifier_case.py",
+    "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_qa_final_20261001T150046955795Z\\paquete_prueba",
+    "--output",
+    "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_qa_final_20261001T150046955795Z\\h3_aggregate_verifier.json"
+  ],
+  "verifier_attempt_sha256": "56aa30f2f3e605ebeea4ad7ccd34232fc6046abb81a081511f2f22344cc4e1cc",
+  "rejection_type": "ValueError",
+  "reason": "H3 daily value differs from persisted replay",
+  "seconds": 75.33589460002258
+}

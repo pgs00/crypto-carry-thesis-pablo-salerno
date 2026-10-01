@@ -1,0 +1,49 @@
+{
+  "case": "refreshed_report_metrics",
+  "construction_passed": true,
+  "bytes_changed": true,
+  "verifier_invoked": true,
+  "rejected": true,
+  "construction": "valid typed financial cells, CSV and catalog refreshed",
+  "changed_files": [
+    {
+      "path": "resultados/metricas.parquet",
+      "before_sha256": "12f45f5b1228fa94cabe41758927c17d3d70498818766674708c665fe3b58922",
+      "after_sha256": "7ac3d809911e5adc443b1e51f7a951be851925981e23d96bd3290242986135bf",
+      "before_bytes": 51865,
+      "after_bytes": 51867,
+      "retained_mutated_bytes": "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_qa_final_20261001T150046955795Z\\evidencia_adulterada\\refreshed_report_metrics\\resultados\\metricas.parquet"
+    },
+    {
+      "path": "resultados/catalogo.json",
+      "before_sha256": "65ceb3e0d41bab2ff15b7e37ae02bb95b1e11fdc2542d909e5acf10610c041c6",
+      "after_sha256": "86e98da784ee8b8562aa8cdb82bb1b5701de0cb5ec5520dead803c2ebc0e26e7",
+      "before_bytes": 7911,
+      "after_bytes": 7669,
+      "retained_mutated_bytes": "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_qa_final_20261001T150046955795Z\\evidencia_adulterada\\refreshed_report_metrics\\resultados\\catalogo.json"
+    },
+    {
+      "path": "resultados/metricas.csv",
+      "before_sha256": "c837a097b40da0d669232e4af0deb32f5e7d6ff781ccf75d02028badd71feb8d",
+      "after_sha256": "a4c936dd62978efdfd6dc98a5a1c202f0d1f58e00f4c02d0f8222c6f44e85bc1",
+      "before_bytes": 93214,
+      "after_bytes": 93214,
+      "retained_mutated_bytes": "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_qa_final_20261001T150046955795Z\\evidencia_adulterada\\refreshed_report_metrics\\resultados\\metricas.csv"
+    }
+  ],
+  "verifier_command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-I",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_qa_final_20261001T150046955795Z\\paquete_prueba\\herramientas\\scripts\\check_stress_verifier_case.py",
+    "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_qa_final_20261001T150046955795Z\\paquete_prueba",
+    "--output",
+    "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_qa_final_20261001T150046955795Z\\refreshed_report_metrics_verifier.json"
+  ],
+  "verifier_attempt_sha256": "83825e52619d0f1f31063de1e8731dcb9f6d47875d93b06eaff5382692febdb2",
+  "rejection_type": "ValueError",
+  "reason": "Table differs from recomputed evidence: metricas",
+  "seconds": 264.6578307999298
+}

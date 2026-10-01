@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "sealed": true,
+  "members": 1180,
+  "partial": false,
+  "runs": 14,
+  "economic_scenarios": 3,
+  "technical_portfolios": 4,
+  "exact_compatibility_artifact_comparisons": 66,
+  "recomputed_tables": 48,
+  "economic_replay": false,
+  "original_data_root_required": false,
+  "git_required": false,
+  "documents": {
+    "markdown_and_html_match": true,
+    "report_links_present": true,
+    "static_figure_scope": "source tables included; plotted images authenticated by final seal and visually reviewed"
+  },
+  "recomputed": "accounting, eight inherited periods, execution, transformation formulas, window risk, H1/H2/H3 aggregates and window opportunity witnesses",
+  "authenticated_only": "original minute partition membership outside included extracts; full minute H3 outside intervention witnesses; historical-source validity",
+  "shared_logic": "builder and verifier share reporting/ledger/execution helpers; scenario transformation auditor is separate from replay implementation"
+}

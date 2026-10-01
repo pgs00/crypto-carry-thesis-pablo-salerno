@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "completed_utc": "2026-10-01T01:13:51.072974+00:00",
+  "passed_tests": 1255,
+  "skipped_tests": 48,
+  "seconds": 579.12,
+  "log_sha256": "76b46596eeccde8c580465f3966081faeea8843d7bc6184bd1dec4fccb2a1bb4",
+  "report_code_sha256": "3a0f957758d1c27bf1ca2b6bd54875489ae19e87ac4857dfe0de748d4aa3d636",
+  "engine_code_hash": "ac1a148ac22eaa6498cdf9e35d6a825f6d81ad29a015fc6d892b57f71ce8a998",
+  "skipped_scope": "Only historical package suites needing explicit external paths",
+  "full_economic_matrix_tests": "Pending; this is source regression, not a claim that six portfolios or tamper cases finished"
+}

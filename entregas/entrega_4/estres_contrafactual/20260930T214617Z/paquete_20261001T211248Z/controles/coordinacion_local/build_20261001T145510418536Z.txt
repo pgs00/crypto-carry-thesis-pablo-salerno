@@ -1,0 +1,11 @@
+DERIVED BASE_E3 conditional
+DERIVED BASE_E3 permanent
+Traceback (most recent call last):
+  File "C:\Users\pablo\Documentos\UCEMA\Tesina\Backtesting\scripts\build_stress_counterfactual.py", line 163, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\pablo\Documentos\UCEMA\Tesina\Backtesting\scripts\build_stress_counterfactual.py", line 158, in main
+    result = build(args.candidate.resolve(), args.data_root.resolve(), args.cache_root.resolve(), args.partial)
+  File "C:\Users\pablo\Documentos\UCEMA\Tesina\Backtesting\scripts\build_stress_counterfactual.py", line 119, in build
+    raise ValueError("Witness source differs from frozen intervention extract")
+ValueError: Witness source differs from frozen intervention extract

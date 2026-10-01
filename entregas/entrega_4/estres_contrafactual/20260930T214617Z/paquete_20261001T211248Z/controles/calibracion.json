@@ -1,0 +1,66 @@
+{
+  "passed": true,
+  "source": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\riesgo_intradia\\20260926T214118Z\\paquete_20260926T220400Z",
+  "episode_rows_equal": 466,
+  "summaries_equal": [
+    {
+      "symbol": "BTCUSDT",
+      "valuation": "original_reconstructed",
+      "episodes": 100,
+      "non_evaluable": 0,
+      "zero_loss_episodes": 48,
+      "median_adverse_fraction": 2.375058570019961e-05,
+      "p90_adverse_fraction": 0.0009944179003125626,
+      "maximum_adverse_fraction": 0.005498931623931669
+    },
+    {
+      "symbol": "BTCUSDT",
+      "valuation": "valoracion_proxy_hipotetica",
+      "episodes": 100,
+      "non_evaluable": 0,
+      "zero_loss_episodes": 49,
+      "median_adverse_fraction": 1.4006266593313832e-05,
+      "p90_adverse_fraction": 0.000906929488802944,
+      "maximum_adverse_fraction": 0.0025588691020874688
+    },
+    {
+      "symbol": "ETHUSDT",
+      "valuation": "original_reconstructed",
+      "episodes": 133,
+      "non_evaluable": 0,
+      "zero_loss_episodes": 51,
+      "median_adverse_fraction": 0.0001635408557766338,
+      "p90_adverse_fraction": 0.001214060739531364,
+      "maximum_adverse_fraction": 0.014434038177835395
+    },
+    {
+      "symbol": "ETHUSDT",
+      "valuation": "valoracion_proxy_hipotetica",
+      "episodes": 133,
+      "non_evaluable": 0,
+      "zero_loss_episodes": 53,
+      "median_adverse_fraction": 0.00013965365892576465,
+      "p90_adverse_fraction": 0.0011398306672389502,
+      "maximum_adverse_fraction": 0.0035721494895898376
+    }
+  ],
+  "numpy": "2.3.5",
+  "percentile_method": "numpy.quantile(q=0.9, method=linear); default original",
+  "episode_formula": "max(0,1-minimum_spot_price/initial_spot_price)",
+  "catalogue_mask": "incident_exposure_mask: intervalo activo y pre-cierre; no POST cubierto",
+  "schedule_summary": [
+    {
+      "symbol": "BTCUSDT",
+      "episodes": 100,
+      "merged_windows": 99,
+      "affected_bar_opens": 6163
+    },
+    {
+      "symbol": "ETHUSDT",
+      "episodes": 133,
+      "merged_windows": 131,
+      "affected_bar_opens": 8117
+    }
+  ],
+  "economic_simulations": 0
+}

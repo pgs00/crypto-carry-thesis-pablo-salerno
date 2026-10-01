@@ -1,0 +1,22 @@
+START SH_P90 conditional 20261001T020734839568Z
+[futures_scaled/conditional] 6.3% | UTC 2022-04-18T08:01:00.012000000Z | fills 0
+[futures_scaled/conditional] 13.4% | UTC 2022-08-17T08:01:00.016000000Z | fills 0
+[futures_scaled/conditional] 20.6% | UTC 2022-12-18T13:08:00.000000000Z | fills 0
+[futures_scaled/conditional] 26.7% | UTC 2023-04-01T08:01:00.000000000Z | fills 18
+[futures_scaled/conditional] 31.7% | UTC 2023-06-25T21:06:00.000000000Z | fills 18
+[futures_scaled/conditional] 36.1% | UTC 2023-09-07T16:01:00.000000000Z | fills 18
+[futures_scaled/conditional] 40.4% | UTC 2023-11-20T04:29:00.000000000Z | fills 22
+[futures_scaled/conditional] 44.5% | UTC 2024-01-28T19:55:00.000000000Z | fills 34
+[futures_scaled/conditional] 49.3% | UTC 2024-04-19T10:02:00.000000000Z | fills 66
+[futures_scaled/conditional] 53.9% | UTC 2024-07-06T20:24:00.000000000Z | fills 84
+[futures_scaled/conditional] 58.6% | UTC 2024-09-26T02:11:00.000000000Z | fills 99
+[futures_scaled/conditional] 63.4% | UTC 2024-12-17T03:44:00.000000000Z | fills 113
+[futures_scaled/conditional] 68.0% | UTC 2025-03-05T07:13:00.000000000Z | fills 127
+[futures_scaled/conditional] 72.7% | UTC 2025-05-24T00:16:00.000000000Z | fills 140
+[futures_scaled/conditional] 77.6% | UTC 2025-08-16T00:38:00.000000000Z | fills 140
+[futures_scaled/conditional] 82.7% | UTC 2025-11-09T19:07:00.000000000Z | fills 140
+[futures_scaled/conditional] 88.0% | UTC 2026-02-07T16:48:00.000000000Z | fills 140
+[futures_scaled/conditional] 93.2% | UTC 2026-05-08T13:46:00.000000000Z | fills 140
+[futures_scaled/conditional] 98.3% | UTC 2026-08-02T14:47:00.000000000Z | fills 140
+REPLAY_COMPLETE status=complete seconds=580.77 peak=2936242176
+{"scenario": "SH_P90", "strategy": "conditional", "technical_control": false, "status": "ejecutado", "attempt": "20261001T020734839568Z", "pid": 14604, "started_utc": "2026-10-01T02:07:34.839626+00:00", "code_hash": "ac1a148ac22eaa6498cdf9e35d6a825f6d81ad29a015fc6d892b57f71ce8a998", "config_hash": "1595bbdcf3555b7aedfc9f570b61c232ef1f6dfcef501a38ef8d32c6ef4ab3c1", "protocol_sha256": "4b2edf0348137f4f143be7d0e663dd9b4ad8c2ed97961ee75b9f0ef9da5ba917", "engine_status": "complete", "run_id": "run_92eccb60683bed405bffd9c6", "path": "D:\\Backtesting\\outputs\\estres_contrafactual\\20260930T214617Z\\SH_P90\\conditional\\20261001T020734839568Z\\run_92eccb60683bed405bffd9c6", "manifest_sha256": "c7c49157cc9b591f2664e302f6948fbfa6256ba039d1098f3d551ffbf208ac7e", "evidence_manifest": "D:\\Backtesting\\outputs\\estres_contrafactual\\20260930T214617Z\\SH_P90\\conditional\\20261001T020734839568Z\\evidencia_intervencion\\manifiesto_evidencia.json", "evidence_manifest_sha256": "5f6ce8c24300c5598472889fd887ed9187d190dd45886d01ec7f26dd655ddaea", "h3_path": "D:\\Backtesting\\outputs\\estres_contrafactual\\20260930T214617Z\\SH_P90\\conditional\\20261001T020734839568Z\\evidencia_intervencion\\h3_minutos\\run_92eccb60683bed405bffd9c6.csv", "replay_seconds": 580.7732805999694, "total_seconds": 640.6259559000027, "peak_replay_bytes": 2936242176, "peak_process_bytes": 3462950912, "daily_reconciled": 1704, "max_daily_residual": "1.01E-23", "fills": 140, "native_fills": 140, "ledger_difference": "-4E-24", "final_equity": "10738.95331130681633035150000", "intervention_rows": 14120, "observation_rows": 13737, "finished_utc": "2026-10-01T02:18:15.468737+00:00"}

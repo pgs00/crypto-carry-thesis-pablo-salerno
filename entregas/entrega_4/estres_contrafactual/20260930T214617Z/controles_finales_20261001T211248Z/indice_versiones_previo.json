@@ -1,0 +1,17 @@
+{
+  "current_candidate": "entregas/entrega_4/estres_contrafactual/20260930T214617Z/candidato",
+  "sealed": false,
+  "status": "verificado_pendiente_revision_final_y_sello",
+  "replaces": null,
+  "reason": "Local coordination; original economic code and approved assumptions unchanged",
+  "economic_runs": 6,
+  "approval_received": true,
+  "execution_protocol": "entregas/entrega_4/estres_contrafactual/20260930T214617Z/candidato/protocolo_ejecucion.json",
+  "incident": "entregas\\entrega_4\\estres_contrafactual\\20260930T214617Z\\candidato\\controles\\incidente_control_cero.md",
+  "engine_code_hash": "ac1a148ac22eaa6498cdf9e35d6a825f6d81ad29a015fc6d892b57f71ce8a998",
+  "preserved_initial_technical_attempts": 4,
+  "technical_controls_completed_current_code": 4,
+  "economic_runs_in_progress": 0,
+  "coordinator_pid": 17396,
+  "progress_path": "C:/Users/pablo/Documentos/UCEMA/Tesina/Backtesting/entregas/entrega_4/estres_contrafactual/20260930T214617Z/candidato/progreso_local.json"
+}

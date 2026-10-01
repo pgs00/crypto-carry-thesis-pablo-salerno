@@ -1,0 +1,157 @@
+{
+  "passed": true,
+  "original_run_id": "run_d7c7cb5da666e22321598598",
+  "control_run_id": "run_13e0d5ceea1478f9b76a3919",
+  "original_manifest_sha256": "b7ae965695463ed0212c5802dc43626f873ce8ffb738178184d16614f79fc47e",
+  "control_manifest_sha256": "523aab7348c64d832115c8c87f2b7bd54f1bdd5e3651e992c80c973a9f162aa9",
+  "comparisons": [
+    {
+      "file": "equity_daily.csv",
+      "original_rows": 1704,
+      "control_rows": 1704,
+      "original_digest": "7ffa732d19721917ffe1ad39229024841587f4402a291df6a092be5532bfc13c",
+      "control_digest": "7ffa732d19721917ffe1ad39229024841587f4402a291df6a092be5532bfc13c",
+      "exact_equal": true,
+      "ignored_fields": [
+        "run_id",
+        "units"
+      ],
+      "row_order": "original_persisted"
+    },
+    {
+      "file": "positions.parquet",
+      "original_rows": 3800,
+      "control_rows": 3800,
+      "original_digest": "9fa2fce278cb4cdddbec616123e81d950e273a87eefa4398fa54e9b866f03b1a",
+      "control_digest": "9fa2fce278cb4cdddbec616123e81d950e273a87eefa4398fa54e9b866f03b1a",
+      "exact_equal": true,
+      "ignored_fields": [
+        "run_id",
+        "units"
+      ],
+      "row_order": "original_persisted"
+    },
+    {
+      "file": "fills.parquet",
+      "original_rows": 138,
+      "control_rows": 138,
+      "original_digest": "860400154f86125c1ea5ecd77a190b9371d6a9c4a704db40f0fe4309204f3eee",
+      "control_digest": "860400154f86125c1ea5ecd77a190b9371d6a9c4a704db40f0fe4309204f3eee",
+      "exact_equal": true,
+      "ignored_fields": [
+        "run_id",
+        "units"
+      ],
+      "row_order": "original_persisted"
+    },
+    {
+      "file": "orders.parquet",
+      "original_rows": 777,
+      "control_rows": 777,
+      "original_digest": "f353d04c3055f265b3537e76b97f2a5e1870210151bda416540b45e8e52cf3e7",
+      "control_digest": "f353d04c3055f265b3537e76b97f2a5e1870210151bda416540b45e8e52cf3e7",
+      "exact_equal": true,
+      "ignored_fields": [
+        "run_id",
+        "units"
+      ],
+      "row_order": "original_persisted"
+    },
+    {
+      "file": "risk_events.parquet",
+      "original_rows": 574,
+      "control_rows": 574,
+      "original_digest": "320399548fdad7204f364d53c002d20f9a79aab58eb5ab4da2cb46ec256c990f",
+      "control_digest": "320399548fdad7204f364d53c002d20f9a79aab58eb5ab4da2cb46ec256c990f",
+      "exact_equal": true,
+      "ignored_fields": [
+        "run_id",
+        "units"
+      ],
+      "row_order": "original_persisted"
+    },
+    {
+      "file": "ledger.parquet",
+      "original_rows": 2372,
+      "control_rows": 2372,
+      "original_digest": "e4e765cb543cffb7ce8143645f8c205ae38954a52158c781cb2dffa11777c577",
+      "control_digest": "e4e765cb543cffb7ce8143645f8c205ae38954a52158c781cb2dffa11777c577",
+      "exact_equal": true,
+      "ignored_fields": [
+        "run_id",
+        "units"
+      ],
+      "row_order": "original_persisted"
+    },
+    {
+      "file": "funding_payments.parquet",
+      "original_rows": 2234,
+      "control_rows": 2234,
+      "original_digest": "0f925a7b9b90c4905338641bd1142e829926d429204c4118a791e46aef2a856d",
+      "control_digest": "0f925a7b9b90c4905338641bd1142e829926d429204c4118a791e46aef2a856d",
+      "exact_equal": true,
+      "ignored_fields": [
+        "run_id",
+        "units"
+      ],
+      "row_order": "original_persisted"
+    },
+    {
+      "file": "signals.parquet",
+      "original_rows": 10224,
+      "control_rows": 10224,
+      "original_digest": "10031d78030a071eb8d1e5f98e885e0e1fec05b776ae05a750b82a6efe273434",
+      "control_digest": "10031d78030a071eb8d1e5f98e885e0e1fec05b776ae05a750b82a6efe273434",
+      "exact_equal": true,
+      "ignored_fields": [
+        "run_id",
+        "units"
+      ],
+      "row_order": "original_persisted"
+    },
+    {
+      "file": "renewal_diagnostics.parquet",
+      "original_rows": 103,
+      "control_rows": 103,
+      "original_digest": "4666a885c2276bd1e1b2d1ecc993470c661ede38c0eda3b3003b065da801e562",
+      "control_digest": "4666a885c2276bd1e1b2d1ecc993470c661ede38c0eda3b3003b065da801e562",
+      "exact_equal": true,
+      "ignored_fields": [
+        "run_id",
+        "units"
+      ],
+      "row_order": "original_persisted"
+    },
+    {
+      "file": "forecast_evaluation.csv",
+      "original_rows": 10224,
+      "control_rows": 10224,
+      "original_digest": "039a6767dd6c3ce832a86e2f97a938fe2256583a650769309a17eca41852dae0",
+      "control_digest": "039a6767dd6c3ce832a86e2f97a938fe2256583a650769309a17eca41852dae0",
+      "exact_equal": true,
+      "ignored_fields": [
+        "run_id",
+        "units"
+      ],
+      "row_order": "original_persisted"
+    },
+    {
+      "file": "opportunity_daily.csv",
+      "original_rows": 1704,
+      "control_rows": 1704,
+      "original_digest": "643fb32dcd94361a85deeec6a117681d9841cbb5077c8aade874b183c8469282",
+      "control_digest": "643fb32dcd94361a85deeec6a117681d9841cbb5077c8aade874b183c8469282",
+      "exact_equal": true,
+      "ignored_fields": [
+        "run_id",
+        "units"
+      ],
+      "row_order": "original_persisted"
+    }
+  ],
+  "utc": "2026-10-01T01:51:09.707252+00:00",
+  "scenario": "CONTROL_CERO",
+  "strategy": "conditional",
+  "run_id": "run_13e0d5ceea1478f9b76a3919",
+  "scope": "Early per-portfolio exact check; family gate still requires permanent"
+}

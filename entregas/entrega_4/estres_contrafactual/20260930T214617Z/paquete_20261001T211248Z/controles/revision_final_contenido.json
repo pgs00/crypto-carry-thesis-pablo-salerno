@@ -1,0 +1,26 @@
+{
+  "utc": "2026-10-01T21:08:55.566614+00:00",
+  "passed": true,
+  "reviewer": "/root/revisar_capa_b5",
+  "critical_or_important_open": 0,
+  "economic_replay": false,
+  "checks": [
+    "64 metric rows, eight inherited periods, balances and ledger components reconciled within 1E-8",
+    "Imposed recovery, transient loss and executed operations distinguished",
+    "Collateral scope and window bounds explicit",
+    "Counterfactual frontiers, fixed negative basis and non-causal scope explicit",
+    "H1 authenticated cohort retained; H2 full no_favorable; H3 contraria",
+    "H2 criterion clarification synchronized with included generator",
+    "README concurrency wording corrected; historic coordination text labeled"
+  ],
+  "files": {
+    "reporte.md": "ce1c4e7a119a6ce0dec622102c72534177ef04245146ae281023705b5c5398d1",
+    "reporte.html": "d31a5cc2174fe9ef79c0630631a94c27a6888b36f2d990ddb8958c9a3e3588dd",
+    "sintesis.md": "76ff29a096ddaecd793b3237f3d4262b73f7897e0c5f9272994e98a10b5dd351",
+    "README.md": "98bb7a4cd2edb7d8a39b74849ec0d9126f0f53464e08d1e197ab71421017f9c2",
+    "continuacion_local.md": "aaed048a5a4d4d1ff6a14bca5bee6b8862c64a68a55109c5858d1c5301b11c6a",
+    "herramientas/scripts/stress_counterfactual_docs.py": "c89f7f636703da19f0dc78ae5b1aa276c6134f2444007a1311563928fb10f6b5"
+  },
+  "visual_review_sha256": "e3f5cdbe91ee8897c6d8eca3bf696b5048ac2ca07783e2b27957a1b77a02fdda",
+  "scope": "Content and final figures reviewed; portable, tamper and seal evidence recorded separately"
+}

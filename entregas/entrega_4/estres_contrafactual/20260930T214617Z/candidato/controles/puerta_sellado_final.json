@@ -1,0 +1,87 @@
+{
+  "passed": true,
+  "utc": "2026-10-01T21:11:42.025429+00:00",
+  "full_regression": true,
+  "ruff": true,
+  "portable_copy_verified": true,
+  "negative_tests": true,
+  "final_review": true,
+  "preserved_originals": true,
+  "index_unchanged": true,
+  "all_six_economic_and_four_technical": true,
+  "head": "6c014d347795a963a4cb17b84f517c6fb2e87ff2",
+  "index_sha256": "650e0e68ef402d854d191d15fb40e6733c43c34e32708908bf92efb8e3e4751e",
+  "engine_code_hash": "ac1a148ac22eaa6498cdf9e35d6a825f6d81ad29a015fc6d892b57f71ce8a998",
+  "economic_replays_after_build_failure": 0,
+  "regression_scope": "1255 passed and 48 historical external-package skips before final persisted-schema fix; 16 focused checks passed after that fix; complete economic evidence subsequently verified in isolated included tools",
+  "portable_scope": "Real isolated unsealed copy; 14 runs, 66 exact compatibility comparisons and 48 recomputed tables; no checkout or original data arguments",
+  "negative_scope": "10 real mutations constructed, persisted, invoked and rejected; proofs copied compactly, changed bytes preserved in external QA directory",
+  "prose_delta": "H2 criterion clarification only in report generator since portable copy; included module and 260 code member hashes checked; tables and figures unchanged; final sealing verification required",
+  "preservation_scope": "11541 initial tracked files plus four references and four historical technical attempts verified after replays; later edits limited to documented delivery and tracking files",
+  "evidence": [
+    {
+      "path": "controles/regresion_postproceso_completa_02.json",
+      "sha256": "bc9916c2838368864841491a97d6942e7c209948e390f8abce648b1a0e129b19"
+    },
+    {
+      "path": "controles/regresion_postproceso_completa_02.txt",
+      "sha256": "76b46596eeccde8c580465f3966081faeea8843d7bc6184bd1dec4fccb2a1bb4"
+    },
+    {
+      "path": "controles/incidente_postproceso_esquema_fuentes.json",
+      "sha256": "e99ca9ba591d9ed2ada3c16f8f42ecaf463be06e87d9c7e904dbfcaff864754d"
+    },
+    {
+      "path": "controles/esquema_fuentes_verde.txt",
+      "sha256": "d203755348fbde97e813991b8f2961dcc4cda35c80e56dac7ea6fb5128a00875"
+    },
+    {
+      "path": "controles/ruff_cierre.txt",
+      "sha256": "af352a86840ad0af3d37ea0d9197f868363a6dac6b1c2ef5d2722f6b41d2d9af"
+    },
+    {
+      "path": "controles/revision_final_contenido.json",
+      "sha256": "5d2de4045c12dd5485c83e26124a3d724370ef8fff7d42fa044645ab44978107"
+    },
+    {
+      "path": "controles/revision_visual_figuras.json",
+      "sha256": "e3f5cdbe91ee8897c6d8eca3bf696b5048ac2ca07783e2b27957a1b77a02fdda"
+    },
+    {
+      "path": "controles/documentos_incluidos_cierre.json",
+      "sha256": "a99c9b06dc071a3b287dbfdbc00ab613a6ddcd517556e8d81e1c13be05244596"
+    },
+    {
+      "path": "controles/precision_redaccion_h2.json",
+      "sha256": "4261a2103022c7c8d86263cfec8eeea773214fc3296c0ea3e685837178f5df1b"
+    },
+    {
+      "path": "controles/preservacion_tracked_postreplays.json",
+      "sha256": "5dd9bb4850421da5f7654a3659f10b30708b193018eaf9f0d205f3dd42c85474"
+    },
+    {
+      "path": "controles/preservacion_referencias_e_intentos_postreplays.json",
+      "sha256": "7ff2ad2134c64e9d25a3ec06132dc50b65e3ecfb852673a4d7facbcfc261682b"
+    },
+    {
+      "path": "controles/puerta_controles_continuos_02.json",
+      "sha256": "d58e53fff0a24bc753b3324991e83b8c785edf647cd5b94d0b44630c4f093168"
+    },
+    {
+      "path": "controles/qa_final/portabilidad.json",
+      "sha256": "3fa6e5b4ccc5f7cc7b5e42bcf22937d202de94b6f8438fca58a74b2f548e710c"
+    },
+    {
+      "path": "controles/qa_final/verificacion_portable.json",
+      "sha256": "7bbb1371adaeec4f72039b9f68ac8f10a9931bef7cdcb60e12c275d8f13079f0"
+    },
+    {
+      "path": "controles/qa_final/pruebas_negativas.json",
+      "sha256": "ee35991e7ec8a4997b7429feec051ec04a5a546ac1f23183327fc0cd91ae86e5"
+    },
+    {
+      "path": "controles/qa_final/indice_evidencia.json",
+      "sha256": "6afe408387b55f05999c3b103947c1bd7f354478cf7f84569ae6c83efa643398"
+    }
+  ]
+}
