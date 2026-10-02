@@ -1,0 +1,79 @@
+{
+  "passed": true,
+  "sealed": {
+    "passed": true,
+    "members": 662,
+    "manifest_sha256": "8cca7f25e8d83f0e9b879574b1f06c77b8ca2a9aa6ae07fdd94baf80e73c829d"
+  },
+  "contract": {
+    "passed": true,
+    "portfolios": 4,
+    "baseline_replays": 0,
+    "economic_code_hash": "ac1a148ac22eaa6498cdf9e35d6a825f6d81ad29a015fc6d892b57f71ce8a998"
+  },
+  "financial": {
+    "passed": true,
+    "engine_replay": false,
+    "offline": true,
+    "unique_portfolios": 6,
+    "recalculated_table_rows": {
+      "diario": 12660,
+      "metricas": 64,
+      "componentes_periodo": 128,
+      "saldos_iniciales": 20,
+      "exposicion_periodo": 192,
+      "actividad": 192,
+      "ejecucion_resumen": 320,
+      "conciliaciones": 6,
+      "h2": 32,
+      "h3_cobertura": 10,
+      "comparacion_inicios": 24
+    },
+    "execution_windows": 1038,
+    "tolerance_usdt": "1E-8",
+    "massive_market_sources_reopened": false,
+    "scope": "recomputed accounting, inherited/fresh metrics, H2, exposure, ledger, funding and fills"
+  },
+  "bootstrap": {
+    "status": "verified",
+    "offline": true,
+    "engine_replay": false,
+    "massive_sources_reread": false,
+    "daily_axis": 1704,
+    "replicate_rows": 15000,
+    "seed_streams": 75000,
+    "scalar_control_replicates": 24,
+    "statistics_per_replica": 17,
+    "intervals": 51,
+    "degenerate_intervals": 0,
+    "recalculated_from_compact_sources": true,
+    "seconds": 24.458802000037394
+  },
+  "synthesis": {
+    "status": "passed",
+    "schema": "stability_synthesis_v3",
+    "offline": true,
+    "read_only": true,
+    "source_copies_verified": 258,
+    "diagnostic_runs": 28,
+    "diagnostic_statuses": {
+      "rama_no_activada": 28
+    },
+    "raw_rows_rechecked": {
+      "risk_events": 31180,
+      "orders": 42906,
+      "positions": 113731
+    },
+    "tables_reproduced": 8,
+    "historical_economics": "authenticated summaries reused, no replay",
+    "b6_economics": "financial verifier",
+    "bootstrap": "statistical verifier",
+    "massive_market_data_reread": false
+  },
+  "economic_engine_replayed": false,
+  "original_data_root_required": false,
+  "scope": "All sealed bytes; financial/accounting and fixed bootstrap recalculated from included compact inputs",
+  "massive_sources_not_reread": "Original full minute partitions and source archives; shared authenticated inventory and extracted execution witnesses",
+  "shared_logic": "Existing accounting/exposure/H2/execution helpers and B6 compact-input analytical reducers",
+  "verified_utc": "2026-10-02T15:33:40.322936+00:00"
+}

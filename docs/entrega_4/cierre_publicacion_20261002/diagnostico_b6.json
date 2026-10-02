@@ -1,0 +1,28 @@
+{
+  "head": "f1f4857fe53ac02585f739f7927031ed029da172",
+  "branch": "codex/crypto-carry",
+  "files": 664,
+  "members": 662,
+  "manifest_sha256": "8cca7f25e8d83f0e9b879574b1f06c77b8ca2a9aa6ae07fdd94baf80e73c829d",
+  "head_exact": 505,
+  "head_changed": 157,
+  "changed_recoverable": 157,
+  "working_tree_exact": 662,
+  "negative_command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-I",
+    "-X",
+    "utf8",
+    "C:\\Users\\pablo\\AppData\\Local\\Temp\\b6_publicacion_20261002_z_ft9ten\\paquete\\herramientas\\scripts\\verify_stability_uncertainty.py",
+    "--candidate",
+    "C:\\Users\\pablo\\AppData\\Local\\Temp\\b6_publicacion_20261002_z_ft9ten\\paquete",
+    "--output",
+    "C:\\Users\\pablo\\AppData\\Local\\Temp\\b6_publicacion_20261002_z_ft9ten\\negative.json",
+    "--forbid-root",
+    "D:/Backtesting"
+  ],
+  "negative_exit": 1,
+  "complete_before_verifier": true,
+  "temp": "C:\\Users\\pablo\\AppData\\Local\\Temp\\b6_publicacion_20261002_z_ft9ten"
+}

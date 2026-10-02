@@ -1,5 +1,7 @@
 # Crypto carry: backtesting de la tesina
 
+Este repositorio acompaña la Entrega 3 y su ampliación en la Entrega 4.
+
 Comparación de dos carteras de carry en **BTCUSDT y ETHUSDT**: compra spot y
 venta de perpetuos USD-M. La cartera **condicional** exige un pronóstico de
 funding suficiente para entrar o renovar; la **permanente** omite ese filtro y
@@ -10,7 +12,12 @@ por cartera y sin reinicios anuales. Usa velas de un minuto, ejecución
 `next_minute_vwap`, sizing conjunto y `futures_scaled` para los 15 marks ausentes.
 Los cortes 2022–2023 y 2024–agosto de 2026 son tramos de esas mismas carteras.
 
-## Resultados actuales
+La navegación vigente está en el **[índice de Entrega 4](entregas/entrega_4/README.md)**:
+BASE corregida, riesgo intradía y bloques 1–6, con sus protocolos, tablas,
+verificadores y límites. El [cierre técnico local del 02/10/2026](docs/entrega_4/cierre_publicacion_20261002/README.md)
+registra controles y estado Git; preparar esta documentación no implica una nueva publicación.
+
+## Referencia BASE continua
 
 | Cartera | Equity final (USDT) | Retorno neto | CAGR | Sharpe | Drawdown diario |
 |---|---:|---:|---:|---:|---:|
@@ -23,9 +30,10 @@ Los cortes 2022–2023 y 2024–agosto de 2026 son tramos de esas mismas cartera
 [Paquete vigente de la Entrega 3](entregas/entrega_3/README.md).
 
 H1: MAE de 6,299 bps para EWMA frente a 8,703 bps para no-change, con 10.180
-observaciones válidas y 44 exclusiones. La condicional no supera el Sharpe de
-la permanente. H3 muestra mayor oportunidad y CAGR condicional en el segundo
-tramo; es evidencia descriptiva contraria a su caída, sin atribución causal.
+observaciones válidas y 44 exclusiones. H2 BASE total es `no_favorable`: la
+condicional no supera el Sharpe de la permanente. H3 muestra mayor oportunidad
+y CAGR condicional en el segundo tramo; es evidencia descriptiva contraria
+a su caída, sin atribución causal.
 
 Son resultados de investigación con reglas y tarifas prescritas, ejecución por
 minuto y aproximaciones explícitas de funding y marks; no una reconstrucción
@@ -34,7 +42,14 @@ supuestos y la [evidencia vigente](docs/progress.md) reúne las verificaciones.
 
 ## Reproducción
 
-Desde la raíz del repositorio, con Python 3.14 y `uv`:
+El [índice E4](entregas/entrega_4/README.md#reproduccion-en-tres-niveles)
+distingue lectura, verificación offline de evidencia compacta y replay con
+datos masivos. Incluye comandos por paquete, requisitos y salidas externas.
+La verificación offline no vuelve a ejecutar las carteras ni certifica toda
+la historia del exchange.
+
+Para la presentación **E3** conservada, desde la raíz del repositorio, con
+Python 3.14 y las dependencias de `uv.lock`:
 
 ```powershell
 uv sync --frozen
@@ -48,13 +63,20 @@ verificar el paquete completo, extraer el
 [ZIP vigente](entregas/entrega_3/paquete_actualizacion_entrega_3_continua.zip)
 y ejecutar `python verificar.py` dentro de la carpeta extraída.
 
-Pruebas y controles del repositorio:
+Para desarrollo, con el entorno ya preparado, estos comandos lanzan la suite
+general y el lint. No son requisitos para leer los resultados ni se presentan
+como controles ejecutados íntegramente en este cierre:
 
 ```powershell
 & '.\.venv\Scripts\python.exe' -m pytest -q
 & '.\.venv\Scripts\python.exe' -m ruff check src tests scripts
-& '.\.venv\Scripts\python.exe' -m scripts.verify_repository_evidence
 ```
+
+`scripts.verify_repository_evidence` conserva el control histórico de limpieza
+del 20/09/2026: exige hashes anteriores del código económico y falla ante su
+evolución posterior. Su resultado y alcance están documentados en el
+[cierre local](docs/entrega_4/cierre_publicacion_20261002/README.md);
+no es un verificador universal de Entrega 4.
 
 Los recálculos que requieren las fuentes locales están documentados en
 [sensibilidad de marks](docs/continuous_mark_gaps.md) y
@@ -63,6 +85,8 @@ La [guía de datos](docs/descarga_d.md) describe el almacenamiento en D:.
 
 ## Evidencia y organización
 
+- [Entrega 4](entregas/entrega_4/README.md): índice único de paquetes vigentes,
+  síntesis integrable B6, antecedentes y pendientes.
 - [Entrega 3 continua](entregas/entrega_3/continua/README.md): resultados, P&L,
   actividad, tiempo invertido, filtros, episodio del 24/03/2023, H1 y H3.
 - [15 marks faltantes](data/research/continuous-marks-20260919/README.md) y

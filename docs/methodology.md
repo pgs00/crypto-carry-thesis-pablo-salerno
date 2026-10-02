@@ -2,6 +2,12 @@
 
 ## Alcance vigente
 
+Esta página describe el contrato de la **BASE continua**. La
+[Entrega 4](../entregas/entrega_4/README.md) reúne la corrección de exposición/H2,
+el riesgo intradía y los protocolos particulares de los bloques 1–6.
+Las variantes se interpretan dentro de su bloque y escenario; sus parámetros
+no se incorporan a BASE ni se combinan entre bloques por defecto.
+
 Se comparan dos carteras independientes entre sí, condicional y permanente,
 desde **01/01/2022 hasta 31/08/2026 UTC**, intervalo
 `[2022-01-01T00:00:00Z, 2026-09-01T00:00:00Z)`. Cada una comienza con 10.000 USDT.
@@ -158,13 +164,49 @@ Tiempo invertido excluye polvo; el tiempo de cartera es la unión de intervalos
 por activo. Capital utilizado al cierre = valor spot + garantía aislada, dividido
 por equity; es una medida diaria, y puede superar 100% por la valuación del short.
 
-H2 exige CAGR condicional positivo y Sharpe superior al permanente. H3 contrasta
+H2 exige CAGR condicional finito y positivo y Sharpe condicional finito superior
+al permanente, también finito, para el mismo escenario y período. Con los
+componentes evaluables y alguna condición incumplida es `no_favorable`;
+con métricas ND o ventanas no comparables es `no_concluyente`, conservando
+el motivo. No se sustituye el Sharpe de volatilidad nula por cero. La
+[guía corregida de métricas](../entregas/entrega_4/reglas_historicas/correccion_exposicion_h2_20260925T150139Z/paquete_20260926T204312Z/documentos/guia_metricas.md)
+fija la clasificación y la exclusión de polvo de exposición/actividad.
+H3 contrasta
 oportunidad y CAGR condicional entre ambos regímenes. Son comparaciones descriptivas,
 no pruebas causales ni garantías de rentabilidad. El
 [análisis del precio de funding](../data/research/funding-price-sensitivity-20260920/README.md)
 cuantifica efectos con posiciones fijas y escenarios P95 ilustrativos; no incluye
 cambios de decisiones o margen ni garantiza extrapolación a los precios ausentes.
 
-Los [resultados publicados](../entregas/entrega_3/continua/README.md) se regeneran
+Los [resultados conservados de E3](../entregas/entrega_3/continua/README.md) se regeneran
 desde el ZIP verificado, sin nuevas simulaciones. Los datos masivos y corridas
 completas siguen locales; hashes y configuraciones preservan su trazabilidad.
+
+## Alcances adicionales de Entrega 4
+
+El drawdown de cierres diarios, la reconstrucción intradía global de
+BASE/MARGEN_2X y las ventanas locales B4/B5 tienen poblaciones distintas.
+Las ventanas locales no acreditan máximos intradía globales. La suspensión
+spot conserva la distinción entre precio antiguo y proxy hipotético.
+
+El comparador SOFR aprobado es una cuenta hipotética bruta USD, ACT/360,
+con paridad nominal 1 USDT = 1 USD y CAGR365. No remunera caja o garantías
+del carry ni representa un producto accesible o una rentabilidad realizada
+libre de riesgo. B3 mantiene la selección ex ante a 34 pb mientras varía
+costos, participación o capital. B4 distingue la demora de órdenes desde
+`eligible_at` de la liquidación, que conserva prioridad. B5 interviene
+trayectorias hipotéticas aprobadas; su recuperación impuesta y sus anclas
+fijas no identifican el costo causal histórico de una interrupción.
+
+B6 compara cuentas nuevas desde I2023/I2024 con sus pares, separadas de los
+cortes BASE con saldos heredados. Es una evaluación retrospectiva. El
+bootstrap de BASE usa bloques circulares emparejados dentro de año/segmento,
+28 días principal y 14/56 como sensibilidad, 5.000 réplicas por longitud e
+intervalos percentiles marginales nominales 95%. Esos intervalos dependen
+de los supuestos de remuestreo y no constituyen una prueba conjunta al 95%
+de H2 ni probabilidades de ganancia futura. No ejecutan el motor.
+
+Los protocolos, límites y la síntesis integrable se consultan desde el
+[índice único E4](../entregas/entrega_4/README.md). La verificación de hashes,
+la recomputación de evidencia compacta y el replay económico son alcances
+distintos; ninguno convierte reglas prescritas en historia certificada.

@@ -1,4 +1,13 @@
-# Estado y evidencia — 20/09/2026
+# Estado y evidencia — 02/10/2026
+
+La [Entrega 4](../entregas/entrega_4/README.md) es el índice único vigente de
+BASE corregida, reglas, riesgo intradía y bloques 1–6. La
+[matriz de avance](entrega_4/matriz_avance.csv) registra sus versiones y límites;
+el [cierre técnico local](entrega_4/cierre_publicacion_20261002/README.md) conserva
+los controles actuales y distingue el estado del checkout de la publicación.
+Las cifras continuas siguientes siguen siendo la referencia BASE de E3.
+Los estados «local/sin push» o «pendiente» dentro de paquetes sellados describen
+su fecha de preparación; no sustituyen el registro externo actualizado.
 
 ## Estudio vigente
 
@@ -39,7 +48,7 @@ pertenece al piloto del 01/01/2024 y no evalúa estas carteras.
 ## Hipótesis y episodio de riesgo
 
 H1: MAE EWMA 6,298978 bps frente a 8,703322 bps para no-change, igual peso por
-activo, 10.180 observaciones válidas y 44 exclusiones. H2 es contraria al criterio
+activo, 10.180 observaciones válidas y 44 exclusiones. H2 BASE total es `no_favorable`
 porque el Sharpe condicional es inferior al permanente. H3 tiene 1.704 días
 válidos: la oportunidad aumenta de 1,340415 a 4,019674 bps/168h y el CAGR
 condicional de 1,0814% a 2,0492% entre cortes. No apoya una caída de ambas magnitudes.
@@ -52,15 +61,18 @@ episodio para presentar una rentabilidad alternativa.
 
 ## Verificación y reproducción
 
-La preparación del paquete verificó 1.735 archivos fuente y las cuatro corridas.
+La preparación histórica de E3 verificó 1.735 archivos fuente y las cuatro corridas.
 El paquete continuo concilia 3.408 filas financieras diarias, 10.224 observaciones
 H1 y 1.704 días H3 conjuntos. La sensibilidad del funding concilia 2.234 pagos
 condicionales y 9.827 permanentes con posiciones anteriores a cada liquidación.
 
-La [guía principal de reproducción](../README.md#reproducción) regenera tablas
-y figuras desde el ZIP y verifica las evidencias sin datos masivos. Los detalles
-y resultados de pytest, Ruff, enlaces y preservación de hashes de esta limpieza
-se registran en [validaciones de presentación](repository_cleanup.md).
+La [guía principal de reproducción](../README.md#reproducción) distingue la
+presentación E3 desde el ZIP y los niveles de lectura/verificación/replay de E4.
+Los resultados actuales del cierre se conservan en el
+[registro técnico externo](entrega_4/cierre_publicacion_20261002/README.md).
+Los controles de pytest, Ruff, enlaces y hashes de la limpieza del 20/09/2026
+permanecen en [validaciones de presentación](repository_cleanup.md), con su
+alcance histórico.
 
 ## Antecedentes históricos
 

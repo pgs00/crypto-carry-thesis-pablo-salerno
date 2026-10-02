@@ -75,3 +75,6 @@
 /src/crypto_carry/data/stress_counterfactual.py -text whitespace=cr-at-eol
 /tests/unit/test_stress_*.py -text whitespace=cr-at-eol
 /tests/integration/test_stress_*.py -text whitespace=cr-at-eol
+
+# B6's verified seal covers mixed LF/CRLF bytes. Preserve this exact publication.
+/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/** -text whitespace=cr-at-eol

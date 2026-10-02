@@ -1,0 +1,80 @@
+{
+  "head_inicial": "f1f4857fe53ac02585f739f7927031ed029da172",
+  "method": "SHA256 de blobs leidos con git cat-file --batch; membresia y sidecar comparados contra manifiesto en el mismo HEAD; sin ejecutar economia",
+  "unique_blobs_read": 2487,
+  "unique_blob_bytes_read": 1011018402,
+  "packages": {
+    "A/paquete_20260927T230722Z": {
+      "manifest_sha256": "fb8a718fd544e93934cbe379db0ad6194234e13f5c6b00bb0cb3295bb2442f5e",
+      "listed_members": 878,
+      "checked_members": 878,
+      "sidecar_matches": true,
+      "passed": true,
+      "failed_members": 0,
+      "missing_members": 0,
+      "extra_members": 0
+    },
+    "A/paquete_20260927T231610Z": {
+      "manifest_sha256": "db68d839aa5837db72314b4f3de5509ecff283cc34d13a36e3c4f9d30298e1fb",
+      "listed_members": 880,
+      "checked_members": 880,
+      "sidecar_matches": true,
+      "passed": true,
+      "failed_members": 0,
+      "missing_members": 0,
+      "extra_members": 0
+    },
+    "B/paquete_20260930T012056Z": {
+      "manifest_sha256": "955205887cf139bc41fd1edcdf9e63a482d0b498d8998680890cd6273ccc5603",
+      "listed_members": 1200,
+      "checked_members": 1200,
+      "sidecar_matches": true,
+      "passed": true,
+      "failed_members": 0,
+      "missing_members": 0,
+      "extra_members": 0
+    },
+    "B/paquete_20260930T013915Z_v2": {
+      "manifest_sha256": "88af2936e2dc243080abdf3909cc578c184778527eb847d6b021ce76d357335b",
+      "listed_members": 1204,
+      "checked_members": 1204,
+      "sidecar_matches": true,
+      "passed": true,
+      "failed_members": 0,
+      "missing_members": 0,
+      "extra_members": 0
+    },
+    "C/paquete_20261001T211248Z": {
+      "manifest_sha256": "091fe38bba57ad5be62275cabb03579b1c47f2d96784ed7c5e2ce6377467a8de",
+      "listed_members": 1180,
+      "checked_members": 1180,
+      "sidecar_matches": true,
+      "passed": true,
+      "failed_members": 0,
+      "missing_members": 0,
+      "extra_members": 0
+    },
+    "D/paquete_final": {
+      "manifest_sha256": "5be726e00ae8e0c9f2f1b422865dbdf93ba1cbdea8d8c2502dab94a2caab6c9e",
+      "listed_members": 654,
+      "checked_members": 654,
+      "sidecar_matches": true,
+      "passed": false,
+      "failed_members": 156,
+      "missing_members": 0,
+      "extra_members": 0
+    },
+    "D/paquete_final_verificado": {
+      "manifest_sha256": "8cca7f25e8d83f0e9b879574b1f06c77b8ca2a9aa6ae07fdd94baf80e73c829d",
+      "listed_members": 662,
+      "checked_members": 662,
+      "sidecar_matches": true,
+      "passed": false,
+      "failed_members": 157,
+      "missing_members": 0,
+      "extra_members": 0
+    }
+  },
+  "detalle_fallos": "B6 vigente: diagnostico_miembros_b6.csv. Detalle historico completo conservado fuera del sello en %TEMP%/cierre_publicacion_20261002_inventario/seals_head_before.json.",
+  "limite": "No representa bytes WT reparados ni estado publicado posterior; D historico se conserva sin normalizar."
+}

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\pablo\AppData\Local\Temp\b6_publicacion_20261002_z_ft9ten\paquete\herramientas\scripts\verify_stability_uncertainty.py", line 228, in <module>
+    result = verify(args.candidate)
+  File "C:\Users\pablo\AppData\Local\Temp\b6_publicacion_20261002_z_ft9ten\paquete\herramientas\scripts\verify_stability_uncertainty.py", line 180, in verify
+    sealed = verify_seal(package)
+  File "C:\Users\pablo\AppData\Local\Temp\b6_publicacion_20261002_z_ft9ten\paquete\herramientas\scripts\verify_stability_uncertainty.py", line 82, in verify_seal
+    raise ValueError("Changed package member: " + name)
+ValueError: Changed package member: codigo_ejecutado/src/crypto_carry/execution_revision.py
