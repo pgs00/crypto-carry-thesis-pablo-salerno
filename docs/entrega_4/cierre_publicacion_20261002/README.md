@@ -1,5 +1,7 @@
 # Cierre técnico local de E4 — 02/10/2026
 
+> Actualización posterior, 02/10/2026: el [cierre público y documental](cierre_publico_y_documento.md) registra la publicación comprobada, el PDF actualizado y el límite de portabilidad en Linux. El texto original que sigue conserva el estado de esta sesión local anterior.
+
 **B6 reparado y verificado localmente desde blobs preparados en un índice
 temporal. No se creó ni publicó un commit.** La entrega pública requiere
 publicar los cambios autorizados y comprobar una descarga del commit resultante.

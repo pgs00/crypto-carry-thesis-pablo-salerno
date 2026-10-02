@@ -1,5 +1,7 @@
 # Trazabilidad documental pendiente de publicación
 
+> Actualización posterior, 02/10/2026: el [cierre público y documental](cierre_publico_y_documento.md) registra la publicación comprobada, el PDF actualizado y el límite de portabilidad en Linux. El texto original que sigue conserva el estado de esta sesión local anterior.
+
 Fecha de comprobación local: 2026-10-02. El PDF combinado de Entregas 3 y 4 y su fuente editable **no se localizaron en las ubicaciones consultadas**. No se editó ni se verificó visualmente ese PDF. Esta nota prepara la actualización mínima de sus referencias cuando se disponga del original y exista el commit publicado de evidencia corregida; no asigna un SHA futuro ni declara publicado ese cierre.
 
 ## Búsqueda y límites

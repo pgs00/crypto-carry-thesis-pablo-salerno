@@ -1,0 +1,3277 @@
+{
+  "schema": "e4-publication-document-review-v1",
+  "recorded_utc": "2026-10-02T16:09:49.496213+00:00",
+  "evidence_commit": "c0b432d8bff7fb86cf86a6bc0b28beffab225516",
+  "branch": "codex/crypto-carry",
+  "scope": "Comprobación de publicación, controles compactos y actualización documental; no nuevos backtests ni cambios en paquetes sellados.",
+  "official_integral_verifier_linux_passed": false,
+  "windows_integral_verifier": "Resultado registrado en la sesión local anterior; no ejecutado de nuevo en Windows por esta revisión.",
+  "independent_components": {
+    "seal": {
+      "passed": true,
+      "members": 662,
+      "manifest_sha256": "8cca7f25e8d83f0e9b879574b1f06c77b8ca2a9aa6ae07fdd94baf80e73c829d"
+    },
+    "contract": {
+      "passed": true,
+      "portfolios": 4,
+      "baseline_replays": 0,
+      "economic_code_hash": "ac1a148ac22eaa6498cdf9e35d6a825f6d81ad29a015fc6d892b57f71ce8a998"
+    },
+    "financial": {
+      "passed": true,
+      "engine_replay": false,
+      "offline": true,
+      "unique_portfolios": 6,
+      "recalculated_table_rows": {
+        "diario": 12660,
+        "metricas": 64,
+        "componentes_periodo": 128,
+        "saldos_iniciales": 20,
+        "exposicion_periodo": 192,
+        "actividad": 192,
+        "ejecucion_resumen": 320,
+        "conciliaciones": 6,
+        "h2": 32,
+        "h3_cobertura": 10,
+        "comparacion_inicios": 24
+      },
+      "execution_windows": 1038,
+      "tolerance_usdt": "1E-8",
+      "massive_market_sources_reopened": false,
+      "scope": "recomputed accounting, inherited/fresh metrics, H2, exposure, ledger, funding and fills"
+    },
+    "synthesis": {
+      "status": "passed",
+      "schema": "stability_synthesis_v3",
+      "offline": true,
+      "read_only": true,
+      "source_copies_verified": 258,
+      "diagnostic_runs": 28,
+      "diagnostic_statuses": {
+        "rama_no_activada": 28
+      },
+      "raw_rows_rechecked": {
+        "risk_events": 31180,
+        "orders": 42906,
+        "positions": 113731
+      },
+      "tables_reproduced": 8,
+      "historical_economics": "authenticated summaries reused, no replay",
+      "b6_economics": "financial verifier",
+      "bootstrap": "statistical verifier",
+      "massive_market_data_reread": false
+    },
+    "seal_after": {
+      "passed": true,
+      "members": 662,
+      "manifest_sha256": "8cca7f25e8d83f0e9b879574b1f06c77b8ca2a9aa6ae07fdd94baf80e73c829d"
+    }
+  },
+  "bootstrap_linux_diagnostic": {
+    "diagnostic_only": true,
+    "official_verifier_pass": false,
+    "environment": {
+      "python": "3.14.3",
+      "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+      "numpy": "2.3.5",
+      "pyarrow": "25.0.1"
+    },
+    "stored_csv_equals_serialized_stored_json": true,
+    "csv_bytes_exact": false,
+    "rows": 51,
+    "differing_rows": 9,
+    "differing_cells": 26,
+    "fields": {
+      "interval_low": 6,
+      "interval_high": 7,
+      "finite_quantile_low": 6,
+      "finite_quantile_high": 7
+    },
+    "nonnumeric_differences": [],
+    "max_absolute_difference": 6.938893903907228e-18,
+    "max_relative_difference": 8.68559642885805e-16,
+    "max_ulps": 4.0,
+    "differences": [
+      {
+        "csv_line": 2,
+        "metric": "h2_conditional_cagr",
+        "period": "full",
+        "symbol": "PORTFOLIO",
+        "block": "28",
+        "field": "interval_low",
+        "published": "0.009609742836738154",
+        "recalculated": "0.009609742836738152",
+        "numeric": true,
+        "absolute_difference": 1.734723475976807e-18,
+        "relative_difference": 1.805171590383189e-16,
+        "ulps": 1.0
+      },
+      {
+        "csv_line": 2,
+        "metric": "h2_conditional_cagr",
+        "period": "full",
+        "symbol": "PORTFOLIO",
+        "block": "28",
+        "field": "interval_high",
+        "published": "0.023860521062671555",
+        "recalculated": "0.023860521062671558",
+        "numeric": true,
+        "absolute_difference": 3.469446951953614e-18,
+        "relative_difference": 1.454053305391293e-16,
+        "ulps": 1.0
+      },
+      {
+        "csv_line": 2,
+        "metric": "h2_conditional_cagr",
+        "period": "full",
+        "symbol": "PORTFOLIO",
+        "block": "28",
+        "field": "finite_quantile_low",
+        "published": "0.009609742836738154",
+        "recalculated": "0.009609742836738152",
+        "numeric": true,
+        "absolute_difference": 1.734723475976807e-18,
+        "relative_difference": 1.805171590383189e-16,
+        "ulps": 1.0
+      },
+      {
+        "csv_line": 2,
+        "metric": "h2_conditional_cagr",
+        "period": "full",
+        "symbol": "PORTFOLIO",
+        "block": "28",
+        "field": "finite_quantile_high",
+        "published": "0.023860521062671555",
+        "recalculated": "0.023860521062671558",
+        "numeric": true,
+        "absolute_difference": 3.469446951953614e-18,
+        "relative_difference": 1.454053305391293e-16,
+        "ulps": 1.0
+      },
+      {
+        "csv_line": 18,
+        "metric": "h3_conditional_cagr_delta",
+        "period": "2024+ minus 2022-2023",
+        "symbol": "PORTFOLIO",
+        "block": "28",
+        "field": "interval_low",
+        "published": "-0.004131553292099029",
+        "recalculated": "-0.00413155329209903",
+        "numeric": true,
+        "absolute_difference": 1.734723475976807e-18,
+        "relative_difference": 4.1987198356952164e-16,
+        "ulps": 2.0
+      },
+      {
+        "csv_line": 18,
+        "metric": "h3_conditional_cagr_delta",
+        "period": "2024+ minus 2022-2023",
+        "symbol": "PORTFOLIO",
+        "block": "28",
+        "field": "finite_quantile_low",
+        "published": "-0.004131553292099029",
+        "recalculated": "-0.00413155329209903",
+        "numeric": true,
+        "absolute_difference": 1.734723475976807e-18,
+        "relative_difference": 4.1987198356952164e-16,
+        "ulps": 2.0
+      },
+      {
+        "csv_line": 19,
+        "metric": "h2_conditional_cagr",
+        "period": "full",
+        "symbol": "PORTFOLIO",
+        "block": "14",
+        "field": "interval_high",
+        "published": "0.022627907823341113",
+        "recalculated": "0.02262790782334112",
+        "numeric": true,
+        "absolute_difference": 6.938893903907228e-18,
+        "relative_difference": 3.0665203155678524e-16,
+        "ulps": 2.0
+      },
+      {
+        "csv_line": 19,
+        "metric": "h2_conditional_cagr",
+        "period": "full",
+        "symbol": "PORTFOLIO",
+        "block": "14",
+        "field": "finite_quantile_high",
+        "published": "0.022627907823341113",
+        "recalculated": "0.02262790782334112",
+        "numeric": true,
+        "absolute_difference": 6.938893903907228e-18,
+        "relative_difference": 3.0665203155678524e-16,
+        "ulps": 2.0
+      },
+      {
+        "csv_line": 24,
+        "metric": "h2_conditional_cagr",
+        "period": "2022-2023",
+        "symbol": "PORTFOLIO",
+        "block": "14",
+        "field": "interval_high",
+        "published": "0.01904775185526985",
+        "recalculated": "0.019047751855269853",
+        "numeric": true,
+        "absolute_difference": 3.469446951953614e-18,
+        "relative_difference": 1.821446949915897e-16,
+        "ulps": 1.0
+      },
+      {
+        "csv_line": 24,
+        "metric": "h2_conditional_cagr",
+        "period": "2022-2023",
+        "symbol": "PORTFOLIO",
+        "block": "14",
+        "field": "finite_quantile_high",
+        "published": "0.01904775185526985",
+        "recalculated": "0.019047751855269853",
+        "numeric": true,
+        "absolute_difference": 3.469446951953614e-18,
+        "relative_difference": 1.821446949915897e-16,
+        "ulps": 1.0
+      },
+      {
+        "csv_line": 29,
+        "metric": "h2_conditional_cagr",
+        "period": "2024+",
+        "symbol": "PORTFOLIO",
+        "block": "14",
+        "field": "interval_high",
+        "published": "0.02966216985197965",
+        "recalculated": "0.029662169851979652",
+        "numeric": true,
+        "absolute_difference": 3.469446951953614e-18,
+        "relative_difference": 1.1696537944684662e-16,
+        "ulps": 1.0
+      },
+      {
+        "csv_line": 29,
+        "metric": "h2_conditional_cagr",
+        "period": "2024+",
+        "symbol": "PORTFOLIO",
+        "block": "14",
+        "field": "finite_quantile_high",
+        "published": "0.02966216985197965",
+        "recalculated": "0.029662169851979652",
+        "numeric": true,
+        "absolute_difference": 3.469446951953614e-18,
+        "relative_difference": 1.1696537944684662e-16,
+        "ulps": 1.0
+      },
+      {
+        "csv_line": 35,
+        "metric": "h3_conditional_cagr_delta",
+        "period": "2024+ minus 2022-2023",
+        "symbol": "PORTFOLIO",
+        "block": "14",
+        "field": "interval_low",
+        "published": "-0.001997241628926202",
+        "recalculated": "-0.001997241628926204",
+        "numeric": true,
+        "absolute_difference": 1.734723475976807e-18,
+        "relative_difference": 8.68559642885805e-16,
+        "ulps": 4.0
+      },
+      {
+        "csv_line": 35,
+        "metric": "h3_conditional_cagr_delta",
+        "period": "2024+ minus 2022-2023",
+        "symbol": "PORTFOLIO",
+        "block": "14",
+        "field": "interval_high",
+        "published": "0.021260639100480525",
+        "recalculated": "0.02126063910048053",
+        "numeric": true,
+        "absolute_difference": 6.938893903907228e-18,
+        "relative_difference": 3.2637278075758297e-16,
+        "ulps": 2.0
+      },
+      {
+        "csv_line": 35,
+        "metric": "h3_conditional_cagr_delta",
+        "period": "2024+ minus 2022-2023",
+        "symbol": "PORTFOLIO",
+        "block": "14",
+        "field": "finite_quantile_low",
+        "published": "-0.001997241628926202",
+        "recalculated": "-0.001997241628926204",
+        "numeric": true,
+        "absolute_difference": 1.734723475976807e-18,
+        "relative_difference": 8.68559642885805e-16,
+        "ulps": 4.0
+      },
+      {
+        "csv_line": 35,
+        "metric": "h3_conditional_cagr_delta",
+        "period": "2024+ minus 2022-2023",
+        "symbol": "PORTFOLIO",
+        "block": "14",
+        "field": "finite_quantile_high",
+        "published": "0.021260639100480525",
+        "recalculated": "0.02126063910048053",
+        "numeric": true,
+        "absolute_difference": 6.938893903907228e-18,
+        "relative_difference": 3.2637278075758297e-16,
+        "ulps": 2.0
+      },
+      {
+        "csv_line": 36,
+        "metric": "h2_conditional_cagr",
+        "period": "full",
+        "symbol": "PORTFOLIO",
+        "block": "56",
+        "field": "interval_low",
+        "published": "0.009078990038097779",
+        "recalculated": "0.00907899003809778",
+        "numeric": true,
+        "absolute_difference": 1.734723475976807e-18,
+        "relative_difference": 1.9107009355638245e-16,
+        "ulps": 1.0
+      },
+      {
+        "csv_line": 36,
+        "metric": "h2_conditional_cagr",
+        "period": "full",
+        "symbol": "PORTFOLIO",
+        "block": "56",
+        "field": "interval_high",
+        "published": "0.02484655739567522",
+        "recalculated": "0.024846557395675217",
+        "numeric": true,
+        "absolute_difference": 3.469446951953614e-18,
+        "relative_difference": 1.3963491588406144e-16,
+        "ulps": 1.0
+      },
+      {
+        "csv_line": 36,
+        "metric": "h2_conditional_cagr",
+        "period": "full",
+        "symbol": "PORTFOLIO",
+        "block": "56",
+        "field": "finite_quantile_low",
+        "published": "0.009078990038097779",
+        "recalculated": "0.00907899003809778",
+        "numeric": true,
+        "absolute_difference": 1.734723475976807e-18,
+        "relative_difference": 1.9107009355638245e-16,
+        "ulps": 1.0
+      },
+      {
+        "csv_line": 36,
+        "metric": "h2_conditional_cagr",
+        "period": "full",
+        "symbol": "PORTFOLIO",
+        "block": "56",
+        "field": "finite_quantile_high",
+        "published": "0.02484655739567522",
+        "recalculated": "0.024846557395675217",
+        "numeric": true,
+        "absolute_difference": 3.469446951953614e-18,
+        "relative_difference": 1.3963491588406144e-16,
+        "ulps": 1.0
+      },
+      {
+        "csv_line": 41,
+        "metric": "h2_conditional_cagr",
+        "period": "2022-2023",
+        "symbol": "PORTFOLIO",
+        "block": "56",
+        "field": "interval_low",
+        "published": "0.0022092584761445695",
+        "recalculated": "0.002209258476144569",
+        "numeric": true,
+        "absolute_difference": 4.336808689942018e-19,
+        "relative_difference": 1.9630155261462605e-16,
+        "ulps": 1.0
+      },
+      {
+        "csv_line": 41,
+        "metric": "h2_conditional_cagr",
+        "period": "2022-2023",
+        "symbol": "PORTFOLIO",
+        "block": "56",
+        "field": "interval_high",
+        "published": "0.02167776614308759",
+        "recalculated": "0.021677766143087595",
+        "numeric": true,
+        "absolute_difference": 3.469446951953614e-18,
+        "relative_difference": 1.6004633176006095e-16,
+        "ulps": 1.0
+      },
+      {
+        "csv_line": 41,
+        "metric": "h2_conditional_cagr",
+        "period": "2022-2023",
+        "symbol": "PORTFOLIO",
+        "block": "56",
+        "field": "finite_quantile_low",
+        "published": "0.0022092584761445695",
+        "recalculated": "0.002209258476144569",
+        "numeric": true,
+        "absolute_difference": 4.336808689942018e-19,
+        "relative_difference": 1.9630155261462605e-16,
+        "ulps": 1.0
+      },
+      {
+        "csv_line": 41,
+        "metric": "h2_conditional_cagr",
+        "period": "2022-2023",
+        "symbol": "PORTFOLIO",
+        "block": "56",
+        "field": "finite_quantile_high",
+        "published": "0.02167776614308759",
+        "recalculated": "0.021677766143087595",
+        "numeric": true,
+        "absolute_difference": 3.469446951953614e-18,
+        "relative_difference": 1.6004633176006095e-16,
+        "ulps": 1.0
+      },
+      {
+        "csv_line": 52,
+        "metric": "h3_conditional_cagr_delta",
+        "period": "2024+ minus 2022-2023",
+        "symbol": "PORTFOLIO",
+        "block": "56",
+        "field": "interval_low",
+        "published": "-0.006213416619057584",
+        "recalculated": "-0.006213416619057582",
+        "numeric": true,
+        "absolute_difference": 1.734723475976807e-18,
+        "relative_difference": 2.791899501244003e-16,
+        "ulps": 2.0
+      },
+      {
+        "csv_line": 52,
+        "metric": "h3_conditional_cagr_delta",
+        "period": "2024+ minus 2022-2023",
+        "symbol": "PORTFOLIO",
+        "block": "56",
+        "field": "finite_quantile_low",
+        "published": "-0.006213416619057584",
+        "recalculated": "-0.006213416619057582",
+        "numeric": true,
+        "absolute_difference": 1.734723475976807e-18,
+        "relative_difference": 2.791899501244003e-16,
+        "ulps": 2.0
+      }
+    ],
+    "scalar_differences": [],
+    "checks": {
+      "replicas_against_recalculation": {
+        "passed": true
+      },
+      "seeds_against_recalculation": {
+        "passed": true
+      },
+      "points_json_against_recalculation": {
+        "passed": true
+      },
+      "intervals_json_against_recalculation": {
+        "passed": true
+      },
+      "points_csv_exact": {
+        "passed": true
+      },
+      "intervals_csv_exact": {
+        "passed": false,
+        "error": "Bootstrap CSV differs from recomputed statistics"
+      },
+      "coverage_exact": {
+        "passed": true
+      },
+      "scalar_record_exact": {
+        "passed": true
+      }
+    }
+  },
+  "pdf": {
+    "source": "Tesina_Entregas_3_y_4_Pablo_Salerno(1).pdf",
+    "output": "entregas/entrega_4/documento_final/Tesina_Entregas_3_y_4_Pablo_Salerno.pdf",
+    "sha256_original": "653cd099351f42bb1e93dc738be3b839371fcf6e96a04e254e6e12588a7680dd",
+    "sha256_final": "b6b9992256d03ba9e29142bbc4548cfa4ffd8a4f9e847774c00128d0bd3b1820",
+    "paginas": 31,
+    "sha_anterior": "f1f4857fe53ac02585f739f7927031ed029da172",
+    "sha_final": "c0b432d8bff7fb86cf86a6bc0b28beffab225516",
+    "region_sha_pdf": [
+      58.20000076293945,
+      97.54827880859375,
+      276.179931640625,
+      109.26628112792969
+    ],
+    "metodo": "Sustitución de glifos en stream original con misma fuente incrustada y avance total; edición directa de URI en anotaciones existentes.",
+    "fuente": "CAAAAA+LiberationSans",
+    "tamano_pt": 10.5,
+    "avance_sha_original_unidades_fuente": "20760",
+    "ajuste_TJ_entre_caracteres": "-9.282051282051282051",
+    "referencias_actualizadas": 114,
+    "referencias_conservadas": 25,
+    "objetos_modificados": [
+      1290,
+      1294,
+      1295,
+      1296,
+      1297,
+      1298,
+      1299,
+      1300,
+      1301,
+      1302,
+      1303,
+      1304,
+      1305,
+      1306,
+      1307,
+      1308,
+      1309,
+      1310,
+      1311,
+      1312,
+      1313,
+      1314,
+      1315,
+      1316,
+      1317,
+      1318,
+      1319,
+      1320,
+      1321,
+      1322,
+      1323,
+      1324,
+      1325,
+      1326,
+      1327,
+      1328,
+      1329,
+      1330,
+      1331,
+      1332,
+      1333,
+      1334,
+      1335,
+      1336,
+      1337,
+      1338,
+      1339,
+      1340,
+      1341,
+      1342,
+      1343,
+      1344,
+      1345,
+      1346,
+      1347,
+      1348,
+      1349,
+      1350,
+      1351,
+      1352,
+      1353,
+      1354,
+      1355,
+      1356,
+      1357,
+      1358,
+      1359,
+      1360,
+      1361,
+      1362,
+      1363,
+      1364,
+      1365,
+      1366,
+      1367,
+      1368,
+      1369,
+      1370,
+      1371,
+      1372,
+      1373,
+      1374,
+      1375,
+      1376,
+      1377,
+      1378,
+      1379,
+      1380,
+      1381,
+      1382,
+      1383,
+      1384,
+      1385,
+      1386,
+      1387,
+      1388,
+      1389,
+      1390,
+      1391,
+      1392,
+      1393,
+      1394,
+      1395,
+      1400,
+      1401,
+      1402,
+      1403,
+      1404,
+      1405,
+      1406,
+      1407,
+      1408,
+      1409,
+      1410,
+      1411
+    ],
+    "todos_objetos_modificados_autorizados": true,
+    "verificaciones_paginas": [
+      {
+        "pagina_fisica": 1,
+        "texto_identico": true,
+        "texto_solo_sha_sustituido": false,
+        "pixeles_identicos": true,
+        "region_diferencia_px": null,
+        "enlaces_validos": true,
+        "fuentes_identicas": true
+      },
+      {
+        "pagina_fisica": 2,
+        "texto_identico": true,
+        "texto_solo_sha_sustituido": false,
+        "pixeles_identicos": true,
+        "region_diferencia_px": null,
+        "enlaces_validos": true,
+        "fuentes_identicas": true
+      },
+      {
+        "pagina_fisica": 3,
+        "texto_identico": true,
+        "texto_solo_sha_sustituido": false,
+        "pixeles_identicos": true,
+        "region_diferencia_px": null,
+        "enlaces_validos": true,
+        "fuentes_identicas": true
+      },
+      {
+        "pagina_fisica": 4,
+        "texto_identico": true,
+        "texto_solo_sha_sustituido": false,
+        "pixeles_identicos": true,
+        "region_diferencia_px": null,
+        "enlaces_validos": true,
+        "fuentes_identicas": true
+      },
+      {
+        "pagina_fisica": 5,
+        "texto_identico": true,
+        "texto_solo_sha_sustituido": false,
+        "pixeles_identicos": true,
+        "region_diferencia_px": null,
+        "enlaces_validos": true,
+        "fuentes_identicas": true
+      },
+      {
+        "pagina_fisica": 6,
+        "texto_identico": true,
+        "texto_solo_sha_sustituido": false,
+        "pixeles_identicos": true,
+        "region_diferencia_px": null,
+        "enlaces_validos": true,
+        "fuentes_identicas": true
+      },
+      {
+        "pagina_fisica": 7,
+        "texto_identico": true,
+        "texto_solo_sha_sustituido": false,
+        "pixeles_identicos": true,
+        "region_diferencia_px": null,
+        "enlaces_validos": true,
+        "fuentes_identicas": true
+      },
+      {
+        "pagina_fisica": 8,
+        "texto_identico": true,
+        "texto_solo_sha_sustituido": false,
+        "pixeles_identicos": true,
+        "region_diferencia_px": null,
+        "enlaces_validos": true,
+        "fuentes_identicas": true
+      },
+      {
+        "pagina_fisica": 9,
+        "texto_identico": true,
+        "texto_solo_sha_sustituido": false,
+        "pixeles_identicos": true,
+        "region_diferencia_px": null,
+        "enlaces_validos": true,
+        "fuentes_identicas": true
+      },
+      {
+        "pagina_fisica": 10,
+        "texto_identico": true,
+        "texto_solo_sha_sustituido": false,
+        "pixeles_identicos": true,
+        "region_diferencia_px": null,
+        "enlaces_validos": true,
+        "fuentes_identicas": true
+      },
+      {
+        "pagina_fisica": 11,
+        "texto_identico": true,
+        "texto_solo_sha_sustituido": false,
+        "pixeles_identicos": true,
+        "region_diferencia_px": null,
+        "enlaces_validos": true,
+        "fuentes_identicas": true
+      },
+      {
+        "pagina_fisica": 12,
+        "texto_identico": true,
+        "texto_solo_sha_sustituido": false,
+        "pixeles_identicos": true,
+        "region_diferencia_px": null,
+        "enlaces_validos": true,
+        "fuentes_identicas": true
+      },
+      {
+        "pagina_fisica": 13,
+        "texto_identico": true,
+        "texto_solo_sha_sustituido": false,
+        "pixeles_identicos": true,
+        "region_diferencia_px": null,
+        "enlaces_validos": true,
+        "fuentes_identicas": true
+      },
+      {
+        "pagina_fisica": 14,
+        "texto_identico": true,
+        "texto_solo_sha_sustituido": false,
+        "pixeles_identicos": true,
+        "region_diferencia_px": null,
+        "enlaces_validos": true,
+        "fuentes_identicas": true
+      },
+      {
+        "pagina_fisica": 15,
+        "texto_identico": true,
+        "texto_solo_sha_sustituido": false,
+        "pixeles_identicos": true,
+        "region_diferencia_px": null,
+        "enlaces_validos": true,
+        "fuentes_identicas": true
+      },
+      {
+        "pagina_fisica": 16,
+        "texto_identico": true,
+        "texto_solo_sha_sustituido": false,
+        "pixeles_identicos": true,
+        "region_diferencia_px": null,
+        "enlaces_validos": true,
+        "fuentes_identicas": true
+      },
+      {
+        "pagina_fisica": 17,
+        "texto_identico": true,
+        "texto_solo_sha_sustituido": false,
+        "pixeles_identicos": true,
+        "region_diferencia_px": null,
+        "enlaces_validos": true,
+        "fuentes_identicas": true
+      },
+      {
+        "pagina_fisica": 18,
+        "texto_identico": true,
+        "texto_solo_sha_sustituido": false,
+        "pixeles_identicos": true,
+        "region_diferencia_px": null,
+        "enlaces_validos": true,
+        "fuentes_identicas": true
+      },
+      {
+        "pagina_fisica": 19,
+        "texto_identico": true,
+        "texto_solo_sha_sustituido": false,
+        "pixeles_identicos": true,
+        "region_diferencia_px": null,
+        "enlaces_validos": true,
+        "fuentes_identicas": true
+      },
+      {
+        "pagina_fisica": 20,
+        "texto_identico": true,
+        "texto_solo_sha_sustituido": false,
+        "pixeles_identicos": true,
+        "region_diferencia_px": null,
+        "enlaces_validos": true,
+        "fuentes_identicas": true
+      },
+      {
+        "pagina_fisica": 21,
+        "texto_identico": true,
+        "texto_solo_sha_sustituido": false,
+        "pixeles_identicos": true,
+        "region_diferencia_px": null,
+        "enlaces_validos": true,
+        "fuentes_identicas": true
+      },
+      {
+        "pagina_fisica": 22,
+        "texto_identico": true,
+        "texto_solo_sha_sustituido": false,
+        "pixeles_identicos": true,
+        "region_diferencia_px": null,
+        "enlaces_validos": true,
+        "fuentes_identicas": true
+      },
+      {
+        "pagina_fisica": 23,
+        "texto_identico": true,
+        "texto_solo_sha_sustituido": false,
+        "pixeles_identicos": true,
+        "region_diferencia_px": null,
+        "enlaces_validos": true,
+        "fuentes_identicas": true
+      },
+      {
+        "pagina_fisica": 24,
+        "texto_identico": true,
+        "texto_solo_sha_sustituido": false,
+        "pixeles_identicos": true,
+        "region_diferencia_px": null,
+        "enlaces_validos": true,
+        "fuentes_identicas": true
+      },
+      {
+        "pagina_fisica": 25,
+        "texto_identico": true,
+        "texto_solo_sha_sustituido": false,
+        "pixeles_identicos": true,
+        "region_diferencia_px": null,
+        "enlaces_validos": true,
+        "fuentes_identicas": true
+      },
+      {
+        "pagina_fisica": 26,
+        "texto_identico": true,
+        "texto_solo_sha_sustituido": false,
+        "pixeles_identicos": true,
+        "region_diferencia_px": null,
+        "enlaces_validos": true,
+        "fuentes_identicas": true
+      },
+      {
+        "pagina_fisica": 27,
+        "texto_identico": true,
+        "texto_solo_sha_sustituido": false,
+        "pixeles_identicos": true,
+        "region_diferencia_px": null,
+        "enlaces_validos": true,
+        "fuentes_identicas": true
+      },
+      {
+        "pagina_fisica": 28,
+        "texto_identico": true,
+        "texto_solo_sha_sustituido": false,
+        "pixeles_identicos": true,
+        "region_diferencia_px": null,
+        "enlaces_validos": true,
+        "fuentes_identicas": true
+      },
+      {
+        "pagina_fisica": 29,
+        "texto_identico": true,
+        "texto_solo_sha_sustituido": false,
+        "pixeles_identicos": true,
+        "region_diferencia_px": null,
+        "enlaces_validos": true,
+        "fuentes_identicas": true
+      },
+      {
+        "pagina_fisica": 30,
+        "texto_identico": false,
+        "texto_solo_sha_sustituido": true,
+        "pixeles_identicos": false,
+        "region_diferencia_px": [
+          121,
+          207,
+          575,
+          224
+        ],
+        "enlaces_validos": true,
+        "fuentes_identicas": true
+      },
+      {
+        "pagina_fisica": 31,
+        "texto_identico": true,
+        "texto_solo_sha_sustituido": false,
+        "pixeles_identicos": true,
+        "region_diferencia_px": null,
+        "enlaces_validos": true,
+        "fuentes_identicas": true
+      }
+    ],
+    "render_motor": "MuPDF vía PyMuPDF, 150 dpi RGB",
+    "E3_texto_y_enlaces_exactos": true,
+    "paginas_1_a_29_y_31_pixel_identicas": true,
+    "cambio_visible_confinado_sha_pagina_30": true,
+    "inspeccion_visual_p30_p31": "aprobada: SHA nuevo legible, tipografía y párrafo conservados, referencias sin alteración visible; inspección MuPDF 150 dpi y Poppler 120 dpi",
+    "render_adicional": "Poppler pdftoppm páginas 30–31 a 120 dpi, ejecución satisfactoria"
+  },
+  "pdf_references": {
+    "original_commit": "f1f4857fe53ac02585f739f7927031ed029da172",
+    "final_commit": "c0b432d8bff7fb86cf86a6bc0b28beffab225516",
+    "actualizadas": [
+      {
+        "pagina_fisica": 18,
+        "pagina_impresa": 17,
+        "referencia": "[R12]",
+        "xref": 1294,
+        "coordenadas": [
+          214.4929962158203,
+          150.9007568359375,
+          239.60699462890625,
+          163.80078125
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/docs/entrega_4/matriz_avance.csv",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/docs/entrega_4/matriz_avance.csv"
+      },
+      {
+        "pagina_fisica": 18,
+        "pagina_impresa": 17,
+        "referencia": "[R10]",
+        "xref": 1295,
+        "coordenadas": [
+          320.6929931640625,
+          567.6007690429688,
+          345.8070068359375,
+          580.500732421875
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/reporte.md"
+      },
+      {
+        "pagina_fisica": 18,
+        "pagina_impresa": 17,
+        "referencia": "[R12]",
+        "xref": 1296,
+        "coordenadas": [
+          238.9929962158203,
+          512.9007568359375,
+          259.35699462890625,
+          522.7008056640625
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/docs/entrega_4/matriz_avance.csv",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/docs/entrega_4/matriz_avance.csv"
+      },
+      {
+        "pagina_fisica": 18,
+        "pagina_impresa": 17,
+        "referencia": "[R10]",
+        "xref": 1297,
+        "coordenadas": [
+          341.0929870605469,
+          340.85076904296875,
+          366.2070007324219,
+          353.7507629394531
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/reporte.md"
+      },
+      {
+        "pagina_fisica": 18,
+        "pagina_impresa": 17,
+        "referencia": "[R3]",
+        "xref": 1298,
+        "coordenadas": [
+          318.9429931640625,
+          340.85076904296875,
+          338.2569885253906,
+          353.7507629394531
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 18,
+        "pagina_impresa": 17,
+        "referencia": "[R2]",
+        "xref": 1299,
+        "coordenadas": [
+          296.7929992675781,
+          340.85076904296875,
+          316.10699462890625,
+          353.7507629394531
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/senal_entradas/20260927T170230Z/paquete_20260927T185305Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/senal_entradas/20260927T170230Z/paquete_20260927T185305Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 18,
+        "pagina_impresa": 17,
+        "referencia": "[R2]",
+        "xref": 1300,
+        "coordenadas": [
+          92.49299621582031,
+          270.35076904296875,
+          111.80699920654297,
+          283.25079345703125
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/senal_entradas/20260927T170230Z/paquete_20260927T185305Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/senal_entradas/20260927T170230Z/paquete_20260927T185305Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 19,
+        "pagina_impresa": 18,
+        "referencia": "[R1]",
+        "xref": 1301,
+        "coordenadas": [
+          255.89300537109375,
+          614.6007690429688,
+          275.2070007324219,
+          627.500732421875
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/retorno_capital/20260927T143928Z/paquete_20260927T152732Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/retorno_capital/20260927T143928Z/paquete_20260927T152732Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 19,
+        "pagina_impresa": 18,
+        "referencia": "[R7]",
+        "xref": 1302,
+        "coordenadas": [
+          212.09300231933594,
+          544.1007690429688,
+          231.40699768066406,
+          557.000732421875
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 19,
+        "pagina_impresa": 18,
+        "referencia": "[R1]",
+        "xref": 1303,
+        "coordenadas": [
+          189.9429931640625,
+          544.1007690429688,
+          209.2570037841797,
+          557.000732421875
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/retorno_capital/20260927T143928Z/paquete_20260927T152732Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/retorno_capital/20260927T143928Z/paquete_20260927T152732Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 19,
+        "pagina_impresa": 18,
+        "referencia": "[R7]",
+        "xref": 1304,
+        "coordenadas": [
+          199.79299926757812,
+          476.5007629394531,
+          215.40699768066406,
+          486.30078125
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 19,
+        "pagina_impresa": 18,
+        "referencia": "[R7]",
+        "xref": 1305,
+        "coordenadas": [
+          298.0929870605469,
+          282.85076904296875,
+          313.7070007324219,
+          292.6507568359375
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 19,
+        "pagina_impresa": 18,
+        "referencia": "[R7]",
+        "xref": 1306,
+        "coordenadas": [
+          471.2929992675781,
+          122.20074462890625,
+          490.60699462890625,
+          135.10076904296875
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 20,
+        "pagina_impresa": 19,
+        "referencia": "[R2]",
+        "xref": 1307,
+        "coordenadas": [
+          509.7929992675781,
+          579.4508056640625,
+          529.1069946289062,
+          592.3507690429688
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/senal_entradas/20260927T170230Z/paquete_20260927T185305Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/senal_entradas/20260927T170230Z/paquete_20260927T185305Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 20,
+        "pagina_impresa": 19,
+        "referencia": "[R1]",
+        "xref": 1308,
+        "coordenadas": [
+          487.64300537109375,
+          579.4508056640625,
+          506.9570007324219,
+          592.3507690429688
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/retorno_capital/20260927T143928Z/paquete_20260927T152732Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/retorno_capital/20260927T143928Z/paquete_20260927T152732Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 20,
+        "pagina_impresa": 19,
+        "referencia": "[R2]",
+        "xref": 1309,
+        "coordenadas": [
+          369.0929870605469,
+          521.8507690429688,
+          388.4070129394531,
+          534.750732421875
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/senal_entradas/20260927T170230Z/paquete_20260927T185305Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/senal_entradas/20260927T170230Z/paquete_20260927T185305Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 20,
+        "pagina_impresa": 19,
+        "referencia": "[R1]",
+        "xref": 1310,
+        "coordenadas": [
+          346.9429931640625,
+          521.8507690429688,
+          366.2569885253906,
+          534.750732421875
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/retorno_capital/20260927T143928Z/paquete_20260927T152732Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/retorno_capital/20260927T143928Z/paquete_20260927T152732Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 20,
+        "pagina_impresa": 19,
+        "referencia": "[R2]",
+        "xref": 1311,
+        "coordenadas": [
+          408.8429870605469,
+          441.10076904296875,
+          428.1570129394531,
+          454.0007629394531
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/senal_entradas/20260927T170230Z/paquete_20260927T185305Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/senal_entradas/20260927T170230Z/paquete_20260927T185305Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 20,
+        "pagina_impresa": 19,
+        "referencia": "[R11]",
+        "xref": 1312,
+        "coordenadas": [
+          460.1929931640625,
+          383.5007629394531,
+          485.3070068359375,
+          396.4007568359375
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md"
+      },
+      {
+        "pagina_fisica": 20,
+        "pagina_impresa": 19,
+        "referencia": "[R2]",
+        "xref": 1313,
+        "coordenadas": [
+          438.0429992675781,
+          383.5007629394531,
+          457.35699462890625,
+          396.4007568359375
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/senal_entradas/20260927T170230Z/paquete_20260927T185305Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/senal_entradas/20260927T170230Z/paquete_20260927T185305Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 20,
+        "pagina_impresa": 19,
+        "referencia": "[R2]",
+        "xref": 1314,
+        "coordenadas": [
+          189.39300537109375,
+          328.80078125,
+          205.0070037841797,
+          338.60076904296875
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/senal_entradas/20260927T170230Z/paquete_20260927T185305Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/senal_entradas/20260927T170230Z/paquete_20260927T185305Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 20,
+        "pagina_impresa": 19,
+        "referencia": "[R2]",
+        "xref": 1315,
+        "coordenadas": [
+          146.1929931640625,
+          144.35076904296875,
+          165.5070037841797,
+          157.25079345703125
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/senal_entradas/20260927T170230Z/paquete_20260927T185305Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/senal_entradas/20260927T170230Z/paquete_20260927T185305Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 21,
+        "pagina_impresa": 20,
+        "referencia": "[R3]",
+        "xref": 1316,
+        "coordenadas": [
+          486.4429931640625,
+          609.30078125,
+          505.7569885253906,
+          622.2008056640625
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 21,
+        "pagina_impresa": 20,
+        "referencia": "[R3]",
+        "xref": 1317,
+        "coordenadas": [
+          147.34300231933594,
+          564.6007690429688,
+          166.65699768066406,
+          577.500732421875
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 21,
+        "pagina_impresa": 20,
+        "referencia": "[R3]",
+        "xref": 1318,
+        "coordenadas": [
+          304.39300537109375,
+          494.10076904296875,
+          323.7070007324219,
+          507.0007629394531
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 21,
+        "pagina_impresa": 20,
+        "referencia": "[R3]",
+        "xref": 1319,
+        "coordenadas": [
+          264.0929870605469,
+          413.35076904296875,
+          283.4070129394531,
+          426.2507629394531
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 21,
+        "pagina_impresa": 20,
+        "referencia": "[R3]",
+        "xref": 1320,
+        "coordenadas": [
+          289.0929870605469,
+          358.6507568359375,
+          304.7070007324219,
+          368.4507751464844
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 21,
+        "pagina_impresa": 20,
+        "referencia": "[R3]",
+        "xref": 1321,
+        "coordenadas": [
+          208.04299926757812,
+          135.10076904296875,
+          227.35699462890625,
+          148.00079345703125
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 22,
+        "pagina_impresa": 21,
+        "referencia": "[R11]",
+        "xref": 1322,
+        "coordenadas": [
+          123.39299774169922,
+          613.30078125,
+          148.5070037841797,
+          626.2008056640625
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md"
+      },
+      {
+        "pagina_fisica": 22,
+        "pagina_impresa": 21,
+        "referencia": "[R4]",
+        "xref": 1323,
+        "coordenadas": [
+          101.24299621582031,
+          613.30078125,
+          120.55699920654297,
+          626.2008056640625
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T013915Z_v2/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T013915Z_v2/reporte.md"
+      },
+      {
+        "pagina_fisica": 22,
+        "pagina_impresa": 21,
+        "referencia": "[R11]",
+        "xref": 1324,
+        "coordenadas": [
+          201.59300231933594,
+          493.85076904296875,
+          226.70700073242188,
+          506.7507629394531
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md"
+      },
+      {
+        "pagina_fisica": 22,
+        "pagina_impresa": 21,
+        "referencia": "[R4]",
+        "xref": 1325,
+        "coordenadas": [
+          179.4429931640625,
+          493.85076904296875,
+          198.7570037841797,
+          506.7507629394531
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T013915Z_v2/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T013915Z_v2/reporte.md"
+      },
+      {
+        "pagina_fisica": 22,
+        "pagina_impresa": 21,
+        "referencia": "[R4]",
+        "xref": 1326,
+        "coordenadas": [
+          423.4429931640625,
+          436.2507629394531,
+          442.7569885253906,
+          449.1507568359375
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T013915Z_v2/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T013915Z_v2/reporte.md"
+      },
+      {
+        "pagina_fisica": 22,
+        "pagina_impresa": 21,
+        "referencia": "[R4]",
+        "xref": 1327,
+        "coordenadas": [
+          103.59300231933594,
+          378.6507568359375,
+          122.90699768066406,
+          391.55078125
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T013915Z_v2/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T013915Z_v2/reporte.md"
+      },
+      {
+        "pagina_fisica": 22,
+        "pagina_impresa": 21,
+        "referencia": "[R4]",
+        "xref": 1328,
+        "coordenadas": [
+          291.4930114746094,
+          311.05078125,
+          307.10699462890625,
+          320.85076904296875
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T013915Z_v2/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T013915Z_v2/reporte.md"
+      },
+      {
+        "pagina_fisica": 22,
+        "pagina_impresa": 21,
+        "referencia": "[R4]",
+        "xref": 1329,
+        "coordenadas": [
+          314.89300537109375,
+          122.20074462890625,
+          334.2070007324219,
+          135.10076904296875
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T013915Z_v2/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T013915Z_v2/reporte.md"
+      },
+      {
+        "pagina_fisica": 23,
+        "pagina_impresa": 22,
+        "referencia": "[R6]",
+        "xref": 1330,
+        "coordenadas": [
+          379.0429992675781,
+          632.1007690429688,
+          398.35699462890625,
+          645.000732421875
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 23,
+        "pagina_impresa": 22,
+        "referencia": "[R5]",
+        "xref": 1331,
+        "coordenadas": [
+          356.89300537109375,
+          632.1007690429688,
+          376.2070007324219,
+          645.000732421875
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/riesgo_intradia/20260926T214118Z/paquete_20260926T220400Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/riesgo_intradia/20260926T214118Z/paquete_20260926T220400Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 23,
+        "pagina_impresa": 22,
+        "referencia": "[R5]",
+        "xref": 1332,
+        "coordenadas": [
+          421.64300537109375,
+          561.6007690429688,
+          440.9570007324219,
+          574.500732421875
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/riesgo_intradia/20260926T214118Z/paquete_20260926T220400Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/riesgo_intradia/20260926T214118Z/paquete_20260926T220400Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 23,
+        "pagina_impresa": 22,
+        "referencia": "[R5]",
+        "xref": 1333,
+        "coordenadas": [
+          500.4930114746094,
+          467.9507751464844,
+          519.8070068359375,
+          480.85076904296875
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/riesgo_intradia/20260926T214118Z/paquete_20260926T220400Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/riesgo_intradia/20260926T214118Z/paquete_20260926T220400Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 23,
+        "pagina_impresa": 22,
+        "referencia": "[R5]",
+        "xref": 1334,
+        "coordenadas": [
+          117.59300231933594,
+          413.2507629394531,
+          133.20700073242188,
+          423.05078125
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/riesgo_intradia/20260926T214118Z/paquete_20260926T220400Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/riesgo_intradia/20260926T214118Z/paquete_20260926T220400Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 23,
+        "pagina_impresa": 22,
+        "referencia": "[R5]",
+        "xref": 1335,
+        "coordenadas": [
+          168.64300537109375,
+          224.30078125,
+          184.2570037841797,
+          234.10076904296875
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/riesgo_intradia/20260926T214118Z/paquete_20260926T220400Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/riesgo_intradia/20260926T214118Z/paquete_20260926T220400Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 23,
+        "pagina_impresa": 22,
+        "referencia": "[R5]",
+        "xref": 1336,
+        "coordenadas": [
+          164.84300231933594,
+          122.20074462890625,
+          184.15699768066406,
+          135.10076904296875
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/riesgo_intradia/20260926T214118Z/paquete_20260926T220400Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/riesgo_intradia/20260926T214118Z/paquete_20260926T220400Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 24,
+        "pagina_impresa": 23,
+        "referencia": "[R6]",
+        "xref": 1337,
+        "coordenadas": [
+          446.7929992675781,
+          547.7008056640625,
+          466.10699462890625,
+          560.6007690429688
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 24,
+        "pagina_impresa": 23,
+        "referencia": "[R6]",
+        "xref": 1338,
+        "coordenadas": [
+          208.04299926757812,
+          490.10076904296875,
+          227.35699462890625,
+          503.0007629394531
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 24,
+        "pagina_impresa": 23,
+        "referencia": "[R6]",
+        "xref": 1339,
+        "coordenadas": [
+          268.2929992675781,
+          422.5007629394531,
+          283.9070129394531,
+          432.30078125
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 24,
+        "pagina_impresa": 23,
+        "referencia": "[R6]",
+        "xref": 1340,
+        "coordenadas": [
+          268.1929931640625,
+          240.6507568359375,
+          287.5069885253906,
+          253.55078125
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 24,
+        "pagina_impresa": 23,
+        "referencia": "[R5]",
+        "xref": 1341,
+        "coordenadas": [
+          171.29299926757812,
+          170.1507568359375,
+          190.60699462890625,
+          183.05078125
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/riesgo_intradia/20260926T214118Z/paquete_20260926T220400Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/riesgo_intradia/20260926T214118Z/paquete_20260926T220400Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 25,
+        "pagina_impresa": 24,
+        "referencia": "[R6]",
+        "xref": 1342,
+        "coordenadas": [
+          121.64299774169922,
+          559.8507690429688,
+          140.95700073242188,
+          572.750732421875
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 25,
+        "pagina_impresa": 24,
+        "referencia": "[R5]",
+        "xref": 1343,
+        "coordenadas": [
+          99.49299621582031,
+          559.8507690429688,
+          118.80699920654297,
+          572.750732421875
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/riesgo_intradia/20260926T214118Z/paquete_20260926T220400Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/riesgo_intradia/20260926T214118Z/paquete_20260926T220400Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 25,
+        "pagina_impresa": 24,
+        "referencia": "[R11]",
+        "xref": 1344,
+        "coordenadas": [
+          287.39300537109375,
+          502.2507629394531,
+          312.5069885253906,
+          515.1507568359375
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md"
+      },
+      {
+        "pagina_fisica": 25,
+        "pagina_impresa": 24,
+        "referencia": "[R6]",
+        "xref": 1345,
+        "coordenadas": [
+          265.2430114746094,
+          502.2507629394531,
+          284.5570068359375,
+          515.1507568359375
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 25,
+        "pagina_impresa": 24,
+        "referencia": "[R6]",
+        "xref": 1346,
+        "coordenadas": [
+          502.2430114746094,
+          431.7507629394531,
+          521.5570068359375,
+          444.6507568359375
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 25,
+        "pagina_impresa": 24,
+        "referencia": "[R6]",
+        "xref": 1347,
+        "coordenadas": [
+          118.04299926757812,
+          377.05078125,
+          133.65699768066406,
+          386.85076904296875
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 25,
+        "pagina_impresa": 24,
+        "referencia": "[R6]",
+        "xref": 1348,
+        "coordenadas": [
+          205.14300537109375,
+          247.25079345703125,
+          224.45700073242188,
+          260.1507568359375
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 25,
+        "pagina_impresa": 24,
+        "referencia": "[R6]",
+        "xref": 1349,
+        "coordenadas": [
+          422.2929992675781,
+          176.75079345703125,
+          441.60699462890625,
+          189.6507568359375
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 25,
+        "pagina_impresa": 24,
+        "referencia": "[R6]",
+        "xref": 1350,
+        "coordenadas": [
+          510.39300537109375,
+          106.25079345703125,
+          529.7069702148438,
+          119.1507568359375
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 26,
+        "pagina_impresa": 25,
+        "referencia": "[R11]",
+        "xref": 1351,
+        "coordenadas": [
+          276.2430114746094,
+          531.000732421875,
+          301.35699462890625,
+          543.9007568359375
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md"
+      },
+      {
+        "pagina_fisica": 26,
+        "pagina_impresa": 25,
+        "referencia": "[R7]",
+        "xref": 1352,
+        "coordenadas": [
+          254.09300231933594,
+          531.000732421875,
+          273.4070129394531,
+          543.9007568359375
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 26,
+        "pagina_impresa": 25,
+        "referencia": "[R1]",
+        "xref": 1353,
+        "coordenadas": [
+          231.9429931640625,
+          531.000732421875,
+          251.2570037841797,
+          543.9007568359375
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/retorno_capital/20260927T143928Z/paquete_20260927T152732Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/retorno_capital/20260927T143928Z/paquete_20260927T152732Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 26,
+        "pagina_impresa": 25,
+        "referencia": "[R7]",
+        "xref": 1354,
+        "coordenadas": [
+          284.4930114746094,
+          437.35076904296875,
+          303.8070068359375,
+          450.2507629394531
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 26,
+        "pagina_impresa": 25,
+        "referencia": "[R7]",
+        "xref": 1355,
+        "coordenadas": [
+          341.14300537109375,
+          366.85076904296875,
+          360.4570007324219,
+          379.7507629394531
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 26,
+        "pagina_impresa": 25,
+        "referencia": "[R7]",
+        "xref": 1356,
+        "coordenadas": [
+          246.59300231933594,
+          309.25079345703125,
+          265.9070129394531,
+          322.1507568359375
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 26,
+        "pagina_impresa": 25,
+        "referencia": "[R7]",
+        "xref": 1357,
+        "coordenadas": [
+          224.84300231933594,
+          241.6507568359375,
+          240.45700073242188,
+          251.45074462890625
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 26,
+        "pagina_impresa": 25,
+        "referencia": "[R7]",
+        "xref": 1358,
+        "coordenadas": [
+          232.54299926757812,
+          122.20074462890625,
+          251.85699462890625,
+          135.10076904296875
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 27,
+        "pagina_impresa": 26,
+        "referencia": "[R8]",
+        "xref": 1359,
+        "coordenadas": [
+          286.1929931640625,
+          558.7008056640625,
+          305.5069885253906,
+          571.6007690429688
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/reglas_historicas/20260925T005436Z/cobertura_pendiente.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/reglas_historicas/20260925T005436Z/cobertura_pendiente.md"
+      },
+      {
+        "pagina_fisica": 27,
+        "pagina_impresa": 26,
+        "referencia": "[R4]",
+        "xref": 1360,
+        "coordenadas": [
+          264.0429992675781,
+          558.7008056640625,
+          283.35699462890625,
+          571.6007690429688
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T013915Z_v2/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T013915Z_v2/reporte.md"
+      },
+      {
+        "pagina_fisica": 27,
+        "pagina_impresa": 26,
+        "referencia": "[R3]",
+        "xref": 1361,
+        "coordenadas": [
+          241.89300537109375,
+          558.7008056640625,
+          261.2070007324219,
+          571.6007690429688
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 27,
+        "pagina_impresa": 26,
+        "referencia": "[R8]",
+        "xref": 1362,
+        "coordenadas": [
+          118.69300079345703,
+          488.2007751464844,
+          138.0070037841797,
+          501.10076904296875
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/reglas_historicas/20260925T005436Z/cobertura_pendiente.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/reglas_historicas/20260925T005436Z/cobertura_pendiente.md"
+      },
+      {
+        "pagina_fisica": 27,
+        "pagina_impresa": 26,
+        "referencia": "[R5]",
+        "xref": 1363,
+        "coordenadas": [
+          96.54299926757812,
+          488.2007751464844,
+          115.85700225830078,
+          501.10076904296875
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/riesgo_intradia/20260926T214118Z/paquete_20260926T220400Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/riesgo_intradia/20260926T214118Z/paquete_20260926T220400Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 27,
+        "pagina_impresa": 26,
+        "referencia": "[R8]",
+        "xref": 1364,
+        "coordenadas": [
+          180.04299926757812,
+          381.6507568359375,
+          199.35699462890625,
+          394.55078125
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/reglas_historicas/20260925T005436Z/cobertura_pendiente.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/reglas_historicas/20260925T005436Z/cobertura_pendiente.md"
+      },
+      {
+        "pagina_fisica": 27,
+        "pagina_impresa": 26,
+        "referencia": "[R9]",
+        "xref": 1365,
+        "coordenadas": [
+          131.59300231933594,
+          311.1507568359375,
+          150.90699768066406,
+          324.05078125
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/reglas_historicas/correccion_exposicion_h2_20260925T150139Z/paquete_20260926T204312Z/comparacion/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/reglas_historicas/correccion_exposicion_h2_20260925T150139Z/paquete_20260926T204312Z/comparacion/reporte.md"
+      },
+      {
+        "pagina_fisica": 27,
+        "pagina_impresa": 26,
+        "referencia": "[R5]",
+        "xref": 1366,
+        "coordenadas": [
+          109.44300079345703,
+          311.1507568359375,
+          128.7570037841797,
+          324.05078125
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/riesgo_intradia/20260926T214118Z/paquete_20260926T220400Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/riesgo_intradia/20260926T214118Z/paquete_20260926T220400Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 27,
+        "pagina_impresa": 26,
+        "referencia": "[R9]",
+        "xref": 1367,
+        "coordenadas": [
+          428.64300537109375,
+          240.6507568359375,
+          447.9570007324219,
+          253.55078125
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/reglas_historicas/correccion_exposicion_h2_20260925T150139Z/paquete_20260926T204312Z/comparacion/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/reglas_historicas/correccion_exposicion_h2_20260925T150139Z/paquete_20260926T204312Z/comparacion/reporte.md"
+      },
+      {
+        "pagina_fisica": 27,
+        "pagina_impresa": 26,
+        "referencia": "[R8]",
+        "xref": 1368,
+        "coordenadas": [
+          406.4930114746094,
+          240.6507568359375,
+          425.8070068359375,
+          253.55078125
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/reglas_historicas/20260925T005436Z/cobertura_pendiente.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/reglas_historicas/20260925T005436Z/cobertura_pendiente.md"
+      },
+      {
+        "pagina_fisica": 27,
+        "pagina_impresa": 26,
+        "referencia": "[R8]",
+        "xref": 1369,
+        "coordenadas": [
+          126.34300231933594,
+          170.1507568359375,
+          145.65699768066406,
+          183.05078125
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/reglas_historicas/20260925T005436Z/cobertura_pendiente.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/reglas_historicas/20260925T005436Z/cobertura_pendiente.md"
+      },
+      {
+        "pagina_fisica": 28,
+        "pagina_impresa": 27,
+        "referencia": "[R11]",
+        "xref": 1370,
+        "coordenadas": [
+          347.6929931640625,
+          620.9007568359375,
+          368.0570068359375,
+          630.7008056640625
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md"
+      },
+      {
+        "pagina_fisica": 28,
+        "pagina_impresa": 27,
+        "referencia": "[R10]",
+        "xref": 1371,
+        "coordenadas": [
+          325.0429992675781,
+          620.9007568359375,
+          345.4070129394531,
+          630.7008056640625
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/reporte.md"
+      },
+      {
+        "pagina_fisica": 28,
+        "pagina_impresa": 27,
+        "referencia": "[R11]",
+        "xref": 1372,
+        "coordenadas": [
+          242.4929962158203,
+          432.60076904296875,
+          267.60699462890625,
+          445.5007629394531
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md"
+      },
+      {
+        "pagina_fisica": 28,
+        "pagina_impresa": 27,
+        "referencia": "[R11]",
+        "xref": 1373,
+        "coordenadas": [
+          312.2430114746094,
+          365.0007629394531,
+          332.60699462890625,
+          374.80078125
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md"
+      },
+      {
+        "pagina_fisica": 28,
+        "pagina_impresa": 27,
+        "referencia": "[R10]",
+        "xref": 1374,
+        "coordenadas": [
+          488.1929931640625,
+          179.80078125,
+          513.3070068359375,
+          192.70074462890625
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/reporte.md"
+      },
+      {
+        "pagina_fisica": 28,
+        "pagina_impresa": 27,
+        "referencia": "[R11]",
+        "xref": 1375,
+        "coordenadas": [
+          416.39300537109375,
+          122.20074462890625,
+          441.5069885253906,
+          135.10076904296875
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md"
+      },
+      {
+        "pagina_fisica": 28,
+        "pagina_impresa": 27,
+        "referencia": "[R10]",
+        "xref": 1376,
+        "coordenadas": [
+          388.4429931640625,
+          122.20074462890625,
+          413.5570068359375,
+          135.10076904296875
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/reporte.md"
+      },
+      {
+        "pagina_fisica": 29,
+        "pagina_impresa": 28,
+        "referencia": "[R11]",
+        "xref": 1377,
+        "coordenadas": [
+          483.5429992675781,
+          603.6507568359375,
+          508.6570129394531,
+          616.55078125
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md"
+      },
+      {
+        "pagina_fisica": 29,
+        "pagina_impresa": 28,
+        "referencia": "[R11]",
+        "xref": 1378,
+        "coordenadas": [
+          199.2429962158203,
+          533.1507568359375,
+          224.35699462890625,
+          546.05078125
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md"
+      },
+      {
+        "pagina_fisica": 29,
+        "pagina_impresa": 28,
+        "referencia": "[R10]",
+        "xref": 1379,
+        "coordenadas": [
+          171.29299926757812,
+          533.1507568359375,
+          196.40699768066406,
+          546.05078125
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/reporte.md"
+      },
+      {
+        "pagina_fisica": 29,
+        "pagina_impresa": 28,
+        "referencia": "[R11]",
+        "xref": 1380,
+        "coordenadas": [
+          410.5429992675781,
+          462.6507568359375,
+          435.6570129394531,
+          475.55078125
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md"
+      },
+      {
+        "pagina_fisica": 29,
+        "pagina_impresa": 28,
+        "referencia": "[R7]",
+        "xref": 1381,
+        "coordenadas": [
+          388.39300537109375,
+          462.6507568359375,
+          407.7070007324219,
+          475.55078125
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 29,
+        "pagina_impresa": 28,
+        "referencia": "[R11]",
+        "xref": 1382,
+        "coordenadas": [
+          178.1929931640625,
+          405.05078125,
+          203.3070068359375,
+          417.9507751464844
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md"
+      },
+      {
+        "pagina_fisica": 29,
+        "pagina_impresa": 28,
+        "referencia": "[R10]",
+        "xref": 1383,
+        "coordenadas": [
+          150.2429962158203,
+          405.05078125,
+          175.35699462890625,
+          417.9507751464844
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/reporte.md"
+      },
+      {
+        "pagina_fisica": 29,
+        "pagina_impresa": 28,
+        "referencia": "[R2]",
+        "xref": 1384,
+        "coordenadas": [
+          128.09300231933594,
+          405.05078125,
+          147.40699768066406,
+          417.9507751464844
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/senal_entradas/20260927T170230Z/paquete_20260927T185305Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/senal_entradas/20260927T170230Z/paquete_20260927T185305Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 29,
+        "pagina_impresa": 28,
+        "referencia": "[R10]",
+        "xref": 1385,
+        "coordenadas": [
+          176.4929962158203,
+          311.4007568359375,
+          201.60699462890625,
+          324.30078125
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/reporte.md"
+      },
+      {
+        "pagina_fisica": 29,
+        "pagina_impresa": 28,
+        "referencia": "[R10]",
+        "xref": 1386,
+        "coordenadas": [
+          212.59300231933594,
+          243.80078125,
+          232.95700073242188,
+          253.60076904296875
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/reporte.md"
+      },
+      {
+        "pagina_fisica": 29,
+        "pagina_impresa": 28,
+        "referencia": "[R10]",
+        "xref": 1387,
+        "coordenadas": [
+          121.09300231933594,
+          143.35076904296875,
+          146.20700073242188,
+          156.25079345703125
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/reporte.md"
+      },
+      {
+        "pagina_fisica": 30,
+        "pagina_impresa": 29,
+        "referencia": "[R11]",
+        "xref": 1388,
+        "coordenadas": [
+          264.64300537109375,
+          564.6007690429688,
+          289.7569885253906,
+          577.500732421875
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md"
+      },
+      {
+        "pagina_fisica": 30,
+        "pagina_impresa": 29,
+        "referencia": "[R8]",
+        "xref": 1389,
+        "coordenadas": [
+          242.4929962158203,
+          564.6007690429688,
+          261.8070068359375,
+          577.500732421875
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/reglas_historicas/20260925T005436Z/cobertura_pendiente.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/reglas_historicas/20260925T005436Z/cobertura_pendiente.md"
+      },
+      {
+        "pagina_fisica": 30,
+        "pagina_impresa": 29,
+        "referencia": "[R12]",
+        "xref": 1390,
+        "coordenadas": [
+          279.8429870605469,
+          507.0007629394531,
+          304.9570007324219,
+          519.9007568359375
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/docs/entrega_4/matriz_avance.csv",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/docs/entrega_4/matriz_avance.csv"
+      },
+      {
+        "pagina_fisica": 30,
+        "pagina_impresa": 29,
+        "referencia": "[R11]",
+        "xref": 1391,
+        "coordenadas": [
+          382.6929931640625,
+          452.30078125,
+          403.0570068359375,
+          462.10076904296875
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md"
+      },
+      {
+        "pagina_fisica": 30,
+        "pagina_impresa": 29,
+        "referencia": "[R11]",
+        "xref": 1392,
+        "coordenadas": [
+          344.5429992675781,
+          205.60076904296875,
+          369.6570129394531,
+          218.50079345703125
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md"
+      },
+      {
+        "pagina_fisica": 30,
+        "pagina_impresa": 29,
+        "referencia": "[R10]",
+        "xref": 1393,
+        "coordenadas": [
+          316.5929870605469,
+          205.60076904296875,
+          341.7070007324219,
+          218.50079345703125
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/reporte.md"
+      },
+      {
+        "pagina_fisica": 30,
+        "pagina_impresa": 29,
+        "referencia": "[R12]",
+        "xref": 1394,
+        "coordenadas": [
+          115.24299621582031,
+          135.10076904296875,
+          140.35699462890625,
+          148.00079345703125
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/docs/entrega_4/matriz_avance.csv",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/docs/entrega_4/matriz_avance.csv"
+      },
+      {
+        "pagina_fisica": 31,
+        "pagina_impresa": 30,
+        "referencia": "[R10]",
+        "xref": 1395,
+        "coordenadas": [
+          405.89300537109375,
+          520.05078125,
+          431.0069885253906,
+          532.9508056640625
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/reporte.md"
+      },
+      {
+        "pagina_fisica": 31,
+        "pagina_impresa": 30,
+        "referencia": "[R12]",
+        "xref": 1400,
+        "coordenadas": [
+          58.09299850463867,
+          361.9007568359375,
+          79.65699768066406,
+          372.2507629394531
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/docs/entrega_4/matriz_avance.csv",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/docs/entrega_4/matriz_avance.csv"
+      },
+      {
+        "pagina_fisica": 31,
+        "pagina_impresa": 30,
+        "referencia": "[R11]",
+        "xref": 1401,
+        "coordenadas": [
+          58.09299850463867,
+          333.2007751464844,
+          79.65699768066406,
+          343.55078125
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md"
+      },
+      {
+        "pagina_fisica": 31,
+        "pagina_impresa": 30,
+        "referencia": "[R10]",
+        "xref": 1402,
+        "coordenadas": [
+          58.09299850463867,
+          314.85076904296875,
+          79.65699768066406,
+          325.20074462890625
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/reporte.md"
+      },
+      {
+        "pagina_fisica": 31,
+        "pagina_impresa": 30,
+        "referencia": "[R9]",
+        "xref": 1403,
+        "coordenadas": [
+          58.09299850463867,
+          286.1507568359375,
+          74.65699768066406,
+          296.50079345703125
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/reglas_historicas/correccion_exposicion_h2_20260925T150139Z/paquete_20260926T204312Z/comparacion/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/reglas_historicas/correccion_exposicion_h2_20260925T150139Z/paquete_20260926T204312Z/comparacion/reporte.md"
+      },
+      {
+        "pagina_fisica": 31,
+        "pagina_impresa": 30,
+        "referencia": "[R8]",
+        "xref": 1404,
+        "coordenadas": [
+          58.09299850463867,
+          267.80078125,
+          74.65699768066406,
+          278.1507568359375
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/reglas_historicas/20260925T005436Z/cobertura_pendiente.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/reglas_historicas/20260925T005436Z/cobertura_pendiente.md"
+      },
+      {
+        "pagina_fisica": 31,
+        "pagina_impresa": 30,
+        "referencia": "[R7]",
+        "xref": 1405,
+        "coordenadas": [
+          58.09299850463867,
+          249.45074462890625,
+          74.65699768066406,
+          259.80078125
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 31,
+        "pagina_impresa": 30,
+        "referencia": "[R6]",
+        "xref": 1406,
+        "coordenadas": [
+          58.09299850463867,
+          231.10076904296875,
+          74.65699768066406,
+          241.45074462890625
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 31,
+        "pagina_impresa": 30,
+        "referencia": "[R5]",
+        "xref": 1407,
+        "coordenadas": [
+          58.09299850463867,
+          212.75079345703125,
+          74.65699768066406,
+          223.10076904296875
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/riesgo_intradia/20260926T214118Z/paquete_20260926T220400Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/riesgo_intradia/20260926T214118Z/paquete_20260926T220400Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 31,
+        "pagina_impresa": 30,
+        "referencia": "[R4]",
+        "xref": 1408,
+        "coordenadas": [
+          58.09299850463867,
+          194.4007568359375,
+          74.65699768066406,
+          204.75079345703125
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T013915Z_v2/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T013915Z_v2/reporte.md"
+      },
+      {
+        "pagina_fisica": 31,
+        "pagina_impresa": 30,
+        "referencia": "[R3]",
+        "xref": 1409,
+        "coordenadas": [
+          58.09299850463867,
+          176.05078125,
+          74.65699768066406,
+          186.4007568359375
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 31,
+        "pagina_impresa": 30,
+        "referencia": "[R2]",
+        "xref": 1410,
+        "coordenadas": [
+          58.09299850463867,
+          157.70074462890625,
+          74.65699768066406,
+          168.05078125
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/senal_entradas/20260927T170230Z/paquete_20260927T185305Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/senal_entradas/20260927T170230Z/paquete_20260927T185305Z/reporte.md"
+      },
+      {
+        "pagina_fisica": 31,
+        "pagina_impresa": 30,
+        "referencia": "[R1]",
+        "xref": 1411,
+        "coordenadas": [
+          58.09299850463867,
+          129.00079345703125,
+          74.65699768066406,
+          139.35076904296875
+        ],
+        "url_anterior": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/retorno_capital/20260927T143928Z/paquete_20260927T152732Z/reporte.md",
+        "url_final": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/retorno_capital/20260927T143928Z/paquete_20260927T152732Z/reporte.md"
+      }
+    ],
+    "conservadas": [
+      {
+        "page": 16,
+        "xref": 57,
+        "uri": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/codex/crypto-carry/data/research/funding-price-sensitivity-20260920/README.md",
+        "label": "análisis de sensibilidad para los precios faltantes,"
+      },
+      {
+        "page": 16,
+        "xref": 58,
+        "uri": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno",
+        "label": "repositorio del proyecto"
+      },
+      {
+        "page": 16,
+        "xref": 59,
+        "uri": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/tree/codex/crypto-carry/Paquete%20de%20evidencia",
+        "label": "paquete de evidencia"
+      },
+      {
+        "page": 17,
+        "xref": 62,
+        "uri": "https://doi.org/10.1111/mafi.70018",
+        "label": "Artículo"
+      },
+      {
+        "page": 17,
+        "xref": 63,
+        "uri": "https://arxiv.org/abs/2510.14435",
+        "label": "Manuscrito"
+      },
+      {
+        "page": 17,
+        "xref": 64,
+        "uri": "https://gerbil.life/papers/CarryTrade.v1.2.pdf",
+        "label": "Manuscrito"
+      },
+      {
+        "page": 17,
+        "xref": 65,
+        "uri": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5576424",
+        "label": "Registro"
+      },
+      {
+        "page": 17,
+        "xref": 66,
+        "uri": "https://www.cmstatistics.org/RegistrationsV2/CFECMStatistics2025/viewSubmission.php?in=1301&token=o1n4r30pp8r239sq1o0os653591o7nn1",
+        "label": "Resumen consultado"
+      },
+      {
+        "page": 17,
+        "xref": 67,
+        "uri": "https://doi.org/10.1287/mnsc.2024.05069",
+        "label": "Artículo"
+      },
+      {
+        "page": 17,
+        "xref": 68,
+        "uri": "https://doi.org/10.1111/j.1540-6261.1997.tb03807.x",
+        "label": "Artículo"
+      },
+      {
+        "page": 17,
+        "xref": 69,
+        "uri": "https://github.com/binance/binance-public-data",
+        "label": "Binance Public Data"
+      },
+      {
+        "page": 17,
+        "xref": 70,
+        "uri": "https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/rest-api/market-data",
+        "label": "Datos de mercado"
+      },
+      {
+        "page": 17,
+        "xref": 71,
+        "uri": "https://www.binance.com/en/support/faq/detail/360033525031",
+        "label": "Funding"
+      },
+      {
+        "page": 17,
+        "xref": 72,
+        "uri": "https://www.binance.com/pt/blog/futures/457299340443288694",
+        "label": "Saldos"
+      },
+      {
+        "page": 17,
+        "xref": 73,
+        "uri": "https://www.binance.com/en/support/faq/detail/87fa7ee33b574f7084d42bd2ce2e463b",
+        "label": "Margen inicial y open loss"
+      },
+      {
+        "page": 17,
+        "xref": 74,
+        "uri": "https://www.binance.com/en-AE/support/faq/detail/b3c689c1f50a44cabb3a84e663b81d93",
+        "label": "Precio de liquidación"
+      },
+      {
+        "page": 17,
+        "xref": 75,
+        "uri": "https://www.binance.com/en/support/faq/detail/360033525271",
+        "label": "Protocolo de liquidación"
+      },
+      {
+        "page": 17,
+        "xref": 76,
+        "uri": "https://www.binance.com/en/support/faq/detail/360033544231",
+        "label": "Comisiones"
+      },
+      {
+        "page": 17,
+        "xref": 77,
+        "uri": "https://nautilustrader.io/docs/latest/integrations/binance/",
+        "label": "Integración"
+      },
+      {
+        "page": 17,
+        "xref": 78,
+        "uri": "https://nautilustrader.io/docs/latest/concepts/backtesting/accounts-and-margin/",
+        "label": "Contabilidad"
+      },
+      {
+        "page": 17,
+        "xref": 79,
+        "uri": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno",
+        "label": "Repositorio del proyecto."
+      },
+      {
+        "page": 31,
+        "xref": 1396,
+        "uri": "https://numpy.org/doc/stable/reference/random/parallel.html",
+        "label": "[R16]"
+      },
+      {
+        "page": 31,
+        "xref": 1397,
+        "uri": "https://bashtage.github.io/arch/bootstrap/generated/arch.bootstrap.CircularBlockBootstrap.html",
+        "label": "[R15]"
+      },
+      {
+        "page": 31,
+        "xref": 1398,
+        "uri": "https://www.newyorkfed.org/markets/reference-rates/additional-information-about-reference-rates",
+        "label": "[R14]"
+      },
+      {
+        "page": 31,
+        "xref": 1399,
+        "uri": "https://www.newyorkfed.org/markets/reference-rates/sofr",
+        "label": "[R13]"
+      }
+    ]
+  },
+  "public_reference_checks": {
+    "source_pdf": "Tesina_Entregas_3_y_4_Pablo_Salerno(1).pdf",
+    "source_pdf_sha256": "653cd099351f42bb1e93dc738be3b839371fcf6e96a04e254e6e12588a7680dd",
+    "source_commit": "f1f4857fe53ac02585f739f7927031ed029da172",
+    "target_commit": "c0b432d8bff7fb86cf86a6bc0b28beffab225516",
+    "references": [
+      {
+        "reference": "R1",
+        "physical_page": 31,
+        "printed_page": 30,
+        "pdf_annotation_xref": 1411,
+        "label_text": "[R1]",
+        "source_reference_text": "[R1] Salerno, P. (2026). Retorno, capital y restricciones de entrada. Evidencia de ciclos, atribución por activo y  evaluaciones de entrada.",
+        "original_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/retorno_capital/20260927T143928Z/paquete_20260927T152732Z/reporte.md",
+        "requested_new_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/retorno_capital/20260927T143928Z/paquete_20260927T152732Z/reporte.md",
+        "rectangle": [
+          58.09299850463867,
+          129.00079345703125,
+          74.65699768066406,
+          139.35076904296875
+        ],
+        "tree_check": {
+          "path": "entregas/entrega_4/retorno_capital/20260927T143928Z/paquete_20260927T152732Z/reporte.md",
+          "present": true,
+          "type": "blob",
+          "expected_git_blob_sha1": "849879ded356b8eb616aab0c552fcb373b7201fc",
+          "expected_bytes": 17503
+        },
+        "fragment": null,
+        "fragment_check": "not_applicable",
+        "public_page": {
+          "requested_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/retorno_capital/20260927T143928Z/paquete_20260927T152732Z/reporte.md",
+          "checked_utc": "2026-10-02T16:05:47.372510+00:00",
+          "status": 200,
+          "final_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/retorno_capital/20260927T143928Z/paquete_20260927T152732Z/reporte.md",
+          "bytes": 398581,
+          "content_type": "text/html; charset=utf-8",
+          "content_sha256": "36e6fe24b7da460e133bc083ebf9d1060c22dde99ca1dd404e94139c77f0a250",
+          "same_exact_destination": true
+        },
+        "raw_file": {
+          "requested_url": "https://raw.githubusercontent.com/pgs00/crypto-carry-thesis-pablo-salerno/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/retorno_capital/20260927T143928Z/paquete_20260927T152732Z/reporte.md",
+          "checked_utc": "2026-10-02T16:05:48.452843+00:00",
+          "status": 200,
+          "final_url": "https://raw.githubusercontent.com/pgs00/crypto-carry-thesis-pablo-salerno/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/retorno_capital/20260927T143928Z/paquete_20260927T152732Z/reporte.md",
+          "bytes": 17503,
+          "content_type": "text/plain; charset=utf-8",
+          "content_sha256": "d5d89ba26fc7881eb1c8631e1e6533791b4099426a32c7c240b9e1e327eab200",
+          "git_blob_sha1": "849879ded356b8eb616aab0c552fcb373b7201fc",
+          "matches_git_blob": true,
+          "matches_tree_size": true
+        },
+        "passed": true
+      },
+      {
+        "reference": "R2",
+        "physical_page": 31,
+        "printed_page": 30,
+        "pdf_annotation_xref": 1410,
+        "label_text": "[R2]",
+        "source_reference_text": "[R2] Salerno, P. (2026). Señal y selección de entradas. Sensibilidad de horizonte, vida media y techo del basis.",
+        "original_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/senal_entradas/20260927T170230Z/paquete_20260927T185305Z/reporte.md",
+        "requested_new_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/senal_entradas/20260927T170230Z/paquete_20260927T185305Z/reporte.md",
+        "rectangle": [
+          58.09299850463867,
+          157.70074462890625,
+          74.65699768066406,
+          168.05078125
+        ],
+        "tree_check": {
+          "path": "entregas/entrega_4/senal_entradas/20260927T170230Z/paquete_20260927T185305Z/reporte.md",
+          "present": true,
+          "type": "blob",
+          "expected_git_blob_sha1": "cdb6ac989e5830b31907e199494a31333b2670b2",
+          "expected_bytes": 24749
+        },
+        "fragment": null,
+        "fragment_check": "not_applicable",
+        "public_page": {
+          "requested_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/senal_entradas/20260927T170230Z/paquete_20260927T185305Z/reporte.md",
+          "checked_utc": "2026-10-02T16:05:47.373209+00:00",
+          "status": 200,
+          "final_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/senal_entradas/20260927T170230Z/paquete_20260927T185305Z/reporte.md",
+          "bytes": 435374,
+          "content_type": "text/html; charset=utf-8",
+          "content_sha256": "0eaf42108df11a8155116f003ee9e622dac91aaa3d353fe1ce015a862659726e",
+          "same_exact_destination": true
+        },
+        "raw_file": {
+          "requested_url": "https://raw.githubusercontent.com/pgs00/crypto-carry-thesis-pablo-salerno/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/senal_entradas/20260927T170230Z/paquete_20260927T185305Z/reporte.md",
+          "checked_utc": "2026-10-02T16:05:48.514121+00:00",
+          "status": 200,
+          "final_url": "https://raw.githubusercontent.com/pgs00/crypto-carry-thesis-pablo-salerno/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/senal_entradas/20260927T170230Z/paquete_20260927T185305Z/reporte.md",
+          "bytes": 24749,
+          "content_type": "text/plain; charset=utf-8",
+          "content_sha256": "71a37f2e9f729bd04309619eddaf10d798a49cbb5bd8ca1c7a8b581791af281f",
+          "git_blob_sha1": "cdb6ac989e5830b31907e199494a31333b2670b2",
+          "matches_git_blob": true,
+          "matches_tree_size": true
+        },
+        "passed": true
+      },
+      {
+        "reference": "R3",
+        "physical_page": 31,
+        "printed_page": 30,
+        "pdf_annotation_xref": 1409,
+        "label_text": "[R3]",
+        "source_reference_text": "[R3] Salerno, P. (2026). Costos y capacidad. Comisiones, deslizamiento, participación en volumen y capital inicial.",
+        "original_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z/reporte.md",
+        "requested_new_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z/reporte.md",
+        "rectangle": [
+          58.09299850463867,
+          176.05078125,
+          74.65699768066406,
+          186.4007568359375
+        ],
+        "tree_check": {
+          "path": "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z/reporte.md",
+          "present": true,
+          "type": "blob",
+          "expected_git_blob_sha1": "8540a0525d3705b66b82de790033799e9c328e0a",
+          "expected_bytes": 29113
+        },
+        "fragment": null,
+        "fragment_check": "not_applicable",
+        "public_page": {
+          "requested_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z/reporte.md",
+          "checked_utc": "2026-10-02T16:05:47.373599+00:00",
+          "status": 200,
+          "final_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z/reporte.md",
+          "bytes": 478692,
+          "content_type": "text/html; charset=utf-8",
+          "content_sha256": "9020b02cf9cf9bf22bfd84d578d2c9c61df6352f61b69b8d0905729ff12a6eb7",
+          "same_exact_destination": true
+        },
+        "raw_file": {
+          "requested_url": "https://raw.githubusercontent.com/pgs00/crypto-carry-thesis-pablo-salerno/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z/reporte.md",
+          "checked_utc": "2026-10-02T16:05:48.583737+00:00",
+          "status": 200,
+          "final_url": "https://raw.githubusercontent.com/pgs00/crypto-carry-thesis-pablo-salerno/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z/reporte.md",
+          "bytes": 29113,
+          "content_type": "text/plain; charset=utf-8",
+          "content_sha256": "2a6717d842ebe2f98df8e29309c126331bed7cd15f62b0a69ea665cdc5e2c024",
+          "git_blob_sha1": "8540a0525d3705b66b82de790033799e9c328e0a",
+          "matches_git_blob": true,
+          "matches_tree_size": true
+        },
+        "passed": true
+      },
+      {
+        "reference": "R4",
+        "physical_page": 31,
+        "printed_page": 30,
+        "pdf_annotation_xref": 1408,
+        "label_text": "[R4]",
+        "source_reference_text": "[R4] Salerno, P. (2026). Precio de ejecución y demoras. Versión paquete_20260930T013915Z_v2.",
+        "original_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T013915Z_v2/reporte.md",
+        "requested_new_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T013915Z_v2/reporte.md",
+        "rectangle": [
+          58.09299850463867,
+          194.4007568359375,
+          74.65699768066406,
+          204.75079345703125
+        ],
+        "tree_check": {
+          "path": "entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T013915Z_v2/reporte.md",
+          "present": true,
+          "type": "blob",
+          "expected_git_blob_sha1": "aca984a26a71ce44c71873fad9d94f98213faa51",
+          "expected_bytes": 14740
+        },
+        "fragment": null,
+        "fragment_check": "not_applicable",
+        "public_page": {
+          "requested_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T013915Z_v2/reporte.md",
+          "checked_utc": "2026-10-02T16:05:47.374089+00:00",
+          "status": 200,
+          "final_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T013915Z_v2/reporte.md",
+          "bytes": 364398,
+          "content_type": "text/html; charset=utf-8",
+          "content_sha256": "8168da09c720d714371af9c93a9b15326f9088cc7c3bb6d1f14a989fe592571a",
+          "same_exact_destination": true
+        },
+        "raw_file": {
+          "requested_url": "https://raw.githubusercontent.com/pgs00/crypto-carry-thesis-pablo-salerno/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T013915Z_v2/reporte.md",
+          "checked_utc": "2026-10-02T16:05:48.747985+00:00",
+          "status": 200,
+          "final_url": "https://raw.githubusercontent.com/pgs00/crypto-carry-thesis-pablo-salerno/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T013915Z_v2/reporte.md",
+          "bytes": 14740,
+          "content_type": "text/plain; charset=utf-8",
+          "content_sha256": "7f4c95dac66c99bf49ec011365ec822d231b01c532f2674e810fb60448938fa1",
+          "git_blob_sha1": "aca984a26a71ce44c71873fad9d94f98213faa51",
+          "matches_git_blob": true,
+          "matches_tree_size": true
+        },
+        "passed": true
+      },
+      {
+        "reference": "R5",
+        "physical_page": 31,
+        "printed_page": 30,
+        "pdf_annotation_xref": 1407,
+        "label_text": "[R5]",
+        "source_reference_text": "[R5] Salerno, P. (2026). Riesgo intradía, incidentes y garantías. Reconstrucción original y valoración proxy.",
+        "original_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/riesgo_intradia/20260926T214118Z/paquete_20260926T220400Z/reporte.md",
+        "requested_new_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/riesgo_intradia/20260926T214118Z/paquete_20260926T220400Z/reporte.md",
+        "rectangle": [
+          58.09299850463867,
+          212.75079345703125,
+          74.65699768066406,
+          223.10076904296875
+        ],
+        "tree_check": {
+          "path": "entregas/entrega_4/riesgo_intradia/20260926T214118Z/paquete_20260926T220400Z/reporte.md",
+          "present": true,
+          "type": "blob",
+          "expected_git_blob_sha1": "aad0888e5d14a3e34c1494dd7c34efc5237b63d2",
+          "expected_bytes": 53336
+        },
+        "fragment": null,
+        "fragment_check": "not_applicable",
+        "public_page": {
+          "requested_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/riesgo_intradia/20260926T214118Z/paquete_20260926T220400Z/reporte.md",
+          "checked_utc": "2026-10-02T16:05:47.374740+00:00",
+          "status": 200,
+          "final_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/riesgo_intradia/20260926T214118Z/paquete_20260926T220400Z/reporte.md",
+          "bytes": 611060,
+          "content_type": "text/html; charset=utf-8",
+          "content_sha256": "dcc45cb7868acb8921846cb3d7900e6f051a98414e28e163ccc9147005fcd1fe",
+          "same_exact_destination": true
+        },
+        "raw_file": {
+          "requested_url": "https://raw.githubusercontent.com/pgs00/crypto-carry-thesis-pablo-salerno/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/riesgo_intradia/20260926T214118Z/paquete_20260926T220400Z/reporte.md",
+          "checked_utc": "2026-10-02T16:05:48.559370+00:00",
+          "status": 200,
+          "final_url": "https://raw.githubusercontent.com/pgs00/crypto-carry-thesis-pablo-salerno/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/riesgo_intradia/20260926T214118Z/paquete_20260926T220400Z/reporte.md",
+          "bytes": 53336,
+          "content_type": "text/plain; charset=utf-8",
+          "content_sha256": "a40d245638178f458f31c4f98c59d4721142cd9a009349c6276cd94715b192e8",
+          "git_blob_sha1": "aad0888e5d14a3e34c1494dd7c34efc5237b63d2",
+          "matches_git_blob": true,
+          "matches_tree_size": true
+        },
+        "passed": true
+      },
+      {
+        "reference": "R6",
+        "physical_page": 31,
+        "printed_page": 30,
+        "pdf_annotation_xref": 1406,
+        "label_text": "[R6]",
+        "source_reference_text": "[R6] Salerno, P. (2026). Estrés spot y contrafactual sin interrupción. Versión paquete_20261001T211248Z.",
+        "original_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/reporte.md",
+        "requested_new_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/reporte.md",
+        "rectangle": [
+          58.09299850463867,
+          231.10076904296875,
+          74.65699768066406,
+          241.45074462890625
+        ],
+        "tree_check": {
+          "path": "entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/reporte.md",
+          "present": true,
+          "type": "blob",
+          "expected_git_blob_sha1": "e3302b6faef2947945d6af0ad6572d861c5683ce",
+          "expected_bytes": 17961
+        },
+        "fragment": null,
+        "fragment_check": "not_applicable",
+        "public_page": {
+          "requested_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/reporte.md",
+          "checked_utc": "2026-10-02T16:05:47.375526+00:00",
+          "status": 200,
+          "final_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/reporte.md",
+          "bytes": 367748,
+          "content_type": "text/html; charset=utf-8",
+          "content_sha256": "b9963d83fd55a3c9f074838bb05d2f7685aadc1d885d808894bd0fb47da48920",
+          "same_exact_destination": true
+        },
+        "raw_file": {
+          "requested_url": "https://raw.githubusercontent.com/pgs00/crypto-carry-thesis-pablo-salerno/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/reporte.md",
+          "checked_utc": "2026-10-02T16:05:48.426413+00:00",
+          "status": 200,
+          "final_url": "https://raw.githubusercontent.com/pgs00/crypto-carry-thesis-pablo-salerno/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/reporte.md",
+          "bytes": 17961,
+          "content_type": "text/plain; charset=utf-8",
+          "content_sha256": "ce1c4e7a119a6ce0dec622102c72534177ef04245146ae281023705b5c5398d1",
+          "git_blob_sha1": "e3302b6faef2947945d6af0ad6572d861c5683ce",
+          "matches_git_blob": true,
+          "matches_tree_size": true
+        },
+        "passed": true
+      },
+      {
+        "reference": "R7",
+        "physical_page": 31,
+        "printed_page": 30,
+        "pdf_annotation_xref": 1405,
+        "label_text": "[R7]",
+        "source_reference_text": "[R7] Salerno, P. (2026). Carry y cuenta SOFR hipotética bruta. Protocolo, calendario y composición.",
+        "original_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/reporte.md",
+        "requested_new_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/reporte.md",
+        "rectangle": [
+          58.09299850463867,
+          249.45074462890625,
+          74.65699768066406,
+          259.80078125
+        ],
+        "tree_check": {
+          "path": "entregas/entrega_4/retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/reporte.md",
+          "present": true,
+          "type": "blob",
+          "expected_git_blob_sha1": "f5756c2a869dc08ec3a128a0d98ee531297b15df",
+          "expected_bytes": 10994
+        },
+        "fragment": null,
+        "fragment_check": "not_applicable",
+        "public_page": {
+          "requested_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/reporte.md",
+          "checked_utc": "2026-10-02T16:05:48.606609+00:00",
+          "status": 200,
+          "final_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/reporte.md",
+          "bytes": 321712,
+          "content_type": "text/html; charset=utf-8",
+          "content_sha256": "756f206c7d3cb318e4b7d54a2b14a75489c8ea73dde1ad50baca9eb4e16aca57",
+          "same_exact_destination": true
+        },
+        "raw_file": {
+          "requested_url": "https://raw.githubusercontent.com/pgs00/crypto-carry-thesis-pablo-salerno/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/reporte.md",
+          "checked_utc": "2026-10-02T16:05:49.397681+00:00",
+          "status": 200,
+          "final_url": "https://raw.githubusercontent.com/pgs00/crypto-carry-thesis-pablo-salerno/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/reporte.md",
+          "bytes": 10994,
+          "content_type": "text/plain; charset=utf-8",
+          "content_sha256": "0d4f3565160c2b1a799f1a128aa612b4e58715ccbf0e51ae90bd936fc5a000d0",
+          "git_blob_sha1": "f5756c2a869dc08ec3a128a0d98ee531297b15df",
+          "matches_git_blob": true,
+          "matches_tree_size": true
+        },
+        "passed": true
+      },
+      {
+        "reference": "R8",
+        "physical_page": 31,
+        "printed_page": 30,
+        "pdf_annotation_xref": 1404,
+        "label_text": "[R8]",
+        "source_reference_text": "[R8] Salerno, P. (2026). Cobertura histórica y decisiones pendientes. Fuentes y alcance de las reglas no acreditadas.",
+        "original_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/reglas_historicas/20260925T005436Z/cobertura_pendiente.md",
+        "requested_new_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/reglas_historicas/20260925T005436Z/cobertura_pendiente.md",
+        "rectangle": [
+          58.09299850463867,
+          267.80078125,
+          74.65699768066406,
+          278.1507568359375
+        ],
+        "tree_check": {
+          "path": "entregas/entrega_4/reglas_historicas/20260925T005436Z/cobertura_pendiente.md",
+          "present": true,
+          "type": "blob",
+          "expected_git_blob_sha1": "79ef8560f99a901b4bb732cd15aa502dc94e0ee3",
+          "expected_bytes": 4104
+        },
+        "fragment": null,
+        "fragment_check": "not_applicable",
+        "public_page": {
+          "requested_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/reglas_historicas/20260925T005436Z/cobertura_pendiente.md",
+          "checked_utc": "2026-10-02T16:05:48.683792+00:00",
+          "status": 200,
+          "final_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/reglas_historicas/20260925T005436Z/cobertura_pendiente.md",
+          "bytes": 265856,
+          "content_type": "text/html; charset=utf-8",
+          "content_sha256": "60a5d923581e56a8ad50d4d59119266ab3b6e077833f25db4706d757ad5e192c",
+          "same_exact_destination": true
+        },
+        "raw_file": {
+          "requested_url": "https://raw.githubusercontent.com/pgs00/crypto-carry-thesis-pablo-salerno/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/reglas_historicas/20260925T005436Z/cobertura_pendiente.md",
+          "checked_utc": "2026-10-02T16:05:49.601959+00:00",
+          "status": 200,
+          "final_url": "https://raw.githubusercontent.com/pgs00/crypto-carry-thesis-pablo-salerno/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/reglas_historicas/20260925T005436Z/cobertura_pendiente.md",
+          "bytes": 4104,
+          "content_type": "text/plain; charset=utf-8",
+          "content_sha256": "b60ad2537a68700e5420a01b4a91015c4ca2f849c93cbb539d6354d4aea44cad",
+          "git_blob_sha1": "79ef8560f99a901b4bb732cd15aa502dc94e0ee3",
+          "matches_git_blob": true,
+          "matches_tree_size": true
+        },
+        "passed": true
+      },
+      {
+        "reference": "R9",
+        "physical_page": 31,
+        "printed_page": 30,
+        "pdf_annotation_xref": 1403,
+        "label_text": "[R9]",
+        "source_reference_text": "[R9] Salerno, P. (2026). Corrección de exposición y H2 de la primera sensibilidad de reglas. Comparación vigente de  las doce carteras.",
+        "original_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/reglas_historicas/correccion_exposicion_h2_20260925T150139Z/paquete_20260926T204312Z/comparacion/reporte.md",
+        "requested_new_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/reglas_historicas/correccion_exposicion_h2_20260925T150139Z/paquete_20260926T204312Z/comparacion/reporte.md",
+        "rectangle": [
+          58.09299850463867,
+          286.1507568359375,
+          74.65699768066406,
+          296.50079345703125
+        ],
+        "tree_check": {
+          "path": "entregas/entrega_4/reglas_historicas/correccion_exposicion_h2_20260925T150139Z/paquete_20260926T204312Z/comparacion/reporte.md",
+          "present": true,
+          "type": "blob",
+          "expected_git_blob_sha1": "23c352fb741c4a93e25341c631ad32f86813f1a2",
+          "expected_bytes": 14183
+        },
+        "fragment": null,
+        "fragment_check": "not_applicable",
+        "public_page": {
+          "requested_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/reglas_historicas/correccion_exposicion_h2_20260925T150139Z/paquete_20260926T204312Z/comparacion/reporte.md",
+          "checked_utc": "2026-10-02T16:05:48.740727+00:00",
+          "status": 200,
+          "final_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/reglas_historicas/correccion_exposicion_h2_20260925T150139Z/paquete_20260926T204312Z/comparacion/reporte.md",
+          "bytes": 349070,
+          "content_type": "text/html; charset=utf-8",
+          "content_sha256": "0566a988a18063e68f29804a849822875b38715cddd6ac17580508b3484347d6",
+          "same_exact_destination": true
+        },
+        "raw_file": {
+          "requested_url": "https://raw.githubusercontent.com/pgs00/crypto-carry-thesis-pablo-salerno/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/reglas_historicas/correccion_exposicion_h2_20260925T150139Z/paquete_20260926T204312Z/comparacion/reporte.md",
+          "checked_utc": "2026-10-02T16:05:49.568211+00:00",
+          "status": 200,
+          "final_url": "https://raw.githubusercontent.com/pgs00/crypto-carry-thesis-pablo-salerno/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/reglas_historicas/correccion_exposicion_h2_20260925T150139Z/paquete_20260926T204312Z/comparacion/reporte.md",
+          "bytes": 14183,
+          "content_type": "text/plain; charset=utf-8",
+          "content_sha256": "25f9b51f9ccec242af3a035a4d828526fb22a83adad0845a8d5ade3ec63c78eb",
+          "git_blob_sha1": "23c352fb741c4a93e25341c631ad32f86813f1a2",
+          "matches_git_blob": true,
+          "matches_tree_size": true
+        },
+        "passed": true
+      },
+      {
+        "reference": "R10",
+        "physical_page": 31,
+        "printed_page": 30,
+        "pdf_annotation_xref": 1402,
+        "label_text": "[R10]",
+        "source_reference_text": "[R10] Salerno, P. (2026). Estabilidad temporal e incertidumbre. Versión paquete_final_verificado.",
+        "original_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/reporte.md",
+        "requested_new_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/reporte.md",
+        "rectangle": [
+          58.09299850463867,
+          314.85076904296875,
+          79.65699768066406,
+          325.20074462890625
+        ],
+        "tree_check": {
+          "path": "entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/reporte.md",
+          "present": true,
+          "type": "blob",
+          "expected_git_blob_sha1": "f79e201c4add132855e9f516c6b6ba5680ac548b",
+          "expected_bytes": 6785
+        },
+        "fragment": null,
+        "fragment_check": "not_applicable",
+        "public_page": {
+          "requested_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/reporte.md",
+          "checked_utc": "2026-10-02T16:05:48.796716+00:00",
+          "status": 200,
+          "final_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/reporte.md",
+          "bytes": 299285,
+          "content_type": "text/html; charset=utf-8",
+          "content_sha256": "a06eb1a83303d4c0fb66106393a5829b6c7812a067f04484e9650b4ec6263b37",
+          "same_exact_destination": true
+        },
+        "raw_file": {
+          "requested_url": "https://raw.githubusercontent.com/pgs00/crypto-carry-thesis-pablo-salerno/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/reporte.md",
+          "checked_utc": "2026-10-02T16:05:49.644455+00:00",
+          "status": 200,
+          "final_url": "https://raw.githubusercontent.com/pgs00/crypto-carry-thesis-pablo-salerno/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/reporte.md",
+          "bytes": 6785,
+          "content_type": "text/plain; charset=utf-8",
+          "content_sha256": "442ba8b8a0b6e99fa10e350676c4ad083bd84e8fbdd3a9443bcdf57b4d599bbe",
+          "git_blob_sha1": "f79e201c4add132855e9f516c6b6ba5680ac548b",
+          "matches_git_blob": true,
+          "matches_tree_size": true
+        },
+        "passed": true
+      },
+      {
+        "reference": "R11",
+        "physical_page": 31,
+        "printed_page": 30,
+        "pdf_annotation_xref": 1401,
+        "label_text": "[R11]",
+        "source_reference_text": "[R11] Salerno, P. (2026). Síntesis integrable de estabilidad, incertidumbre y bloques previos. Incluye el diagnóstico  dirigido B2/B3.",
+        "original_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md",
+        "requested_new_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md",
+        "rectangle": [
+          58.09299850463867,
+          333.2007751464844,
+          79.65699768066406,
+          343.55078125
+        ],
+        "tree_check": {
+          "path": "entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md",
+          "present": true,
+          "type": "blob",
+          "expected_git_blob_sha1": "52840681d77b6a32e6b7a3d9c2c798fb95ba540c",
+          "expected_bytes": 8115
+        },
+        "fragment": null,
+        "fragment_check": "not_applicable",
+        "public_page": {
+          "requested_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md",
+          "checked_utc": "2026-10-02T16:05:48.842935+00:00",
+          "status": 200,
+          "final_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md",
+          "bytes": 304912,
+          "content_type": "text/html; charset=utf-8",
+          "content_sha256": "56bdf0a684912c9f55408061b7ad73b340cdf6e0c7b92c9b7d0d8f68d65bb75a",
+          "same_exact_destination": true
+        },
+        "raw_file": {
+          "requested_url": "https://raw.githubusercontent.com/pgs00/crypto-carry-thesis-pablo-salerno/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md",
+          "checked_utc": "2026-10-02T16:05:49.675157+00:00",
+          "status": 200,
+          "final_url": "https://raw.githubusercontent.com/pgs00/crypto-carry-thesis-pablo-salerno/c0b432d8bff7fb86cf86a6bc0b28beffab225516/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/sintesis.md",
+          "bytes": 8115,
+          "content_type": "text/plain; charset=utf-8",
+          "content_sha256": "f5d8d50eebf8eb3dc450d8fe7680d5480d2d7e638f5b0f92e571ff8759df8851",
+          "git_blob_sha1": "52840681d77b6a32e6b7a3d9c2c798fb95ba540c",
+          "matches_git_blob": true,
+          "matches_tree_size": true
+        },
+        "passed": true
+      },
+      {
+        "reference": "R12",
+        "physical_page": 31,
+        "printed_page": 30,
+        "pdf_annotation_xref": 1400,
+        "label_text": "[R12]",
+        "source_reference_text": "[R12] Salerno, P. (2026). Matriz de avance de la Entrega 4. Índice de versiones y alcance de los análisis.",
+        "original_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/f1f4857fe53ac02585f739f7927031ed029da172/docs/entrega_4/matriz_avance.csv",
+        "requested_new_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/docs/entrega_4/matriz_avance.csv",
+        "rectangle": [
+          58.09299850463867,
+          361.9007568359375,
+          79.65699768066406,
+          372.2507629394531
+        ],
+        "tree_check": {
+          "path": "docs/entrega_4/matriz_avance.csv",
+          "present": true,
+          "type": "blob",
+          "expected_git_blob_sha1": "d2fe5a2c479ce8223dedab97887588145f51c494",
+          "expected_bytes": 8987
+        },
+        "fragment": null,
+        "fragment_check": "not_applicable",
+        "public_page": {
+          "requested_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/docs/entrega_4/matriz_avance.csv",
+          "checked_utc": "2026-10-02T16:05:49.073346+00:00",
+          "status": 200,
+          "final_url": "https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/c0b432d8bff7fb86cf86a6bc0b28beffab225516/docs/entrega_4/matriz_avance.csv",
+          "bytes": 258591,
+          "content_type": "text/html; charset=utf-8",
+          "content_sha256": "e48d8ed32610baca432bf460723208339a40678e9b91fb25489230b14188f7d3",
+          "same_exact_destination": true
+        },
+        "raw_file": {
+          "requested_url": "https://raw.githubusercontent.com/pgs00/crypto-carry-thesis-pablo-salerno/c0b432d8bff7fb86cf86a6bc0b28beffab225516/docs/entrega_4/matriz_avance.csv",
+          "checked_utc": "2026-10-02T16:05:49.781264+00:00",
+          "status": 200,
+          "final_url": "https://raw.githubusercontent.com/pgs00/crypto-carry-thesis-pablo-salerno/c0b432d8bff7fb86cf86a6bc0b28beffab225516/docs/entrega_4/matriz_avance.csv",
+          "bytes": 8987,
+          "content_type": "text/plain; charset=utf-8",
+          "content_sha256": "b291e1575cb224a01a20c130efa74797cd023127214f2792a4770e9237b698ef",
+          "git_blob_sha1": "d2fe5a2c479ce8223dedab97887588145f51c494",
+          "matches_git_blob": true,
+          "matches_tree_size": true
+        },
+        "passed": true
+      }
+    ],
+    "verification_started_utc": "2026-10-02T16:05:47.371373+00:00",
+    "verification_finished_utc": "2026-10-02T16:05:49.922898+00:00",
+    "summary": {
+      "references": 12,
+      "passed": 12,
+      "failed": [],
+      "http_gets": 24,
+      "files_modified": "only this external audit JSON; no repository or PDF changes",
+      "scope": "Exact R1-R12 PDF annotation mapping; public GitHub HTML and raw fixed-commit files; raw Git blob SHA1 and byte size against retrieved target tree. No simulation."
+    }
+  },
+  "limitations": [
+    "La fuente editable del combinado no estuvo disponible: se editó directamente el PDF.",
+    "E3 se comparó contra el PDF combinado recibido, no contra una entrega anterior distinta.",
+    "No se reejecutó el motor ni se releyeron las particiones masivas.",
+    "El fallo CSV Linux se acotó a últimos dígitos; no se aisló qué primitiva explica la diferencia entre entornos.",
+    "Las comprobaciones anteriores a este cierre pertenecen a la revisión del mismo commit durante el 02/10/2026; recorded_utc indica el momento de registrar este documento, no reemplaza sus marcas temporales."
+  ]
+}

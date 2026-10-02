@@ -2,9 +2,13 @@
 
 Índice único al **02/10/2026**. Los paquetes vigentes son los identificados en
 la [matriz de avance](../../docs/entrega_4/matriz_avance.csv). El
+[cierre público y documental](../../docs/entrega_4/cierre_publicacion_20261002/cierre_publico_y_documento.md)
+registra la descarga comprobada de la evidencia publicada, el
+[PDF combinado final](documento_final/Tesina_Entregas_3_y_4_Pablo_Salerno.pdf)
+y la limitación del verificador B6 en Linux. El
 [cierre técnico local](../../docs/entrega_4/cierre_publicacion_20261002/README.md)
-conserva los controles actuales y el estado Git comprobado. Este cierre de
-navegación y reproducibilidad no ejecuta carteras ni produce resultados nuevos.
+se conserva como registro histórico. Este cierre de navegación y
+reproducibilidad no ejecuta carteras ni produce resultados económicos nuevos.
 
 La lectura conjunta está en la [síntesis integrable B6][b6-sintesis]. Conserva
 H1 por horizonte y activo, H2 por escenario/período con ND y excepciones,
@@ -56,10 +60,12 @@ Las reglas históricas incompletas siguen siendo una limitación. La
 permanece sin ejecutar. Las sensibilidades retrospectivas no constituyen
 evidencia fuera de muestra.
 
-La revisión académica favorable ya recibida se conserva; la revisión técnica
-local se documenta en el registro externo. Resta la actualización mínima de
-referencias del documento y el cierre de publicación (commit, push y
-verificación de descarga), fuera de este cierre local.
+La revisión académica favorable ya recibida se conserva. La publicación de
+la evidencia en `c0b432d8bff7fb86cf86a6bc0b28beffab225516`, su descarga
+comprobada y la actualización mínima del PDF se documentan en el
+[cierre posterior](../../docs/entrega_4/cierre_publicacion_20261002/cierre_publico_y_documento.md).
+El verificador integral conserva la limitación de comparación textual en Linux
+allí explicada; no se declara un PASS integral en ese entorno.
 La remuneración/reinversión de caja libre o garantías del carry permanece
 fuera del alcance autorizado. La aprobación del comparador SOFR no autoriza
 esa modificación. El [registro del cierre](../../docs/entrega_4/cierre_publicacion_20261002/README.md)
@@ -77,7 +83,10 @@ identifican las fuentes; leerlos no equivale a volver a verificarlas.
 
 Los comandos siguientes usan los verificadores congelados de cada paquete.
 Requieren **Python 3.14** y las dependencias de [pyproject.toml](../../pyproject.toml)
-y [uv.lock](../../uv.lock); el entorno local comprobado usa Python 3.14.3.
+y [uv.lock](../../uv.lock); el entorno local de referencia usa Python 3.14.3
+en Windows. En Linux se comprobó una diferencia de últimos dígitos que hace
+fallar la comparación literal del CSV de intervalos B6, aunque sus controles
+numéricos pasan. Ver el [alcance comprobado](../../docs/entrega_4/cierre_publicacion_20261002/cierre_publico_y_documento.md#verificación-ejecutada-y-límite-de-portabilidad).
 Preparar el entorno desde la raíz del checkout, antes de la verificación:
 
 ```powershell
