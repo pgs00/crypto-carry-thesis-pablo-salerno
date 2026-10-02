@@ -1,0 +1,216 @@
+{
+  "schema": "b6-local-v1",
+  "pid": 12344,
+  "started_utc": "2026-10-01T22:05:11.222244+00:00",
+  "status": "bloqueado",
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "MPLBACKEND": "Agg",
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "worker_budget_gib": 4,
+  "reserve_gib": 6,
+  "target_portfolios": 4,
+  "maximum_work_processes": 6,
+  "lock_path": "C:\\Users\\pablo\\AppData\\Local\\Temp\\b6-8f5c23afbb4ee2b6.lock",
+  "coordinator_sha256": "6091d55f3356b55dc004dffacb6ba94c614db3cb2b6ccb37134ad0d4f449a02f",
+  "reused": [],
+  "completed": [
+    {
+      "task": [
+        "I2023",
+        "conditional"
+      ],
+      "run_id": "run_0128030f40d9b67c8f659eba",
+      "seconds": 662.3491695000557
+    },
+    {
+      "task": [
+        "I2023",
+        "permanent"
+      ],
+      "run_id": "run_0e538f9f2262e1a8bb2ec15d",
+      "seconds": 841.850619200035
+    },
+    {
+      "task": [
+        "I2024",
+        "conditional"
+      ],
+      "run_id": "run_40685bce287664d539d105fe",
+      "seconds": 453.1097712999908
+    },
+    {
+      "task": [
+        "I2024",
+        "permanent"
+      ],
+      "run_id": "run_4097eb208f8c04030f52b0d4",
+      "seconds": 500.6273067999864
+    }
+  ],
+  "blocked": [],
+  "active": [],
+  "stages": [
+    {
+      "stage": "bootstrap",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-u",
+        "-X",
+        "utf8",
+        "scripts/stability_uncertainty_bootstrap.py",
+        "--candidate",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\estabilidad_incertidumbre\\20261001T215423Z\\candidato",
+        "--data-root",
+        "D:\\Backtesting"
+      ],
+      "exit_code": 0,
+      "seconds": 1.8139782000798732,
+      "log": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\estabilidad_incertidumbre\\20261001T215423Z\\candidato\\controles\\coordinacion_local\\bootstrap__20261001T222829344655Z.txt"
+    },
+    {
+      "stage": "financial_report",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-u",
+        "-X",
+        "utf8",
+        "scripts/stability_uncertainty_report.py",
+        "--candidate",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\estabilidad_incertidumbre\\20261001T215423Z\\candidato",
+        "--data-root",
+        "D:\\Backtesting"
+      ],
+      "exit_code": 0,
+      "seconds": 15.932039600098506,
+      "log": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\estabilidad_incertidumbre\\20261001T215423Z\\candidato\\controles\\coordinacion_local\\financial_report__20261001T222831167580Z.txt"
+    },
+    {
+      "stage": "synthesis",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-u",
+        "-X",
+        "utf8",
+        "scripts/stability_uncertainty_synthesis.py",
+        "--candidate",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\estabilidad_incertidumbre\\20261001T215423Z\\candidato",
+        "--data-root",
+        "D:\\Backtesting"
+      ],
+      "exit_code": 0,
+      "seconds": 0.6968131000176072,
+      "log": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\estabilidad_incertidumbre\\20261001T215423Z\\candidato\\controles\\coordinacion_local\\synthesis__20261001T222847108810Z.txt"
+    },
+    {
+      "stage": "finalize",
+      "command": [
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-u",
+        "-X",
+        "utf8",
+        "scripts/package_stability_uncertainty.py",
+        "--candidate",
+        "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\estabilidad_incertidumbre\\20261001T215423Z\\candidato",
+        "--data-root",
+        "D:\\Backtesting"
+      ],
+      "exit_code": 1,
+      "seconds": 21.178377100033686,
+      "log": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\estabilidad_incertidumbre\\20261001T215423Z\\candidato\\controles\\coordinacion_local\\finalize__20261001T222847808983Z.txt"
+    }
+  ],
+  "initial_resources": {
+    "physical": 8,
+    "logical": 16,
+    "cpu": 6,
+    "available_gib": 17.40227508544922,
+    "total_gib": 27.855525970458984,
+    "paging_mbps": 0,
+    "disk_bytes_per_second": 0,
+    "disk_queue": 0,
+    "processes": [
+      {
+        "ProcessId": 25996,
+        "ParentProcessId": 15200,
+        "CreationDate": "/Date(1790892309510)/",
+        "CommandLine": "\"C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe\" -B -u -X utf8 C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting/scripts/coordinate_stability_uncertainty.py --candidate entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/candidato --data-root D:/Backtesting --raw-root D:/Backtesting/outputs/estabilidad_incertidumbre/20261001T215423Z",
+        "WorkingSetSize": 4284416,
+        "PageFileUsage": 820,
+        "ReadTransferCount": 180,
+        "WriteTransferCount": 0,
+        "KernelModeTime": 0,
+        "UserModeTime": 0
+      },
+      {
+        "ProcessId": 12344,
+        "ParentProcessId": 25996,
+        "CreationDate": "/Date(1790892309524)/",
+        "CommandLine": "\"C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe\" -B -u -X utf8 C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting/scripts/coordinate_stability_uncertainty.py --candidate entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/candidato --data-root D:/Backtesting --raw-root D:/Backtesting/outputs/estabilidad_incertidumbre/20261001T215423Z",
+        "WorkingSetSize": 208150528,
+        "PageFileUsage": 196356,
+        "ReadTransferCount": 27800628,
+        "WriteTransferCount": 5,
+        "KernelModeTime": 6093750,
+        "UserModeTime": 8437500
+      }
+    ],
+    "disk_free_gib": 201.5890769958496,
+    "candidate_disk_free_gib": 201.5890769958496
+  },
+  "preflight_seconds": 3.5479365000501275,
+  "resources": {
+    "physical": 8,
+    "logical": 16,
+    "cpu": 8,
+    "available_gib": 17.556068420410156,
+    "total_gib": 27.855525970458984,
+    "paging_mbps": 0,
+    "disk_bytes_per_second": 0,
+    "disk_queue": 0,
+    "processes": [
+      {
+        "ProcessId": 25996,
+        "ParentProcessId": 15200,
+        "CreationDate": "/Date(1790892309510)/",
+        "CommandLine": "\"C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe\" -B -u -X utf8 C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting/scripts/coordinate_stability_uncertainty.py --candidate entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/candidato --data-root D:/Backtesting --raw-root D:/Backtesting/outputs/estabilidad_incertidumbre/20261001T215423Z",
+        "WorkingSetSize": 4120576,
+        "PageFileUsage": 792,
+        "ReadTransferCount": 180,
+        "WriteTransferCount": 0,
+        "KernelModeTime": 0,
+        "UserModeTime": 0
+      },
+      {
+        "ProcessId": 12344,
+        "ParentProcessId": 25996,
+        "CreationDate": "/Date(1790892309524)/",
+        "CommandLine": "\"C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe\" -B -u -X utf8 C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting/scripts/coordinate_stability_uncertainty.py --candidate entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/candidato --data-root D:/Backtesting --raw-root D:/Backtesting/outputs/estabilidad_incertidumbre/20261001T215423Z",
+        "WorkingSetSize": 186441728,
+        "PageFileUsage": 198592,
+        "ReadTransferCount": 224575002,
+        "WriteTransferCount": 827254,
+        "KernelModeTime": 17031250,
+        "UserModeTime": 12812500
+      }
+    ],
+    "disk_free_gib": 202.37176895141602,
+    "candidate_disk_free_gib": 202.37176895141602
+  },
+  "launch_cap": 0,
+  "pending": [],
+  "elapsed_seconds": 1398.2064695999725,
+  "aggregate_portfolios_per_hour": 5.127197122405394,
+  "stage_log": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\estabilidad_incertidumbre\\20261001T215423Z\\candidato\\controles\\coordinacion_local\\finalize__20261001T222847808983Z.txt",
+  "stage_pid": null,
+  "reason": "RuntimeError: finalize failed; no automatic retry; inspect C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\estabilidad_incertidumbre\\20261001T215423Z\\candidato\\controles\\coordinacion_local\\finalize__20261001T222847808983Z.txt"
+}

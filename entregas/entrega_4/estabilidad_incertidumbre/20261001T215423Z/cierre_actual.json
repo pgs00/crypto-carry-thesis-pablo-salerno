@@ -1,0 +1,14 @@
+{
+  "status": "completado",
+  "passed": true,
+  "final_package": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\estabilidad_incertidumbre\\20261001T215423Z\\paquete_final_verificado",
+  "candidate": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\estabilidad_incertidumbre\\20261001T215423Z\\candidato",
+  "audit": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\estabilidad_incertidumbre\\20261001T215423Z\\controles_finales_corregidos",
+  "pid": null,
+  "completed_utc": "2026-10-01T23:00:11.048318+00:00",
+  "manifest_sha256": "8cca7f25e8d83f0e9b879574b1f06c77b8ca2a9aa6ae07fdd94baf80e73c829d",
+  "previous_attempt": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\estabilidad_incertidumbre\\20261001T215423Z\\paquete_final",
+  "previous_attempt_status": "fallido_preservado_no_vigente",
+  "transversal_review": "pendiente",
+  "word_pdf": "pendiente"
+}

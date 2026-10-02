@@ -1,0 +1,32 @@
+START V012/permanent 20260927T175236628261Z
+[futures_scaled/permanent] 3.7% | UTC 2022-03-04T09:08:00.000000000Z | fills 8
+[futures_scaled/permanent] 7.7% | UTC 2022-05-12T17:25:00.000000000Z | fills 16
+[futures_scaled/permanent] 13.3% | UTC 2022-08-15T14:09:00.000000000Z | fills 38
+[futures_scaled/permanent] 17.9% | UTC 2022-11-02T13:27:00.000000000Z | fills 50
+[futures_scaled/permanent] 20.3% | UTC 2022-12-13T16:24:00.000000000Z | fills 50
+[futures_scaled/permanent] 24.2% | UTC 2023-02-16T19:58:00.000000000Z | fills 68
+[futures_scaled/permanent] 28.9% | UTC 2023-05-08T07:31:00.000000000Z | fills 96
+[futures_scaled/permanent] 33.0% | UTC 2023-07-16T17:02:00.000000000Z | fills 102
+[futures_scaled/permanent] 37.0% | UTC 2023-09-23T13:10:00.000000000Z | fills 106
+[futures_scaled/permanent] 40.3% | UTC 2023-11-18T16:21:00.000000000Z | fills 122
+[futures_scaled/permanent] 43.7% | UTC 2024-01-15T23:06:00.000000000Z | fills 138
+[futures_scaled/permanent] 47.1% | UTC 2024-03-13T16:04:00.000000000Z | fills 169
+[futures_scaled/permanent] 50.4% | UTC 2024-05-08T17:05:00.000000000Z | fills 192
+[futures_scaled/permanent] 53.7% | UTC 2024-07-04T15:31:00.000000000Z | fills 206
+[futures_scaled/permanent] 56.9% | UTC 2024-08-28T06:26:00.000000000Z | fills 224
+[futures_scaled/permanent] 60.2% | UTC 2024-10-22T13:10:00.000000000Z | fills 232
+[futures_scaled/permanent] 62.8% | UTC 2024-12-06T16:49:00.000000000Z | fills 262
+[futures_scaled/permanent] 66.0% | UTC 2025-01-29T01:09:00.000000000Z | fills 268
+[futures_scaled/permanent] 69.1% | UTC 2025-03-23T02:15:00.000000000Z | fills 278
+[futures_scaled/permanent] 72.0% | UTC 2025-05-12T00:47:00.000000000Z | fills 278
+[futures_scaled/permanent] 75.3% | UTC 2025-07-06T12:08:00.000000000Z | fills 288
+[futures_scaled/permanent] 78.3% | UTC 2025-08-27T16:05:00.000000000Z | fills 307
+[futures_scaled/permanent] 81.4% | UTC 2025-10-19T16:48:00.000000000Z | fills 320
+[futures_scaled/permanent] 84.7% | UTC 2025-12-13T21:31:00.000000000Z | fills 326
+[futures_scaled/permanent] 87.7% | UTC 2026-02-04T01:40:00.000000000Z | fills 328
+[futures_scaled/permanent] 90.8% | UTC 2026-03-28T05:30:00.000000000Z | fills 328
+[futures_scaled/permanent] 93.9% | UTC 2026-05-19T06:52:00.000000000Z | fills 328
+[futures_scaled/permanent] 96.8% | UTC 2026-07-07T22:24:00.000000000Z | fills 328
+[futures_scaled/permanent] 99.7% | UTC 2026-08-26T16:06:00.000000000Z | fills 332
+REPLAY_COMPLETE seconds=875.54 peak_bytes=2518884352
+{"scenario": "V012", "strategy": "permanent", "status": "ejecutado", "attempt": "20260927T175236628261Z", "started_utc": "2026-09-27T17:52:36.628278+00:00", "config_hash": "c6c25ce3c4c32a7f89213a043646c8ff69a38fa068e0cf42f7b6489d3ac86fcf", "code_hash": "314631c24b36bbee58eb55a9b17505af656de453b60d1496c067e6f30b33de97", "pid": 6964, "engine_status": "complete", "run_id": "run_af1ca6c1ef3aca67ac41ad12", "path": "D:\\Backtesting\\outputs\\senal_entradas\\20260927T170230Z\\V012\\permanent\\20260927T175236628261Z\\run_af1ca6c1ef3aca67ac41ad12", "manifest_sha256": "aabb2fcbf5fcb976184cc94c3ad0a02e06709538dd9670b40dcde6959ecbb034", "replay_seconds": 875.5387737999845, "total_seconds": 938.9607397999789, "peak_replay_bytes": 2518884352, "peak_process_bytes": 3051237376, "final_equity": "11680.06921675742584680269999", "ledger_difference": "1E-24", "daily_reconciled": 1704, "max_daily_residual": "1.01E-23", "fills": 332, "native_fills": 332, "finished_utc": "2026-09-27T18:08:15.591634+00:00"}

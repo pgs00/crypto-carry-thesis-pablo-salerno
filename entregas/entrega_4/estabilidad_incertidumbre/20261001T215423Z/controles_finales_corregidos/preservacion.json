@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "previous_manifest_sha256": "5be726e00ae8e0c9f2f1b422865dbdf93ba1cbdea8d8c2502dab94a2caab6c9e",
+  "analytical_members_unchanged": 126,
+  "index_sha256": "07e15cd95a546b1b1bb73239414e47a141cd7484b906529695afe2e194ed04cb",
+  "engine_code_hash": "ac1a148ac22eaa6498cdf9e35d6a825f6d81ad29a015fc6d892b57f71ce8a998",
+  "economic_replays": 0
+}

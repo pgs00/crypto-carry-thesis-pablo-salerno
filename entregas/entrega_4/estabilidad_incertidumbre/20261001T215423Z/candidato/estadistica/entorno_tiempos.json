@@ -1,0 +1,24 @@
+{
+  "python": "3.14.3",
+  "numpy": "2.3.5",
+  "pyarrow": "25.0.1",
+  "arrow_cpu_count": 1,
+  "arrow_io_thread_count": 1,
+  "environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "MPLBACKEND": "Agg"
+  },
+  "versions_updated": false,
+  "arch_installed_for_task": false,
+  "analytical_processes": 1,
+  "peak_process_bytes": 587767808,
+  "source_preparation_seconds": 1.8509079000214115,
+  "statistical_seconds": 9.028523499961011,
+  "total_seconds": 10.879432299989276,
+  "data_root_argument": "D:\\Backtesting",
+  "data_root_read": false
+}

@@ -1,0 +1,24 @@
+{
+  "command": [
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-I",
+    "-X",
+    "utf8",
+    "C:\\Users\\pablo\\AppData\\Local\\Temp\\b6_offline_20261001T215423Z_corregido\\paquete\\herramientas\\scripts\\verify_stability_uncertainty.py",
+    "--candidate",
+    "C:\\Users\\pablo\\AppData\\Local\\Temp\\b6_offline_20261001T215423Z_corregido\\paquete",
+    "--output",
+    "C:\\Users\\pablo\\AppData\\Local\\Temp\\b6_offline_20261001T215423Z_corregido\\verificacion_offline.json",
+    "--forbid-root",
+    "D:\\Backtesting",
+    "--forbid-root",
+    "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting"
+  ],
+  "exit_code": 0,
+  "seconds": 24.74100549996365,
+  "log": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\estabilidad_incertidumbre\\20261001T215423Z\\controles_finales_corregidos\\verificacion_offline.txt",
+  "offline_copy": "C:\\Users\\pablo\\AppData\\Local\\Temp\\b6_offline_20261001T215423Z_corregido\\paquete",
+  "successful_full_offline_runs": 1,
+  "prior_aborted_preflight": 1
+}

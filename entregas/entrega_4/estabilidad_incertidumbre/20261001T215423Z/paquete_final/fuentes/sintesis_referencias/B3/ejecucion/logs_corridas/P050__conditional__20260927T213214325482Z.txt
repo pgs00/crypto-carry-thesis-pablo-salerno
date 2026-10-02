@@ -1,0 +1,26 @@
+START P050/conditional 20260927T213224016118Z
+[futures_scaled/conditional] 2.4% | UTC 2022-02-11T13:54:00.000000000Z | fills 0
+[futures_scaled/conditional] 5.4% | UTC 2022-04-03T08:01:00.018000000Z | fills 0
+[futures_scaled/conditional] 8.4% | UTC 2022-05-23T15:59:00.000000000Z | fills 0
+[futures_scaled/conditional] 11.2% | UTC 2022-07-11T00:01:00.000000000Z | fills 0
+[futures_scaled/conditional] 11.8% | UTC 2022-07-20T12:40:00.000000000Z | fills 0
+[futures_scaled/conditional] 17.5% | UTC 2022-10-26T03:49:00.000000000Z | fills 0
+[futures_scaled/conditional] 24.9% | UTC 2023-02-28T11:51:00.000000000Z | fills 12
+[futures_scaled/conditional] 31.1% | UTC 2023-06-14T08:00:00.000000000Z | fills 18
+[futures_scaled/conditional] 37.0% | UTC 2023-09-24T03:20:00.000000000Z | fills 18
+[futures_scaled/conditional] 41.2% | UTC 2023-12-03T06:10:00.000000000Z | fills 24
+[futures_scaled/conditional] 46.2% | UTC 2024-02-27T15:14:00.000000000Z | fills 38
+[futures_scaled/conditional] 50.9% | UTC 2024-05-17T04:34:00.000000000Z | fills 70
+[futures_scaled/conditional] 55.3% | UTC 2024-07-31T22:45:00.000000000Z | fills 88
+[futures_scaled/conditional] 60.7% | UTC 2024-10-30T16:01:00.013000000Z | fills 99
+[futures_scaled/conditional] 65.3% | UTC 2025-01-17T19:13:00.000000000Z | fills 119
+[futures_scaled/conditional] 69.8% | UTC 2025-04-04T08:01:00.000000000Z | fills 135
+[futures_scaled/conditional] 74.1% | UTC 2025-06-16T19:55:00.000000000Z | fills 141
+[futures_scaled/conditional] 77.6% | UTC 2025-08-14T20:44:00.000000000Z | fills 141
+[futures_scaled/conditional] 81.2% | UTC 2025-10-15T00:12:00.000000000Z | fills 141
+[futures_scaled/conditional] 84.8% | UTC 2025-12-16T12:49:00.000000000Z | fills 141
+[futures_scaled/conditional] 88.8% | UTC 2026-02-22T23:05:00.000000000Z | fills 141
+[futures_scaled/conditional] 92.5% | UTC 2026-04-26T06:01:00.000000000Z | fills 141
+[futures_scaled/conditional] 96.8% | UTC 2026-07-07T19:59:00.000000000Z | fills 141
+REPLAY_COMPLETE seconds=1189.91 peak_bytes=2540535808
+{"scenario": "P050", "strategy": "conditional", "status": "ejecutado", "attempt": "20260927T213224016118Z", "started_utc": "2026-09-27T21:32:24.016149+00:00", "config_hash": "c25b1060b016f797b29587b3a5c4c1d599c658681c645b6867edf44367b90e60", "code_hash": "aff0e047e4638219c5fba35959e160291802dcfad2269ecfc69a8f0e08495308", "pid": 3192, "engine_status": "complete", "run_id": "run_0bf8ede3c7b7c8f038888a67", "path": "D:\\Backtesting\\outputs\\costos_capacidad\\20260927T200204Z\\P050\\conditional\\20260927T213224016118Z\\run_0bf8ede3c7b7c8f038888a67", "manifest_sha256": "c599d947e39c351ce73fb8e646d791519b9dd834ca69302655b1a0d271eb2a80", "replay_seconds": 1189.9090396999964, "total_seconds": 1271.6265088999935, "peak_replay_bytes": 2540535808, "peak_process_bytes": 3070107648, "final_equity": "10771.05321475207800480310000", "ledger_difference": "1E-24", "daily_reconciled": 1704, "max_daily_residual": "1.0E-23", "fills": 141, "native_fills": 141, "h3_path": "C:\\Users\\pablo\\Documentos\\UCEMA\\Tesina\\Backtesting\\entregas\\entrega_4\\costos_capacidad\\20260927T200204Z\\intentos\\20260927T213224016118Z\\h3_minutos\\run_0bf8ede3c7b7c8f038888a67.csv", "h3_sha256": "293aff50416fd2228398ed52a558673de99d0c8813f649dde40018700692c98b", "finished_utc": "2026-09-27T21:53:35.563463+00:00"}

@@ -1,0 +1,297 @@
+{
+  "created_at": "2026-09-26T20:43:36.902441+00:00",
+  "excludes": [
+    "manifiesto_paquete.json",
+    "manifiesto_paquete.sha256"
+  ],
+  "members": [
+    {
+      "path": "comparacion/antes_despues.csv",
+      "sha256": "0ee5f4ae8c4501f5187bc0c2369c4a25f99315cb5c3c35aca7dd044b242848ba",
+      "size": 41156
+    },
+    {
+      "path": "comparacion/componentes_por_activo_periodo.csv",
+      "sha256": "f13d2c4f2103036fd78adbaa88565659d092189e0f78b020652490c1f278ac67",
+      "size": 60024
+    },
+    {
+      "path": "comparacion/conciliaciones.csv",
+      "sha256": "ed4f34c62c4bab6e5a085585ef180fb9d5c86488e82a88d8b3408443fb668a13",
+      "size": 1328
+    },
+    {
+      "path": "comparacion/deltas.csv",
+      "sha256": "762b0e8160dc2b5836961b5abb480c25eba88ba79f56cfd9ec96c83b89d195a0",
+      "size": 1028153
+    },
+    {
+      "path": "comparacion/diario_carteras.csv",
+      "sha256": "57447b3f445769aab4ef6ea3b7a07eaa3c4a67e6a89412e5385e3d0d821df348",
+      "size": 11413541
+    },
+    {
+      "path": "comparacion/episodio_2023_03_24.csv",
+      "sha256": "a87d01a97535b67a7a02c3927b6d2c3c519999dd6d13fed1cb30a17f2c4abf69",
+      "size": 3160
+    },
+    {
+      "path": "comparacion/eventos_periodo.csv",
+      "sha256": "93a96a7f36f0bd0729449c712b023d25b32c95d16e366ab6291174a973289c7f",
+      "size": 10298
+    },
+    {
+      "path": "comparacion/exposicion_intervalos.csv",
+      "sha256": "db2dd7b5f4bd0fea1574ef3f5956a4d03a01ab42827683c8414fd55cdac94d79",
+      "size": 10535057
+    },
+    {
+      "path": "comparacion/exposicion_periodo.csv",
+      "sha256": "269e041865df44f70d9b4899d0befec7b00a9006207efaea16331879f40f14ef",
+      "size": 154800
+    },
+    {
+      "path": "comparacion/figuras/deltas.png",
+      "sha256": "f8897a592d67573548f6e7a3a89cf894d9218a951e9ef5445cb498856707c814",
+      "size": 86978
+    },
+    {
+      "path": "comparacion/figuras/deltas.svg",
+      "sha256": "9b4707fc8e8bd3e157c3cb2d67174d1dd11b1e43d33f4d090c6639b40a643654",
+      "size": 58481
+    },
+    {
+      "path": "comparacion/figuras/equity.png",
+      "sha256": "fca294d5ba2634d37f248a524e4e1470530561d983bc96befad41e1f4c02fb7e",
+      "size": 194392
+    },
+    {
+      "path": "comparacion/figuras/equity.svg",
+      "sha256": "721a5024efc7098c57208646d5adee0c4f95d67366b236537718d275586e055c",
+      "size": 241594
+    },
+    {
+      "path": "comparacion/figuras/exposicion.png",
+      "sha256": "786c19509c794e2d963a819ea5d3b681d7d8c1cb63d1af461ae33f0230324812",
+      "size": 140492
+    },
+    {
+      "path": "comparacion/figuras/exposicion.svg",
+      "sha256": "365ecc6529cf1f3405c27b58469e8988756afe898e7252cdde0efee916bd4f71",
+      "size": 111976
+    },
+    {
+      "path": "comparacion/figuras/exposicion_datos.csv",
+      "sha256": "61a4bcd310ff20d28a0ebc8812d26c028dca000e504f49ea4d23afe0a321175e",
+      "size": 6295
+    },
+    {
+      "path": "comparacion/figuras/h3.png",
+      "sha256": "019019038d19bcccca7f907a444a9c8ac8be3d525c4ec5f2e71f029db1890a4d",
+      "size": 82389
+    },
+    {
+      "path": "comparacion/figuras/h3.svg",
+      "sha256": "e678dd5ca47b0e9dd18e9caced4b50c2d9a7f8374797164a413beb3528694f35",
+      "size": 50182
+    },
+    {
+      "path": "comparacion/fronteras_promocion.csv",
+      "sha256": "76382180d3919d1e1ba8693560da906e4bfd8052d39dfad6569ba21216cee67f",
+      "size": 2878
+    },
+    {
+      "path": "comparacion/h1_invariancia.csv",
+      "sha256": "ba71b579ac043e45797bda55499bfe36dfb9b8ef1f95f3683b1ddb4a3bcfcbb5",
+      "size": 4313
+    },
+    {
+      "path": "comparacion/h1_resumen.csv",
+      "sha256": "dc7d0c145d2b3784084c75ca458d27a0d4326c17377016b5fb82af8dfa2b1047",
+      "size": 50281
+    },
+    {
+      "path": "comparacion/h2.csv",
+      "sha256": "42691b183cd5889812cdcdc8454a08d20b51a0c17c476fc714be5ba9e83bdc18",
+      "size": 18912
+    },
+    {
+      "path": "comparacion/h2_cambios.csv",
+      "sha256": "08de8fcdd579b3e554c5f339b7f5666bb77d5bec1af9e7f89674dca9c3c2d137",
+      "size": 5393
+    },
+    {
+      "path": "comparacion/h3_diario.csv",
+      "sha256": "20be8afa496e4f8b8571fc760d15d42407673cd07a19a75bf280c29d7bb60ec9",
+      "size": 4311815
+    },
+    {
+      "path": "comparacion/h3_invariancia.csv",
+      "sha256": "869622e5f6e58cf6e3a55bbb245c79e13402ca20dd50a07a3ba77b96314f832d",
+      "size": 2379
+    },
+    {
+      "path": "comparacion/h3_regimen.csv",
+      "sha256": "398608c088ea973ceadc111288766117304499b436b17fe7ad92edd2724b8d0c",
+      "size": 19780
+    },
+    {
+      "path": "comparacion/metricas_cartera_periodo.csv",
+      "sha256": "480ac5950cd5e26b6f3502502338db4c2aefce1334d8543f654f77425a13188c",
+      "size": 146110
+    },
+    {
+      "path": "comparacion/preservacion_financiera.csv",
+      "sha256": "fd4a320e2bb053d8a7d206ee6cd2db71fca11112a5d2fd09c0f0c5ca9a537f2a",
+      "size": 642180
+    },
+    {
+      "path": "comparacion/preservacion_tablas.csv",
+      "sha256": "3bba809496960f2334a6ffa65a5f62abd7191d326b3c814ff0cb6696c2fdb725",
+      "size": 2043
+    },
+    {
+      "path": "comparacion/procedencia_corridas.csv",
+      "sha256": "f7a164f7a563034b61a8f848d2ea21891d020446bf4a56f2c1d18274dbd9911b",
+      "size": 2826
+    },
+    {
+      "path": "comparacion/registro_corridas.csv",
+      "sha256": "060738b55bc9897c89d68331ee6eaf913a236d9f93ae9f52e8f16bdef03a7ef4",
+      "size": 2372
+    },
+    {
+      "path": "comparacion/reporte.md",
+      "sha256": "25f9b51f9ccec242af3a035a4d828526fb22a83adad0845a8d5ade3ec63c78eb",
+      "size": 14183
+    },
+    {
+      "path": "documentos/guia_metricas.md",
+      "sha256": "077cfd54dda30e166199f2876fa10e62dbb714035f31178fc55aed06a1a16e24",
+      "size": 4476
+    },
+    {
+      "path": "herramientas/correct_rules_sensitivity_report.py",
+      "sha256": "82622f1afd380864aad277eea82d7e389d617a342b21707532243614249cd69f",
+      "size": 24773
+    },
+    {
+      "path": "herramientas/rules_sensitivity_correction_docs.py",
+      "sha256": "b1acda39b5292bbbb9c2e594f827908047b1f355260c5ff13966bbb91a386457",
+      "size": 21139
+    },
+    {
+      "path": "herramientas/rules_sensitivity_exposure.py",
+      "sha256": "7e6c258275154aca3d8bec5b0520a228567444a48a3cdad5e7243e3cac42c0e8",
+      "size": 11919
+    },
+    {
+      "path": "herramientas/rules_sensitivity_h2.py",
+      "sha256": "d7bac31bc505b664a8adb4d207cbb1dbb2e806a9828692d9b804f0f6b6485886",
+      "size": 8447
+    },
+    {
+      "path": "herramientas/verify_rules_sensitivity_correction.py",
+      "sha256": "efb4ecf5b758d1a8cfd5a16fb3c8fd92c7fdde9fa60c7e1d6d467df192a648df",
+      "size": 39077
+    },
+    {
+      "path": "herramientas/verify_rules_sensitivity_package.py",
+      "sha256": "6be1216cfd2f9509dd2aa8d4923f5660d48790ca3015ba2821db8c00965e4394",
+      "size": 45239
+    },
+    {
+      "path": "indice_corridas.json",
+      "sha256": "da71a7d34c460b15196eb6a3a5b68fa45a97eed353e9de62b8cab245f07795ad",
+      "size": 15066
+    },
+    {
+      "path": "procedencia.json",
+      "sha256": "ebc9c57ab0732082e2a99f7bb73f8f2a21d154257ceeda2c94980dc8fafa8cea",
+      "size": 224141
+    },
+    {
+      "path": "pruebas/test_rules_sensitivity_correction_builder.py",
+      "sha256": "5ae9a7083c99cdd87ceeb67853ee0de46ba3cff821b60e44f9b24c2a2b4466f4",
+      "size": 7383
+    },
+    {
+      "path": "pruebas/test_rules_sensitivity_correction_verifier.py",
+      "sha256": "45f0d716d013d906271c4808d4f14e406aa93aa56c3bfe764d6329b571e93fc1",
+      "size": 26657
+    },
+    {
+      "path": "pruebas/test_rules_sensitivity_exposure.py",
+      "sha256": "d5e7423d28ac8e7c3c7df38ce4e2413570d2a4665640d0ea2f0d4a1cdef2fdce",
+      "size": 8525
+    },
+    {
+      "path": "pruebas/test_rules_sensitivity_h2.py",
+      "sha256": "ac9b992a965cb7181996efd5cfaf87a3d57bfe70d19e8370d57faead57a8476d",
+      "size": 8215
+    },
+    {
+      "path": "README.md",
+      "sha256": "bd10f98c47150c3573d04052fb8a49aeb080ce8b4304d4cc1050cfab2a4472b2",
+      "size": 4492
+    },
+    {
+      "path": "referencia_e3/codigo/scripts/continuous_delivery/build.py",
+      "sha256": "bbaf4cf483f06338d9865eb3173cfc9ff6267b85f78825dd9d0ea1911bb7cea8",
+      "size": 27188
+    },
+    {
+      "path": "referencia_e3/codigo/scripts/continuous_delivery/common.py",
+      "sha256": "70e97ff42461f37078d17d301d0ec2185ab76d3ce584b104bf58b32bb6c9bc1f",
+      "size": 2028
+    },
+    {
+      "path": "referencia_e3/codigo/scripts/continuous_delivery/portfolio.py",
+      "sha256": "041805d326936284c44145459431e39b5bc8ff70cf3b032079c8243cb26140f8",
+      "size": 14155
+    },
+    {
+      "path": "referencia_e3/codigo/src/crypto_carry/reporting.py",
+      "sha256": "a55261898f29fbd480809aafcc31eaa0404f420cb465e734f6e8209d1c823b03",
+      "size": 78262
+    },
+    {
+      "path": "referencia_e3/codigo/src/crypto_carry/strategy.py",
+      "sha256": "cf009afa7705886a01a2c220c18707aa4c88604e6cdfe00213170a24c6cc584d",
+      "size": 61769
+    },
+    {
+      "path": "referencia_e3/manifest.json",
+      "sha256": "f19b7898ed8136d4d2035dc1fed5f232fcdcdf301e0a5ed808cc3e2087e6d187",
+      "size": 14223
+    },
+    {
+      "path": "referencia_e3/manifest.sha256",
+      "sha256": "843862e11cb3651f1d16a8429d650a23e044b5d84958de64238e856d5958b59a",
+      "size": 65
+    },
+    {
+      "path": "referencia_e3/tablas/episodio_2023_03_24_exposicion.csv",
+      "sha256": "7cbeaebc7ae4f189843d36190fa4fbccab3c477f625381904ccd999eb77e881d",
+      "size": 914
+    },
+    {
+      "path": "referencia_e3/tablas/exposicion_intervalos.csv",
+      "sha256": "0b311c10e98cf90c4d327a9c71a283f6e0e751c47fbba9435b1817dc6b5294cd",
+      "size": 1569166
+    },
+    {
+      "path": "referencia_e3/tablas/tiempo_invertido.csv",
+      "sha256": "9c35e6b80db80acef78ea6b11fe7666532b8c0ad9ac46c62880ac542ddd3a5f0",
+      "size": 2938
+    },
+    {
+      "path": "verificacion_construccion.json",
+      "sha256": "b977877bdb0e2fbf419b2973a7d8261b739569352bb536ea75d34a96c2cb3fbf",
+      "size": 1169
+    }
+  ],
+  "parent_manifest_sha256": "77f1cfcaf4fb13044dbcb3b242a2eb19749cf7e88806db023a08bbe4ec272057",
+  "postprocessor_version": "exposure_h2_v2",
+  "schema": "rules_sensitivity_correction_v2"
+}

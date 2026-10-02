@@ -1,0 +1,26 @@
+[futures_scaled/permanent] 5.1% | UTC 2023-03-09T23:28:00.000000000Z | fills 28
+[futures_scaled/permanent] 9.9% | UTC 2023-05-13T04:51:00.000000000Z | fills 48
+[futures_scaled/permanent] 14.2% | UTC 2023-07-10T13:46:00.000000000Z | fills 52
+[futures_scaled/permanent] 18.8% | UTC 2023-09-09T20:09:00.000000000Z | fills 56
+[futures_scaled/permanent] 23.3% | UTC 2023-11-09T04:43:00.000000000Z | fills 62
+[futures_scaled/permanent] 27.9% | UTC 2024-01-09T12:05:00.000000000Z | fills 84
+[futures_scaled/permanent] 32.1% | UTC 2024-03-06T04:41:00.000000000Z | fills 116
+[futures_scaled/permanent] 35.8% | UTC 2024-04-24T21:34:00.000000000Z | fills 140
+[futures_scaled/permanent] 39.8% | UTC 2024-06-17T02:25:00.000000000Z | fills 150
+[futures_scaled/permanent] 43.4% | UTC 2024-08-04T03:03:00.000000000Z | fills 164
+[futures_scaled/permanent] 47.6% | UTC 2024-09-28T20:47:00.000000000Z | fills 174
+[futures_scaled/permanent] 51.2% | UTC 2024-11-16T22:37:00.000000000Z | fills 200
+[futures_scaled/permanent] 54.9% | UTC 2025-01-05T10:58:00.000000000Z | fills 212
+[futures_scaled/permanent] 58.6% | UTC 2025-02-23T02:45:00.000000000Z | fills 224
+[futures_scaled/permanent] 61.7% | UTC 2025-04-05T16:01:00.000000000Z | fills 226
+[futures_scaled/permanent] 65.3% | UTC 2025-05-24T11:50:00.000000000Z | fills 228
+[futures_scaled/permanent] 68.7% | UTC 2025-07-08T06:35:00.000000000Z | fills 234
+[futures_scaled/permanent] 72.0% | UTC 2025-08-21T17:32:00.000000000Z | fills 252
+[futures_scaled/permanent] 75.4% | UTC 2025-10-07T03:51:00.000000000Z | fills 260
+[futures_scaled/permanent] 78.6% | UTC 2025-11-17T22:29:00.000000000Z | fills 270
+[futures_scaled/permanent] 81.6% | UTC 2025-12-28T12:53:00.000000000Z | fills 272
+[futures_scaled/permanent] 84.9% | UTC 2026-02-10T12:25:00.000000000Z | fills 274
+[futures_scaled/permanent] 88.5% | UTC 2026-03-31T12:36:00.000000000Z | fills 274
+[futures_scaled/permanent] 92.7% | UTC 2026-05-26T00:44:00.000000000Z | fills 274
+[futures_scaled/permanent] 96.4% | UTC 2026-07-14T03:17:00.000000000Z | fills 274
+COMPLETE I2023/permanent run_0e538f9f2262e1a8bb2ec15d

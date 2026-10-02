@@ -1,0 +1,20 @@
+START V048/conditional 20260927T180406849508Z
+[futures_scaled/conditional] 7.3% | UTC 2022-05-04T16:26:00.000000000Z | fills 0
+[futures_scaled/conditional] 14.9% | UTC 2022-09-12T10:44:00.000000000Z | fills 0
+[futures_scaled/conditional] 22.6% | UTC 2023-01-20T13:27:00.000000000Z | fills 2
+[futures_scaled/conditional] 28.5% | UTC 2023-05-01T14:15:00.000000000Z | fills 16
+[futures_scaled/conditional] 34.6% | UTC 2023-08-13T11:31:00.000000000Z | fills 16
+[futures_scaled/conditional] 40.5% | UTC 2023-11-21T21:15:00.000000000Z | fills 20
+[futures_scaled/conditional] 45.7% | UTC 2024-02-19T10:21:00.000000000Z | fills 32
+[futures_scaled/conditional] 50.5% | UTC 2024-05-10T05:57:00.000000000Z | fills 66
+[futures_scaled/conditional] 55.1% | UTC 2024-07-27T16:47:00.000000000Z | fills 80
+[futures_scaled/conditional] 60.3% | UTC 2024-10-23T20:38:00.000000000Z | fills 86
+[futures_scaled/conditional] 65.1% | UTC 2025-01-13T13:34:00.000000000Z | fills 108
+[futures_scaled/conditional] 69.8% | UTC 2025-04-04T00:27:00.000000000Z | fills 120
+[futures_scaled/conditional] 74.9% | UTC 2025-06-30T17:12:00.000000000Z | fills 127
+[futures_scaled/conditional] 80.2% | UTC 2025-09-28T21:26:00.000000000Z | fills 127
+[futures_scaled/conditional] 85.5% | UTC 2025-12-28T01:30:00.000000000Z | fills 127
+[futures_scaled/conditional] 90.8% | UTC 2026-03-28T05:30:00.000000000Z | fills 127
+[futures_scaled/conditional] 96.1% | UTC 2026-06-26T06:51:00.000000000Z | fills 127
+REPLAY_COMPLETE seconds=536.09 peak_bytes=2477666304
+{"scenario": "V048", "strategy": "conditional", "status": "ejecutado", "attempt": "20260927T180406849508Z", "started_utc": "2026-09-27T18:04:06.849527+00:00", "config_hash": "6a9ac0349e030817d758920b8df83a6cf1c66875c9598a1d39b9ff078fddfb54", "code_hash": "314631c24b36bbee58eb55a9b17505af656de453b60d1496c067e6f30b33de97", "pid": 484, "engine_status": "complete", "run_id": "run_d132dacab85e9e06e864335d", "path": "D:\\Backtesting\\outputs\\senal_entradas\\20260927T170230Z\\V048\\conditional\\20260927T180406849508Z\\run_d132dacab85e9e06e864335d", "manifest_sha256": "ba4f08b7f057457bb448710e47b3b022e4bba003640ba53e3d1fd4576300d1da", "replay_seconds": 536.0869926000014, "total_seconds": 599.3344668000063, "peak_replay_bytes": 2477666304, "peak_process_bytes": 3006558208, "final_equity": "10791.99129319674517640180000", "ledger_difference": "4.4E-24", "daily_reconciled": 1704, "max_daily_residual": "1.1E-24", "fills": 127, "native_fills": 127, "finished_utc": "2026-09-27T18:14:06.186698+00:00"}

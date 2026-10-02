@@ -1,0 +1,16 @@
+[futures_scaled/permanent] 6.4% | UTC 2024-03-03T10:46:00.000000000Z | fills 34
+[futures_scaled/permanent] 14.3% | UTC 2024-05-19T08:01:00.000000000Z | fills 52
+[futures_scaled/permanent] 18.5% | UTC 2024-06-29T11:20:00.000000000Z | fills 66
+[futures_scaled/permanent] 24.2% | UTC 2024-08-24T00:01:00.000000000Z | fills 82
+[futures_scaled/permanent] 30.7% | UTC 2024-10-26T11:41:00.000000000Z | fills 98
+[futures_scaled/permanent] 37.2% | UTC 2024-12-28T17:56:00.000000000Z | fills 128
+[futures_scaled/permanent] 43.5% | UTC 2025-02-27T10:39:00.000000000Z | fills 142
+[futures_scaled/permanent] 49.2% | UTC 2025-04-24T16:04:00.000000000Z | fills 142
+[futures_scaled/permanent] 55.7% | UTC 2025-06-26T03:58:00.000000000Z | fills 150
+[futures_scaled/permanent] 62.1% | UTC 2025-08-27T16:05:00.000000000Z | fills 167
+[futures_scaled/permanent] 67.3% | UTC 2025-10-17T23:06:00.000000000Z | fills 182
+[futures_scaled/permanent] 73.0% | UTC 2025-12-12T06:56:00.000000000Z | fills 186
+[futures_scaled/permanent] 80.6% | UTC 2026-02-23T16:54:00.000000000Z | fills 188
+[futures_scaled/permanent] 88.0% | UTC 2026-05-07T10:39:00.000000000Z | fills 188
+[futures_scaled/permanent] 95.4% | UTC 2026-07-18T08:37:00.000000000Z | fills 190
+COMPLETE I2024/permanent run_4097eb208f8c04030f52b0d4

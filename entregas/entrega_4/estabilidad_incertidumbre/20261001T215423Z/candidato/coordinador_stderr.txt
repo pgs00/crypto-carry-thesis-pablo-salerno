@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "C:\Users\pablo\Documentos\UCEMA\Tesina\Backtesting/scripts/coordinate_stability_uncertainty.py", line 386, in <module>
+    lock.seek(0)
+    ~~~~~~~~~^^^
+  File "C:\Users\pablo\Documentos\UCEMA\Tesina\Backtesting/scripts/coordinate_stability_uncertainty.py", line 359, in coordinate
+    "finalize",
+  File "C:\Users\pablo\Documentos\UCEMA\Tesina\Backtesting/scripts/coordinate_stability_uncertainty.py", line 111, in stage
+    )
+    
+RuntimeError: finalize failed; no automatic retry; inspect C:\Users\pablo\Documentos\UCEMA\Tesina\Backtesting\entregas\entrega_4\estabilidad_incertidumbre\20261001T215423Z\candidato\controles\coordinacion_local\finalize__20261001T222847808983Z.txt

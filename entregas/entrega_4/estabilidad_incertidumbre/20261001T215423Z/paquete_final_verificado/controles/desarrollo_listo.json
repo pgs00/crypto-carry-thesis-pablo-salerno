@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "utc": "2026-10-01T22:22:33.218877+00:00",
+  "scope": "Code, compact statistical/diagnostic controls and fresh review complete; final four-portfolio results/offline seal still delegated to local pipeline",
+  "files": {
+    "scripts/coordinate_stability_uncertainty.py": "0c6cbd52132aa33f9ada298e2b775e62281ef829205b2ec882b9a0125a2bcd98",
+    "scripts/package_stability_uncertainty.py": "cf6c02a326b4a2200cc7529a456a7e1c6ef6144826c9ea36027b79637afca2ea",
+    "scripts/run_stability_uncertainty.py": "4b807601e0c87191234d3ff2b2667e0a382aca19d3e173cf19ba5b87ff86da2e",
+    "scripts/stability_uncertainty_bootstrap.py": "bd30eac45d20a708180c20d4cc911990a3bb3a1c94aee6b24bf237139fbd2c89",
+    "scripts/stability_uncertainty_contract.py": "f473ea3a4ac18a10ab805155cf16ef656f1ad6479c67829216e0991f6696236d",
+    "scripts/stability_uncertainty_report.py": "e50dd697cf4882dc767b9e4f9b77aa60a3fe90061ae307b33fdfc2cde69f0985",
+    "scripts/stability_uncertainty_synthesis.py": "6daac4d904bfbefd275329215f8549cab701bad20815ed5b734260deded8d1bd",
+    "scripts/Start-B6.ps1": "b92b4bbdde911eab1d0ba44db43efff570be8d514a915b1152977d804b2580cc",
+    "scripts/verify_stability_uncertainty.py": "bfeec0e5f27070e96a0254c03149759ef009bd23466fa443069e877988cf7a08",
+    "tests/unit/test_stability_bootstrap.py": "ec712329e4397acfe505b218c327d1e36c26807fdcbc77c6e193c115ee9f3551",
+    "tests/unit/test_stability_delivery.py": "153f0e152f5dbd6217a9c23a87e23df9c85f7d196e7eb8d19b89e74e6aa20f14",
+    "tests/unit/test_stability_report.py": "8218845ee35ebbf6c9fae5869ca84e2863e6b770799a07ca534518b3db07677e",
+    "tests/unit/test_stability_runner.py": "aae4c52096a528e7fc7e487b5f3d4469bfbb41282e890c2f173a74e6ccdb767f",
+    "tests/unit/test_stability_synthesis.py": "e144d712fc517720b701dbde09f255a554b001e1d8db1e4f5c290caba860859f"
+  },
+  "development_seconds_since_persisted_plan": 1690.218877,
+  "test_evidence": {
+    "runner_fixtures": 6,
+    "delivery_fixtures": 11,
+    "financial_fixtures": 14,
+    "bootstrap_fixtures": 16,
+    "synthesis_fixtures": 12,
+    "counts_not_added_across_overlapping_regressions": true
+  },
+  "review_findings_fixed": [
+    "orphan postprocessing detection",
+    "blocked closure and mismatched audit cannot be successful resume",
+    "bootstrap CSV tables checked against recomputation"
+  ],
+  "ruff": "All checks passed",
+  "powershell_parser": "passed",
+  "final_regression": "Local finalizer after all portfolios",
+  "full_final_offline_runs_so_far": 0
+}

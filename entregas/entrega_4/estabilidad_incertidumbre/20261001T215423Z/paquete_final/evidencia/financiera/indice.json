@@ -1,0 +1,62 @@
+{
+  "schema": "b6_financial_evidence_v1",
+  "runs": [
+    {
+      "scenario": "I2023",
+      "strategy": "conditional",
+      "run_id": "run_0128030f40d9b67c8f659eba",
+      "manifest_sha256": "67dab9b5f5035e722b9e31ffa1cac027e5ed964f255e41902a8a608e083a4a5d",
+      "evidence_path": "evidencia/financiera/run_0128030f40d9b67c8f659eba",
+      "original_path": "D:\\Backtesting\\outputs\\estabilidad_incertidumbre\\20261001T215423Z\\I2023\\conditional\\20261001T220518727566Z\\run_0128030f40d9b67c8f659eba",
+      "engine_status": "complete"
+    },
+    {
+      "scenario": "I2023",
+      "strategy": "permanent",
+      "run_id": "run_0e538f9f2262e1a8bb2ec15d",
+      "manifest_sha256": "f6a6bfefd1b288e6799a86af26fd11e85ae2e667e8198e055e77d67318b2d419",
+      "evidence_path": "evidencia/financiera/run_0e538f9f2262e1a8bb2ec15d",
+      "original_path": "D:\\Backtesting\\outputs\\estabilidad_incertidumbre\\20261001T215423Z\\I2023\\permanent\\20261001T220518727035Z\\run_0e538f9f2262e1a8bb2ec15d",
+      "engine_status": "complete"
+    },
+    {
+      "scenario": "I2024",
+      "strategy": "conditional",
+      "run_id": "run_40685bce287664d539d105fe",
+      "manifest_sha256": "6018b84dd04c960ca1ca149dc843b3cef98c571e43f7b78da85b43d333502161",
+      "evidence_path": "evidencia/financiera/run_40685bce287664d539d105fe",
+      "original_path": "D:\\Backtesting\\outputs\\estabilidad_incertidumbre\\20261001T215423Z\\I2024\\conditional\\20261001T221811533117Z\\run_40685bce287664d539d105fe",
+      "engine_status": "complete"
+    },
+    {
+      "scenario": "I2024",
+      "strategy": "permanent",
+      "run_id": "run_4097eb208f8c04030f52b0d4",
+      "manifest_sha256": "b3a5308d77df4f6d170d7ccc92d0f61e773218dae562014423507745d7a954b9",
+      "evidence_path": "evidencia/financiera/run_4097eb208f8c04030f52b0d4",
+      "original_path": "D:\\Backtesting\\outputs\\estabilidad_incertidumbre\\20261001T215423Z\\I2024\\permanent\\20261001T221948299811Z\\run_4097eb208f8c04030f52b0d4",
+      "engine_status": "complete"
+    },
+    {
+      "scenario": "BASE_E3",
+      "strategy": "conditional",
+      "run_id": "run_ad71d751b20623006c195ff3",
+      "manifest_sha256": "a9510b7ad3a5435e83d062e561507ec0b4f118bceca83719da6162d5cc55209f",
+      "evidence_path": "evidencia/financiera/run_ad71d751b20623006c195ff3",
+      "original_path": "D:\\Backtesting\\outputs\\run_ad71d751b20623006c195ff3",
+      "engine_status": "complete"
+    },
+    {
+      "scenario": "BASE_E3",
+      "strategy": "permanent",
+      "run_id": "run_dfea4b7ac1475668d5968c97",
+      "manifest_sha256": "d37bb1781a7402b33ef6b006b8df8f44635e84c238da0bbd769894b00ee40261",
+      "evidence_path": "evidencia/financiera/run_dfea4b7ac1475668d5968c97",
+      "original_path": "D:\\Backtesting\\outputs\\run_dfea4b7ac1475668d5968c97",
+      "engine_status": "complete"
+    }
+  ],
+  "windows_sha256": "f7fb6a80e8949654af76e2efb4db3dee9a4ccfd36a47abd3b11eea69a4752115",
+  "source_scope": "exact consumed financial artifacts plus exact requested execution minutes",
+  "source_massive_partitions_reopened_offline": false
+}

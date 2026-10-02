@@ -1,0 +1,65 @@
+[
+  {
+    "path": "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z",
+    "manifest_sha256": "db68d839aa5837db72314b4f3de5509ecff283cc34d13a36e3c4f9d30298e1fb",
+    "members": 880,
+    "mismatches": [],
+    "passed": true
+  },
+  {
+    "path": "entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z",
+    "manifest_sha256": "955205887cf139bc41fd1edcdf9e63a482d0b498d8998680890cd6273ccc5603",
+    "members": 1200,
+    "mismatches": [],
+    "passed": true
+  },
+  {
+    "path": "entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T013915Z_v2",
+    "manifest_sha256": "88af2936e2dc243080abdf3909cc578c184778527eb847d6b021ce76d357335b",
+    "members": 1204,
+    "mismatches": [],
+    "passed": true
+  },
+  {
+    "path": "entregas/entrega_4/reglas_historicas/20260925T005436Z",
+    "manifest_sha256": "77f1cfcaf4fb13044dbcb3b242a2eb19749cf7e88806db023a08bbe4ec272057",
+    "members": 1087,
+    "mismatches": [],
+    "passed": true
+  },
+  {
+    "path": "entregas/entrega_4/reglas_historicas/correccion_exposicion_h2_20260925T150139Z/paquete_20260926T204312Z",
+    "manifest_sha256": "e735207869c08bbd0b9b04818c8855ecd9576bd979d3127b5ff108f61d3843ce",
+    "members": 57,
+    "mismatches": [],
+    "passed": true
+  },
+  {
+    "path": "entregas/entrega_4/retorno_capital/20260927T143928Z/paquete_20260927T152732Z",
+    "manifest_sha256": "0163cf7622d929c06773700f50d13b2e808afee85a6cf85e48d45dcac03af12b",
+    "members": 93,
+    "mismatches": [],
+    "passed": true
+  },
+  {
+    "path": "entregas/entrega_4/retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z",
+    "manifest_sha256": "4769f6c6a80e6fa4b4fd4a4e7c45b94fb10b3773bc3cbbebd36b117f73c938c9",
+    "members": 72,
+    "mismatches": [],
+    "passed": true
+  },
+  {
+    "path": "entregas/entrega_4/riesgo_intradia/20260926T214118Z/paquete_20260926T220400Z",
+    "manifest_sha256": "78cb03572c5940567852d0255d05a9f8a923f01df01fc0aa8b6cccef70f3b3bb",
+    "members": 199,
+    "mismatches": [],
+    "passed": true
+  },
+  {
+    "path": "entregas/entrega_4/senal_entradas/20260927T170230Z/paquete_20260927T185305Z",
+    "manifest_sha256": "f03624b6bdb40a3c9dfb31705a9c5c3552308200a953f9f5e80cce2137140095",
+    "members": 498,
+    "mismatches": [],
+    "passed": true
+  }
+]

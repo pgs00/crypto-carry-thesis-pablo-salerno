@@ -1,0 +1,105 @@
+{
+  "first_date": "2022-01-01",
+  "last_date": "2026-08-31",
+  "axis_days": 1704,
+  "joint_known_days": 1704,
+  "missing_days": [],
+  "strata": [
+    {
+      "first": 0,
+      "stop": 365,
+      "year": 2022,
+      "first_day": 18993,
+      "last_day": 19357,
+      "start_date": "2022-01-01",
+      "end_date": "2022-12-31",
+      "stratum_id": "2022-01-01__2022-12-31",
+      "known": true
+    },
+    {
+      "first": 365,
+      "stop": 730,
+      "year": 2023,
+      "first_day": 19358,
+      "last_day": 19722,
+      "start_date": "2023-01-01",
+      "end_date": "2023-12-31",
+      "stratum_id": "2023-01-01__2023-12-31",
+      "known": true
+    },
+    {
+      "first": 730,
+      "stop": 1096,
+      "year": 2024,
+      "first_day": 19723,
+      "last_day": 20088,
+      "start_date": "2024-01-01",
+      "end_date": "2024-12-31",
+      "stratum_id": "2024-01-01__2024-12-31",
+      "known": true
+    },
+    {
+      "first": 1096,
+      "stop": 1461,
+      "year": 2025,
+      "first_day": 20089,
+      "last_day": 20453,
+      "start_date": "2025-01-01",
+      "end_date": "2025-12-31",
+      "stratum_id": "2025-01-01__2025-12-31",
+      "known": true
+    },
+    {
+      "first": 1461,
+      "stop": 1704,
+      "year": 2026,
+      "first_day": 20454,
+      "last_day": 20696,
+      "start_date": "2026-01-01",
+      "end_date": "2026-08-31",
+      "stratum_id": "2026-01-01__2026-08-31",
+      "known": true
+    }
+  ],
+  "h1_population": [
+    {
+      "symbol": "BTCUSDT",
+      "observed": 5112,
+      "valid": 5090,
+      "excluded": 22,
+      "exclusion_reasons": {
+        "funding_calendar_boundary_unverified": 1,
+        "horizon_outside_sample": 21
+      },
+      "first_valid_signal_ns": 1640995260006000000,
+      "last_valid_signal_ns": 1787558460002000000,
+      "final_target_exclusions": 21
+    },
+    {
+      "symbol": "ETHUSDT",
+      "observed": 5112,
+      "valid": 5090,
+      "excluded": 22,
+      "exclusion_reasons": {
+        "funding_calendar_boundary_unverified": 1,
+        "horizon_outside_sample": 21
+      },
+      "first_valid_signal_ns": 1640995260006000000,
+      "last_valid_signal_ns": 1787558460002000000,
+      "final_target_exclusions": 21
+    }
+  ],
+  "strategy_rows": {
+    "conditional": 1704,
+    "permanent": 1704
+  },
+  "annual_days": {
+    "2022": 365,
+    "2023": 365,
+    "2024": 366,
+    "2025": 365,
+    "2026": 243
+  },
+  "annual_inference": "Descriptive breakdown only; no annual interval family.",
+  "horizon_edge": "H1 target exclusions retained as known exclusions, separately from true missing calendar data."
+}

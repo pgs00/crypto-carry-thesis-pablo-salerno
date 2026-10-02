@@ -1,0 +1,72 @@
+[
+  {
+    "source": "effective_config.toml",
+    "member": "effective_config.toml",
+    "source_sha256": "f54d659d716b6b76c1a01d0875195440471015034de2c2276ade0403e44da5f1",
+    "member_sha256": "f54d659d716b6b76c1a01d0875195440471015034de2c2276ade0403e44da5f1",
+    "original_bytes": 1416
+  },
+  {
+    "source": "equity_daily.csv",
+    "member": "equity_daily.csv.gz",
+    "source_sha256": "f2f2f809715dc145390c3b732ff37ca0028f3b90bbb83ca70c440918ffa7c589",
+    "member_sha256": "af32d703c5b9b02cae4957e276b8eeeedc68f5ad39dd259a133b97d8d9fd18b5",
+    "original_bytes": 3584801
+  },
+  {
+    "source": "run_summary.csv",
+    "member": "run_summary.csv.gz",
+    "source_sha256": "2e595c584b1a3f03a0dce860b525cce647e1f03a6d7ab977aa34d37bfac9d249",
+    "member_sha256": "9b434fda77cde973a0b20212c7c15454eb92a183f3102713b073ebfd617e3642",
+    "original_bytes": 1528
+  },
+  {
+    "source": "positions.parquet",
+    "member": "positions.parquet",
+    "source_sha256": "17142d8ee536b3b59ba71849100a844483f250b3adb400b4cdcd9cb32f109289",
+    "member_sha256": "17142d8ee536b3b59ba71849100a844483f250b3adb400b4cdcd9cb32f109289",
+    "original_bytes": 63282
+  },
+  {
+    "source": "ledger.parquet",
+    "member": "ledger.parquet",
+    "source_sha256": "86c6dc8e08790373ad4e78e607d3f31214dd21640922dda31edb2956e0ec6353",
+    "member_sha256": "86c6dc8e08790373ad4e78e607d3f31214dd21640922dda31edb2956e0ec6353",
+    "original_bytes": 130682
+  },
+  {
+    "source": "orders.parquet",
+    "member": "orders.parquet",
+    "source_sha256": "0a344cfb807007cd85701a7ee59233b2b08a69ff3e98f7bef7458d2960d924e3",
+    "member_sha256": "0a344cfb807007cd85701a7ee59233b2b08a69ff3e98f7bef7458d2960d924e3",
+    "original_bytes": 40825
+  },
+  {
+    "source": "fills.parquet",
+    "member": "fills.parquet",
+    "source_sha256": "a0058d8310117ce4ccf5b3aa4561f14572f2a18df5adf3ffaf2b4a6949c18b17",
+    "member_sha256": "a0058d8310117ce4ccf5b3aa4561f14572f2a18df5adf3ffaf2b4a6949c18b17",
+    "original_bytes": 38952
+  },
+  {
+    "source": "risk_events.parquet",
+    "member": "risk_events.parquet",
+    "source_sha256": "dd7ac1779d7eac15932cec37d4558c79b22f604dbdc4fd6bfc567d65282e56a6",
+    "member_sha256": "dd7ac1779d7eac15932cec37d4558c79b22f604dbdc4fd6bfc567d65282e56a6",
+    "original_bytes": 16518
+  },
+  {
+    "source": "funding_payments.parquet",
+    "member": "funding_payments.parquet",
+    "source_sha256": "348bdc06a1bd1050bdf08d63afe3d22a5a7877bfd86887d8e0a77c83ac88d773",
+    "member_sha256": "348bdc06a1bd1050bdf08d63afe3d22a5a7877bfd86887d8e0a77c83ac88d773",
+    "original_bytes": 106051
+  },
+  {
+    "source": "funding_mark_audit.json",
+    "member": "funding_mark_audit.json.gz",
+    "source_sha256": "d36cd2288820f44ecc126e49beb80f3b9d96a44445e0a6476a35118d6f004181",
+    "member_sha256": "cffb8708bed270cb1ccaaed65ef6e3ce48c68e077f899558df3cb03e0673294b",
+    "original_bytes": 11350595
+  }
+]

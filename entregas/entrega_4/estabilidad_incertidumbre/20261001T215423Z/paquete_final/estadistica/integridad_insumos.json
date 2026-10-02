@@ -1,0 +1,40 @@
+{
+  "files": [
+    {
+      "path": "estadistica/carteras_base.parquet",
+      "sha256": "fcea72413bf6620f40a567585a735e3588190149b88ea6aca7b505e9b6d844ef"
+    },
+    {
+      "path": "estadistica/h1_base.parquet",
+      "sha256": "465b2c184c8c1794078ac50a849bf775276a835d6fecf9144a889c04c214a412"
+    },
+    {
+      "path": "estadistica/oportunidad_base.parquet",
+      "sha256": "7bc5cadf535c997f3fcb968df4da54916b3e1a0a4636395a069d191adfb3c371"
+    },
+    {
+      "path": "estadistica/diario_base.parquet",
+      "sha256": "023c4fbcc75c3894fdbcbf8e3e6e2a3e2c654b5e7a2fa92961da6624efb23ad8"
+    },
+    {
+      "path": "estadistica/protocolo.json",
+      "sha256": "c2c3b65fd301597bd663d0af285c4cfa115198c98ab7b25f1c1445b282e83e66"
+    },
+    {
+      "path": "estadistica/referencias_base.json",
+      "sha256": "ecf787b32d8bbfb504df16a3263b980fecefbc6dbc32b8f9c631a83c8a51f9fc"
+    },
+    {
+      "path": "estadistica/manifiestos_base.json",
+      "sha256": "9e6d7997f6aeea5537180bb2f8bc9234ac5c822253deeeb0d1d465f35b737600"
+    },
+    {
+      "path": "estadistica/puntos_referencia_b5.json",
+      "sha256": "f4822364e7ef8c6e152cc01c28659fa4fee512fe55a7c58aea49dddfbc0dc56f"
+    },
+    {
+      "path": "estadistica/procedencia.json",
+      "sha256": "6f828ecd29d0d01832aa95b621fc60c4053a2efa5aa9c5abc22bbc75958fafa7"
+    }
+  ]
+}

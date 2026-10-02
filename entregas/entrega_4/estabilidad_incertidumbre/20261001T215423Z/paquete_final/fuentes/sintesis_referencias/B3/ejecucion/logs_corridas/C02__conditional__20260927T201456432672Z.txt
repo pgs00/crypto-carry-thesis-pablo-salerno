@@ -1,0 +1,21 @@
+START C02/conditional 20260927T201500996403Z
+[futures_scaled/conditional] 6.9% | UTC 2022-04-28T20:35:00.000000000Z | fills 0
+[futures_scaled/conditional] 14.2% | UTC 2022-08-31T16:20:00.000000000Z | fills 0
+[futures_scaled/conditional] 21.2% | UTC 2022-12-27T13:43:00.000000000Z | fills 0
+[futures_scaled/conditional] 27.0% | UTC 2023-04-06T05:08:00.000000000Z | fills 18
+[futures_scaled/conditional] 32.6% | UTC 2023-07-09T18:23:00.000000000Z | fills 18
+[futures_scaled/conditional] 38.2% | UTC 2023-10-13T08:01:00.000000000Z | fills 18
+[futures_scaled/conditional] 43.1% | UTC 2024-01-05T18:09:00.000000000Z | fills 30
+[futures_scaled/conditional] 48.0% | UTC 2024-03-29T14:15:00.000000000Z | fills 60
+[futures_scaled/conditional] 52.8% | UTC 2024-06-18T15:40:00.000000000Z | fills 78
+[futures_scaled/conditional] 57.7% | UTC 2024-09-09T09:08:00.000000000Z | fills 95
+[futures_scaled/conditional] 62.7% | UTC 2024-12-04T12:17:00.000000000Z | fills 105
+[futures_scaled/conditional] 67.6% | UTC 2025-02-25T19:38:00.000000000Z | fills 121
+[futures_scaled/conditional] 72.5% | UTC 2025-05-20T02:21:00.000000000Z | fills 136
+[futures_scaled/conditional] 77.8% | UTC 2025-08-17T21:39:00.000000000Z | fills 136
+[futures_scaled/conditional] 82.8% | UTC 2025-11-11T06:20:00.000000000Z | fills 136
+[futures_scaled/conditional] 87.9% | UTC 2026-02-06T16:30:00.000000000Z | fills 136
+[futures_scaled/conditional] 93.0% | UTC 2026-05-03T23:41:00.000000000Z | fills 136
+[futures_scaled/conditional] 98.1% | UTC 2026-07-31T02:20:00.000000000Z | fills 136
+REPLAY_COMPLETE seconds=553.31 peak_bytes=2491203584
+{"scenario": "C02", "strategy": "conditional", "status": "ejecutado", "attempt": "20260927T201500996403Z", "started_utc": "2026-09-27T20:15:00.996448+00:00", "config_hash": "dfc2b8215e8fbf532237803309827b9009b425cd050dff32550ef19f0ad79f78", "code_hash": "aff0e047e4638219c5fba35959e160291802dcfad2269ecfc69a8f0e08495308", "pid": 8604, "engine_status": "complete", "run_id": "run_f7473a5631a2b3c8d6a8a38b", "path": "D:\\Backtesting\\outputs\\costos_capacidad\\20260927T200204Z\\C02\\conditional\\20260927T201500996403Z\\run_f7473a5631a2b3c8d6a8a38b", "manifest_sha256": "e866ee48ca9d14b6d8a7aeb1723924cf260831308c16bfc3eddde3295d69647e", "replay_seconds": 553.3115095999965, "total_seconds": 617.2147762000095, "peak_replay_bytes": 2491203584, "peak_process_bytes": 3020726272, "final_equity": "10637.82541312110135736630000", "ledger_difference": "0E-24", "daily_reconciled": 1704, "max_daily_residual": "1.3E-24", "fills": 136, "native_fills": 136, "finished_utc": "2026-09-27T20:25:18.215414+00:00"}

@@ -1,0 +1,29 @@
+START B100/permanent 20260927T183840842759Z
+[futures_scaled/permanent] 5.0% | UTC 2022-03-26T11:32:00.000000000Z | fills 10
+[futures_scaled/permanent] 10.5% | UTC 2022-06-29T03:53:00.000000000Z | fills 26
+[futures_scaled/permanent] 15.8% | UTC 2022-09-26T10:09:00.000000000Z | fills 48
+[futures_scaled/permanent] 20.2% | UTC 2022-12-11T00:39:00.000000000Z | fills 50
+[futures_scaled/permanent] 24.8% | UTC 2023-02-27T23:30:00.000000000Z | fills 72
+[futures_scaled/permanent] 29.3% | UTC 2023-05-15T05:56:00.000000000Z | fills 98
+[futures_scaled/permanent] 33.4% | UTC 2023-07-24T04:55:00.000000000Z | fills 102
+[futures_scaled/permanent] 37.3% | UTC 2023-09-29T08:01:00.000000000Z | fills 106
+[futures_scaled/permanent] 41.1% | UTC 2023-12-02T17:49:00.000000000Z | fills 124
+[futures_scaled/permanent] 44.8% | UTC 2024-02-03T01:15:00.000000000Z | fills 146
+[futures_scaled/permanent] 48.4% | UTC 2024-04-05T00:03:00.000000000Z | fills 178
+[futures_scaled/permanent] 52.1% | UTC 2024-06-07T00:29:00.000000000Z | fills 200
+[futures_scaled/permanent] 55.9% | UTC 2024-08-10T01:09:00.000000000Z | fills 220
+[futures_scaled/permanent] 59.5% | UTC 2024-10-10T16:01:00.000000000Z | fills 228
+[futures_scaled/permanent] 62.8% | UTC 2024-12-05T16:37:00.000000000Z | fills 262
+[futures_scaled/permanent] 66.4% | UTC 2025-02-04T22:31:00.000000000Z | fills 270
+[futures_scaled/permanent] 69.7% | UTC 2025-04-02T03:15:00.000000000Z | fills 278
+[futures_scaled/permanent] 73.0% | UTC 2025-05-28T09:27:00.000000000Z | fills 280
+[futures_scaled/permanent] 76.3% | UTC 2025-07-23T16:04:00.000000000Z | fills 295
+[futures_scaled/permanent] 79.5% | UTC 2025-09-17T04:49:00.000000000Z | fills 310
+[futures_scaled/permanent] 82.7% | UTC 2025-11-10T20:19:00.000000000Z | fills 324
+[futures_scaled/permanent] 86.0% | UTC 2026-01-05T12:20:00.000000000Z | fills 328
+[futures_scaled/permanent] 89.2% | UTC 2026-03-01T03:18:00.000000000Z | fills 328
+[futures_scaled/permanent] 92.4% | UTC 2026-04-24T23:30:00.000000000Z | fills 328
+[futures_scaled/permanent] 95.6% | UTC 2026-06-18T16:01:00.001000000Z | fills 328
+[futures_scaled/permanent] 98.7% | UTC 2026-08-09T08:41:00.000000000Z | fills 330
+REPLAY_COMPLETE seconds=793.72 peak_bytes=2513059840
+{"scenario": "B100", "strategy": "permanent", "status": "ejecutado", "attempt": "20260927T183840842759Z", "started_utc": "2026-09-27T18:38:40.842779+00:00", "config_hash": "2d692162b0ac024186e1226c6e32de292ae1029b288d4d1f22f49bb4e3c9f1e0", "code_hash": "314631c24b36bbee58eb55a9b17505af656de453b60d1496c067e6f30b33de97", "pid": 17120, "engine_status": "complete", "run_id": "run_db3dc5ea08532264d4f74ad7", "path": "D:\\Backtesting\\outputs\\senal_entradas\\20260927T170230Z\\B100\\permanent\\20260927T183840842759Z\\run_db3dc5ea08532264d4f74ad7", "manifest_sha256": "5e123c10c46178f6ff6095dd19e9dcb7bca2ddd584f8ce6c7c148e863bbeb6fa", "replay_seconds": 793.7217800999933, "total_seconds": 853.8106053000083, "peak_replay_bytes": 2513059840, "peak_process_bytes": 3044806656, "final_equity": "11680.06921675742584680269999", "ledger_difference": "1E-24", "daily_reconciled": 1704, "max_daily_residual": "1.01E-23", "fills": 332, "native_fills": 332, "finished_utc": "2026-09-27T18:52:54.656029+00:00"}

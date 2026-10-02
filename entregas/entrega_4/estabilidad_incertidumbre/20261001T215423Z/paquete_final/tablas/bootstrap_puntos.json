@@ -1,0 +1,278 @@
+[
+  {
+    "metric": "h2_conditional_cagr",
+    "hypothesis": "H2",
+    "period": "full",
+    "symbol": "PORTFOLIO",
+    "unit": "fraction/year",
+    "start_utc": "2022-01-01T00:00:00Z",
+    "end_exclusive_utc": "2026-09-01T00:00:00Z",
+    "observed_days": 1704,
+    "expected_days": 1704,
+    "paired_observations": 1704,
+    "population": "daily returns include inactive days; fixed historical calendar",
+    "point_estimate": 0.016334619265710573,
+    "reason": ""
+  },
+  {
+    "metric": "h2_sharpe_delta",
+    "hypothesis": "H2",
+    "period": "full",
+    "symbol": "PORTFOLIO",
+    "unit": "Sharpe RF=0",
+    "start_utc": "2022-01-01T00:00:00Z",
+    "end_exclusive_utc": "2026-09-01T00:00:00Z",
+    "observed_days": 1704,
+    "expected_days": 1704,
+    "paired_observations": 1704,
+    "population": "daily returns include inactive days; fixed historical calendar",
+    "point_estimate": -1.5712611038385287,
+    "reason": ""
+  },
+  {
+    "metric": "h1_mae_delta_bps",
+    "hypothesis": "H1",
+    "period": "full",
+    "symbol": "BTCUSDT",
+    "unit": "pb/168 h",
+    "start_utc": "2022-01-01T00:00:00Z",
+    "end_exclusive_utc": "2026-09-01T00:00:00Z",
+    "observed_days": 1704,
+    "expected_days": 1704,
+    "paired_observations": 5090,
+    "population": {
+      "BTCUSDT": 5090
+    },
+    "point_estimate": -2.145014973512039,
+    "reason": ""
+  },
+  {
+    "metric": "h1_mae_delta_bps",
+    "hypothesis": "H1",
+    "period": "full",
+    "symbol": "ETHUSDT",
+    "unit": "pb/168 h",
+    "start_utc": "2022-01-01T00:00:00Z",
+    "end_exclusive_utc": "2026-09-01T00:00:00Z",
+    "observed_days": 1704,
+    "expected_days": 1704,
+    "paired_observations": 5090,
+    "population": {
+      "ETHUSDT": 5090
+    },
+    "point_estimate": -2.663673883812528,
+    "reason": ""
+  },
+  {
+    "metric": "h1_mae_delta_bps",
+    "hypothesis": "H1",
+    "period": "full",
+    "symbol": "EQUAL_WEIGHT",
+    "unit": "pb/168 h",
+    "start_utc": "2022-01-01T00:00:00Z",
+    "end_exclusive_utc": "2026-09-01T00:00:00Z",
+    "observed_days": 1704,
+    "expected_days": 1704,
+    "paired_observations": 10180,
+    "population": {
+      "BTCUSDT": 5090,
+      "ETHUSDT": 5090
+    },
+    "point_estimate": -2.4043444286622835,
+    "reason": ""
+  },
+  {
+    "metric": "h2_conditional_cagr",
+    "hypothesis": "H2",
+    "period": "2022-2023",
+    "symbol": "PORTFOLIO",
+    "unit": "fraction/year",
+    "start_utc": "2022-01-01T00:00:00Z",
+    "end_exclusive_utc": "2024-01-01T00:00:00Z",
+    "observed_days": 730,
+    "expected_days": 730,
+    "paired_observations": 730,
+    "population": "daily returns include inactive days; fixed historical calendar",
+    "point_estimate": 0.010813568916779303,
+    "reason": ""
+  },
+  {
+    "metric": "h2_sharpe_delta",
+    "hypothesis": "H2",
+    "period": "2022-2023",
+    "symbol": "PORTFOLIO",
+    "unit": "Sharpe RF=0",
+    "start_utc": "2022-01-01T00:00:00Z",
+    "end_exclusive_utc": "2024-01-01T00:00:00Z",
+    "observed_days": 730,
+    "expected_days": 730,
+    "paired_observations": 730,
+    "population": "daily returns include inactive days; fixed historical calendar",
+    "point_estimate": -1.27908098955647,
+    "reason": ""
+  },
+  {
+    "metric": "h1_mae_delta_bps",
+    "hypothesis": "H1",
+    "period": "2022-2023",
+    "symbol": "BTCUSDT",
+    "unit": "pb/168 h",
+    "start_utc": "2022-01-01T00:00:00Z",
+    "end_exclusive_utc": "2024-01-01T00:00:00Z",
+    "observed_days": 730,
+    "expected_days": 730,
+    "paired_observations": 2190,
+    "population": {
+      "BTCUSDT": 2190
+    },
+    "point_estimate": -2.492446581906455,
+    "reason": ""
+  },
+  {
+    "metric": "h1_mae_delta_bps",
+    "hypothesis": "H1",
+    "period": "2022-2023",
+    "symbol": "ETHUSDT",
+    "unit": "pb/168 h",
+    "start_utc": "2022-01-01T00:00:00Z",
+    "end_exclusive_utc": "2024-01-01T00:00:00Z",
+    "observed_days": 730,
+    "expected_days": 730,
+    "paired_observations": 2190,
+    "population": {
+      "ETHUSDT": 2190
+    },
+    "point_estimate": -3.2920595558048102,
+    "reason": ""
+  },
+  {
+    "metric": "h1_mae_delta_bps",
+    "hypothesis": "H1",
+    "period": "2022-2023",
+    "symbol": "EQUAL_WEIGHT",
+    "unit": "pb/168 h",
+    "start_utc": "2022-01-01T00:00:00Z",
+    "end_exclusive_utc": "2024-01-01T00:00:00Z",
+    "observed_days": 730,
+    "expected_days": 730,
+    "paired_observations": 4380,
+    "population": {
+      "BTCUSDT": 2190,
+      "ETHUSDT": 2190
+    },
+    "point_estimate": -2.8922530688556325,
+    "reason": ""
+  },
+  {
+    "metric": "h2_conditional_cagr",
+    "hypothesis": "H2",
+    "period": "2024+",
+    "symbol": "PORTFOLIO",
+    "unit": "fraction/year",
+    "start_utc": "2024-01-01T00:00:00Z",
+    "end_exclusive_utc": "2026-09-01T00:00:00Z",
+    "observed_days": 974,
+    "expected_days": 974,
+    "paired_observations": 974,
+    "population": "daily returns include inactive days; fixed historical calendar",
+    "point_estimate": 0.02049233427612267,
+    "reason": ""
+  },
+  {
+    "metric": "h2_sharpe_delta",
+    "hypothesis": "H2",
+    "period": "2024+",
+    "symbol": "PORTFOLIO",
+    "unit": "Sharpe RF=0",
+    "start_utc": "2024-01-01T00:00:00Z",
+    "end_exclusive_utc": "2026-09-01T00:00:00Z",
+    "observed_days": 974,
+    "expected_days": 974,
+    "paired_observations": 974,
+    "population": "daily returns include inactive days; fixed historical calendar",
+    "point_estimate": -3.4323784616464863,
+    "reason": ""
+  },
+  {
+    "metric": "h1_mae_delta_bps",
+    "hypothesis": "H1",
+    "period": "2024+",
+    "symbol": "BTCUSDT",
+    "unit": "pb/168 h",
+    "start_utc": "2024-01-01T00:00:00Z",
+    "end_exclusive_utc": "2026-09-01T00:00:00Z",
+    "observed_days": 974,
+    "expected_days": 974,
+    "paired_observations": 2900,
+    "population": {
+      "BTCUSDT": 2900
+    },
+    "point_estimate": -1.882644207172805,
+    "reason": ""
+  },
+  {
+    "metric": "h1_mae_delta_bps",
+    "hypothesis": "H1",
+    "period": "2024+",
+    "symbol": "ETHUSDT",
+    "unit": "pb/168 h",
+    "start_utc": "2024-01-01T00:00:00Z",
+    "end_exclusive_utc": "2026-09-01T00:00:00Z",
+    "observed_days": 974,
+    "expected_days": 974,
+    "paired_observations": 2900,
+    "population": {
+      "ETHUSDT": 2900
+    },
+    "point_estimate": -2.1891343591011148,
+    "reason": ""
+  },
+  {
+    "metric": "h1_mae_delta_bps",
+    "hypothesis": "H1",
+    "period": "2024+",
+    "symbol": "EQUAL_WEIGHT",
+    "unit": "pb/168 h",
+    "start_utc": "2024-01-01T00:00:00Z",
+    "end_exclusive_utc": "2026-09-01T00:00:00Z",
+    "observed_days": 974,
+    "expected_days": 974,
+    "paired_observations": 5800,
+    "population": {
+      "BTCUSDT": 2900,
+      "ETHUSDT": 2900
+    },
+    "point_estimate": -2.0358892831369597,
+    "reason": ""
+  },
+  {
+    "metric": "h3_opportunity_delta_bps",
+    "hypothesis": "H3",
+    "period": "2024+ minus 2022-2023",
+    "symbol": "PORTFOLIO",
+    "unit": "pb/168 h",
+    "start_utc": "2022-01-01T00:00:00Z",
+    "end_exclusive_utc": "2026-09-01T00:00:00Z",
+    "observed_days": 1704,
+    "expected_days": 1704,
+    "paired_observations": 1704,
+    "population": "daily returns include inactive days; fixed historical calendar",
+    "point_estimate": 2.6792589627678076,
+    "reason": ""
+  },
+  {
+    "metric": "h3_conditional_cagr_delta",
+    "hypothesis": "H3",
+    "period": "2024+ minus 2022-2023",
+    "symbol": "PORTFOLIO",
+    "unit": "fraction/year",
+    "start_utc": "2022-01-01T00:00:00Z",
+    "end_exclusive_utc": "2026-09-01T00:00:00Z",
+    "observed_days": 1704,
+    "expected_days": 1704,
+    "paired_observations": 1704,
+    "population": "daily returns include inactive days; fixed historical calendar",
+    "point_estimate": 0.009678765359343368,
+    "reason": ""
+  }
+]

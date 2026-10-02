@@ -1,0 +1,11 @@
+scenario,strategy,run_id,start_utc,end_exclusive_utc,verdict,reason,out_of_sample_validation
+I2023,conditional,run_0128030f40d9b67c8f659eba,2023-01-01T00:00:00.000000000Z,2026-09-01T00:00:00.000000000Z,ND,missing_part_or_all_of_original_2022_2023_regime,False
+I2023,permanent,run_0e538f9f2262e1a8bb2ec15d,2023-01-01T00:00:00.000000000Z,2026-09-01T00:00:00.000000000Z,ND,missing_part_or_all_of_original_2022_2023_regime,False
+I2024,conditional,run_40685bce287664d539d105fe,2024-01-01T00:00:00.000000000Z,2026-09-01T00:00:00.000000000Z,ND,missing_part_or_all_of_original_2022_2023_regime,False
+I2024,permanent,run_4097eb208f8c04030f52b0d4,2024-01-01T00:00:00.000000000Z,2026-09-01T00:00:00.000000000Z,ND,missing_part_or_all_of_original_2022_2023_regime,False
+BASE_E3,conditional,run_ad71d751b20623006c195ff3,2022-01-01T00:00:00.000000000Z,2026-09-01T00:00:00.000000000Z,conservado_BASE,original_2022_2023_and_2024_2026_comparison_in_BASE_bootstrap,False
+BASE_CONTINUA_I2023,conditional,run_ad71d751b20623006c195ff3,2023-01-01T00:00:00.000000000Z,2026-09-01T00:00:00.000000000Z,ND,missing_part_or_all_of_original_2022_2023_regime,False
+BASE_CONTINUA_I2024,conditional,run_ad71d751b20623006c195ff3,2024-01-01T00:00:00.000000000Z,2026-09-01T00:00:00.000000000Z,ND,missing_part_or_all_of_original_2022_2023_regime,False
+BASE_E3,permanent,run_dfea4b7ac1475668d5968c97,2022-01-01T00:00:00.000000000Z,2026-09-01T00:00:00.000000000Z,conservado_BASE,original_2022_2023_and_2024_2026_comparison_in_BASE_bootstrap,False
+BASE_CONTINUA_I2023,permanent,run_dfea4b7ac1475668d5968c97,2023-01-01T00:00:00.000000000Z,2026-09-01T00:00:00.000000000Z,ND,missing_part_or_all_of_original_2022_2023_regime,False
+BASE_CONTINUA_I2024,permanent,run_dfea4b7ac1475668d5968c97,2024-01-01T00:00:00.000000000Z,2026-09-01T00:00:00.000000000Z,ND,missing_part_or_all_of_original_2022_2023_regime,False
