@@ -2,6 +2,8 @@
 
 Este repositorio acompaña la Entrega 3 y su ampliación en la Entrega 4.
 
+**[Tesina final de Entrega 4 (PDF, 24 páginas)](entregas/entrega_4/documento_final/Tesina_Entregas_3_y_4_Pablo_Salerno.pdf)**
+
 Comparación de dos carteras de carry en **BTCUSDT y ETHUSDT**: compra spot y
 venta de perpetuos USD-M. La cartera **condicional** exige un pronóstico de
 funding suficiente para entrar o renovar; la **permanente** omite ese filtro y
@@ -15,7 +17,7 @@ Los cortes 2022–2023 y 2024–agosto de 2026 son tramos de esas mismas cartera
 La navegación vigente está en el **[índice de Entrega 4](entregas/entrega_4/README.md)**:
 BASE corregida, riesgo intradía y bloques 1–6, con sus protocolos, tablas,
 verificadores y límites. El [cierre técnico local del 02/10/2026](docs/entrega_4/cierre_publicacion_20261002/README.md)
-registra controles y estado Git; preparar esta documentación no implica una nueva publicación.
+se conserva como registro histórico de controles y estado Git.
 
 ## Referencia BASE continua
 

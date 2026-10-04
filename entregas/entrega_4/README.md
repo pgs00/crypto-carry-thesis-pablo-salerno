@@ -1,14 +1,17 @@
 # Entrega 4: índice vigente y reproducción
 
-Índice único al **02/10/2026**. Los paquetes vigentes son los identificados en
-la [matriz de avance](../../docs/entrega_4/matriz_avance.csv). El
-[cierre público y documental](../../docs/entrega_4/cierre_publicacion_20261002/cierre_publico_y_documento.md)
-registra la descarga comprobada de la evidencia publicada, el
-[PDF combinado final](documento_final/Tesina_Entregas_3_y_4_Pablo_Salerno.pdf)
-y la limitación del verificador B6 en Linux. El
-[cierre técnico local](../../docs/entrega_4/cierre_publicacion_20261002/README.md)
-se conserva como registro histórico. Este cierre de navegación y
-reproducibilidad no ejecuta carteras ni produce resultados económicos nuevos.
+**[PDF final de Entrega 4 (24 páginas)](documento_final/Tesina_Entregas_3_y_4_Pablo_Salerno.pdf)**.
+Esta versión tiene portada de Entrega 4 y una única sección de referencias.
+Reemplaza en la misma ruta el PDF de 31 páginas publicado el 02/10/2026.
+
+Los paquetes vigentes son los identificados en la
+[matriz de avance](../../docs/entrega_4/matriz_avance.csv). El
+[cierre público y documental del 02/10/2026](../../docs/entrega_4/cierre_publicacion_20261002/cierre_publico_y_documento.md)
+conserva el registro de la publicación anterior y la limitación del verificador
+B6 en Linux. Sus datos de identificación del PDF corresponden a aquella versión.
+El [cierre técnico local](../../docs/entrega_4/cierre_publicacion_20261002/README.md)
+también se conserva como registro histórico. Esta actualización del documento
+final no modifica los paquetes de evidencia ni incorpora resultados económicos nuevos.
 
 La lectura conjunta está en la [síntesis integrable B6][b6-sintesis]. Conserva
 H1 por horizonte y activo, H2 por escenario/período con ND y excepciones,
