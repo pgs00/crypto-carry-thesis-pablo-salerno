@@ -1,7 +1,0 @@
-{
-  "initial_sha256": "6091d55f3356b55dc004dffacb6ba94c614db3cb2b6ccb37134ad0d4f449a02f",
-  "resume_sha256": "0c6cbd52132aa33f9ada298e2b775e62281ef829205b2ec882b9a0125a2bcd98",
-  "reason": "Fresh-review restart guards; running coordinator retains initial code; economic runner/engine unchanged",
-  "tests": "7 failing restart cases reproduced, 11 delivery fixtures passed after correction",
-  "current_pid": 12344
-}

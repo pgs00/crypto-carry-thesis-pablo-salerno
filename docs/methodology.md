@@ -24,7 +24,7 @@ La limpieza de presentación no cambia esas configuraciones ni el motor.
 Las ventanas independientes de septiembre de 2022–agosto de 2023 y septiembre
 de 2025–agosto de 2026, cada una iniciada con capital nuevo, son
 [antecedentes archivados](../entregas/entrega_3/archivo/README.md). La
-[especificación de ejecución 1m](sources/Prompt_Codex_Ajuste_Backtesting_1m.md)
+[revisión histórica de ejecución 1m](sources/Prompt_Codex_Ajuste_Backtesting_1m.md)
 fijó `next_minute_vwap` y `joint_quantity`; la ampliación continua posterior
 conservó ese contrato. El [texto metodológico anterior](archive/methodology_before_cleanup_20260920.md.txt)
 se conserva como snapshot histórico, incluyendo sus referencias al motor de trades.
@@ -210,3 +210,8 @@ Los protocolos, límites y la síntesis integrable se consultan desde el
 [índice único E4](../entregas/entrega_4/README.md). La verificación de hashes,
 la recomputación de evidencia compacta y el replay económico son alcances
 distintos; ninguno convierte reglas prescritas en historia certificada.
+
+La [guía única de reproducción](reproduction.md) distingue lectura, evidencia
+compacta y datos masivos. `configs/base.toml` y `configs/robustness.toml` son
+perfiles anteriores del CLI con `first_trade`; no son las configuraciones
+efectivas de BASE continua/E4. Se conservan sin cambiar sus parámetros.

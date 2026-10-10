@@ -208,3 +208,27 @@ def test_generic_v2_entrypoint_is_readonly_even_without_python_B(tmp_path):
     assert before == {
         p.relative_to(package): p.read_bytes() for p in package.rglob("*") if p.is_file()
     }
+
+
+def test_copy_reference_preserves_ten_original_zip_files(tmp_path, authenticated_e3):
+    reference = tmp_path / "fresh extracted E3"
+    for name, original in authenticated_e3.items():
+        path = reference / name
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(original)
+    before = {name: (reference / name).read_bytes() for name in authenticated_e3}
+    destination = tmp_path / "new correction"
+    records = builder().copy_reference(reference, destination)
+    expected = {
+        "tablas/exposicion_intervalos.csv", "tablas/tiempo_invertido.csv",
+        "tablas/episodio_2023_03_24_exposicion.csv",
+        "codigo/scripts/continuous_delivery/portfolio.py",
+        "codigo/scripts/continuous_delivery/common.py", "codigo/scripts/continuous_delivery/build.py",
+        "codigo/src/crypto_carry/strategy.py", "codigo/src/crypto_carry/reporting.py",
+        "manifest.json", "manifest.sha256",
+    }
+    copied = {p.relative_to(destination / "referencia_e3").as_posix(): p.read_bytes()
+              for p in (destination / "referencia_e3").rglob("*") if p.is_file()}
+    assert len(records) == 10
+    assert copied == {name: authenticated_e3[name] for name in expected}
+    assert before == {name: (reference / name).read_bytes() for name in authenticated_e3}

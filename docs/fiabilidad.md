@@ -1,6 +1,6 @@
 # Fiabilidad y condiciones para interpretar los resultados
 
-La evidencia de esta página está fechada y conserva los controles de revisiones anteriores. Para el alcance continuo vigente y sus validaciones, consultar [metodología](methodology.md) y [avance](progress.md).
+La evidencia de esta página está fechada y conserva los controles de revisiones anteriores. Para el alcance continuo vigente y sus validaciones, consultar [metodología](methodology.md) y [resultados E4](../entregas/entrega_4/README.md).
 
 Requisito del usuario, 18/09/2026: el backtest debe ser lo más fiable posible porque podría servir para evaluar una futura prueba con capital propio. Este documento distingue los controles ejecutados y los límites del estudio con supuestos aprobados. El alcance sigue siendo un backtest, sin órdenes reales.
 
@@ -23,7 +23,7 @@ La rentabilidad no decide si una corrida es válida. La evidencia de datos, el m
 | Reproducibilidad | Mismos inputs, reglas, configuración y código reproducen resultados; reanudación conserva exposición y eventos. | Dos baselines inmutables con 43 artefactos verificados cada uno; hashes de fuentes y código, parámetros y pruebas de reanudación conservados. |
 | Robustez | Publicar los escenarios evaluados y sus faltantes, pérdidas, drawdowns y costos. | Los siete escenarios priorizados terminaron para ambas ventanas; índices y corridas verificados. Las demás dimensiones del motor están identificadas como no ejecutadas en este conjunto. |
 
-El detalle de las carteras continuas está en [avance](progress.md), y la evidencia histórica en [investigación](research/README.md). Los tests comprueban casos del software; su cantidad no estima una probabilidad de éxito económico ni prueba ausencia de errores.
+El detalle de las carteras continuas está en [resultados E4](../entregas/entrega_4/README.md), y la evidencia histórica en [investigación](research/README.md). Los tests comprueban casos del software; su cantidad no estima una probabilidad de éxito económico ni prueba ausencia de errores.
 
 Los controles estrictos continúan bloqueando resultados completos cuando falta evidencia necesaria. No se aprueba un hueco porque sea pequeño o porque resolverlo perjudique la rentabilidad. Un checksum prueba integridad del archivo; conciliar dos productos del mismo proveedor no descarta una omisión compartida.
 

@@ -6,4 +6,4 @@ estado `incomplete_data`. No es el diagnóstico de las carteras continuas
 
 El [informe original se conserva sin cambios](archive/pilot_20240101/data_quality_report.md).
 Ver el [alcance de estos manifiestos](README.md) y el
-[estado actual verificado](../../docs/progress.md).
+[índice de evidencia vigente](../../entregas/entrega_4/README.md).

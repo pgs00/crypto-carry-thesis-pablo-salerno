@@ -1,9 +1,0 @@
-DERIVED BASE_E3 conditional
-DERIVED BASE_E3 permanent
-DERIVED SH_P90 conditional
-DERIVED SH_P90 permanent
-DERIVED SH_MAX conditional
-DERIVED SH_MAX permanent
-DERIVED CF_SIN_INTERRUPCION conditional
-DERIVED CF_SIN_INTERRUPCION permanent
-{"tables": 48, "partial": false}

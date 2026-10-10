@@ -43,7 +43,7 @@ Las diferencias de hora nominal entre eventos son ocho horas en esta consulta; e
 
 La evaluación estricta desde 2022 necesitaría otra fuente que acredite esos marks. Para el escenario de investigación el usuario aprobó posteriormente un proxy causal y reglas prescritas; esa aprobación no convierte las aproximaciones en observaciones históricas exactas.
 
-El [seguimiento posterior](funding_followup_20260918.md) deja cada faltante identificado para evaluar otras fuentes y demuestra con contraejemplos que las aperturas de velas de mark price no son un reemplazo exacto general. La investigación pública de funding y reglas no depende de finalizar la descarga de trades. Ningún mark faltante se rellenó en los inputs ejecutables.
+El [seguimiento posterior](funding_followup_20260918.md) deja cada faltante identificado para evaluar otras fuentes y demuestra con contraejemplos que las aperturas de velas de mark price no son un reemplazo exacto general. La investigación pública de funding y reglas no depende de finalizar la descarga de trades. En esta investigación no se rellenaron los marks faltantes. El escenario continuo posterior emplea las aproximaciones explícitas de la [metodología vigente](../methodology.md).
 
 ## Trades: conciliación y anomalía identificada
 
@@ -79,6 +79,6 @@ Las fuentes sustentan las limitaciones y sensibilidades del escenario aprobado.
 Se conserva su procedencia; no se reclasifican reglas parciales o proxies como
 historia exacta. Las dos ventanas por minuto son antecedentes ejecutados y
 conservados en el [archivo de Entrega 3](../../entregas/entrega_3/archivo/README.md).
-[Avance y evidencia](../progress.md) describe las carteras continuas vigentes.
+[Resultados E4](../../entregas/entrega_4/README.md) describe las carteras continuas vigentes.
 Las fuentes de esta investigación fueron públicas y no requirieron contactar
 soporte ni contratar proveedores de datos.

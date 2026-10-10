@@ -386,14 +386,19 @@ python -I -S -B -X utf8 <paquete_padre>/herramientas/verify_rules_sensitivity_pa
 
 ## Regenerar exclusivamente el posprocesamiento
 
-Se necesita además la carpeta original E3 `Paquete de evidencia`, para autenticar
-y copiar el pequeño subconjunto editorial de referencia. Usar otro destino
-inexistente, fuera del padre, E3 y cualquier paquete sellado:
+Autenticar primero el ZIP original E3
+`entregas/entrega_3/paquete_actualizacion_entrega_3_continua.zip` contra su
+`.zip.sha256` (primer campo), `manifest.sha256` y los hashes de todos
+sus miembros. Desde el repositorio, `scripts.publish_thesis.load_source()`
+realiza esas comprobaciones. Extraer los bytes autenticados a una carpeta
+nueva en una ubicación externa al repositorio y a cualquier paquete sellado.
+El parámetro `--e3-reference` recibe esa carpeta extraída, no el archivo ZIP.
+Usar otro destino inexistente, fuera del padre, E3 y cualquier paquete sellado:
 
 ```powershell
 python -B -X utf8 <correccion>/herramientas/correct_rules_sensitivity_report.py `
   --source-package <paquete_padre> --destination <destino_nuevo> `
-  --e3-reference <Paquete_de_evidencia>
+  --e3-reference <carpeta_E3_extraida_autenticada>
 ```
 
 Matplotlib se requiere para regenerar figuras. `--no-figures` omite las imágenes

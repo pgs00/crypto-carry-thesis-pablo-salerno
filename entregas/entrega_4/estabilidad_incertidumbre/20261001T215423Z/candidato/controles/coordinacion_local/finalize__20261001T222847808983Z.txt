@@ -1,9 +1,0 @@
-Traceback (most recent call last):
-  File "C:\Users\pablo\Documentos\UCEMA\Tesina\Backtesting\scripts\package_stability_uncertainty.py", line 521, in <module>
-    print(json.dumps(finalize(args.candidate, args.data_root), ensure_ascii=False))
-                     ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\pablo\Documentos\UCEMA\Tesina\Backtesting\scripts\package_stability_uncertainty.py", line 472, in finalize
-    timing = execute(command, audit / "verificacion_offline.txt", cwd=offline_root)
-  File "C:\Users\pablo\Documentos\UCEMA\Tesina\Backtesting\scripts\package_stability_uncertainty.py", line 50, in execute
-    raise RuntimeError(f"Command failed ({result.returncode}); inspect {log}")
-RuntimeError: Command failed (1); inspect C:\Users\pablo\Documentos\UCEMA\Tesina\Backtesting\entregas\entrega_4\estabilidad_incertidumbre\20261001T215423Z\controles_finales\verificacion_offline.txt

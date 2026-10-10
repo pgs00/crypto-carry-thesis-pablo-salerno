@@ -13,7 +13,7 @@ parámetros del bloque 2.
 - [Auditoría de ejecución](paquete_20260927T231610Z/auditoria_ejecucion.md), [índice de corridas](paquete_20260927T231610Z/indice_corridas.json) y [casos extremos](paquete_20260927T231610Z/casos_extremos.md).
 - [Protocolo previo](protocolo.md), [encargo íntegro](encargo_usuario.md) y [compatibilidad anterior/nueva](control_compatibilidad.json).
 - [Instrucciones del verificador portátil](paquete_20260927T231610Z/README.md), [manifiesto](paquete_20260927T231610Z/manifiesto_paquete.json) y [SHA-256](paquete_20260927T231610Z/manifiesto_paquete.sha256).
-- [Matriz global vigente](../../../../docs/entrega_4/matriz_avance.csv), [historial](../../../../docs/entrega_4/historial_avance/cambios.md), [plan cerrado](plan.md) y [registro completo](progreso.md).
+- [Matriz global vigente](../../../../docs/entrega_4/matriz_avance.csv), [historial recuperable](../../../../docs/repository_cleanup.md#recuperacion-de-antecedentes), [plan cerrado](plan.md) y [registro completo](progreso.md).
 
 El modo optativo `base_e3_total` separa selección y costos realizados: entrada
 condicional estrictamente superior a 34 pb; renovación con forecast positivo.
@@ -55,7 +55,7 @@ Sello definitivo:
 `db68d839aa5837db72314b4f3de5509ecff283cc34d13a36e3c4f9d30298e1fb`.
 Estas auditorías permanecen fuera del sello para conservarlo intacto.
 
-## Versiones de desarrollo conservadas
+## Versiones de desarrollo archivadas
 
 | Carpeta | Estado |
 | --- | --- |
@@ -67,6 +67,9 @@ Estas auditorías permanecen fuera del sello para conservarlo intacto.
 | `paquete_20260927T230722Z` | Sello previo conservado; controles financieros y once corrupciones aprobados, reemplazado por ajuste de presentación/exportación |
 | `paquete_20260927T231610Z` | Versión final vigente; derivación documentada, verificada y exportada |
 
-El bloque 3 está terminado localmente. Bloques 4–6 y revisión transversal
+Las versiones anteriores de esta tabla se recuperan mediante el
+[índice de antecedentes](../../../../docs/repository_cleanup.md#recuperacion-de-antecedentes).
+
+El cierre histórico de este bloque registra: bloque 3 terminado localmente; bloques 4–6 y revisión transversal
 continúan pendientes. No se repitieron los análisis previos, no se generaron
 Word/PDF y no hubo commit, push ni cambios del índice del usuario.

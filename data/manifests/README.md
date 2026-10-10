@@ -10,7 +10,7 @@ reproducción del piloto. No se modifican sus estados para hacerlos parecer comp
 El [informe de calidad original](archive/pilot_20240101/data_quality_report.md)
 se archiva sin alteraciones.
 
-El estado actual está en [avance y evidencia](../../docs/progress.md), respaldado
+El estado actual está en [resultados E4](../../entregas/entrega_4/README.md), respaldado
 por la [preparación continua](../research/continuous-preparation-20260919/README.md)
 y la [sensibilidad de los 15 marks](../research/continuous-marks-20260919/README.md).
 Los manifiestos operativos continuos están junto a los datos locales en

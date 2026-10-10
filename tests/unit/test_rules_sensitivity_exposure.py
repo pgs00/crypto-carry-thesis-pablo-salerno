@@ -1,8 +1,8 @@
 """E3 editorial exposure excludes persisted dust but retains active inventory."""
 
 import csv
+import io
 from decimal import Decimal as D
-from pathlib import Path
 
 import pytest
 
@@ -183,16 +183,14 @@ def test_summary_rejects_gaps_or_overlapping_asset_intervals():
     ],
 )
 def test_exact_archived_e3_intervals_seconds_and_121_minute_episode(
-    strategy, expected_seconds, expected_unhedged, count
+    strategy, expected_seconds, expected_unhedged, count, authenticated_e3
 ):
-    root = Path(__file__).resolve().parents[2]
-    source = root / "Paquete de evidencia"
-    with (source / "evidencia/positions.csv").open(encoding="utf-8", newline="") as stream:
+    with io.StringIO(authenticated_e3["evidencia/positions.csv"].decode("utf-8")) as stream:
         rows = [row for row in csv.DictReader(stream) if row["strategy"] == strategy]
     start, end = timestamp("2022-01-01T00:00:00Z"), timestamp("2026-09-01T00:00:00Z")
     intervals = exposure_intervals(rows, start, end, D("0.005"))
     assert len(intervals) == count
-    with (source / "tablas/exposicion_intervalos.csv").open(encoding="utf-8", newline="") as stream:
+    with io.StringIO(authenticated_e3["tablas/exposicion_intervalos.csv"].decode("utf-8")) as stream:
         originals = [row for row in csv.DictReader(stream) if row["strategy"] == strategy]
     for actual, expected in zip(intervals, originals, strict=True):
         for field, value in expected.items():

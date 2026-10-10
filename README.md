@@ -1,107 +1,56 @@
 # Crypto carry: backtesting de la tesina
 
-Este repositorio acompaña la Entrega 3 y su ampliación en la Entrega 4.
+¿Una cartera que filtra entradas y renovaciones por un pronóstico de funding
+mejora el desempeño de una cartera de carry permanente? El estudio compara
+compra spot y venta de perpetuos USD-M en **BTCUSDT y ETHUSDT**. La permanente
+omite sólo el filtro de funding; comparte las reglas de basis, ejecución,
+capital y riesgo.
+
+El período vigente es **01/01/2022–31/08/2026 UTC**, continuo y sin reinicios
+anuales, con 10.000 USDT iniciales por cartera. Usa velas de un minuto,
+`next_minute_vwap`, sizing conjunto y `futures_scaled` para 15 marks ausentes.
 
 **[Tesina final de Entrega 4 (PDF, 24 páginas)](entregas/entrega_4/documento_final/Tesina_Entregas_3_y_4_Pablo_Salerno.pdf)**
 
-Comparación de dos carteras de carry en **BTCUSDT y ETHUSDT**: compra spot y
-venta de perpetuos USD-M. La cartera **condicional** exige un pronóstico de
-funding suficiente para entrar o renovar; la **permanente** omite ese filtro y
-conserva las mismas reglas de basis, ejecución, capital y riesgo.
+BASE total conserva H2 `no_favorable`: la condicional no supera el Sharpe de
+la permanente. H3 es descriptivamente `contraria`: oportunidad y CAGR
+condicional aumentan en el segundo tramo. Las excepciones por escenario/año
+se conservan en los reportes; no se generalizan esas etiquetas a toda variante.
+H1 registra MAE de 6,299 bps para EWMA frente a 8,703 bps para no-change,
+con 10.180 observaciones válidas y 44 exclusiones.
 
-El estudio vigente abarca **01/01/2022–31/08/2026 UTC**, con 10.000 USDT iniciales
-por cartera y sin reinicios anuales. Usa velas de un minuto, ejecución
-`next_minute_vwap`, sizing conjunto y `futures_scaled` para los 15 marks ausentes.
-Los cortes 2022–2023 y 2024–agosto de 2026 son tramos de esas mismas carteras.
-
-La navegación vigente está en el **[índice de Entrega 4](entregas/entrega_4/README.md)**:
-BASE corregida, riesgo intradía y bloques 1–6, con sus protocolos, tablas,
-verificadores y límites. El [cierre técnico local del 02/10/2026](docs/entrega_4/cierre_publicacion_20261002/README.md)
-se conserva como registro histórico de controles y estado Git.
-
-## Referencia BASE continua
-
-| Cartera | Equity final (USDT) | Retorno neto | CAGR | Sharpe | Drawdown diario |
+| Cartera BASE | Equity final (USDT) | Retorno neto | CAGR | Sharpe | Drawdown diario |
 |---|---:|---:|---:|---:|---:|
 | Condicional | 10.785,76 | 7,8576 % | 1,6335 % | 4,9624 | −0,2062 % |
 | Permanente | 11.680,07 | 16,8007 % | 3,3825 % | 6,5336 | −0,4827 % |
 
-![Equity y drawdown continuos](entregas/entrega_3/continua/figuras/equity_drawdown.png)
+Los resultados usan reglas prescritas y aproximaciones explícitas. La
+metodología conserva sus límites de ejecución, datos, margen e inferencia.
 
-[Tablas, figuras y cortes completos](entregas/entrega_3/continua/README.md) ·
-[Paquete vigente de la Entrega 3](entregas/entrega_3/README.md).
+- [Metodología vigente](docs/methodology.md): contrato científico y limitaciones.
+- [Resultados y paquetes vigentes E4](entregas/entrega_4/README.md): BASE, riesgo y bloques 1–6.
+- [Guía única de reproducción](docs/reproduction.md): lectura, verificadores compactos, extracción E3 y datos masivos.
+- [Resultados continuos E3](entregas/entrega_3/continua/README.md): tablas, figuras y corridas de referencia.
+- [Recuperación de antecedentes](docs/repository_cleanup.md#recuperacion-de-antecedentes): Git, respaldo y rutas originales.
 
-H1: MAE de 6,299 bps para EWMA frente a 8,703 bps para no-change, con 10.180
-observaciones válidas y 44 exclusiones. H2 BASE total es `no_favorable`: la
-condicional no supera el Sharpe de la permanente. H3 muestra mayor oportunidad
-y CAGR condicional en el segundo tramo; es evidencia descriptiva contraria
-a su caída, sin atribución causal.
-
-Son resultados de investigación con reglas y tarifas prescritas, ejecución por
-minuto y aproximaciones explícitas de funding y marks; no una reconstrucción
-exacta de ejecución real. La [metodología](docs/methodology.md) define los
-supuestos y la [evidencia vigente](docs/progress.md) reúne las verificaciones.
-
-## Reproducción
-
-El [índice E4](entregas/entrega_4/README.md#reproduccion-en-tres-niveles)
-distingue lectura, verificación offline de evidencia compacta y replay con
-datos masivos. Incluye comandos por paquete, requisitos y salidas externas.
-La verificación offline no vuelve a ejecutar las carteras ni certifica toda
-la historia del exchange.
-
-Para la presentación **E3** conservada, desde la raíz del repositorio, con
-Python 3.14 y las dependencias de `uv.lock`:
+Desde la raíz del repositorio, preparar el entorno y comprobar la presentación E3:
 
 ```powershell
-uv sync --frozen
-& '.\.venv\Scripts\python.exe' -m scripts.publish_thesis --verify
-& '.\.venv\Scripts\python.exe' -m scripts.publish_thesis --output '.\.superpowers\presentacion_repro'
+uv sync --frozen --python 3.14.3
+& '.\.venv\Scripts\python.exe' -B -X utf8 -m scripts.publish_thesis --verify
+& '.\.venv\Scripts\python.exe' -B -X utf8 -m scripts.verify_documentation
 ```
 
-Usar un destino nuevo para regenerar las tablas y figuras. Estos comandos leen
-el ZIP guardado y funcionan **sin datos masivos ni nuevos backtests**. Para
-verificar el paquete completo, extraer el
-[ZIP vigente](entregas/entrega_3/paquete_actualizacion_entrega_3_continua.zip)
-y ejecutar `python verificar.py` dentro de la carpeta extraída.
+La [guía](docs/reproduction.md) publica los nueve comandos congelados E4 y
+distingue su alcance de un replay económico. Los controles ejecutados durante
+la simplificación local están en el [registro de verificaciones](docs/repository_cleanup.md#verificaciones).
 
-Para desarrollo, con el entorno ya preparado, estos comandos lanzan la suite
-general y el lint. No son requisitos para leer los resultados ni se presentan
-como controles ejecutados íntegramente en este cierre:
+`src/crypto_carry/` contiene el motor; las configuraciones efectivas de cada
+corrida y paquete fijan los experimentos. `configs/base.toml` y
+`configs/robustness.toml` son perfiles anteriores del CLI (`first_trade`),
+conservados por sus usos y pruebas; no identifican la BASE vigente E4.
+Las fuentes masivas, corridas completas, entornos y cachés permanecen locales.
 
-```powershell
-& '.\.venv\Scripts\python.exe' -m pytest -q
-& '.\.venv\Scripts\python.exe' -m ruff check src tests scripts
-```
-
-`scripts.verify_repository_evidence` conserva el control histórico de limpieza
-del 20/09/2026: exige hashes anteriores del código económico y falla ante su
-evolución posterior. Su resultado y alcance están documentados en el
-[cierre local](docs/entrega_4/cierre_publicacion_20261002/README.md);
-no es un verificador universal de Entrega 4.
-
-Los recálculos que requieren las fuentes locales están documentados en
-[sensibilidad de marks](docs/continuous_mark_gaps.md) y
-[análisis del precio de funding](data/research/funding-price-sensitivity-20260920/README.md).
-La [guía de datos](docs/descarga_d.md) describe el almacenamiento en D:.
-
-## Evidencia y organización
-
-- [Entrega 4](entregas/entrega_4/README.md): índice único de paquetes vigentes,
-  síntesis integrable B6, antecedentes y pendientes.
-- [Entrega 3 continua](entregas/entrega_3/continua/README.md): resultados, P&L,
-  actividad, tiempo invertido, filtros, episodio del 24/03/2023, H1 y H3.
-- [15 marks faltantes](data/research/continuous-marks-20260919/README.md) y
-  [sensibilidad del funding](data/research/funding-price-sensitivity-20260920/README.md):
-  evidencia compacta, supuestos y hashes conservados.
-- [Índice de investigación](data/research/README.md): separa evidencia vigente,
-  auditorías anteriores y exploraciones de fuentes.
-- [Archivo de Entrega 3](entregas/entrega_3/archivo/README.md): las ventanas
-  independientes 01/09/2022–31/08/2023 y 01/09/2025–31/08/2026 son antecedentes.
-- [Manifiestos del piloto](data/manifests/README.md): muestra del 01/01/2024;
-  no son el diagnóstico de las carteras actuales.
-
-`src/crypto_carry/` contiene el motor y `configs/` sus parámetros. Las fuentes
-masivas, Parquet operativos, corridas completas, entornos y cachés permanecen
-locales y excluidos por `.gitignore`. Los cambios de presentación y archivo se
-registran en [limpieza y validaciones](docs/repository_cleanup.md).
+El trabajo utilizó asistencia de IA en código, documentación y verificaciones.
+Los [prompts conservados](docs/sources/) registran la procedencia; no son la
+especificación vigente ni acreditan autoría personal de tareas concretas.

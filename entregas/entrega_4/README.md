@@ -1,17 +1,12 @@
-# Entrega 4: índice vigente y reproducción
+# Entrega 4: resultados y paquetes vigentes
 
 **[PDF final de Entrega 4 (24 páginas)](documento_final/Tesina_Entregas_3_y_4_Pablo_Salerno.pdf)**.
 Esta versión tiene portada de Entrega 4 y una única sección de referencias.
 Reemplaza en la misma ruta el PDF de 31 páginas publicado el 02/10/2026.
 
-Los paquetes vigentes son los identificados en la
-[matriz de avance](../../docs/entrega_4/matriz_avance.csv). El
-[cierre público y documental del 02/10/2026](../../docs/entrega_4/cierre_publicacion_20261002/cierre_publico_y_documento.md)
-conserva el registro de la publicación anterior y la limitación del verificador
-B6 en Linux. Sus datos de identificación del PDF corresponden a aquella versión.
-El [cierre técnico local](../../docs/entrega_4/cierre_publicacion_20261002/README.md)
-también se conserva como registro histórico. Esta actualización del documento
-final no modifica los paquetes de evidencia ni incorpora resultados económicos nuevos.
+La [matriz de avance](../../docs/entrega_4/matriz_avance.csv) identifica los
+paquetes vigentes. La versión actual del PDF y la simplificación del árbol
+no modifican los paquetes de evidencia ni incorporan resultados económicos nuevos.
 
 La lectura conjunta está en la [síntesis integrable B6][b6-sintesis]. Conserva
 H1 por horizonte y activo, H2 por escenario/período con ND y excepciones,
@@ -49,11 +44,10 @@ Los reportes y README dentro de paquetes sellados conservan su fecha, sus
 comandos originales y expresiones como «local», «sin push», «candidato» o
 «pendiente». Son registros históricos. Por ejemplo, la ficha B1 anterior a
 SOFR sigue pendiente en sus bytes; la aprobación posterior está en B1 SOFR.
-B5 conserva pendientes B6/B2-B3 posteriormente resueltos. El cierre técnico
-externo y la matriz dan el estado actual sin reescribir esos documentos.
+B5 conserva pendientes B6/B2-B3 posteriormente resueltos. La matriz identifica las versiones vigentes sin reescribir esos documentos.
 
-Las carpetas `candidato`, intentos parciales, exportaciones anteriores y B4
-anterior a `v2` se preservan como antecedentes; no sustituyen las versiones
+Los candidatos, intentos parciales y versiones anteriores retirados del árbol
+activo se recuperan mediante el [índice de antecedentes](../../docs/repository_cleanup.md#recuperacion-de-antecedentes); no sustituyen las versiones
 de la tabla. El informe padre de reglas se lee con la corrección de exposición
 y H2. [E3 continua](../entrega_3/continua/README.md) conserva la referencia BASE;
 las [ventanas independientes E3](../entrega_3/archivo/README.md) son históricas.
@@ -63,115 +57,32 @@ Las reglas históricas incompletas siguen siendo una limitación. La
 permanece sin ejecutar. Las sensibilidades retrospectivas no constituyen
 evidencia fuera de muestra.
 
-La revisión académica favorable ya recibida se conserva. La publicación de
-la evidencia en `c0b432d8bff7fb86cf86a6bc0b28beffab225516`, su descarga
-comprobada y la actualización mínima del PDF se documentan en el
-[cierre posterior](../../docs/entrega_4/cierre_publicacion_20261002/cierre_publico_y_documento.md).
-El verificador integral conserva la limitación de comparación textual en Linux
-allí explicada; no se declara un PASS integral en ese entorno.
+Los [antecedentes de publicación](../../docs/repository_cleanup.md#recuperacion-de-antecedentes)
+conservan la revisión académica favorable recibida, la publicación de evidencia
+en `c0b432d8bff7fb86cf86a6bc0b28beffab225516`, su descarga comprobada y el
+PDF anterior de 31 páginas. Esos registros describen su versión y fecha,
+separadas del PDF actual de 24 páginas y de los controles de esta limpieza local.
+
 La remuneración/reinversión de caja libre o garantías del carry permanece
 fuera del alcance autorizado. La aprobación del comparador SOFR no autoriza
-esa modificación. El [registro del cierre](../../docs/entrega_4/cierre_publicacion_20261002/README.md)
-separa la revisión técnica local de cualquier commit, push o entrega académica.
+esa modificación.
 
-## Reproduccion en tres niveles
+## Dependencias y reproducción
 
-### 1. Lectura, sin ejecutar código
+La [guía única de reproducción](../../docs/reproduction.md) contiene los nueve
+comandos congelados, preparación del entorno y extracción autenticada E3.
+BASE requiere el padre completo `reglas_historicas/20260925T005436Z`.
+Riesgo compacto requiere padre y corrección BASE; B1 SOFR requiere B1 capital.
+B1 capital puede autenticar además padre, corrección, riesgo y referencia E3
+extraída. Las demás dependencias quedan incluidas en los paquetes de la tabla.
+Ninguna copia de desarrollo archivada sustituye esas versiones.
 
-Abrir los reportes Markdown/HTML, tablas CSV y protocolos enlazados arriba.
-No requiere Python ni datos de mercado. Los índices de corridas y manifiestos
-identifican las fuentes; leerlos no equivale a volver a verificarlas.
-
-### 2. Verificación offline de evidencia compacta
-
-Los comandos siguientes usan los verificadores congelados de cada paquete.
-Requieren **Python 3.14** y las dependencias de [pyproject.toml](../../pyproject.toml)
-y [uv.lock](../../uv.lock); el entorno local de referencia usa Python 3.14.3
-en Windows. En Linux se comprobó una diferencia de últimos dígitos que hace
-fallar la comparación literal del CSV de intervalos B6, aunque sus controles
-numéricos pasan. Ver el [alcance comprobado](../../docs/entrega_4/cierre_publicacion_20261002/cierre_publico_y_documento.md#verificación-ejecutada-y-límite-de-portabilidad).
-Preparar el entorno desde la raíz del checkout, antes de la verificación:
-
-```powershell
-uv sync --frozen --python 3.14.3
-```
-
-La preparación puede necesitar acceso a paquetes si no están instalados o
-en caché. Los verificadores posteriores no requieren red ni `D:/Backtesting`.
-No ejecutar `uv sync` dentro de un paquete sellado. Sus copias de código/lock
-fijan la procedencia; el entorno reutilizado queda fuera de las evidencias.
-
-Desde la **raíz del repositorio**, parametrizar ubicación y salida. La matriz
-resuelve las rutas vigentes; si se trasladan paquetes, reemplazar sus valores
-en `$paquetes` y `$padre`. Elegir siempre una carpeta de auditoría nueva y
-externa a todos los paquetes; los JSON/logs son los únicos productos esperados.
-
-```powershell
-$repo = (Resolve-Path .).Path
-$py = Join-Path $repo '.venv/Scripts/python.exe'
-$paquetes = @{}
-Import-Csv (Join-Path $repo 'docs/entrega_4/matriz_avance.csv') | ForEach-Object {
-    if ($_.paquete_vigente) { $paquetes[$_.id] = Join-Path $repo $_.paquete_vigente }
-}
-$padre = Join-Path $repo 'entregas/entrega_4/reglas_historicas/20260925T005436Z'
-$salida = Join-Path $repo ('.superpowers/e4_offline_' + (Get-Date -Format 'yyyyMMddTHHmmss'))
-if (Test-Path -LiteralPath $salida) { throw 'Elegir una salida nueva' }
-New-Item -ItemType Directory -Path $salida | Out-Null
-```
-
-Ejecutar cada línea por separado y comprobar su código de salida y JSON.
-Una ayuda `--help` satisfactoria sólo valida la interfaz; no acredita el pase
-del paquete. Los resultados efectivamente ejecutados en este cierre están
-en el [registro externo](../../docs/entrega_4/cierre_publicacion_20261002/README.md).
-
-```powershell
-& $py -B -X utf8 "$($paquetes.BASE)/herramientas/verify_rules_sensitivity_correction.py" --package $paquetes.BASE --parent $padre --output "$salida/base.json"
-& $py -B -X utf8 "$($paquetes.RIESGO)/herramientas/scripts/verify_intraday_risk.py" --scope compact --package $paquetes.RIESGO --parent $padre --correction $paquetes.BASE --output "$salida/riesgo.json"
-& $py -B -X utf8 "$($paquetes.B1_CAPITAL)/herramientas/scripts/verify_return_capital.py" --package $paquetes.B1_CAPITAL --output "$salida/b1_capital.json"
-& $py -B -X utf8 "$($paquetes.B1_SOFR)/herramientas/scripts/verify_sofr_benchmark.py" --package $paquetes.B1_SOFR --previous $paquetes.B1_CAPITAL --output "$salida/b1_sofr.json"
-& $py -B -X utf8 "$($paquetes.B2)/herramientas/scripts/verify_signal_sensitivity.py" --package $paquetes.B2 --output "$salida/b2.json"
-& $py -B -X utf8 "$($paquetes.B3)/herramientas/scripts/verify_cost_capacity.py" --package $paquetes.B3 --output "$salida/b3.json"
-& $py -B -X utf8 "$($paquetes.B4)/herramientas/scripts/verify_execution_delays.py" --package $paquetes.B4 --output "$salida/b4.json"
-& $py -B -X utf8 "$($paquetes.B5)/herramientas/scripts/verify_stress_counterfactual.py" $paquetes.B5 --output "$salida/b5.json"
-& $py -B -I -X utf8 "$($paquetes.B6)/herramientas/scripts/verify_stability_uncertainty.py" --candidate $paquetes.B6 --output "$salida/b6.json" --forbid-root 'D:/Backtesting'
-```
-
-BASE requiere su padre completo. Riesgo autentica los linajes suministrados,
-pero el modo compacto no recalcula extremos globales ni precios por minuto.
-B1 capital, sin dependencias adicionales, comprueba el paquete interno; su
-[guía][capital-guia] documenta el modo con padre, corrección, riesgo y E3.
-SOFR recalcula la cuenta hipotética y autentica B1 capital. B2–B5 recomputan
-lo declarado en cada guía desde extractos y agregados; no vuelven a leer
-toda la historia de mercado. B6 vuelve a calcular también las estadísticas
-del bootstrap desde inputs compactos, sin simular carteras. Las herramientas
-comparten partes del posprocesamiento; imágenes verificadas por hash y tablas
-de origen no equivalen a una inspección visual nueva.
-
-Los manifiestos comprueban bytes y pertenencia al inventario, no autenticidad
-histórica del exchange. Los sellos y sus sidecars nunca se renuevan para
-hacer pasar una divergencia. Los controles de integridad binaria Git/exportación
-de este cierre están separados de los cálculos en el registro externo.
-
-`scripts.verify_repository_evidence` corresponde a la limpieza histórica del
-20/09/2026 y exige hashes antiguos del código económico. Su fallo actual por
-fuentes evolucionadas está registrado en el cierre; no es un control universal
-de E4. Los verificadores por paquete de arriba fijan su propio alcance.
-
-### 3. Fuentes masivas y replay del motor, fuera de este cierre
-
-Volver a autenticar mercados o reconstruir todo el riesgo intradía exige las
-fuentes locales indicadas por sus manifiestos, normalmente `D:/Backtesting`.
-Los parámetros `--data-root`, `--series-root` o riesgo `--scope complete`
-amplían la verificación y no implican necesariamente un replay económico.
-No se confunden con el nivel compacto ni se ejecutan en este cierre.
-
-Repetir carteras requiere además el snapshot económico, configuraciones,
-dependencias y contratos exactos de cada bloque, junto con destinos nuevos.
-La [guía de reglas](../../docs/entrega_4/reglas_historicas/reproduccion.md),
-la [reproducción B5][b5-limites] y los protocolos de la tabla conservan los
-requisitos y comandos históricos. Los runners pueden escribir estados:
-nunca deben apuntar al paquete sellado. Este índice no ordena una nueva
-tanda ni convierte una comprobación offline en reproducción del motor.
+La comparación literal del CSV B6 tiene un antecedente de fallo integral en
+Linux: diferencia máxima `6.938893903907228e-18`, con controles numéricos
+aprobados en aquella comprobación. Windows es el entorno de referencia.
+Los resultados nuevos de esta limpieza se registran por separado en
+[verificaciones](../../docs/repository_cleanup.md#verificaciones); no se
+presentan controles históricos como ejecuciones nuevas.
 
 [base-reporte]: reglas_historicas/correccion_exposicion_h2_20260925T150139Z/paquete_20260926T204312Z/comparacion/reporte.md
 [base-tablas]: reglas_historicas/correccion_exposicion_h2_20260925T150139Z/paquete_20260926T204312Z/comparacion

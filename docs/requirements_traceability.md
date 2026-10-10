@@ -1,10 +1,24 @@
 # Trazabilidad de requisitos
 
-Fuente original: `sources/Prompt_Codex_Backtesting.md`, secciones indicadas. Las decisiones posteriores del usuario fijan el alcance vigente en el [protocolo](escenario_investigacion.md): dos ventanas anuales independientes, ejecución por minuto y reglas prescritas. Las pruebas son offline; fuentes públicas y muestra se verifican aparte. `complete` en una demo no certifica cobertura histórica.
+La [metodología vigente](methodology.md) fija carteras continuas
+**01/01/2022–31/08/2026 UTC**, sin reinicios anuales, `next_minute_vwap`,
+`joint_quantity` y reglas prescritas. Los prompts conservados son fuentes
+históricas de requisitos; no constituyen la especificación vigente.
+Las pruebas son offline; fuentes públicas y muestras se verifican aparte.
+`complete` en una demo no certifica cobertura histórica.
+
+| Requisito vigente | Implementación / evidencia | Lectura y control |
+|---|---|---|
+| Dos carteras continuas, cortes con saldos heredados | Configuraciones efectivas, corridas y ZIP E3 continuo | [E3 continua](../entregas/entrega_3/continua/README.md) |
+| VWAP causal, capacidad agregada y parciales | execution, strategy, nautilus_adapter; tests de ventana y parciales | [Metodología](methodology.md#carteras-sizing-y-ejecución) |
+| Exposición sin polvo, H2 con ND y CAGR positivo | Corrección BASE y padre completo | [Índice E4](../entregas/entrega_4/README.md) |
+| Reglas, proxies y límites conservados | Protocolos, fuentes y manifiestos por bloque | [Guía de reproducción](reproduction.md) |
+| Sensibilidades aisladas B1–B6, sin adoptar ganadores en BASE | Paquetes identificados por matriz | [Matriz E4](entrega_4/matriz_avance.csv) |
+| Controles ejecutados durante la limpieza | Evidencia externa y comparación con baseline | [Verificaciones](repository_cleanup.md#verificaciones) |
 
 ## Cambios del estudio por minuto
 
-La revisión vigente es [Prompt_Codex_Ajuste_Backtesting_1m.md](sources/Prompt_Codex_Ajuste_Backtesting_1m.md).
+La revisión histórica de ejecución 1m está en [Prompt_Codex_Ajuste_Backtesting_1m.md](sources/Prompt_Codex_Ajuste_Backtesting_1m.md).
 
 | Requisito de la revisión | Implementación | Pruebas |
 |---|---|---|
@@ -17,7 +31,7 @@ La revisión vigente es [Prompt_Codex_Ajuste_Backtesting_1m.md](sources/Prompt_C
 La tabla siguiente corresponde a la referencia anterior; el contraste con trades
 queda conservado como investigación previa y no es una dependencia nueva.
 
-| Requisito vigente | Implementación | Evidencia | Salida |
+| Requisito de las ventanas históricas | Implementación | Evidencia | Salida |
 |---|---|---|---|
 | Dos ventanas con capital reiniciado | Dos TOML `download_minutes_*`, config.py | test_minute_reporting; manifiestos anuales | Informe de cada ventana y comparación conjunta |
 | Adquisición pública acotada en D: | data/minute_download.py | test_minute_download; preparation.json | ZIP, respuestas y checksums bajo data/minutes |
@@ -28,7 +42,7 @@ queda conservado como investigación previa y no es una dependencia nueva.
 | Economía anual reconstruida independientemente | verify_annual_economics.py | annual-economic-audit.json | Cuatro carteras y 106 fills auditados |
 | Comparación sin unir carteras entre años omitidos | build_study_report.py | Baselines y escenarios verificados por hashes | outputs/study_*/report.md y summary.json |
 
-## Motor y especificación original
+## Motor y especificación original: trazabilidad histórica
 
 Los requisitos siguientes conservan su implementación para el motor de trades
 y las partes compartidas. VWAP de cinco segundos requiere trades reales y no
@@ -39,7 +53,7 @@ no se presentan como sensibilidades anuales ya evaluadas.
 | Requisito | Fuente | Implementación | Evidencia automatizada | Salida |
 |---|---|---|---|---|
 | Config base, fechas, Decimal, paths y 20 GB | §§2–4 + decisión usuario | config.py, download.py, normalize.py | test_config, test_data | effective_config.toml, manifests |
-| Nautilus real, full fill, sin cierre terminal | §2 | nautilus_adapter.py | test_native_adapter; test_two_legs; test_integral_native | orders/fills, run_summary |
+| Nautilus real, full fill del perfil anterior, sin cierre terminal | §2 | nautilus_adapter.py | test_native_adapter; test_two_legs; test_integral_native | orders/fills, run_summary |
 | Un solo código para dos carteras | §§2,7 | strategy.Backtest, flag | test_equal_filter_disabled; test_demo | tablas por strategy |
 | Trades individuales, UTC ms/us, sin agregados | §4 | data/normalize.py | test_source_timestamp | Parquet trades |
 | Descarga/reanudación/checksum/budget | §4 | data/download.py | test_download_rejects_budget; test_verified_raw_cache; paginación/conflictos | download.json |
@@ -68,6 +82,6 @@ no se presentan como sensibilidades anuales ya evaluadas.
 | Robustez predefinida, baseline intacto | §11 | robustness.py | test_robustness_is_predefined | config por corrida, robustness_summary |
 | Participación previa/AUM | §11 | _submit, reporting/robustness.py | test_two_legs (ventana al envío), test_reporting | execution_summary, escenarios AUM |
 | Manifiestos, estados, no overwrite, reportes desde tablas | §12 | reporting.py | test_reporting | outputs/run_id/* |
-| CLI, instalación y demo | §15 | cli.py, __main__.py | test_cli, test_demo + comandos registrados | README, progress |
+| CLI, instalación y demo | §15 | cli.py, __main__.py | test_cli, test_demo + comandos registrados | README y registro histórico de avance |
 
-La lista de pruebas exacta y completa se obtiene con `uv run pytest --collect-only -q`. [Avance y evidencia](progress.md) identifica la verificación final y las limitaciones vigentes; `data/research/` conserva las auditorías reproducibles.
+La lista de pruebas exacta y completa se obtiene con `uv run pytest --collect-only -q`. [Resultados E4](../entregas/entrega_4/README.md) identifica la evidencia y limitaciones vigentes; el [registro local](repository_cleanup.md#verificaciones) distingue controles nuevos de históricos; `data/research/` conserva las auditorías reproducibles.

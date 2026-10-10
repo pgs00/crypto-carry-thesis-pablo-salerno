@@ -1,8 +1,0 @@
-Traceback (most recent call last):
-  File "C:\Users\pablo\AppData\Local\Temp\b6_offline_20261001T215423Z\paquete\herramientas\scripts\verify_stability_uncertainty.py", line 228, in <module>
-    result = verify(args.candidate)
-  File "C:\Users\pablo\AppData\Local\Temp\b6_offline_20261001T215423Z\paquete\herramientas\scripts\verify_stability_uncertainty.py", line 181, in verify
-    contract = verify_contract(package)
-  File "C:\Users\pablo\AppData\Local\Temp\b6_offline_20261001T215423Z\paquete\herramientas\scripts\verify_stability_uncertainty.py", line 120, in verify_contract
-    raise ValueError("Included economic code differs from execution")
-ValueError: Included economic code differs from execution

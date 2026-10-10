@@ -71,7 +71,7 @@ def snapshot(destination):
     names = ["cost_capacity.py", "cost_capacity_guards.py", "cost_capacity_audit.py",
              "cost_capacity_sources.py", "cost_capacity_report.py", "cost_capacity_docs.py",
              "cost_capacity_ledger.py", "cost_capacity_incomplete.py",
-             "cost_capacity_delivery.py", "cost_capacity_progress.py", "continue_cost_capacity.py",
+             "cost_capacity_delivery.py", "continue_cost_capacity.py",
              "run_cost_capacity.py", "prepare_cost_capacity.py", "check_cost_capacity_compatibility.py",
              "audit_cost_capacity_stage.py", "build_cost_capacity.py", "verify_cost_capacity.py"]
     for name in names:

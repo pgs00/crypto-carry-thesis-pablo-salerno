@@ -1,7 +1,0 @@
-passed,windows,required_minute_snapshots,actual_event_snapshots,required_asset_minute_witnesses,terminal_scope,scenario,strategy,run_id
-True,212,13735,13737,27470,through observed final clock inclusive; no extrapolation,SH_P90,conditional,run_92eccb60683bed405bffd9c6
-True,212,13735,13737,27470,through observed final clock inclusive; no extrapolation,SH_P90,permanent,run_e9c1423ed2dc13006c8f09c4
-True,212,13735,13737,27470,through observed final clock inclusive; no extrapolation,SH_MAX,conditional,run_bcee3d348d6222b053ab15f3
-True,212,13735,13737,27470,through observed final clock inclusive; no extrapolation,SH_MAX,permanent,run_03c2965a78c8d2502b7bb0a9
-True,1,156,156,312,through observed final clock inclusive; no extrapolation,CF_SIN_INTERRUPCION,conditional,run_478a6647e78b9a24f13733a0
-True,1,156,156,312,through observed final clock inclusive; no extrapolation,CF_SIN_INTERRUPCION,permanent,run_4ca498777b23a4815d4fca47

@@ -1,4 +1,0 @@
-
-# Preserve only the new cost/capacity evidence across Git EOL conversion.
-/entregas/entrega_4/costos_capacidad/** -text whitespace=cr-at-eol
-/entregas/entrega_4/costos_capacidad/**/*.svg whitespace=-blank-at-eol,cr-at-eol

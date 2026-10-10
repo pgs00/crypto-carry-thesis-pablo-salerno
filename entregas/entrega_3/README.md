@@ -15,5 +15,5 @@ La entrega vigente corresponde a **dos carteras continuas del 01/01/2022 al
 Desde la raíz del repositorio, `python -m scripts.publish_thesis --verify`
 comprueba la vista publicada y su correspondencia con el ZIP vigente. El
 `verificar.py` incluido en el ZIP comprueba el paquete completo una vez extraído.
-La [guía principal](../../README.md#reproducción) distingue estas verificaciones
+La [guía principal](../../docs/reproduction.md#entrega-3-presentación-y-extracción-autenticada) distingue estas verificaciones
 de los análisis que requieren fuentes locales.

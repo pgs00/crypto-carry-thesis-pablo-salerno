@@ -4,7 +4,7 @@ Estudio vigente: BTCUSDT y ETHUSDT, spot y perpetuos USD-M, **01/01/2022–31/08
 UTC**, con diciembre de 2021 como calentamiento. Se usan fuentes públicas de
 Binance. Las instrucciones de las ventanas independientes se conservan más
 abajo como antecedentes. Para leer o reproducir las tablas publicadas no hace
-falta descargar datos: ver la [guía principal](../README.md#reproducción).
+falta descargar datos: ver la [guía principal](reproduction.md).
 
 ## Ampliación continua: enero de 2022 a agosto de 2026
 
@@ -223,7 +223,7 @@ foreach ($perfilMinuto in $configsMinuto) {
 Este segundo comando vuelve a ejecutar el baseline y luego cada escenario;
 imprime un avance por escenario terminado. Mantiene resultados separados y
 guarda el índice en `outputs\robustness-<id>`. Las tablas, figuras y auditorías
-vigentes se identifican en [avance y evidencia](progress.md).
+vigentes se identifican en [resultados E4](../entregas/entrega_4/README.md).
 
 Para reconstruir el informe conjunto de las corridas verificadas actuales:
 

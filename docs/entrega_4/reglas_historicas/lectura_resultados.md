@@ -10,13 +10,16 @@ La revisión del 26/09/2026 corrige el indicador operativo para excluir polvo co
 
 ## Construcción y sello
 
-Desde la raíz del repositorio, con el intérprete y las dependencias del proyecto:
+Desde la raíz del repositorio, con el intérprete y las dependencias del proyecto.
+Primero autenticar y extraer el ZIP E3 continuo según la
+[guía única](../../reproduction.md#entrega-3-presentación-y-extracción-autenticada).
+`$e3` debe señalar esa raíz extraída, no el ZIP ni la antigua copia visible:
 
 ```powershell
 .venv/Scripts/python.exe -B -X utf8 scripts/report_historical_rules_sensitivity.py `
   --source-package entregas/entrega_4/reglas_historicas/20260925T005436Z `
   --destination <destino_nuevo_fuera_de_paquetes_sellados> `
-  --e3-reference "Paquete de evidencia"
+  --e3-reference $e3
 ```
 
 El constructor lee el padre y la referencia E3; escribe sólo un destino inexistente. Lee Parquet mediante PyArrow y genera figuras con Matplotlib; no importa el motor. `--no-figures` conserva los datos comprobables de la figura y omite las imágenes nuevas. Antes de calcular, verifica el paquete padre. Reutiliza las corridas sin copiarlas al producto derivado.

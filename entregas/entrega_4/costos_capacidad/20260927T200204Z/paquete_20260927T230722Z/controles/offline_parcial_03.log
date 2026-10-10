@@ -1,8 +1,0 @@
-VERIFIED BASE_E3 conditional
-VERIFIED BASE_E3 permanent
-VERIFIED C02 conditional
-VERIFIED C02 permanent
-VERIFIED C03 conditional
-VERIFIED C03 permanent
-VERIFIED S02 conditional
-{"passed": true, "complete_matrix": false, "runs_checked": 7, "members_checked": 0, "daily_closes": 11928, "financial_periods": 56, "orders": 3227, "fills": 1537, "capacity_keys": 1537, "h1_observations_reused_once": 10224, "economic_replay": false, "volume_scope": "recalculated from included authenticated windows; massive source files not read", "shared_builder_verifier_logic": true, "package_manifest_sha256": null}

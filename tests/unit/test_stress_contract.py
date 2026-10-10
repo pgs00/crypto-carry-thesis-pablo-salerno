@@ -10,7 +10,7 @@ import pytest
 from scripts.stress_counterfactual_contract import load_spec
 
 APPROVED = Path(__file__).resolve().parents[2] / (
-    "entregas/entrega_4/estres_contrafactual/20260930T214617Z/candidato")
+    "entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z")
 
 
 @pytest.fixture

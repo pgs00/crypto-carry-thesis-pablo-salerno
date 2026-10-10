@@ -108,3 +108,35 @@ def test_daily_margin_uses_saved_quantity_mark_and_resets_missing_flat_or_gap():
     assert result["evaluable_transitions"] == 2
     assert result["observed_tier_changes"] == 1
     assert result["max_observed_notional"] == D(60000)
+
+
+def test_snapshot_packages_sources_tests_and_configs_without_progress_helper(tmp_path, monkeypatch):
+    import shutil
+    from pathlib import Path
+
+    from scripts import build_cost_capacity, build_signal_sensitivity
+
+    project = Path(__file__).resolve().parents[2]
+    source = tmp_path / "minimal checkout"
+    shutil.copytree(project / "scripts", source / "scripts",
+                    ignore=shutil.ignore_patterns("cost_capacity_progress.py", "__pycache__"))
+    for name in ("pyproject.toml", "uv.lock", "tests/conftest.py",
+                 "configs/entrega_4/reglas_historicas/BASE_E3.toml"):
+        target = source / name
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(project / name, target)
+    for name, original in {"src/fixture.py": b"# source bytes\r\n",
+                           "tests/unit/test_signal_sensitivity_fixture.py": b"# test bytes\r\n",
+                           "configs/fixture.toml": b"# config bytes\r\n"}.items():
+        path = source / name
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(original)
+    monkeypatch.setattr(build_cost_capacity, "ROOT", source)
+    monkeypatch.setattr(build_signal_sensitivity, "TOOLS_ROOT", source)
+    destination = tmp_path / "snapshot only"
+    build_cost_capacity.snapshot(destination)
+    assert not (destination / "herramientas/scripts/cost_capacity_progress.py").exists()
+    for name in ("scripts/build_cost_capacity.py", "scripts/verify_cost_capacity.py",
+                 "src/fixture.py", "tests/unit/test_signal_sensitivity_fixture.py", "configs/fixture.toml",
+                 "pyproject.toml", "uv.lock"):
+        assert (destination / "herramientas" / name).read_bytes() == (source / name).read_bytes()

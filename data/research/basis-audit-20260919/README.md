@@ -23,11 +23,15 @@ permanente estaba rotulada y agregada como rechazo aunque esa estrategia omite
 el filtro. Ahora se informa como `diagnostic_fail_not_applied`, fuera de la
 unión de rechazos. Las decisiones reales, operaciones y resultados no cambian.
 
-- [Reporte completo](../../../entregas/entrega_3/archivo/paquete_redaccion/evidencia/basis_audit_report.md).
-- [80 observaciones de muestra](../../../entregas/entrega_3/archivo/paquete_redaccion/evidencia/basis/basis_audit_sample.csv).
-- [Estadísticas por ventana y activo](../../../entregas/entrega_3/archivo/paquete_redaccion/evidencia/basis/basis_audit_summary.csv).
-- [Manifiesto y checksums de todas las observaciones](../../../entregas/entrega_3/archivo/paquete_redaccion/evidencia/basis/basis_audit_manifest.json).
-- [Comparación económica con presentación corregida](../../../entregas/entrega_3/archivo/paquete_redaccion/evidencia/execution_revision_report.md).
+Los informes se conservan dentro del [ZIP histórico v2](../../../entregas/entrega_3/archivo/paquete_redaccion_entrega_3_v2.zip).
+Seguir la [extracción autenticada](../../../docs/reproduction.md#entrega-3-presentación-y-extracción-autenticada)
+y abrir, bajo su subdirectorio `paquete_redaccion`:
+
+- Reporte completo: `evidencia/basis_audit_report.md`.
+- 80 observaciones de muestra: `evidencia/basis/basis_audit_sample.csv`.
+- Estadísticas por ventana y activo: `evidencia/basis/basis_audit_summary.csv`.
+- Manifiesto y checksums: `evidencia/basis/basis_audit_manifest.json`.
+- Comparación económica con presentación corregida: `evidencia/execution_revision_report.md`.
 
 El CSV completo `outputs/basis_audit_afd512e8a542f331ffa9ac3f/basis_audit_all.csv`
 y los ZIP de mercado quedan locales. El paquete publica la muestra, el resumen
@@ -35,10 +39,11 @@ y los hashes del conjunto completo; no requiere esos datos para leer el reporte.
 
 ## Verificar la copia publicada
 
-Desde la raíz del repositorio, sin datos de mercado:
+Después de la extracción autenticada de la guía, con `$py` y `$v2` definidos
+allí, sin datos de mercado:
 
 ```powershell
-& '.\.venv\Scripts\python.exe' entregas/entrega_3/archivo/paquete_redaccion/scripts/verificar_paquete.py
+& $py -B -X utf8 "$v2/scripts/verificar_paquete.py"
 ```
 
 ## Repetir el contraste con las fuentes locales

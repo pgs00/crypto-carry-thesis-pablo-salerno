@@ -2,7 +2,7 @@
 
 import pytest
 
-from scripts import verify_repository_evidence as verifier
+from scripts import verify_documentation as verifier
 
 
 @pytest.mark.parametrize(

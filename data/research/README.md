@@ -33,7 +33,7 @@ Se revisaron estas carpetas para la presentación. Se conservan las evidencias
 sus originales ni se confunden exploraciones con resultados vigentes. El
 [índice documental histórico](../../docs/research/README.md) explica las fuentes.
 El [registro de limpieza](../../docs/repository_cleanup.md) enumera los movimientos
-y la única copia de código eliminada tras comprobar su identidad.
+y la recuperación de antecedentes, distinguiendo Git y respaldo externo.
 
 Los ZIP, Parquet y checksums de mercado usados en investigación no se agregan
 a Git. Los archivos locales existentes permanecen en disco; la evidencia

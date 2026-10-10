@@ -1,8 +1,0 @@
-{
-  "physical_ram_bytes": 29909643264,
-  "free_ram_before_bytes": 14560862208,
-  "disk_free_C": 255837655040,
-  "disk_free_D": 842654162944,
-  "first_replay_workers": 1,
-  "max_workers_after_measurement": 2
-}
