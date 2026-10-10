@@ -4,9 +4,7 @@ Usar desde la raíz del checkout. Las configuraciones efectivas y snapshots
 congelados, no los perfiles CLI antiguos `configs/base.toml` y
 `configs/robustness.toml`, determinan las carteras finales. Los destinos nuevos
 se crean fuera de los paquetes sellados. No sobrescribir manifiestos ni cambiar
-hashes para aceptar divergencias. Esta guía conserva comandos reproducibles;
-el [registro local](repository_cleanup.md#verificaciones) identifica cuáles
-se ejecutaron durante la limpieza, sus resultados y bloqueos.
+hashes para aceptar divergencias.
 
 
 ## 1. Lectura, sin ejecutar código
@@ -24,15 +22,16 @@ en Windows. En Linux se comprobó una diferencia de últimos dígitos que hace
 fallar la comparación literal del CSV de intervalos B6, aunque sus controles
 numéricos pasaron en esa comprobación histórica. La diferencia máxima fue
 `6.938893903907228e-18`; no se relaja la comparación ni se afirma un PASS
-integral en Linux. Ver el [alcance comprobado](repository_cleanup.md#recuperacion-de-antecedentes).
+integral en Linux.
 Preparar el entorno desde la raíz del checkout, antes de la verificación:
 
 ```powershell
-uv sync --frozen --python 3.14.3
+uv --cache-dir .uv-cache sync --frozen --python 3.14.3
 ```
 
 La preparación puede necesitar acceso a paquetes si no están instalados o
-en caché. Los verificadores posteriores no requieren red ni `D:/Backtesting`.
+en caché; con el entorno/caché disponible se puede añadir `--offline`.
+Los verificadores posteriores no requieren red ni `D:/Backtesting`.
 No ejecutar `uv sync` dentro de un paquete sellado. Sus copias de código/lock
 fijan la procedencia; el entorno reutilizado queda fuera de las evidencias.
 
@@ -56,10 +55,8 @@ New-Item -ItemType Directory -Path $salida | Out-Null
 
 Ejecutar cada línea por separado y comprobar su código de salida y JSON.
 Una ayuda `--help` satisfactoria sólo valida la interfaz; no acredita el pase
-del paquete. Los resultados ejecutados durante esta limpieza local están en el
-[registro de verificaciones](repository_cleanup.md#verificaciones). Los
-[controles históricos](repository_cleanup.md#recuperacion-de-antecedentes)
-conservan sus fechas y alcances originales.
+del paquete. Los controles históricos incluidos en los paquetes conservan
+sus fechas y alcances originales.
 
 ```powershell
 & $py -B -X utf8 "$($paquetes.BASE)/herramientas/verify_rules_sensitivity_correction.py" --package $paquetes.BASE --parent $padre --output "$salida/base.json"
@@ -86,13 +83,9 @@ de origen no equivalen a una inspección visual nueva.
 
 Los manifiestos comprueban bytes y pertenencia al inventario, no autenticidad
 histórica del exchange. Los sellos y sus sidecars nunca se renuevan para
-hacer pasar una divergencia. Los controles de integridad binaria Git/exportación
-de cada revisión están separados de los cálculos en el registro externo.
-
-El script archivado `scripts.verify_repository_evidence` corresponde a la limpieza histórica del
-20/09/2026 y exige hashes antiguos del código económico. Su fallo anterior por
-fuentes evolucionadas se conserva en los antecedentes; no es un control universal
-de E4. Los verificadores por paquete de arriba fijan su propio alcance.
+hacer pasar una divergencia. Las herramientas históricas conservadas en los
+snapshots pueden exigir estados antiguos del repositorio; los verificadores
+por paquete de arriba fijan el alcance actual de la comprobación compacta.
 
 ## Entrega 3: presentación y extracción autenticada
 
@@ -155,23 +148,37 @@ corrección vigente ni las carteras. La
 [guía de exposición/H2](entrega_4/reglas_historicas/lectura_resultados.md)
 describe su verificación posterior. Para consumidores históricos que exigen
 las rutas originales, restaurar previamente sólo las raíces necesarias según
-[recuperación de antecedentes](repository_cleanup.md#recuperacion-de-antecedentes).
+[recuperación de antecedentes](#recuperación-de-antecedentes).
 
-## 3. Fuentes masivas y replay del motor, fuera de este cierre
+## 3. Fuentes masivas y replay del motor
 
 Volver a autenticar mercados o reconstruir todo el riesgo intradía exige las
 fuentes locales indicadas por sus manifiestos, normalmente `D:/Backtesting`.
 Los parámetros `--data-root`, `--series-root` o riesgo `--scope complete`
 amplían la verificación y no implican necesariamente un replay económico.
-No se confunden con el nivel compacto ni se ejecutan en este cierre.
+Son controles distintos del nivel compacto.
 
 Repetir carteras requiere además el snapshot económico, configuraciones,
 dependencias y contratos exactos de cada bloque, junto con destinos nuevos.
 La [guía de reglas](entrega_4/reglas_historicas/reproduccion.md),
 la [reproducción B5][b5-limites] y los protocolos del índice E4 conservan los
 requisitos y comandos históricos. Los runners pueden escribir estados:
-nunca deben apuntar al paquete sellado. Esta guía no ordena una nueva
-tanda ni convierte una comprobación offline en reproducción del motor.
+nunca deben apuntar al paquete sellado. Una comprobación offline no equivale
+a reproducir el motor. La [guía de datos](descarga_d.md) documenta adquisición
+y preparación; el [diccionario](data_dictionary.md), los artefactos generados.
+
+## Pruebas
+
+Desde la raíz, estas pruebas verifican navegación y codificación sin mercados
+ni simulaciones. Se usa un temporal nuevo y se evita escribir cachés:
+
+```powershell
+$pruebas = Join-Path $env:TEMP ('tesina_tests_' + [guid]::NewGuid().ToString('N'))
+& '.\.venv\Scripts\python.exe' -B -X utf8 -m pytest tests/unit/test_documentation.py tests/unit/test_repository_evidence.py -q -p no:cacheprovider --basetemp $pruebas
+```
+
+`tests/` conserva además las pruebas del motor y de integridad de paquetes;
+algunas necesitan datos o rutas de evidencia indicadas en sus fixtures.
 
 
 ## Control de navegación
@@ -182,6 +189,18 @@ tanda ni convierte una comprobación offline en reproducción del motor.
 
 Comprueba codificación y enlaces locales de una lista explícita de documentos
 activos. No verifica economía ni todos los documentos históricos o sellados.
+
+## Recuperación de antecedentes
+
+Los documentos internos retirados se recuperan del commit
+`b5bf5909c1793c684a0acd110b6fab2e90718cca`. La referencia de la primera retirada
+es `57215943a5711352ba9cec89a2003039b0154eec`. Los respaldos locales están fuera
+del repositorio, en `../Backtesting_antecedentes/`: `segunda_limpieza_20261010/`
+contiene originales exactos e inventario de recuperación;
+`limpieza_20261010/bytes_git/` contiene las variantes locales y el restaurador
+de la primera retirada. Usar destinos nuevos: los empaquetadores y controles
+antiguos requieren su contexto histórico completo. Los documentos que son
+fuentes autenticadas o entradas de herramientas permanecen en su ruta original.
 
 [capital-guia]: ../entregas/entrega_4/retorno_capital/20260927T143928Z/paquete_20260927T152732Z/README.md
 [b5-limites]: ../entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/reproducibilidad.md

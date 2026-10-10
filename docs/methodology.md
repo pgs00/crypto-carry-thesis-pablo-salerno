@@ -19,15 +19,11 @@ Las corridas principales son `run_ad71d751b20623006c195ff3` (condicional) y
 `run_dfea4b7ac1475668d5968c97` (permanente), con `futures_scaled`. Sus parámetros
 provienen de `configs/download_minutes_2022_2026_d.toml` y de las configuraciones
 efectivas conservadas en el [ZIP vigente](../entregas/entrega_3/paquete_actualizacion_entrega_3_continua.zip).
-La limpieza de presentación no cambia esas configuraciones ni el motor.
 
 Las ventanas independientes de septiembre de 2022–agosto de 2023 y septiembre
 de 2025–agosto de 2026, cada una iniciada con capital nuevo, son
-[antecedentes archivados](../entregas/entrega_3/archivo/README.md). La
-[revisión histórica de ejecución 1m](sources/Prompt_Codex_Ajuste_Backtesting_1m.md)
-fijó `next_minute_vwap` y `joint_quantity`; la ampliación continua posterior
-conservó ese contrato. El [texto metodológico anterior](archive/methodology_before_cleanup_20260920.md.txt)
-se conserva como snapshot histórico, incluyendo sus referencias al motor de trades.
+[antecedentes archivados](../entregas/entrega_3/archivo/README.md). La ampliación
+continua conserva `next_minute_vwap` y `joint_quantity` de la revisión por minuto.
 
 ## Datos y causalidad
 
@@ -115,6 +111,39 @@ decisiones. Un riesgo detectado al cierre no borra un fill del intervalo acabado
 Se mantienen tenencias de 168 horas, renovables; se rebalancea al renovar si el
 desvío del objetivo supera 5%. No se aplica el filtro de basis de entrada a la renovación.
 
+Las reservas de ambos activos usan un snapshot común del equity y prioridad
+BTC→ETH. Una primera pata de rebalanceo fallida sin fills conserva el par en
+HOLDING, libera la reserva y bloquea ampliaciones durante 24 horas; permite
+renovar la tenencia existente si cumple sus controles. En `next_minute_vwap`,
+una primera pata parcialmente ejecutada que falla se desarma; una falla de
+segunda pata también desarma el par. Una suspensión conserva inventario e
+intención de cierre hasta poder negociar. Polvo es cantidad inferior a los
+filtros de cantidad o nocional mínimo, y sigue valuado.
+
+## Motor y reproducción de estado
+
+[NautilusTrader](../pyproject.toml) 1.231.0 gestiona órdenes, fills y posiciones
+nativas. El adaptador deshabilita el matching automático de trades/barras y
+usa órdenes límite inertes como portadoras del ciclo de vida. Sus precios
+límite no son precios económicos: el motor del estudio determina elegibilidad
+y precio de cada fill. La cuenta nativa permanece congelada y sus comisiones
+son cero; sólo el ledger del proyecto contabiliza dinero y funding.
+
+La posición spot nativa bruta se concilia con spot neto más comisiones
+acumuladas en unidades base; el futuro nativo se concilia con el short del
+ledger. Cada fill exige coincidencia de cantidad, precio y reloj. El equity
+nativo no es el resultado de la tesina. Dinero y cantidades usan Decimal;
+la tolerancia contable de 1e-8 USDT no amplía los umbrales de riesgo. Las
+portadoras nativas tienen ocho decimales y una divergencia visible falla.
+
+`manage_stop=False` evita liquidaciones terminales. Los timers se conservan
+entre particiones. Los checkpoints JSON vinculan hashes de configuración,
+reglas, inputs y código; reconstruyen las portadoras sin nuevos movimientos
+del ledger y no usan pickle. Cambiar esa identidad requiere otra corrida.
+Ante datos indispensables desconocidos con exposición, la estrategia se
+detiene conservando posición, deuda y estado. La validación estricta fallida
+produce un diagnóstico, sin fabricar una curva de efectivo.
+
 ## Riesgo y contabilidad
 
 Se conserva apalancamiento aislado 2x. Garantía al aumentar short:
@@ -133,6 +162,8 @@ Funding negativo usa caja futures, garantía del mismo contrato y caja spot libr
 el remanente es deuda. No se crea dinero ni se trunca equity negativo. Transferencias
 y constitución/liberación de garantía no producen P&L. Al fin exclusivo se valúan
 posiciones abiertas sin inventar cierre, fee terminal, funding o fill posterior.
+Para realizar deuda se actúa primero sobre BTC y se reevalúa antes de ETH;
+las liquidaciones independientes conservan prioridad.
 
 `equity = caja_spot + caja_futures + garantías + spot × precio_spot + UPnL_futures − deuda`.
 
@@ -215,3 +246,24 @@ La [guía única de reproducción](reproduction.md) distingue lectura, evidencia
 compacta y datos masivos. `configs/base.toml` y `configs/robustness.toml` son
 perfiles anteriores del CLI con `first_trade`; no son las configuraciones
 efectivas de BASE continua/E4. Se conservan sin cambiar sus parámetros.
+
+## Limitaciones e interpretación
+
+La rentabilidad no determina la validez de una corrida: se conservan resultados
+adversos y se exige procedencia, causalidad y conciliación. Un checksum prueba
+integridad, no cobertura; coincidir entre productos del mismo proveedor no
+descarta omisiones compartidas. Los tests verifican casos del software, sin
+estimar una probabilidad de éxito económico ni probar ausencia de errores.
+
+Se supone USDT a la par de USD, transferencias instantáneas y gratuitas y
+efectivo sin remuneración. No se modelan impuestos, insolvencia del exchange,
+ADL ni liquidaciones parciales. VWAP, participación y slippage fijo no
+reconstruyen spread, profundidad, colas o impacto, ni acreditan liquidez
+accesible. El mark cerrado por minuto puede omitir extremos que afecten margen
+o liquidación. Latencia, rechazos, desconexiones y reintentos no están
+calibrados contra operativa real.
+
+Una eventual prueba con capital requiere validación independiente no utilizada
+para ajustar parámetros, observación en vivo sin órdenes y revisión operativa
+separada. El backtest no establece límites aceptables de pérdida, capital o
+duración ni acredita preparación para operar.

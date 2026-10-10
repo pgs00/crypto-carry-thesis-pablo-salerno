@@ -2,8 +2,8 @@
 
 **Protocolo histórico de pilotos y ventanas independientes.** La metodología vigente de las carteras continuas está en [methodology.md](methodology.md) y sus resultados en [índice E4](../entregas/entrega_4/README.md). Los comandos de este antecedente no son necesarios para reproducir la presentación actual.
 
-La [revisión histórica de ejecución](sources/Prompt_Codex_Ajuste_Backtesting_1m.md)
-reemplaza el contrato `minute_open` por `next_minute_vwap` con sizing conjunto
+La revisión de ejecución por minuto reemplaza el contrato `minute_open`
+por `next_minute_vwap` con sizing conjunto
 en el escenario principal. Sus datos, cronología y comparación controlada se
 detallan en la [metodología](methodology.md). No se descargan trades ni se usa
 la investigación previa con trades como dependencia. Se conservan las ventanas,
@@ -11,9 +11,8 @@ el capital y los supuestos económicos aprobados que siguen abajo.
 
 ## Referencia anterior y supuestos conservados
 
-El 18/09/2026 el usuario aprobó dos ventanas anuales independientes, ejecución
-por minuto y contraste con trades en una muestra corta. El objetivo operativo
-es terminar el backtesting y el informe en 48 horas.
+El protocolo del 18/09/2026 fija dos ventanas anuales independientes, ejecución
+por minuto y contraste con trades en una muestra corta.
 
 | Ventana | Inicio UTC incluido | Fin UTC excluido | Capital inicial por estrategia |
 |---|---|---|---:|
@@ -94,7 +93,7 @@ El diagnóstico documenta la suspensión y la sensibilidad del precio de
 reapertura, que concentra buena parte de la ganancia del baseline temprano.
 Es una verificación posterior al resultado, identificada como tal; no cambia
 los parámetros predeclarados ni sustituye el baseline. Los números y sus
-límites están en el [avance histórico recuperable](repository_cleanup.md#recuperacion-de-antecedentes).
+límites están en la [auditoría de la suspensión](../data/research/minute-download-20260918/outage-trades-validation.json).
 
 El resolver se contrastó con 10.224 eventos del horizonte original:
 6.214 marks exactos y 4.010 proxies causales. Esas cifras **no son los conteos
@@ -134,7 +133,7 @@ completa pasó 302 pruebas. Las dos corridas anuales ya terminaron: 310,14 y
 
 Una auditoría independiente reconstruyó el equity final de las cuatro carteras
 y verificó los 106 fills contra sus precios fuente, costos y tiempos de orden.
-Los resultados y enlaces de estas ventanas están en el [avance histórico recuperable](repository_cleanup.md#recuperacion-de-antecedentes).
+Los resultados de estas ventanas se conservan en el [archivo E3](../entregas/entrega_3/archivo/README.md).
 Las siete sensibilidades priorizadas —costos 2x/3x, fee Futures 0,04 %,
 proxy ±10 bps, mantenimiento 2x y cargo de liquidación 3 %— terminaron para
 ambas ventanas. Los índices y sus corridas vinculadas están verificados.

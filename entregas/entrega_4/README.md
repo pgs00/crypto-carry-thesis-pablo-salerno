@@ -1,12 +1,8 @@
 # Entrega 4: resultados y paquetes vigentes
 
 **[PDF final de Entrega 4 (24 páginas)](documento_final/Tesina_Entregas_3_y_4_Pablo_Salerno.pdf)**.
-Esta versión tiene portada de Entrega 4 y una única sección de referencias.
-Reemplaza en la misma ruta el PDF de 31 páginas publicado el 02/10/2026.
-
-La [matriz de avance](../../docs/entrega_4/matriz_avance.csv) identifica los
-paquetes vigentes. La versión actual del PDF y la simplificación del árbol
-no modifican los paquetes de evidencia ni incorporan resultados económicos nuevos.
+La [matriz de resultados](../../docs/entrega_4/matriz_avance.csv) identifica los
+paquetes vigentes y sus dependencias.
 
 La lectura conjunta está en la [síntesis integrable B6][b6-sintesis]. Conserva
 H1 por horizonte y activo, H2 por escenario/período con ND y excepciones,
@@ -25,7 +21,7 @@ no afirma una validación independiente de todo el motor ni una publicación nue
 | BASE y reglas: padre `20260925T005436Z` + corrección `20260926T204312Z` | [Reporte corregido][base-reporte] · [Tablas][base-tablas] | [Reglas][base-protocolo] · [Métricas corregidas][base-metricas] | [V2][base-verificador], requiere el padre completo | [Guía][base-guia]: reglas prescritas; no cronología certificada del exchange. |
 | Riesgo intradía: `20260926T220400Z` | [Reporte][riesgo-reporte] · [Tablas][riesgo-tablas] | [Protocolo][riesgo-protocolo] | [Verificador][riesgo-verificador], compacto o completo con series/precios locales | [Límites][riesgo-guia]: BASE/MARGEN_2X; el compacto no reconstruye máximos globales. |
 | B1 capital: `20260927T152732Z` | [Reporte][capital-reporte] · [Tablas][capital-tablas] | [Protocolo][capital-protocolo] | [Verificador][capital-verificador], compacto o con cuatro dependencias | [Guía][capital-guia]: concentración descriptiva; la ficha SOFR pendiente es histórica. |
-| B1 SOFR aprobado: `20260927T162350Z` | [Reporte][sofr-reporte] · [Tablas][sofr-tablas] | [Protocolo][sofr-protocolo] · [Aprobación][sofr-aprobacion] | [Verificador][sofr-verificador], cuenta y dependencia B1 capital | [Límites][sofr-limites]: hipotética bruta USD, ACT/360, paridad nominal; no caja carry. |
+| B1 SOFR: `20260927T162350Z` | [Reporte][sofr-reporte] · [Tablas][sofr-tablas] | [Protocolo][sofr-protocolo] | [Verificador][sofr-verificador], cuenta y dependencia B1 capital | [Límites][sofr-limites]: hipotética bruta USD, ACT/360, paridad nominal; no caja carry. |
 | B2 señal/entradas: `20260927T185305Z` | [Reporte][b2-reporte] · [Tablas][b2-tablas] | [Protocolo][b2-protocolo] | [Verificador][b2-verificador], evidencia compacta | [Guía][b2-guia]: seis variantes aisladas; MAE comparable sólo dentro del mismo horizonte. |
 | B3 costos/capacidad: `20260927T231610Z` | [Reporte][b3-reporte] · [Tablas][b3-tablas] | [Protocolo][b3-protocolo] | [Verificador][b3-verificador], contabilidad y ventanas incluidas | [Guía][b3-guia]: ocho variantes aisladas, selección a 34 pb; capacidad 1m sin impacto/cola. |
 | B4 ejecución/demoras: `20260930T013915Z_v2` | [Reporte][b4-reporte] · [Tablas][b4-tablas] | [Protocolo][b4-protocolo] | [Verificador][b4-verificador], versión con prioridad de liquidación corregida | [Revisión v2][b4-limites]: seis variantes aisladas; LC global causal y ventanas intradía acotadas. |
@@ -38,17 +34,12 @@ alcance se limita a esas corridas y esa rama; no prueba equivalencia universal
 entre motores. La síntesis B6 autentica selectivamente las fuentes reutilizadas
 y conserva el alcance de los controles históricos previos.
 
-## Vigente, histórico y pendiente
+## Alcance de los resultados
 
-Los reportes y README dentro de paquetes sellados conservan su fecha, sus
-comandos originales y expresiones como «local», «sin push», «candidato» o
-«pendiente». Son registros históricos. Por ejemplo, la ficha B1 anterior a
-SOFR sigue pendiente en sus bytes; la aprobación posterior está en B1 SOFR.
-B5 conserva pendientes B6/B2-B3 posteriormente resueltos. La matriz identifica las versiones vigentes sin reescribir esos documentos.
+Los documentos dentro de paquetes sellados conservan su fecha y alcance
+originales; sus pendientes se interpretan junto con la matriz vigente.
 
-Los candidatos, intentos parciales y versiones anteriores retirados del árbol
-activo se recuperan mediante el [índice de antecedentes](../../docs/repository_cleanup.md#recuperacion-de-antecedentes); no sustituyen las versiones
-de la tabla. El informe padre de reglas se lee con la corrección de exposición
+El informe padre de reglas se lee con la corrección de exposición
 y H2. [E3 continua](../entrega_3/continua/README.md) conserva la referencia BASE;
 las [ventanas independientes E3](../entrega_3/archivo/README.md) son históricas.
 
@@ -57,15 +48,8 @@ Las reglas históricas incompletas siguen siendo una limitación. La
 permanece sin ejecutar. Las sensibilidades retrospectivas no constituyen
 evidencia fuera de muestra.
 
-Los [antecedentes de publicación](../../docs/repository_cleanup.md#recuperacion-de-antecedentes)
-conservan la revisión académica favorable recibida, la publicación de evidencia
-en `c0b432d8bff7fb86cf86a6bc0b28beffab225516`, su descarga comprobada y el
-PDF anterior de 31 páginas. Esos registros describen su versión y fecha,
-separadas del PDF actual de 24 páginas y de los controles de esta limpieza local.
-
 La remuneración/reinversión de caja libre o garantías del carry permanece
-fuera del alcance autorizado. La aprobación del comparador SOFR no autoriza
-esa modificación.
+fuera del estudio. El comparador SOFR es una cuenta hipotética separada.
 
 ## Dependencias y reproducción
 
@@ -80,9 +64,6 @@ Ninguna copia de desarrollo archivada sustituye esas versiones.
 La comparación literal del CSV B6 tiene un antecedente de fallo integral en
 Linux: diferencia máxima `6.938893903907228e-18`, con controles numéricos
 aprobados en aquella comprobación. Windows es el entorno de referencia.
-Los resultados nuevos de esta limpieza se registran por separado en
-[verificaciones](../../docs/repository_cleanup.md#verificaciones); no se
-presentan controles históricos como ejecuciones nuevas.
 
 [base-reporte]: reglas_historicas/correccion_exposicion_h2_20260925T150139Z/paquete_20260926T204312Z/comparacion/reporte.md
 [base-tablas]: reglas_historicas/correccion_exposicion_h2_20260925T150139Z/paquete_20260926T204312Z/comparacion
@@ -103,7 +84,6 @@ presentan controles históricos como ejecuciones nuevas.
 [sofr-reporte]: retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/reporte.md
 [sofr-tablas]: retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/tablas
 [sofr-protocolo]: retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/documentos/protocolo.md
-[sofr-aprobacion]: retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/documentos/aprobacion.md
 [sofr-verificador]: retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/herramientas/scripts/verify_sofr_benchmark.py
 [sofr-limites]: retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/documentos/limites_verificacion.md
 [b2-reporte]: senal_entradas/20260927T170230Z/paquete_20260927T185305Z/reporte.md

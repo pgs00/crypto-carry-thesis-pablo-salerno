@@ -1,4 +1,4 @@
-# Bloque 3: costos y capacidad — entrega local terminada
+# Bloque 3: costos y capacidad
 
 Versión vigente: **`paquete_20260927T231610Z`**, sellada y verificada.
 Se ejecutaron C02, C03, S02, S05, P050, P025, A050 y A100 en ambas estrategias:
@@ -11,9 +11,9 @@ parámetros del bloque 2.
 - [Tablas de ocho períodos](paquete_20260927T231610Z/tablas/metricas.csv) y [deltas](paquete_20260927T231610Z/tablas/deltas.csv).
 - [Figura de costos](paquete_20260927T231610Z/figuras/costos.png), [participación](paquete_20260927T231610Z/figuras/participacion.png), [capital absoluto/normalizado](paquete_20260927T231610Z/figuras/capital.png) y [distribución del uso de cupo](paquete_20260927T231610Z/figuras/capacidad_distribucion.png); también SVG.
 - [Auditoría de ejecución](paquete_20260927T231610Z/auditoria_ejecucion.md), [índice de corridas](paquete_20260927T231610Z/indice_corridas.json) y [casos extremos](paquete_20260927T231610Z/casos_extremos.md).
-- [Protocolo previo](protocolo.md), [encargo íntegro](encargo_usuario.md) y [compatibilidad anterior/nueva](control_compatibilidad.json).
+- [Protocolo](protocolo.md) y [compatibilidad anterior/nueva](control_compatibilidad.json).
 - [Instrucciones del verificador portátil](paquete_20260927T231610Z/README.md), [manifiesto](paquete_20260927T231610Z/manifiesto_paquete.json) y [SHA-256](paquete_20260927T231610Z/manifiesto_paquete.sha256).
-- [Matriz global vigente](../../../../docs/entrega_4/matriz_avance.csv), [historial recuperable](../../../../docs/repository_cleanup.md#recuperacion-de-antecedentes), [plan cerrado](plan.md) y [registro completo](progreso.md).
+- [Matriz global vigente](../../../../docs/entrega_4/matriz_avance.csv).
 
 El modo optativo `base_e3_total` separa selección y costos realizados: entrada
 condicional estrictamente superior a 34 pb; renovación con forecast positivo.
@@ -54,22 +54,3 @@ ilimitada; las reglas son prescritas y el cupo usa velas de un minuto.
 Sello definitivo:
 `db68d839aa5837db72314b4f3de5509ecff283cc34d13a36e3c4f9d30298e1fb`.
 Estas auditorías permanecen fuera del sello para conservarlo intacto.
-
-## Versiones de desarrollo archivadas
-
-| Carpeta | Estado |
-| --- | --- |
-| `candidato_parcial_01` | Cinco carteras; detectó discrepancia de listas CSV |
-| `candidato_parcial_02` | Construcción interrumpida por Decimal anidado |
-| `candidato_parcial_03` | Siete carteras; verificación local y exportada aprobadas |
-| `candidato_parcial_04` | Diez carteras; verificación aprobada |
-| `paquete_20260927T225401Z` | Dieciocho carteras verificadas; sin sello, corregido diagnóstico de tramos después |
-| `paquete_20260927T230722Z` | Sello previo conservado; controles financieros y once corrupciones aprobados, reemplazado por ajuste de presentación/exportación |
-| `paquete_20260927T231610Z` | Versión final vigente; derivación documentada, verificada y exportada |
-
-Las versiones anteriores de esta tabla se recuperan mediante el
-[índice de antecedentes](../../../../docs/repository_cleanup.md#recuperacion-de-antecedentes).
-
-El cierre histórico de este bloque registra: bloque 3 terminado localmente; bloques 4–6 y revisión transversal
-continúan pendientes. No se repitieron los análisis previos, no se generaron
-Word/PDF y no hubo commit, push ni cambios del índice del usuario.

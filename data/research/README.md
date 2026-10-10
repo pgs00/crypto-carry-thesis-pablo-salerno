@@ -28,12 +28,9 @@ de investigación no es el rango del backtest ni una corrida adicional.
 | [fee-archive-followup-20260918](fee-archive-followup-20260918/manifest.json) | Capturas originales con hashes; respaldan límites del conocimiento de tarifas históricas. |
 | [trades-2024-01-01](trades-2024-01-01/BTCUSDT-kline-quote-discrepancy-api.json) | Procedencia del piloto de reconciliación. ZIP y checksums de mercado permanecen sólo locales. |
 
-Se revisaron estas carpetas para la presentación. Se conservan las evidencias
-únicas y las rutas usadas por scripts, pruebas o manifiestos; no se normalizan
-sus originales ni se confunden exploraciones con resultados vigentes. El
+Las evidencias conservan sus originales y las rutas usadas por scripts,
+pruebas o manifiestos. Las exploraciones no son resultados vigentes. El
 [índice documental histórico](../../docs/research/README.md) explica las fuentes.
-El [registro de limpieza](../../docs/repository_cleanup.md) enumera los movimientos
-y la recuperación de antecedentes, distinguiendo Git y respaldo externo.
 
 Los ZIP, Parquet y checksums de mercado usados en investigación no se agregan
 a Git. Los archivos locales existentes permanecen en disco; la evidencia
