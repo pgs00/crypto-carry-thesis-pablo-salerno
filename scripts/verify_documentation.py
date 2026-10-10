@@ -9,6 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CURRENT_DOCS = (
     "README.md",
     "docs/methodology.md",
+    "docs/basis_audit_methodology.md",
     "docs/reproduction.md",
     "docs/continuous_mark_gaps.md",
     "docs/research/README.md",
@@ -17,6 +18,8 @@ CURRENT_DOCS = (
     "docs/escenario_investigacion.md",
     "entregas/entrega_3/README.md",
     "entregas/entrega_3/archivo/README.md",
+    "entregas/entrega_3/continua_distribucion_20261010/README.md",
+    "entregas/entrega_4/retorno_capital/20260927T154653Z_sofr/distribucion_20261010/README.md",
     "entregas/entrega_4/README.md",
     "docs/entrega_4/reglas_historicas/lectura_resultados.md",
     "docs/entrega_4/reglas_historicas/reproduccion.md",

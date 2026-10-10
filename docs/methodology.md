@@ -209,7 +209,7 @@ no pruebas causales ni garantías de rentabilidad. El
 cuantifica efectos con posiciones fijas y escenarios P95 ilustrativos; no incluye
 cambios de decisiones o margen ni garantiza extrapolación a los precios ausentes.
 
-Los [resultados conservados de E3](../entregas/entrega_3/continua/README.md) se regeneran
+Los [resultados conservados de E3](../entregas/entrega_3/continua_distribucion_20261010/README.md) se regeneran
 desde el ZIP verificado, sin nuevas simulaciones. Los datos masivos y corridas
 completas siguen locales; hashes y configuraciones preservan su trazabilidad.
 

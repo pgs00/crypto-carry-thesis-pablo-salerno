@@ -81,8 +81,7 @@ CAGR, Sharpe, drawdown, utilización diaria, resultados financieros, H1 ni H3.
   2.029 idénticos y sólo cuatro archivos activos autorizados modificados.
   Permanecen iguales los 36 archivos del motor, 12 configuraciones, 294 archivos
   de E3 y 1.089 del padre. HEAD, rama e índice físico de Git son idénticos.
-- [Revisión independiente](revision_independiente.md),
-  [linaje exacto](auditoria_linaje/linaje_exposicion.md),
+- [Linaje exacto](auditoria_linaje/linaje_exposicion.md),
   [producto final y enlaces](revision_producto_final.json) y
   [entorno](entorno_verificacion.json).
 

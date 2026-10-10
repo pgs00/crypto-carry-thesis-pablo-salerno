@@ -31,8 +31,3 @@ canónica del script antes duplicado en la raíz de Entrega 3. Para preparar otr
 copia requiere las fuentes locales y un destino explícito nuevo; no debe usarse
 para sobrescribir este archivo. [empaquetar.py](empaquetar.py) conserva la
 comprobación de fuentes contra el ZIP original y rechaza sobrescribir un ZIP.
-
-[completar_evidencia.py.txt](completar_evidencia.py.txt) y
-[probar_portabilidad.py.txt](probar_portabilidad.py.txt) son snapshots byte a byte
-de herramientas de preparación usadas entonces, no comandos vigentes. Se
-conservan como texto porque modificaban el borrador del paquete.

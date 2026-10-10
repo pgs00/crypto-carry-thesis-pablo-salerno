@@ -8,7 +8,6 @@ data/raw/**
 data/processed/**
 data/minutes/**
 outputs/**
-.superpowers/
 # Local market downloads used by historical research remain outside Git.
 data/research/**/*.zip
 data/research/**/*.CHECKSUM

@@ -157,7 +157,7 @@ def build(work, data, destination, partial=False):
     write_csv(destination/"fuentes/archivos_originales.csv", sources)
     docs = destination/"documentos"
     docs.mkdir()
-    for name in ("encargo_usuario.md", "protocolo.md", "plan.md", "progreso.md", "protocolo_previo.json",
+    for name in ("protocolo.md", "protocolo_previo.json",
                  "preservacion_previa.json", "input_hashes.json",
                  "control_compatibilidad.json", "autenticacion_referencias.json", "verificacion_datos.json",
                  "verificacion_base_previa.json", "registro_escenarios_previo.json", "recursos_antes.json"):

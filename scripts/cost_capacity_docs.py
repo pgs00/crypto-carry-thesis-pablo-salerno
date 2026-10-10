@@ -85,7 +85,7 @@ def report(tables, index, partial):
         "Muestra continua UTC [01/01/2022,01/09/2026), BTCUSDT/ETHUSDT spot y perpetuos USD-M. "
         "Las ocho variantes se ejecutan separadas, sin parámetros adoptados del bloque 2. "
         "Las cifras son locales; este bloque no completa la Entrega 4.\n",
-        "[Protocolo previo](documentos/protocolo.md) · [Encargo](documentos/encargo_usuario.md) · "
+        "[Protocolo previo](documentos/protocolo.md) · "
         "[Registro de corridas](indice_corridas.json) · [Verificación](README.md)\n",
         "## Selección fija y costos realizados\n",
         "El modo explícito `base_e3_total` fija **34 pb** sólo para la condición de entrada `forecast > 0.0034`. "
@@ -303,7 +303,7 @@ def execution_document(index, partial):
         'al movimiento. El buffer original de pérdida de apertura se conserva como registro autenticado; '
         'no se reconstruye una nueva serie de marks intradía.\n',
         'Las pruebas, incluidos fallos y correcciones, se conservan en `pruebas/`; '
-        '[cobertura del encargo](controles/cobertura_pruebas.md) y [revisión independiente](controles/revision_independiente.md). '
+        '[cobertura de requisitos](controles/cobertura_pruebas.md). '
         'Los conteos de suites solapadas no se suman. Los resultados de la comprobación final del sello, '
         'exportación y copia offline se guardan externamente para no modificar el paquete sellado.\n'])
 

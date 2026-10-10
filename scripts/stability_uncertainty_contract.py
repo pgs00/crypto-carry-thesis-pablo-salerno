@@ -242,7 +242,6 @@ def prepare(candidate, data_root):
         "inventario_entradas.json",
         "input_hashes.json",
         "indice_referencias.json",
-        "fuentes/encargo_b6.md",
         "controles/puerta_pruebas.json",
     ]
     package_names += ["configuraciones/" + s + ".toml" for s in STARTS]

@@ -1,8 +1,8 @@
 # Auditoría del basis — 19/09/2026
 
-**Antecedente histórico:** esta auditoría corresponde a las ventanas independientes. Los [resultados vigentes son continuos](../../../entregas/entrega_3/continua/README.md).
+**Antecedente histórico:** esta auditoría corresponde a las ventanas independientes. Los [resultados vigentes son continuos](../../../entregas/entrega_3/continua_distribucion_20261010/README.md).
 
-Se ejecutó el [instructivo del usuario](../../../docs/sources/Prompt_Codex_Auditoria_Basis.md)
+Se aplicó la [metodología de auditoría](../../../docs/basis_audit_methodology.md)
 sobre el escenario `vwap_joint` de las dos ventanas anuales. El basis negativo
 quedó confirmado en las velas originales, con cobertura de 4.380/4.380
 observaciones únicas, 96 ZIP y 8.760 decisiones de estrategia.

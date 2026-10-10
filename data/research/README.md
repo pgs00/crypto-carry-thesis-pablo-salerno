@@ -1,7 +1,7 @@
 # Evidencia e investigaciones
 
 El estudio vigente es continuo: **01/01/2022–31/08/2026 UTC**. Sus
-[resultados y figuras](../../entregas/entrega_3/continua/README.md) se publican
+[resultados y figuras](../../entregas/entrega_3/continua_distribucion_20261010/README.md) se publican
 desde las corridas verificadas. Este índice clasifica las carpetas; una fecha
 de investigación no es el rango del backtest ni una corrida adicional.
 

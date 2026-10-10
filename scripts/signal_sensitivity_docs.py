@@ -390,7 +390,7 @@ def write_matrix(package):
         ("R18", "Bytes de exportación Git aislada y EOL limitados a la evidencia nueva", "pruebas/validaciones_pre_sello.json", True),
         ("R19", "Fuentes y paquetes preservados, índice del usuario intacto, sin commit/push", "pruebas/validaciones_pre_sello.json;documentos/preservacion_previa.json", True),
         ("R20", "Reporte Markdown/HTML, curvas y deltas verificables; sin PDF final", "reporte.md;reporte.html;tablas/deltas.csv;tablas/deltas_hipotesis.csv;figuras/fuentes/horizonte.csv", False),
-        ("R21", "Interpretación descriptiva; sin SOFR, concentración, intradía u optimización adicionales", "documentos/encargo_usuario.md;documentos/protocolo.md;reporte.md", False),
+        ("R21", "Interpretación descriptiva; sin SOFR, concentración, intradía u optimización adicionales", "documentos/protocolo.md;reporte.md", False),
     ]
     rows = [dict(id=key, requirement=description,
                  status="cumplido" if not needs_proof or validated else "parcial",

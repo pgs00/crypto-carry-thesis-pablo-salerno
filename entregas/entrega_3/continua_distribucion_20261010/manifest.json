@@ -1,6 +1,15 @@
 {
+  "distribution": {
+    "created_at": "2026-10-10T20:24:03.935573+00:00",
+    "data_and_figures_regenerated": false,
+    "identifier": "continua_distribucion_20261010",
+    "kind": "editorial",
+    "original_backup": "../Backtesting_antecedentes/distribucion_20261010/originales/entregas/entrega_3/continua",
+    "original_manifest_sha256": "6b7aeedd3e712ec3deb0eb6b3effaf90ec825ffee3f35657074360ba0c3c0663",
+    "original_path": "entregas/entrega_3/continua"
+  },
   "file_hashes": {
-    "README.md": "6e9a9c94835efcc6bd5f13f7e5e972b4d553217fd6dd803fd4cfabd9acfcde67",
+    "README.md": "ac78110af5a5a32e7b396dda59a644a8699733a46231fbdf0342104aa9ba38f8",
     "figuras/composicion_pnl.png": "5783a74e7c226597bedacbcb1318366200733cf78776cd3420f9d69e40eb0db5",
     "figuras/composicion_pnl.svg": "f26296d0f91f24025e260f8c12ac8c840f8207394b41b29d49d2f1a91c2be1d1",
     "figuras/equity_drawdown.png": "a2f138e4c24fc9c3b6f1551328ca8969ae84582c65a5d8ad7d99a2206cfd64ad",

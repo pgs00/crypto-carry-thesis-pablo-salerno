@@ -19,7 +19,7 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[1]
 DELIVERY = ROOT / "entregas/entrega_3"
 ARCHIVE = DELIVERY / "paquete_actualizacion_entrega_3_continua.zip"
-PUBLISHED = DELIVERY / "continua"
+PUBLISHED = DELIVERY / "continua_distribucion_20261010"
 TABLES = (
     "resultados_periodos",
     "actividad",
@@ -299,7 +299,7 @@ Desde la raíz del repositorio, con el entorno de `uv.lock` instalado:
 
 ```powershell
 & '.\\.venv\\Scripts\\python.exe' -m scripts.publish_thesis --verify
-& '.\\.venv\\Scripts\\python.exe' -m scripts.publish_thesis --output '.\\.superpowers\\presentacion_repro'
+& '.\\.venv\\Scripts\\python.exe' -m scripts.publish_thesis --output '.\\outputs\\presentacion_repro'
 ```
 
 El segundo comando requiere un destino nuevo. Ambos leen el ZIP guardado; no

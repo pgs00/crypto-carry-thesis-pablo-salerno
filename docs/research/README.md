@@ -1,7 +1,7 @@
 # Investigación histórica y auditorías
 
 Este índice conserva fuentes y exploraciones de 2026-09-18/19. El estudio vigente
-son las [carteras continuas de 2022–agosto de 2026](../../entregas/entrega_3/continua/README.md).
+son las [carteras continuas de 2022–agosto de 2026](../../entregas/entrega_3/continua_distribucion_20261010/README.md).
 Los alcances y conteos fechados de esta página son antecedentes; no reemplazan
 los resultados actuales. El [catálogo de evidencia](../../data/research/README.md)
 identifica qué respalda el estudio continuo y qué corresponde a pilotos o ventanas.

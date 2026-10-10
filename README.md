@@ -19,7 +19,7 @@ y límites de interpretación de las tres hipótesis.
 - [Metodología vigente](docs/methodology.md): contrato científico y limitaciones.
 - [Resultados y paquetes vigentes E4](entregas/entrega_4/README.md): BASE, riesgo y bloques 1–6.
 - [Guía única de reproducción](docs/reproduction.md): lectura, verificadores compactos, extracción E3 y datos masivos.
-- [Resultados continuos E3](entregas/entrega_3/continua/README.md): tablas, figuras y corridas de referencia.
+- [Resultados continuos E3](entregas/entrega_3/continua_distribucion_20261010/README.md): tablas, figuras y corridas de referencia.
 
 Desde la raíz del repositorio, preparar el entorno y comprobar la presentación E3:
 
@@ -37,6 +37,14 @@ corrida y paquete fijan los experimentos. `configs/base.toml` y
 `configs/robustness.toml` son perfiles anteriores del CLI (`first_trade`),
 conservados por sus usos y pruebas; no identifican la BASE vigente E4.
 Las fuentes masivas, corridas completas, entornos y cachés permanecen locales.
+
+Las distribuciones documentales del 10/10/2026 de E3 continua y SOFR conservan
+los datos, figuras y herramientas retenidos byte por byte, con manifiestos
+propios. Los originales completos y sus hashes están fuera del repositorio en
+`../Backtesting_antecedentes/distribucion_20261010/`. Los paquetes históricos
+E3, BASE, riesgo y B1–B6 conservan documentos internos exigidos por sus
+protocolos o cadenas de sellos; también el archivo local de auditoría del basis.
+Esas excepciones preservan los controles y la procedencia originales.
 
 El trabajo utilizó asistencia de IA mediante Codex en código, documentación y
 verificaciones. El motor integra NautilusTrader; las fuentes de Binance y las

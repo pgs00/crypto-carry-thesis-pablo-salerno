@@ -230,7 +230,7 @@ def load_evidence(root: Path, evidence: Path) -> tuple[list[dict], dict, list]:
             raw = read_bytes(path, "antecedente metodológico íntegro")
             if path.suffix == ".json":
                 json.loads(raw)
-    for rel in ("docs/methodology.md", "docs/progress.md", "src/crypto_carry/data/rules.py",
+    for rel in ("docs/methodology.md", "src/crypto_carry/data/rules.py",
                 "src/crypto_carry/data/prescribed.py", "src/crypto_carry/margin.py",
                 "src/crypto_carry/allocation.py", "src/crypto_carry/execution.py",
                 "src/crypto_carry/portfolio.py", "src/crypto_carry/reporting.py"):

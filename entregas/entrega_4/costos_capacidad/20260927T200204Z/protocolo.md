@@ -1,6 +1,6 @@
 # Protocolo previo: costos y capacidad
 
-Fijado antes de resultados. Autoridad: encargo íntegro `encargo_usuario.md`.
+Fijado antes de resultados.
 BASE originales: run_ad71d751b20623006c195ff3 y run_dfea4b7ac1475668d5968c97.
 Dos carteras alternativas por escenario; BTCUSDT/ETHUSDT, spot y USD-M,
 intervalo UTC [2022-01-01,2026-09-01), sin reinicios ni liquidación terminal.

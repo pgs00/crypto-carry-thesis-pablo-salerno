@@ -1,4 +1,4 @@
-# Alternativa metodológica para una entrega en 48 horas
+# Supuestos y alternativas metodológicas de investigación
 
 Fecha: 18/09/2026. Documento de decisión, sin ejecutar escenarios ni cambiar código, configuración, datos o descargas. Las recomendaciones siguientes son propuestas, no resultados. Se revisaron la consigna, la metodología, las configuraciones, el forecast y la evaluación existentes, y los informes de funding, tarifas y reglas.
 
@@ -106,25 +106,3 @@ H1 depende de tasas, tiempos, intervalos verificados y cobertura, no del mark de
 Usar los mismos instantes válidos para EWMA y no-change, horizonte de 168 horas y ventana de 336 horas con antecedente, excluyendo límites incompletos. Reportar MAE por activo, media equiponderada, resultados por régimen y cantidades excluidas. Los horizontes solapados no son observaciones independientes; no prometer significancia estadística.
 
 Como análisis económico reducido, se puede mostrar una exposición normalizada de una unidad de nocional, tasas realizadas y umbrales de costo fijados de antemano. La suma de tasas es una medida de carry por unidad de nocional bajo esa normalización, no retorno sobre los 10.000 USDT de una cartera con cantidades mantenidas y margen aislado. Denominarlo **ejercicio de funding**, sin CAGR/Sharpe de cartera ni conclusión H2. La caída o aumento de tasas antes/después de 2024 es evidencia sobre funding bruto; no completa el H3 original, que requiere elegibilidad por basis/costos y CAGR condicional.
-
-## Plan de 48 horas y condición de entrega
-
-| Tiempo desde el comienzo | Trabajo y resultado comprobable |
-| --- | --- |
-| 0–4 h | Congelar el protocolo y la ficha de supuestos; validar tasas/calendario y ejecutar H1 independiente. Medir descarga/cobertura realmente disponible y velocidad de un replay representativo sin modificar la descarga activa. |
-| 4–10 h | Contrastar proxy en el período conocido; completar tabla de filtros; preparar el modo de investigación separado y un piloto contable/temporal. Guardar parámetros antes de examinar rentabilidad. |
-| 10–26 h | Correr la historia económica y las dos carteras si la integridad de datos y el tiempo proyectado lo permiten. Producir ledger, equity, atribución y cobertura. No iniciar una búsqueda abierta de proveedores. |
-| 26–38 h | Ejecutar sensibilidades prioritarias que quepan en el tiempo medido; documentar las no realizadas. H3 sólo sobre días conjuntos completos y sin reiniciar capital. |
-| 38–48 h | Conciliar resultados, revisar tablas/figuras, redactar supuestos y límites, reproducir el manifiesto y entregar. Reservar este tiempo aunque queden sensibilidades adicionales pendientes. |
-
-No se midió aquí el tiempo del replay completo ni se verificó la descarga en D:. Las horas son un presupuesto de trabajo, no una promesa de que termine. El punto de decisión de las 10 h evita descubrir al final que el cálculo es inviable. Si no llega, entregar H1 y el análisis reducido, más resultados económicos sólo de intervalos expresamente terminados y comparables; no una curva de efectivo inventada ni una certificación de toda la muestra. No rellenar huecos de trades para forzar esa entrega.
-
-El paquete mínimo contiene: protocolo fechado; inventario de datos observados/proxies/supuestos; tabla H1 y exclusiones; tasas/pronósticos por régimen; y, si finaliza la simulación, comparación económica, atribución, drawdown, cobertura y sensibilidades. H2/H3 deben figurar como **condicionados al escenario**, mixtos o no concluyentes según lo que resulte.
-
-## Decisión metodológica mínima
-
-La consigna aprobada exige marks de cobro y reglas históricos y prohíbe completar evidencia faltante con datos inventados. Para el escenario propuesto, la decisión concreta es autorizar **un estudio económico separado con tasas y precios observados, proxy causal de funding, costos fijos prescritos y reglas explícitas sujetas a sensibilidad**, conservando la evaluación estricta como no completada. No hace falta una autorización para cada parámetro técnico o cada tabla cuando el alcance del escenario ya está autorizado.
-
-Redacción sugerida del acuerdo: “Usar la ventana 2022–2026 para un escenario de investigación con las aproximaciones y reglas prescritas de esta ficha, y reportar sensibilidad; mantener separado el resultado histórico estricto. No presentar el escenario como rendimiento real ejecutable ni como reconstrucción exacta de Binance”. La autorización cambia el alcance de las afirmaciones, no la calidad de la evidencia. Si el usuario ya dio esa autorización en la conversación, no volver a pedirla.
-
-No se necesitan contactos con soporte, nuevas credenciales ni una compra de datos para adoptar esta ruta. La decisión esencial es el tipo de resultado académico que se va a entregar, acompañada por una tabla concreta de supuestos, no una promesa de recuperar en dos días toda la historia interna del exchange.

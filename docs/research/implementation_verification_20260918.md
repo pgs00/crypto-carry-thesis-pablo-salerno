@@ -1,6 +1,6 @@
 # Verificación del escenario aprobado
 
-Implementación local del 18/09/2026, rama `codex/crypto-carry`, sobre `bad3376bee0c73fa3f24b7afb41b9dbcbb1e16f5`. No se modificó el descargador activo, ni se hizo commit o push.
+Implementación local del 18/09/2026 sobre `bad3376bee0c73fa3f24b7afb41b9dbcbb1e16f5`.
 
 ## Evidencia
 

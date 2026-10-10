@@ -1326,7 +1326,7 @@ def main():
             Path(__file__),
             PROJECT / "tests/unit/test_basis_audit.py",
             PROJECT / "tests/unit/test_execution_revision.py",
-            PROJECT / "docs/sources/Prompt_Codex_Auditoria_Basis.md",
+            PROJECT / "docs/basis_audit_methodology.md",
         ]:
             archive.write(path, path.relative_to(PROJECT).as_posix())
         for path in sorted((PROJECT / "src/crypto_carry").rglob("*.py")):

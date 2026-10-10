@@ -6,7 +6,7 @@ Comparación remunerada: **pendiente_aprobacion_benchmark**; no se calculó.
 
 - [Reporte HTML](paquete_20260927T152732Z/reporte.html)
 - [Reporte Markdown](paquete_20260927T152732Z/reporte.md)
-- [Paquete ZIP verificado](paquete_20260927T152732Z.zip)
+- [Paquete verificable](paquete_20260927T152732Z/README.md)
 - [Resumen anual y capital utilizado](paquete_20260927T152732Z/tablas/resumen_integrado.csv)
 - [Propuesta SOFR y fuentes](paquete_20260927T152732Z/documentos/propuesta_benchmark.md)
 - [Ficha concreta pendiente](paquete_20260927T152732Z/documentos/ficha_benchmark.json)

@@ -1,6 +1,6 @@
 # Protocolo previo: retorno, capital y diagnósticos
 
-Fecha: 2026-09-27. Encargo: `encargo_usuario.md`. Ejecución local por etapas.
+Fecha: 2026-09-27.
 
 ## Población y fuentes
 

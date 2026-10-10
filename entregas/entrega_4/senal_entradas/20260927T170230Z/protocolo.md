@@ -2,7 +2,6 @@
 
 Registro previo a resultados, 2026-09-27T17:02:30Z. Sensibilidad exploratoria de
 historia ya observada; no selección de ganadores ni prueba fuera de muestra.
-Especificación vinculante: `encargo_usuario.md`, copia íntegra del encargo leído.
 
 ## Población y matriz cerrada
 

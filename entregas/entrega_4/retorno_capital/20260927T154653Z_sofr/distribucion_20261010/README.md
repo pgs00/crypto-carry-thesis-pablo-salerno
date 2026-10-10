@@ -1,5 +1,7 @@
 # Cuenta SOFR aprobada: evidencia reproducible
 
+Distribución documental del 10 de octubre de 2026, con sello propio. Conserva los datos, resultados, fuentes, aprobaciones técnicas, código y pruebas del paquete original byte por byte; se retiraron tres documentos de planificación y administración interna. El README identifica esta distribución. El paquete original y sus certificados históricos se conservan íntegros en `../Backtesting_antecedentes/distribucion_20261010/originales/entregas/entrega_4/retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z`, ruta relativa a la raíz del repositorio. SHA-256 del manifiesto original: `4769f6c6a80e6fa4b4fd4a4e7c45b94fb10b3773bc3cbbebd36b117f73c938c9`. Las referencias previas conservan su significado histórico; el sello nuevo corresponde únicamente a esta distribución.
+
 Abrir [reporte.html](reporte.html) o [reporte.md](reporte.md). Esta versión
 ejecuta exclusivamente la comparación remunerada aprobada. No recalcula los
 diagnósticos previos ni el motor. Conserva ACT/360 para intereses y CAGR365.

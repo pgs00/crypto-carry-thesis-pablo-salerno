@@ -422,23 +422,8 @@ def cached_history(candidate: Path, project: Path, data_root: Path) -> tuple[dic
     write_json(cache, history)
     write_json_gz(candidate / "fuentes/sintesis_diagnostico.json.gz", cases)
     write_csv(candidate / "tablas/diagnostico_b2_b3_cobertura.csv", coverage)
-    # General prompt searched only in the named location and task-document area.
-    general_paths = [Path("C:/Users/pablo/Downloads/Prompt_Codex_Entrega_4.md"),
-                     project / "docs/sources/Prompt_Codex_Entrega_4.md",
-                     project / "docs/entrega_4/Prompt_Codex_Entrega_4.md"]
-    found = next((p for p in general_paths if p.exists()), None)
-    if found:
-        local = "fuentes/sintesis_encargo_general.md"
-        shutil.copyfile(found, candidate / local)
-        sources.record(found, sha256(found), local=local, role="general_prompt_read")
-        general_status = dict(status="leido", path=str(found), text_read=found.read_text(encoding="utf-8-sig"))
-    else:
-        general_status = dict(status="no_localizado_en_ubicaciones_consultadas",
-                              searched=[str(p) for p in general_paths],
-                              note="No se afirma lectura de un documento general ausente. Consigna extraída B5 y feedback E3 leídos.")
-    write_json(candidate / "fuentes/sintesis_lecturas.json", general_status)
     compact = ("fuentes/sintesis_historico.json", "fuentes/sintesis_diagnostico.json.gz",
-               "tablas/diagnostico_b2_b3_cobertura.csv", "fuentes/sintesis_lecturas.json")
+               "tablas/diagnostico_b2_b3_cobertura.csv")
     write_json(inventory_path, dict(schema=SCHEMA, packages=packages, sources=sources.inventory,
                                    compact_outputs={name: sha256(candidate / name) for name in compact},
                                    massive_inputs_reread=False, historical_replays=0,
@@ -666,10 +651,8 @@ def render(candidate: Path, tables: dict, diagnostic: dict, cache_reused: bool, 
               "Candidato parcial: faltan tablas finales de los inicios B6; "
               + ("los intervalos BASE ya están incorporados; " if len(interval_table) > 1 else "los intervalos siguen pendientes; ") +
               "este estado no declara B6 terminado."), "",
-             "Se leyó la extracción autenticada de la consigna académica B5 y el feedback E3. "
-             "El registro [lecturas](fuentes/sintesis_lecturas.json) identifica el encargo general si "
-             "fue localizado, o explicita su ausencia en las ubicaciones consultadas. La revisión "
-             "transversal y Word/PDF permanecen pendientes; no hay commit, push ni cambios del índice.", ""]
+             "La síntesis incorpora la extracción autenticada de la consigna académica B5 y el feedback E3. "
+             "La revisión transversal y Word/PDF permanecen pendientes.", ""]
     state = dict(schema=SCHEMA, historical_cache_reused=cache_reused, b6_tables_incorporated=b6_ready,
                  diagnostic_statuses=diagnostic["statuses"], diagnostic_pending_run_ids=pending,
                  historical_replays=0, branch_scope="only liquidation_pending timeout regression, B2/B3 variants",

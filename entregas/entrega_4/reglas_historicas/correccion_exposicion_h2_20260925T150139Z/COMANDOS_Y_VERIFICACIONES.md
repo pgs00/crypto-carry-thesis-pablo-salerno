@@ -246,6 +246,6 @@ Inicio: 2026-09-26T20:49:21.886880+00:00. Salida: **0**. Duraci?n: 1.500 s.
 
 ## Auditor?as adicionales
 
-El linaje archivado y sus comandos est?n en [auditoria_linaje/linaje_exposicion.md](auditoria_linaje/linaje_exposicion.md). Las fases RED/GREEN focales de H2 est?n en [auditoria_h2/README.md](auditoria_h2/README.md); las de exposici?n en `auditoria_exposicion/`. La revisi?n independiente y la inspecci?n de la figura est?n en [revision_independiente.md](revision_independiente.md).
+El linaje archivado y sus comandos est?n en [auditoria_linaje/linaje_exposicion.md](auditoria_linaje/linaje_exposicion.md). Las fases RED/GREEN focales de H2 est?n en [auditoria_h2/README.md](auditoria_h2/README.md); las de exposici?n en `auditoria_exposicion/`.
 
 Los ocho comandos de corrupciones y el comando con padre/correcci?n trasladados, sus salidas y errores sem?nticos esperados, est?n dentro de [portabilidad_corrupciones.json](portabilidad_corrupciones.json). Fueron copias temporales: recalcular el sello fue parte del ensayo negativo, no una alteraci?n del producto ni del padre.

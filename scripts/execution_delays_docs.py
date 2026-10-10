@@ -340,7 +340,7 @@ del paquete. No hay commit, push ni modificación del índice del usuario.
         ('11: archivos y portabilidad','README.md; manifiesto_paquete.json; controles externos de la carpeta de trabajo'),
         ('12: exclusiones y avance','documentos/protocolo.md; matriz global e historial en el proyecto')]
     (package/'matriz_cumplimiento.md').write_text('# Matriz de cumplimiento\n\n'+
-        table(['Secciones del encargo','Evidencia'],compliance)+
+        table(['Requisitos del protocolo','Evidencia'],compliance)+
         '\nLa verificación posterior al sello se registra externamente para mantener sus bytes inmutables.\n',encoding='utf8')
     write_json(package/'documentos/resumen_estados.json',dict(
         technical=dict(Counter(r['status'] for r in index)),economic=dict(Counter(r['engine_status'] for r in index)),

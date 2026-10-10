@@ -10,6 +10,8 @@
 /entregas/entrega_3/archivo/*.txt -text whitespace=cr-at-eol
 /entregas/entrega_3/continua/** -text whitespace=cr-at-eol
 /entregas/entrega_3/continua/figuras/*.svg whitespace=-blank-at-eol,cr-at-eol
+/entregas/entrega_3/continua_distribucion_20261010/** -text whitespace=cr-at-eol
+/entregas/entrega_3/continua_distribucion_20261010/figuras/*.svg whitespace=-blank-at-eol,cr-at-eol
 /data/manifests/archive/** -text whitespace=cr-at-eol
 /docs/archive/*.txt -text whitespace=cr-at-eol
 /docs/repository_cleanup_manifest.json -text

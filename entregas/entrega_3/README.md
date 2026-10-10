@@ -3,7 +3,7 @@
 La entrega vigente corresponde a **dos carteras continuas del 01/01/2022 al
 31/08/2026 UTC**, con `futures_scaled`, sin reinicios anuales.
 
-- [Resultados, tablas y figuras para consultar en GitHub](continua/README.md).
+- [Resultados, tablas y figuras para consultar en GitHub](continua_distribucion_20261010/README.md).
 - [Paquete vigente completo](paquete_actualizacion_entrega_3_continua.zip)
   (9,64 MB) y [SHA-256](paquete_actualizacion_entrega_3_continua.zip.sha256).
   Conserva las corridas verificadas; no contiene datos masivos de Binance.

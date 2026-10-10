@@ -25,8 +25,7 @@ valoración inicial (ND), margen sólo con corto, calendario y exportación de
 columnas mixtas mark/spot. El catálogo del 24/03 conserva polvo con riesgo de
 precio sin computarlo como tiempo activo.
 
-La revisión independiente y sus reproducciones están en
-`controles/revision_independiente.md`. Se conservan logs RED y GREEN; no se
+Se conservan logs RED y GREEN; no se
 borra un fallo inicial ni se cuenta una omisión como aprobación. Las suites
 solapadas no se suman. Los controles finales sobre el sello y la exportación
 binaria se registran en destinos externos con identidad del paquete.

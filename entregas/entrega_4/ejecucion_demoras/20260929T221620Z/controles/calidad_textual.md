@@ -2,8 +2,7 @@
 
 Se identificó que `$OutputEncoding` de Windows PowerShell era `us-ascii`,
 aunque la salida de consola era UTF-8. Una tubería con texto español hacia
-Python sustituyó tildes por `?`. Las notas editables `progreso.md` y
-`controles/refuerzo_orden_control.md` se corrigieron mediante escritura directa
+Python sustituyó tildes por `?`. Las notas editables se corrigieron mediante escritura directa
 UTF-8; no se alteró código económico ni resultados.
 
 El único texto afectado que ya formaba parte del protocolo congelado era

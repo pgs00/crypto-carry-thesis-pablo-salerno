@@ -192,15 +192,18 @@ activos. No verifica economía ni todos los documentos históricos o sellados.
 
 ## Recuperación de antecedentes
 
-Los documentos internos retirados se recuperan del commit
-`b5bf5909c1793c684a0acd110b6fab2e90718cca`. La referencia de la primera retirada
-es `57215943a5711352ba9cec89a2003039b0154eec`. Los respaldos locales están fuera
-del repositorio, en `../Backtesting_antecedentes/`: `segunda_limpieza_20261010/`
-contiene originales exactos e inventario de recuperación;
-`limpieza_20261010/bytes_git/` contiene las variantes locales y el restaurador
-de la primera retirada. Usar destinos nuevos: los empaquetadores y controles
-antiguos requieren su contexto histórico completo. Los documentos que son
-fuentes autenticadas o entradas de herramientas permanecen en su ruta original.
+Los originales anteriores a esta distribución se conservan en
+`../Backtesting_antecedentes/distribucion_20261010/originales/`, con inventario
+SHA-256 externo y recuperación comprobada. El commit de partida es
+`3c329de6970f0f2b361d162fb03ad91b48fa501f`. Recuperar siempre en destinos nuevos;
+los constructores históricos requieren su contexto y herramientas originales.
+Los antecedentes que ya no estaban en ese commit se recuperan de
+`b5bf5909c1793c684a0acd110b6fab2e90718cca` o de los respaldos anteriores
+`../Backtesting_antecedentes/segunda_limpieza_20261010/` y
+`../Backtesting_antecedentes/limpieza_20261010/bytes_git/`.
+Los protocolos y cadenas de evidencia que exigen documentos internos conservan
+esos miembros sin cambios. La presentación continua E3 y SOFR tienen
+distribuciones documentales nuevas, identificadas en sus respectivos README.
 
 [capital-guia]: ../entregas/entrega_4/retorno_capital/20260927T143928Z/paquete_20260927T152732Z/README.md
 [b5-limites]: ../entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/reproducibilidad.md

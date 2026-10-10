@@ -88,7 +88,7 @@ def freeze(work):
         destination = work / "codigo_ejecutado" / name
         destination.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(ROOT / name, destination)
-    package_names = ["protocolo.md", "encargo_usuario.md", "registro_escenarios_previo.json",
+    package_names = ["protocolo.md", "registro_escenarios_previo.json",
                      "input_hashes.json", "verificacion_base_previa.json", "verificacion_datos.json",
                      "control_compatibilidad.json"]
     package_names += ["configuraciones/" + p.name for p in (work / "configuraciones").glob("*.toml")]

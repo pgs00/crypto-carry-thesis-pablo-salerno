@@ -189,12 +189,12 @@ El reporte distingue cuentas nuevas y tramos heredados; los inicios alternativos
 
 - [Reporte](reporte.md) y [versión HTML](reporte.html).
 - [Síntesis](sintesis.md), [cumplimiento](matriz_cumplimiento.csv) y [corridas](indice_corridas.json).
-- [Protocolo previo](protocolo_ejecucion.json) y [encargo autorizado](fuentes/encargo_b6.md).
+- [Protocolo previo](protocolo_ejecucion.json).
 - [Recursos y tiempos](controles/recursos_y_tiempos.json).
 - La certificación final independiente se escribe en `../controles_finales/verificacion_offline.json`.
 
 No se repitieron BASE ni B1-B5; no se ejecutó el motor en el bootstrap. Las 28/14/56 jornadas,
-5.000 réplicas, semilla y estratificación anual son decisiones del estudio autorizadas en el encargo.
+5.000 réplicas, semilla y estratificación anual son decisiones del estudio fijadas en el protocolo.
 El paquete conserva los bytes de entradas compactas y el código compartido del cálculo/verificación.
 Las particiones masivas de mercado y archivos de descarga quedan identificados en el inventario;
 no se vuelven a leer offline. Se incluyen las ventanas mínimas necesarias para auditar fills.

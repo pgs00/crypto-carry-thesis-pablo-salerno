@@ -21,7 +21,7 @@ no afirma una validación independiente de todo el motor ni una publicación nue
 | BASE y reglas: padre `20260925T005436Z` + corrección `20260926T204312Z` | [Reporte corregido][base-reporte] · [Tablas][base-tablas] | [Reglas][base-protocolo] · [Métricas corregidas][base-metricas] | [V2][base-verificador], requiere el padre completo | [Guía][base-guia]: reglas prescritas; no cronología certificada del exchange. |
 | Riesgo intradía: `20260926T220400Z` | [Reporte][riesgo-reporte] · [Tablas][riesgo-tablas] | [Protocolo][riesgo-protocolo] | [Verificador][riesgo-verificador], compacto o completo con series/precios locales | [Límites][riesgo-guia]: BASE/MARGEN_2X; el compacto no reconstruye máximos globales. |
 | B1 capital: `20260927T152732Z` | [Reporte][capital-reporte] · [Tablas][capital-tablas] | [Protocolo][capital-protocolo] | [Verificador][capital-verificador], compacto o con cuatro dependencias | [Guía][capital-guia]: concentración descriptiva; la ficha SOFR pendiente es histórica. |
-| B1 SOFR: `20260927T162350Z` | [Reporte][sofr-reporte] · [Tablas][sofr-tablas] | [Protocolo][sofr-protocolo] | [Verificador][sofr-verificador], cuenta y dependencia B1 capital | [Límites][sofr-limites]: hipotética bruta USD, ACT/360, paridad nominal; no caja carry. |
+| B1 SOFR: distribucion `20261010` | [Reporte][sofr-reporte] · [Tablas][sofr-tablas] | [Protocolo][sofr-protocolo] | [Verificador][sofr-verificador], cuenta y dependencia B1 capital | [Límites][sofr-limites]: hipotética bruta USD, ACT/360, paridad nominal; no caja carry. |
 | B2 señal/entradas: `20260927T185305Z` | [Reporte][b2-reporte] · [Tablas][b2-tablas] | [Protocolo][b2-protocolo] | [Verificador][b2-verificador], evidencia compacta | [Guía][b2-guia]: seis variantes aisladas; MAE comparable sólo dentro del mismo horizonte. |
 | B3 costos/capacidad: `20260927T231610Z` | [Reporte][b3-reporte] · [Tablas][b3-tablas] | [Protocolo][b3-protocolo] | [Verificador][b3-verificador], contabilidad y ventanas incluidas | [Guía][b3-guia]: ocho variantes aisladas, selección a 34 pb; capacidad 1m sin impacto/cola. |
 | B4 ejecución/demoras: `20260930T013915Z_v2` | [Reporte][b4-reporte] · [Tablas][b4-tablas] | [Protocolo][b4-protocolo] | [Verificador][b4-verificador], versión con prioridad de liquidación corregida | [Revisión v2][b4-limites]: seis variantes aisladas; LC global causal y ventanas intradía acotadas. |
@@ -40,7 +40,7 @@ Los documentos dentro de paquetes sellados conservan su fecha y alcance
 originales; sus pendientes se interpretan junto con la matriz vigente.
 
 El informe padre de reglas se lee con la corrección de exposición
-y H2. [E3 continua](../entrega_3/continua/README.md) conserva la referencia BASE;
+y H2. [E3 continua](../entrega_3/continua_distribucion_20261010/README.md) conserva la referencia BASE;
 las [ventanas independientes E3](../entrega_3/archivo/README.md) son históricas.
 
 Las reglas históricas incompletas siguen siendo una limitación. La
@@ -81,11 +81,11 @@ aprobados en aquella comprobación. Windows es el entorno de referencia.
 [capital-protocolo]: retorno_capital/20260927T143928Z/paquete_20260927T152732Z/documentos/protocolo.md
 [capital-verificador]: retorno_capital/20260927T143928Z/paquete_20260927T152732Z/herramientas/scripts/verify_return_capital.py
 [capital-guia]: retorno_capital/20260927T143928Z/paquete_20260927T152732Z/README.md
-[sofr-reporte]: retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/reporte.md
-[sofr-tablas]: retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/tablas
-[sofr-protocolo]: retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/documentos/protocolo.md
-[sofr-verificador]: retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/herramientas/scripts/verify_sofr_benchmark.py
-[sofr-limites]: retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z/documentos/limites_verificacion.md
+[sofr-reporte]: retorno_capital/20260927T154653Z_sofr/distribucion_20261010/reporte.md
+[sofr-tablas]: retorno_capital/20260927T154653Z_sofr/distribucion_20261010/tablas
+[sofr-protocolo]: retorno_capital/20260927T154653Z_sofr/distribucion_20261010/documentos/protocolo.md
+[sofr-verificador]: retorno_capital/20260927T154653Z_sofr/distribucion_20261010/herramientas/scripts/verify_sofr_benchmark.py
+[sofr-limites]: retorno_capital/20260927T154653Z_sofr/distribucion_20261010/documentos/limites_verificacion.md
 [b2-reporte]: senal_entradas/20260927T170230Z/paquete_20260927T185305Z/reporte.md
 [b2-tablas]: senal_entradas/20260927T170230Z/paquete_20260927T185305Z/tablas
 [b2-protocolo]: senal_entradas/20260927T170230Z/paquete_20260927T185305Z/documentos/protocolo.md

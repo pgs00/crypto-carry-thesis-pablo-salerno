@@ -1,6 +1,6 @@
 # Protocolo previo del bloque 4
 
-Encargo vinculante: [prompt íntegro](encargo_usuario.md). Se ejecutan doce
+Se ejecutan doce
 trayectorias continuas y se reutilizan dos BASE autenticadas. No se combinan
 familias ni se elige una política ganadora.
 

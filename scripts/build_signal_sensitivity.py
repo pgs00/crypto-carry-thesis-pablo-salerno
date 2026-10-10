@@ -330,10 +330,10 @@ def build(work, data_root, destination, *, draft=False):
     # Small provenance/documents only; previous packages and large data remain dependencies.
     documents = destination/"documentos"
     documents.mkdir()
-    for name in ("protocolo.md", "encargo_usuario.md", "registro_escenarios_previo.json",
+    for name in ("protocolo.md", "registro_escenarios_previo.json",
                  "protocolo_previo.json", "preservacion_previa.json", "input_hashes.json",
                  "autenticacion_referencias.json", "verificacion_base_previa.json",
-                 "control_compatibilidad.json", "recursos_antes.json", "plan.md", "progreso.md"):
+                 "control_compatibilidad.json", "recursos_antes.json"):
         shutil.copyfile(work/name, documents/name)
     (documents/"configuraciones").mkdir()
     for scenario in CHANGES:
@@ -344,7 +344,7 @@ def build(work, data_root, destination, *, draft=False):
         for prefix, suffix in (("etapa_", ".json"), ("etapa_", ".log"), ("control_etapa_", ".json")):
             shutil.copyfile(work/(prefix+stage+suffix), execution/(prefix+stage+suffix))
     shutil.copytree(work/"logs_corridas", execution/"logs_corridas")
-    for name in ("revision_independiente.json", "material_academico_consultado.json", "control_historico_general.json"):
+    for name in ("material_academico_consultado.json", "control_historico_general.json"):
         shutil.copyfile(work/name, documents/name)
     write_json(destination/"dependencias.json", dict(data_root_hint=str(data_root),
         previous=read_json(work/"autenticacion_referencias.json"),
