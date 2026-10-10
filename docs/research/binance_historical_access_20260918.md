@@ -39,9 +39,9 @@ Otro [esquema oficial, versión del 2024-10-08](https://github.com/binance/binan
 
 La carpeta de la primera guía fue [eliminada del repositorio el 2024-07-25](https://github.com/binance/binance-public-data/commit/fdc72a94b481536dee32ed394585939326630fd4). En esta consulta las FAQ antiguas de descarga devolvieron artículo inexistente y la antigua landing no fue recuperable. Esto **no prueba que el servicio esté cancelado**; sí impide prometer sus requisitos o funcionamiento actuales con esas referencias. No se confirmó una condición vigente de “VIP1 basta”, una tarifa, ni un programa académico que entregue los campos requeridos. La autenticación sola no demuestra autorización de whitelist.
 
-## Siguiente gestión concreta
+## Consulta técnica propuesta
 
-Enviar, cuando el usuario lo autorice, el siguiente pedido a [Binance Chat](https://www.binance.com/en/chat), solicitando derivación al equipo de Futures Market Data/API. El repositorio oficial también [indica su sección Issues para preguntas de datos](https://github.com/binance/binance-public-data#issuequestion); esta ruta sería una publicación pública separada. **No se envió ningún mensaje.** El objetivo de la gestión es identificar una exportación exacta y su muestra antes de crear credenciales o contratar acceso.
+El siguiente borrador reúne los campos y preguntas para una consulta al equipo de Futures Market Data/API a través de [Binance Chat](https://www.binance.com/en/chat). El repositorio oficial también [indica su sección Issues para preguntas de datos](https://github.com/binance/binance-public-data#issuequestion); esta ruta corresponde a una publicación pública. **No se envió ningún mensaje.** El objetivo de la consulta es identificar una exportación exacta, su muestra y sus requisitos de acceso.
 
 ### Borrador para soporte, sin enviar
 

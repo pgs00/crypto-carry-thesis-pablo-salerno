@@ -18,6 +18,7 @@ from crypto_carry.config import Config  # noqa: E402
 from crypto_carry.reporting import verify_run  # noqa: E402
 from scripts.build_signal_sensitivity import RAW_FILES, snapshot_tools  # noqa: E402
 from scripts.build_signal_sensitivity import write_table as write_raw_table  # noqa: E402
+from scripts.distribution_integrity import original_manifest_path  # noqa: E402
 from scripts.execution_delays import BASES, CHANGES, validate_variant  # noqa: E402
 from scripts.execution_delays_incidents import (  # noqa: E402
     attach_cases,
@@ -44,7 +45,7 @@ from scripts.signal_sensitivity_integrity import (  # noqa: E402
     reject_sealed_ancestor,
 )
 
-PREVIOUS = ROOT/"entregas/entrega_4/senal_entradas/20260927T170230Z/paquete_20260927T185305Z"
+PREVIOUS = ROOT/"entregas/entrega_4/senal_entradas/20260927T170230Z/distribucion_20261010"
 FILES = RAW_FILES + ("forecast_evaluation.csv",)
 
 
@@ -137,7 +138,7 @@ def build(work, data, destination, partial=False):
     references = destination/"hipotesis_base"
     shutil.copytree(PREVIOUS/"hipotesis/BASE_E3", references)
     (destination/"referencias").mkdir()
-    shutil.copyfile(PREVIOUS/"manifiesto_paquete.json", destination/"referencias/manifiesto_bloque2.json")
+    shutil.copyfile(original_manifest_path(PREVIOUS), destination/"referencias/manifiesto_bloque2.json")
     shutil.copytree(PREVIOUS/"codigo_referencia", destination/"codigo_referencia_base")
     inputs = read_json(work/"input_hashes.json")
     base_config = Config.load(data/"outputs"/BASES["conditional"]/"effective_config.toml")

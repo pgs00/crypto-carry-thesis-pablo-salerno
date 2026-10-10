@@ -17,7 +17,7 @@ from crypto_carry.mark_gap_study import GapAuditedBacktest
 from crypto_carry.reporting import _code_identity, verify_run
 
 ROOT = Path(__file__).resolve().parents[1]
-B5 = ROOT / "entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z"
+B5 = ROOT / "entregas/entrega_4/estres_contrafactual/20260930T214617Z/distribucion_20261010"
 BASES = {"conditional": "run_ad71d751b20623006c195ff3", "permanent": "run_dfea4b7ac1475668d5968c97"}
 STARTS = {"I2023": "2023-01-01T00:00:00Z", "I2024": "2024-01-01T00:00:00Z"}
 TASKS = [(s, strategy) for s in STARTS for strategy in BASES]
@@ -127,10 +127,14 @@ def launch_capacity(
 
 
 def authenticate_b5_file(name):
-    manifest = read(B5 / "manifiesto_paquete.json")
+    # The source identity remains the historical B5 seal, preserved verbatim.
+    manifest_path = B5 / "procedencia/manifiesto_original.json"
+    manifest = read(manifest_path)
     if (
-        sha(B5 / "manifiesto_paquete.json")
-        != (B5 / "manifiesto_paquete.sha256").read_text().strip().split()[0]
+        sha(manifest_path)
+        != "091fe38bba57ad5be62275cabb03579b1c47f2d96784ed7c5e2ce6377467a8de"
+        or sha(manifest_path)
+        != (B5 / "procedencia/manifiesto_original.sha256").read_text().strip().split()[0]
     ):
         raise ValueError("B5 seal changed")
     member = next(r for r in manifest["members"] if r["path"] == name)

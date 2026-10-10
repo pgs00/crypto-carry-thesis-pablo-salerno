@@ -1,0 +1,9 @@
+ventana,run_id,simbolo,periodo,metodo,eventos_unicos,unidad
+early,run_f4151cc97937f3704d77fb14,BTCUSDT,calentamiento,not_required_before_start,46,eventos de mercado; estrategias deduplicadas
+early,run_f4151cc97937f3704d77fb14,BTCUSDT,económico,previous_closed_1m,1095,eventos de mercado; estrategias deduplicadas
+early,run_f4151cc97937f3704d77fb14,ETHUSDT,calentamiento,not_required_before_start,46,eventos de mercado; estrategias deduplicadas
+early,run_f4151cc97937f3704d77fb14,ETHUSDT,económico,previous_closed_1m,1095,eventos de mercado; estrategias deduplicadas
+late,run_519a165818e2cadce24bc873,BTCUSDT,calentamiento,exact,46,eventos de mercado; estrategias deduplicadas
+late,run_519a165818e2cadce24bc873,BTCUSDT,económico,exact,1095,eventos de mercado; estrategias deduplicadas
+late,run_519a165818e2cadce24bc873,ETHUSDT,calentamiento,exact,46,eventos de mercado; estrategias deduplicadas
+late,run_519a165818e2cadce24bc873,ETHUSDT,económico,exact,1095,eventos de mercado; estrategias deduplicadas

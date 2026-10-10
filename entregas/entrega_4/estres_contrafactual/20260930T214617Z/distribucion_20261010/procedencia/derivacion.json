@@ -1,0 +1,112 @@
+{
+  "schema": "documentary_distribution_v1",
+  "distribution_id": "distribucion_20261010",
+  "original_manifest_sha256": "091fe38bba57ad5be62275cabb03579b1c47f2d96784ed7c5e2ce6377467a8de",
+  "original_package": "paquete_20261001T211248Z",
+  "omitted": [
+    {
+      "path": "fuentes/encargo_bloque5.md",
+      "bytes": 29561,
+      "sha256": "8da27076746cace0ec39a2b7023edc429b6b1725b104335c0b5e1d88cd29fd39",
+      "reason": "Documento operativo o instrucción al asistente; contenido científico preservado en protocolo_distribucion.md y especificaciones originales."
+    },
+    {
+      "path": "plan_ejecucion.md",
+      "bytes": 5838,
+      "sha256": "a8ffe940aaf575aae6c9d4cfbcbf6f0fde43a86491df7b5fbd7b215765341c70",
+      "reason": "Documento operativo o instrucción al asistente; contenido científico preservado en protocolo_distribucion.md y especificaciones originales."
+    },
+    {
+      "path": "continuacion_local.md",
+      "bytes": 4834,
+      "sha256": "aaed048a5a4d4d1ff6a14bca5bee6b8862c64a68a55109c5858d1c5301b11c6a",
+      "reason": "Documento operativo o instrucción al asistente; contenido científico preservado en protocolo_distribucion.md y especificaciones originales."
+    },
+    {
+      "path": "seguimiento_etapa_b.md",
+      "bytes": 15272,
+      "sha256": "30e125fc9f5847c72efc9b3d6567385a0bbed5932a321ac73bc84f5ea599492b",
+      "reason": "Documento operativo o instrucción al asistente; contenido científico preservado en protocolo_distribucion.md y especificaciones originales."
+    },
+    {
+      "path": "progreso_local.json",
+      "bytes": 4635,
+      "sha256": "1e0770a6c810aaaaa4cead65780e17ae5a6f0ebde0f1e578202356f495593dad",
+      "reason": "Documento operativo o instrucción al asistente; contenido científico preservado en protocolo_distribucion.md y especificaciones originales."
+    },
+    {
+      "path": "fuentes/inventario_limpieza_etapa_a.md",
+      "bytes": 7211,
+      "sha256": "ff0968f564b31cca831da96847d2a0c61fdc51237d323366c418179669afec1b",
+      "reason": "Propuesta administrativa duplicada; todos sus registros técnicos de integridad se conservan sin cambio y su límite de reproducción se describe en protocolo_distribucion.md."
+    }
+  ],
+  "adapted": [
+    {
+      "path": "README.md",
+      "sha256": "f1df93004f14f470ff9419990a604b480074c1a86d0cb30a3e2779f4b60ac5e3",
+      "bytes": 2282,
+      "original_sha256": "98bb7a4cd2edb7d8a39b74849ec0d9126f0f53464e08d1e197ab71421017f9c2",
+      "original_bytes": 5622,
+      "reason": "Presentación documental o aceptación estructural explícita; ciencia sin cambios."
+    },
+    {
+      "path": "herramientas/scripts/verify_stress_counterfactual.py",
+      "sha256": "bedfd206a97b929343c5d0d88a75733a1e26c1e1671a57c38d2e79687c0660e3",
+      "bytes": 13226,
+      "original_sha256": "5ab53cf0caf51764fb43c88c38c8109cb338de2ab552a1b7cb1cefc6e4e04be4",
+      "original_bytes": 13095,
+      "reason": "Presentación documental o aceptación estructural explícita; ciencia sin cambios."
+    },
+    {
+      "path": "reproducibilidad.md",
+      "sha256": "ccde8aa977ec6717b752e908554984c9dcdf88587976fb7aecb262913193c668",
+      "bytes": 7184,
+      "original_sha256": "cfd32286e85c82a5ff33f20246eb32cf6d4df87c963143601da0c5da1df35311",
+      "original_bytes": 7175,
+      "reason": "Presentación documental o aceptación estructural explícita; ciencia sin cambios."
+    },
+    {
+      "path": "herramientas/scripts/stress_counterfactual_contract.py",
+      "original_sha256": "961ea4d25bdf02ac2a5dbf4ae0fff9b259886fff771f30193cd7ed3406689fc1",
+      "original_bytes": 5005,
+      "reason": "Adaptación exclusiva de autenticación documental transitiva; escenarios y snapshots congelados sin cambios.",
+      "sha256": "59f6d5de93a88dc11a70b7dbf5b6f99b6d7b498ed2c4d1325e7a30b916fe0045",
+      "bytes": 5019
+    },
+    {
+      "path": "aprobacion_recibida.json",
+      "original_sha256": "5d8f1eb266f48b2c10a945b352e9ee2adbcaaace7a98fb6eaec3d13a15891198",
+      "original_bytes": 2298,
+      "reason": "Texto conversacional retirado; descripción técnica nueva y todos los demás campos originales autenticados mediante proyección canónica fija.",
+      "sha256": "d4fab64c7684cbfcfc63b3394e07878c98f6f8968a08cebb888756d8ffaf1c2a",
+      "bytes": 2099
+    }
+  ],
+  "added": [
+    {
+      "path": "protocolo_distribucion.md",
+      "sha256": "1e3fc5388f30cdd3dcfb480fbc1d1b2ae2e6bc4abdb96b51bb22e9220d59ea0f",
+      "bytes": 7818,
+      "reason": "Procedencia y verificación de la nueva distribución documental."
+    },
+    {
+      "path": "herramientas/scripts/distribution_integrity.py",
+      "sha256": "ce39074a7ed311357fdbc1a8f68186ca608397b19e0965bf7337666bba02c03a",
+      "bytes": 12326,
+      "reason": "Procedencia y verificación de la nueva distribución documental."
+    },
+    {
+      "path": "procedencia/manifiesto_original.json",
+      "sha256": "091fe38bba57ad5be62275cabb03579b1c47f2d96784ed7c5e2ce6377467a8de",
+      "bytes": 225659,
+      "reason": "Procedencia y verificación de la nueva distribución documental."
+    },
+    {
+      "path": "procedencia/manifiesto_original.sha256",
+      "sha256": "e55afcc16f298c885e52ae15288d1490c85fe6659291afeb5eb563d3cc340e1f",
+      "bytes": 66,
+      "reason": "Procedencia y verificación de la nueva distribución documental."
+    }
+  ]
+}

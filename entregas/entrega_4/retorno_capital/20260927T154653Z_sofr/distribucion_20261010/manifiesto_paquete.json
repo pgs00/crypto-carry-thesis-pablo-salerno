@@ -17,8 +17,8 @@
     },
     {
       "path": "documentos/aprobacion.md",
-      "bytes": 1515,
-      "sha256": "a571596b87886305220d720b786d2d56c99b296e1ff744e872ec04cec1a20e76"
+      "bytes": 1571,
+      "sha256": "f8c7e6909c1adc276f2b9971344ab03f1f4727c0d39c282ed7bb1b9c6399aaea"
     },
     {
       "path": "documentos/entorno.json",
@@ -171,6 +171,11 @@
       "sha256": "6595b1cdb31a23c54a154e51930525cb3aeef7cf3600773cad50862fb50870b6"
     },
     {
+      "path": "herramientas/scripts/distribution_integrity.py",
+      "bytes": 11003,
+      "sha256": "789575d59c6bec776267b8d4f39fd0cb750b294e3a714808bde33f8108557e65"
+    },
+    {
       "path": "herramientas/scripts/return_capital/__init__.py",
       "bytes": 81,
       "sha256": "54100a1d5be7b07b15437b543affd79d174d31b97ba0c974f1c58df3ce50c0b4"
@@ -217,8 +222,8 @@
     },
     {
       "path": "herramientas/scripts/sofr_benchmark/package.py",
-      "bytes": 8146,
-      "sha256": "1fbe68c75720aaa074dc3b685825387ebfda9f7f73522cc1abc1cf7d07a0bbc7"
+      "bytes": 8428,
+      "sha256": "68a3c0ab79a4e70614dec98309788d8158df2645759fbb112fdfbfc43cc10e6a"
     },
     {
       "path": "herramientas/scripts/sofr_benchmark/report.py",
@@ -227,8 +232,8 @@
     },
     {
       "path": "herramientas/scripts/sofr_benchmark/verification.py",
-      "bytes": 3206,
-      "sha256": "1afea323bab1e2e6f346e5f4368a278ac0f7d969f513a724d2f969e73393ad06"
+      "bytes": 3701,
+      "sha256": "1fa3b9a5e4db5558b2ad2ffde995a4df1e9a3478eb6949afa955caa8f505dfe0"
     },
     {
       "path": "herramientas/scripts/verify_sofr_benchmark.py",
@@ -257,8 +262,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 5011,
-      "sha256": "ef183b7f1dd6c86035069ba9ba265b0aefcc4c4ceca522f9f35f328f04912b33"
+      "bytes": 4856,
+      "sha256": "a339f88fef53bf2d1b44aa5a911be1d0c02620426d532313d4ce58b21fe5c041"
     },
     {
       "path": "reporte.html",
@@ -350,5 +355,6 @@
       "bytes": 951,
       "sha256": "11deece0cd4d13bdb18d208ec31631c675ea3b27f8cc93b77b2e957b990c4c05"
     }
-  ]
+  ],
+  "distribution_revision": 2
 }

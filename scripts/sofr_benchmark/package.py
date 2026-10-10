@@ -19,10 +19,13 @@ def build(output, previous, documents, research, tests_root):
     code = Path(__file__).resolve().parent
     output = new_destination(output, [previous, documents, research, tests_root, code.parent])
     check_manifest(previous)
-    if sha256(previous / "manifiesto_paquete.json") != PREVIOUS_HASH:
+    from scripts.distribution_integrity import verify_distribution
+    distribution = verify_distribution(previous)
+    previous_identity = previous / ("procedencia/manifiesto_original.json" if distribution else "manifiesto_paquete.json")
+    if sha256(previous_identity) != PREVIOUS_HASH:
         raise ValueError("Not the approved predecessor")
     tables, audit = derive(
-        research, documents, previous / "tablas", previous / "manifiesto_paquete.json"
+        research, documents, previous / "tablas", previous_identity
     )
     output.mkdir(parents=True)
     shutil.copytree(documents, output / "documentos")
@@ -41,7 +44,7 @@ def build(output, previous, documents, research, tests_root):
             )
         )
     shutil.copyfile(
-        previous / "manifiesto_paquete.json", output / "reutilizado/manifiesto_previo.json"
+        previous_identity, output / "reutilizado/manifiesto_previo.json"
     )
     write_json(
         output / "dependencia_previa.json",
@@ -62,6 +65,7 @@ def build(output, previous, documents, research, tests_root):
         shutil.copyfile(code.parent / "return_capital" / name, helpers / name)
     for name in ("build_sofr_benchmark.py", "verify_sofr_benchmark.py"):
         shutil.copyfile(code.parent / name, tools / name)
+    shutil.copyfile(code.parent / "distribution_integrity.py", tools / "distribution_integrity.py")
     test_output = output / "herramientas/tests/unit"
     test_output.mkdir(parents=True)
     for path in tests_root.glob("test_sofr_*.py"):

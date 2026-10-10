@@ -23,9 +23,9 @@ permanente estaba rotulada y agregada como rechazo aunque esa estrategia omite
 el filtro. Ahora se informa como `diagnostic_fail_not_applied`, fuera de la
 unión de rechazos. Las decisiones reales, operaciones y resultados no cambian.
 
-Los informes se conservan dentro del [ZIP histórico v2](../../../entregas/entrega_3/archivo/paquete_redaccion_entrega_3_v2.zip).
-Seguir la [extracción autenticada](../../../docs/reproduction.md#entrega-3-presentación-y-extracción-autenticada)
-y abrir, bajo su subdirectorio `paquete_redaccion`:
+Los informes se conservan en la [distribución histórica E3](../../../entregas/entrega_3/archivo/distribucion_20261010/LEEME.md).
+La [guía de verificación](../../../docs/reproduction.md#entrega-3-presentación-y-extracción-autenticada)
+comprueba directamente esa carpeta. Desde su raíz se pueden abrir:
 
 - Reporte completo: `evidencia/basis_audit_report.md`.
 - 80 observaciones de muestra: `evidencia/basis/basis_audit_sample.csv`.
@@ -33,14 +33,16 @@ y abrir, bajo su subdirectorio `paquete_redaccion`:
 - Manifiesto y checksums: `evidencia/basis/basis_audit_manifest.json`.
 - Comparación económica con presentación corregida: `evidencia/execution_revision_report.md`.
 
-El CSV completo `outputs/basis_audit_afd512e8a542f331ffa9ac3f/basis_audit_all.csv`
-y los ZIP de mercado quedan locales. El paquete publica la muestra, el resumen
-y los hashes del conjunto completo; no requiere esos datos para leer el reporte.
+Los CSV completos y el contenedor original de la auditoría se conservan en el
+respaldo externo `Backtesting_antecedentes/limpieza_final_20261010/`
+(`originales_adicionales/outputs/basis_audit_afd512e8a542f331ffa9ac3f/`).
+Los ZIP de mercado permanecen locales. La distribución publica la muestra,
+el resumen y los hashes del conjunto completo; permite consultar y verificar
+esa evidencia compacta sin acceder al respaldo.
 
 ## Verificar la copia publicada
 
-Después de la extracción autenticada de la guía, con `$py` y `$v2` definidos
-allí, sin datos de mercado:
+Con `$py` y `$v2` definidos en la guía, sin extracción previa ni datos de mercado:
 
 ```powershell
 & $py -B -X utf8 "$v2/scripts/verificar_paquete.py"

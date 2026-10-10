@@ -1,0 +1,73 @@
+{
+  "schema": "documentary_distribution_v1",
+  "distribution_id": "distribucion_20261010",
+  "original_manifest_sha256": "0163cf7622d929c06773700f50d13b2e808afee85a6cf85e48d45dcac03af12b",
+  "omitted": [
+    {
+      "path": "documentos/encargo_usuario.md",
+      "sha256": "6e6a022be04a71d1a063759786623d3bfb83957de9093c7ae12a914bb2ad16b2",
+      "bytes": 24446,
+      "reason": "Documento interno de desarrollo; especificación científica conservada en protocolos y evidencia."
+    },
+    {
+      "path": "documentos/plan.md",
+      "sha256": "bedde74c792ddb7df598b6f9a8197de058b6116b81ec61e7b71d56c0e788c82f",
+      "bytes": 1757,
+      "reason": "Documento interno de desarrollo; especificación científica conservada en protocolos y evidencia."
+    },
+    {
+      "path": "documentos/progreso.md",
+      "sha256": "e22ceacf7278a185cd67bcb363badd7c18beb70cfa447a16b95d3697eb267824",
+      "bytes": 2519,
+      "reason": "Documento interno de desarrollo; especificación científica conservada en protocolos y evidencia."
+    }
+  ],
+  "adapted": [
+    {
+      "path": "README.md",
+      "bytes": 3271,
+      "sha256": "7e2002037bb1199589b1f58bfcffe0043d99713ed9e5ffc01ca13147b67e666b",
+      "original_bytes": 3083,
+      "original_sha256": "59cdb57331d1cb6991ea6ba04e715ed3fe37e12c6185fea53ebd9b79ab83803d",
+      "reason": "Presentación o autenticación de la distribución documental."
+    },
+    {
+      "path": "herramientas/scripts/return_capital/package.py",
+      "bytes": 10999,
+      "sha256": "f9073a4994aa9919e7d2902ee345acdb395c2fb3b7df92f07107109e754631c7",
+      "original_bytes": 10892,
+      "original_sha256": "d49523f27c7c553dd1094314cfa53d942f01c432e045cee7a606ad4a0362dd6d",
+      "reason": "Presentación o autenticación de la distribución documental."
+    },
+    {
+      "path": "herramientas/scripts/return_capital/verification.py",
+      "bytes": 13056,
+      "sha256": "dfd06cef3393a472532b6b8f03569fedf6020d1ef7ed5502ea420fa71a8f9b9d",
+      "original_bytes": 12224,
+      "original_sha256": "a00ed5be94f4f6753277cf450ae1bb594964b5daf24156a0ce937b7deba8b447",
+      "reason": "Presentación o autenticación de la distribución documental."
+    }
+  ],
+  "added": [
+    {
+      "path": "herramientas/scripts/distribution_integrity.py",
+      "bytes": 11003,
+      "sha256": "789575d59c6bec776267b8d4f39fd0cb750b294e3a714808bde33f8108557e65"
+    },
+    {
+      "path": "procedencia/manifiesto_original.json",
+      "bytes": 16409,
+      "sha256": "0163cf7622d929c06773700f50d13b2e808afee85a6cf85e48d45dcac03af12b"
+    },
+    {
+      "path": "procedencia/manifiesto_original.sha256",
+      "bytes": 66,
+      "sha256": "9b421ce23b15275a90d86794a67f8e232d85324343b16ec2241bcf6312a199ac"
+    },
+    {
+      "path": "protocolo_distribucion.md",
+      "bytes": 1457,
+      "sha256": "51b53fe785088fce0898eb2627d9d8ef8f987bb08f7be612eb3b3b975bfeb8cc"
+    }
+  ]
+}

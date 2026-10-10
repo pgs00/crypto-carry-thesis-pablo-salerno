@@ -1,0 +1,140 @@
+{
+  "schema": "documentary_distribution_v1",
+  "distribution_id": "distribucion_20261010",
+  "created_at": "2026-10-10T22:04:40.612972+00:00",
+  "original_manifest_sha256": "88af2936e2dc243080abdf3909cc578c184778527eb847d6b021ce76d357335b",
+  "original_package": "paquete_20260930T013915Z_v2",
+  "baseline_replays": 0,
+  "omitted": [
+    {
+      "path": "controles/aprobacion_reparacion.md",
+      "bytes": 720,
+      "sha256": "438656c9f7b97416d7f0e194b6520db7c8d89099971d7bea41e7ea8dd700595e",
+      "reason": "Documento operativo o conversacional; especificación científica preservada descriptivamente."
+    },
+    {
+      "path": "controles/aprobacion_reparacion_transcripcion_utf8.md",
+      "bytes": 1382,
+      "sha256": "6f7f06084f243dca75ec3153ea4a866d333c4f78bd5d4c8d6e4ebde66839e796",
+      "reason": "Documento operativo o conversacional; especificación científica preservada descriptivamente."
+    },
+    {
+      "path": "controles/propuesta_reparacion_liquidacion.md",
+      "bytes": 1956,
+      "sha256": "ff5c5b7dfcc175ac47e45ce0b0a960d6e1e842657cc358e8a1f49f474353aa84",
+      "reason": "Documento operativo o conversacional; especificación científica preservada descriptivamente."
+    },
+    {
+      "path": "documentos/controles/aprobacion_reparacion.md",
+      "bytes": 720,
+      "sha256": "438656c9f7b97416d7f0e194b6520db7c8d89099971d7bea41e7ea8dd700595e",
+      "reason": "Documento operativo o conversacional; especificación científica preservada descriptivamente."
+    },
+    {
+      "path": "documentos/controles/aprobacion_reparacion_transcripcion_utf8.md",
+      "bytes": 1382,
+      "sha256": "6f7f06084f243dca75ec3153ea4a866d333c4f78bd5d4c8d6e4ebde66839e796",
+      "reason": "Documento operativo o conversacional; especificación científica preservada descriptivamente."
+    },
+    {
+      "path": "documentos/controles/propuesta_reparacion_liquidacion.md",
+      "bytes": 1956,
+      "sha256": "ff5c5b7dfcc175ac47e45ce0b0a960d6e1e842657cc358e8a1f49f474353aa84",
+      "reason": "Documento operativo o conversacional; especificación científica preservada descriptivamente."
+    },
+    {
+      "path": "documentos/encargo_usuario.md",
+      "bytes": 28737,
+      "sha256": "44523e023b05c6ce99ce4c0fd6788ebf615281bfbc4ac752dd0c1cb4c5709088",
+      "reason": "Documento operativo o conversacional; especificación científica preservada descriptivamente."
+    },
+    {
+      "path": "documentos/plan.md",
+      "bytes": 3451,
+      "sha256": "c25edc5e6a4ef6c038b94e724a3d480e0af42478d5eab030ad3d6ef77464de5c",
+      "reason": "Documento operativo o conversacional; especificación científica preservada descriptivamente."
+    },
+    {
+      "path": "documentos/progreso.md",
+      "bytes": 7266,
+      "sha256": "6cca13e01ec714f42fabdb0a2f45367e5dd93d0e6b10a7e65e44cceaa55c2f4b",
+      "reason": "Documento operativo o conversacional; especificación científica preservada descriptivamente."
+    }
+  ],
+  "adapted": [
+    {
+      "path": "README.md",
+      "original_sha256": "80e81d1f2bf96d29029022092ab8143b6181d212669fb5b0ba9f7d187627de89",
+      "original_bytes": 1740,
+      "sha256": "9dc2d6da759224ba690fb8c069461803b227aa2c02630c9f94768c9075934be1",
+      "bytes": 3573,
+      "reason": "Sólo enlaces, introducción documental o validación de empaquetado; ciencia y cifras conservadas."
+    },
+    {
+      "path": "documentos/protocolo.md",
+      "original_sha256": "2e4dd1dfc43235988ecfc5ab85ae0d083d3994ad7b0947d072b3d2c0ff7b48ab",
+      "original_bytes": 3261,
+      "sha256": "6ff197a7cf5d000d4f91e7e4bf7a8bd2c0c2deb313c93b6a0db995c7daf705ee",
+      "bytes": 3324,
+      "reason": "Sólo enlaces, introducción documental o validación de empaquetado; ciencia y cifras conservadas."
+    },
+    {
+      "path": "herramientas/scripts/verify_execution_delays.py",
+      "original_sha256": "0bfeadb2178ca4d1325b3e85c5fa4065e0290d3efb3913923a07bc1844a676f5",
+      "original_bytes": 21847,
+      "sha256": "1b8a9e76f78292478269d250688a21bf329216baba063362a4f750e6320d8e2b",
+      "bytes": 21911,
+      "reason": "Sólo enlaces, introducción documental o validación de empaquetado; ciencia y cifras conservadas."
+    },
+    {
+      "path": "matriz_cumplimiento.md",
+      "original_sha256": "92c1cdfd2b5435818f8ebd47c15b886e947e1e0f78caea3361873e60fab400d8",
+      "original_bytes": 1072,
+      "sha256": "34a83218eab9f93228500bc4b3570eba8b25f4e0813acf802f0a4988de2efc4b",
+      "bytes": 1029,
+      "reason": "Sustitución exacta de la referencia documental retirada por el protocolo descriptivo; requisitos, evidencia y estados conservados."
+    },
+    {
+      "path": "reporte.html",
+      "original_sha256": "9cce9b40c6d09153649d4d75f7d01def777c23239a4f519bf240945efc820337",
+      "original_bytes": 20389,
+      "sha256": "b742ef39ecd5ef3984ff9e07dbb955c26458575b3a3d13373130d65e130a7e8e",
+      "bytes": 20254,
+      "reason": "Sólo enlaces, introducción documental o validación de empaquetado; ciencia y cifras conservadas."
+    },
+    {
+      "path": "reporte.md",
+      "original_sha256": "7f4c95dac66c99bf49ec011365ec822d231b01c532f2674e810fb60448938fa1",
+      "original_bytes": 14740,
+      "sha256": "bd87b6ce823497d375393179830260b43f67db10acc2a40d2e450707a08656da",
+      "bytes": 14570,
+      "reason": "Sólo enlaces, introducción documental o validación de empaquetado; ciencia y cifras conservadas."
+    }
+  ],
+  "added": [
+    {
+      "path": "herramientas/scripts/distribution_integrity.py",
+      "sha256": "36b2e2ef4e17bebcfc878dff003fc583783013b1fc8a8028c5f860da2b9d00a7",
+      "bytes": 10041,
+      "reason": "Procedencia, protocolo descriptivo o validación portable de derivación."
+    },
+    {
+      "path": "procedencia/manifiesto_original.json",
+      "sha256": "88af2936e2dc243080abdf3909cc578c184778527eb847d6b021ce76d357335b",
+      "bytes": 232358,
+      "reason": "Procedencia, protocolo descriptivo o validación portable de derivación."
+    },
+    {
+      "path": "procedencia/manifiesto_original.sha256",
+      "sha256": "7dea244b244a380873989d2f29eeaac5330e3d0ca207ed1f1606c0d635d0a043",
+      "bytes": 66,
+      "reason": "Procedencia, protocolo descriptivo o validación portable de derivación."
+    },
+    {
+      "path": "protocolo_distribucion.md",
+      "sha256": "6d58ae2c334c582770dad8985db4af3b2409d2e06add97ca8b7d0803bc719fff",
+      "bytes": 10800,
+      "reason": "Procedencia, protocolo descriptivo o validación portable de derivación."
+    }
+  ]
+}

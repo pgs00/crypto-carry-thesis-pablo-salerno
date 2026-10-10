@@ -60,7 +60,7 @@ El diseño recomendado mantiene los marks exactos donde existen, etiqueta cada p
 
 ## Lo que esta prueba habilita y lo que sigue pendiente
 
-La aproximación puede evaluarse sin soporte ni una API comercial. No hace falta descartar automáticamente la muestra 2022–2023 por este único campo. Sí hace falta autorizar y documentar el escenario, completar sus supuestos de reglas y validar el efecto en las dos carteras.
+La aproximación puede evaluarse sin soporte ni una API comercial. No hace falta descartar automáticamente la muestra 2022–2023 por este único campo. La evaluación requiere definir y documentar el escenario, completar sus supuestos de reglas y validar el efecto en las dos carteras.
 
 Siguen separados los problemas de ejecución, precios ausentes fuera de los cobros, comisiones y reglas históricas. Descargar velas no reconstruye operaciones individuales ni una demora de un segundo entre patas. Una evaluación por barras necesita reglas de ejecución propias y no se presentaría como el replay original.
 

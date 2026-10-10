@@ -5,20 +5,22 @@ las estrategias condicional y permanente, sin cruces de parámetros. Las doce
 corridas nuevas tienen estado económico `complete`. Se reutilizan las dos
 BASE originales y se conservan aparte dos controles BASE completos.
 
-Versión vigente: **paquete_20260930T013915Z_v2**.
-SHA-256 del manifiesto:
+Lectura vigente: **distribucion_20261010**, con [identidad documental propia](distribucion_20261010/protocolo_distribucion.md).
+Los controles y conteos siguientes corresponden al paquete original
+`paquete_20260930T013915Z_v2`; no certifican por sí mismos esta distribución.
+SHA-256 del manifiesto original:
 `88af2936e2dc243080abdf3909cc578c184778527eb847d6b021ce76d357335b`.
 
-- [Reporte Markdown](paquete_20260930T013915Z_v2/reporte.md) y
-  [reporte HTML](paquete_20260930T013915Z_v2/reporte.html).
-- [Lectura comparada de resultados](paquete_20260930T013915Z_v2/lectura_resultados.md)
-  y [síntesis integrable](paquete_20260930T013915Z_v2/sintesis.md).
-- [Corridas, identidades y comandos](paquete_20260930T013915Z_v2/indice_corridas.json),
-  [métricas de los ocho períodos](paquete_20260930T013915Z_v2/tablas/metricas.csv),
-  [auditoría de ejecución](paquete_20260930T013915Z_v2/auditoria_ejecucion.md)
-  y [casos locales](paquete_20260930T013915Z_v2/incidentes.md).
-- [Reproducción offline](paquete_20260930T013915Z_v2/README.md) y
-  [manifiesto completo](paquete_20260930T013915Z_v2/manifiesto_paquete.json).
+- [Reporte Markdown](distribucion_20261010/reporte.md) y
+  [reporte HTML](distribucion_20261010/reporte.html).
+- [Lectura comparada de resultados](distribucion_20261010/lectura_resultados.md)
+  y [síntesis integrable](distribucion_20261010/sintesis.md).
+- [Corridas, identidades y comandos](distribucion_20261010/indice_corridas.json),
+  [métricas de los ocho períodos](distribucion_20261010/tablas/metricas.csv),
+  [auditoría de ejecución](distribucion_20261010/auditoria_ejecucion.md)
+  y [casos locales](distribucion_20261010/incidentes.md).
+- [Reproducción offline](distribucion_20261010/README.md) y
+  [manifiesto completo](distribucion_20261010/manifiesto_paquete.json).
 - [Matriz global actualizada](../../../../docs/entrega_4/matriz_avance.csv).
 
 ## Alcance comprobado
@@ -42,7 +44,7 @@ La [verificación con fuentes completas](verificacion_final/fuentes_completas.js
 recalculó las 14 carteras desde los datos locales. La revisión técnica posterior
 conserva idénticos todos los datos, configuraciones, tablas, figuras, extractos
 y código económico, según la
-[comparación entre versiones](paquete_20260930T013915Z_v2/documentos/comparacion_con_candidato_anterior.json).
+[comparación entre versiones](distribucion_20261010/documentos/comparacion_con_candidato_anterior.json).
 El [control offline del sello final](verificacion_final/offline_exportacion_v2.json)
 repitió el recálculo desde una copia reconstruida de blobs Git, con herramientas
 incluidas, desde otra ruta y sin acceder a las fuentes masivas.
@@ -66,7 +68,7 @@ cachés accidentales de Ruff archivadas y retiradas sin alterar miembros previos
 errores del generador de ataques al escribir tipos Parquet, corregidos en la
 versión final; y ajustes de rutas largas y whitespace de logs en Git. Los
 detalles están en la
-[revisión técnica](paquete_20260930T013915Z_v2/documentos/revision_tecnica_paquete.md).
+[revisión técnica](distribucion_20261010/documentos/revision_tecnica_paquete.md).
 No se cambió la economía ni se repitieron replays por esa revisión de entrega.
 
 Se conservaron siete paquetes sellados anteriores, las dos BASE originales y
@@ -93,9 +95,10 @@ contraste temporal original. Las observaciones H1 se reutilizan una sola vez,
 sin multiplicar cohortes. Los períodos anuales conservan sus propios resultados
 y motivos ND.
 
-El bloque 4 no tiene tareas pendientes dentro del alcance solicitado. La
-matriz deja pendientes los bloques 5 y 6 y la revisión transversal/redacción.
-No se ejecutaron shocks, escenario sin interrupción, nuevos cálculos SOFR ni
+El bloque 4 no tiene tareas pendientes dentro del alcance solicitado. En su
+cierre original quedaban pendientes los bloques 5 y 6 y la revisión transversal;
+el [índice actual de E4](../../README.md) enlaza esos resultados y el PDF final.
+Este bloque no ejecutó shocks, escenario sin interrupción, nuevos cálculos SOFR ni
 una reconstrucción intradía global. Los casos locales conservan sus límites
 de cobertura y de precios de valoración; no acreditan ejecución durante una
 suspensión ni un máximo de riesgo global.

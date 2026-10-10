@@ -10,7 +10,7 @@ Conservar **2022–2026 como escenario académico con supuestos explícitos**, p
 
 El plazo hace poco conveniente seguir buscando indefinidamente el precio interno exacto de los cobros de 2022–2023. Su ausencia no vuelve inútiles las tasas observadas ni demuestra que su aproximación tenga un efecto económico grande. Tampoco puede asegurarse que el efecto sea pequeño antes de medirlo. Las **comisiones y restricciones que cambian decisiones** pueden resultar más importantes que este error de precio; esa prioridad debe verificarse con las corridas.
 
-La entrega mínima que no depende de autorizar nuevas hipótesis económicas es H1 completo, calendario/cobertura y análisis descriptivo de las tasas por régimen. El backtest económico con supuestos requiere una decisión metodológica expresa si todavía no fue autorizada. Preparar esa propuesta y medir el error de proxies sobre datos conocidos no requiere otra autorización.
+La entrega mínima sin nuevas hipótesis económicas comprende H1 completo, calendario/cobertura y análisis descriptivo de las tasas por régimen. El backtest económico con supuestos requiere definir expresamente esas decisiones metodológicas. La propuesta se complementa con la medición del error de proxies sobre datos conocidos.
 
 ## Qué falta y qué no falta
 
@@ -47,7 +47,7 @@ El nombre sugerido es **“escenario de investigación con datos de mercado obse
 | Cargo de liquidación | Prescribir 1% del nocional ejecutado más comisión ordinaria y contrastar 3%, si se necesita completar el campo | Parámetro del estudio; 1% no se presenta como tasa histórica ni como extremo conservador garantizado |
 | Operatividad | Incorporar incidentes documentados; disponibilidad del resto como supuesto explícito. Aplicar inactividad real, caducidad y timeouts; huecos desconocidos siguen siendo huecos | El supuesto de disponibilidad no autoriza inventar operaciones ni ocultar archivos faltantes |
 
-Esta tabla define el cambio metodológico, pero **la ficha de filtros debe contener todos sus valores antes de ejecutar**: tick, step, min/max cantidad, min/max nocional y aplicación a las órdenes del modelo. No hace falta pedir al usuario que invente esos números: deben prepararse como una tabla revisable con origen y elección técnica. La recomendación no es reutilizar sin explicación las reglas ilustrativas de la demo.
+Esta tabla define el cambio metodológico, pero **la ficha de filtros debe contener todos sus valores antes de ejecutar**: tick, step, min/max cantidad, min/max nocional y aplicación a las órdenes del modelo. Los valores deben presentarse en una tabla revisable con origen y elección técnica. La recomendación no es reutilizar sin explicación las reglas ilustrativas de la demo.
 
 No clasificar un supuesto como `verified`, no alterar la fecha real `retrieved_at` o `known_from`, ni hacer pasar estas corridas por la certificación estricta existente. El código actual no tiene un modo de investigación completo para esto: `RuleBook` y la validación previa requieren una adaptación explícita, no un cambio de etiquetas para eludir controles. Las observaciones deben permanecer separadas de la aplicación contrafactual de reglas.
 

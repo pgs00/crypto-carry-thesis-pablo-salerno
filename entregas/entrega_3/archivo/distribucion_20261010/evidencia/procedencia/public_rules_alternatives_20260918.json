@@ -1,0 +1,988 @@
+{
+  "record_kind": "research_evidence_not_RuleBook",
+  "research_date": "2026-09-18",
+  "retrieved_by_utc": "2026-09-18T15:28:28Z",
+  "scope": {
+    "symbols": [
+      "BTCUSDT",
+      "ETHUSDT"
+    ],
+    "markets": [
+      "spot",
+      "usdm_perpetual"
+    ],
+    "economic_interval": [
+      "2022-01-01",
+      "2026-09-01"
+    ],
+    "public_self_service_only": true,
+    "no_contact_no_accounts_no_purchase": true
+  },
+  "conclusion": {
+    "complete_historical_rules_recovered": false,
+    "new_public_artifacts_recovered": true,
+    "can_use_as_production_effective_history": false,
+    "usable_for": "Auxiliary evidence and explicitly assumed constant-rule sensitivity scenarios.",
+    "not_recovered": [
+      "Continuous production exchangeInfo snapshots",
+      "Complete effective and knowledge times",
+      "Continuous historical maintenance brackets",
+      "Continuous VIP0 fees",
+      "Liquidation charge basis and ordinary-fee interaction",
+      "Complete operational calendar"
+    ]
+  },
+  "sources": [
+    {
+      "id": "G1",
+      "kind": "third_party_software_test_fixture",
+      "url": "https://raw.githubusercontent.com/ccxt/ccxt/fbec4993ce0171b08691611281b9410397059333/ts/src/test/static/markets/binance.json",
+      "html_url": "https://github.com/ccxt/ccxt/blob/fbec4993ce0171b08691611281b9410397059333/ts/src/test/static/markets/binance.json",
+      "commit_sha": "fbec4993ce0171b08691611281b9410397059333",
+      "commit_committer_time": "2023-10-31T16:59:26Z",
+      "http_status": 200,
+      "content_bytes": 64554,
+      "sha256_content_bytes": "2215a689a2c4b8ad3bcc2ece9e224d0b4a329ad895b0813a1cfb1b79ebb6268b",
+      "extracted_fields": {
+        "BTC/USDT": {
+          "id": "BTCUSDT",
+          "info": {
+            "symbol": "BTCUSDT",
+            "status": "TRADING",
+            "filters": [
+              {
+                "filterType": "PRICE_FILTER",
+                "minPrice": "0.01000000",
+                "maxPrice": "1000000.00000000",
+                "tickSize": "0.01000000"
+              },
+              {
+                "filterType": "LOT_SIZE",
+                "minQty": "0.00001000",
+                "maxQty": "9000.00000000",
+                "stepSize": "0.00001000"
+              },
+              {
+                "filterType": "ICEBERG_PARTS",
+                "limit": "10"
+              },
+              {
+                "filterType": "MARKET_LOT_SIZE",
+                "minQty": "0.00000000",
+                "maxQty": "128.52621715",
+                "stepSize": "0.00000000"
+              },
+              {
+                "filterType": "TRAILING_DELTA",
+                "minTrailingAboveDelta": "10",
+                "maxTrailingAboveDelta": "2000",
+                "minTrailingBelowDelta": "10",
+                "maxTrailingBelowDelta": "2000"
+              },
+              {
+                "filterType": "PERCENT_PRICE_BY_SIDE",
+                "bidMultiplierUp": "5",
+                "bidMultiplierDown": "0.2",
+                "askMultiplierUp": "5",
+                "askMultiplierDown": "0.2",
+                "avgPriceMins": "5"
+              },
+              {
+                "filterType": "NOTIONAL",
+                "minNotional": "5.00000000",
+                "applyMinToMarket": true,
+                "maxNotional": "9000000.00000000",
+                "applyMaxToMarket": false,
+                "avgPriceMins": "5"
+              },
+              {
+                "filterType": "MAX_NUM_ORDERS",
+                "maxNumOrders": "200"
+              },
+              {
+                "filterType": "MAX_NUM_ALGO_ORDERS",
+                "maxNumAlgoOrders": "5"
+              }
+            ]
+          }
+        },
+        "ETH/USDT": {
+          "id": "ETHUSDT",
+          "info": {
+            "symbol": "ETHUSDT",
+            "status": "TRADING",
+            "filters": [
+              {
+                "filterType": "PRICE_FILTER",
+                "minPrice": "0.01000000",
+                "maxPrice": "1000000.00000000",
+                "tickSize": "0.01000000"
+              },
+              {
+                "filterType": "LOT_SIZE",
+                "minQty": "0.00010000",
+                "maxQty": "9000.00000000",
+                "stepSize": "0.00010000"
+              },
+              {
+                "filterType": "ICEBERG_PARTS",
+                "limit": "10"
+              },
+              {
+                "filterType": "MARKET_LOT_SIZE",
+                "minQty": "0.00000000",
+                "maxQty": "3277.54882761",
+                "stepSize": "0.00000000"
+              },
+              {
+                "filterType": "TRAILING_DELTA",
+                "minTrailingAboveDelta": "10",
+                "maxTrailingAboveDelta": "2000",
+                "minTrailingBelowDelta": "10",
+                "maxTrailingBelowDelta": "2000"
+              },
+              {
+                "filterType": "PERCENT_PRICE_BY_SIDE",
+                "bidMultiplierUp": "5",
+                "bidMultiplierDown": "0.2",
+                "askMultiplierUp": "5",
+                "askMultiplierDown": "0.2",
+                "avgPriceMins": "5"
+              },
+              {
+                "filterType": "NOTIONAL",
+                "minNotional": "5.00000000",
+                "applyMinToMarket": true,
+                "maxNotional": "9000000.00000000",
+                "applyMaxToMarket": false,
+                "avgPriceMins": "5"
+              },
+              {
+                "filterType": "MAX_NUM_ORDERS",
+                "maxNumOrders": "200"
+              },
+              {
+                "filterType": "MAX_NUM_ALGO_ORDERS",
+                "maxNumAlgoOrders": "5"
+              }
+            ]
+          }
+        },
+        "BTC/USDT:USDT": {
+          "id": "BTCUSDT",
+          "info": {
+            "symbol": "BTCUSDT",
+            "status": "TRADING",
+            "liquidationFee": "0.012500",
+            "filters": [
+              {
+                "tickSize": "0.10",
+                "minPrice": "556.80",
+                "filterType": "PRICE_FILTER",
+                "maxPrice": "4529764"
+              },
+              {
+                "filterType": "LOT_SIZE",
+                "stepSize": "0.001",
+                "minQty": "0.001",
+                "maxQty": "1000"
+              },
+              {
+                "stepSize": "0.001",
+                "maxQty": "120",
+                "minQty": "0.001",
+                "filterType": "MARKET_LOT_SIZE"
+              },
+              {
+                "limit": "200",
+                "filterType": "MAX_NUM_ORDERS"
+              },
+              {
+                "filterType": "MAX_NUM_ALGO_ORDERS",
+                "limit": "10"
+              },
+              {
+                "filterType": "MIN_NOTIONAL",
+                "notional": "5"
+              },
+              {
+                "filterType": "PERCENT_PRICE",
+                "multiplierUp": "1.0500",
+                "multiplierDecimal": "4",
+                "multiplierDown": "0.9500"
+              }
+            ]
+          }
+        },
+        "ETH/USDT:USDT": {
+          "id": "ETHUSDT",
+          "info": {
+            "symbol": "ETHUSDT",
+            "status": "TRADING",
+            "liquidationFee": "0.012500",
+            "filters": [
+              {
+                "minPrice": "39.86",
+                "maxPrice": "306177",
+                "tickSize": "0.01",
+                "filterType": "PRICE_FILTER"
+              },
+              {
+                "stepSize": "0.001",
+                "maxQty": "10000",
+                "filterType": "LOT_SIZE",
+                "minQty": "0.001"
+              },
+              {
+                "filterType": "MARKET_LOT_SIZE",
+                "minQty": "0.001",
+                "stepSize": "0.001",
+                "maxQty": "2000"
+              },
+              {
+                "limit": "200",
+                "filterType": "MAX_NUM_ORDERS"
+              },
+              {
+                "filterType": "MAX_NUM_ALGO_ORDERS",
+                "limit": "10"
+              },
+              {
+                "filterType": "MIN_NOTIONAL",
+                "notional": "5"
+              },
+              {
+                "filterType": "PERCENT_PRICE",
+                "multiplierDown": "0.9500",
+                "multiplierUp": "1.0500",
+                "multiplierDecimal": "4"
+              }
+            ]
+          }
+        }
+      },
+      "effective_from": null,
+      "capture_time": null,
+      "production_capture_confirmed": false,
+      "limitation": "Git commit dates date the software artifact. No response envelope or capture manifest. Native-looking info fields and normalized fees are not authenticated historical exchange observations."
+    },
+    {
+      "id": "G2",
+      "kind": "third_party_software_http_response_fixture",
+      "url": "https://raw.githubusercontent.com/nautechsystems/nautilus_trader/4dad2702599d35fd0d7a8d50b944f733d518b7dc/tests/integration_tests/adapters/binance/resources/http_responses/http_spot_market_exchange_info.json",
+      "commit_sha": "4dad2702599d35fd0d7a8d50b944f733d518b7dc",
+      "commit_committer_time": "2022-12-30T21:24:39Z",
+      "http_status": 200,
+      "content_bytes": 4190,
+      "sha256_content_bytes": "7eb0857aca6b100e4dcc578d56bf7e56279d5efa9127f72382b19177d86d5390",
+      "embedded_server_time_ms": 1634942465856,
+      "embedded_server_time_utc": "2021-10-22T22:41:05.856000+00:00",
+      "embedded_time_is_verified_capture_time": false,
+      "effective_from": null,
+      "production_capture_confirmed": false,
+      "fixture_content": {
+        "timezone": "UTC",
+        "serverTime": 1634942465856,
+        "rateLimits": [
+          {
+            "rateLimitType": "REQUEST_WEIGHT",
+            "interval": "MINUTE",
+            "intervalNum": 1,
+            "limit": 1200
+          },
+          {
+            "rateLimitType": "ORDERS",
+            "interval": "SECOND",
+            "intervalNum": 10,
+            "limit": 50
+          },
+          {
+            "rateLimitType": "ORDERS",
+            "interval": "DAY",
+            "intervalNum": 1,
+            "limit": 160000
+          },
+          {
+            "rateLimitType": "RAW_REQUESTS",
+            "interval": "MINUTE",
+            "intervalNum": 5,
+            "limit": 6100
+          }
+        ],
+        "exchangeFilters": [],
+        "symbols": [
+          {
+            "symbol": "BTCUSDT",
+            "status": "TRADING",
+            "baseAsset": "BTC",
+            "baseAssetPrecision": 8,
+            "quoteAsset": "USDT",
+            "quotePrecision": 8,
+            "quoteAssetPrecision": 8,
+            "baseCommissionPrecision": 8,
+            "quoteCommissionPrecision": 8,
+            "orderTypes": [
+              "LIMIT",
+              "LIMIT_MAKER",
+              "MARKET",
+              "STOP_LOSS_LIMIT",
+              "TAKE_PROFIT_LIMIT"
+            ],
+            "icebergAllowed": true,
+            "ocoAllowed": true,
+            "quoteOrderQtyMarketAllowed": true,
+            "isSpotTradingAllowed": true,
+            "isMarginTradingAllowed": true,
+            "filters": [
+              {
+                "filterType": "PRICE_FILTER",
+                "minPrice": "0.01000000",
+                "maxPrice": "1000000.00000000",
+                "tickSize": "0.01000000"
+              },
+              {
+                "filterType": "PERCENT_PRICE",
+                "multiplierUp": "5",
+                "multiplierDown": "0.2",
+                "avgPriceMins": 5
+              },
+              {
+                "filterType": "LOT_SIZE",
+                "minQty": "0.00001000",
+                "maxQty": "9000.00000000",
+                "stepSize": "0.00001000"
+              },
+              {
+                "filterType": "MIN_NOTIONAL",
+                "minNotional": "10.00000000",
+                "applyToMarket": true,
+                "avgPriceMins": 5
+              },
+              {
+                "filterType": "ICEBERG_PARTS",
+                "limit": 10
+              },
+              {
+                "filterType": "MARKET_LOT_SIZE",
+                "minQty": "0.00000000",
+                "maxQty": "112.21108820",
+                "stepSize": "0.00000000"
+              },
+              {
+                "filterType": "MAX_NUM_ORDERS",
+                "maxNumOrders": 200
+              },
+              {
+                "filterType": "MAX_NUM_ALGO_ORDERS",
+                "maxNumAlgoOrders": 5
+              }
+            ],
+            "permissions": [
+              "SPOT",
+              "MARGIN"
+            ]
+          },
+          {
+            "symbol": "ETHUSDT",
+            "status": "TRADING",
+            "baseAsset": "ETH",
+            "baseAssetPrecision": 8,
+            "quoteAsset": "USDT",
+            "quotePrecision": 8,
+            "quoteAssetPrecision": 8,
+            "baseCommissionPrecision": 8,
+            "quoteCommissionPrecision": 8,
+            "orderTypes": [
+              "LIMIT",
+              "LIMIT_MAKER",
+              "MARKET",
+              "STOP_LOSS_LIMIT",
+              "TAKE_PROFIT_LIMIT"
+            ],
+            "icebergAllowed": true,
+            "ocoAllowed": true,
+            "quoteOrderQtyMarketAllowed": true,
+            "isSpotTradingAllowed": true,
+            "isMarginTradingAllowed": true,
+            "filters": [
+              {
+                "filterType": "PRICE_FILTER",
+                "minPrice": "0.01000000",
+                "maxPrice": "1000000.00000000",
+                "tickSize": "0.01000000"
+              },
+              {
+                "filterType": "PERCENT_PRICE",
+                "multiplierUp": "5",
+                "multiplierDown": "0.2",
+                "avgPriceMins": 5
+              },
+              {
+                "filterType": "LOT_SIZE",
+                "minQty": "0.00010000",
+                "maxQty": "9000.00000000",
+                "stepSize": "0.00010000"
+              },
+              {
+                "filterType": "MIN_NOTIONAL",
+                "minNotional": "10.00000000",
+                "applyToMarket": true,
+                "avgPriceMins": 5
+              },
+              {
+                "filterType": "ICEBERG_PARTS",
+                "limit": 10
+              },
+              {
+                "filterType": "MARKET_LOT_SIZE",
+                "minQty": "0.00000000",
+                "maxQty": "1630.44517663",
+                "stepSize": "0.00000000"
+              },
+              {
+                "filterType": "MAX_NUM_ORDERS",
+                "maxNumOrders": 200
+              },
+              {
+                "filterType": "MAX_NUM_ALGO_ORDERS",
+                "maxNumAlgoOrders": 5
+              }
+            ],
+            "permissions": [
+              "SPOT",
+              "MARGIN"
+            ]
+          }
+        ]
+      },
+      "limitation": "Two-symbol Spot fixture; no acquisition manifest or source response headers. Timestamp dates the value in the fixture, not verified production capture."
+    },
+    {
+      "id": "G3",
+      "kind": "third_party_software_http_response_fixture",
+      "url": "https://raw.githubusercontent.com/nautechsystems/nautilus_trader/4dad2702599d35fd0d7a8d50b944f733d518b7dc/tests/integration_tests/adapters/binance/resources/http_responses/http_futures_market_exchange_info.json",
+      "commit_sha": "4dad2702599d35fd0d7a8d50b944f733d518b7dc",
+      "commit_committer_time": "2022-12-30T21:24:39Z",
+      "http_status": 200,
+      "content_bytes": 6641,
+      "sha256_content_bytes": "4e8dde3ddeb1d25327dae540321c754f5e4f24bb34524f65f8fb7a9b9bbc7744",
+      "embedded_server_time_ms": 1645233611962,
+      "embedded_server_time_utc": "2022-02-19T01:20:11.962000+00:00",
+      "embedded_time_is_verified_capture_time": false,
+      "effective_from": null,
+      "production_capture_confirmed": false,
+      "fixture_content": {
+        "timezone": "UTC",
+        "serverTime": 1645233611962,
+        "futuresType": "U_MARGINED",
+        "rateLimits": [
+          {
+            "rateLimitType": "REQUEST_WEIGHT",
+            "interval": "MINUTE",
+            "intervalNum": 1,
+            "limit": 6000
+          },
+          {
+            "rateLimitType": "ORDERS",
+            "interval": "MINUTE",
+            "intervalNum": 1,
+            "limit": 1200
+          },
+          {
+            "rateLimitType": "ORDERS",
+            "interval": "SECOND",
+            "intervalNum": 10,
+            "limit": 300
+          }
+        ],
+        "exchangeFilters": [],
+        "assets": [
+          {
+            "asset": "USDT",
+            "marginAvailable": true,
+            "autoAssetExchange": "-100"
+          },
+          {
+            "asset": "BTC",
+            "marginAvailable": true,
+            "autoAssetExchange": "-0.00100000"
+          },
+          {
+            "asset": "BNB",
+            "marginAvailable": true,
+            "autoAssetExchange": "-0.00100000"
+          },
+          {
+            "asset": "ETH",
+            "marginAvailable": true,
+            "autoAssetExchange": "-0.00100000"
+          },
+          {
+            "asset": "BUSD",
+            "marginAvailable": true,
+            "autoAssetExchange": "-100"
+          }
+        ],
+        "symbols": [
+          {
+            "symbol": "BTCUSDT",
+            "pair": "BTCUSDT",
+            "contractType": "PERPETUAL",
+            "deliveryDate": 4133404802000,
+            "onboardDate": 1569398400000,
+            "status": "TRADING",
+            "maintMarginPercent": "2.5000",
+            "requiredMarginPercent": "5.0000",
+            "baseAsset": "BTC",
+            "quoteAsset": "USDT",
+            "marginAsset": "USDT",
+            "pricePrecision": 2,
+            "quantityPrecision": 3,
+            "baseAssetPrecision": 8,
+            "quotePrecision": 8,
+            "underlyingType": "COIN",
+            "underlyingSubType": [],
+            "settlePlan": 0,
+            "triggerProtect": "0.0500",
+            "liquidationFee": "0.012000",
+            "marketTakeBound": "0.30",
+            "filters": [
+              {
+                "minPrice": "402",
+                "maxPrice": "1246396.60",
+                "filterType": "PRICE_FILTER",
+                "tickSize": "0.10"
+              },
+              {
+                "stepSize": "0.001",
+                "filterType": "LOT_SIZE",
+                "maxQty": "1000",
+                "minQty": "0.001"
+              },
+              {
+                "stepSize": "0.001",
+                "filterType": "MARKET_LOT_SIZE",
+                "maxQty": "1000",
+                "minQty": "0.001"
+              },
+              {
+                "limit": 200,
+                "filterType": "MAX_NUM_ORDERS"
+              },
+              {
+                "limit": 10,
+                "filterType": "MAX_NUM_ALGO_ORDERS"
+              },
+              {
+                "notional": "10",
+                "filterType": "MIN_NOTIONAL"
+              },
+              {
+                "multiplierDown": "0.5454",
+                "multiplierUp": "1.1000",
+                "multiplierDecimal": "4",
+                "filterType": "PERCENT_PRICE"
+              }
+            ],
+            "orderTypes": [
+              "LIMIT",
+              "MARKET",
+              "STOP",
+              "STOP_MARKET",
+              "TAKE_PROFIT",
+              "TAKE_PROFIT_MARKET",
+              "TRAILING_STOP_MARKET"
+            ],
+            "timeInForce": [
+              "GTC",
+              "IOC",
+              "FOK",
+              "GTX"
+            ]
+          },
+          {
+            "symbol": "ETHUSDT",
+            "pair": "ETHUSDT",
+            "contractType": "PERPETUAL",
+            "deliveryDate": 4133404800000,
+            "onboardDate": 1569398400000,
+            "status": "TRADING",
+            "maintMarginPercent": "2.5000",
+            "requiredMarginPercent": "5.0000",
+            "baseAsset": "ETH",
+            "quoteAsset": "USDT",
+            "marginAsset": "USDT",
+            "pricePrecision": 2,
+            "quantityPrecision": 3,
+            "baseAssetPrecision": 8,
+            "quotePrecision": 8,
+            "underlyingType": "COIN",
+            "underlyingSubType": [],
+            "settlePlan": 0,
+            "triggerProtect": "0.0500",
+            "liquidationFee": "0.030000",
+            "marketTakeBound": "0.10",
+            "filters": [
+              {
+                "minPrice": "28.23",
+                "maxPrice": "144004.03",
+                "filterType": "PRICE_FILTER",
+                "tickSize": "0.01"
+              },
+              {
+                "stepSize": "0.001",
+                "filterType": "LOT_SIZE",
+                "maxQty": "10000",
+                "minQty": "0.001"
+              },
+              {
+                "stepSize": "0.001",
+                "filterType": "MARKET_LOT_SIZE",
+                "maxQty": "10000",
+                "minQty": "0.001"
+              },
+              {
+                "limit": 200,
+                "filterType": "MAX_NUM_ORDERS"
+              },
+              {
+                "limit": 10,
+                "filterType": "MAX_NUM_ALGO_ORDERS"
+              },
+              {
+                "notional": "10",
+                "filterType": "MIN_NOTIONAL"
+              },
+              {
+                "multiplierDown": "0.9000",
+                "multiplierUp": "1.1000",
+                "multiplierDecimal": "4",
+                "filterType": "PERCENT_PRICE"
+              }
+            ],
+            "orderTypes": [
+              "LIMIT",
+              "MARKET",
+              "STOP",
+              "STOP_MARKET",
+              "TAKE_PROFIT",
+              "TAKE_PROFIT_MARKET",
+              "TRAILING_STOP_MARKET"
+            ],
+            "timeInForce": [
+              "GTC",
+              "IOC",
+              "FOK",
+              "GTX"
+            ]
+          },
+          {
+            "symbol": "BTCUSDT_220325",
+            "pair": "BTCUSDT",
+            "contractType": "CURRENT_QUARTER",
+            "deliveryDate": 1648195200000,
+            "onboardDate": 1640332800000,
+            "status": "TRADING",
+            "maintMarginPercent": "2.5000",
+            "requiredMarginPercent": "5.0000",
+            "baseAsset": "BTC",
+            "quoteAsset": "USDT",
+            "marginAsset": "USDT",
+            "pricePrecision": 1,
+            "quantityPrecision": 3,
+            "baseAssetPrecision": 8,
+            "quotePrecision": 8,
+            "underlyingType": "COIN",
+            "underlyingSubType": [],
+            "settlePlan": 0,
+            "triggerProtect": "0.0500",
+            "liquidationFee": "0.010000",
+            "marketTakeBound": "0.05",
+            "filters": [
+              {
+                "minPrice": "1093.3",
+                "maxPrice": "1822332.8",
+                "filterType": "PRICE_FILTER",
+                "tickSize": "0.1"
+              },
+              {
+                "stepSize": "0.001",
+                "filterType": "LOT_SIZE",
+                "maxQty": "500",
+                "minQty": "0.001"
+              },
+              {
+                "stepSize": "0.001",
+                "filterType": "MARKET_LOT_SIZE",
+                "maxQty": "500",
+                "minQty": "0.001"
+              },
+              {
+                "limit": 200,
+                "filterType": "MAX_NUM_ORDERS"
+              },
+              {
+                "limit": 10,
+                "filterType": "MAX_NUM_ALGO_ORDERS"
+              },
+              {
+                "notional": "10",
+                "filterType": "MIN_NOTIONAL"
+              },
+              {
+                "multiplierDown": "0.9500",
+                "multiplierUp": "1.0500",
+                "multiplierDecimal": "4",
+                "filterType": "PERCENT_PRICE"
+              }
+            ],
+            "orderTypes": [
+              "LIMIT",
+              "MARKET",
+              "STOP",
+              "STOP_MARKET",
+              "TAKE_PROFIT",
+              "TAKE_PROFIT_MARKET",
+              "TRAILING_STOP_MARKET"
+            ],
+            "timeInForce": [
+              "GTC",
+              "IOC",
+              "FOK",
+              "GTX"
+            ]
+          }
+        ]
+      },
+      "limitation": "Three-symbol USD-M fixture. BTC liquidationFee 0.012000 and ETH 0.030000; both minimum notionals 10. Environment and possible test edits unverified; do not promote these to production rules."
+    },
+    {
+      "id": "G4",
+      "kind": "third_party_software_symbol_properties_database",
+      "name": "lean2021",
+      "url": "https://raw.githubusercontent.com/QuantConnect/Lean/b8768ae27419073acdf1dfb17b3853d6e336f7d0/Data/symbol-properties/symbol-properties-database.csv",
+      "status": 200,
+      "bytes": 210615,
+      "sha256": "ac61b94fb55e5187911a69e40ad6d05c783eb30aa2d2f16a0a357e3a93e50c03",
+      "header": [
+        "market,symbol,type,description,quote_currency,contract_multiplier,minimum_price_variation,lot_size,market_ticker,minimum_order_size,price_magnifier",
+        ""
+      ],
+      "rows": [
+        "binance,BTCUSDT,crypto,BTCUSDT,USDT,1,0.01,0.00001,BTCUSDT,10",
+        "binance,ETHUSDT,crypto,ETHUSDT,USDT,1,0.01,0.0001,ETHUSDT,10"
+      ],
+      "commit_sha": "b8768ae27419073acdf1dfb17b3853d6e336f7d0",
+      "commit_committer_time": "2021-10-14T14:57:48Z",
+      "effective_from": null,
+      "capture_time": null,
+      "limitation": "A version of QuantConnect symbol properties. Useful corroboration for Spot tick/lot/minimum_order_size, not a native exchangeInfo archive and no USD-M rows recovered."
+    },
+    {
+      "id": "A1",
+      "kind": "public_security_master_snapshot",
+      "url": "https://raw.githubusercontent.com/aperiodic-io/atlas/main/atlas/data/binance-futures.json",
+      "http_status": 200,
+      "content_bytes": 375707,
+      "sha256_content_bytes": "65f251e127a5a3f3634732f581abb4ad81a5f09d01de07b4241ae4f49a68c258",
+      "target_records": [
+        {
+          "id": "btcusdt",
+          "type": "perpetual",
+          "contract_size": 1,
+          "underlying": "crypto",
+          "internal_id": "perpetual-BTC-USDT:USDT",
+          "symbol": "BTC",
+          "denominator": "USDT",
+          "margin": "USDT",
+          "cmc_id": 1,
+          "category": [
+            "Layer 1"
+          ],
+          "margin_asset": "USDT",
+          "first_capture": "2019-11-17T00:00:00.000Z"
+        },
+        {
+          "id": "ethusdt",
+          "type": "perpetual",
+          "contract_size": 1,
+          "underlying": "crypto",
+          "internal_id": "perpetual-ETH-USDT:USDT",
+          "symbol": "ETH",
+          "denominator": "USDT",
+          "margin": "USDT",
+          "cmc_id": 1027,
+          "category": [
+            "Layer 1",
+            "Smart Contracts"
+          ],
+          "margin_asset": "USDT",
+          "first_capture": "2019-11-27T00:00:00.000Z"
+        }
+      ],
+      "required_rules_present": false,
+      "limitation": "Target records contain identity, availability and sometimes contract size. They contain no order filters, trading fees, maintenance brackets, or liquidation fees. first_capture is not first rule effective time."
+    },
+    {
+      "id": "A2",
+      "kind": "public_security_master_snapshot",
+      "url": "https://raw.githubusercontent.com/aperiodic-io/atlas/main/atlas/data/binance-spot.json",
+      "http_status": 200,
+      "content_bytes": 880035,
+      "sha256_content_bytes": "d1b9de49266768845db04131b580966c67211349152de1ecead2ac7f6c4baf4a",
+      "target_records": [
+        {
+          "id": "btcusdt",
+          "type": "spot",
+          "internal_id": "spot-BTC-USDT",
+          "symbol": "BTC",
+          "denominator": "USDT",
+          "first_capture": "2019-03-30T00:00:00.000Z"
+        },
+        {
+          "id": "ethusdt",
+          "type": "spot",
+          "internal_id": "spot-ETH-USDT",
+          "symbol": "ETH",
+          "denominator": "USDT",
+          "first_capture": "2019-03-30T00:00:00.000Z"
+        }
+      ],
+      "required_rules_present": false,
+      "limitation": "Target records contain identity, availability and sometimes contract size. They contain no order filters, trading fees, maintenance brackets, or liquidation fees. first_capture is not first rule effective time."
+    }
+  ],
+  "source_reliability_checks": [
+    {
+      "url": "https://api.github.com/repos/ccxt/ccxt/commits?path=ts/src/test/static/markets/binance.json&per_page=100",
+      "result": "13 file-history commits retrieved; first commit 2023-10-28, all four target instruments present in immutable 2023-10-31 version. Dates do not assert acquisition or effectiveness."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/nautechsystems/nautilus_trader/4dad2702599d35fd0d7a8d50b944f733d518b7dc/tests/integration_tests/adapters/binance/test_providers.py",
+      "result": "The fixture responses are returned by a monkey-patched HTTP client. This establishes test use, not original acquisition environment."
+    },
+    {
+      "url": "https://api.github.com/repos/nautechsystems/nautilus_trader/commits/130f3cd850fa870d467aaa78ce57c5719cc52b14",
+      "result": "A 2022-02-19 modification added a quarterly contract to the Futures fixture. Partial fixture edits can preserve an older serverTime envelope; a file timestamp is insufficient for all symbols."
+    },
+    {
+      "url": "https://api.github.com/repos/aperiodic-io/atlas",
+      "result": "Repository created 2026-03-01T15:50:25Z. Its earlier first_capture fields describe instrument availability, not historical rules."
+    }
+  ],
+  "unsuccessful_or_rejected_avenues": [
+    {
+      "source": "Common Crawl",
+      "url": "https://index.commoncrawl.org/CC-MAIN-2024-05-index?url=fapi.binance.com%2Ffapi%2Fv1%2FexchangeInfo&output=json&filter=status%3A200",
+      "http_status": 504,
+      "result": "No index record or WARC retrieved. Gateway failure does not establish absence of captures."
+    },
+    {
+      "source": "Common Crawl",
+      "name": "commoncrawl_spot",
+      "url": "https://index.commoncrawl.org/CC-MAIN-2023-50-index?url=api.binance.com%2Fapi%2Fv3%2FexchangeInfo&output=json&filter=status%3A200",
+      "status": 502,
+      "bytes": 157,
+      "sha256": "0aba75d84471181acb8babe5b2cfdd48f3c9242430c310d3187ecff166093e36",
+      "body": "<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.31.6</center>\r\n</body>\r\n</html>\r\n",
+      "result": "No index record or WARC retrieved. Gateway failure does not establish absence of captures."
+    },
+    {
+      "source": "grep.app",
+      "url": "https://grep.app/api/search?q=exchangeInfo%20serverTime%20BTCUSDT",
+      "http_status": 429,
+      "result": "Security checkpoint; no search results relied on."
+    },
+    {
+      "source": "GitHub repository search",
+      "result": "Two queries returned 403; one exact historical metadata query returned 200 and total_count 0. Not evidence that no public archive exists."
+    },
+    {
+      "source": "Kaggle",
+      "url": "https://www.kaggle.com/datasets/andreidiaconescu/binancepricedata/versions/3",
+      "result": "Dataset description lists historical OHLCV columns. No historical rule dataset located through bounded searches; large price data not downloaded."
+    },
+    {
+      "source": "Zenodo",
+      "url": "https://zenodo.org/records/7749449",
+      "result": "Binance VWAP release, not demonstrated rules archive; no large download."
+    },
+    {
+      "source": "binance-rs fixture",
+      "url": "https://raw.githubusercontent.com/wisespace-io/binance-rs/master/tests/mocks/general/exchange_info.json",
+      "http_status": 200,
+      "result": "Actual JSON recovered but only ETHBTC, LTCBTC, BNBBTC. Neither target pair."
+    },
+    {
+      "source": "Stratmill",
+      "url": "https://stratmill.com/blog/point-in-time-universe-crypto-perps/",
+      "http_status": 200,
+      "result": "Publisher claims snapshot archive in blog. No public downloadable payload or documented self-service historical metadata endpoint recovered. Not adopted as an available data source."
+    }
+  ],
+  "proposed_sensitivity_only": {
+    "status": "not_implemented_not_certified",
+    "research_question": "Historical carry under explicitly fixed venue constraints and transaction-cost scenarios.",
+    "fee_scenarios": {
+      "spot_taker_decimal": "0.001",
+      "usdm_taker_decimals": [
+        "0.0004",
+        "0.0005"
+      ],
+      "additional_fee_stress_decimal": "0.001",
+      "additional_fee_stress_is_assumption": true,
+      "known_BTC_zero_fee_promotion": "Optional separate sensitivity applying only already-documented exact promotion interval; do not infer other rate transition dates."
+    },
+    "mechanical_scenario_values": [
+      {
+        "symbol": "BTCUSDT",
+        "market": "spot",
+        "tick": "0.01",
+        "step": "0.00001",
+        "min_notional": "10"
+      },
+      {
+        "symbol": "ETHUSDT",
+        "market": "spot",
+        "tick": "0.01",
+        "step": "0.0001",
+        "min_notional": "10"
+      },
+      {
+        "symbol": "BTCUSDT",
+        "market": "usdm_perpetual",
+        "tick": "0.1",
+        "step": "0.001",
+        "min_notional": "100"
+      },
+      {
+        "symbol": "ETHUSDT",
+        "market": "usdm_perpetual",
+        "tick": "0.01",
+        "step": "0.001",
+        "min_notional": "20"
+      }
+    ],
+    "all_mechanical_values_above_are_scenario_assumptions": true,
+    "mechanical_notes": "Values deliberately held constant, not an effective-date reconstruction. Compare less restrictive minimum notional cases. Actual documented BTC Futures tick changed from 0.01 to 0.1 in February 2022. Scalar RuleBook fields do not express all MARKET filter flags.",
+    "maintenance": "Compare source-backed published curves as alternative whole-period scenarios, plus a clearly assumed stress. Preserve every curve's piecewise structure; compute and label derived deductions. Do not apply first-tier rate beyond its cap.",
+    "diagnostics": [
+      "Rejected orders and untradeable dust under each scenario",
+      "Distance of every attempted order to quantity and notional constraints",
+      "Maximum position notional and crossed maintenance tiers",
+      "Minimum margin excess under each maintenance scenario using the selected mark series",
+      "Liquidation count and sensitivity to clearance fee/basis/ordinary-fee boolean where an event occurs",
+      "Full equity reruns plus same-ledger fee attribution to separate direct cost effect from path dependence"
+    ],
+    "nonbinding_condition": "Only if no liquidation occurs under every actually tested maintenance scenario can the liquidation fee amount be immaterial to those runs. This does not establish historical absence of liquidations or correctness of untested curves.",
+    "provenance": "Keep assumed execution start separate from source publication/retrieval. Never label an assumed historical interval as verified or backdate a current snapshot's actual acquisition time."
+  },
+  "local_files_unchanged_by_this_work": [
+    "src/**",
+    "configs/**",
+    "data/rules/history.json",
+    "datasets",
+    "D:/**"
+  ],
+  "hash_definition": "SHA-256 over requests response.content bytes (HTTP content decoding already performed), before JSON parsing; extracted subsets are not the full hashed file."
+}

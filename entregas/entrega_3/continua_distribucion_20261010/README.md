@@ -1,7 +1,5 @@
 # Resultados continuos de la Entrega 3
 
-Distribución editorial del 10 de octubre de 2026, con sello propio. Las tablas y figuras conservan los bytes de la presentación original; se actualiza el ejemplo de destino de reproducción. El manifiesto conserva las identidades del ZIP, de sus miembros fuente y del generador original, y registra por separado esta distribución. La versión original se conserva íntegra en `../Backtesting_antecedentes/distribucion_20261010/originales/entregas/entrega_3/continua`, ruta relativa a la raíz del repositorio. SHA-256 del manifiesto original: `6b7aeedd3e712ec3deb0eb6b3effaf90ec825ffee3f35657074360ba0c3c0663`.
-
 **01/01/2022–31/08/2026 UTC**, ambas carteras con `futures_scaled`. Los cortes
 2022–2023 y 2024–agosto de 2026 pertenecen a las mismas trayectorias: sus saldos
 y posiciones se arrastran, sin reinicios. [Índice de la entrega](../README.md).
@@ -85,3 +83,10 @@ prescritas, ejecuciones por minuto y aproximaciones explícitas de marks/funding
 No reconstruyen el recorrido intraminuto ni garantizan una ejecución real.
 Los escenarios de funding con posiciones fijas no incluyen cambios de margen
 o decisiones; extrapolan errores de períodos con precios conocidos a otros períodos.
+
+## Procedencia
+
+Distribución editorial del 10/10/2026. Las tablas y figuras conservan los bytes
+originales; se actualiza el ejemplo de destino de reproducción. El [manifiesto](manifest.json)
+registra las identidades del ZIP, sus fuentes, el generador, el sello original y
+su copia íntegra en el archivo externo `Backtesting_antecedentes`.

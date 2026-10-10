@@ -1,0 +1,88 @@
+{
+  "schema": "documentary_distribution_v1",
+  "distribution_id": "distribucion_20261010",
+  "created_at": "2026-10-10T21:52:01.224955+00:00",
+  "original_manifest_sha256": "f03624b6bdb40a3c9dfb31705a9c5c3552308200a953f9f5e80cce2137140095",
+  "original_package": "paquete_20260927T185305Z",
+  "baseline_replays": 0,
+  "omitted": [
+    {
+      "path": "documentos/encargo_usuario.md",
+      "bytes": 24362,
+      "sha256": "8249b0bcd21f1245840027f3ac5d2df0136399562bd7f9027f8bd3167115cdca",
+      "reason": "Documento operativo o conversacional; especificación científica preservada descriptivamente."
+    },
+    {
+      "path": "documentos/plan.md",
+      "bytes": 3474,
+      "sha256": "737725ecf06231427604e392ee4af2beee6ff82e133cfb4696223499d5353622",
+      "reason": "Documento operativo o conversacional; especificación científica preservada descriptivamente."
+    },
+    {
+      "path": "documentos/progreso.md",
+      "bytes": 5256,
+      "sha256": "eb95bc85c06ff8dd080171496ff05c83aae31efd6855d69dbf352ee9da6032c7",
+      "reason": "Documento operativo o conversacional; especificación científica preservada descriptivamente."
+    }
+  ],
+  "adapted": [
+    {
+      "path": "README.md",
+      "original_sha256": "37db167f72542c4fa10a201374ab466246fba4084256faf95ae8145995c10ac4",
+      "original_bytes": 3591,
+      "sha256": "b74cdae944244cc1a90c5ff6635132ab02f0fa021d33cfc492bf377fc5c91d64",
+      "bytes": 4783,
+      "reason": "Sólo enlaces, introducción documental o validación de empaquetado; ciencia y cifras conservadas."
+    },
+    {
+      "path": "documentos/protocolo.md",
+      "original_sha256": "686dc548bc032c1ce81f1a43f1575723ae6ac188cd50114439659705696475ab",
+      "original_bytes": 5066,
+      "sha256": "1333b453756c5b8679bd2577b75411c4ebc8faf1b8d49942ec9320aaf84ae6b6",
+      "bytes": 5133,
+      "reason": "Sólo enlaces, introducción documental o validación de empaquetado; ciencia y cifras conservadas."
+    },
+    {
+      "path": "herramientas/scripts/signal_sensitivity_integrity.py",
+      "original_sha256": "514b5e05ab4983096cd12518d3a1d467a26fa4a81a1bf29332bc3653fdf9e10f",
+      "original_bytes": 7632,
+      "sha256": "3bf29858a8679988f0e159b74fcc2c8d73a97fd490dbe83d7d03c146fe688f0c",
+      "bytes": 7928,
+      "reason": "Sólo enlaces, introducción documental o validación de empaquetado; ciencia y cifras conservadas."
+    },
+    {
+      "path": "herramientas/scripts/verify_signal_sensitivity.py",
+      "original_sha256": "1a104de098c2698cbc0ab8e0b73a458fb8cf21bf0f668a0c710f156edfc221f5",
+      "original_bytes": 21607,
+      "sha256": "de402f5f05aa7754dc19c35223a1c4d65d9d6e76f1c5c8b442716498aede2470",
+      "bytes": 21717,
+      "reason": "Sólo enlaces, introducción documental o validación de empaquetado; ciencia y cifras conservadas."
+    }
+  ],
+  "added": [
+    {
+      "path": "herramientas/scripts/distribution_integrity.py",
+      "sha256": "fa454335fa04dd267623e21d6c3e19ffeca687322dce26e90f52f6f41301d84a",
+      "bytes": 10015,
+      "reason": "Procedencia, protocolo descriptivo o validación portable de derivación."
+    },
+    {
+      "path": "procedencia/manifiesto_original.json",
+      "sha256": "f03624b6bdb40a3c9dfb31705a9c5c3552308200a953f9f5e80cce2137140095",
+      "bytes": 93825,
+      "reason": "Procedencia, protocolo descriptivo o validación portable de derivación."
+    },
+    {
+      "path": "procedencia/manifiesto_original.sha256",
+      "sha256": "fc17d04028813f6c3b9365c2544475f8f5d54005ce03c6b894ab46190ea0611a",
+      "bytes": 66,
+      "reason": "Procedencia, protocolo descriptivo o validación portable de derivación."
+    },
+    {
+      "path": "protocolo_distribucion.md",
+      "sha256": "df4a653beef7962f0a5074a194a138d13c6c918cb85d74c177e3d1642fb0a2db",
+      "bytes": 7625,
+      "reason": "Procedencia, protocolo descriptivo o validación portable de derivación."
+    }
+  ]
+}

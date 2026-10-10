@@ -1,0 +1,29 @@
+# Bibliografía consolidada de las Entregas 1 y 2
+
+Esta lista conserva las referencias originales y su procedencia. La Entrega 2 (`E2-P169` a `E2-P185`) funciona como base. Se agregan cuatro fuentes específicas que aparecen sólo en la Entrega 1. No se realizó investigación externa ni se actualizaron títulos, fechas o URLs. Los dos registros de Inan se mantienen separados porque los originales distinguen el registro SSRN del resumen de congreso.
+
+| ID | Referencia consolidada | Procedencia |
+|---|---|---|
+| B01 | Ackerer, D., Hugonnier, J. y Jermann, U. (2026). *Perpetual Futures Pricing*. Mathematical Finance, 36(3), 481-499. https://doi.org/10.1111/mafi.70018 | `E2-P169`; `E1-P073` |
+| B02 | Borri, N., Liu, Y., Tsyvinski, A. y Wu, X. (2026). *Cryptocurrency as an Investable Asset Class: Coming of Age*. Annual Review of Financial Economics, 18, en prensa. https://arxiv.org/abs/2510.14435 | `E2-P170`; `E1-P080` |
+| B03 | Christin, N., Routledge, B. R., Soska, K. y Zetlin-Jones, A. (2023). *The Crypto Carry Trade*. Working paper. https://gerbil.life/papers/CarryTrade.v1.2.pdf | `E2-P171`; `E1-P081` |
+| B04 | Inan, E. (2025). *Predictability of Funding Rates*. SSRN 5576424. https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5576424 | `E2-P172`; `E1-P082` |
+| B05 | Inan, E. (2025). *Predictability of funding rates*. CFE-CMStatistics, resumen A1301. https://www.cmstatistics.org/RegistrationsV2/CFECMStatistics2025/viewSubmission.php?in=1301&token=o1n4r30pp8r239sq1o0os653591o7nn1 | `E2-P173` |
+| B06 | Schmeling, M., Schrimpf, A. y Todorov, K. (2026). *Crypto Carry*. Management Science, publicación anticipada. https://doi.org/10.1287/mnsc.2024.05069 | `E2-P174`; `E1-P085` |
+| B07 | Shleifer, A. y Vishny, R. W. (1997). *The Limits of Arbitrage*. The Journal of Finance, 52(1), 35-55. https://doi.org/10.1111/j.1540-6261.1997.tb03807.x | `E2-P175`; `E1-P086` |
+| B08 | Binance. Archivo público y esquemas de timestamps. https://github.com/binance/binance-public-data | `E2-P176` |
+| B09 | Binance Developers. Documentación REST y streams de Spot y Futures USD-M. https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/rest-api/market-data | `E2-P177`; `E1-P077` |
+| B10 | Binance. Introducción al funding; periodicidad y liquidación. https://www.binance.com/en/support/faq/detail/360033525031 | `E2-P178`; `E1-P074` |
+| B11 | Binance. *Available Balance, Margin Balance and Total Balance in Binance Futures*. https://www.binance.com/pt/blog/futures/457299340443288694 | `E2-P179` |
+| B12 | Binance. *Cost Required to Open a Position in Perpetual Futures Contracts*. https://www.binance.com/en/support/faq/detail/87fa7ee33b574f7084d42bd2ce2e463b | `E2-P180` |
+| B13 | Binance. *Liquidation Price of USD-M Futures Contracts*. https://www.binance.com/en-AE/support/faq/detail/b3c689c1f50a44cabb3a84e663b81d93 | `E2-P181` |
+| B14 | Binance. *Futures Liquidation Protocols*. https://www.binance.com/en/support/faq/detail/360033525271 | `E2-P182` |
+| B15 | Binance. *Futures Fee Structure and Fee Calculations*. https://www.binance.com/en/support/faq/detail/360033544231 | `E2-P183` |
+| B16 | NautilusTrader. Binance integration. https://nautilustrader.io/docs/latest/integrations/binance/ | `E2-P184`; `E1-P083` |
+| B17 | NautilusTrader. Backtest accounts and margin: funding. https://nautilustrader.io/docs/latest/concepts/backtesting/accounts-and-margin/ | `E2-P185`; `E1-P084` |
+| B18 | Binance. (2025a). *Important Updates on Funding Rate Settlement Frequency of USDⓈ-M Perpetual Contracts*. https://www.binance.com/en/support/announcement/detail/3243c81a35bd4f0c86a37315c3dc96cc | `E1-P075` únicamente |
+| B19 | Binance. (2025b). *Important Updates on Funding Rate Formula and Mark Price Calculations*. https://www.binance.com/en/support/announcement/detail/c00588a7e8504b3eb28d02a2da00530b | `E1-P076` únicamente |
+| B20 | Binance Developers. (2026b). *Mark Price Stream, Futures USDⓈ-M WebSocket Market Streams*. https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/ws-streams/market | `E1-P078` únicamente |
+| B21 | Binance Data Vision. (2026). *Public market data archive*. https://data.binance.vision/ | `E1-P079` únicamente |
+
+Los identificadores de párrafo pueden reproducirse con [parrafos_fuente.txt](parrafos_fuente.txt). La versión CSV conserva los mismos 21 registros y separa la procedencia por entrega.

@@ -1,0 +1,6 @@
+comparator,conditional_sharpe,criterion,early_conditional_cagr,early_valid_days,excluded,hypothesis,late_conditional_cagr,measure,observations,period,permanent_sharpe,result,scenario,strategy,value,window
+0.0009827721208583969,,mae_ewma < mae_no_change,,,44,H1,,forecast_mae,2146,full,,favorable,vwap_joint,COMMON,0.0007300562247555909,early
+0.03343990159715049,1.9181736175616881,conditional CAGR > 0 and both Sharpes defined and conditional > permanent,,,,H2,,conditional_cagr_and_relative_sharpe,365,full,4.110076292959999,contraria,vwap_joint,conditional_vs_permanent,0.00736363177009669,early
+0.0006750831784208901,,mae_ewma < mae_no_change,,,44,H1,,forecast_mae,2146,full,,favorable,vwap_joint,COMMON,0.00043679029460157,late
+0.0008599006411331711,,conditional CAGR > 0 and both Sharpes defined and conditional > permanent,,,,H2,,conditional_cagr_and_relative_sharpe,365,full,1.960300143675152,no_concluyente,vwap_joint,conditional_vs_permanent,0.0,late
+0.000016672134953650464,,complete independent 365-day windows; both late opportunity and conditional CAGR < early,0.00736363177009669,365,0/0,H3,0.0,opportunity_mean,365/365,independent_365_day_windows,,favorable,vwap_joint,COMMON,0.0,early_vs_late

@@ -181,7 +181,7 @@ def snapshot_tools(destination):
     scripts = [
         "build_signal_sensitivity.py", "signal_sensitivity.py", "signal_sensitivity_report.py",
         "signal_sensitivity_hypotheses.py", "signal_sensitivity_docs.py", "verify_signal_sensitivity.py",
-        "signal_sensitivity_delivery.py",
+        "signal_sensitivity_delivery.py", "distribution_integrity.py",
         "run_signal_sensitivity.py", "signal_sensitivity_integrity.py", "run_historical_rules_sensitivity.py",
         "verify_rules_sensitivity_package.py", "report_historical_rules_sensitivity.py",
         "rules_sensitivity_exposure.py", "rules_sensitivity_h2.py",

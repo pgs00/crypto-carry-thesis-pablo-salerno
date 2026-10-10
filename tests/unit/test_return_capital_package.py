@@ -31,7 +31,7 @@ def historical_tables():
             ),
             (
                 "RETURN_CAPITAL_INTRADAY",
-                "entregas/entrega_4/riesgo_intradia/20260926T214118Z/paquete_20260926T220400Z",
+                "entregas/entrega_4/riesgo_intradia/20260926T214118Z/distribucion_20261010",
             ),
         )
     ]

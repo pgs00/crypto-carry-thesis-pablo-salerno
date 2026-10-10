@@ -13,6 +13,7 @@ sys.path.insert(0, str(ROOT))
 
 from crypto_carry.config import Config  # noqa: E402
 from crypto_carry.reporting import _code_identity, verify_run  # noqa: E402
+from scripts.distribution_integrity import original_manifest_path  # noqa: E402
 from scripts.execution_delays import BASES, scenario_configs, validate_variant  # noqa: E402
 from scripts.return_capital.common import read_json, write_json  # noqa: E402
 from scripts.verify_rules_sensitivity_package import sha256  # noqa: E402
@@ -22,11 +23,15 @@ PREVIOUS = ROOT / "entregas/entrega_4/senal_entradas/20260927T170230Z"
 
 def authenticate(work, data):
     refs = read_json(PREVIOUS / "autenticacion_referencias.json")
-    refs.append(dict(dependency="block2", path=str(PREVIOUS / "paquete_20260927T185305Z")))
-    refs.append(dict(dependency="block3_current", path=str(ROOT / "entregas/entrega_4/costos_capacidad/20260927T200204Z/paquete_20260927T231610Z")))
+    refs.append(dict(dependency="block2", path=str(PREVIOUS / "distribucion_20261010")))
+    refs.append(dict(dependency="block3_current", path=str(ROOT / "entregas/entrega_4/costos_capacidad/20260927T200204Z/distribucion_20261010")))
     checked = []
     for ref in refs:
         path = Path(ref["path"])
+        distribution = path.parent / "distribucion_20261010"
+        if distribution.is_dir():
+            path = distribution
+        reference_manifest = original_manifest_path(path)
         manifest = read_json(path / "manifiesto_paquete.json")
         members = manifest.get("members", manifest.get("files"))
         if isinstance(members, dict):
@@ -34,7 +39,8 @@ def authenticate(work, data):
                        for k, v in members.items()]
         errors = [m["path"] for m in members if sha256(path / m["path"]) != m["sha256"]]
         item = dict(dependency=ref["dependency"], path=str(path),
-                    manifest_sha256=sha256(path / "manifiesto_paquete.json"),
+                    manifest_sha256=sha256(reference_manifest),
+                    distribution_manifest_sha256=sha256(path / "manifiesto_paquete.json"),
                     files_checked=len(members), errors=errors, passed=not errors)
         checked.append(item)
         print(ref["dependency"], len(members), "errors", len(errors), flush=True)

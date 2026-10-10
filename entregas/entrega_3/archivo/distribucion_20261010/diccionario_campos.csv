@@ -1,0 +1,195 @@
+archivo,campo,unidad,definicion
+tablas/actividad_y_rechazos.csv,ventana,identificador,early=2022–2023; late=2025–2026; early_vs_late=comparación independiente.
+tablas/actividad_y_rechazos.csv,estrategia,identificador,conditional=condicional; permanent=permanente; COMMON=serie común; conditional_vs_permanent=comparación.
+tablas/actividad_y_rechazos.csv,run_id,identificador,Corrida persistida; no identifica una simulación nueva.
+tablas/actividad_y_rechazos.csv,simbolo,identificador,BTCUSDT o ETHUSDT; PORTFOLIO=suma de activos; listas separadas por punto y coma.
+tablas/actividad_y_rechazos.csv,tipo,categoría,exposición o diagnóstico.
+tablas/actividad_y_rechazos.csv,medida,identificador,Medida de exposición o código de filtro; ver convenciones.md para alcance y denominadores.
+tablas/actividad_y_rechazos.csv,valor,según unidad o parámetro,Valor original o derivación indicada por medida/parámetro; nunca convertir vacío en cero.
+tablas/actividad_y_rechazos.csv,unidad,texto,Unidad explícita del numerador o denominador; horas-activo suma los símbolos.
+tablas/actividad_y_rechazos.csv,denominador,evaluaciones,"Observaciones de entrada por activo y estrategia, 1095 por ventana, derivadas del resumen de auditoría; vacío para exposición."
+tablas/actividad_y_rechazos.csv,unidad_denominador,texto,Unidad explícita del numerador o denominador; horas-activo suma los símbolos.
+tablas/actividad_y_rechazos.csv,alcance,categoría,"simultaneous_filter_states, sequential_first_rejection o theoretical_not_applied; los grupos no se suman entre sí."
+tablas/anexo_variantes_ejecucion.csv,cagr,proporción/año,"Crecimiento anual compuesto, año de 365 días; dos ventanas independientes de 365 días."
+tablas/anexo_variantes_ejecucion.csv,capital_deployed_daily_avg_usdt,USDT,"Media o máximo de cortes diarios de spot valorizado+garantía segregada, sumados por activo; puede superar el capital inicial."
+tablas/anexo_variantes_ejecucion.csv,capital_deployed_daily_max_usdt,USDT,"Media o máximo de cortes diarios de spot valorizado+garantía segregada, sumados por activo; puede superar el capital inicial."
+tablas/anexo_variantes_ejecucion.csv,capital_usdt,USDT,Capital inicial independiente por estrategia y ventana.
+tablas/anexo_variantes_ejecucion.csv,closes,intentos de cierre,"Eventos de inicio de cierre del resumen de ejecución, no necesariamente ciclos completados."
+tablas/anexo_variantes_ejecucion.csv,complete_cycles,ciclos,Carry abierto completamente y luego cerrado; excluye posiciones abiertas al corte.
+tablas/anexo_variantes_ejecucion.csv,covered_asset_seconds,segundos-activo,"Duración acumulada por símbolo: carry cubierto, exposición sin cobertura o sólo polvo residual, respectivamente."
+tablas/anexo_variantes_ejecucion.csv,dust_asset_seconds,segundos-activo,"Duración acumulada por símbolo: carry cubierto, exposición sin cobertura o sólo polvo residual, respectivamente."
+tablas/anexo_variantes_ejecucion.csv,end,UTC,Fecha ISO 8601; inicio inclusivo y fin exclusivo; instante diario conserva nanosegundos.
+tablas/anexo_variantes_ejecucion.csv,failed_attempts,órdenes/intentos,Máximo entre órdenes expired/rejected/timeout y eventos attempt_failed; incluye reintentos de cierre.
+tablas/anexo_variantes_ejecucion.csv,failed_cycles,ciclos fallidos,Intentos de apertura desarmados sin llegar a carry completo.
+tablas/anexo_variantes_ejecucion.csv,fees_usdt,USDT,Comisiones con signo en P&L/anexo: costo negativo.
+tablas/anexo_variantes_ejecucion.csv,fills,fills,Eventos de ejecución; un fill no es un ciclo. native_fills cuenta eventos de NautilusTrader.
+tablas/anexo_variantes_ejecucion.csv,final_equity_usdt,USDT,"Patrimonio valorizado; incluye posiciones abiertas, sin cierre terminal ni fees hipotéticos."
+tablas/anexo_variantes_ejecucion.csv,funding_usdt,USDT,Funding neto cobrado o pagado; signo positivo representa ingreso.
+tablas/anexo_variantes_ejecucion.csv,futures_pnl_usdt,USDT,"P&L de futuros realizado más no realizado al mark de cierre, con signo."
+tablas/anexo_variantes_ejecucion.csv,liquidation_fees_usdt,USDT,Cargo de liquidación con signo; cero si no hubo cargo.
+tablas/anexo_variantes_ejecucion.csv,max_drawdown,proporción con signo,"Mínimo equity/máximo acumulado−1, incluyendo capital inicial. No es drawdown intradiario."
+tablas/anexo_variantes_ejecucion.csv,native_fills,fills,Eventos de ejecución; un fill no es un ciclo. native_fills cuenta eventos de NautilusTrader.
+tablas/anexo_variantes_ejecucion.csv,net_return,proporción,Equity final/capital inicial−1. Binary64 persistido; 1 equivale a 100%.
+tablas/anexo_variantes_ejecucion.csv,opening_attempts,intentos,"Aperturas iniciadas, incluidas las que fallaron antes de completar ambas patas."
+tablas/anexo_variantes_ejecucion.csv,openings,aperturas,Transiciones opening_complete: carry plenamente abierto; no equivale a intentos ni ciclos cerrados.
+tablas/anexo_variantes_ejecucion.csv,orders,órdenes,Órdenes enviadas; ordenes_cierre restringe a desarmes del episodio.
+tablas/anexo_variantes_ejecucion.csv,partial_fills,fills,Eventos que ejecutaron menos que la cantidad solicitada.
+tablas/anexo_variantes_ejecucion.csv,reconciliation_residual_usdt,USDT,Equity final−capital inicial−suma de componentes. Tolerancia contable 1e−8 USDT.
+tablas/anexo_variantes_ejecucion.csv,run_id,identificador,Corrida persistida; no identifica una simulación nueva.
+tablas/anexo_variantes_ejecucion.csv,scenario,identificador,"vwap_joint principal; las otras variantes son antecedentes, no una selección por rendimiento."
+tablas/anexo_variantes_ejecucion.csv,sharpe,razón,Media de retornos diarios/desvío muestral(ddof=1)×raíz(365); tasa libre de riesgo cero; vacío si indefinido.
+tablas/anexo_variantes_ejecucion.csv,slippage_informational_usdt,USDT,Atribución informativa del slippage ya contenido en los precios; no restar otra vez.
+tablas/anexo_variantes_ejecucion.csv,spot_pnl_usdt,USDT,"P&L spot con signo, incluye valorización del inventario; comisiones separadas."
+tablas/anexo_variantes_ejecucion.csv,start,UTC,Fecha ISO 8601; inicio inclusivo y fin exclusivo; instante diario conserva nanosegundos.
+tablas/anexo_variantes_ejecucion.csv,status,categoría,Estado de la corrida; complete en el subconjunto utilizado.
+tablas/anexo_variantes_ejecucion.csv,strategy,identificador,conditional=condicional; permanent=permanente; COMMON=serie común; conditional_vs_permanent=comparación.
+tablas/anexo_variantes_ejecucion.csv,unhedged_asset_seconds,segundos-activo,"Duración acumulada por símbolo: carry cubierto, exposición sin cobertura o sólo polvo residual, respectivamente."
+tablas/anexo_variantes_ejecucion.csv,window,identificador,early=2022–2023; late=2025–2026; early_vs_late=comparación independiente.
+tablas/basis_audit_summary.csv,window,identificador,early=2022–2023; late=2025–2026; early_vs_late=comparación independiente.
+tablas/basis_audit_summary.csv,symbol,identificador,BTCUSDT o ETHUSDT; PORTFOLIO=suma de activos; listas separadas por punto y coma.
+tablas/basis_audit_summary.csv,observations,observaciones,Basis: pares de mercado únicos; H1: señales válidas agregadas; H2: días; H3: días temprano/tardío.
+tablas/basis_audit_summary.csv,original_source_covered,observaciones,"Casos con fuente original, evaluados y verificados bajo la tolerancia de auditoría, respectivamente."
+tablas/basis_audit_summary.csv,evaluated,observaciones,"Casos con fuente original, evaluados y verificados bajo la tolerancia de auditoría, respectivamente."
+tablas/basis_audit_summary.csv,verified,observaciones,"Casos con fuente original, evaluados y verificados bajo la tolerancia de auditoría, respectivamente."
+tablas/basis_audit_summary.csv,discrepancies,discrepancias,Conteos por tipo de contraste de la auditoría existente; cero significa sin discrepancias bajo su tolerancia.
+tablas/basis_audit_summary.csv,decision_discrepancies,discrepancias,Conteos por tipo de contraste de la auditoría existente; cero significa sin discrepancias bajo su tolerancia.
+tablas/basis_audit_summary.csv,source_to_normalized_discrepancies,discrepancias,Conteos por tipo de contraste de la auditoría existente; cero significa sin discrepancias bajo su tolerancia.
+tablas/basis_audit_summary.csv,normalized_to_signal_discrepancies,discrepancias,Conteos por tipo de contraste de la auditoría existente; cero significa sin discrepancias bajo su tolerancia.
+tablas/basis_audit_summary.csv,classification_discrepancies,discrepancias,Conteos por tipo de contraste de la auditoría existente; cero significa sin discrepancias bajo su tolerancia.
+tablas/basis_audit_summary.csv,max_absolute_error,basis decimal,Máxima diferencia absoluta en la cadena original/normalizado/señal/decisión; tolerancia 1e−12.
+tablas/basis_audit_summary.csv,nonzero_rounding_differences,comparaciones,"Diferencias no nulas dentro de tolerancia entre representaciones; varias por observación, no discrepancias económicas."
+tablas/basis_audit_summary.csv,minimum,basis decimal,Distribución (perpetuo−spot)/spot en los instantes de decisión auditados.
+tablas/basis_audit_summary.csv,median,basis decimal,Distribución (perpetuo−spot)/spot en los instantes de decisión auditados.
+tablas/basis_audit_summary.csv,maximum,basis decimal,Distribución (perpetuo−spot)/spot en los instantes de decisión auditados.
+tablas/basis_audit_summary.csv,negative,observaciones,"Basis <0, =0, (0;0.005], [0;0.005], >0.005, respectivamente; cero sí es elegible."
+tablas/basis_audit_summary.csv,zero,observaciones,"Basis <0, =0, (0;0.005], [0;0.005], >0.005, respectivamente; cero sí es elegible."
+tablas/basis_audit_summary.csv,positive_eligible,observaciones,"Basis <0, =0, (0;0.005], [0;0.005], >0.005, respectivamente; cero sí es elegible."
+tablas/basis_audit_summary.csv,eligible_inclusive,observaciones,"Basis <0, =0, (0;0.005], [0;0.005], >0.005, respectivamente; cero sí es elegible."
+tablas/basis_audit_summary.csv,above_max,observaciones,"Basis <0, =0, (0;0.005], [0;0.005], >0.005, respectivamente; cero sí es elegible."
+tablas/cambios_metodologicos.csv,id,texto,"Matriz de cambios: identifica diseño anterior, implementación posterior, motivo, consecuencia y fuentes relativas verificables."
+tablas/cambios_metodologicos.csv,cambio,texto,"Matriz de cambios: identifica diseño anterior, implementación posterior, motivo, consecuencia y fuentes relativas verificables."
+tablas/cambios_metodologicos.csv,diseño_anterior,texto,"Matriz de cambios: identifica diseño anterior, implementación posterior, motivo, consecuencia y fuentes relativas verificables."
+tablas/cambios_metodologicos.csv,implementacion_utilizada,texto,"Matriz de cambios: identifica diseño anterior, implementación posterior, motivo, consecuencia y fuentes relativas verificables."
+tablas/cambios_metodologicos.csv,motivo,texto,"Matriz de cambios: identifica diseño anterior, implementación posterior, motivo, consecuencia y fuentes relativas verificables."
+tablas/cambios_metodologicos.csv,implicacion,texto,"Matriz de cambios: identifica diseño anterior, implementación posterior, motivo, consecuencia y fuentes relativas verificables."
+tablas/cambios_metodologicos.csv,fuente_verificable,texto,"Matriz de cambios: identifica diseño anterior, implementación posterior, motivo, consecuencia y fuentes relativas verificables."
+tablas/cobertura_funding.csv,ventana,identificador,early=2022–2023; late=2025–2026; early_vs_late=comparación independiente.
+tablas/cobertura_funding.csv,run_id,identificador,Corrida persistida; no identifica una simulación nueva.
+tablas/cobertura_funding.csv,simbolo,identificador,BTCUSDT o ETHUSDT; PORTFOLIO=suma de activos; listas separadas por punto y coma.
+tablas/cobertura_funding.csv,periodo,categoría,económico o calentamiento; el calentamiento no genera P&L.
+tablas/cobertura_funding.csv,metodo,categoría,exact=mark de settlement observado; previous_closed_1m=proxy causal; not_required_before_start=calentamiento sin mark necesario.
+tablas/cobertura_funding.csv,eventos_unicos,observaciones de mercado,"Deduplicación por (symbol,funding_time) entre estrategias; no significa cantidad de pagos."
+tablas/cobertura_funding.csv,unidad,texto,Unidad explícita del numerador o denominador; horas-activo suma los símbolos.
+tablas/episodio_2023_03_24.csv,ventana,identificador,early=2022–2023; late=2025–2026; early_vs_late=comparación independiente.
+tablas/episodio_2023_03_24.csv,estrategia,identificador,conditional=condicional; permanent=permanente; COMMON=serie común; conditional_vs_permanent=comparación.
+tablas/episodio_2023_03_24.csv,run_id,identificador,Corrida persistida; no identifica una simulación nueva.
+tablas/episodio_2023_03_24.csv,fecha_utc,UTC,Fecha ISO 8601; inicio inclusivo y fin exclusivo; instante diario conserva nanosegundos.
+tablas/episodio_2023_03_24.csv,cambio_equity_diario_usdt,USDT,Equity al cierre UTC del 24/03/2023 menos cierre del día anterior.
+tablas/episodio_2023_03_24.csv,funding_usdt,USDT,Funding neto cobrado o pagado; signo positivo representa ingreso.
+tablas/episodio_2023_03_24.csv,fees_costo_positivo_usdt,USDT,Magnitud positiva del costo de comisiones sólo en la tabla del episodio.
+tablas/episodio_2023_03_24.csv,beneficio_anual_usdt,USDT,"Equity final menos capital inicial, conservando precisión Decimal."
+tablas/episodio_2023_03_24.csv,fraccion_beneficio_anual,proporción,"Cambio de equity diario/beneficio anual, Decimal 60; vacío si beneficio anual no positivo; no es atribución causal."
+tablas/episodio_2023_03_24.csv,motivo_fraccion_no_aplicable,texto,Razón de un dato indefinido; vacío cuando corresponde un valor. ND se usa sólo en la presentación.
+tablas/episodio_2023_03_24.csv,minutos_activo_sin_cobertura,minutos-activo,Suma por símbolo de segundos sin cobertura/60; 242 puede representar 121 por cada uno de dos activos.
+tablas/episodio_2023_03_24.csv,activos_cerrados,identificador,BTCUSDT o ETHUSDT; PORTFOLIO=suma de activos; listas separadas por punto y coma.
+tablas/episodio_2023_03_24.csv,cierres_futuros_utc,UTC,"Timestamp del fill de cierre por activo, formato símbolo=ISO8601; pares separados por punto y coma."
+tablas/episodio_2023_03_24.csv,cierres_spot_utc,UTC,"Timestamp del fill de cierre por activo, formato símbolo=ISO8601; pares separados por punto y coma."
+tablas/episodio_2023_03_24.csv,precios_futuros_usdt,USDT/unidad de activo,"Precio de fill por activo, pares símbolo=precio separados por punto y coma."
+tablas/episodio_2023_03_24.csv,precios_spot_usdt,USDT/unidad de activo,"Precio de fill por activo, pares símbolo=precio separados por punto y coma."
+tablas/episodio_2023_03_24.csv,ordenes_cierre,órdenes,Órdenes enviadas; ordenes_cierre restringe a desarmes del episodio.
+tablas/episodio_2023_03_24.csv,fills,fills,Eventos de ejecución; un fill no es un ciclo. native_fills cuenta eventos de NautilusTrader.
+tablas/hipotesis.csv,comparator,proporción,H1=MAE sin cambio; H2=CAGR permanente; H3=oportunidad media temprana.
+tablas/hipotesis.csv,conditional_sharpe,razón,Media de retornos diarios/desvío muestral(ddof=1)×raíz(365); tasa libre de riesgo cero; vacío si indefinido.
+tablas/hipotesis.csv,criterion,texto,"Criterio vigente y evaluación descriptiva: favorable, contraria o no_concluyente; no es test de significancia."
+tablas/hipotesis.csv,early_conditional_cagr,proporción/año,"Crecimiento anual compuesto, año de 365 días; dos ventanas independientes de 365 días."
+tablas/hipotesis.csv,early_valid_days,días,Días válidos tempranos para H3; cobertura tardía figura en observations.
+tablas/hipotesis.csv,excluded,observaciones,H1: señales fuera del horizonte completo; H3: días excluidos temprano/tardío; vacío si no aplica.
+tablas/hipotesis.csv,hypothesis,identificador,H1=error de pronóstico; H2=CAGR y Sharpe; H3=oportunidad y rendimiento entre ventanas.
+tablas/hipotesis.csv,late_conditional_cagr,proporción/año,"Crecimiento anual compuesto, año de 365 días; dos ventanas independientes de 365 días."
+tablas/hipotesis.csv,measure,identificador,forecast_mae; conditional_cagr_and_relative_sharpe; opportunity_mean.
+tablas/hipotesis.csv,observations,observaciones,Basis: pares de mercado únicos; H1: señales válidas agregadas; H2: días; H3: días temprano/tardío.
+tablas/hipotesis.csv,period,categoría,full=ventana completa; independent_365_day_windows=H3 entre ventanas independientes.
+tablas/hipotesis.csv,permanent_sharpe,razón,Media de retornos diarios/desvío muestral(ddof=1)×raíz(365); tasa libre de riesgo cero; vacío si indefinido.
+tablas/hipotesis.csv,result,texto,"Criterio vigente y evaluación descriptiva: favorable, contraria o no_concluyente; no es test de significancia."
+tablas/hipotesis.csv,scenario,identificador,"vwap_joint principal; las otras variantes son antecedentes, no una selección por rendimiento."
+tablas/hipotesis.csv,strategy,identificador,conditional=condicional; permanent=permanente; COMMON=serie común; conditional_vs_permanent=comparación.
+tablas/hipotesis.csv,value,proporción,H1=MAE EWMA; H2=CAGR condicional; H3=oportunidad media tardía. Funding y MAE son acumulados al horizonte de 168h.
+tablas/hipotesis.csv,window,identificador,early=2022–2023; late=2025–2026; early_vs_late=comparación independiente.
+tablas/parametros_vigentes.csv,ventana,identificador,early=2022–2023; late=2025–2026; early_vs_late=comparación independiente.
+tablas/parametros_vigentes.csv,run_id,identificador,Corrida persistida; no identifica una simulación nueva.
+tablas/parametros_vigentes.csv,parametro,identificador,Nombre de la configuración efectiva; se conservan también campos heredados inactivos para el escenario.
+tablas/parametros_vigentes.csv,valor,según unidad o parámetro,Valor original o derivación indicada por medida/parámetro; nunca convertir vacío en cero.
+tablas/pnl_componentes.csv,ventana,identificador,early=2022–2023; late=2025–2026; early_vs_late=comparación independiente.
+tablas/pnl_componentes.csv,estrategia,identificador,conditional=condicional; permanent=permanente; COMMON=serie común; conditional_vs_permanent=comparación.
+tablas/pnl_componentes.csv,run_id,identificador,Corrida persistida; no identifica una simulación nueva.
+tablas/pnl_componentes.csv,inicio_utc,UTC,Fecha ISO 8601; inicio inclusivo y fin exclusivo; instante diario conserva nanosegundos.
+tablas/pnl_componentes.csv,fin_exclusivo_utc,UTC,Fecha ISO 8601; inicio inclusivo y fin exclusivo; instante diario conserva nanosegundos.
+tablas/pnl_componentes.csv,spot_usdt,USDT,"P&L spot con signo, incluye valorización del inventario; comisiones separadas."
+tablas/pnl_componentes.csv,futuros_usdt,USDT,"P&L de futuros realizado más no realizado al mark de cierre, con signo."
+tablas/pnl_componentes.csv,funding_usdt,USDT,Funding neto cobrado o pagado; signo positivo representa ingreso.
+tablas/pnl_componentes.csv,comisiones_usdt,USDT,Comisiones con signo en P&L/anexo: costo negativo.
+tablas/pnl_componentes.csv,liquidaciones_usdt,USDT,Cargo de liquidación con signo; cero si no hubo cargo.
+tablas/pnl_componentes.csv,slippage_informativo_usdt,USDT,Atribución informativa del slippage ya contenido en los precios; no restar otra vez.
+tablas/pnl_componentes.csv,precios_usdt,USDT,P&L spot más futuros. No se interpreta como funding ni basis puro.
+tablas/pnl_componentes.csv,neto_componentes_usdt,USDT,"Spot+futuros+funding+comisiones+liquidaciones, sin segunda resta del slippage."
+tablas/pnl_componentes.csv,beneficio_equity_usdt,USDT,"Equity final menos capital inicial, conservando precisión Decimal."
+tablas/pnl_componentes.csv,residuo_conciliacion_usdt,USDT,Equity final−capital inicial−suma de componentes. Tolerancia contable 1e−8 USDT.
+tablas/pnl_componentes.csv,slippage_resta_adicional,booleano,False: no se resta un segundo cargo de slippage al sumar componentes; sí está incluido en precios.
+tablas/resultados_principales.csv,ventana,identificador,early=2022–2023; late=2025–2026; early_vs_late=comparación independiente.
+tablas/resultados_principales.csv,estrategia,identificador,conditional=condicional; permanent=permanente; COMMON=serie común; conditional_vs_permanent=comparación.
+tablas/resultados_principales.csv,run_id,identificador,Corrida persistida; no identifica una simulación nueva.
+tablas/resultados_principales.csv,inicio_utc,UTC,Fecha ISO 8601; inicio inclusivo y fin exclusivo; instante diario conserva nanosegundos.
+tablas/resultados_principales.csv,fin_exclusivo_utc,UTC,Fecha ISO 8601; inicio inclusivo y fin exclusivo; instante diario conserva nanosegundos.
+tablas/resultados_principales.csv,capital_inicial_usdt,USDT,Capital inicial independiente por estrategia y ventana.
+tablas/resultados_principales.csv,equity_final_usdt,USDT,"Patrimonio valorizado; incluye posiciones abiertas, sin cierre terminal ni fees hipotéticos."
+tablas/resultados_principales.csv,retorno_neto,proporción,Equity final/capital inicial−1. Binary64 persistido; 1 equivale a 100%.
+tablas/resultados_principales.csv,cagr,proporción/año,"Crecimiento anual compuesto, año de 365 días; dos ventanas independientes de 365 días."
+tablas/resultados_principales.csv,sharpe,razón,Media de retornos diarios/desvío muestral(ddof=1)×raíz(365); tasa libre de riesgo cero; vacío si indefinido.
+tablas/resultados_principales.csv,drawdown_diario,proporción con signo,"Mínimo equity/máximo acumulado−1, incluyendo capital inicial. No es drawdown intradiario."
+tablas/resultados_principales.csv,aperturas_completas,aperturas,Transiciones opening_complete: carry plenamente abierto; no equivale a intentos ni ciclos cerrados.
+tablas/resultados_principales.csv,ciclos_cerrados,ciclos,Carry abierto completamente y luego cerrado; excluye posiciones abiertas al corte.
+tablas/resultados_principales.csv,intentos_orden_fallidos,órdenes/intentos,Máximo entre órdenes expired/rejected/timeout y eventos attempt_failed; incluye reintentos de cierre.
+tablas/resultados_principales.csv,aperturas_fallidas,ciclos fallidos,Intentos de apertura desarmados sin llegar a carry completo.
+tablas/resultados_principales.csv,intentos_apertura,intentos,"Aperturas iniciadas, incluidas las que fallaron antes de completar ambas patas."
+tablas/resultados_principales.csv,fills,fills,Eventos de ejecución; un fill no es un ciclo. native_fills cuenta eventos de NautilusTrader.
+tablas/resultados_principales.csv,fills_parciales,fills,Eventos que ejecutaron menos que la cantidad solicitada.
+tablas/resultados_principales.csv,cagr_motivo_nulo,texto,Razón de un dato indefinido; vacío cuando corresponde un valor. ND se usa sólo en la presentación.
+tablas/resultados_principales.csv,sharpe_motivo_nulo,texto,Razón de un dato indefinido; vacío cuando corresponde un valor. ND se usa sólo en la presentación.
+tablas/versiones.csv,ventana,identificador,early=2022–2023; late=2025–2026; early_vs_late=comparación independiente.
+tablas/versiones.csv,run_id,identificador,Corrida persistida; no identifica una simulación nueva.
+tablas/versiones.csv,herramienta,texto,"Herramienta y versión registrada por la corrida, no supuesta a partir del entorno actual."
+tablas/versiones.csv,version,texto,"Herramienta y versión registrada por la corrida, no supuesta a partir del entorno actual."
+datos/equity_diaria.csv,ventana,identificador,early=2022–2023; late=2025–2026; early_vs_late=comparación independiente.
+datos/equity_diaria.csv,estrategia,identificador,conditional=condicional; permanent=permanente; COMMON=serie común; conditional_vs_permanent=comparación.
+datos/equity_diaria.csv,run_id,identificador,Corrida persistida; no identifica una simulación nueva.
+datos/equity_diaria.csv,fecha_utc,UTC,Fecha ISO 8601; inicio inclusivo y fin exclusivo; instante diario conserva nanosegundos.
+datos/equity_diaria.csv,instante_utc,UTC,Fecha ISO 8601; inicio inclusivo y fin exclusivo; instante diario conserva nanosegundos.
+datos/equity_diaria.csv,time_ns,nanosegundos UTC,Timestamp entero desde Unix epoch; no convertir a punto flotante.
+datos/equity_diaria.csv,equity_usdt,USDT,"Patrimonio valorizado; incluye posiciones abiertas, sin cierre terminal ni fees hipotéticos."
+datos/equity_diaria.csv,retorno_diario_decimal,proporción/día,"Equity_t/equity_anterior−1, Decimal 60. Primer denominador=capital inicial."
+datos/equity_diaria.csv,retorno_diario_metricas,proporción/día,"Mismo cociente en binary64, convención de las métricas persistidas; diferencias de representación no se ocultan."
+datos/equity_diaria.csv,capital_inicial_usdt,USDT,Capital inicial independiente por estrategia y ventana.
+fuentes_de_cifras.csv,id_cifra,trazabilidad,"Identificador, destino, selección, valor, origen, campo y fórmula de la cifra; rutas relativas a la raíz del paquete."
+fuentes_de_cifras.csv,archivo_presentado,trazabilidad,"Identificador, destino, selección, valor, origen, campo y fórmula de la cifra; rutas relativas a la raíz del paquete."
+fuentes_de_cifras.csv,seleccion_presentada,trazabilidad,"Identificador, destino, selección, valor, origen, campo y fórmula de la cifra; rutas relativas a la raíz del paquete."
+fuentes_de_cifras.csv,campo_presentado,trazabilidad,"Identificador, destino, selección, valor, origen, campo y fórmula de la cifra; rutas relativas a la raíz del paquete."
+fuentes_de_cifras.csv,valor_original,trazabilidad,"Identificador, destino, selección, valor, origen, campo y fórmula de la cifra; rutas relativas a la raíz del paquete."
+fuentes_de_cifras.csv,unidad,texto,Unidad explícita del numerador o denominador; horas-activo suma los símbolos.
+fuentes_de_cifras.csv,archivo_fuente,trazabilidad,"Identificador, destino, selección, valor, origen, campo y fórmula de la cifra; rutas relativas a la raíz del paquete."
+fuentes_de_cifras.csv,campo_fuente,trazabilidad,"Identificador, destino, selección, valor, origen, campo y fórmula de la cifra; rutas relativas a la raíz del paquete."
+fuentes_de_cifras.csv,filtro_fuente,trazabilidad,"Identificador, destino, selección, valor, origen, campo y fórmula de la cifra; rutas relativas a la raíz del paquete."
+fuentes_de_cifras.csv,calculo,trazabilidad,"Identificador, destino, selección, valor, origen, campo y fórmula de la cifra; rutas relativas a la raíz del paquete."
+fuentes_de_cifras.csv,run_id,identificador,Corrida persistida; no identifica una simulación nueva.
+verificaciones_numericas.csv,control,control,Comparación reproducida; diferencia absoluta y tolerancia en unidades del campo; aprobado=True sólo si diferencia<=tolerancia.
+verificaciones_numericas.csv,contexto,control,Comparación reproducida; diferencia absoluta y tolerancia en unidades del campo; aprobado=True sólo si diferencia<=tolerancia.
+verificaciones_numericas.csv,obtenido,control,Comparación reproducida; diferencia absoluta y tolerancia en unidades del campo; aprobado=True sólo si diferencia<=tolerancia.
+verificaciones_numericas.csv,esperado,control,Comparación reproducida; diferencia absoluta y tolerancia en unidades del campo; aprobado=True sólo si diferencia<=tolerancia.
+verificaciones_numericas.csv,diferencia,control,Comparación reproducida; diferencia absoluta y tolerancia en unidades del campo; aprobado=True sólo si diferencia<=tolerancia.
+verificaciones_numericas.csv,tolerancia,control,Comparación reproducida; diferencia absoluta y tolerancia en unidades del campo; aprobado=True sólo si diferencia<=tolerancia.
+verificaciones_numericas.csv,aprobado,control,Comparación reproducida; diferencia absoluta y tolerancia en unidades del campo; aprobado=True sólo si diferencia<=tolerancia.
+antecedentes/bibliografia_consolidada.csv,id,texto,"Matriz de cambios: identifica diseño anterior, implementación posterior, motivo, consecuencia y fuentes relativas verificables."
+antecedentes/bibliografia_consolidada.csv,referencia,texto bibliográfico,Referencia heredada y párrafo E1/E2; no se verificó ni amplió bibliografía mediante investigación externa.
+antecedentes/bibliografia_consolidada.csv,url,texto bibliográfico,Referencia heredada y párrafo E1/E2; no se verificó ni amplió bibliografía mediante investigación externa.
+antecedentes/bibliografia_consolidada.csv,procedencia_entrega_2,texto bibliográfico,Referencia heredada y párrafo E1/E2; no se verificó ni amplió bibliografía mediante investigación externa.
+antecedentes/bibliografia_consolidada.csv,procedencia_entrega_1,texto bibliográfico,Referencia heredada y párrafo E1/E2; no se verificó ni amplió bibliografía mediante investigación externa.
+antecedentes/bibliografia_consolidada.csv,nota_consolidacion,texto bibliográfico,Referencia heredada y párrafo E1/E2; no se verificó ni amplió bibliografía mediante investigación externa.

@@ -1,0 +1,148 @@
+# Protocolo del estudio
+
+La revisión vigente de ejecución descrita en la metodología y las configuraciones efectivas
+reemplaza el contrato `minute_open` por `next_minute_vwap` con sizing conjunto
+en el escenario principal. Sus datos, cronología y comparación controlada se
+detallan en la [metodología](methodology.md). No se descargan trades ni se usa
+la investigación previa con trades como dependencia. Se conservan las ventanas,
+el capital y los supuestos económicos aprobados que siguen abajo.
+
+## Referencia anterior y supuestos conservados
+
+El 18/09/2026 el usuario aprobó dos ventanas anuales independientes, ejecución
+por minuto y contraste con trades en una muestra corta. El objetivo operativo
+es terminar el backtesting y el informe en 48 horas.
+
+| Ventana | Inicio UTC incluido | Fin UTC excluido | Capital inicial por estrategia |
+|---|---|---|---:|
+| 2022–2023 | 01/09/2022 | 01/09/2023 | 10.000 USDT |
+| 2025–2026 | 01/09/2025 | 01/09/2026 | 10.000 USDT |
+
+Ambas carteras operan BTCUSDT y ETHUSDT. No se conectan las curvas de capital a
+través de los años omitidos ni se heredan posiciones entre ventanas. Esta
+comparación descriptiva sustituye el horizonte continuo original; no identifica
+por sí sola una causa de diferencias entre regímenes. Las fechas se eligieron
+antes de observar resultados económicos de estas corridas.
+
+## Supuestos económicos aprobados
+
+- Conservar cada mark de cobro exacto disponible. Cuando falta, utilizar el
+  cierre del minuto de mark inmediatamente anterior disponible al cobro.
+  Un candidato ausente, atrasado, futuro o inválido impide ejecutar ese cobro.
+  Los datos originales permanecen intactos.
+- El calentamiento no requiere mark de cobro porque todavía no hay posiciones;
+  sí requiere tasas, intervalos y calendario independiente verificados.
+- Spot taker 0,10 %, futuros taker 0,05 %, sin BNB, referidos ni promociones.
+  Slippage de 1 bp por orden. Son costos prescritos, no una reconstrucción
+  exacta de tarifas históricas.
+- Filtros y márgenes están versionados en
+  [prescribed.py](../src/crypto_carry/data/prescribed.py) y se exportan a
+  `research_assumptions.json`. Mantenimiento inicial BTC 0,4 % y ETH 0,65 %;
+  liquidación prescrita de 1,25 % del nocional ejecutado más taker.
+- Se conservan el apalancamiento 2, el objetivo spot de 30 % por activo, las
+  señales con 60 segundos de demora y el horizonte de 168 horas.
+
+Los informes del escenario llevan `data_kind = "historical_assumptions"`.
+Incluyen configuración, hashes, reglas y auditoría de marks exactos/proxies.
+La ejecución `minute_open` asigna el precio de apertura al inicio del minuto.
+El instante del primer trade dentro de esa vela se desconoce. Sólo hay precio
+ejecutable si la vela registra operaciones; cada fill identifica la vela de
+origen, no un trade individual. La orden espera una apertura estrictamente
+posterior a su envío y anterior al vencimiento de **120 segundos**.
+La demora de envío entre patas sigue siendo de un segundo, pero el precio de
+ejecución llega con la siguiente apertura disponible. El volumen se publica
+sólo tras cerrar la vela; la participación sobre el último minuto cerrado es
+una aproximación del volumen móvil de 60 segundos. Riesgo y valoración usan el
+último mark cerrado, sin reconstruir un recorrido intraminuto de liquidación.
+
+## Datos y validación conservados
+
+La [guía de descarga](descarga_d.md) contiene el único comando vigente para D:.
+La adquisición terminó el 18/09/2026: 106/106 archivos/respuestas verificados por
+ventana, sin errores. La validación detectó tres días ausentes de los mensuales
+de mark (02/10/2022, 24/02/2023 y 29/06/2026): los diarios oficiales contienen
+los 1.440 minutos de cada día y activo. Se añaden como fuentes con hashes,
+conservando los mensuales. La cobertura conjunta se verifica antes de correr.
+
+El 24/03/2023 Binance suspendió spot desde las 11:27 hasta las 14:00 UTC,
+según su [comunicado explicativo](https://www.binance.com/en/blog/from-our-ceo/6789340645608890113).
+Los archivos tienen 80 minutos ausentes y una vela vacía que termina antes de
+tiempo dentro de esa suspensión. Los minutos completos desde 11:28 hasta
+14:00 se reconocen como cierre del mercado para la auditoría de cobertura.
+No se crean observaciones ni precios ejecutables, ni se entrega ese calendario
+futuro a las señales. La inactividad y las órdenes vencidas siguen su lógica normal.
+
+La muestra original de C: conserva cuatro ZIP de trades del 01/01/2024,
+57.062.373 bytes, con SHA-256 verificado. Su día completo presenta saltos de
+IDs en futuros. El piloto certificado utiliza únicamente
+`[2024-01-01T00:00, 00:10)`: 61.393 trades por cartera, seis fills nativos por
+cartera y diferencia contable cero. Esa muestra breve no valida renovaciones
+semanales ni representatividad de ambos años.
+
+El [contraste de trades y minutos](../data/research/research-scenario-20260918/tick-minute-comparison.json)
+usa esos mismos trades: seis fills por cartera en ambos modelos y conciliación
+cero. El equity terminal es 9.985,5135 USDT con trades y 9.988,4700 USDT con
+aperturas por minuto, una diferencia de 2,9564 USDT sobre 10.000 iniciales.
+El control con trades y timeout de 120 segundos conserva el resultado original.
+Esta diferencia puntual no estima el error anual ni demuestra rentabilidad.
+
+La inspección posterior de los resultados motivó un segundo contraste acotado:
+trades ETHUSDT spot y futuros del 24/03/2023, con SHA-256 y CRC oficiales.
+El diagnóstico documenta la suspensión y la sensibilidad del precio de
+reapertura, que concentra buena parte de la ganancia del baseline temprano.
+Es una verificación posterior al resultado, identificada como tal; no cambia
+los parámetros predeclarados ni sustituye el baseline. Los números y sus
+límites están en [avance](progress.md).
+
+El resolver se contrastó con 10.224 eventos del horizonte original:
+6.214 marks exactos y 4.010 proxies causales. Esas cifras **no son los conteos
+de las dos nuevas ventanas** ni prueban igualdad entre proxy y mark ausente.
+Las fuentes y verificaciones quedan en `data/research/research-scenario-20260918`.
+
+Para reproducir el piloto existente desde C::
+
+```powershell
+& '.\.venv\Scripts\python.exe' data/research/research-scenario-20260918/prepare_pilot.py
+& '.\.venv\Scripts\python.exe' -u -m crypto_carry backtest --config data/research/research-scenario-20260918/pilot.toml
+& '.\.venv\Scripts\python.exe' data/research/research-scenario-20260918/verify_funding_proxy.py
+& '.\.venv\Scripts\python.exe' data/research/research-scenario-20260918/compare_tick_minute.py
+```
+
+Para reproducir las auditorías de las corridas anuales y de la suspensión:
+
+```powershell
+& '.\.venv\Scripts\python.exe' data/research/minute-download-20260918/verify_annual_economics.py --output 'D:\Backtesting\outputs\annual-audit-recheck.json'
+& '.\.venv\Scripts\python.exe' data/research/minute-download-20260918/verify_outage_trades.py --report 'D:\Backtesting\outputs\outage-trades-recheck.json'
+```
+
+La segunda auditoría reutiliza los ZIP verificados en
+`D:\Backtesting\data\minutes\validation_20230324`; si faltan, descarga sólo esos
+dos archivos (49,14 MB en total). El conjunto de datos por minuto y esta muestra
+ocupa aproximadamente 692,45 MB, dentro del presupuesto de 20 GB.
+Estos comandos escriben comprobaciones nuevas en D: y conservan la evidencia
+canónica incluida en el repositorio.
+
+## Ejecución y verificación
+
+La cobertura de ambas ventanas está completa bajo las convenciones anteriores.
+Se verificaron los pilotos de catorce días, el contraste con trades y las
+pruebas de cobros, renovaciones a 168 horas, riesgo y checkpoints. La suite
+completa pasó 302 pruebas. Las dos corridas anuales ya terminaron: 310,14 y
+268,14 segundos, con un pico de memoria de aproximadamente 1,63 GB.
+
+Una auditoría independiente reconstruyó el equity final de las cuatro carteras
+y verificó los 106 fills contra sus precios fuente, costos y tiempos de orden.
+Los resultados y enlaces a la evidencia están en [avance](progress.md).
+Las siete sensibilidades priorizadas —costos 2x/3x, fee Futures 0,04 %,
+proxy ±10 bps, mantenimiento 2x y cargo de liquidación 3 %— terminaron para
+ambas ventanas. Los índices y sus corridas vinculadas están verificados.
+El informe conjunto reúne todos estos escenarios, H1, H2 y la comparación
+descriptiva de las dos ventanas. Las dimensiones adicionales del motor,
+incluyendo AUM, slippage aislado y demoras, quedan identificadas como no
+ejecutadas en este conjunto; no se presentan como controles ya completados.
+
+El stress positivo del proxy empeora el flujo del short:
+`proxy × (1 − signo(tasa) × bps / 10000)`. ±10 bps es una sensibilidad,
+no una cota garantizada. Los ajustes posteriores al baseline se identifican
+como exploratorios; no se elige retrospectivamente la variante más rentable
+como resultado principal.

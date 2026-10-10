@@ -15,7 +15,9 @@ identifican las fuentes; leerlos no equivale a volver a verificarlas.
 
 ## 2. Verificación offline de evidencia compacta
 
-Los comandos siguientes usan los verificadores congelados de cada paquete.
+Los comandos siguientes usan los verificadores incluidos en las distribuciones
+vigentes. Sus adaptaciones documentales comprueban la identidad nueva y conservan
+los controles científicos; no requieren los prompts retirados ni Git.
 Requieren **Python 3.14** y las dependencias de [pyproject.toml](../pyproject.toml)
 y [uv.lock](../uv.lock); el entorno local de referencia usa Python 3.14.3
 en Windows. En Linux se comprobó una diferencia de últimos dígitos que hace
@@ -74,7 +76,10 @@ BASE requiere su padre completo. Riesgo autentica los linajes suministrados,
 pero el modo compacto no recalcula extremos globales ni precios por minuto.
 B1 capital, sin dependencias adicionales, comprueba el paquete interno; su
 [guía][capital-guia] documenta el modo con padre, corrección, riesgo y E3.
-SOFR recalcula la cuenta hipotética y autentica B1 capital. B2–B5 recomputan
+SOFR recalcula la cuenta hipotética y comprueba la distribución B1 capital
+indicada, conservando por separado la identidad histórica de su dependencia.
+Ese control no se presenta como comprobación íntegra del sello original retirado.
+B2–B5 recomputan
 lo declarado en cada guía desde extractos y agregados; no vuelven a leer
 toda la historia de mercado. B6 vuelve a calcular también las estadísticas
 del bootstrap desde inputs compactos, sin simular carteras. Las herramientas
@@ -101,8 +106,7 @@ if (Test-Path -LiteralPath $presentacion) { throw 'Elegir una salida nueva' }
 & $py -B -X utf8 -m scripts.publish_thesis --output $presentacion
 ```
 
-El paquete continuo tiene miembros directamente en la raíz del ZIP. El ZIP v2
-histórico contiene el subdirectorio `paquete_redaccion`. Autenticar cada ZIP
+El paquete continuo tiene miembros directamente en la raíz del ZIP. Autenticarlo
 contra su sidecar conservado **antes** de extraer. No volver a crear checksums:
 
 ```powershell
@@ -118,18 +122,16 @@ Expand-AuthenticatedE3 (Join-Path $repo 'entregas/entrega_3/paquete_actualizacio
 Push-Location $e3
 try { & $py -I -S -B -X utf8 verificar.py } finally { Pop-Location }
 
-$v2destino = Join-Path $env:TEMP ('e3_v2_' + (Get-Date -Format 'yyyyMMddTHHmmss'))
-Expand-AuthenticatedE3 (Join-Path $repo 'entregas/entrega_3/archivo/paquete_redaccion_entrega_3_v2.zip') $v2destino
-$v2 = Join-Path $v2destino 'paquete_redaccion'
+$v2 = Join-Path $repo 'entregas/entrega_3/archivo/distribucion_20261010'
 & $py -B -X utf8 "$v2/scripts/verificar_paquete.py"
 ```
 
-Comprobar los códigos de salida; SHA-256 autentica el ZIP preservado y los
-verificadores internos comprueban inventario/evidencia. Las carpetas extraídas
-son copias de trabajo externas; no editar sus miembros para fabricar un pase.
-Para los comandos históricos de `reproducir.py`, `diccionario.py` o
-`preparar_paquete.py`, usar las herramientas incluidas en `$v2`, sus dependencias
-y destinos nuevos; no reconstruir ni sobrescribir los ZIP canónicos.
+Comprobar los códigos de salida; SHA-256 autentica el ZIP continuo preservado y
+los verificadores internos comprueban inventario/evidencia. La distribución
+histórica E3 se comprueba directamente, sin extraer los ZIP retirados. Su
+[LEEME](../entregas/entrega_3/archivo/distribucion_20261010/LEEME.md) documenta
+herramientas, fuentes y límites. Los scripts históricos de construcción conservan
+su contexto original y no deben sobrescribir ninguna distribución.
 
 La corrección BASE recibe una **ruta de directorio** mediante `--e3-reference`,
 no el ZIP. Después de la extracción autenticada anterior, el ejemplo editorial
@@ -192,18 +194,21 @@ activos. No verifica economía ni todos los documentos históricos o sellados.
 
 ## Recuperación de antecedentes
 
-Los originales anteriores a esta distribución se conservan en
-`../Backtesting_antecedentes/distribucion_20261010/originales/`, con inventario
-SHA-256 externo y recuperación comprobada. El commit de partida es
-`3c329de6970f0f2b361d162fb03ad91b48fa501f`. Recuperar siempre en destinos nuevos;
-los constructores históricos requieren su contexto y herramientas originales.
-Los antecedentes que ya no estaban en ese commit se recuperan de
+El respaldo completo previo a esta limpieza se conserva en
+`../Backtesting_antecedentes/limpieza_final_20261010/originales/`, con inventario
+SHA-256 externo y recuperación comprobada. Los paquetes originales mantienen
+sus bytes, manifiestos y certificados históricos. Su conservación no constituye
+una nueva validación. Las distribuciones actuales incluyen herramientas y fuentes
+compactas para su comprobación, con las dependencias explícitas indicadas arriba.
+Recuperar originales siempre en destinos nuevos; los constructores históricos
+requieren su contexto y herramientas originales. Los antecedentes retirados antes
+de este respaldo se recuperan de
 `b5bf5909c1793c684a0acd110b6fab2e90718cca` o de los respaldos anteriores
 `../Backtesting_antecedentes/segunda_limpieza_20261010/` y
 `../Backtesting_antecedentes/limpieza_20261010/bytes_git/`.
-Los protocolos y cadenas de evidencia que exigen documentos internos conservan
-esos miembros sin cambios. La presentación continua E3 y SOFR tienen
-distribuciones documentales nuevas, identificadas en sus respectivos README.
+Los originales que necesitan documentos internos se recuperan completos desde
+esos respaldos. La presentación continua E3, el archivo histórico E3 y los bloques
+Riesgo/B1–B6 tienen distribuciones documentales identificadas en sus índices.
 
-[capital-guia]: ../entregas/entrega_4/retorno_capital/20260927T143928Z/paquete_20260927T152732Z/README.md
-[b5-limites]: ../entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z/reproducibilidad.md
+[capital-guia]: ../entregas/entrega_4/retorno_capital/20260927T143928Z/distribucion_20261010/README.md
+[b5-limites]: ../entregas/entrega_4/estres_contrafactual/20260930T214617Z/distribucion_20261010/reproducibilidad.md

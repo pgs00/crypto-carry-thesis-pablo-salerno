@@ -16,7 +16,7 @@ El índice `robustness-95178f7896fa4926` y sus subcorridas son inmutables y prec
 
 ## Decisiones de implementación
 
-- Se mantuvo el trabajo en la rama existente y en el entorno con los datos locales; no se creó otro checkout ni se publicó. La decisión previa del usuario sobre GitHub ya estaba resuelta.
+- La implementación se verificó en el entorno local, sin publicación de los cambios.
 - Se usaron scripts PowerShell equivalentes para los artefactos de revisión porque el entorno es Windows.
 - Se añadió una configuración de investigación para D: con el presupuesto de 800 GB previamente autorizado, manteniendo el archivo de investigación de 20 GB para la muestra.
 - Se utilizó una muestra observada de diez minutos con continuidad comprobada. Las discontinuidades de IDs del día completo se conservan como bloqueos y no se convierten en operaciones inventadas.
@@ -24,6 +24,6 @@ El índice `robustness-95178f7896fa4926` y sus subcorridas son inmutables y prec
 
 ## Pendientes externos a la implementación aprobada
 
-La muestra corta no sustituye la validación económica extensa. Faltan completar y normalizar la descarga, resolver discontinuidades de IDs y los 15 minutos de mark pendientes señalados por la auditoría, medir recursos con una muestra más amplia y ejecutar la ventana completa con sus sensibilidades. Los dos tipos de incidencia siguen bloqueando la certificación de cobertura. No hace falta una nueva confirmación del usuario para los supuestos ya implementados.
+La muestra corta no sustituye la validación económica extensa. Faltan completar y normalizar la descarga, resolver discontinuidades de IDs y los 15 minutos de mark pendientes señalados por la auditoría, medir recursos con una muestra más amplia y ejecutar la ventana completa con sus sensibilidades. Los dos tipos de incidencia siguen bloqueando la certificación de cobertura.
 
 Comandos y parámetros: [escenario de investigación](../escenario_investigacion.md).

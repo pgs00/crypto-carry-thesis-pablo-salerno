@@ -41,7 +41,10 @@ def verify(package, previous=None):
     if previous is not None:
         previous = Path(previous).resolve()
         check_manifest(previous)
-        if sha256(previous / "manifiesto_paquete.json") != PREVIOUS_HASH:
+        from scripts.distribution_integrity import verify_distribution
+        distribution = verify_distribution(previous)
+        previous_identity = previous / ("procedencia/manifiesto_original.json" if distribution else "manifiesto_paquete.json")
+        if sha256(previous_identity) != PREVIOUS_HASH:
             raise ValueError("Explicit predecessor is not the approved seal")
         for name in COPY_TABLES:
             if sha256(previous / "tablas" / name) != sha256(package / "reutilizado" / name):
@@ -52,7 +55,9 @@ def verify(package, previous=None):
         manifest_sha256=sha256(package / "manifiesto_paquete.json"),
         members=len(manifest["members"]),
         previous_manifest_sha256=PREVIOUS_HASH,
-        previous_entire_seal_checked=previous is not None,
+        previous_entire_seal_checked=previous is not None and not bool(distribution),
+        previous_distribution_checked=bool(distribution) if previous is not None else False,
+        previous_distribution_manifest_sha256=sha256(previous / "manifiesto_paquete.json") if previous is not None and distribution else None,
         sources_read_only=True,
         network_used=False,
         limits="Shared SOFR postprocessing plus external Index checks; prior engine and diagnostics not rerun",

@@ -7,17 +7,28 @@ from pathlib import Path
 
 import pytest
 
+from scripts.distribution_integrity import (
+    DERIVATION,
+    ORIGINAL,
+    ORIGINAL_SIDECAR,
+    verify_distribution,
+)
 from scripts.stress_counterfactual_contract import load_spec
 
 APPROVED = Path(__file__).resolve().parents[2] / (
-    "entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z")
+    "entregas/entrega_4/estres_contrafactual/20260930T214617Z/distribucion_20261010")
 
 
 @pytest.fixture
 def approval_copy(tmp_path):
+    verify_distribution(APPROVED)
     approval = json.loads((APPROVED / "aprobacion_recibida.json").read_text(encoding="utf-8"))
-    for name in (*approval["approved_files_sha256"], "aprobacion_recibida.json",
-                 "identidad_propuesta.json"):
+    derivation = json.loads((APPROVED / DERIVATION).read_text(encoding="utf-8"))
+    omitted = {row["path"] for row in derivation["omitted"]}
+    assert set(approval["approved_files_sha256"]) & omitted == {"plan_ejecucion.md"}
+    retained = [name for name in approval["approved_files_sha256"] if name not in omitted]
+    for name in (*retained, "aprobacion_recibida.json", "identidad_propuesta.json",
+                 DERIVATION, ORIGINAL, ORIGINAL_SIDECAR):
         destination = tmp_path / name
         destination.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(APPROVED / name, destination)
@@ -37,7 +48,7 @@ def test_changed_approved_calendar_is_rejected_before_running(approval_copy):
     original = path.read_bytes()
     path.write_bytes(original.replace(b"1673683380000000000", b"1673683320000000000", 1))
     assert path.read_bytes() != original
-    with pytest.raises(ValueError, match="approved"):
+    with pytest.raises(ValueError, match="Distribution member changed.*calendario_shocks_propuesto"):
         load_spec(approval_copy, "SH_P90")
 
 

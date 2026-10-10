@@ -80,3 +80,8 @@
 
 # B6's verified seal covers mixed LF/CRLF bytes. Preserve this exact publication.
 /entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/** -text whitespace=cr-at-eol
+
+# Documentary distributions retain the original scientific bytes, including mixed EOL.
+/entregas/entrega_3/archivo/distribucion_20261010/** -text whitespace=cr-at-eol
+/entregas/entrega_3/archivo/distribucion_20261010/figuras/*.svg whitespace=-blank-at-eol,cr-at-eol
+/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/distribucion_20261010/** -text whitespace=cr-at-eol

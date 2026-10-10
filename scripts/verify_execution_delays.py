@@ -16,6 +16,7 @@ sys.path.insert(0, str(ROOT/"src"))
 
 from crypto_carry.config import DAY, Config, iso  # noqa: E402
 from scripts.build_execution_delays import FILES  # noqa: E402
+from scripts.distribution_integrity import verify_distribution, verify_frozen_document  # noqa: E402
 from scripts.execution_delays import BASES, CHANGES, validate_variant  # noqa: E402
 from scripts.execution_delays_incidents import (  # noqa: E402
     attach_cases,
@@ -221,6 +222,7 @@ def validate_transfer_population(rows,runs):
 
 def verify(package, *, unsealed=False, data_root=None):
     package = Path(package).resolve()
+    verify_distribution(package)
     manifest_file = package/"manifiesto_paquete.json"
     members_checked = 0
     if not unsealed:
@@ -272,8 +274,7 @@ def verify(package, *, unsealed=False, data_root=None):
             if sha256(frozen) != wanted:
                 raise ValueError("Frozen runner source changed: "+name)
         for name, wanted in protocol["package_files"].items():
-            if sha256(safe_path(package/"documentos", name)) != wanted:
-                raise ValueError("Frozen protocol input changed: "+name)
+            verify_frozen_document(package, "documentos/" + name, wanted)
     h1_observations=verify_reused_hypotheses(package)
     controls=verify_controls(package,base,inputs,protocols)
     metrics = read_csv(package/"tablas/metricas.csv")

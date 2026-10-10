@@ -50,7 +50,7 @@ PERIOD_BOUNDS = {
     "2022-2023": ("2022-01-01", "2024-01-01"),
     "2024+": ("2024-01-01", "2026-09-01"),
 }
-B5 = Path("entregas/entrega_4/estres_contrafactual/20260930T214617Z/paquete_20261001T211248Z")
+B5 = Path("entregas/entrega_4/estres_contrafactual/20260930T214617Z/distribucion_20261010")
 B5_MANIFEST_SHA = "091fe38bba57ad5be62275cabb03579b1c47f2d96784ed7c5e2ce6377467a8de"
 POINT_ATOL = 2e-10
 SCALAR_ATOL = 2e-11
@@ -785,11 +785,12 @@ def verify_csv(path, expected):
 def authenticate_and_load(candidate, project):
     """Authenticate just consumed B5 members and original BASE manifest outputs, once."""
     package = project / B5
-    seal_path = package / "manifiesto_paquete.json"
+    # Authenticate original source bytes, not the new documentary seal.
+    seal_path = package / "procedencia/manifiesto_original.json"
     seal_sha = sha256(seal_path)
     if (
         seal_sha != B5_MANIFEST_SHA
-        or (package / "manifiesto_paquete.sha256").read_text().strip() != seal_sha
+        or (package / "procedencia/manifiesto_original.sha256").read_text().strip() != seal_sha
     ):
         raise ValueError("B5 authenticated reference manifest identity changed")
     seal = read_json(seal_path)
@@ -1136,7 +1137,7 @@ def _reuse_completed(candidate, project):
     state = read_json(path)
     if state["code_identity"] != _build_code_identity(project):
         return None
-    if sha256(project / B5 / "manifiesto_paquete.json") != B5_MANIFEST_SHA:
+    if sha256(project / B5 / "procedencia/manifiesto_original.json") != B5_MANIFEST_SHA:
         raise ValueError("B5 source manifest changed before bootstrap reuse")
     for row in state["outputs"]:
         path = candidate / row["path"]

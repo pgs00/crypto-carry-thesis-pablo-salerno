@@ -1,0 +1,96 @@
+{
+  "schema": "documentary_distribution_v1",
+  "distribution_id": "distribucion_20261010",
+  "created_at": "2026-10-10T22:00:01.812188+00:00",
+  "original_manifest_sha256": "db68d839aa5837db72314b4f3de5509ecff283cc34d13a36e3c4f9d30298e1fb",
+  "original_package": "paquete_20260927T231610Z",
+  "baseline_replays": 0,
+  "omitted": [
+    {
+      "path": "documentos/encargo_usuario.md",
+      "bytes": 29076,
+      "sha256": "8b99eff5066bd67dc8415660b97aa66b645de3a59609569cd40ab093babdb90b",
+      "reason": "Documento operativo o conversacional; especificación científica preservada descriptivamente."
+    },
+    {
+      "path": "documentos/plan.md",
+      "bytes": 2500,
+      "sha256": "2a8904ea7ddb5aa4152b3614b7d9af553826c622751583205350df4e76f26038",
+      "reason": "Documento operativo o conversacional; especificación científica preservada descriptivamente."
+    },
+    {
+      "path": "documentos/progreso.md",
+      "bytes": 9315,
+      "sha256": "5084d23936072456690030b9174fce1aa72e089b571847c54deb9aefc44ed7eb",
+      "reason": "Documento operativo o conversacional; especificación científica preservada descriptivamente."
+    }
+  ],
+  "adapted": [
+    {
+      "path": "README.md",
+      "original_sha256": "83b39acc93eaa52c2e3b53bfb77834d72d06cd9b7d867d38cb0c183109f1f488",
+      "original_bytes": 3222,
+      "sha256": "c66cb50ccc995eab8f1ac2b091671525d691759919efbef90535a98fb3bf7b2d",
+      "bytes": 4791,
+      "reason": "Sólo enlaces, introducción documental o validación de empaquetado; ciencia y cifras conservadas."
+    },
+    {
+      "path": "documentos/protocolo.md",
+      "original_sha256": "d8d3139335ec1f78fc489939722999f58f48ac17b7b2c37f439220d9d016f79f",
+      "original_bytes": 6515,
+      "sha256": "b9045b1b29ae12da9278cc51839e4452248b986a2d082416405859be9873ba08",
+      "bytes": 6596,
+      "reason": "Sólo enlaces, introducción documental o validación de empaquetado; ciencia y cifras conservadas."
+    },
+    {
+      "path": "herramientas/scripts/verify_cost_capacity.py",
+      "original_sha256": "93fd2e5e34795a5329ad85e7da04a66af7f73ceb21a2ca603bf342614f516ac3",
+      "original_bytes": 13642,
+      "sha256": "6c08bb7f0fd054ec48d9c403e4782951b682c16eeb7e27ef9aef00ae20c2b619",
+      "bytes": 13705,
+      "reason": "Sólo enlaces, introducción documental o validación de empaquetado; ciencia y cifras conservadas."
+    },
+    {
+      "path": "reporte.html",
+      "original_sha256": "7ed18210949bce2c38d5168394663c9241c79db0a0e3c77248b1dd12cbc7077c",
+      "original_bytes": 41953,
+      "sha256": "424d9581b8ec4caf35010f487edb97f8c42bb8477ab8a60d338c1ace45649204",
+      "bytes": 41705,
+      "reason": "Sólo enlaces, introducción documental o validación de empaquetado; ciencia y cifras conservadas."
+    },
+    {
+      "path": "reporte.md",
+      "original_sha256": "2a6717d842ebe2f98df8e29309c126331bed7cd15f62b0a69ea665cdc5e2c024",
+      "original_bytes": 29113,
+      "sha256": "82819de8561fe9166c7bc1301cbc3072e39ac64ed1f7ac8848be9ca5d8021617",
+      "bytes": 28814,
+      "reason": "Sólo enlaces, introducción documental o validación de empaquetado; ciencia y cifras conservadas."
+    }
+  ],
+  "added": [
+    {
+      "path": "herramientas/scripts/distribution_integrity.py",
+      "sha256": "fa454335fa04dd267623e21d6c3e19ffeca687322dce26e90f52f6f41301d84a",
+      "bytes": 10015,
+      "reason": "Procedencia, protocolo descriptivo o validación portable de derivación."
+    },
+    {
+      "path": "procedencia/manifiesto_original.json",
+      "sha256": "db68d839aa5837db72314b4f3de5509ecff283cc34d13a36e3c4f9d30298e1fb",
+      "bytes": 166284,
+      "reason": "Procedencia, protocolo descriptivo o validación portable de derivación."
+    },
+    {
+      "path": "procedencia/manifiesto_original.sha256",
+      "sha256": "ec8c08b86101b446897a46ea094ad30d2828c5f95576908b8b6463f04239685d",
+      "bytes": 66,
+      "reason": "Procedencia, protocolo descriptivo o validación portable de derivación."
+    },
+    {
+      "path": "protocolo_distribucion.md",
+      "sha256": "7d1563b2df9ce5b548add307b3f29de860d6b319284d5647df41987dfdf9662e",
+      "bytes": 8886,
+      "reason": "Procedencia, protocolo descriptivo o validación portable de derivación."
+    }
+  ]
+}

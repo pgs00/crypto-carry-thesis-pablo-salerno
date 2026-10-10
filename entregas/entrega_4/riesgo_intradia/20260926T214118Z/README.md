@@ -4,10 +4,15 @@ Bloque ejecutado y verificado sobre las cuatro carteras existentes BASE/MARGEN_2
 
 ## Productos
 
-- [Reporte HTML](paquete_20260926T220400Z/reporte.html) y [Markdown](paquete_20260926T220400Z/reporte.md).
-- [Catálogo completo de 449 episodios](paquete_20260926T220400Z/catalogo_completo.html), [tablas de drawdown](paquete_20260926T220400Z/tablas/drawdown_comparativo.csv), [garantías y liquidez](paquete_20260926T220400Z/tablas/garantias_periodo.csv), [resultados financieros por período](paquete_20260926T220400Z/tablas/metricas_reutilizadas.csv) e [índice de 13 figuras](paquete_20260926T220400Z/figuras/indice_figuras.csv).
-- [Feedback literal](paquete_20260926T220400Z/documentos/feedback_e3.md), [protocolo previo sellado](paquete_20260926T220400Z/documentos/protocolo.md), [matriz de cobertura](paquete_20260926T220400Z/documentos/matriz_cobertura_feedback.csv) y [pendientes](paquete_20260926T220400Z/cobertura_pendiente.md).
-- [Guía del paquete y comandos portables](paquete_20260926T220400Z/README.md), [comandos de producción](paquete_20260926T220400Z/documentos/comandos_produccion.md) y [registro de ejecución](registro_ejecucion.md).
+Los enlaces apuntan a la distribución documental `20261010`. Los controles,
+conteos de archivos y sellos citados abajo describen el cierre original de
+septiembre; no certifican por sí mismos esta distribución. Su identidad y
+alcance están en el [protocolo de distribución](distribucion_20261010/protocolo_distribucion.md).
+
+- [Reporte HTML](distribucion_20261010/reporte.html) y [Markdown](distribucion_20261010/reporte.md).
+- [Catálogo completo de 449 episodios](distribucion_20261010/catalogo_completo.html), [tablas de drawdown](distribucion_20261010/tablas/drawdown_comparativo.csv), [garantías y liquidez](distribucion_20261010/tablas/garantias_periodo.csv), [resultados financieros por período](distribucion_20261010/tablas/metricas_reutilizadas.csv) e [índice de 13 figuras](distribucion_20261010/figuras/indice_figuras.csv).
+- [Feedback literal](distribucion_20261010/documentos/feedback_e3.md), [protocolo previo sellado](distribucion_20261010/documentos/protocolo.md), [matriz de cobertura](distribucion_20261010/documentos/matriz_cobertura_feedback.csv) y [pendientes](distribucion_20261010/cobertura_pendiente.md).
+- [Guía del paquete y comandos portables](distribucion_20261010/README.md), [comandos de producción](distribucion_20261010/documentos/comandos_produccion.md) y [registro de ejecución](registro_ejecucion.md).
 
 ## Hallazgos
 
@@ -28,7 +33,7 @@ El pico que origina el peor DD de la condicional depende del spot retenido duran
 
 El reporte mantiene los años 2022–2025 y enero–agosto de 2026, junto con utilización de capital y tiempo activo sin polvo. En BASE condicional, el retorno fue 5,24% en 2024 y 0,31% en 2025; enero–agosto de 2026 conserva un P&L de −0,09 USDT, con polvo y sin actividad. El promedio 2024+ no se presenta como mejora sostenida. H1/H2/H3 y las cifras financieras originales no se recalcularon ni ajustaron a redondeos de PDF.
 
-## Verificación ejecutada y sello
+## Verificación histórica ejecutada y sello original
 
 El cierre terminó con exit 0 el **2026-09-26 a las 22:57 UTC**. El paquete contiene 199 miembros inventariados (50.055.665 bytes antes del manifiesto). Identidad SHA-256:
 
@@ -58,6 +63,6 @@ Las series completas ocupan 2.934.571.231 bytes comprimidos y permanecen en:
 
 `D:/Backtesting/outputs/riesgo_intradia_20260926T214118Z/completa`
 
-Su procedencia y hashes están en [series_locales.json](paquete_20260926T220400Z/series_locales.json). No se duplicó el paquete padre ni se incluyeron todas las fuentes masivas en el producto publicable. La verificación compacta por sí sola no recalcula el máximo global de la muestra: hacen falta esas series, los estados y los precios originales con rutas explícitas.
+Su procedencia y hashes están en [series_locales.json](distribucion_20261010/series_locales.json). No se duplicó el paquete padre ni se incluyeron todas las fuentes masivas en el producto publicable. La verificación compacta por sí sola no recalcula el máximo global de la muestra: hacen falta esas series, los estados y los precios originales con rutas explícitas.
 
-Persisten la incertidumbre del precio spot durante la interrupción, los compromisos cuya caja neta no es acreditable y la ausencia de observación intravela. Quedan pendientes la alternativa remunerada, las demoras/shocks propuestos y el escenario de nueva trayectoria sin interrupción. La valoración proxy no los sustituye. No se generó el PDF final ni se afirma haber leído un PDF E3 ausente.
+Persisten la incertidumbre del precio spot durante la interrupción, los compromisos cuya caja neta no es acreditable y la ausencia de observación intravela. Al cierre original quedaban pendientes la alternativa remunerada, las demoras/shocks y la trayectoria sin interrupción; la valoración proxy no sustituía esos análisis. Los bloques posteriores y el PDF final se consultan en el [índice actual de E4](../../README.md). La falta de un PDF E3 durante aquella reconstrucción conserva su significado histórico.

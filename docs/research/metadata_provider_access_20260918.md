@@ -59,7 +59,7 @@ Para RAW, la suscripción anual Pro ofrece cuatro años; Business anual toda la 
 
 Con esa clave, primero consultar `GET https://api.tardis.dev/v1/api-key-info` y comprobar permisos/rango; luego ejecutar cuatro GET de metadata y la ventana de aceptación `[2023-12-24 09:20, 09:51) UTC`, minuto a minuto. Conservar respuesta nativa, fecha de captura y hash. El filtro del canal es global; filtrar BTCUSDT/ETHUSDT dentro del payload.
 
-Aceptar la vía para tiers sólo tras recibir `bks` histórico no vacío de BTC/ETH y contrastarlo con las tablas oficiales. Un minuto vacío no implica ausencia del canal ni ausencia de cambio; no usarlo para validar una serie constante. Separadamente, revisar si metadata devuelve cambios de los campos objetivo y baseline anterior a cada período. Este ensayo autoriza una evaluación técnica, no llenar automáticamente el RuleBook.
+La vía para tiers requiere un `bks` histórico no vacío de BTC/ETH contrastado con las tablas oficiales. Un minuto vacío no implica ausencia del canal ni ausencia de cambio; no sirve para validar una serie constante. La evaluación de metadata requiere comprobar cambios de los campos objetivo y un baseline anterior a cada período. El ensayo es una evaluación técnica; sus resultados no completan automáticamente el RuleBook.
 
 ## 4. Otros proveedores examinados
 

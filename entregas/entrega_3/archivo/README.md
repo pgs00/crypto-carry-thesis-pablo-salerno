@@ -5,29 +5,25 @@ Estos resultados corresponden a las **ventanas independientes**
 con 10.000 USDT; no describen el período continuo vigente ni se concatenan con él.
 Volver a la [entrega continua](../README.md).
 
-| Evidencia | Alcance |
-|---|---|
-| [ZIP original](paquete_redaccion_entrega_3.zip) · [SHA-256](paquete_redaccion_entrega_3.zip.sha256) | Primera entrega, conservada como referencia de bytes y procedencia. |
-| [ZIP v2](paquete_redaccion_entrega_3_v2.zip) · [SHA-256](paquete_redaccion_entrega_3_v2.zip.sha256) | Correcciones documentales y de preservación CRLF/LF; mismos parámetros y resultados. |
-| Copia extraída v2 retirada | Sus 140 archivos se recuperan del ZIP v2 autenticado, sin alterar sus bytes. |
+La [distribución histórica del 10/10/2026](distribucion_20261010/LEEME.md)
+conserva las tablas, figuras, configuraciones y evidencia científica de la
+versión v2, con identidad documental propia. Incluye su
+[protocolo descriptivo](distribucion_20261010/protocolo_distribucion.md) y el
+[verificador](distribucion_20261010/scripts/verificar_paquete.py).
 
 La [guía única de reproducción](../../../docs/reproduction.md#entrega-3-presentación-y-extracción-autenticada)
-autentica y extrae los ZIP en carpetas externas nuevas, y publica el comando del
-verificador incluido. El ZIP v2 contiene `paquete_redaccion/`; sus scripts
-`verificar_paquete.py`, `reproducir.py` y `diccionario.py` se ejecutan desde esa
-copia con destinos nuevos, sin datos masivos ni nuevas simulaciones para la
-verificación y reproducción de tablas.
+indica la comprobación directa desde esta carpeta. No requiere extraer los ZIP
+históricos, datos masivos ni nuevas simulaciones. La extracción autenticada del
+ZIP continuo sigue disponible para la referencia BASE.
 
-Los originales se movieron completos, sin cambiar sus manifiestos ni fuentes.
-Las rutas de procedencia dentro de sus JSON describen la ubicación original al
-capturarlos; no se sustituyen por rutas actuales para fabricar hashes nuevos.
-Los comandos dentro de los documentos sellados registran las rutas usadas
-entonces. Para verificar o regenerar sus tablas desde este checkout, usar la
-guía de extracción anterior; no editar el paquete para cambiar ese registro.
+Los dos ZIP originales y sus certificados se conservan íntegros en el respaldo
+externo `../Backtesting_antecedentes/limpieza_final_20261010/originales/`, con
+rutas relativas a la raíz del repositorio. Sus identidades y verificaciones
+son históricas y no acreditan por sí mismas la distribución nueva. Las rutas
+de captura dentro de fuentes y certificados conservan su significado original.
 
-El preparador original `paquete_redaccion/scripts/preparar_paquete.py`, incluido
-en el ZIP v2, es la copia
-canónica del script antes duplicado en la raíz de Entrega 3. Para preparar otra
-copia requiere las fuentes locales y un destino explícito nuevo; no debe usarse
-para sobrescribir este archivo. [empaquetar.py](empaquetar.py) conserva la
-comprobación de fuentes contra el ZIP original y rechaza sobrescribir un ZIP.
+Los constructores históricos requieren las fuentes y el contexto de sus
+originales recuperados, siempre con destinos nuevos. [empaquetar.py](empaquetar.py)
+permite generar un ZIP opcional de la distribución actual después de verificarla,
+con `--output` en un destino nuevo externo. Conserva sus bytes y su sello; no
+requiere los ZIP originales ni vuelve a sellar la evidencia.

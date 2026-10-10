@@ -1,0 +1,67 @@
+{
+  "schema": "documentary_distribution_v1",
+  "distribution_id": "distribucion_20261010",
+  "original_manifest_sha256": "78cb03572c5940567852d0255d05a9f8a923f01df01fc0aa8b6cccef70f3b3bb",
+  "omitted": [
+    {
+      "path": "documentos/encargo_original.md",
+      "sha256": "8ef229b24a35af2ec75ac5c23d50d8caf3aa1e987b4917d54ce1d72ff5f170d8",
+      "bytes": 23546,
+      "reason": "Documento interno de desarrollo; especificación científica conservada en protocolos y evidencia."
+    },
+    {
+      "path": "documentos/plan_ejecucion.md",
+      "sha256": "43a3d0fa1f165e28cd41cb24841af2e067a9a3e10928dc93a21a6f47b6eece3f",
+      "bytes": 4854,
+      "reason": "Documento interno de desarrollo; especificación científica conservada en protocolos y evidencia."
+    }
+  ],
+  "adapted": [
+    {
+      "path": "README.md",
+      "bytes": 7041,
+      "sha256": "9614eaaf02a2c8ec288ffc6b890c79aa6caf3f8c51196950348112e020010269",
+      "original_bytes": 6846,
+      "original_sha256": "7b0cb7e2b2eda38b44bfc4abf5119a235bd3ff3e2e6f89fd2bb61089301bb703",
+      "reason": "Presentación o autenticación de la distribución documental."
+    },
+    {
+      "path": "documentos/protocolo.md",
+      "bytes": 12432,
+      "sha256": "fadb999b1cbd521e90a858932038b4e270bdf908ff5ba8f996115765f4bb2b01",
+      "original_bytes": 12501,
+      "original_sha256": "b62ead9cc80ebf91f71080383bc613db24a8b81bccef02dfd347572050c2ce15",
+      "reason": "Presentación o autenticación de la distribución documental."
+    },
+    {
+      "path": "herramientas/scripts/verify_intraday_risk.py",
+      "bytes": 69015,
+      "sha256": "9d1526a0d35c4a1c4f34a0b52f16f5a3d8e21b99e79c048f4ac8c2db344fedd6",
+      "original_bytes": 68822,
+      "original_sha256": "24475e9aaf21f6e5d4a92f129ec4e6883eb54e48ceb1789e15b88040ee7d2f10",
+      "reason": "Presentación o autenticación de la distribución documental."
+    }
+  ],
+  "added": [
+    {
+      "path": "herramientas/scripts/distribution_integrity.py",
+      "bytes": 10015,
+      "sha256": "fa454335fa04dd267623e21d6c3e19ffeca687322dce26e90f52f6f41301d84a"
+    },
+    {
+      "path": "procedencia/manifiesto_original.json",
+      "bytes": 36120,
+      "sha256": "78cb03572c5940567852d0255d05a9f8a923f01df01fc0aa8b6cccef70f3b3bb"
+    },
+    {
+      "path": "procedencia/manifiesto_original.sha256",
+      "bytes": 90,
+      "sha256": "265157efa7719bc64465b1e84908808680130b7c254496dd703ae1e988d65d4f"
+    },
+    {
+      "path": "protocolo_distribucion.md",
+      "bytes": 725,
+      "sha256": "bf22278be0791b1b9c260345fc85f07c643543d5bb7367870560997e9b49e7b1"
+    }
+  ]
+}

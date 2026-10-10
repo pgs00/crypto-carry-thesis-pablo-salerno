@@ -1,16 +1,22 @@
 # Bloque retorno y capital — entrega local verificada
 
+Los enlaces actuales apuntan a la distribución documental `20261010` y su
+[protocolo](distribucion_20261010/protocolo_distribucion.md). Los controles y
+sellos siguientes describen el cierre original. El estado pendiente del
+benchmark es histórico: la [comparación SOFR posterior](../20260927T154653Z_sofr/distribucion_20261010/README.md)
+y el [PDF final](../../README.md) se consultan por separado.
+
 Concentración por ciclos/días, restricciones de entrada e integración anual:
 **ejecutado**. Investigación de la alternativa remunerada: **ejecutado**.
 Comparación remunerada: **pendiente_aprobacion_benchmark**; no se calculó.
 
-- [Reporte HTML](paquete_20260927T152732Z/reporte.html)
-- [Reporte Markdown](paquete_20260927T152732Z/reporte.md)
-- [Paquete verificable](paquete_20260927T152732Z/README.md)
-- [Resumen anual y capital utilizado](paquete_20260927T152732Z/tablas/resumen_integrado.csv)
-- [Propuesta SOFR y fuentes](paquete_20260927T152732Z/documentos/propuesta_benchmark.md)
-- [Ficha concreta pendiente](paquete_20260927T152732Z/documentos/ficha_benchmark.json)
-- [Verificación y reproducción](paquete_20260927T152732Z/README.md)
+- [Reporte HTML](distribucion_20261010/reporte.html)
+- [Reporte Markdown](distribucion_20261010/reporte.md)
+- [Paquete verificable](distribucion_20261010/README.md)
+- [Resumen anual y capital utilizado](distribucion_20261010/tablas/resumen_integrado.csv)
+- [Propuesta SOFR y fuentes](distribucion_20261010/documentos/propuesta_benchmark.md)
+- [Ficha concreta pendiente](distribucion_20261010/documentos/ficha_benchmark.json)
+- [Verificación y reproducción](distribucion_20261010/README.md)
 
 ## Hallazgos comprobados
 
@@ -49,7 +55,7 @@ su efectivo. H1, H2 corregida y H3 conservan sus definiciones y valores; H2
 sigue no favorable a la condicional. No se reinterpretó el conteo de rechazos
 como tiempo elegible, ni se rehizo el riesgo intradía.
 
-## Evidencia de cierre
+## Evidencia del cierre histórico
 
 - [173 pruebas pertinentes: stdout](auditorias/tests_final.log) y
   [comando exacto](auditorias/tests_final.json). Incluyen 37 del nuevo bloque
@@ -97,7 +103,7 @@ SHA-256 del manifiesto del paquete:
 SHA-256 del ZIP:
 `143f217aa0af5cf7afa7669281d50df388f291cff1d184ccf4e134c9c01a4b30`.
 
-## Pendiente puntual y alcance
+## Estado pendiente al cierre original y alcance
 
 La ficha `SOFR_BRUTO_ACT360_USD_PARIDAD_USDT_20260927` recomienda una cuenta
 hipotética bruta USD, ACT/360, con paridad nominal 1 USDT=1 USD. Se descargaron
