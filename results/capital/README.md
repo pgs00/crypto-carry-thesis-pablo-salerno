@@ -1,16 +1,14 @@
 # Retorno, capital y restricciones de entrada
 
-Lectura temática del [reporte original autenticado](evidencia/reporte.md), conservado íntegro junto con sus tablas, figuras, fórmulas y límites. La [guía de reproducción](../../docs/reproduction.md) fija la comprobación vigente; los escenarios se mantienen separados. Las referencias administrativas del reporte original conservan su fecha y alcance.
+El análisis de capital mide utilización, concentración y restricciones en las dos carteras BASE_E3. Muestra continua [01/01/2022,01/09/2026) UTC, con 10.000 USDT iniciales cada una. La [cuenta SOFR hipotética bruta](../benchmark_sofr/README.md) compara por separado el rendimiento del capital completo.
 
-Análisis de capital · Muestra continua [01/01/2022,01/09/2026) UTC. Sólo las dos BASE_E3, 10.000 USDT iniciales cada una. Concentración y restricciones: **ejecutado**. El estado histórico **pendiente_aprobacion_benchmark** antecede a la [cuenta SOFR hipotética bruta aprobada y ejecutada](../benchmark_sofr/README.md), que se presenta por separado.
-
-[Protocolo](evidencia/documentos/protocolo.md) · [Mapa de fuentes](evidencia/documentos/mapa_fuentes.md) · [Propuesta remunerada](evidencia/documentos/propuesta_benchmark.md) · [Ficha exacta](evidencia/documentos/ficha_benchmark.json)
+[Protocolo](evidencia/documentos/protocolo.md) · [Mapa de fuentes](evidencia/documentos/mapa_fuentes.md)
 
 ## Resultado y concentración
 
 ### Condicional
 
-P&L de cartera: **785,76 USDT**, retorno 7,86% y CAGR 1,63% sobre 1.704 días. Los tres ciclos positivos de mayor contribución reúnen 52,40% de G. G=790,76 y L=5,00 USDT; fuera de ciclo: -0,000811 USDT.
+P&L de cartera: 785,76 USDT, retorno 7,86% y CAGR 1,63% sobre 1.704 días. Los tres ciclos positivos de mayor contribución reúnen 52,40% de G. G=790,76 y L=5,00 USDT; fuera de ciclo: -0,000811 USDT.
 
 | Signo | Top solicitado | Cantidad efectiva | P&L seleccionado (USDT) | % de G o L | % del neto de ciclos |
 | --- | --- | --- | --- | --- | --- |
@@ -23,7 +21,7 @@ P&L de cartera: **785,76 USDT**, retorno 7,86% y CAGR 1,63% sobre 1.704 días. L
 
 ### Permanente
 
-P&L de cartera: **1.680,07 USDT**, retorno 16,80% y CAGR 3,38% sobre 1.704 días. Los tres ciclos positivos de mayor contribución reúnen 42,27% de G. G=1.707,99 y L=28,02 USDT; fuera de ciclo: 0,096487 USDT.
+P&L de cartera: 1.680,07 USDT, retorno 16,80% y CAGR 3,38% sobre 1.704 días. Los tres ciclos positivos de mayor contribución reúnen 42,27% de G. G=1.707,99 y L=28,02 USDT; fuera de ciclo: 0,096487 USDT.
 
 | Signo | Top solicitado | Cantidad efectiva | P&L seleccionado (USDT) | % de G o L | % del neto de ciclos |
 | --- | --- | --- | --- | --- | --- |
@@ -215,14 +213,16 @@ H1, H2 corregida y H3 se reutilizan sin redefinirlos. H2 sigue no favorable en m
 
 [Resumen completo y capital en USDT](evidencia/tablas/resumen_integrado.csv) · [Componentes por activo originales](evidencia/tablas/componentes_por_activo_periodo_reutilizado.csv) · [H1](evidencia/tablas/h1_resumen_reutilizado.csv) · [H2](evidencia/tablas/h2_reutilizado.csv) · [H3](evidencia/tablas/h3_regimen_reutilizado.csv)
 
-## Antecedente de la comparación remunerada y límites
+## Comparación SOFR y límites
 
-La propuesta histórica recomendó someter a aprobación una cuenta hipotética bruta USD ligada a SOFR realizada, ACT/360, con paridad nominal 1 USDT=1 USD. SGOV fue la única alternativa real examinada. La serie oficial SOFR descargada contiene 1.166 observaciones entre 30/12/2021 y 01/09/2026; se comprobó cobertura, sin calcular retornos en este análisis de capital. La ficha enumera supuestos, costos excluidos, acceso hipotético, calendario por acreditar y reglas de frontera. No es una cuenta remunerada disponible para el inversor ni una tasa pagada por el exchange.
+La comparación utiliza una cuenta hipotética bruta USD ligada a SOFR realizada, ACT/360, con paridad nominal 1 USDT=1 USD. SGOV fue la única alternativa real examinada. La serie oficial SOFR descargada contiene 1.166 observaciones entre 30/12/2021 y 01/09/2026; este análisis de capital comprobó su cobertura, sin calcular retornos. Los [supuestos y fuentes](evidencia/documentos/propuesta_benchmark.md) y la [ficha del benchmark](evidencia/documentos/ficha_benchmark.json) documentan costos excluidos, acceso hipotético, calendario y reglas de frontera. No representa una cuenta disponible para el inversor ni una tasa pagada por el exchange.
 
-[Propuesta, fuentes primarias y aprobación puntual](evidencia/documentos/propuesta_benchmark.md). El estado pendiente_aprobacion_benchmark corresponde a ese antecedente. La aprobación posterior habilitó únicamente la [comparación SOFR independiente](../benchmark_sofr/README.md); no suma intereses al carry ni cambia H2.
+El cálculo y la validación del calendario figuran en la [comparación SOFR independiente](../benchmark_sofr/README.md). Sus intereses no se suman al carry ni cambian H2.
 
 ## Verificación y portabilidad
 
 El paquete contiene código, pruebas, manifiesto y fuentes con hashes. El verificador compacto recalcula aritmética, segmentos, denominadores y clasificaciones. El completo autentica las dependencias por rutas explícitas y vuelve a derivar todas las tablas desde los movimientos originales; comparte los módulos de posprocesamiento y no es una validación independiente del motor. No consulta Git ni escribe en los paquetes fuente. Ver comandos en [README](evidencia/README.md).
 
-Se conserva la incertidumbre de valoración spot durante la suspensión de marzo de 2023 y las aproximaciones de mark/funding del estudio. Las fronteras de cierre reutilizan precios del paquete intradía compacto, sin nuevas series masivas. No se afirma leer un PDF E3 ausente. La aprobación y ejecución del benchmark se documentan en su [resultado separado](../benchmark_sofr/README.md); el [PDF final](../../Tesina_Pablo_Salerno.pdf) es el documento de presentación. Las notas de pendientes y de ausencia de commit, push o publicación GitHub corresponden al estado del reporte original.
+Se conserva la incertidumbre de valoración spot durante la suspensión de marzo de 2023 y las aproximaciones de mark/funding del estudio. Las fronteras de cierre reutilizan precios del paquete intradía compacto, sin nuevas series masivas. El [PDF final](../../Tesina_Pablo_Salerno.pdf) presenta el estudio.
+
+Procedencia: [reporte original](evidencia/reporte.md) y [autenticación](../../docs/procedencia/README.md).

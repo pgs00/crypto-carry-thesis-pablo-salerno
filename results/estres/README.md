@@ -1,15 +1,13 @@
 # Estrés spot y contrafactual sin interrupción
 
-Lectura temática del [reporte original autenticado](evidencia/reporte.md), conservado íntegro junto con sus tablas, figuras, fórmulas y límites. La [guía de reproducción](../../docs/reproduction.md) fija la comprobación vigente; los escenarios se mantienen separados. Las referencias administrativas del reporte original conservan su fecha y alcance.
+Matriz ejecutada: seis carteras económicas continuas y cuatro controles técnicos separados. Las dos BASE originales y sus dos controles corregidos se preservan como referencias.
 
-**Matriz ejecutada:** seis carteras económicas continuas y cuatro controles técnicos separados. Las dos BASE originales y sus dos controles corregidos se preservan como referencias.
+SH_P90. condicional: equity final 10738.95 USDT (diferencia -46.81 USDT), retorno 7.390% y CAGR 1.539%; permanente: equity final 11606.69 USDT (diferencia -73.38 USDT), retorno 16.067% y CAGR 3.243%.
+SH_MAX. condicional: equity final 10327.26 USDT (diferencia -458.51 USDT), retorno 3.273% y CAGR 0.692%; permanente: equity final 10927.75 USDT (diferencia -752.32 USDT), retorno 9.278% y CAGR 1.919%.
+CF_SIN_INTERRUPCION. condicional: equity final 10730.61 USDT (diferencia -55.15 USDT), retorno 7.306% y CAGR 1.522%; permanente: equity final 11535.16 USDT (diferencia -144.91 USDT), retorno 15.352% y CAGR 3.106%.
+## Alcance y supuestos
 
-**SH_P90.** condicional: equity final 10738.95 USDT (diferencia -46.81 USDT), retorno 7.390% y CAGR 1.539%; permanente: equity final 11606.69 USDT (diferencia -73.38 USDT), retorno 16.067% y CAGR 3.243%.
-**SH_MAX.** condicional: equity final 10327.26 USDT (diferencia -458.51 USDT), retorno 3.273% y CAGR 0.692%; permanente: equity final 10927.75 USDT (diferencia -752.32 USDT), retorno 9.278% y CAGR 1.919%.
-**CF_SIN_INTERRUPCION.** condicional: equity final 10730.61 USDT (diferencia -55.15 USDT), retorno 7.306% y CAGR 1.522%; permanente: equity final 11535.16 USDT (diferencia -144.91 USDT), retorno 15.352% y CAGR 3.106%.
-## Alcance y supuestos aprobados
-
-La [aprobación registrada](evidencia/aprobacion_recibida.json) remite a la [ficha](evidencia/ficha_decision.md), al [protocolo técnico](evidencia/protocolo_tecnico.md) y a sus hashes. Sus textos históricos pendientes se conservan; la respuesta posterior del usuario autoriza las dos familias. Magnitudes, calendario, recuperación, anclas y volumen quedaron fijados antes del primer replay. No se eligieron escenarios por rendimiento.
+La [ficha de supuestos](evidencia/ficha_decision.md) y el [protocolo técnico](evidencia/protocolo_tecnico.md) fijan magnitudes, calendario, recuperación, anclas y volumen antes del primer replay. No se eligieron escenarios por rendimiento.
 
 Las carteras comienzan con 10.000 USDT y siguen `[2022-01-01,2026-09-01)` UTC. Los ocho cortes son full, 2022, 2023, 2024, 2025, 2026 parcial, 2022–2023 y 2024+. Cada corte hereda inventario y saldos; no reinicia el capital. Se mantienen VWAP, tasas, marks, costos, cupo bruto compartido del 1%, secuencia, reservas y controles de BASE; las demoras de investigación están apagadas.
 
@@ -28,7 +26,7 @@ SH_P90 y SH_MAX reducen sólo spot respecto del perpetuo. No son shocks conjunto
 | CF_SIN_INTERRUPCION | Condicional | 10730.61 | 730.61 | 7.306% | 1.522% | 5.104 | -0.263% |
 | CF_SIN_INTERRUPCION | Permanente | 11535.16 | 1535.16 | 15.352% | 3.106% | 6.283 | -0.623% |
 
-El P&L concilia equity final menos equity inicial con spot + futuros + funding + fees + liquidación a `1E-8` USDT por cierre y por período. El slippage ya está en precios de fills; su diagnóstico informativo no se resta por segunda vez. ND conserva su motivo, incluido Sharpe con volatilidad muestral cero. El cuadro principal mide drawdown **diario**.
+El P&L concilia equity final menos equity inicial con spot + futuros + funding + fees + liquidación a `1E-8` USDT por cierre y por período. El slippage ya está en precios de fills; su diagnóstico informativo no se resta por segunda vez. ND conserva su motivo, incluido Sharpe con volatilidad muestral cero. El cuadro principal mide drawdown diario.
 
 [Ocho períodos y utilización](evidencia/resultados/metricas.csv) · [Componentes por activo](evidencia/resultados/componentes_periodo.csv) · [Ejecución y cupo](evidencia/resultados/ejecucion_resumen.csv) · [Eventos, deuda y liquidaciones](evidencia/resultados/eventos.csv) · [Actividad y ciclos](evidencia/resultados/actividad.csv) · [Conciliación](evidencia/resultados/conciliacion_ledger.csv).
 
@@ -38,7 +36,7 @@ El P&L concilia equity final menos equity inicial con spot + futuros + funding +
 
 ## Descenso, recuperación impuesta y operaciones
 
-La recuperación de **60 minutos es impuesta**: no es un plazo estimado ni elegido por P&L. A cada instante se usa la mayor intensidad vigente; los pulsos no se multiplican. El descenso comienza a afectar información cuando termina la primera vela aprobada y no modifica fills ya consumidos. Al regresar el factor a uno se conserva todo el inventario, órdenes y saldos resultantes.
+La recuperación de 60 minutos es impuesta: no es un plazo estimado ni elegido por P&L. A cada instante se usa la mayor intensidad vigente; los pulsos no se multiplican. El descenso comienza a afectar información cuando termina la primera vela intervenida y no modifica fills ya consumidos. Al regresar el factor a uno se conserva todo el inventario, órdenes y saldos resultantes.
 
 La atribución utiliza cantidad spot previa `q`, precio original `S` y factor `f`: `q·S_anterior·(f_nuevo−f_anterior)` mide el factor impuesto y `q·f_nuevo·(S_nuevo−S_anterior)` mide el movimiento del precio original. Su suma concilia el cambio de valoración spot sobre ese inventario. El componente positivo del factor es recuperación impuesta; el negativo es descenso. Son diagnósticos, no transferencias ni cargos adicionales. No se suman a P&L ni identifican una diferencia causal contra otra cartera con inventario diferente.
 
@@ -62,13 +60,13 @@ La atribución utiliza cantidad spot previa `q`, precio original `S` y factor `f
 
 La pérdida transitoria incluye movimientos del mercado y las operaciones de la trayectoria; se informa separadamente del factor impuesto y del P&L realizado, funding y comisiones del ledger. Los extremos se limitan a ventanas intervenidas y sus bordes, a cierres de minuto y eventos financieros; no son máximos intradía de toda la muestra. Su base es el estado anterior al primer evento de cada ventana; se conserva su timestamp. La valoración sobre spot antiguo durante la suspensión se identifica por fuente y antigüedad, sin habilitar fills ni renovar su disponibilidad.
 
-**El calendario BASE permanece fijo.** No estresa automáticamente exposiciones nuevas que aparezcan en las trayectorias modificadas. Una posición cerrada antes tampoco elimina el pulso. [Cobertura de episodios modificados](evidencia/resultados/cobertura_calendario_fijo.parquet) cuantifica los segundos dentro y fuera del calendario revelado, sin agregar shocks.
+El calendario BASE permanece fijo. No estresa automáticamente exposiciones nuevas que aparezcan en las trayectorias modificadas. Una posición cerrada antes tampoco elimina el pulso. [Cobertura de episodios modificados](evidencia/resultados/cobertura_calendario_fijo.parquet) cuantifica los segundos dentro y fuera del calendario revelado, sin agregar shocks.
 
 ## Garantías y caja
 
 [Garantías por activo y fase](evidencia/resultados/garantias_ventanas.parquet) separa saldo de margen, mantenimiento, holgura, distancia a liquidación y necesidad preventiva. Tras cerrar el corto, su margen es ND/no aplicable y su requerimiento es cero. Se observan estados anteriores a fills con el mark recién disponible, además de los estados posteriores. No se combinan extremos de velas como si hubieran ocurrido simultáneamente.
 
-[Necesidad conjunta](evidencia/resultados/garantias_simultaneas.parquet) suma requerimientos **simultáneos**, descuenta caja libre de reservas y conserva deuda. No reutiliza colateral aislado ni suma máximos de distintos instantes. La cifra preventiva es un ínfimo: el límite de ratio exige desigualdad estricta cuando resulta vinculante. No se inyectan esos importes al backtest.
+[Necesidad conjunta](evidencia/resultados/garantias_simultaneas.parquet) suma requerimientos simultáneos, descuenta caja libre de reservas y conserva deuda. No reutiliza colateral aislado ni suma máximos de distintos instantes. La cifra preventiva es un ínfimo: el límite de ratio exige desigualdad estricta cuando resulta vinculante. No se inyectan esos importes al backtest.
 
 | Escenario | Cartera | Máximo preventivo conjunto (ínfimo USDT) | Máximo faltante externo conocido (ínfimo USDT) | Observaciones ND |
 |---|---|---|---|---|
@@ -85,9 +83,9 @@ La tabla se limita a las ventanas auditadas. Cero no se interpreta como ausencia
 
 Se sustituyen 153 aperturas de vela por activo del 24/03/2023 `[11:27,14:00)` UTC. Incluyen la vela parcial de 11:27; los 152 minutos de cierre completo y los 121 minutos descubiertos de BASE son duraciones distintas. Cada vela sintética se publica al terminar. La reapertura observada vuelve con la vela abierta 14:00, conocida 14:01.
 
-Las anclas aprobadas son BTC `28068.79/28053.70` y ETH `1788.70/1787.90`. Implican **basis futuro/spot−1 negativo constante** durante las velas sintéticas (salvo redondeo Decimal 28): aproximadamente −5,3761 pb BTC y −4,4725 pb ETH. Eso restringe nuevas entradas con el filtro inclusivo `[0,0.005]`. No se alteraron las anclas para conseguir operaciones. Órdenes heredadas y decisiones posteriores siguen evolucionando con las reglas ordinarias.
+Las anclas son BTC `28068.79/28053.70` y ETH `1788.70/1787.90`. Implican basis futuro/spot−1 negativo constante durante las velas sintéticas (salvo redondeo Decimal 28): aproximadamente −5,3761 pb BTC y −4,4725 pb ETH. Eso restringe nuevas entradas con el filtro inclusivo `[0,0.005]`. No se alteraron las anclas para conseguir operaciones. Órdenes heredadas y decisiones posteriores siguen evolucionando con las reglas ordinarias.
 
-El volumen es la mediana spot por hora UTC de los dos días completos anteriores aprobados, con ceros y 120 observaciones por grupo. No copia volumen de futuros ni supone liquidez infinita. El lapso corto no acredita estacionalidad semanal o profundidad del libro. Las fuentes de futuros, marks y tasas quedan intactas como condición hipotética; el importe de funding se recalcula con el corto anterior a fills simultáneos, mark de cálculo del pago y tasa.
+El volumen es la mediana spot por hora UTC de los dos días completos anteriores, con ceros y 120 observaciones por grupo. No copia volumen de futuros ni supone liquidez infinita. El lapso corto no acredita estacionalidad semanal o profundidad del libro. Las fuentes de futuros, marks y tasas quedan intactas como condición hipotética; el importe de funding se recalcula con el corto anterior a fills simultáneos, mark de cálculo del pago y tasa.
 
 | Cartera | Activo | Frontera | Salto cierre/cierre | Cantidad previa | Valoración previa USDT |
 |---|---|---|---|---|---|
@@ -165,6 +163,8 @@ El verificador offline recalcula contabilidad, ejecución, fórmulas de interven
 python -B -X utf8 results/estres/evidencia/herramientas/scripts/verify_stress_counterfactual.py results/estres/evidencia --output <archivo_nuevo_externo.json>
 ```
 
-La [guía de reproducción](evidencia/reproducibilidad.md) declara dependencias y alcance. Las auditorías finales se guardan fuera del sello. Los registros de ausencia de modificación del índice Git, commit, push, limpieza, borrado o archivado describen la ejecución original. El inventario previo conserva carácter de propuesta histórica separada.
+La [guía de reproducción](evidencia/reproducibilidad.md) declara dependencias y alcance. Las auditorías finales se guardan fuera del sello.
 
 La [estabilidad temporal e incertidumbre](../estabilidad/README.md) y el [PDF final](../../Tesina_Pablo_Salerno.pdf) documentan los trabajos posteriores. El [diagnóstico dirigido sobre señal y costos/capacidad](../estabilidad/evidencia/tablas/diagnostico_b2_b3_corridas.csv) excluye la precondición de liquidation_pending en las 28 variantes autenticadas; su cobertura no demuestra equivalencia universal ni se deduce de la equivalencia BASE.
+
+Procedencia: [reporte original](evidencia/reporte.md) y [autenticación](../../docs/procedencia/README.md).

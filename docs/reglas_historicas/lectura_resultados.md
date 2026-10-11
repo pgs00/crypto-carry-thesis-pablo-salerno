@@ -1,17 +1,17 @@
-# Lectura y reproducción de la primera comparación de reglas
+# Lectura y reproducción de la comparación de reglas
 
-El reporte se construye desde artefactos persistidos; no ejecuta backtests ni reemplaza la evidencia de las carteras continuas de referencia. Los seis escenarios y sus comparadores están fijados en [protocolo.md](protocolo.md). La resolución de la revisión docente mencionada en el documento original no consta en estos artefactos.
+El reporte se construye desde artefactos persistidos; no ejecuta backtests ni reemplaza la evidencia de las carteras continuas de referencia. Los seis escenarios y sus comparadores están fijados en [protocolo.md](protocolo.md).
 
-El paquete de esta tanda es `data/evidence/reglas_historicas/`. `indice_corridas.json` registra los doce pares escenario/cartera y los estados `ejecutado`, `reutilizado_verificado`, `fallido` o `bloqueado`. Un fallo conserva su motivo y no genera un año ficticio sin operaciones. Cada resultado remite al `run_id`, manifiesto y configuración de una única cartera independiente. `comparacion/reporte.md` explica los resultados; sus CSV conservan los números sin redondear.
+El paquete de reglas es `data/evidence/reglas_historicas/`. `indice_corridas.json` registra los doce pares escenario/cartera y los estados `ejecutado`, `reutilizado_verificado`, `fallido` o `bloqueado`. Un fallo conserva su motivo y no genera un año ficticio sin operaciones. Cada resultado remite al `run_id`, manifiesto y configuración de una única cartera independiente. `comparacion/reporte.md` explica los resultados; sus CSV conservan los números sin redondear.
 
 ## Corrección editorial v2: exposición y H2
 
-La revisión del 26/09/2026 corrige el indicador operativo para excluir polvo conforme a E3 y completa H2 con el requisito de CAGR condicional positivo. Las doce carteras existentes y el paquete padre sellado permanecen intactos. Las herramientas archivadas conservan soporte v1; los comandos activos construyen la corrección v2 en otro destino.
+La revisión del 26/09/2026 corrige el indicador operativo para excluir polvo conforme a la referencia continua y completa H2 con el requisito de CAGR condicional positivo. Las doce carteras existentes y el paquete padre sellado permanecen intactos. Las herramientas archivadas conservan soporte v1; los comandos activos construyen la corrección v2 en otro destino.
 
 ## Construcción y sello
 
 Desde la raíz del repositorio, con el intérprete y las dependencias del proyecto.
-Primero autenticar y extraer el ZIP E3 continuo según la
+Primero autenticar y extraer el ZIP de las carteras continuas según la
 [guía única](../reproduction.md#referencia-continua-y-extracción-autenticada).
 `$e3` debe señalar esa raíz extraída, no el ZIP ni la antigua copia visible:
 
@@ -22,7 +22,7 @@ Primero autenticar y extraer el ZIP E3 continuo según la
   --e3-reference $e3
 ```
 
-El constructor lee el padre y la referencia E3; escribe sólo un destino inexistente. Lee Parquet mediante PyArrow y genera figuras con Matplotlib; no importa el motor. `--no-figures` conserva los datos comprobables de la figura y omite las imágenes nuevas. Antes de calcular, verifica el paquete padre. Reutiliza las corridas sin copiarlas al producto derivado.
+El constructor lee el padre y la referencia continua; escribe sólo un destino inexistente. Lee Parquet mediante PyArrow y genera figuras con Matplotlib; no importa el motor. `--no-figures` conserva los datos comprobables de la figura y omite las imágenes nuevas. Antes de calcular, verifica el paquete padre. Reutiliza las corridas sin copiarlas al producto derivado.
 
 Al terminar sella automáticamente todos los productos nuevos. No admite los antiguos comandos activos `--package`/`--seal` para reconstruir v1. El sello nuevo fija la dependencia del manifiesto padre; no modifica hashes anteriores. Verificar después de construir:
 
@@ -61,7 +61,7 @@ El control original acredita integridad y aritmética persistida bajo v1; no inc
 - Retorno, CAGR, volatilidad, drawdown y utilización son razones (`0.01 = 1%`). Sharpe usa media de retornos diarios, desviación estándar muestral, tasa libre de riesgo cero y 365 días. Si no hay dos retornos, si la volatilidad es cero o si aparece equity no positiva, Sharpe queda vacío en CSV y ND en Markdown, con motivo. Nunca se sustituye por cero. Drawdown es diario y su duración máxima se expresa en días.
 - `deltas.csv`: REALIZADA y MARGEN_2X comparan con BASE_E3; DECISION compara con su REALIZADA. Los cambios de comisiones repercuten sobre caja, cantidades, exposición y decisiones posteriores. El delta de P&L no representa una resta de comisiones sobre posiciones fijas.
 - `eventos_periodo.csv`: fecha efectiva de cada evento. Las aperturas cuentan transiciones a `OPENING_SPOT`, las aperturas completadas usan `opening_complete`, las fallas se deduplican por orden, los parciales cuentan fills y los cierres por margen cuentan solicitudes. Los fills de liquidación se informan por separado.
-- `exposicion_periodo.csv`: clasifica la trayectoria completa de posiciones persistidas como cubierta, activa sin cobertura, polvo o ausencia de inventario; después recorta períodos. Los segundos de cartera son uniones, no sumas de activos. Tiempo invertido y sin cobertura activa excluyen polvo conforme a E3; `raw_*` conserva el bruto con cualquier cantidad positiva. Se distingue polvo únicamente, ausencia de actividad y ausencia de inventario. La tolerancia es la de la configuración efectiva. Los intervalos BASE coinciden exactamente con E3 usando el final exclusivo configurado; no se corrige una supuesta diferencia terminal mediante tolerancias.
+- `exposicion_periodo.csv`: clasifica la trayectoria completa de posiciones persistidas como cubierta, activa sin cobertura, polvo o ausencia de inventario; después recorta períodos. Los segundos de cartera son uniones, no sumas de activos. Tiempo invertido y sin cobertura activa excluyen polvo conforme a la referencia continua; `raw_*` conserva el bruto con cualquier cantidad positiva. Se distingue polvo únicamente, ausencia de actividad y ausencia de inventario. La tolerancia es la de la configuración efectiva. Los intervalos BASE coinciden exactamente con la referencia usando el final exclusivo configurado; no se corrige una supuesta diferencia terminal mediante tolerancias.
 - Utilización = (valor spot + collateral aislado)/equity; exposición bruta = valor spot + nocional corto. Las medias/máximos de utilización, collateral y mantenimiento son de cierres diarios, sin interpolación intradiaria. Los tramos para mantenimiento son los supuestos guardados en `research_assumptions.json` de cada corrida, no una cronología certificada de Binance. Una razón de margen sin corto activo queda ND.
 - `fronteras_promocion.csv`: conserva fills que tocan el inicio/fin exacto de promoción, o declara su ausencia. La tarifa se atribuye al inicio de la ventana VWAP completa y se contabiliza al cierre de esa ventana. No se inventan trades subminuto.
 

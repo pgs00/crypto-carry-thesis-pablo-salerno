@@ -20,7 +20,7 @@ de investigación no es el rango del backtest ni una corrida adicional.
 | [basis-audit-20260919](basis-audit-20260919/README.md) | Auditoría de las ventanas independientes; su script tiene pruebas y respalda la clasificación de rechazos. |
 | [minute-download-20260918](minute-download-20260918/annual-economic-audit.json) | Auditorías financieras, tiempos, recuperación de fuentes y contraste del episodio spot en las ventanas anteriores. |
 | [research-scenario-20260918](research-scenario-20260918/funding-resolver-verification.json) | Pilotos y contraste trades/minutos. Sus manifiestos y scripts conservan rutas relativas de reproducción. |
-| [funding-calendar-h1-20260918](funding-calendar-h1-20260918/independent-verification.json) | H1 preliminar y verificación independiente de calendario/forecast; no sustituye H1 de la entrega vigente. |
+| [funding-calendar-h1-20260918](funding-calendar-h1-20260918/independent-verification.json) | Evaluación inicial de H1 y verificación independiente del calendario y pronóstico; no sustituye H1 de las carteras continuas. |
 | [funding-proxy-audit-20260918](funding-proxy-audit-20260918/manifest.json) | Fuentes y hashes de la investigación original del proxy de funding. |
 | [funding-20260918T132612Z](../../docs/research/funding_api_coverage.json) | Respuestas API originales y procedencia; referenciadas por los inventarios históricos. |
 | [funding-followup-20260918](funding-followup-20260918/missing-economic-settlement-marks.json) | Las 4.010 observaciones sin precio oficial y los intentos documentados de recuperación. |

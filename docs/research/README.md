@@ -23,7 +23,7 @@ del funding omitido por la permanente, sin modificar resultados económicos.
 | Seguimiento de funding | Inventario y nueva consulta completa de 4.010 eventos económicos: cero marks recuperados. En 12 cobros conocidos, dos aperturas de velas no coinciden con el mark de cobro. | [Investigación y alternativas](funding_followup_20260918.md), [evidencia JSON](funding_followup_20260918.json) |
 | Trades de la muestra | Comparación exacta por minuto de conteos, cantidades, OHLC y suma de precio por cantidad; ambos activos concilian. Los saltos de IDs se conservan como diagnóstico. | [BTC](btcusdt_reconciliation.json), [ETH](ethusdt_reconciliation.json) |
 
-Los JSON de reglas son inventarios parciales de evidencia. **No son snapshots ejecutables de RuleBook ni completan `data/rules/history.json`.** Una aprobación de un supuesto tampoco lo convertiría en evidencia histórica.
+Los JSON de reglas son inventarios parciales de evidencia. No son snapshots ejecutables de RuleBook ni completan `data/rules/history.json`. Los supuestos del estudio no constituyen evidencia histórica.
 
 ## Funding: faltante delimitado
 
@@ -41,7 +41,7 @@ El [changelog oficial USD-M](https://developers.binance.com/en/docs/products/der
 
 Las diferencias de hora nominal entre eventos son ocho horas en esta consulta; esto es un diagnóstico, no sustituye la comprobación independiente del calendario publicado ni modifica los timestamps efectivos. No se rellenaron los marks con cero, con el precio actual ni con velas. Una API key no añade un parámetro de reconstrucción de estos precios ausentes.
 
-La evaluación estricta desde 2022 necesitaría otra fuente que acredite esos marks. Para el escenario de investigación el usuario aprobó posteriormente un proxy causal y reglas prescritas; esa aprobación no convierte las aproximaciones en observaciones históricas exactas.
+La evaluación estricta desde 2022 necesitaría otra fuente que acredite esos marks. El escenario de investigación utiliza un proxy causal y reglas prescritas; esas aproximaciones no son observaciones históricas exactas.
 
 El [seguimiento posterior](funding_followup_20260918.md) deja cada faltante identificado para evaluar otras fuentes y demuestra con contraejemplos que las aperturas de velas de mark price no son un reemplazo exacto general. La investigación pública de funding y reglas no depende de finalizar la descarga de trades. En esta investigación no se rellenaron los marks faltantes. El escenario continuo posterior emplea las aproximaciones explícitas de la [metodología vigente](../methodology.md).
 

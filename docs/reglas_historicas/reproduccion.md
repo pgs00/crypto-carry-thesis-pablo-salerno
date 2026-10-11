@@ -1,4 +1,4 @@
-# Reproducción de la tanda desde un paquete sellado
+# Reproducción de los escenarios de reglas desde un paquete sellado
 
 La utilidad `scripts/reproduce_historical_rules_sensitivity.py` prepara y, salvo
 `--prepare-only`, ejecuta el launcher autenticado del paquete fuente. Está validada
@@ -6,7 +6,7 @@ con fixtures y `--help`; no se ejecutó una segunda tanda real durante su creaci
 
 Requiere Python y las dependencias exactas de la auditoría BASE_E3. Se compara
 `platform.python_version()` (incluida la revisión patch) con el campo `python`
-del manifiesto de **cada** BASE, y se registran las versiones en la auditoría
+del manifiesto de cada BASE, y se registran las versiones en la auditoría
 fresca. Un exit 0 del subprocess no basta: sus indicadores de igualdad de datos,
 dependencias y Python deben ser explícitamente `true`. Además son
 indispensables, fuera del paquete portable:
@@ -37,7 +37,7 @@ Una comprobación completa que sólo prepara una carpeta nueva, sin backtests:
 ```
 
 Para volver a ejecutar las diez variantes/carteras y reutilizar las dos bases,
-seleccionar **otra carpeta que todavía no exista** y omitir `--prepare-only`:
+seleccionar otra carpeta que todavía no exista y omitir `--prepare-only`:
 
 ```powershell
 .venv/Scripts/python.exe -B -X utf8 scripts/reproduce_historical_rules_sensitivity.py `
@@ -46,8 +46,8 @@ seleccionar **otra carpeta que todavía no exista** y omitir `--prepare-only`:
   --data-root D:/Backtesting --workers 2
 ```
 
-Ambos comandos rechazan un paquete todavía abierto. Se ofrecen como comandos
-para usar después del sellado; no certifican una reproducción ya ejecutada.
+Ambos comandos requieren un paquete sellado; su documentación no certifica
+una reproducción ya ejecutada.
 `--workers` acepta 1–4; los datos son compartidos, mientras cada proceso mantiene
 su cartera y resultados independientes.
 
@@ -70,7 +70,7 @@ autenticado. La auditoría registra ruta, SHA256 y selección en `runner_identit
 Ambos se lanzan con `-B -X utf8`, cwd `codigo_ejecutado` y su `src` en PYTHONPATH;
 el motor y las configuraciones proceden del mismo snapshot congelado.
 
-La tanda entregada usó el launcher original conservado en `codigo_ejecutado`.
+Los escenarios conservados usaron el launcher original de `codigo_ejecutado`.
 Una revisión posterior corrigió el launcher raíz y el helper de `herramientas`
 para guardar también trayectorias `insolvent` que alcanzan `end-1`, manteniendo
 la conciliación y su estado real. El launcher original sólo admitía `complete`.

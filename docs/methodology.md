@@ -2,15 +2,15 @@
 
 ## Alcance vigente
 
-Esta página describe el contrato de la **BASE continua**. La
-[Índice de resultados](../results/README.md) reúne la corrección de exposición/H2,
+Esta página describe el contrato de la BASE continua. El
+[índice de resultados](../results/README.md) reúne la corrección de exposición/H2,
 el riesgo intradía y los protocolos de capital, señal, costos, ejecución,
 estrés y estabilidad.
 Las variantes se interpretan dentro de su tema y escenario; sus parámetros
 no se incorporan a BASE ni se combinan entre temas por defecto.
 
 Se comparan dos carteras independientes entre sí, condicional y permanente,
-desde **01/01/2022 hasta 31/08/2026 UTC**, intervalo
+desde 01/01/2022 hasta 31/08/2026 UTC, intervalo
 `[2022-01-01T00:00:00Z, 2026-09-01T00:00:00Z)`. Cada una comienza con 10.000 USDT.
 No se reinician capital, posiciones, ciclos ni pronósticos al cambiar de año.
 Los cortes `[2022-01-01, 2024-01-01)` y `[2024-01-01, 2026-09-01)` conservan
@@ -48,8 +48,8 @@ donde `s` es el último minuto oficial anterior al hueco. Mantiene esa ancla en
 huecos consecutivos y escala los OHLC con el mismo factor, sin agregar basis.
 La sensibilidad `last_official` mantiene constante el cierre oficial anterior.
 Sólo se admiten los 15 minutos documentados, con datos ya cerrados; las fuentes
-originales siguen intactas. La cobertura se considera **completada mediante
-aproximaciones**, no enteramente oficial. La validación estricta sigue siendo
+originales siguen intactas. La cobertura se considera completada mediante
+aproximaciones, no enteramente oficial. La validación estricta sigue siendo
 el valor predeterminado. Ver [reglas y evidencia de marks](continuous_mark_gaps.md).
 
 ## Funding y pronóstico
@@ -61,8 +61,8 @@ truncado del funding, disponible antes o en su timestamp real. Se respetan
 los milisegundos; no se usa el precio posterior ni se altera la tasa.
 Esta aproximación es distinta de los 15 huecos de velas de mark.
 
-El funding se calcula sobre el short existente **antes de los fills del mismo
-instante**: `q × mark_de_cobro × tasa`. Una tasa positiva produce un ingreso
+El funding se calcula sobre el short existente antes de los fills del mismo
+instante: `q × mark_de_cobro × tasa`. Una tasa positiva produce un ingreso
 para el short. La tasa queda disponible para señales 60 segundos después del
 cobro. Los pronósticos nunca usan las tasas futuras que después servirán como
 objetivo de H1.
@@ -76,7 +76,7 @@ medir el primer intervalo. Con duración real `d_i` en horas y
 `no_change = 168 × última_tasa / último_intervalo_horas`.
 
 El costo ex ante es `2 × fee_spot + 2 × fee_futures + 4 × slippage`:
-0,10% spot, 0,05% futuros y 1 bp de slippage por orden producen **0,34%**.
+0,10% spot, 0,05% futuros y 1 bp de slippage por orden producen 0,34%.
 Son tarifas y reglas prescritas del escenario, no una serie histórica certificada.
 
 ## Carteras, sizing y ejecución
@@ -181,7 +181,7 @@ fuera de muestra y dos límites de calendario no verificables. Los cortes se
 asignan por fecha de señal; un horizonte de diciembre de 2023 puede finalizar
 en 2024. Los horizontes solapados no son observaciones independientes.
 
-H3 se calcula en cada minuto UTC, **independientemente de las posiciones**:
+H3 se calcula en cada minuto UTC, independientemente de las posiciones:
 forecast semanal completo si pasa funding/costo, basis y operatividad; cero
 si los datos son conocidos y falla un filtro. No se resta el costo al forecast.
 Se promedian los 1.440 minutos de cada día por activo y luego BTC/ETH 50/50.
@@ -221,13 +221,13 @@ BASE/MARGEN_2X y las ventanas locales de ejecución y estrés tienen poblaciones
 Las ventanas locales no acreditan máximos intradía globales. La suspensión
 spot conserva la distinción entre precio antiguo y proxy hipotético.
 
-El comparador SOFR aprobado es una cuenta hipotética bruta USD, ACT/360,
+El comparador SOFR es una cuenta hipotética bruta USD, ACT/360,
 con paridad nominal 1 USDT = 1 USD y CAGR365. No remunera caja o garantías
 del carry ni representa un producto accesible o una rentabilidad realizada
 libre de riesgo. La sensibilidad de costos/capacidad mantiene la selección ex ante a 34 pb mientras varía
 costos, participación o capital. La sensibilidad de ejecución distingue la demora de órdenes desde
 `eligible_at` de la liquidación, que conserva prioridad. El análisis de estrés interviene
-trayectorias hipotéticas aprobadas; su recuperación impuesta y sus anclas
+trayectorias hipotéticas predefinidas; su recuperación impuesta y sus anclas
 fijas no identifican el costo causal histórico de una interrupción.
 
 El análisis de estabilidad compara cuentas nuevas desde I2023/I2024 con sus pares, separadas de los
@@ -238,7 +238,7 @@ intervalos percentiles marginales nominales 95%. Esos intervalos dependen
 de los supuestos de remuestreo y no constituyen una prueba conjunta al 95%
 de H2 ni probabilidades de ganancia futura. No ejecutan el motor.
 
-Los protocolos, límites y la síntesis integrable se consultan desde el
+Los protocolos, límites y la síntesis de resultados se consultan desde el
 [índice temático](../results/README.md). La verificación de hashes,
 la recomputación de evidencia compacta y el replay económico son alcances
 distintos; ninguno convierte reglas prescritas en historia certificada.

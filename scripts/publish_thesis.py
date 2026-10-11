@@ -5,10 +5,13 @@ import csv
 import hashlib
 import io
 import json
+import os
 import zipfile
 from datetime import date
 from decimal import Decimal as D
 from pathlib import Path
+from tempfile import TemporaryDirectory
+from urllib.parse import quote
 
 import matplotlib
 
@@ -20,6 +23,19 @@ ROOT = Path(__file__).resolve().parents[1]
 DELIVERY = ROOT / "data/evidence"
 ARCHIVE = DELIVERY / "carteras_continuas.zip"
 PUBLISHED = ROOT / "results/base/continuo"
+HISTORICAL_VIEW = "procedencia/distribucion_20261010"
+HISTORICAL_MANIFEST_SHA256 = "d2ab7b53cdd8b5ccffee21e5a319c4f55536ae35e210511d9acfaf98c475e0f7"
+HISTORICAL_SIDECAR_SHA256 = "d6ae2051a28503c2c49bf52b86b0470c3f475c3ee3eeb80799b28e9c8c5c2a63"
+HISTORICAL_GENERATOR_SHA256 = "e4ca01f6759235a155b8d8ace1b290da12264c9979d72b9426ff4398470fed36"
+EDITORIAL_DERIVATION = {
+    "schema": "continuous_editorial_view_v1",
+    "identifier": "continua_editorial_20261011",
+    "kind": "editorial",
+    "original_path": HISTORICAL_VIEW,
+    "original_manifest_sha256": HISTORICAL_MANIFEST_SHA256,
+    "adapted_members": ["README.md"],
+    "data_and_figures_regenerated": False,
+}
 TABLES = (
     "resultados_periodos",
     "actividad",
@@ -35,6 +51,7 @@ TABLES = (
 )
 NAMES = {"conditional": "Condicional", "permanent": "Permanente"}
 COLORS = {"conditional": "#146C94", "permanent": "#B65B23"}
+FIGURE_NAMES = ("equity_drawdown", "composicion_pnl", "hipotesis")
 
 
 def digest(data):
@@ -82,6 +99,13 @@ def daily_projection(content):
 
 
 def figures(files, destination):
+    """Render deterministically without inheriting or changing caller plot settings."""
+    with plt.rc_context():
+        plt.rcdefaults()
+        _figures(files, destination)
+
+
+def _figures(files, destination):
     plt.rcParams.update(
         {
             "font.family": "DejaVu Sans",
@@ -215,7 +239,15 @@ def figures(files, destination):
     save(fig, "hipotesis")
 
 
-def readme(files):
+def readme(files, destination=PUBLISHED):
+    def repository_link(relative):
+        target = ROOT / relative
+        try:
+            return quote(Path(os.path.relpath(target, destination)).as_posix(), safe="/:")
+        except ValueError:
+            # Windows cannot express a relative path across different drives.
+            return target.resolve().as_uri()
+
     metrics = rows(files["tablas/resultados_periodos.csv"])
     financial = "\n".join(
         f"| {r['period']} | {NAMES[r['strategy']]} | {D(r['starting_equity_usdt']):.2f} | {D(r['final_equity_usdt']):.2f} | "
@@ -237,7 +269,7 @@ def readme(files):
 
 **01/01/2022–31/08/2026 UTC**, ambas carteras con `futures_scaled`. Los cortes
 2022–2023 y 2024–agosto de 2026 pertenecen a las mismas trayectorias: sus saldos
-y posiciones se arrastran, sin reinicios. [Índice de la entrega](../README.md).
+y posiciones se arrastran, sin reinicios. [Resultados base]({repository_link("results/base/README.md")}).
 
 ## Rentabilidad y riesgo
 
@@ -282,10 +314,10 @@ condicional; H3 es contraria a una caída de oportunidad y CAGR entre estos cort
 - [H1 por activo y período](tablas/h1_resumen.csv),
   [H3 por activo y período](tablas/h3_resumen.csv) y
   [H3 diario conjunto](tablas/h3_diario_conjunto.csv).
-- [Sensibilidad de los 15 marks](../../../data/research/continuous-marks-20260919/README.md)
-  y [sensibilidad del precio de funding](../../../data/research/funding-price-sensitivity-20260920/README.md).
-- [ZIP con evidencia completa](../../../data/evidence/carteras_continuas.zip),
-  [metodología](../../../docs/methodology.md) y [manifiesto de esta vista](manifest.json).
+- [Sensibilidad de los 15 marks]({repository_link("data/research/continuous-marks-20260919/README.md")})
+  y [sensibilidad del precio de funding]({repository_link("data/research/funding-price-sensitivity-20260920/README.md")}).
+- [ZIP con evidencia completa]({repository_link("data/evidence/carteras_continuas.zip")}),
+  [metodología]({repository_link("docs/methodology.md")}) y [manifiesto de esta vista](manifest.json).
 
 Las tablas de resumen conservan los bytes del ZIP. `equity_diario.csv` es una
 proyección de cinco columnas sin redondear sus valores. Las tablas Markdown
@@ -314,6 +346,109 @@ o decisiones; extrapolan errores de períodos con precios conocidos a otros per�
 """
 
 
+def editorial_readme(original):
+    """Apply only the public title, navigation and explicit provenance correction."""
+    content, separator, _ = original.decode("utf-8").partition("## Procedencia\n")
+    require(separator, "Historical README lacks provenance")
+    return (content.replace(
+        "# Resultados continuos de la Entrega 3", "# Resultados de las carteras continuas", 1
+    ).replace(
+        "[Índice de la entrega](../README.md)", "[Resultados base](../README.md)", 1
+    ).replace(
+        "../paquete_actualizacion_entrega_3_continua.zip",
+        "../../../data/evidence/carteras_continuas.zip", 1,
+    ) + """## Procedencia
+
+Adaptación editorial del 11/10/2026: se actualizan el título y los enlaces de consulta.
+Las 12 tablas y las 6 figuras conservan sus bytes; no se regeneraron resultados.
+El [manifiesto vigente](manifest.json) identifica esta vista y conserva el
+[README anterior](procedencia/distribucion_20261010/README.md), el
+[manifiesto anterior](procedencia/distribucion_20261010/manifest.json) y su
+[sello](procedencia/distribucion_20261010/manifest.sha256), sin modificaciones.
+El verificador autentica ese sello y comprueba todos los miembros originales.
+""").encode("utf-8")
+
+
+def verify_editorial_derivation(destination, manifest):
+    """Authenticate the historical view independently of the current self-checksum."""
+    historical = destination / HISTORICAL_VIEW
+    requires_derivation = (
+        destination.resolve() == PUBLISHED.resolve()
+        or historical.exists()
+        or "distribution" in manifest
+        or "distribution_revision" in manifest
+        or manifest.get("generator_sha256") == HISTORICAL_GENERATOR_SHA256
+    )
+    # Fresh output directories created by publish() have their own manifests;
+    # the public view and identifiable copies must retain their original seal.
+    if not requires_derivation:
+        require(manifest.get("generator_sha256") == digest(Path(__file__).read_bytes()),
+                "Regenerated view requires its current generator identity")
+        return None
+    require(manifest.get("distribution") == EDITORIAL_DERIVATION,
+            "Unknown editorial derivation")
+    require(manifest.get("distribution_revision") == 3, "Unknown editorial revision")
+    require(all((historical / name).is_file()
+                for name in ("README.md", "manifest.json", "manifest.sha256")),
+            "Historical snapshot is missing")
+    original_bytes = (historical / "manifest.json").read_bytes()
+    require(digest(original_bytes) == HISTORICAL_MANIFEST_SHA256,
+            "Historical manifest identity differs")
+    require(digest((historical / "manifest.sha256").read_bytes()) == HISTORICAL_SIDECAR_SHA256,
+            "Historical manifest sidecar differs")
+    original = json.loads(original_bytes)
+    original_readme = (historical / "README.md").read_bytes()
+    require(digest(original_readme) == original["file_hashes"]["README.md"],
+            "Historical member differs: README.md")
+    for name, expected in original["file_hashes"].items():
+        if name != "README.md":
+            require(digest((destination / name).read_bytes()) == expected,
+                    "Historical member differs: " + name)
+    allowed_metadata = {"distribution", "distribution_revision", "file_hashes"}
+    require({k: v for k, v in manifest.items() if k not in allowed_metadata}
+            == {k: v for k, v in original.items() if k not in allowed_metadata},
+            "Historical source or generator identity differs")
+    archived_members = {f"{HISTORICAL_VIEW}/{name}"
+                        for name in ("README.md", "manifest.json", "manifest.sha256")}
+    require(set(manifest["file_hashes"]) == set(original["file_hashes"]) | archived_members,
+            "Editorial manifest membership differs")
+    require((destination / "README.md").read_bytes() == editorial_readme(original_readme),
+            "Unauthorized editorial README adaptation")
+    return {
+        "original_manifest_sha256": HISTORICAL_MANIFEST_SHA256,
+        "original_members_verified": len(original["file_hashes"]),
+        "preserved_tables_and_figures": len(original["file_hashes"]) - 1,
+        "adapted_members": ["README.md"],
+    }
+
+
+def verify_regenerated_view(destination, manifest, files):
+    """Validate a fresh view against generated content, not a self-reported seal."""
+    expected_members = {
+        "README.md", "tablas/equity_diario.csv",
+        *("tablas/" + name + ".csv" for name in TABLES),
+        *(f"figuras/{name}.{extension}" for name in FIGURE_NAMES for extension in ("png", "svg")),
+    }
+    require(set(manifest["file_hashes"]) == expected_members,
+            "Regenerated manifest membership differs")
+    require((destination / "README.md").read_bytes() == readme(files, destination).encode("utf-8"),
+            "Regenerated README differs")
+    expected_sources = {
+        "tablas/" + name + ".csv": digest(files["tablas/" + name + ".csv"])
+        for name in (*TABLES, "equity_pnl_diario")
+    }
+    require(manifest["source_members"] == expected_sources, "Regenerated source membership differs")
+    with TemporaryDirectory(prefix="continuous_view_verify_") as temporary:
+        reference = Path(temporary) / "figuras"
+        figures(files, reference)
+        for name in FIGURE_NAMES:
+            for extension in ("png", "svg"):
+                filename = f"{name}.{extension}"
+                require((destination / "figuras" / filename).read_bytes()
+                        == (reference / filename).read_bytes(),
+                        "Regenerated figure differs: " + filename)
+
+
 def verify(destination):
     files, source_hash = load_source()
     manifest_bytes = (destination / "manifest.json").read_bytes()
@@ -323,6 +458,9 @@ def verify(destination):
     )
     manifest = json.loads(manifest_bytes)
     require(manifest["source_zip_sha256"] == source_hash, "View points to a different ZIP")
+    actual = {p.relative_to(destination).as_posix() for p in destination.rglob("*") if p.is_file()}
+    require(actual == set(manifest["file_hashes"]) | {"manifest.json", "manifest.sha256"},
+            "View manifest membership differs")
     for name, expected in manifest["file_hashes"].items():
         path = (destination / name).resolve()
         require(
@@ -331,6 +469,7 @@ def verify(destination):
         )
     for name, expected in manifest["source_members"].items():
         require(digest(files[name]) == expected, "Source member differs: " + name)
+    derivation = verify_editorial_derivation(destination, manifest)
     for name in TABLES:
         relative = "tablas/" + name + ".csv"
         require(
@@ -341,13 +480,15 @@ def verify(destination):
         == daily_projection(files["tablas/equity_pnl_diario.csv"]),
         "Daily equity projection differs",
     )
+    if derivation is None:
+        verify_regenerated_view(destination, manifest, files)
     for path in (destination / "figuras").glob("*.png"):
         with Image.open(path) as img:
             require(
                 all(abs(dpi - 300) < 0.01 for dpi in img.info["dpi"]), "Figure resolution differs"
             )
             img.verify()
-    return dict(
+    result = dict(
         status="verified",
         source_zip_sha256=source_hash,
         original_tables=len(TABLES),
@@ -355,6 +496,9 @@ def verify(destination):
         figures=6,
         published_files=len(manifest["file_hashes"]),
     )
+    if derivation is not None:
+        result["editorial_derivation"] = derivation
+    return result
 
 
 def publish(destination):
@@ -371,7 +515,7 @@ def publish(destination):
         daily_projection(files["tablas/equity_pnl_diario.csv"])
     )
     figures(files, destination / "figuras")
-    (destination / "README.md").write_text(readme(files), encoding="utf-8", newline="\n")
+    (destination / "README.md").write_text(readme(files, destination), encoding="utf-8", newline="\n")
     manifest = dict(
         source_zip=ARCHIVE.name,
         source_zip_sha256=source_hash,
@@ -394,8 +538,10 @@ def publish(destination):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--verify", action="store_true")
-    parser.add_argument("--output", type=Path, default=PUBLISHED)
+    parser.add_argument("--verify", action="store_true",
+                        help="Verify the public view with its authenticated historical snapshot")
+    parser.add_argument("--output", type=Path, default=PUBLISHED,
+                        help="New generated destination; verifying it requires the same generator version")
     args = parser.parse_args()
     destination = args.output.resolve()
     print(json.dumps(verify(destination) if args.verify else publish(destination), indent=2))

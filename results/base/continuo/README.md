@@ -1,8 +1,8 @@
-# Resultados continuos de la Entrega 3
+# Resultados de las carteras continuas
 
 **01/01/2022–31/08/2026 UTC**, ambas carteras con `futures_scaled`. Los cortes
 2022–2023 y 2024–agosto de 2026 pertenecen a las mismas trayectorias: sus saldos
-y posiciones se arrastran, sin reinicios. [Índice de la entrega](../README.md).
+y posiciones se arrastran, sin reinicios. [Resultados base](../README.md).
 
 ## Rentabilidad y riesgo
 
@@ -56,7 +56,7 @@ condicional; H3 es contraria a una caída de oportunidad y CAGR entre estos cort
   [H3 diario conjunto](tablas/h3_diario_conjunto.csv).
 - [Sensibilidad de los 15 marks](../../../data/research/continuous-marks-20260919/README.md)
   y [sensibilidad del precio de funding](../../../data/research/funding-price-sensitivity-20260920/README.md).
-- [ZIP con evidencia completa](../paquete_actualizacion_entrega_3_continua.zip),
+- [ZIP con evidencia completa](../../../data/evidence/carteras_continuas.zip),
   [metodología](../../../docs/methodology.md) y [manifiesto de esta vista](manifest.json).
 
 Las tablas de resumen conservan los bytes del ZIP. `equity_diario.csv` es una
@@ -86,7 +86,10 @@ o decisiones; extrapolan errores de períodos con precios conocidos a otros per�
 
 ## Procedencia
 
-Distribución editorial del 10/10/2026. Las tablas y figuras conservan los bytes
-originales; se actualiza el ejemplo de destino de reproducción. El [manifiesto](manifest.json)
-registra las identidades del ZIP, sus fuentes, el generador, el sello original y
-su copia íntegra en el archivo externo `Backtesting_antecedentes`.
+Adaptación editorial del 11/10/2026: se actualizan el título y los enlaces de consulta.
+Las 12 tablas y las 6 figuras conservan sus bytes; no se regeneraron resultados.
+El [manifiesto vigente](manifest.json) identifica esta vista y conserva el
+[README anterior](procedencia/distribucion_20261010/README.md), el
+[manifiesto anterior](procedencia/distribucion_20261010/manifest.json) y su
+[sello](procedencia/distribucion_20261010/manifest.sha256), sin modificaciones.
+El verificador autentica ese sello y comprueba todos los miembros originales.

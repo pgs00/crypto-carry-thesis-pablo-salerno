@@ -23,9 +23,17 @@
       "path": "results/base/continuo",
       "original_path": "entregas/entrega_3/continua_distribucion_20261010",
       "manifest": "manifest.json",
-      "manifest_sha256": "d2ab7b53cdd8b5ccffee21e5a319c4f55536ae35e210511d9acfaf98c475e0f7",
-      "members_relocated_without_modification": true,
-      "sidecar_sha256": "d6ae2051a28503c2c49bf52b86b0470c3f475c3ee3eeb80799b28e9c8c5c2a63"
+      "manifest_sha256": "eceeaaa444a237c613c9a18d1bcfaedf99884f5315093cc9ed485a0bb457c0fa",
+      "members_relocated_without_modification": false,
+      "sidecar_sha256": "a33b78a5b76ab09a2def5def257a9d7a9c3728263c8fb76d897aeeb69fcb64a4",
+      "original_manifest_sha256": "d2ab7b53cdd8b5ccffee21e5a319c4f55536ae35e210511d9acfaf98c475e0f7",
+      "original_sidecar_sha256": "d6ae2051a28503c2c49bf52b86b0470c3f475c3ee3eeb80799b28e9c8c5c2a63",
+      "original_manifest_path": "results/base/continuo/procedencia/distribucion_20261010/manifest.json",
+      "adapted_members": [
+        "README.md"
+      ],
+      "scientific_members_preserved_without_modification": 18,
+      "adaptation": "Adaptación editorial con snapshot original autenticado; tablas y figuras sin regenerar."
     },
     {
       "path": "data/evidence/ventanas_independientes",
@@ -212,13 +220,6 @@
       "sha256": "a77a5a610815d6d1b2933edec8a224ed337176a4684caf8fcb662e6b5a177eaa",
       "original_path": "entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/controles_finales_corregidos/verificacion_offline.txt",
       "original_sha256": "a77a5a610815d6d1b2933edec8a224ed337176a4684caf8fcb662e6b5a177eaa"
-    },
-    {
-      "path": "Tesina_Pablo_Salerno.pdf",
-      "bytes": 587110,
-      "sha256": "f98df37bee61164948e2b26537c6aadebf77335aa60b37ceace27ffa029ea3fb",
-      "original_path": "entregas/entrega_4/documento_final/Tesina_Entregas_3_y_4_Pablo_Salerno.pdf",
-      "original_sha256": "f98df37bee61164948e2b26537c6aadebf77335aa60b37ceace27ffa029ea3fb"
     },
     {
       "path": "configs/reglas_historicas/BASE_E3.toml",
@@ -434,8 +435,8 @@
   "editorial_files": [
     {
       "path": "README.md",
-      "bytes": 2819,
-      "sha256": "f81bb52b6f270047d8344cd248baadf1ec47f67e7f0d9bedc1f470662b38dd50",
+      "bytes": 2613,
+      "sha256": "aaeddcc775d561a836e956807c42306b20b6f490e74df5f9d060376d5e64cc5c",
       "original_path": "README.md",
       "original_sha256": "c647063398fa60915920b259f684088f57e9780a0c5aa407bb6e19eb0cf2c32a",
       "adaptation": "Presentacion tematica y localizacion de fuentes; sin cambios de calculo."
@@ -458,8 +459,8 @@
     },
     {
       "path": "data/research/README.md",
-      "bytes": 3305,
-      "sha256": "de27944645e2170781389e59dad37bd161417c7770c06b084357094224d56ab1",
+      "bytes": 3327,
+      "sha256": "4ea9b03644ff101e687248d7946bd81aed59db51f4893816bd3b002c879798f3",
       "original_path": "data/research/README.md",
       "original_sha256": "42bb53432bf5ee412c6d4f0ab653433243aeecf56b035d82280d2291c6cfc22d",
       "adaptation": "Presentacion tematica y localizacion de fuentes; sin cambios de calculo."
@@ -514,74 +515,74 @@
     },
     {
       "path": "docs/methodology.md",
-      "bytes": 16389,
-      "sha256": "c2e046259879b61795a0eed811f3181c99cdf17abebe304440eeafbdda08c795",
+      "bytes": 16362,
+      "sha256": "0c23fbbdebe8fb238f2a3b0a8dcd4bc137d1b8e8795927a25ccf8e54350fecb9",
       "original_path": "docs/methodology.md",
       "original_sha256": "a92c56446d2f2f11332dadeb3dec89bbbad24e9fea7795f2f326004bb2bc7316",
       "adaptation": "Presentacion tematica y localizacion de fuentes; sin cambios de calculo."
     },
     {
       "path": "docs/procedencia/README.md",
-      "bytes": 2123,
-      "sha256": "8008e5ff49feaddc6ba0d1fe61b40d81df110bf6139817fe40466098d8b5551e"
+      "bytes": 4030,
+      "sha256": "dfc5b5f1817ed2328fa546300d404d24b2aaade7d7c57ff932f5491da816b530"
     },
     {
       "path": "docs/procedencia/rutas.json",
-      "bytes": 3998,
-      "sha256": "c61b55e5ee68178b0d6fe0c588c7e41c38de67cb2458206395a898afe2bcfacf"
+      "bytes": 4426,
+      "sha256": "e5aba45848d1aed575277a45d885a4bcb3cacec0bb1b854ae1356ca9d740a651"
     },
     {
       "path": "docs/reglas_historicas/decisiones_integracion.md",
-      "bytes": 12189,
-      "sha256": "bc33910c445895c2e6a9280fe9fa1ce3d3f4c6a2ff93f268f69ab7ff321faa0c",
+      "bytes": 12131,
+      "sha256": "234448c684ed0ee2d58d5891046295967a0fa10530289f58ca0c4efbc7d5350b",
       "original_path": "docs/entrega_4/reglas_historicas/decisiones_integracion.md",
       "original_sha256": "4c729a6bec7bcd827381bf8f9aa1da0e0a76fd6a999e9ef455a238c11c039d17",
       "adaptation": "Presentacion tematica y localizacion de fuentes; sin cambios de calculo."
     },
     {
       "path": "docs/reglas_historicas/lectura_resultados.md",
-      "bytes": 10947,
-      "sha256": "8101ea0ea95f8af8f2c6a3901cc8f0a4495924b4289482dc8cc0145507ba6859",
+      "bytes": 10900,
+      "sha256": "0f0550c11f2773f4944c66f08303e96c4f8a7418fd4d4ba669bd2d5dab8c35eb",
       "original_path": "docs/entrega_4/reglas_historicas/lectura_resultados.md",
       "original_sha256": "5b4b3b68742351c37145fa6ba3d963c1c18e45b879b52760bb747681b2b30085",
       "adaptation": "Presentacion tematica y localizacion de fuentes; sin cambios de calculo."
     },
     {
       "path": "docs/reglas_historicas/protocolo.md",
-      "bytes": 8024,
-      "sha256": "5e00ac897d436ff09a8e97fdfba9b467968fdcbfc658ba276233a472963d3dec",
+      "bytes": 8067,
+      "sha256": "40df6829d72772f3c4acaffa2f09e45e6ff07fd63cbfdc34d8f3b96f5751873b",
       "original_path": "docs/entrega_4/reglas_historicas/protocolo.md",
       "original_sha256": "b4dbdffa74423da6f9080ecb43b62321f9be2d058e798e0eca0c7f7a49b4ba55",
       "adaptation": "Presentacion tematica y localizacion de fuentes; sin cambios de calculo."
     },
     {
       "path": "docs/reglas_historicas/reproduccion.md",
-      "bytes": 5228,
-      "sha256": "f663f893bb4bd4f5a4e90b672c5bb2ef8d701f9eb5babd18c09c780e6a936bd6",
+      "bytes": 5187,
+      "sha256": "b88a15d29e54991be693654ed4fa0497179b9ef195b3cabb13165ce3faca9957",
       "original_path": "docs/entrega_4/reglas_historicas/reproduccion.md",
       "original_sha256": "06c1efb99a6508c28fb749eab123eb47f8740bb2e9e12f965d158c834ff9ded8",
       "adaptation": "Presentacion tematica y localizacion de fuentes; sin cambios de calculo."
     },
     {
       "path": "docs/reglas_historicas/verificacion_publicacion.md",
-      "bytes": 6947,
-      "sha256": "29b4d84caa1288202cfb07bb4f1bbf42fff9a364d8300760e0bd0aad37393e4f",
+      "bytes": 6742,
+      "sha256": "6711d15ed841cd84c897522e7c11595d64390471e3f77d1b0276ed1f75cb6aee",
       "original_path": "docs/entrega_4/reglas_historicas/verificacion_publicacion.md",
       "original_sha256": "6856c4a94e963827f76d320011b130920981f708b18edecbd494ea810c7c6f1f",
       "adaptation": "Presentacion tematica y localizacion de fuentes; sin cambios de calculo."
     },
     {
       "path": "docs/reproduction.md",
-      "bytes": 11895,
-      "sha256": "9e7c3afb444ab5913bd96f8afe5687ecd45003b821ecf93849c8449930e53024",
+      "bytes": 11826,
+      "sha256": "677cf4d32e29c54f2e6fcb5307ed129063fe358f2b939f9cd4bb80c31f4a1c7c",
       "original_path": "docs/reproduction.md",
       "original_sha256": "34028db4e119e5d6d14daa1ef49fed47c8f083fd6a6c3ab5d0fb74cac04ad73f",
       "adaptation": "Presentacion tematica y localizacion de fuentes; sin cambios de calculo."
     },
     {
       "path": "docs/research/README.md",
-      "bytes": 9035,
-      "sha256": "386747418ca83f39bf23e3996f51acdada9819bfe1e013a1be8eb4f1101b59af",
+      "bytes": 8959,
+      "sha256": "ff2cde1110ccaed7ded509d70aa62fdbc6169c3d5a244abe7e360dd483cf1a1b",
       "original_path": "docs/research/README.md",
       "original_sha256": "3dfd3bd819f3e9ebece91daaff6b265599cf9647118ccb3a9c18807fb99ec892",
       "adaptation": "Presentacion tematica y localizacion de fuentes; sin cambios de calculo."
@@ -692,55 +693,55 @@
     },
     {
       "path": "results/README.md",
-      "bytes": 4043,
-      "sha256": "97a9947d5867a86ed0860ed82b2a394747aeb080df56dabd7b728b1b82f0ae9a"
+      "bytes": 4056,
+      "sha256": "ad10764ce11d7b85f2b27811f2fd464307e5e81656bb4b21c597a66cc16de462"
     },
     {
       "path": "results/base/README.md",
-      "bytes": 14989,
-      "sha256": "55fe0e37e1aaef948baa94a28b29130881423544d6c7294f5e4fa7417b24eaa9",
+      "bytes": 14461,
+      "sha256": "7cc1fd95da8ce2a877bc09788daf0c105ce9255bdb9aeedbbdad9c0de69f759b",
       "source_path": "results/base/evidencia/comparacion/reporte.md",
       "adaptation": "Proyeccion editorial; tablas, formulas, escenarios y limites preservados."
     },
     {
       "path": "results/benchmark_sofr/README.md",
-      "bytes": 11432,
-      "sha256": "0eaf1f37f583de4b549eb8017144b545964046acb83e32c225da6fbf3c0c94af",
+      "bytes": 11101,
+      "sha256": "af00c843c4975d6064c7b71543636fd119c3099a12f3707dfcb522b2c895dff5",
       "source_path": "results/benchmark_sofr/evidencia/reporte.md",
       "adaptation": "Proyeccion editorial; tablas, formulas, escenarios y limites preservados."
     },
     {
       "path": "results/capital/README.md",
-      "bytes": 18349,
-      "sha256": "005b7e555664ffa4aff8833dab1e29538d5ae3a6a3630c4670881bbb076f8aaf",
+      "bytes": 17520,
+      "sha256": "68e977a5b0f51ddc077d363171c26101990ad195de8913045f719ebcb1b19797",
       "source_path": "results/capital/evidencia/reporte.md",
       "adaptation": "Proyeccion editorial; tablas, formulas, escenarios y limites preservados."
     },
     {
       "path": "results/costos_capacidad/README.md",
-      "bytes": 29674,
-      "sha256": "579178e3f9e8399ef0ab42871c044db53bba5d848cf2f24ea253c6433015f726",
+      "bytes": 29237,
+      "sha256": "43ac3c07c710986dcbcfde3c048eef630f9adba87aa452fb8f88fe090c09d6ad",
       "source_path": "results/costos_capacidad/evidencia/reporte.md",
       "adaptation": "Proyeccion editorial; tablas, formulas, escenarios y limites preservados."
     },
     {
       "path": "results/ejecucion/README.md",
-      "bytes": 15585,
-      "sha256": "2271207ae6ce18f874cecc07151b9b43dc1412ef542ec3de1606ab7ae13993c2",
+      "bytes": 15020,
+      "sha256": "159672ee1629150f6deddaba746e7472d00bc363034472934336aca227b8ffe6",
       "source_path": "results/ejecucion/evidencia/reporte.md",
       "adaptation": "Proyeccion editorial; tablas, formulas, escenarios y limites preservados."
     },
     {
       "path": "results/estabilidad/README.md",
-      "bytes": 7346,
-      "sha256": "2cfa5a366868a037786113fd90cf6f7520dfde1ca74ba6babb68c766b46698a4",
+      "bytes": 7131,
+      "sha256": "6483a3777b433b5fa165e42918de3b62259d0f5591b00268c308efaa875dfa73",
       "source_path": "results/estabilidad/evidencia/reporte.md",
       "adaptation": "Proyeccion editorial; tablas, formulas, escenarios y limites preservados."
     },
     {
       "path": "results/estres/README.md",
-      "bytes": 18712,
-      "sha256": "43ce43502b49b4c6fbd763511d7e76db003d738af5dddb9c7c2bb6945cc0d1c8",
+      "bytes": 17991,
+      "sha256": "7235eb72b3581006ebbf221cf5aa04779b99f23702292eabf8980c580ba21dc5",
       "source_path": "results/estres/evidencia/reporte.md",
       "adaptation": "Proyeccion editorial; tablas, formulas, escenarios y limites preservados."
     },
@@ -754,17 +755,31 @@
     },
     {
       "path": "results/riesgo/README.md",
-      "bytes": 54489,
-      "sha256": "ad402fdeb5352383ef9698c763f583bd965a08887291d3251eae4cb740eced09",
+      "bytes": 51792,
+      "sha256": "68ca337b53810a9548f8c47a329aa3d574c50a6d21d8ece2868ebc00e8f8f53c",
       "source_path": "results/riesgo/evidencia/reporte.md",
       "adaptation": "Proyeccion editorial; tablas, formulas, escenarios y limites preservados."
     },
     {
       "path": "results/senal/README.md",
-      "bytes": 25117,
-      "sha256": "5399486a63121362fd133c7f418501bcf5ca2f061be71744d02d4ba5f9b1bf8c",
+      "bytes": 24542,
+      "sha256": "22ba0d6babd5babbf30aaf5f9a5bb9f426f3fb7e371f95d585ec65f1322d270b",
       "source_path": "results/senal/evidencia/reporte.md",
       "adaptation": "Proyeccion editorial; tablas, formulas, escenarios y limites preservados."
+    },
+    {
+      "path": "Tesina_Pablo_Salerno.pdf",
+      "bytes": 579013,
+      "sha256": "30165213296893aaad279e6535c171d3a12901ea1a39b77accc1b3360a6757f0",
+      "original_path": "entregas/entrega_4/documento_final/Tesina_Entregas_3_y_4_Pablo_Salerno.pdf",
+      "original_sha256": "f98df37bee61164948e2b26537c6aadebf77335aa60b37ceace27ffa029ea3fb",
+      "adaptation": "Exportación desde DOCX correspondiente al PDF original: presentación final, redacción, viñetas, navegación y declaración de IA; tablas, fórmulas y figuras preservadas.",
+      "editable_source": {
+        "path_outside_repository": "../Informes/Tesina_Pablo_Salerno.docx",
+        "sha256": "b3b26628f175e6372643766adbb62523ac10f1c9cb1db3d7f9c682bd0082982d"
+      },
+      "pages": 24
     }
-  ]
+  ],
+  "editorial_revision": "presentacion_final_20261011"
 }

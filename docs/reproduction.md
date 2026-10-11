@@ -16,9 +16,9 @@ identifican las fuentes; leerlos no equivale a volver a verificarlas.
 ## 2. Verificación offline de evidencia compacta
 
 Los comandos siguientes usan los verificadores incluidos en las distribuciones
-vigentes. Sus adaptaciones documentales comprueban la identidad nueva y conservan
-los controles científicos; no requieren los prompts retirados ni Git.
-Requieren **Python 3.14** y las dependencias de [pyproject.toml](../pyproject.toml)
+vigentes. Comprueban la identidad de cada distribución y conservan los controles
+científicos de sus fuentes; no requieren Git.
+Requieren Python 3.14 y las dependencias de [pyproject.toml](../pyproject.toml)
 y [uv.lock](../uv.lock); el entorno local de referencia usa Python 3.14.3
 en Windows. En Linux se comprobó una diferencia de últimos dígitos que hace
 fallar la comparación literal del CSV de intervalos de estabilidad, aunque sus controles
@@ -37,7 +37,7 @@ Los verificadores posteriores no requieren red ni `D:/Backtesting`.
 No ejecutar `uv sync` dentro de un paquete sellado. Sus copias de código/lock
 fijan la procedencia; el entorno reutilizado queda fuera de las evidencias.
 
-Desde la **raíz del repositorio**, parametrizar ubicación y salida. La matriz
+Desde la raíz del repositorio, parametrizar ubicación y salida. La matriz
 resuelve las rutas vigentes; si se trasladan paquetes, reemplazar sus valores
 en `$paquetes` y `$padre`. Elegir siempre una carpeta de auditoría nueva y
 externa a todos los paquetes; los JSON/logs son los únicos productos esperados.
@@ -107,7 +107,7 @@ if (Test-Path -LiteralPath $presentacion) { throw 'Elegir una salida nueva' }
 ```
 
 El paquete continuo tiene miembros directamente en la raíz del ZIP. Autenticarlo
-contra su sidecar conservado **antes** de extraer. No volver a crear checksums:
+contra su sidecar conservado antes de extraer. No volver a crear checksums:
 
 ```powershell
 function Expand-AuthenticatedE3([string]$zip, [string]$destination) {
@@ -133,7 +133,7 @@ de ventanas independientes se comprueba directamente, sin extraer los ZIP retira
 herramientas, fuentes y límites. Los scripts históricos de construcción conservan
 su contexto original y no deben sobrescribir ninguna distribución.
 
-La corrección BASE recibe una **ruta de directorio** mediante `--e3-reference`,
+La corrección BASE recibe una ruta de directorio mediante `--e3-reference`,
 no el ZIP. Después de la extracción autenticada anterior, el ejemplo editorial
 sin replay es:
 
@@ -210,9 +210,8 @@ python -B -X utf8 -m scripts.verify_product
 python -B -X utf8 -m scripts.verify_documentation
 ```
 
-El PDF final conserva el contenido y la portada histórica. No se dispone de
-una fuente editable final autenticada; la presentación se entrega sin
-reconstrucción del documento desde el PDF.
+La [procedencia documental](procedencia/README.md) identifica la fuente editable
+utilizada para exportar el PDF y distingue las versiones de consulta disponibles.
 
 [capital-guia]: ../results/capital/README.md
 [b5-limites]: ../results/estres/evidencia/reproducibilidad.md

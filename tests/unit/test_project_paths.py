@@ -36,6 +36,20 @@ def test_historical_path_cannot_escape_its_mapped_source():
         resolve_recorded_path("entregas/entrega_4/reglas_historicas/20260925T005436Z/../../secret")
 
 
+@pytest.mark.parametrize("name", ["README.md", "manifest.json", "manifest.sha256"])
+def test_historical_continuous_metadata_resolves_to_its_preserved_bytes(name):
+    old = "entregas/entrega_3/continua_distribucion_20261010/" + name
+    expected = ROOT / "results/base/continuo/procedencia/distribucion_20261010" / name
+    assert resolve_recorded_path(old) == expected
+    assert expected.is_file()
+
+
+def test_historical_continuous_tables_keep_the_active_location():
+    relative = "tablas/resultados_periodos.csv"
+    old = "entregas/entrega_3/continua_distribucion_20261010/" + relative
+    assert resolve_recorded_path(old) == ROOT / "results/base/continuo" / relative
+
+
 def test_recorded_dependencies_exist_and_keep_their_original_identity():
     source = ROOT / "results/senal/evidencia/documentos/autenticacion_referencias.json"
     references = json.loads(source.read_text(encoding="utf-8"))

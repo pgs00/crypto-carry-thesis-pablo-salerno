@@ -1,15 +1,15 @@
-# Primera tanda de sensibilidad de reglas — protocolo previo
+# Sensibilidad de reglas: protocolo de los seis escenarios
 
-Estado: protocolo previo de sensibilidad de reglas, pendiente de comentarios del profesor. No reemplaza la referencia continua. Se fija antes de observar resultados nuevos; no se seleccionan variantes por rentabilidad.
+Este protocolo fija la sensibilidad de reglas antes de observar sus resultados. Conserva la referencia continua y sus parámetros; las variantes no se seleccionan por rentabilidad. Los resultados y la corrección de exposición/H2 se presentan en la [lectura de BASE](../../results/base/README.md).
 
-## Orden y protección
+## Secuencia de validación
 
-1. Resolver la verificación de publicación fuera del paquete sellado. El verificador original y sus resultados se conservan como evidencia de aquella sesión, sin ejecutarlos sobre el original.
+1. Verificar la integridad y procedencia fuera del paquete sellado. El verificador original y sus resultados conservan su alcance histórico.
 2. Completar la matriz de integración, separar observaciones, vigencias verificadas y supuestos, y verificar código, configuración, datos y resultados BASE_E3.
 3. Probar la extensión con casos pequeños y con una reproducción acotada de la base antes/después. Ejecutar después las cinco variantes, con dos carteras independientes cada una. Reutilizar la base completa sólo tras verificarla.
 4. Conciliar resultados, H1/H2/H3 y exposición a reglas parciales. Verificar el paquete nuevo, la publicación original, la referencia continua y la suite completa.
 
-No se modifica el índice, HEAD, las configuraciones ni los resultados anteriores. No hay commit ni push. El inventario previo está en `data/evidence/reglas_historicas/estado_inicial.json`. Se verifican además los originales externos mediante hashes completos. Los resultados nuevos se escriben exclusivamente en carpetas nuevas.
+Las configuraciones y los resultados anteriores se conservan. El inventario previo está en `data/evidence/reglas_historicas/estado_inicial.json`. Los originales externos se autentican mediante hashes completos; cada reproducción escribe en una carpeta nueva.
 
 ## Base y comparadores fijados
 
@@ -24,7 +24,7 @@ Ventana continua `[2022-01-01T00:00:00Z, 2026-09-01T00:00:00Z)`. Capital inicial
 | FUT4_DECISION | Igual a FUT4_REALIZADA | Entrada 0,0032; renovación 0 | FUT4_REALIZADA |
 | MARGEN_2X | Igual a BASE_E3 | Igual a BASE_E3 | BASE_E3 |
 
-MARGEN_2X duplica coherentemente la tasa de mantenimiento y la deducción en cada tramo. Conserva pisos, techos, apalancamiento inicial 2x, comisiones y umbrales de salida. No se cruzan factores ni se ejecuta una segunda tanda.
+MARGEN_2X duplica coherentemente la tasa de mantenimiento y la deducción en cada tramo. Conserva pisos, techos, apalancamiento inicial 2x, comisiones y umbrales de salida. Los factores se evalúan por separado; las sensibilidades adicionales de reglas quedan fuera del alcance ejecutado.
 
 ## Evidencia, supuestos y reloj
 
@@ -36,7 +36,7 @@ Los cambios de la promoción son fronteras exactas de minuto. Para ejecuciones n
 
 Compras spot descuentan comisión en unidades base; ventas spot y futuros pagan USDT. Los fees nativos siguen en cero. Slippage permanece incorporado al precio y se informa, sin restarlo otra vez. Funding se liquida antes de fills de la misma frontera.
 
-## Extensión y pruebas previstas
+## Extensión y controles
 
 Dos controles opt-in: calendario de comisión BTC spot y elección de tarifas para el costo de decisión. Los valores por defecto conservan comportamiento y serialización de configuraciones previas. Las reglas estrictas y su validación de cobertura no se relajan. La salida del escritor de corridas admite un destino explícito nuevo sin alterar la raíz de lectura de datos.
 
@@ -54,4 +54,4 @@ Las conciliaciones usan Decimal y tablas primitivas: variación de equity = fund
 
 ## Resultados y portabilidad
 
-Reporte comparativo, registro de ejecución, tablas CSV, figuras, configuraciones efectivas, manifiestos, fuentes por fact_id/source_id, matriz y diagnóstico de cobertura pendiente. El verificador nuevo del paquete será offline y de sólo lectura; no exigirá el mismo HEAD ni índice. La entrega diferenciará comprobaciones locales de publicación: este trabajo queda sin commit ni push.
+La evidencia incluye reporte comparativo, registro de ejecución, tablas CSV, figuras, configuraciones efectivas, manifiestos, fuentes por fact_id/source_id, matriz y diagnóstico de cobertura pendiente. La [guía de reproducción](../reproduction.md) distingue la verificación offline de evidencia compacta de la reproducción del motor y detalla sus dependencias. Los certificados históricos conservan su fecha y alcance.

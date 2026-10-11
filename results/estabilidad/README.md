@@ -1,7 +1,5 @@
 # Estabilidad temporal e incertidumbre
 
-Lectura temática del [reporte original autenticado](evidencia/reporte.md), conservado íntegro junto con sus tablas, figuras, fórmulas y límites. La [guía de reproducción](../../docs/reproduction.md) fija la comprobación vigente; los escenarios se mantienen separados. Las referencias administrativas del reporte original conservan su fecha y alcance.
-
 Se comparan cuatro cuentas nuevas desde 10.000 USDT, sin posiciones heredadas, con
 los tramos coincidentes de BASE continua iniciada en 2022. Las cuentas continuas
 conservan el patrimonio, el inventario, los ciclos y los costos acumulados reales.
@@ -80,7 +78,7 @@ los cuantiles finitos se identifican como condicionales a evaluabilidad.
 Ver [efectos, intervalos y degeneración](evidencia/tablas/bootstrap_intervalos.csv),
 [protocolo y cobertura estadística](evidencia/estadistica/protocolo.json) y [síntesis](evidencia/sintesis.md).
 Las excepciones favorables H336, A100, L01 y contrafactuales deben conservarse por
-período. El diagnóstico de logs y estados de señal y costos/capacidad (identidad histórica B2/B3) registra {'rama_no_activada': 28}. Corridas pendientes o afectadas: ninguna según la cobertura documentada. Su criterio y cobertura constan en la síntesis; no se ejecutaron replays históricos. SOFR es una comparación hipotética bruta;
+período. El diagnóstico de logs y estados de señal y costos/capacidad (identidad histórica B2/B3) registra 28 corridas con la rama de liquidación no activada y ninguna afectada dentro de esa cobertura. Su criterio y cobertura constan en la síntesis; no se ejecutaron replays históricos ni se demuestra equivalencia universal. SOFR es una comparación hipotética bruta;
 no es una cuenta realizada comparable en riesgo. El drawdown de este informe es
 diario: riesgo intradía global y ventanas locales permanecen separados en sus fuentes.
 
@@ -102,3 +100,5 @@ Mecanismo estadístico: [CircularBlockBootstrap](https://bashtage.github.io/arch
 La documentación respalda el mecanismo, no los parámetros ni la estratificación elegidos.
 
 ![Incertidumbre BASE](evidencia/figuras/04_incertidumbre_base.png)
+
+Procedencia: [reporte original](evidencia/reporte.md) y [autenticación](../../docs/procedencia/README.md).

@@ -1,21 +1,19 @@
 # Precio de ejecución y demoras
 
-Lectura temática del [reporte original autenticado](evidencia/reporte.md), conservado íntegro junto con sus tablas, figuras, fórmulas y límites. La [guía de reproducción](../../docs/reproduction.md) fija la comprobación vigente; los escenarios se mantienen separados. Las referencias administrativas del reporte original conservan su fecha y alcance.
-
 [Lectura comparada de precio, actividad, capital, riesgo e hipótesis](evidencia/lectura_resultados.md).
 
-**Seis variantes separadas, doce carteras nuevas y dos BASE reutilizadas verificadas.** BTCUSDT/ETHUSDT, UTC [01/01/2022,01/09/2026), 10.000 USDT por cartera. Cada trayectoria es continua y conserva saldos entre los ocho períodos. La condición local y la ausencia de acreditación de publicación en GitHub corresponden al registro original; estas cifras conservan el alcance de la matriz de ejecución.
+Seis variantes separadas, doce carteras nuevas y dos BASE reutilizadas verificadas. BTCUSDT/ETHUSDT, UTC [01/01/2022,01/09/2026), 10.000 USDT por cartera. Cada trayectoria es continua y conserva saldos entre los ocho períodos.
 
 [Síntesis](evidencia/sintesis.md) · [Protocolo](evidencia/documentos/protocolo.md) · [Corridas y comandos](evidencia/indice_corridas.json) · [Auditoría](evidencia/auditoria_ejecucion.md) · [Casos](evidencia/incidentes.md) · [Reproducción](evidencia/README.md)
 
 ## Resultados principales
 
-**E_OHLC4** — conditional: P&L 793.09 USDT, diferencia con BASE 7.33 USDT; permanent: P&L 1657.44 USDT, diferencia con BASE -22.63 USDT.
-**L01** — conditional: P&L 805.46 USDT, diferencia con BASE 19.70 USDT; permanent: P&L 1518.50 USDT, diferencia con BASE -161.57 USDT.
-**L05** — conditional: P&L 616.45 USDT, diferencia con BASE -169.31 USDT; permanent: P&L 1544.95 USDT, diferencia con BASE -135.12 USDT.
-**LC01** — conditional: P&L 760.21 USDT, diferencia con BASE -25.56 USDT; permanent: P&L 1517.24 USDT, diferencia con BASE -162.83 USDT.
-**LC05** — conditional: P&L 738.41 USDT, diferencia con BASE -47.35 USDT; permanent: P&L 1421.23 USDT, diferencia con BASE -258.84 USDT.
-**LC15** — conditional: P&L 604.49 USDT, diferencia con BASE -181.28 USDT; permanent: P&L 1512.01 USDT, diferencia con BASE -168.06 USDT.
+E_OHLC4 — conditional: P&L 793.09 USDT, diferencia con BASE 7.33 USDT; permanent: P&L 1657.44 USDT, diferencia con BASE -22.63 USDT.
+L01 — conditional: P&L 805.46 USDT, diferencia con BASE 19.70 USDT; permanent: P&L 1518.50 USDT, diferencia con BASE -161.57 USDT.
+L05 — conditional: P&L 616.45 USDT, diferencia con BASE -169.31 USDT; permanent: P&L 1544.95 USDT, diferencia con BASE -135.12 USDT.
+LC01 — conditional: P&L 760.21 USDT, diferencia con BASE -25.56 USDT; permanent: P&L 1517.24 USDT, diferencia con BASE -162.83 USDT.
+LC05 — conditional: P&L 738.41 USDT, diferencia con BASE -47.35 USDT; permanent: P&L 1421.23 USDT, diferencia con BASE -258.84 USDT.
+LC15 — conditional: P&L 604.49 USDT, diferencia con BASE -181.28 USDT; permanent: P&L 1512.01 USDT, diferencia con BASE -168.06 USDT.
 H2, muestra completa: BASE_E3 no_favorable, E_OHLC4 no_favorable, L01 favorable, L05 no_favorable, LC01 no_favorable, LC05 no_favorable, LC15 no_favorable.
 H3, contraste original: BASE_E3 contraria, E_OHLC4 contraria, L01 contraria, L05 contraria, LC01 contraria, LC05 contraria, LC15 contraria.
 
@@ -52,13 +50,13 @@ Las sensibilidades no son estimaciones probabilísticas ni seleccionan una polí
 | LC05 | VWAP | 300 s | close_perp y close_spot |
 | LC15 | VWAP | 900 s | close_perp y close_spot |
 
-LC es una regla global para todo cierre cliente, cualquiera sea su motivo; sustituye el alcance por episodios de la antigua propuesta. Liquidate tiene cero demora adicional. El cierre spot posterior conserva su demora cliente. Las seis variantes no se cruzan entre sí ni adoptan parámetros de otras sensibilidades; se conserva el modo BASE `realized`, umbral de entrada 34 pb, horizonte/holding 168 h, sizing joint_quantity, costos, cupos y calendario.
+LC es una regla global para todo cierre cliente, cualquiera sea su motivo; no se limita a los episodios catalogados. Liquidate tiene cero demora adicional. El cierre spot posterior conserva su demora cliente. Las seis variantes no se cruzan entre sí ni adoptan parámetros de otras sensibilidades; se conserva el modo BASE `realized`, umbral de entrada 34 pb, horizonte/holding 168 h, sizing joint_quantity, costos, cupos y calendario.
 
 Generación significa creación de la orden y coincide con su envío; la decisión/señal es otro registro. Elegibilidad = envío + demora aplicable. Inicio de ventana = techo al minuto de la elegibilidad, fin = inicio + 60 s; fill y vencimiento del intento están en ese fin. El reloj conserva nanosegundos. No se usa el high/low/close de la ventana futura al decidir o dimensionar. OHLC4 reemplaza sólo la referencia de ejecución; el slippage y el tick adverso se aplican una vez.
 
 Durante la espera siguen funding, garantías, reservas, inventario, deuda y controles de riesgo. Funding precede al fill simultáneo. No se trasladan holding, cooldown ni correction_deadline. Una corrección cancelada por su plazo preventivo no es una expiración contra una ventana antigua. Cancelar antes o exactamente al inicio anula el intento; dentro de una ventana comprometida se conserva la política diferida original, sin nueva latencia de cancelación. Ningún fill se admite en o después del final exclusivo.
 
-La liquidación BASE sigue usando ventana y cupo de volumen: no es un motor independiente del exchange. Se aprobó reparar la prioridad de los reintentos ya escalados a liquidación; se congeló una identidad nueva y se ejecutaron controles BASE completos separados. [Descripción de la reparación histórica](evidencia/protocolo_distribucion.md) · [Comparación exacta de controles](evidencia/documentos/control_compatibilidad_base_completa.json). Las referencias selladas se conservan.
+La liquidación BASE sigue usando ventana y cupo de volumen: no es un motor independiente del exchange. Se corrigió la prioridad de los reintentos ya escalados a liquidación; se congeló una identidad nueva y se ejecutaron controles BASE completos separados. [Descripción de la reparación histórica](evidencia/protocolo_distribucion.md) · [Comparación exacta de controles](evidencia/documentos/control_compatibilidad_base_completa.json). Las referencias selladas se conservan.
 
 ![Curvas y drawdown diario: precio](evidencia/figuras/precio.png)
 
@@ -146,6 +144,8 @@ H2 compara ambas estrategias del mismo escenario y período: CAGR condicional fi
 
 CSV y Parquet preservan precisión textual; las tablas de decisiones voluminosas se incluyen sólo en Parquet. El verificador incluido recalcula resultados desde registros y extractos compactos; comparte funciones con el constructor. La opción con raíz de datos vuelve a extraer ventanas y casos desde fuentes masivas; el modo offline no afirma leer archivos ausentes. Los hashes, código, configuraciones, pruebas y logs enlazan las identidades. La incompatibilidad histórica de inventario/config permanece separada de los cambios nuevos autorizados.
 
-No se recalcularon SOFR, concentración completa ni la serie intradía sellada. Los shocks y el contrafactual sin interrupción no se ejecutaron en esta matriz: se presentan en [estrés](../estres/README.md). La [estabilidad temporal e incertidumbre](../estabilidad/README.md) y el [PDF final](../../Tesina_Pablo_Salerno.pdf) se documentan por separado; los pendientes del reporte original conservan su fecha. [Matriz de cumplimiento](evidencia/matriz_cumplimiento.md) · [Fuentes de figuras](evidencia/figuras/fuentes.json).
+No se recalcularon SOFR, concentración completa ni la serie intradía sellada. Los shocks y el contrafactual sin interrupción se presentan en [estrés](../estres/README.md). La [estabilidad temporal e incertidumbre](../estabilidad/README.md) y el [PDF final](../../Tesina_Pablo_Salerno.pdf) se documentan por separado. [Matriz de cumplimiento](evidencia/matriz_cumplimiento.md) · [Fuentes de figuras](evidencia/figuras/fuentes.json).
 
 [Revision tecnica de esta version](evidencia/documentos/revision_tecnica_paquete.md).
+
+Procedencia: [reporte original](evidencia/reporte.md) y [autenticación](../../docs/procedencia/README.md).

@@ -37,6 +37,7 @@ CURRENT_DOCS = (
     'docs/research/public_rules_alternatives_20260918.md',
     'docs/research/rules_followup_20260918.md',
     'results/base/README.md',
+    'results/base/continuo/README.md',
     'results/riesgo/README.md',
     'results/capital/README.md',
     'results/benchmark_sofr/README.md',

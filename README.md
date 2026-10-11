@@ -12,10 +12,6 @@ anuales, con 10.000 USDT iniciales por cartera. Usa velas de un minuto,
 
 **[Tesina final (PDF, 24 páginas)](Tesina_Pablo_Salerno.pdf)**
 
-El PDF conserva sus bytes originales y la etiqueta «TESINA · ENTREGA 4» de la
-portada. No se dispone de una fuente editable final autenticada; el cambio de
-nombre y ubicación no modifica su contenido.
-
 En BASE total la condicional no supera el Sharpe de la permanente (H2
 `no_favorable`). Los reportes conservan las cifras, excepciones por escenario
 y límites de interpretación de las tres hipótesis.

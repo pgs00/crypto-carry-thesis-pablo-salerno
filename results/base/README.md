@@ -1,20 +1,17 @@
 # BASE continua, reglas prescritas y corrección de exposición/H2
 
-Lectura temática del [reporte original autenticado](evidencia/comparacion/reporte.md), conservado íntegro junto con sus tablas, figuras, fórmulas y límites. La [guía de reproducción](../../docs/reproduction.md) fija la comprobación vigente; los escenarios se mantienen separados. Las referencias administrativas del reporte original conservan su fecha y alcance.
-
-Reporte técnico generado 2026-09-26T20:43:36.498283+00:00. Su condición preliminar y el feedback pendiente corresponden a la fecha original.
-Corrección metodológica del reporte de doce carteras ya existentes; no es otra
-sensibilidad ni una nueva ejecución económica. El paquete padre y la referencia continua E3
-presentada conservan todos sus bytes. Las observaciones sobre publicación de la
-corrección describen el estado documentado en el reporte original.
+La corrección metodológica de doce carteras existentes excluye el polvo del
+tiempo activo y aplica el criterio conjunto de CAGR y Sharpe de H2. No cambia
+las trayectorias económicas. El paquete padre y la referencia continua
+conservan sus bytes originales.
 
 ## Qué se corrigió y por qué
 
 El informe padre calculó exposición desde cantidades del ledger y contó cualquier
 saldo positivo, incluidos residuos no negociables. Ese contador bruto no reproduce
-el indicador editorial presentado en E3. El ledger a solas no conserva los estados
-que E3 utiliza para distinguir polvo. Se recuperó la trayectoria completa de
-`positions.parquet`, su orden persistido y el clasificador archivado de E3.
+el indicador editorial de la referencia continua. El ledger a solas no conserva
+los estados que distinguen polvo. Se recuperó la trayectoria completa de
+`positions.parquet`, su orden persistido y el clasificador de la referencia.
 
 H2 se evaluaba únicamente por diferencia de Sharpe. Ahora exige conjuntamente
 CAGR condicional definido, finito y estrictamente positivo, y Sharpe condicional
@@ -26,9 +23,8 @@ Las métricas se comparan sin redondear. El caso sintético CAGR −0,01 y Sharp
 La corrección reemplaza la interpretación y las tablas de exposición/H2 de
 `20260925T005436Z/comparacion/reporte.md`, `exposicion_periodo.csv`, `h2.csv` y
 las columnas operativas de métricas/deltas. No reescribe esas fuentes selladas.
-Las afirmaciones antiguas de que contar polvo coincidía con E3 quedan reemplazadas
-por la definición de esta versión. Las notas «sin commit ni push» del informe
-anterior describen aquella sesión, no el estado de publicación actual.
+La definición corregida sustituye las afirmaciones antiguas que equiparaban
+el conteo de polvo con el tiempo activo de la referencia continua.
 
 ## Comparación de las doce carteras
 
@@ -62,7 +58,7 @@ de algún activo cubierto puede solaparse con el de algún activo sin cobertura:
 su suma no es el tiempo invertido. La [guía](evidencia/documentos/guia_metricas.md) explicita
 particiones, unidades y fracciones.
 
-## Equivalencia exacta con la referencia continua E3
+## Equivalencia exacta con la referencia continua
 
 | strategy | invested_seconds | calendar_seconds | porcentaje | unhedged_seconds |
 | --- | --- | --- | --- | --- |
@@ -74,12 +70,12 @@ particiones, unidades y fracciones.
 | conditional | 3710 | 9 | True | 0 |
 | permanent | 3913 | 9 | True | 0 |
 
-Los intervalos y segundos se contrastan contra las tablas archivadas de E3,
+Los intervalos y segundos se contrastan contra las tablas de la referencia continua,
 sin tolerancia numérica. Los porcentajes 28,32% y 98,21% son controles de redondeo,
 no objetivos usados para clasificar. La fracción exacta es segundos activos /
 147225600; los decimales se conservan con la precisión Decimal del posprocesamiento
 original. El final exclusivo es `2026-09-01T00:00:00.000000000Z`; el snapshot
-terminal ocurre un nanosegundo antes. No hay discrepancia terminal con E3.
+terminal ocurre un nanosegundo antes. No hay discrepancia terminal con la referencia.
 Usar erróneamente el timestamp terminal como final exclusivo perdería 1 ns:
 polvo/sin actividad en la condicional y cobertura/actividad en la permanente.
 
@@ -160,18 +156,18 @@ los indicadores operativos afectados y se agregan los diagnósticos de residuos.
 ## Evidencia, supuestos y límites
 
 Evidencia: trayectorias, metadatos y resultados ejecutados conservados en el padre;
-tablas y código editorial E3 autenticados en [referencia_e3](evidencia/referencia_e3).
+tablas y código editorial de la referencia continua autenticados en [referencia_e3](evidencia/referencia_e3).
 Supuestos: siguen vigentes las reglas prescritas, aproximaciones `futures_scaled`,
 promoción observada y límites de ejecución de minuto del protocolo padre. FUT4
 continúa siendo un supuesto constante, no una fecha histórica inferida.
-Resultado ejecutado ahora: posprocesamiento, pruebas y verificaciones offline.
+La corrección comprende posprocesamiento, pruebas y verificaciones offline.
 No se ejecutaron carteras ni se descargaron mercados/fuentes en esta corrección.
 
 Las doce trayectorias contienen los metadatos necesarios; no hay intervalos con
 clasificación pendiente. Una fuente que perdiera estado, cantidades o cobertura
 se rechaza con su intervalo y símbolo; no se inventa un umbral monetario.
 La investigación de reglas sigue parcial: esta corrección no agrega evidencia
-para cerrar fechas históricas ni constituye una nueva tanda de sensibilidad.
+para completar fechas históricas ni agrega escenarios de sensibilidad.
 
 ## Procedencia y verificación
 
@@ -187,5 +183,7 @@ comparaciones realizadas al construir. La verificación independiente se ejecuta
 después del sello y guarda su resultado en una ruta nueva externa. Comprueba
 semántica de H2, clasificación, duraciones, uniones, cuadros y preservación,
 además de hashes. El verificador archivado del padre conserva su alcance v1;
-su aprobación por sí sola no acredita esta corrección. Véanse los comandos y
+su resultado por sí solo no acredita esta corrección. Véanse los comandos y
 dependencias en el [README](evidencia/README.md).
+
+Procedencia: [reporte original](evidencia/comparacion/reporte.md) y [autenticación](../../docs/procedencia/README.md).

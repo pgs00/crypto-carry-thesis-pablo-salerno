@@ -1,14 +1,12 @@
 # Costos y capacidad
 
-Lectura temática del [reporte original autenticado](evidencia/reporte.md), conservado íntegro junto con sus tablas, figuras, fórmulas y límites. La [guía de reproducción](../../docs/reproduction.md) fija la comprobación vigente; los escenarios se mantienen separados. Las referencias administrativas del reporte original conservan su fecha y alcance.
-
-**Dieciséis carteras nuevas y dos BASE reutilizadas verificadas.** Muestra continua UTC [01/01/2022,01/09/2026), BTCUSDT/ETHUSDT spot y perpetuos USD-M. Las ocho variantes se ejecutan separadas, sin parámetros adoptados de las sensibilidades de señal y entradas. Las cifras corresponden a esta matriz aislada.
+Dieciséis carteras nuevas y dos BASE reutilizadas verificadas. Muestra continua UTC [01/01/2022,01/09/2026), BTCUSDT/ETHUSDT spot y perpetuos USD-M. Las ocho variantes se ejecutan separadas, sin parámetros adoptados de las sensibilidades de señal y entradas. Las cifras corresponden a esta matriz aislada.
 
 [Protocolo previo](evidencia/documentos/protocolo.md) · [Protocolo descriptivo](evidencia/protocolo_distribucion.md) · [Registro de corridas](evidencia/indice_corridas.json) · [Verificación](evidencia/README.md)
 
 ## Selección fija y costos realizados
 
-El modo explícito `base_e3_total` fija **34 pb** sólo para la condición de entrada `forecast > 0.0034`. Se activa en C02/C03/S02/S05. Renovar requiere `forecast > 0`; la permanente omite ambos requisitos de funding, manteniendo los restantes. Los modos previos conservan su semántica y digest. Sizing, presupuesto, comisiones, inventario y garantías usan los costos del escenario: no se fijan decisiones ni cantidades. Es una regla de selección sin recalibrar ante mayores fricciones.
+El modo explícito `base_e3_total` fija 34 pb sólo para la condición de entrada `forecast > 0.0034`. Se activa en C02/C03/S02/S05. Renovar requiere `forecast > 0`; la permanente omite ambos requisitos de funding, manteniendo los restantes. Los modos previos conservan su semántica y digest. Sizing, presupuesto, comisiones, inventario y garantías usan los costos del escenario: no se fijan decisiones ni cantidades. Es una regla de selección sin recalibrar ante mayores fricciones.
 
 | Escenario | Fee spot | Fee futuros | Slippage/orden | Selección |
 |---|---|---|---|---|
@@ -47,45 +45,45 @@ C02/C03 son estrés conjunto de comisiones ordinarias y deslizamiento; S02/S05 a
 
 ### Costos
 
-**C02 / conditional:** P&L 637.83 USDT; retorno 6.3783%, diferencia frente a BASE -1.4794 puntos porcentuales. Comisiones 227.71 USDT, funding 845.70 USDT. Capital utilizado medio diario 2058.46 USDT (19.8219%); actividad sin polvo 28.3179%. Órdenes completas/parciales/sin fill: 133/3/120; máxima utilización del cupo 99.9991%.
+C02 / conditional: P&L 637.83 USDT; retorno 6.3783%, diferencia frente a BASE -1.4794 puntos porcentuales. Comisiones 227.71 USDT, funding 845.70 USDT. Capital utilizado medio diario 2058.46 USDT (19.8219%); actividad sin polvo 28.3179%. Órdenes completas/parciales/sin fill: 133/3/120; máxima utilización del cupo 99.9991%.
 
-**C02 / permanent:** P&L 1404.95 USDT; retorno 14.0495%, diferencia frente a BASE -2.7512 puntos porcentuales. Comisiones 447.72 USDT, funding 1772.60 USDT. Capital utilizado medio diario 8855.47 USDT (82.7337%); actividad sin polvo 98.1904%. Órdenes completas/parciales/sin fill: 308/4/403; máxima utilización del cupo 99.9979%.
+C02 / permanent: P&L 1404.95 USDT; retorno 14.0495%, diferencia frente a BASE -2.7512 puntos porcentuales. Comisiones 447.72 USDT, funding 1772.60 USDT. Capital utilizado medio diario 8855.47 USDT (82.7337%); actividad sin polvo 98.1904%. Órdenes completas/parciales/sin fill: 308/4/403; máxima utilización del cupo 99.9979%.
 
-**C03 / conditional:** P&L 500.58 USDT; retorno 5.0058%, diferencia frente a BASE -2.8518 puntos porcentuales. Comisiones 342.15 USDT, funding 838.81 USDT. Capital utilizado medio diario 2040.22 USDT (19.8000%); actividad sin polvo 28.3179%. Órdenes completas/parciales/sin fill: 137/3/120; máxima utilización del cupo 99.9991%.
+C03 / conditional: P&L 500.58 USDT; retorno 5.0058%, diferencia frente a BASE -2.8518 puntos porcentuales. Comisiones 342.15 USDT, funding 838.81 USDT. Capital utilizado medio diario 2040.22 USDT (19.8000%); actividad sin polvo 28.3179%. Órdenes completas/parciales/sin fill: 137/3/120; máxima utilización del cupo 99.9991%.
 
-**C03 / permanent:** P&L 999.84 USDT; retorno 9.9984%, diferencia frente a BASE -6.8023 puntos porcentuales. Comisiones 742.83 USDT, funding 1711.66 USDT. Capital utilizado medio diario 8296.37 USDT (79.1367%); actividad sin polvo 94.3578%. Órdenes completas/parciales/sin fill: 334/7/404; máxima utilización del cupo 100.0000%.
+C03 / permanent: P&L 999.84 USDT; retorno 9.9984%, diferencia frente a BASE -6.8023 puntos porcentuales. Comisiones 742.83 USDT, funding 1711.66 USDT. Capital utilizado medio diario 8296.37 USDT (79.1367%); actividad sin polvo 94.3578%. Órdenes completas/parciales/sin fill: 334/7/404; máxima utilización del cupo 100.0000%.
 
-**S02 / conditional:** P&L 770.20 USDT; retorno 7.7020%, diferencia frente a BASE -0.1556 puntos porcentuales. Comisiones 114.82 USDT, funding 850.33 USDT. Capital utilizado medio diario 2072.02 USDT (19.7994%); actividad sin polvo 28.3178%. Órdenes completas/parciales/sin fill: 135/3/120; máxima utilización del cupo 99.9991%.
+S02 / conditional: P&L 770.20 USDT; retorno 7.7020%, diferencia frente a BASE -0.1556 puntos porcentuales. Comisiones 114.82 USDT, funding 850.33 USDT. Capital utilizado medio diario 2072.02 USDT (19.7994%); actividad sin polvo 28.3178%. Órdenes completas/parciales/sin fill: 135/3/120; máxima utilización del cupo 99.9991%.
 
-**S02 / permanent:** P&L 1618.43 USDT; retorno 16.1843%, diferencia frente a BASE -0.6164 puntos porcentuales. Comisiones 228.86 USDT, funding 1794.97 USDT. Capital utilizado medio diario 8944.91 USDT (82.6371%); actividad sin polvo 98.2377%. Órdenes completas/parciales/sin fill: 324/4/403; máxima utilización del cupo 99.9979%.
+S02 / permanent: P&L 1618.43 USDT; retorno 16.1843%, diferencia frente a BASE -0.6164 puntos porcentuales. Comisiones 228.86 USDT, funding 1794.97 USDT. Capital utilizado medio diario 8944.91 USDT (82.6371%); actividad sin polvo 98.2377%. Órdenes completas/parciales/sin fill: 324/4/403; máxima utilización del cupo 99.9979%.
 
-**S05 / conditional:** P&L 717.17 USDT; retorno 7.1717%, diferencia frente a BASE -0.6860 puntos porcentuales. Comisiones 113.74 USDT, funding 847.47 USDT. Capital utilizado medio diario 2061.65 USDT (19.7601%); actividad sin polvo 28.3178%. Órdenes completas/parciales/sin fill: 133/2/120; máxima utilización del cupo 99.9991%.
+S05 / conditional: P&L 717.17 USDT; retorno 7.1717%, diferencia frente a BASE -0.6860 puntos porcentuales. Comisiones 113.74 USDT, funding 847.47 USDT. Capital utilizado medio diario 2061.65 USDT (19.7601%); actividad sin polvo 28.3178%. Órdenes completas/parciales/sin fill: 133/2/120; máxima utilización del cupo 99.9991%.
 
-**S05 / permanent:** P&L 1567.22 USDT; retorno 15.6722%, diferencia frente a BASE -1.1285 puntos porcentuales. Comisiones 227.66 USDT, funding 1787.76 USDT. Capital utilizado medio diario 8922.59 USDT (82.6690%); actividad sin polvo 98.2083%. Órdenes completas/parciales/sin fill: 320/4/403; máxima utilización del cupo 99.9979%.
+S05 / permanent: P&L 1567.22 USDT; retorno 15.6722%, diferencia frente a BASE -1.1285 puntos porcentuales. Comisiones 227.66 USDT, funding 1787.76 USDT. Capital utilizado medio diario 8922.59 USDT (82.6690%); actividad sin polvo 98.2083%. Órdenes completas/parciales/sin fill: 320/4/403; máxima utilización del cupo 99.9979%.
 
 ![Trayectorias costos](evidencia/figuras/costos.png)
 
 ### Participacion
 
-**P050 / conditional:** P&L 771.05 USDT; retorno 7.7105%, diferencia frente a BASE -0.1471 puntos porcentuales. Comisiones 115.49 USDT, funding 846.52 USDT. Capital utilizado medio diario 2062.06 USDT (19.6931%); actividad sin polvo 28.3106%. Órdenes completas/parciales/sin fill: 134/7/120; máxima utilización del cupo 99.9981%.
+P050 / conditional: P&L 771.05 USDT; retorno 7.7105%, diferencia frente a BASE -0.1471 puntos porcentuales. Comisiones 115.49 USDT, funding 846.52 USDT. Capital utilizado medio diario 2062.06 USDT (19.6931%); actividad sin polvo 28.3106%. Órdenes completas/parciales/sin fill: 134/7/120; máxima utilización del cupo 99.9981%.
 
-**P050 / permanent:** P&L 1638.71 USDT; retorno 16.3871%, diferencia frente a BASE -0.4136 puntos porcentuales. Comisiones 264.19 USDT, funding 1783.65 USDT. Capital utilizado medio diario 8912.93 USDT (82.2008%); actividad sin polvo 98.1303%. Órdenes completas/parciales/sin fill: 347/12/402; máxima utilización del cupo 99.9992%.
+P050 / permanent: P&L 1638.71 USDT; retorno 16.3871%, diferencia frente a BASE -0.4136 puntos porcentuales. Comisiones 264.19 USDT, funding 1783.65 USDT. Capital utilizado medio diario 8912.93 USDT (82.2008%); actividad sin polvo 98.1303%. Órdenes completas/parciales/sin fill: 347/12/402; máxima utilización del cupo 99.9992%.
 
-**P025 / conditional:** P&L 615.10 USDT; retorno 6.1510%, diferencia frente a BASE -1.7066 puntos porcentuales. Comisiones 140.93 USDT, funding 746.42 USDT. Capital utilizado medio diario 1666.63 USDT (16.1130%); actividad sin polvo 22.8784%. Órdenes completas/parciales/sin fill: 120/32/1; máxima utilización del cupo 99.9994%.
+P025 / conditional: P&L 615.10 USDT; retorno 6.1510%, diferencia frente a BASE -1.7066 puntos porcentuales. Comisiones 140.93 USDT, funding 746.42 USDT. Capital utilizado medio diario 1666.63 USDT (16.1130%); actividad sin polvo 22.8784%. Órdenes completas/parciales/sin fill: 120/32/1; máxima utilización del cupo 99.9994%.
 
-**P025 / permanent:** P&L 1530.55 USDT; retorno 15.3055%, diferencia frente a BASE -1.4952 puntos porcentuales. Comisiones 286.28 USDT, funding 1698.62 USDT. Capital utilizado medio diario 8514.26 USDT (79.0298%); actividad sin polvo 97.2228%. Órdenes completas/parciales/sin fill: 354/61/402; máxima utilización del cupo 100.0000%.
+P025 / permanent: P&L 1530.55 USDT; retorno 15.3055%, diferencia frente a BASE -1.4952 puntos porcentuales. Comisiones 286.28 USDT, funding 1698.62 USDT. Capital utilizado medio diario 8514.26 USDT (79.0298%); actividad sin polvo 97.2228%. Órdenes completas/parciales/sin fill: 354/61/402; máxima utilización del cupo 100.0000%.
 
 ![Trayectorias participacion](evidencia/figuras/participacion.png)
 
 ### Capital
 
-**A050 / conditional:** P&L 3090.64 USDT; retorno 6.1813%, diferencia frente a BASE -1.6764 puntos porcentuales. Comisiones 670.63 USDT, funding 3693.71 USDT. Capital utilizado medio diario 8350.26 USDT (16.1406%); actividad sin polvo 22.8395%. Órdenes completas/parciales/sin fill: 122/39/0; máxima utilización del cupo 99.9998%.
+A050 / conditional: P&L 3090.64 USDT; retorno 6.1813%, diferencia frente a BASE -1.6764 puntos porcentuales. Comisiones 670.63 USDT, funding 3693.71 USDT. Capital utilizado medio diario 8350.26 USDT (16.1406%); actividad sin polvo 22.8395%. Órdenes completas/parciales/sin fill: 122/39/0; máxima utilización del cupo 99.9998%.
 
-**A050 / permanent:** P&L 6281.14 USDT; retorno 12.5623%, diferencia frente a BASE -4.2384 puntos porcentuales. Comisiones 1689.38 USDT, funding 7441.12 USDT. Capital utilizado medio diario 34423.26 USDT (64.4432%); actividad sin polvo 83.2936%. Órdenes completas/parciales/sin fill: 382/93/359; máxima utilización del cupo 99.9999%.
+A050 / permanent: P&L 6281.14 USDT; retorno 12.5623%, diferencia frente a BASE -4.2384 puntos porcentuales. Comisiones 1689.38 USDT, funding 7441.12 USDT. Capital utilizado medio diario 34423.26 USDT (64.4432%); actividad sin polvo 83.2936%. Órdenes completas/parciales/sin fill: 382/93/359; máxima utilización del cupo 99.9999%.
 
-**A100 / conditional:** P&L 4878.61 USDT; retorno 4.8786%, diferencia frente a BASE -2.9790 puntos porcentuales. Comisiones 1296.51 USDT, funding 6131.06 USDT. Capital utilizado medio diario 13489.30 USDT (13.1244%); actividad sin polvo 20.2959%. Órdenes completas/parciales/sin fill: 110/63/0; máxima utilización del cupo 99.9999%.
+A100 / conditional: P&L 4878.61 USDT; retorno 4.8786%, diferencia frente a BASE -2.9790 puntos porcentuales. Comisiones 1296.51 USDT, funding 6131.06 USDT. Capital utilizado medio diario 13489.30 USDT (13.1244%); actividad sin polvo 20.2959%. Órdenes completas/parciales/sin fill: 110/63/0; máxima utilización del cupo 99.9999%.
 
-**A100 / permanent:** P&L 5463.49 USDT; retorno 5.4635%, diferencia frente a BASE -11.3372 puntos porcentuales. Comisiones 4603.37 USDT, funding 10420.74 USDT. Capital utilizado medio diario 45187.64 USDT (44.1517%); actividad sin polvo 72.9068%. Órdenes completas/parciales/sin fill: 406/281/116; máxima utilización del cupo 100.0000%.
+A100 / permanent: P&L 5463.49 USDT; retorno 5.4635%, diferencia frente a BASE -11.3372 puntos porcentuales. Comisiones 4603.37 USDT, funding 10420.74 USDT. Capital utilizado medio diario 45187.64 USDT (44.1517%); actividad sin polvo 72.9068%. Órdenes completas/parciales/sin fill: 406/281/116; máxima utilización del cupo 100.0000%.
 
 ![Trayectorias capital](evidencia/figuras/capital.png)
 
@@ -308,4 +306,6 @@ La [actividad por período](evidencia/tablas/actividad.csv) conserva ciclos, ren
 
 ## Alcance de la evidencia
 
-Se recalculan contabilidad y ejecución de las variantes; BASE, H1 y oportunidad de mercado se reutilizan con identidad verificada. Los paquetes previos permanecen sellados. Los drawdowns de estas sensibilidades son diarios; no se atribuye a una variante el riesgo intradía BASE. Se conservan las aproximaciones originales de marks/funding y las reglas prescritas, sin afirmar historia certificada del exchange. Las velas de un minuto y sus cupos no estiman empíricamente cola, spread o impacto de mercado. Que funcionen los tamaños probados no demuestra escalabilidad ilimitada, ni permite optimizar un umbral. No hay remuneración de caja/garantías, nuevos cálculos SOFR ni inferencia estadística en estas sensibilidades. Las notas de ausencia de Word/PDF y publicación remota describen el alcance original de este análisis; el [PDF final](../../Tesina_Pablo_Salerno.pdf) es una presentación separada.
+Se recalculan contabilidad y ejecución de las variantes; BASE, H1 y oportunidad de mercado se reutilizan con identidad verificada. Los paquetes previos permanecen sellados. Los drawdowns de estas sensibilidades son diarios; no se atribuye a una variante el riesgo intradía BASE. Se conservan las aproximaciones originales de marks/funding y las reglas prescritas, sin afirmar historia certificada del exchange. Las velas de un minuto y sus cupos no estiman empíricamente cola, spread o impacto de mercado. Que funcionen los tamaños probados no demuestra escalabilidad ilimitada, ni permite optimizar un umbral. No hay remuneración de caja/garantías, nuevos cálculos SOFR ni inferencia estadística en estas sensibilidades. El [PDF final](../../Tesina_Pablo_Salerno.pdf) presenta el estudio.
+
+Procedencia: [reporte original](evidencia/reporte.md) y [autenticación](../../docs/procedencia/README.md).

@@ -1,8 +1,6 @@
 # Señal y selección de entradas
 
-Lectura temática del [reporte original autenticado](evidencia/reporte.md), conservado íntegro junto con sus tablas, figuras, fórmulas y límites. La [guía de reproducción](../../docs/reproduction.md) fija la comprobación vigente; los escenarios se mantienen separados. Las referencias administrativas del reporte original conservan su fecha y alcance.
-
-Sensibilidad de señal y entradas. Sensibilidad exploratoria de historia ya observada: doce carteras nuevas, seis variantes sin cruces y dos referencias BASE reutilizadas con sus run_id. El feedback de E3 ya fue recibido. Este análisis conserva las hipótesis y cifras de la referencia continua E3.
+Sensibilidad exploratoria de historia ya observada: doce carteras nuevas, seis variantes sin cruces y dos referencias BASE reutilizadas con sus run_id. Este análisis conserva las hipótesis y cifras de la referencia continua.
 
 ## Síntesis
 
@@ -33,11 +31,11 @@ Las medias/máximos de capital y garantías se miden en cierres diarios. Tiempo 
 
 Cambia conjuntamente horizonte del forecast, objetivo realizado de H1 y reloj de tenencia/renovación. El costo sigue siendo 34 pb por ciclo y la renovación condicional exige sólo forecast >0. Es una dimensión económica compuesta. El final financiero permanece fijo; las exclusiones H1 no provocan cierres ficticios ni recortan entradas cerca del final.
 
-**H072**: P&L condicional 487.80 USDT (delta BASE -297.97); permanente 1633.10 (delta -46.97). Actividad condicional 13.4238%, capital medio 1209.89 USDT. H2 completo: no_favorable. Economía idéntica a BASE: condicional=False, permanente=False.
+H072: P&L condicional 487.80 USDT (delta BASE -297.97); permanente 1633.10 (delta -46.97). Actividad condicional 13.4238%, capital medio 1209.89 USDT. H2 completo: no_favorable. Economía idéntica a BASE: condicional=False, permanente=False.
 
 En la condicional, CAGR 2022–2023 / 2024–agosto 2026: 0.0653% / 1.7510%; uso medio diario del capital: 0.4234% / 20.2407%. P&L anual 2022, 2023, 2024, 2025 y enero–agosto 2026 (USDT): 0.00, 13.07, 474.93, -0.08, -0.12. Targets H1 iguales a BASE=False; no-change igual=False; H3 diario igual=False.
 
-**H336**: P&L condicional 1223.15 USDT (delta BASE 437.38); permanente 1687.45 (delta 7.38). Actividad condicional 66.9234%, capital medio 5073.57 USDT. H2 completo: no_favorable. Economía idéntica a BASE: condicional=False, permanente=False.
+H336: P&L condicional 1223.15 USDT (delta BASE 437.38); permanente 1687.45 (delta 7.38). Actividad condicional 66.9234%, capital medio 5073.57 USDT. H2 completo: no_favorable. Economía idéntica a BASE: condicional=False, permanente=False.
 
 En la condicional, CAGR 2022–2023 / 2024–agosto 2026: 2.1229% / 2.7880%; uso medio diario del capital: 47.8183% / 47.8829%. P&L anual 2022, 2023, 2024, 2025 y enero–agosto 2026 (USDT): 11.11, 417.97, 644.96, 154.47, -5.36. Targets H1 iguales a BASE=False; no-change igual=False; H3 diario igual=False.
 
@@ -47,11 +45,11 @@ En la condicional, CAGR 2022–2023 / 2024–agosto 2026: 2.1229% / 2.7880%; uso
 
 Cambia sólo el peso de observaciones dentro de la ventana de 336 h. Horizonte/tenencia=168 h; targets y no-change se comparan por igualdad de inputs. La permanente omite los filtros de funding para entrar y renovar; la igualdad de su economía se comprueba sobre trayectorias y operaciones.
 
-**V012**: P&L condicional 828.25 USDT (delta BASE 42.49); permanente 1680.07 (delta 0.00). Actividad condicional 32.6176%, capital medio 2460.44 USDT. H2 completo: no_favorable. Economía idéntica a BASE: condicional=False, permanente=True.
+V012: P&L condicional 828.25 USDT (delta BASE 42.49); permanente 1680.07 (delta 0.00). Actividad condicional 32.6176%, capital medio 2460.44 USDT. H2 completo: no_favorable. Economía idéntica a BASE: condicional=False, permanente=True.
 
 En la condicional, CAGR 2022–2023 / 2024–agosto 2026: 1.1327% / 2.1608%; uso medio diario del capital: 14.5418% / 30.2836%. P&L anual 2022, 2023, 2024, 2025 y enero–agosto 2026 (USDT): 0.00, 227.82, 573.39, 27.11, -0.08. Targets H1 iguales a BASE=True; no-change igual=True; H3 diario igual=False.
 
-**V048**: P&L condicional 791.99 USDT (delta BASE 6.23); permanente 1680.07 (delta 0.00). Actividad condicional 27.9117%, capital medio 2179.97 USDT. H2 completo: no_favorable. Economía idéntica a BASE: condicional=False, permanente=True.
+V048: P&L condicional 791.99 USDT (delta BASE 6.23); permanente 1680.07 (delta 0.00). Actividad condicional 27.9117%, capital medio 2179.97 USDT. H2 completo: no_favorable. Economía idéntica a BASE: condicional=False, permanente=True.
 
 En la condicional, CAGR 2022–2023 / 2024–agosto 2026: 1.1028% / 2.0551%; uso medio diario del capital: 10.3777% / 28.6355%. P&L anual 2022, 2023, 2024, 2025 y enero–agosto 2026 (USDT): 0.00, 221.77, 506.72, 63.59, -0.10. Targets H1 iguales a BASE=True; no-change igual=True; H3 diario igual=False.
 
@@ -61,11 +59,11 @@ En la condicional, CAGR 2022–2023 / 2024–agosto 2026: 1.1028% / 2.0551%; uso
 
 Se conserva el piso cero y los extremos inclusivos; los techos son 0,0025 y 0,01. No cambia el stop de ampliación ni se impone basis de entrada a renovaciones. Decisiones de entrada, economía y todos los minutos H3 son poblaciones distintas.
 
-**B025**: P&L condicional 785.76 USDT (delta BASE 0.00); permanente 1680.07 (delta 0.00). Actividad condicional 28.3178%, capital medio 2074.62 USDT. H2 completo: no_favorable. Economía idéntica a BASE: condicional=True, permanente=True.
+B025: P&L condicional 785.76 USDT (delta BASE 0.00); permanente 1680.07 (delta 0.00). Actividad condicional 28.3178%, capital medio 2074.62 USDT. H2 completo: no_favorable. Economía idéntica a BASE: condicional=True, permanente=True.
 
 En la condicional, CAGR 2022–2023 / 2024–agosto 2026: 1.0814% / 2.0492%; uso medio diario del capital: 10.4220% / 26.8406%. P&L anual 2022, 2023, 2024, 2025 y enero–agosto 2026 (USDT): 0.00, 217.44, 535.13, 33.28, -0.09. Targets H1 iguales a BASE=True; no-change igual=True; H3 diario igual=False.
 
-**B100**: P&L condicional 785.76 USDT (delta BASE 0.00); permanente 1680.07 (delta 0.00). Actividad condicional 28.3178%, capital medio 2074.62 USDT. H2 completo: no_favorable. Economía idéntica a BASE: condicional=True, permanente=True.
+B100: P&L condicional 785.76 USDT (delta BASE 0.00); permanente 1680.07 (delta 0.00). Actividad condicional 28.3178%, capital medio 2074.62 USDT. H2 completo: no_favorable. Economía idéntica a BASE: condicional=True, permanente=True.
 
 En la condicional, CAGR 2022–2023 / 2024–agosto 2026: 1.0814% / 2.0492%; uso medio diario del capital: 10.4220% / 26.8406%. P&L anual 2022, 2023, 2024, 2025 y enero–agosto 2026 (USDT): 0.00, 217.44, 535.13, 33.28, -0.09. Targets H1 iguales a BASE=True; no-change igual=True; H3 diario igual=False.
 
@@ -227,12 +225,14 @@ Las diferencias describen simultáneamente predicción, actividad, capital y res
 
 La tabla de [deltas de hipótesis](evidencia/tablas/deltas_hipotesis.csv) compara vidas medias y basis con BASE. En H072/H336 no calcula diferencias de MAE ni tasa de oportunidad entre horizontes distintos. Mantiene valores, unidad/horizonte y el motivo de no comparabilidad. La habilidad contra no-change sólo describe cada target; no selecciona un horizonte ganador.
 
-Se mantienen las tarifas/reglas prescritas, 15 marks futures_scaled y tratamiento original de precios de funding. No se certifica una reconstrucción histórica completa de reglas ni liquidez ejecutable real. Los drawdowns nuevos son diarios. No se recalcularon concentración, riesgo intradía, SOFR ni remuneración de caja/garantía. SOFR no sustituye RF=0 ni la permanente en H2. La ficha SOFR pendiente conservada en un paquete antiguo es histórica: la versión posterior aprobada se presenta como [comparación SOFR separada](../benchmark_sofr/README.md).
+Se mantienen las tarifas/reglas prescritas, 15 marks futures_scaled y tratamiento original de precios de funding. No se certifica una reconstrucción histórica completa de reglas ni liquidez ejecutable real. Los drawdowns nuevos son diarios. No se recalcularon concentración, riesgo intradía, SOFR ni remuneración de caja/garantía. La [comparación SOFR](../benchmark_sofr/README.md) es separada; no sustituye RF=0 ni la permanente en H2.
 
 ## Evidencia y reproducción
 
 [Índice de corridas](evidencia/indice_corridas.json), [métricas de los ocho períodos](evidencia/tablas/metricas.csv), [deltas sin redondear](evidencia/tablas/deltas.csv), [invariancias](evidencia/tablas/invariancias.csv), [H2 completo](evidencia/tablas/h2.csv), [H3 por período](evidencia/tablas/h3_resumen.csv), [fuentes exactas](evidencia/fuentes/archivos_originales.csv) y [matriz de requisitos](evidencia/matriz_requisitos.csv). Las observaciones H1, agregados H3 por activo, grupos de disponibilidad y muestra fija de minutos están en hipotesis/<escenario>/. Las fuentes de figuras están en figuras/fuentes/.
 
-Verificación y alcance: [README](evidencia/README.md). El verificador recalcula desde evidencia persistida; con --data-root contrasta H3 contra los minutos locales. Constructor y verificador comparten algunos helpers: no se afirma independencia total ni se ejecuta un nuevo replay al verificar. El registro de ausencia de commit, push o modificación del índice corresponde a la construcción original.
+Verificación y alcance: [README](evidencia/README.md). El verificador recalcula desde evidencia persistida; con --data-root contrasta H3 contra los minutos locales. Constructor y verificador comparten algunos helpers: no se afirma independencia total ni se ejecuta un nuevo replay al verificar.
 
 El [control histórico de limpieza del repositorio](evidencia/documentos/control_historico_general.json) no pasó: espera un hash anterior de src/crypto_carry/config.py. El archivo actual coincide con el registrado antes de esta sensibilidad; no se modificó ese manifiesto para forzar su pase. Los controles de esta sensibilidad tienen alcance propio y no certifican todo el motor ni todas las versiones históricas del repositorio.
+
+Procedencia: [reporte original](evidencia/reporte.md) y [autenticación](../../docs/procedencia/README.md).

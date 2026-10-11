@@ -1,9 +1,9 @@
-# Decisiones de integración — versión técnica preliminar
+# Integración de reglas históricas: evidencia y supuestos
 
-Este documento acompaña la primera tanda acotada del [protocolo](protocolo.md).
-El feedback del profesor sigue pendiente. La [matriz](matriz_integracion.csv)
+Este documento fundamenta los escenarios del [protocolo](protocolo.md).
+La [matriz](matriz_integracion.csv)
 contiene una fila por cada uno de los 345 hechos del registro sellado, con los
-campos pedidos, `fact_id`, `source_id`, conocimiento y aplicabilidad originales.
+campos documentados, `fact_id`, `source_id`, conocimiento y aplicabilidad originales.
 Fue generada antes de modificar el comportamiento económico. No modifica
 `loadable_by_rulebook=false`, los estados documentales ni los hashes originales.
 
@@ -14,7 +14,7 @@ distinguen `intervalo_respaldado`, `evento_respaldado`, `observacion_puntual`,
 El estado `contradictorio` tiene cero hechos en este paquete; se conserva como
 categoría admisible y no se usa para diferencias legítimas antes/después.
 
-## Decisiones que habilitan la primera tanda
+## Reglas de los escenarios ejecutados
 
 | Decisión | Respaldo documental | Tratamiento |
 |---|---|---|
@@ -108,7 +108,7 @@ liquidación o su cobro simultáneo con la comisión regular.
 
 ## Diagnóstico ejecutado y límites
 
-El comando nuevo [diagnose_historical_rules_exposure.py](../../scripts/diagnose_historical_rules_exposure.py)
+El comando [diagnose_historical_rules_exposure.py](../../scripts/diagnose_historical_rules_exposure.py)
 no importa el motor, no hace backtests y sólo escribe en una carpeta nueva.
 Lee las corridas originales `run_ad71d751b20623006c195ff3` y
 `run_dfea4b7ac1475668d5968c97`, comprueba manifiestos y hashes, y conserva
@@ -134,7 +134,7 @@ no costos ni P&L; no se suman a rentabilidad y no sustituyen recálculo de carte
 No se propone cruzar automáticamente variantes de comisiones y margen.
 Cada caso siguiente usaría ambas carteras y BASE_E3 como comparador, manteniendo
 datos, ejecución, parámetros de estrategia y comisiones base. Son candidatos
-para decidir después de revisar la primera tanda; no cronología certificada.
+de investigación adicional; no constituyen una cronología certificada.
 
 | Caso acotado | Parámetros y comparación | Fundamento | Condición y limitación antes de ejecutar |
 |---|---|---|---|
@@ -145,8 +145,8 @@ para decidir después de revisar la primera tanda; no cronología certificada.
 Las siete capturas completas y las 16 tablas no se cargan masivamente.
 No se ejecutan interpolaciones, barridos de fechas de transición FUT4→FUT5,
 forward-fill prolongado ni políticas de cohortes implícitas. Su decisión queda
-pendiente; ese límite es independiente de las seis configuraciones autorizadas
-de la primera tanda.
+fuera del alcance ejecutado; ese límite es independiente de las seis
+configuraciones del estudio de reglas.
 
 ## Reproducción
 

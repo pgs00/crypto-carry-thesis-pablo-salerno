@@ -28,11 +28,11 @@ Cada tema conserva su evidencia en `evidencia/`, con tablas, figuras,
 protocolos, herramientas y procedencia. La presentación continua está en
 [BASE y resultados continuos](base/README.md); las ventanas independientes son
 [antecedentes científicos](../data/evidence/ventanas_independientes/LEEME.md).
-Los protocolos internos conservan sus fechas y alcances originales.
+Los protocolos conservan sus fechas y alcances originales.
 
 El informe padre de reglas se lee junto con la corrección BASE. La
 [segunda tanda propuesta](../docs/reglas_historicas/decisiones_integracion.md#segunda-tanda-propuesta--no-ejecutada)
-permanece sin ejecutar. Las sensibilidades no se cruzan ni se adoptan en BASE
+permanece fuera de los resultados ejecutados. Las sensibilidades no se cruzan ni se adoptan en BASE
 por rentabilidad. Remunerar o reinvertir caja y garantías del carry permanece
 fuera del estudio; SOFR es una cuenta separada.
 

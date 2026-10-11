@@ -1,12 +1,10 @@
 # Riesgo intradía, incidentes y garantías
 
-Lectura temática del [reporte original autenticado](evidencia/reporte.md), conservado íntegro junto con sus tablas, figuras, fórmulas y límites. La [guía de reproducción](../../docs/reproduction.md) fija la comprobación vigente; los escenarios se mantienen separados. Las referencias administrativas del reporte original conservan su fecha y alcance.
+La reconstrucción intradía mide pérdidas transitorias y necesidades de garantías en cuatro carteras existentes. Muestra continua del 1 de enero de 2022 al 31 de agosto de 2026 · UTC. Es un posprocesamiento de las trayectorias conservadas, sin nuevas simulaciones.
 
-Reconstrucción intradía · Construcción y conciliación ejecutadas. Muestra continua del 1 de enero de 2022 al 31 de agosto de 2026 · UTC. Posprocesamiento de cuatro carteras publicadas; no se ejecutó un nuevo backtest. El sello se verifica con los comandos del paquete; las tablas y fuentes compactas finales se conservan en la evidencia; los registros externos de ejecución mantienen su alcance histórico.
+El análisis conserva la desagregación anual y el vínculo entre retorno y capital utilizado. La [comparación SOFR](../benchmark_sofr/README.md), las [demoras de ejecución](../ejecucion/README.md) y el [estrés y contrafactual](../estres/README.md) tienen contratos y resultados propios.
 
-Este análisis responde a la devolución recibida sobre pérdidas transitorias y garantías. Conserva la desagregación anual y el vínculo entre retorno y capital utilizado. El reporte original antecede a la [comparación SOFR](../benchmark_sofr/README.md), a las [demoras ejecutadas](../ejecucion/README.md) y al [estrés y contrafactual](../estres/README.md); sus propuestas se leen con los contratos posteriores separados.
-
-Documentos de alcance: [Feedback literal](evidencia/documentos/feedback_e3.md) · [Protocolo previo](evidencia/documentos/protocolo.md) · [Matriz de cobertura](evidencia/documentos/matriz_cobertura_feedback.csv)
+Documentos de alcance: [Protocolo](evidencia/documentos/protocolo.md) · [Matriz de cobertura](evidencia/documentos/matriz_cobertura_feedback.csv)
 
 ## Hallazgos principales
 
@@ -38,7 +36,7 @@ La permanente omite sólo el filtro de funding de entrada y renovación; conserv
 
 La trayectoria es la unión de cierres de un minuto disponibles, instantes financieros necesarios y cierres diarios originales; no es tick-by-tick. Spot utiliza el último cierre con volumen positivo disponible; futuros se valúa al mark de riesgo. Un cierre de vela se conoce en su límite exclusivo. El cierre diario 23:59:59.999999999 utiliza normalmente la vela abierta a las 23:58, disponible a las 23:59; nunca anticipa la vela de las 23:59.
 
-Se conservan el funding_time exacto y los milisegundos originales: funding sobre el corto anterior a fills simultáneos, fills comprometidos y controles posteriores. Los estados pre/post tienen duración cero y pueden cambiar necesidades instantáneas. Los 15 marks futures_scaled aprobados son distintos de los settlement marks de funding tratados como previous_closed_1m. Ambos conservan su procedencia.
+Se conservan el funding_time exacto y los milisegundos originales: funding sobre el corto anterior a fills simultáneos, fills comprometidos y controles posteriores. Los estados pre/post tienen duración cero y pueden cambiar necesidades instantáneas. Los 15 marks estimados mediante futures_scaled son distintos de los settlement marks de funding tratados como previous_closed_1m. Ambos conservan su procedencia.
 
 Equity = caja spot + caja futuros + garantías + valor spot + P&L no realizado de futuros − deuda. Las transferencias y movimientos de garantía no crean equity. Funding, comisiones y slippage no se duplican. El polvo conserva su riesgo de precio, aunque se distingue de una posición activa.
 
@@ -471,9 +469,9 @@ H1 conserva pronósticos y ponderaciones; H2 conserva su criterio corregido y el
 
 Tablas originales reutilizadas: [H1](evidencia/tablas/h1_resumen.csv) · [Invariancia H1](evidencia/tablas/h1_invariancia.csv) · [H2](evidencia/tablas/h2.csv) · [H3](evidencia/tablas/h3_regimen.csv) · [Invariancia H3](evidencia/tablas/h3_invariancia.csv) · [Métricas financieras completas](evidencia/tablas/metricas_reutilizadas.csv)
 
-## Propuestas históricas y escala descriptiva
+## Escala descriptiva de los episodios
 
-Para dar escala a los escenarios, el catálogo BASE contiene 233 episodios por activo, con mediana de duración 1,00 minutos, percentil 90 1,00 minutos y máximo 121,00 minutos. Estas estadísticas son descriptivas del catálogo y no probabilidades de eventos futuros; no se suman entre activos como duración de cartera.
+Para dar escala a los escenarios, el catálogo BASE contiene 233 episodios en total, desagregados por activo, con mediana de duración 1,00 minutos, percentil 90 1,00 minutos y máximo 121,00 minutos. Estas estadísticas son descriptivas del catálogo y no probabilidades de eventos futuros; no se suman entre activos como duración de cartera.
 
 | Activo | Valoración | Episodios | Sin caída de precio | Mediana caída spot | P90 caída spot | Máxima caída spot |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -482,19 +480,11 @@ Para dar escala a los escenarios, el catálogo BASE contiene 233 episodios por a
 | ETHUSDT | Original reconstruida | 133 | 51 | 0,0164% | 0,1214% | 1,4434% |
 | ETHUSDT | Proxy hipotético de suspensión | 133 | 53 | 0,0140% | 0,1140% | 0,3572% |
 
-La escala anterior mide max(0,1−mínimo spot/precio spot inicial) dentro de cada episodio activo, desde inicio post hasta fin pre, conservando ceros. Usa precios observados o, separadamente, el proxy de valoración; no es P&L de cartera. Los episodios tienen distinta duración y pueden compartir observaciones de mercado entre carteras: no son ensayos independientes, tasas por minuto ni probabilidades. Se propone usar P90 y máximo de la valoración original como dos magnitudes de caída spot y mostrar la sensibilidad de calibrarlas con el proxy por separado.
+La escala anterior mide max(0,1−mínimo spot/precio spot inicial) dentro de cada episodio activo, desde inicio post hasta fin pre, conservando ceros. Usa precios observados o, separadamente, el proxy de valoración; no es P&L de cartera. Los episodios tienen distinta duración y pueden compartir observaciones de mercado entre carteras: no son ensayos independientes, tasas por minuto ni probabilidades. P90 y máximo de la valoración original determinan las dos magnitudes de caída spot del análisis de estrés; los valores con proxy muestran por separado la sensibilidad de esa escala a la valoración.
 
-Cálculos descriptivos de la escala propuesta: [Cada episodio](evidencia/figuras/fuentes/calibracion_episodios.csv) · [Percentiles y máximos](evidencia/figuras/fuentes/calibracion_escenarios_pendientes.csv)
+Cálculos descriptivos: [Cada episodio](evidencia/figuras/fuentes/calibracion_episodios.csv) · [Percentiles y máximos](evidencia/figuras/fuentes/calibracion_escenarios_pendientes.csv)
 
-| Tanda pequeña pendiente | Comparador y magnitud | Justificación | Nueva trayectoria requerida |
-| --- | --- | --- | --- |
-| Demoras adicionales de cierre | Referencia original frente a +1, +5 y +15 minutos en episodios previamente catalogados | 1 minuto coincide con la resolución; 5 y 15 exploran retrasos operativos mayores sin elegir sólo episodios rentables | Sí: nuevas ventanas elegibles, fills, funding y controles; preservar reglas y datos |
-| Movimientos adversos con exposición | Dos niveles por activo: P90 y máximo de caída spot del episodio completo, medidos en la tabla anterior; escenarios separados de las tres demoras | Aplicarlos a todos los episodios comparables con observación spot válida; shock al inicio descubierto y persistente hasta cierre, sin inferir probabilidades ni combinar extremos de mark | Sí: la trayectoria de precio hipotética cambia valoración, ejecución y controles. Durante una suspensión seguirá sin autorizar ventas; el contrafactual de reapertura es otro experimento |
-| Contrafactual sin interrupción | Comparar la cartera original con una trayectoria que explicite qué mercado y liquidez habrían existido | Compromiso previo distinto del proxy de valoración | Sí; el proxy con posiciones fijas no lo resuelve |
-| Alternativa remunerada: todo el capital | Benchmark en la misma moneda y período con datos históricos verificables | Es una alternativa al capital completo | Definir disponibilidad, costos, riesgos, reinversión y garantías antes de elegir tasa o producto |
-| Remuneración sólo de efectivo libre | Aplicar remuneración únicamente a caja acreditada disponible, con calendario de entradas/salidas | Experimento distinto; respeta órdenes pendientes y garantías no redistribuibles | Requiere trayectoria de caja y reglas de disponibilidad; no sumar interés al P&L base actual |
-
-La tabla conserva las propuestas de la fecha original. Las sensibilidades posteriores de [ejecución](../ejecucion/README.md) y [estrés](../estres/README.md) tienen contratos propios: no se confunden con demoras acotadas a episodios ni con shocks persistentes hasta su cierre. La alternativa sobre todo el capital se ejecutó como [cuenta SOFR hipotética bruta](../benchmark_sofr/README.md); remunerar efectivo libre o garantías permanece fuera de alcance. La tanda inicial comprende tres demoras y dos niveles de movimiento adverso, sin cruzar una matriz general; la referencia mantiene los precios y decisiones originales. Las magnitudes medidas justifican la escala de estrés, no una probabilidad. Este informe intradía no selecciona moneda alternativa, tasa, producto ni regla de reinversión. El Sharpe de H2 permanece intacto.
+La sensibilidad de [ejecución](../ejecucion/README.md) aplica las demoras de cierre como regla global; el [estrés](../estres/README.md) utiliza recuperación impuesta y un contrafactual de mercado separado. Esos contratos difieren de las propuestas iniciales conservadas en el reporte original. Las magnitudes medidas justifican la escala de estrés, no una probabilidad. La [cuenta SOFR hipotética bruta](../benchmark_sofr/README.md) compara todo el capital; remunerar efectivo libre o garantías permanece fuera de alcance. Este análisis intradía mantiene las trayectorias y el Sharpe diario de H2.
 
 ## Límites y reproducción
 
@@ -502,6 +492,8 @@ La reconstrucción local contiene 9.851.104 observaciones en 224 particiones; lo
 
 La serie completa comprimida permanece local en la ruta indicada por --series-root, con hashes en series_locales.json. El paquete compacto conserva tablas, estados financieros y ventanas de episodios y marzo; evita duplicar millones de registros. El verificador compacto puede comprobar identidad, aritmética y evidencia exportada, pero no recalcular independientemente el máximo de toda la muestra sin acceder a la serie completa y a las fuentes locales. La verificación completa exige esas rutas y sus precios/estados originales.
 
-Persisten incertidumbre del precio spot durante la interrupción, las excepciones de marks y funding declaradas, disponibilidad neta ND en estados con compromisos no acreditables y ausencia de trayectoria intravela. No se combinan mínimos spot y máximos mark de una vela como si fueran simultáneos. No se afirma haber leído un PDF E3 ausente. Este reporte no sustituye un contrafactual de ejecución ni una comparación remunerada.
+Persisten incertidumbre del precio spot durante la interrupción, las excepciones de marks y funding declaradas, disponibilidad neta ND en estados con compromisos no acreditables y ausencia de trayectoria intravela. No se combinan mínimos spot y máximos mark de una vela como si fueran simultáneos. Este reporte no sustituye un contrafactual de ejecución ni una comparación remunerada.
 
 Archivos para reproducir y revisar: [Procedencia de tablas](evidencia/tablas_procedencia.json) · [Índice de figuras](evidencia/figuras/indice_figuras.csv) · [Comando y procedencia del reporte](evidencia/generacion_reporte.json)
+
+Procedencia: [reporte original](evidencia/reporte.md) y [autenticación](../../docs/procedencia/README.md).
