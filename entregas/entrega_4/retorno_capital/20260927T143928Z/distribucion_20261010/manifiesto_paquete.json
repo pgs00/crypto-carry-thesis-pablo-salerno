@@ -227,8 +227,8 @@
     },
     {
       "path": "herramientas/scripts/distribution_integrity.py",
-      "bytes": 11003,
-      "sha256": "789575d59c6bec776267b8d4f39fd0cb750b294e3a714808bde33f8108557e65"
+      "bytes": 11035,
+      "sha256": "5d9c4d64b78c5b951dd595179996d9057563fae3385391b6e3395369143e7161"
     },
     {
       "path": "herramientas/scripts/return_capital/__init__.py",
@@ -307,8 +307,8 @@
     },
     {
       "path": "procedencia/derivacion.json",
-      "bytes": 2889,
-      "sha256": "ef1f09acb5fe69ddbbd9a379ac0bf0437e9eec1fa1044f34419183b9d94acad4"
+      "bytes": 3083,
+      "sha256": "00e315d8c09dbbb6047c5f589b2b72c15dbad54f75066ea2ea2c9ec19f80b89e"
     },
     {
       "path": "procedencia/manifiesto_original.json",

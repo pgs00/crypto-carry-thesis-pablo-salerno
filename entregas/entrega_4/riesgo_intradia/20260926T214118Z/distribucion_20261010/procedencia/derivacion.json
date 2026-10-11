@@ -26,6 +26,14 @@
       "reason": "Presentación o autenticación de la distribución documental."
     },
     {
+      "path": "auditoria_contable/README.md",
+      "bytes": 16739,
+      "sha256": "f1e8e0f558124598f5c2a9ded0b59af18947016a59ad53ef5ce3b3e583103cc0",
+      "original_bytes": 16777,
+      "original_sha256": "cab03f144a3b1fb667e5f9a22f7eb073034c04830002a7de44fcad62532761fe",
+      "reason": "Retiro de una frase conversacional; alcance, resultados y límites de la auditoría conservados."
+    },
+    {
       "path": "documentos/protocolo.md",
       "bytes": 12432,
       "sha256": "fadb999b1cbd521e90a858932038b4e270bdf908ff5ba8f996115765f4bb2b01",
@@ -45,8 +53,9 @@
   "added": [
     {
       "path": "herramientas/scripts/distribution_integrity.py",
-      "bytes": 10015,
-      "sha256": "fa454335fa04dd267623e21d6c3e19ffeca687322dce26e90f52f6f41301d84a"
+      "bytes": 10047,
+      "sha256": "1b713b74b3f75f0648e9021da02106a316ae789ae5d7bc3b0d6ce00f49ba8af6",
+      "reason": "Registro explícito de la adaptación documental de auditoria_contable/README.md en Riesgo, incluido su control como dependencia de B1; sin cambios en controles científicos."
     },
     {
       "path": "procedencia/manifiesto_original.json",

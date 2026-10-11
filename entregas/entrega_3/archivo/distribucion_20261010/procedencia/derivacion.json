@@ -65,11 +65,11 @@
     },
     {
       "path": "evidencia/procedencia/methodology_two_days_20260918.md.txt",
-      "bytes": 20311,
-      "sha256": "37ffa6f482aa250a5dfbf14a9b0cee2cbfef35e862d1c6448b84a84e39b89a64",
+      "bytes": 19794,
+      "sha256": "f0836f562c9fd22a4f3aaab7ce2c5feb3ff9047f8f306e93babdfe19f29caa03",
       "original_bytes": 20405,
       "original_sha256": "ccc165f67f0b43d2302a18c46afcabbad6dade5ebc267cac7e0b9fe389d905f3",
-      "reason": "Presentación o autenticación de la distribución documental."
+      "reason": "Retiro de instrucciones conversacionales sobre autorización; supuestos y límites conservados como propuesta metodológica histórica, no como resultado ejecutado."
     },
     {
       "path": "scripts/verificar_paquete.py",

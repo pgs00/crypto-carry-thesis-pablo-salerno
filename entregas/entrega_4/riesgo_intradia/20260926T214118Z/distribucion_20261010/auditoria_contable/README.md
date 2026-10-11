@@ -2,7 +2,7 @@
 
 La evidencia persistida permite reconstruir caja, deuda, cantidades, precio medio y garantía sin replay. La comprobación ejecutada concilia exactamente los 6.816 cierres diarios de las cuatro carteras, usando sus precios diarios originales. Esto acredita integridad contable; todavía no acredita cobertura ni frescura de los precios de minuto.
 
-El prompt original se leyó completo. Esta auditoría se limita a cuentas, secuencia económica, reglas de margen y evidencia de compromisos de órdenes. No recalcula el drawdown ni produce resultados nuevos de estrategia. El procesamiento lee exclusivamente el paquete padre; no importa ni ejecuta el motor.
+Esta auditoría se limita a cuentas, secuencia económica, reglas de margen y evidencia de compromisos de órdenes. No recalcula el drawdown ni produce resultados nuevos de estrategia. El procesamiento lee exclusivamente el paquete padre; no importa ni ejecuta el motor.
 
 ## Comando y resultado ejecutados
 

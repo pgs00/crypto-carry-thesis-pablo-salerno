@@ -66,9 +66,13 @@ El [resultado JSON](funding_h1_preliminary_20260918.json) contiene configuració
 
 - [Manifiesto de calendarios](../../data/research/funding-calendar-h1-20260918/manifest.json): 114 URL, hashes, checksums, tamaños y fecha de descarga/verificación.
 - [Resumen H1](../../data/research/funding-calendar-h1-20260918/h1_summary.json): nueve filas, sin el redondeo de presentación de la tabla.
-- [Señales JSON comprimidas](../../data/research/funding-calendar-h1-20260918/signals.json.gz): 10.224 pronósticos, tiempos, antecedentes y validez.
-- [Evaluación JSON comprimida](../../data/research/funding-calendar-h1-20260918/forecast_evaluation.json.gz): objetivos, errores y exclusiones por señal.
+- Señales JSON comprimidas (`signals.json.gz`): 10.224 pronósticos, tiempos, antecedentes y validez.
+- Evaluación JSON comprimida (`forecast_evaluation.json.gz`): objetivos, errores y exclusiones por señal.
 - [Script reproducible](../../data/research/funding-calendar-h1-20260918/run_h1.py): descarga acotada, verificación y llamada a las funciones originales.
+
+Los dos archivos `.gz` están disponibles localmente en
+`data/research/funding-calendar-h1-20260918/`, pero están excluidos de Git y no
+se incluyen al clonar el repositorio. El script anterior genera ambos archivos.
 
 Desde la raíz del proyecto:
 

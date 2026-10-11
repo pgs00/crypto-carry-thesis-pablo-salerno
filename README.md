@@ -38,13 +38,10 @@ corrida y paquete fijan los experimentos. `configs/base.toml` y
 conservados por sus usos y pruebas; no identifican la BASE vigente E4.
 Las fuentes masivas, corridas completas, entornos y cachés permanecen locales.
 
-Las distribuciones documentales del 10/10/2026 de E3 continua y SOFR conservan
-los datos, figuras y herramientas retenidos byte por byte, con manifiestos
-propios. Los originales completos y sus hashes están fuera del repositorio en
-`../Backtesting_antecedentes/distribucion_20261010/`. Los paquetes históricos
-E3, BASE, riesgo y B1–B6 conservan documentos internos exigidos por sus
-protocolos o cadenas de sellos; también el archivo local de auditoría del basis.
-Esas excepciones preservan los controles y la procedencia originales.
+Las distribuciones conservan los datos, figuras y código de cálculo originales.
+Las herramientas de empaquetado y verificación incorporan las adaptaciones
+documentadas en la [guía de reproducción](docs/reproduction.md), que detalla
+la procedencia y recuperación de los originales.
 
 El trabajo utilizó asistencia de IA mediante Codex en código, documentación y
 verificaciones. El motor integra NautilusTrader; las fuentes de Binance y las

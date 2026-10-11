@@ -15,8 +15,8 @@
     },
     {
       "path": "auditoria_contable/README.md",
-      "bytes": 16777,
-      "sha256": "cab03f144a3b1fb667e5f9a22f7eb073034c04830002a7de44fcad62532761fe"
+      "bytes": 16739,
+      "sha256": "f1e8e0f558124598f5c2a9ded0b59af18947016a59ad53ef5ce3b3e583103cc0"
     },
     {
       "path": "auditoria_contable/reservas_verificacion.json",
@@ -555,8 +555,8 @@
     },
     {
       "path": "herramientas/scripts/distribution_integrity.py",
-      "bytes": 10015,
-      "sha256": "fa454335fa04dd267623e21d6c3e19ffeca687322dce26e90f52f6f41301d84a"
+      "bytes": 10047,
+      "sha256": "1b713b74b3f75f0648e9021da02106a316ae789ae5d7bc3b0d6ce00f49ba8af6"
     },
     {
       "path": "herramientas/scripts/intraday_risk_math.py",
@@ -635,8 +635,8 @@
     },
     {
       "path": "procedencia/derivacion.json",
-      "bytes": 2594,
-      "sha256": "c31f86aa37a44c3f58df4271914ef4560d3374449ecfc7bb7693fad3dcff4e55"
+      "bytes": 3192,
+      "sha256": "1a623b85827d341b29c7dd780e3ddfc707033ce0d4a52fc4ac781503b7357527"
     },
     {
       "path": "procedencia/manifiesto_original.json",

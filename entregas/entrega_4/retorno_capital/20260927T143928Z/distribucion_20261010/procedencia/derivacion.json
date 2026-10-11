@@ -51,8 +51,9 @@
   "added": [
     {
       "path": "herramientas/scripts/distribution_integrity.py",
-      "bytes": 11003,
-      "sha256": "789575d59c6bec776267b8d4f39fd0cb750b294e3a714808bde33f8108557e65"
+      "bytes": 11035,
+      "sha256": "5d9c4d64b78c5b951dd595179996d9057563fae3385391b6e3395369143e7161",
+      "reason": "Registro explícito de la adaptación documental de auditoria_contable/README.md en Riesgo, incluido su control como dependencia de B1; sin cambios en controles científicos."
     },
     {
       "path": "procedencia/manifiesto_original.json",

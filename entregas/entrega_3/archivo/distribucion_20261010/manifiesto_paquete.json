@@ -467,8 +467,8 @@
     },
     {
       "archivo": "evidencia/procedencia/methodology_two_days_20260918.md.txt",
-      "bytes": 20311,
-      "sha256": "37ffa6f482aa250a5dfbf14a9b0cee2cbfef35e862d1c6448b84a84e39b89a64"
+      "bytes": 19794,
+      "sha256": "f0836f562c9fd22a4f3aaab7ce2c5feb3ff9047f8f306e93babdfe19f29caa03"
     },
     {
       "archivo": "evidencia/procedencia/public_rules_alternatives_20260918.json",
@@ -587,8 +587,8 @@
     },
     {
       "archivo": "procedencia/derivacion.json",
-      "bytes": 4494,
-      "sha256": "7f7bd43b99591fd3d2c83ab107ffa2bbfb54113755b5a03591cb0ab9a173cde6"
+      "bytes": 4596,
+      "sha256": "e18e37032f71237d272b26e065292edfc571cc71f82d8820952dbf6f515b580d"
     },
     {
       "archivo": "procedencia/manifiesto_original.json",
