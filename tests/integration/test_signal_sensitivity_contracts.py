@@ -18,7 +18,7 @@ from crypto_carry.strategy import Backtest
 @pytest.mark.parametrize("risk_at_expiry", [False, True])
 def test_horizon_opens_and_renews_on_its_clock_with_fixed_cycle_cost(start, rules, horizon, strategy, risk_at_expiry):
     base = Config.load(Path(__file__).resolve().parents[2] /
-                       "configs/entrega_4/reglas_historicas/BASE_E3.toml")
+                       "configs/reglas_historicas/BASE_E3.toml")
     seconds = (horizon + 1) * 3600
     config = base.changed(start=iso(start), end=iso(start + seconds * SECOND),
                           horizon_hours=horizon, holding_hours=horizon)

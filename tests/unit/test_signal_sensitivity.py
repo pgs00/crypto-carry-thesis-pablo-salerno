@@ -21,7 +21,7 @@ def test_closed_matrix_rejects_combined_dimension_and_preserves_base():
     )
     from scripts.signal_sensitivity import scenario_configs, validate_variant
 
-    base = Config.load(ROOT / "configs/entrega_4/reglas_historicas/BASE_E3.toml")
+    base = Config.load(ROOT / "configs/reglas_historicas/BASE_E3.toml")
     before = base.to_dict()
     scenarios = scenario_configs(base)
     expected = {
@@ -118,7 +118,7 @@ def test_resume_rejects_config_code_or_input_change():
     from scripts import signal_sensitivity as sensitivity
 
     assert hasattr(sensitivity, "validate_identity"), "resume identity guard is missing"
-    base = Config.load(ROOT / "configs/entrega_4/reglas_historicas/BASE_E3.toml")
+    base = Config.load(ROOT / "configs/reglas_historicas/BASE_E3.toml")
     config = base.changed(horizon_hours=72, holding_hours=72)
     manifest = dict(config=config.to_dict(), code_hash="code-a", input_hashes={"source": "a"})
     sensitivity.validate_identity(manifest, config, "code-a", {"source": "a"})

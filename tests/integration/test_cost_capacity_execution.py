@@ -17,7 +17,7 @@ from scripts.cost_capacity import CHANGES, scenario_configs
 @pytest.mark.parametrize("strategy", ["conditional", "permanent"])
 def test_scenario_fees_capacity_and_portfolio_reconcile(start, rules, scenario, strategy):
     base = Config.load(Path(__file__).resolve().parents[2] /
-                       "configs/entrega_4/reglas_historicas/BASE_E3.toml")
+                       "configs/reglas_historicas/BASE_E3.toml")
     config = scenario_configs(base)[scenario].changed(start=iso(start),
                                                      end=iso(start+600*SECOND))
     rows = sorted(warmup(start) + bars(start, base="100"), key=event_key)

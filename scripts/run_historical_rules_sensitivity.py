@@ -120,7 +120,7 @@ def export_h3(package, run_id, scenario, strategy, opportunities):
 
 def run_one(package, data_root, scenario, strategy):
     audit = check_protocol(package)
-    config = Config.load(PROJECT / "configs/entrega_4/reglas_historicas" / f"{scenario}.toml")
+    config = Config.load(PROJECT / "configs/reglas_historicas" / f"{scenario}.toml")
     baseline = data_root / "outputs" / BASES[strategy]
     quality = read(baseline / "data_quality.json")
     quality["research_assumptions"] = research_assumptions(config)

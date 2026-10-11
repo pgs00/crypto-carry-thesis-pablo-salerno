@@ -15,6 +15,14 @@ from collections import Counter
 from decimal import Decimal
 from pathlib import Path
 
+try:
+    from .project_paths import resolve_recorded_path
+except ImportError:  # Direct CLI execution, including exported tooling and python -I.
+    import sys
+
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+    from scripts.project_paths import resolve_recorded_path
+
 for _name in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS", "NUMEXPR_NUM_THREADS"):
     os.environ[_name] = "1"
 os.environ["PYTHONDONTWRITEBYTECODE"] = "1"
@@ -124,7 +132,7 @@ class Sources:
                                    mtime_ns=stat.st_mtime_ns, local=local, **metadata))
 
     def package(self, block: str) -> tuple[Path, dict]:
-        root = self.project / self.packages[block]
+        root = resolve_recorded_path(self.project / self.packages[block], self.project)
         if block not in self.manifests:
             path = root / "manifiesto_paquete.json"
             digest = sha256(path)
@@ -393,7 +401,7 @@ def historical_sources(sources: Sources) -> dict:
 
 
 def cached_history(candidate: Path, project: Path, data_root: Path) -> tuple[dict, bool]:
-    matrix = read_csv(project / "docs/entrega_4/matriz_avance.csv")
+    matrix = read_csv(project / "results/matriz_resultados.csv")
     packages = {r["id"]: r["paquete_vigente"] for r in matrix if r["id"] in BLOCKS}
     cache = candidate / "fuentes/sintesis_historico.json"
     inventory_path = candidate / "fuentes/sintesis_inventario.json"
@@ -401,7 +409,7 @@ def cached_history(candidate: Path, project: Path, data_root: Path) -> tuple[dic
         inventory = read_json(inventory_path)
         valid = inventory.get("schema") == SCHEMA and inventory.get("packages") == packages
         for entry in inventory.get("sources", []) if valid else []:
-            path = Path(entry["path"])
+            path = resolve_recorded_path(entry["path"], project)
             if not path.exists():
                 valid = False
                 break

@@ -23,8 +23,8 @@ def test_export_preserves_crlf_binary_evidence_and_existing_index(tmp_path):
     user_index = project/".git/index"
     git(project, ["add", "--", "unrelated.txt"], index=user_index)
     before = sha256(user_index)
-    (project/".gitattributes").write_bytes(b"/entregas/entrega_4/senal_entradas/** -text whitespace=cr-at-eol\n")
-    package = project/"entregas/entrega_4/senal_entradas/synthetic/paquete"
+    (project/".gitattributes").write_bytes(b"/results/senal/** -text whitespace=cr-at-eol\n")
+    package = project/"results/senal/synthetic/paquete"
     package.mkdir(parents=True)
     evidence = {"indice_corridas.json": b'{"synthetic_test_only":true}\r\n',
                 "decimal.csv": b"value\r\n0.0012300000000000001\r\n",

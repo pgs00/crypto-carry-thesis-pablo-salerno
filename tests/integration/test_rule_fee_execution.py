@@ -16,7 +16,7 @@ ROOT = Path(__file__).resolve().parents[2]
 
 
 def execute(name, start, *, rate=".001", strategy="conditional", extra=()):
-    config = Config.load(ROOT / "configs/entrega_4/reglas_historicas" / f"{name}.toml")
+    config = Config.load(ROOT / "configs/reglas_historicas" / f"{name}.toml")
     config = config.changed(start=iso(start), end=iso(start + 600 * SECOND))
     rows = warmup(start, rate=rate) + list(extra)
     for offset in range(0, 601, 60):

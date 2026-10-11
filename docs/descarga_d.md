@@ -223,7 +223,7 @@ foreach ($perfilMinuto in $configsMinuto) {
 Este segundo comando vuelve a ejecutar el baseline y luego cada escenario;
 imprime un avance por escenario terminado. Mantiene resultados separados y
 guarda el índice en `outputs\robustness-<id>`. Las tablas, figuras y auditorías
-vigentes se identifican en [resultados E4](../entregas/entrega_4/README.md).
+vigentes se identifican en [resultados por tema](../results/README.md).
 
 Para reconstruir el informe conjunto de las corridas verificadas actuales:
 

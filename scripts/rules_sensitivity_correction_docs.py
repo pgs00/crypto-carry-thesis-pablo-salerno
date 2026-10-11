@@ -387,7 +387,7 @@ python -I -S -B -X utf8 <paquete_padre>/herramientas/verify_rules_sensitivity_pa
 ## Regenerar exclusivamente el posprocesamiento
 
 Autenticar primero el ZIP original E3
-`entregas/entrega_3/paquete_actualizacion_entrega_3_continua.zip` contra su
+`data/evidence/carteras_continuas.zip` contra su
 `.zip.sha256` (primer campo), `manifest.sha256` y los hashes de todos
 sus miembros. Desde el repositorio, `scripts.publish_thesis.load_source()`
 realiza esas comprobaciones. Extraer los bytes autenticados a una carpeta

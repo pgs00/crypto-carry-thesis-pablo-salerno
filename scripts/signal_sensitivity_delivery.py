@@ -17,6 +17,8 @@ sys.path.insert(0, str(TOOLS_ROOT/"src"))
 
 from crypto_carry.config import Config  # noqa: E402
 from crypto_carry.data.replay import input_hashes  # noqa: E402
+from scripts.distribution_integrity import original_manifest_path, verify_distribution  # noqa: E402
+from scripts.project_paths import resolve_recorded_path  # noqa: E402
 from scripts.return_capital.common import read_json, write_json  # noqa: E402
 from scripts.signal_sensitivity import BASES  # noqa: E402
 from scripts.signal_sensitivity_integrity import (  # noqa: E402
@@ -48,7 +50,7 @@ def preserve(project, work, data_root):
     prior = read_json(work/"preservacion_previa.json")
     checked = []
     for name, expected in prior["tracked_files"].items():
-        path = project/name
+        path = resolve_recorded_path(project/name, project)
         if name == ".gitattributes":
             original = (work/"gitattributes_original.bin").read_bytes()
             addition = (work/"gitattributes_adicion.txt").read_bytes()
@@ -64,16 +66,17 @@ def preserve(project, work, data_root):
     base_files = 0
     for item in read_json(work/"verificacion_base_previa.json")["runs"]:
         for name, expected in item["protected_files"].items():
-            if sha256(Path(item["path"])/name) != expected:
+            if sha256(resolve_recorded_path(item["path"], project)/name) != expected:
                 raise ValueError("Original BASE artifact changed: "+name)
             base_files += 1
     references = []
     for source in read_json(work/"autenticacion_referencias.json"):
-        folder = Path(source["path"])
+        folder = resolve_recorded_path(source["path"], project)
         manifest = folder/"manifiesto_paquete.json"
-        digest = sha256(manifest)
-        if digest != source["manifest_sha256"] or (folder/"manifiesto_paquete.sha256").read_text().split()[0] != digest:
+        digest = sha256(original_manifest_path(folder))
+        if digest != source["manifest_sha256"] or (folder/"manifiesto_paquete.sha256").read_text().split()[0] != sha256(manifest):
             raise ValueError("Prior package manifest changed")
+        verify_distribution(folder)
         archived = read_json(manifest)
         members = archived.get("members", archived.get("files"))
         if not isinstance(members, list):
@@ -97,7 +100,7 @@ def preserve(project, work, data_root):
 def export_bytes(project, package):
     """Git mutations are confined to a fresh index; exported blobs remain inspectable."""
     package = package.resolve()
-    if not package.is_relative_to(project/"entregas/entrega_4/senal_entradas") or not (package/"indice_corridas.json").is_file():
+    if not package.is_relative_to(project/"results/senal") or not (package/"indice_corridas.json").is_file():
         raise ValueError("Export requires a new block-2 candidate inside the workspace")
     before = sha256(real_index(project))
     temporary = Path(tempfile.mkdtemp(prefix="senal_git_export_"))
@@ -107,7 +110,7 @@ def export_bytes(project, package):
     files += list((project/"scripts").glob("*signal_sensitivity*.py"))
     files += list((project/"tests/unit").glob("test_signal_sensitivity*.py"))
     files += list((project/"tests/integration").glob("test_signal_sensitivity*.py"))
-    files += list((project/"configs/entrega_4/senal_entradas").rglob("*.toml"))
+    files += list((project/"configs/senal").rglob("*.toml"))
     names = sorted({p.relative_to(project).as_posix() for p in files})
     rows = []
     try:
@@ -147,7 +150,7 @@ def export_bytes(project, package):
         if any(attrs[i+2] != "unset" for i in range(0, len(attrs)-1, 3)):
             raise ValueError("Some evidence lacks -text protection")
         git(project, ["diff", "--cached", "--check", "--", package.relative_to(project).as_posix(),
-                      "scripts", "tests", "configs/entrega_4/senal_entradas", ".gitattributes"], index=index)
+                      "scripts", "tests", "configs/senal", ".gitattributes"], index=index)
     finally:
         if sha256(real_index(project)) != before:
             raise ValueError("User index changed during isolated export")

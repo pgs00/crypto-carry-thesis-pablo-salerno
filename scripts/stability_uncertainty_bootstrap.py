@@ -50,7 +50,7 @@ PERIOD_BOUNDS = {
     "2022-2023": ("2022-01-01", "2024-01-01"),
     "2024+": ("2024-01-01", "2026-09-01"),
 }
-B5 = Path("entregas/entrega_4/estres_contrafactual/20260930T214617Z/distribucion_20261010")
+B5 = Path("results/estres/evidencia")
 B5_MANIFEST_SHA = "091fe38bba57ad5be62275cabb03579b1c47f2d96784ed7c5e2ce6377467a8de"
 POINT_ATOL = 2e-10
 SCALAR_ATOL = 2e-11

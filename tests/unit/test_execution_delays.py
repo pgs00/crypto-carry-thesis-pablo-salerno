@@ -10,7 +10,7 @@ from crypto_carry import execution
 from crypto_carry.config import SECOND, Config, timestamp
 from crypto_carry.models import MinuteBar
 
-BASE = Path(__file__).resolve().parents[2] / 'configs/entrega_4/reglas_historicas/BASE_E3.toml'
+BASE = Path(__file__).resolve().parents[2] / 'configs/reglas_historicas/BASE_E3.toml'
 
 
 def test_defaults_preserve_base_canonical_and_digest():

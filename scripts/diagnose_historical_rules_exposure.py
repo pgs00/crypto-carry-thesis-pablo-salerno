@@ -671,14 +671,14 @@ conservación al finalizar. Este inventario no sustituye al verificador de publi
 ni certifica el motor o la continuidad de fuentes. No hubo cambios de índice,
 commit, publicación externa ni modificación de evidencia original por este comando.
 
-La segunda tanda sólo está propuesta en `docs/entrega_4/reglas_historicas/decisiones_integracion.md`.
+La segunda tanda sólo está propuesta en `docs/reglas_historicas/decisiones_integracion.md`.
 No se ejecutó ninguna de sus políticas ni interpolaciones.
 
 Reproducir requiere el paquete sellado, sus dependencias A1–A3, docs/research y
 las dos carpetas de corridas originales bajo --runs-root. Usar una salida nueva:
 
 ```powershell
-.venv/Scripts/python.exe -X utf8 scripts/diagnose_historical_rules_exposure.py --root . --runs-root D:/Backtesting/outputs --output entregas/entrega_4/reglas_historicas/diagnostico_reproducido_nuevo
+.venv/Scripts/python.exe -X utf8 scripts/diagnose_historical_rules_exposure.py --root . --runs-root D:/Backtesting/outputs --output results/base/diagnostico_reproducido_nuevo
 ```
 
 `--root`, `--evidence` y `--runs-root` permiten otra ubicación sin depender de HEAD.

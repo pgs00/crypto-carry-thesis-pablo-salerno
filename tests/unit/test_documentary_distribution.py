@@ -8,7 +8,8 @@ import pytest
 from scripts import distribution_integrity as integrity
 
 ROOT = Path(__file__).resolve().parents[2]
-PACKAGES = sorted({p.parent.parent for p in (ROOT / "entregas").rglob("procedencia/derivacion.json")})
+PACKAGES = sorted({p.parent.parent for root in (ROOT / "results", ROOT / "data/evidence")
+                   for p in root.rglob("procedencia/derivacion.json")})
 
 
 def write_json(path, data):

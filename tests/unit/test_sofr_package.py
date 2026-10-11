@@ -14,12 +14,12 @@ from scripts.sofr_benchmark.verification import verify
 
 ROOT = Path(__file__).resolve().parents[2]
 INPUTS = Path(
-    os.environ.get("SOFR_INPUTS", ROOT / "entregas/entrega_4/retorno_capital/20260927T154653Z_sofr/distribucion_20261010")
+    os.environ.get("SOFR_INPUTS", ROOT / "results/benchmark_sofr/evidencia")
 )
 PREVIOUS = Path(
     os.environ.get(
         "SOFR_PREVIOUS",
-        ROOT / "entregas/entrega_4/retorno_capital/20260927T143928Z/distribucion_20261010",
+        ROOT / "results/capital/evidencia",
     )
 )
 

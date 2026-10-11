@@ -8,7 +8,7 @@ from crypto_carry.config import SECOND, Config, timestamp
 
 def fixture():
     config = Config.load(Path(__file__).resolve().parents[2] /
-                         "configs/entrega_4/reglas_historicas/BASE_E3.toml").changed(
+                         "configs/reglas_historicas/BASE_E3.toml").changed(
                              max_volume_participation=D(".005"))
     start = timestamp(config.start)
     orders, fills, ledger = [], [], []

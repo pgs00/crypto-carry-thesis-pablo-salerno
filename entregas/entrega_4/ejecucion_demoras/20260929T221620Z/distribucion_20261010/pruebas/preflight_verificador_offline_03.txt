@@ -1,5 +1,0 @@
-VERIFIED BASE_E3 conditional
-VERIFIED BASE_E3 permanent
-VERIFIED E_OHLC4 conditional
-VERIFIED E_OHLC4 permanent
-{"passed": true, "complete_matrix": false, "runs_checked": 4, "members_checked": 0, "daily_closes": 6816, "financial_periods": 32, "orders": 1986, "full_base_controls": 2, "local_incident_cases": 26, "local_incident_observations": 9484, "fills": 940, "capacity_keys": 940, "h1_observations_reused_once": 10224, "economic_replay": false, "volume_scope": "recalculated from included authenticated windows; massive source files not read", "shared_builder_verifier_logic": true, "tool_root": "C:\\Users\\pablo\\AppData\\Local\\Temp\\execution_delays_preflight_sjutk234\\partial_price\\herramientas", "config_module_file": "C:\\Users\\pablo\\AppData\\Local\\Temp\\execution_delays_preflight_sjutk234\\partial_price\\herramientas\\src\\crypto_carry\\config.py", "package_manifest_sha256": null}

@@ -14,7 +14,9 @@ sys.path.insert(0, str(ROOT/"src"))
 from crypto_carry.config import Config  # noqa: E402
 from crypto_carry.data.replay import input_hashes  # noqa: E402
 from crypto_carry.reporting import _code_identity  # noqa: E402
+from scripts.distribution_integrity import original_manifest_path, verify_distribution  # noqa: E402
 from scripts.execution_delays import BASES  # noqa: E402
+from scripts.project_paths import resolve_recorded_path  # noqa: E402
 from scripts.return_capital.common import read_json, sha256, write_json  # noqa: E402
 from scripts.signal_sensitivity_delivery import git, real_index  # noqa: E402
 from scripts.verify_rules_sensitivity_package import safe_path  # noqa: E402
@@ -22,7 +24,7 @@ from scripts.verify_rules_sensitivity_package import safe_path  # noqa: E402
 CHANGED = {"src/crypto_carry/config.py", "src/crypto_carry/execution.py",
            "src/crypto_carry/strategy.py", "src/crypto_carry/reporting.py",
            "src/crypto_carry/data/prescribed.py"}
-GLOBAL_PROGRESS={"docs/entrega_4/matriz_avance.csv", "docs/entrega_4/historial_avance/cambios.md"}
+GLOBAL_PROGRESS={"results/matriz_resultados.csv", "docs/procedencia/historial_resultados.md"}
 
 
 
@@ -55,16 +57,17 @@ def preserve(project, work, data):
     bases = []
     from crypto_carry.reporting import verify_run
     for item in read_json(work/"verificacion_base_previa.json")["runs"]:
-        folder = Path(item["path"])
+        folder = resolve_recorded_path(item["path"], project)
         if sha256(folder/"run_manifest.json") != item["manifest_sha256"] or not verify_run(folder)["valid"]:
             raise ValueError("Original BASE changed")
         bases.append(item["run_id"])
     previous = []
     for item in read_json(work/"autenticacion_referencias.json"):
-        folder = Path(item["path"])
-        if (sha256(folder/"manifiesto_paquete.json") != item["manifest_sha256"] or
-                (folder/"manifiesto_paquete.sha256").read_text().split()[0] != item["manifest_sha256"]):
+        folder = resolve_recorded_path(item["path"], project)
+        if (sha256(original_manifest_path(folder)) != item["manifest_sha256"] or
+                (folder/"manifiesto_paquete.sha256").read_text().split()[0] != sha256(folder/"manifiesto_paquete.json")):
             raise ValueError("Previous sealed manifest changed")
+        verify_distribution(folder)
         manifest = read_json(folder/"manifiesto_paquete.json")
         members = manifest.get("members", manifest.get("files"))
         for member in members:
@@ -89,7 +92,7 @@ def preserve(project, work, data):
 
 def export_bytes(project, package):
     package = package.resolve()
-    if not package.is_relative_to(project/"entregas/entrega_4/ejecucion_demoras"):
+    if not package.is_relative_to(project/"results/ejecucion"):
         raise ValueError("Export restricted to new block-4 evidence")
     before = sha256(real_index(project))
     temporary = Path(tempfile.mkdtemp(prefix="execution_delays_git_export_"))

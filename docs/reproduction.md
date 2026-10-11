@@ -9,7 +9,7 @@ hashes para aceptar divergencias.
 
 ## 1. Lectura, sin ejecutar código
 
-Abrir los reportes Markdown/HTML, tablas CSV y protocolos del [índice de resultados E4](../entregas/entrega_4/README.md).
+Abrir los reportes Markdown/HTML, tablas CSV y protocolos del [índice de resultados por tema](../results/README.md).
 No requiere Python ni datos de mercado. Los índices de corridas y manifiestos
 identifican las fuentes; leerlos no equivale a volver a verificarlas.
 
@@ -21,7 +21,7 @@ los controles científicos; no requieren los prompts retirados ni Git.
 Requieren **Python 3.14** y las dependencias de [pyproject.toml](../pyproject.toml)
 y [uv.lock](../uv.lock); el entorno local de referencia usa Python 3.14.3
 en Windows. En Linux se comprobó una diferencia de últimos dígitos que hace
-fallar la comparación literal del CSV de intervalos B6, aunque sus controles
+fallar la comparación literal del CSV de intervalos de estabilidad, aunque sus controles
 numéricos pasaron en esa comprobación histórica. La diferencia máxima fue
 `6.938893903907228e-18`; no se relaja la comparación ni se afirma un PASS
 integral en Linux.
@@ -46,11 +46,11 @@ externa a todos los paquetes; los JSON/logs son los únicos productos esperados.
 $repo = (Resolve-Path .).Path
 $py = Join-Path $repo '.venv/Scripts/python.exe'
 $paquetes = @{}
-Import-Csv (Join-Path $repo 'docs/entrega_4/matriz_avance.csv') | ForEach-Object {
+Import-Csv (Join-Path $repo 'results/matriz_resultados.csv') | ForEach-Object {
     if ($_.paquete_vigente) { $paquetes[$_.id] = Join-Path $repo $_.paquete_vigente }
 }
-$padre = Join-Path $repo 'entregas/entrega_4/reglas_historicas/20260925T005436Z'
-$salida = Join-Path $env:TEMP ('e4_offline_' + (Get-Date -Format 'yyyyMMddTHHmmss'))
+$padre = Join-Path $repo 'data/evidence/reglas_historicas'
+$salida = Join-Path $env:TEMP ('tesina_offline_' + (Get-Date -Format 'yyyyMMddTHHmmss'))
 if (Test-Path -LiteralPath $salida) { throw 'Elegir una salida nueva' }
 New-Item -ItemType Directory -Path $salida | Out-Null
 ```
@@ -74,14 +74,14 @@ sus fechas y alcances originales.
 
 BASE requiere su padre completo. Riesgo autentica los linajes suministrados,
 pero el modo compacto no recalcula extremos globales ni precios por minuto.
-B1 capital, sin dependencias adicionales, comprueba el paquete interno; su
-[guía][capital-guia] documenta el modo con padre, corrección, riesgo y E3.
-SOFR recalcula la cuenta hipotética y comprueba la distribución B1 capital
+Capital, sin dependencias adicionales, comprueba el paquete interno; su
+[guía][capital-guia] documenta el modo con padre, corrección, riesgo y la referencia continua.
+SOFR recalcula la cuenta hipotética y comprueba la distribución de capital
 indicada, conservando por separado la identidad histórica de su dependencia.
 Ese control no se presenta como comprobación íntegra del sello original retirado.
-B2–B5 recomputan
+Señal, costos/capacidad, ejecución y estrés recomputan
 lo declarado en cada guía desde extractos y agregados; no vuelven a leer
-toda la historia de mercado. B6 vuelve a calcular también las estadísticas
+toda la historia de mercado. Estabilidad vuelve a calcular también las estadísticas
 del bootstrap desde inputs compactos, sin simular carteras. Las herramientas
 comparten partes del posprocesamiento; imágenes verificadas por hash y tablas
 de origen no equivalen a una inspección visual nueva.
@@ -92,16 +92,16 @@ hacer pasar una divergencia. Las herramientas históricas conservadas en los
 snapshots pueden exigir estados antiguos del repositorio; los verificadores
 por paquete de arriba fijan el alcance actual de la comprobación compacta.
 
-## Entrega 3: presentación y extracción autenticada
+## Referencia continua y extracción autenticada
 
-La presentación E3 se comprueba desde el ZIP original, sin datos masivos ni
+La presentación continua se comprueba desde el ZIP original, sin datos masivos ni
 nuevos backtests. Para regenerarla, elegir otra salida externa que no exista:
 
 ```powershell
 $repo = (Resolve-Path .).Path
 $py = Join-Path $repo '.venv/Scripts/python.exe'
 & $py -B -X utf8 -m scripts.publish_thesis --verify
-$presentacion = Join-Path $env:TEMP ('e3_presentacion_' + (Get-Date -Format 'yyyyMMddTHHmmss'))
+$presentacion = Join-Path $env:TEMP ('continua_presentacion_' + (Get-Date -Format 'yyyyMMddTHHmmss'))
 if (Test-Path -LiteralPath $presentacion) { throw 'Elegir una salida nueva' }
 & $py -B -X utf8 -m scripts.publish_thesis --output $presentacion
 ```
@@ -117,19 +117,19 @@ function Expand-AuthenticatedE3([string]$zip, [string]$destination) {
     if ($observado.ToLowerInvariant() -ne $esperado.ToLowerInvariant()) { throw 'SHA-256 divergente' }
     Expand-Archive -LiteralPath $zip -DestinationPath $destination
 }
-$e3 = Join-Path $env:TEMP ('e3_continua_' + (Get-Date -Format 'yyyyMMddTHHmmss'))
-Expand-AuthenticatedE3 (Join-Path $repo 'entregas/entrega_3/paquete_actualizacion_entrega_3_continua.zip') $e3
+$e3 = Join-Path $env:TEMP ('continua_' + (Get-Date -Format 'yyyyMMddTHHmmss'))
+Expand-AuthenticatedE3 (Join-Path $repo 'data/evidence/carteras_continuas.zip') $e3
 Push-Location $e3
 try { & $py -I -S -B -X utf8 verificar.py } finally { Pop-Location }
 
-$v2 = Join-Path $repo 'entregas/entrega_3/archivo/distribucion_20261010'
+$v2 = Join-Path $repo 'data/evidence/ventanas_independientes'
 & $py -B -X utf8 "$v2/scripts/verificar_paquete.py"
 ```
 
 Comprobar los códigos de salida; SHA-256 autentica el ZIP continuo preservado y
 los verificadores internos comprueban inventario/evidencia. La distribución
-histórica E3 se comprueba directamente, sin extraer los ZIP retirados. Su
-[LEEME](../entregas/entrega_3/archivo/distribucion_20261010/LEEME.md) documenta
+de ventanas independientes se comprueba directamente, sin extraer los ZIP retirados. Su
+[LEEME original autenticado](../data/evidence/ventanas_independientes/LEEME.md) documenta
 herramientas, fuentes y límites. Los scripts históricos de construcción conservan
 su contexto original y no deben sobrescribir ninguna distribución.
 
@@ -138,19 +138,18 @@ no el ZIP. Después de la extracción autenticada anterior, el ejemplo editorial
 sin replay es:
 
 ```powershell
-$correccion = Join-Path $env:TEMP ('e4_correccion_' + (Get-Date -Format 'yyyyMMddTHHmmss'))
+$correccion = Join-Path $env:TEMP ('base_correccion_' + (Get-Date -Format 'yyyyMMddTHHmmss'))
 & $py -B -X utf8 scripts/report_historical_rules_sensitivity.py `
-  --source-package entregas/entrega_4/reglas_historicas/20260925T005436Z `
+  --source-package data/evidence/reglas_historicas `
   --destination $correccion `
   --e3-reference $e3
 ```
 
 Este comando construye y sella un derivado editorial nuevo; no modifica la
 corrección vigente ni las carteras. La
-[guía de exposición/H2](entrega_4/reglas_historicas/lectura_resultados.md)
-describe su verificación posterior. Para consumidores históricos que exigen
-las rutas originales, restaurar previamente sólo las raíces necesarias según
-[recuperación de antecedentes](#recuperación-de-antecedentes).
+[guía de exposición/H2](reglas_historicas/lectura_resultados.md)
+describe su verificación posterior. Los paquetes y sus dependencias compactas se encuentran en este repositorio;
+los ejemplos utilizan las rutas temáticas actuales.
 
 ## 3. Fuentes masivas y replay del motor
 
@@ -161,9 +160,9 @@ amplían la verificación y no implican necesariamente un replay económico.
 Son controles distintos del nivel compacto.
 
 Repetir carteras requiere además el snapshot económico, configuraciones,
-dependencias y contratos exactos de cada bloque, junto con destinos nuevos.
-La [guía de reglas](entrega_4/reglas_historicas/reproduccion.md),
-la [reproducción B5][b5-limites] y los protocolos del índice E4 conservan los
+dependencias y contratos exactos de cada tema, junto con destinos nuevos.
+La [guía de reglas](reglas_historicas/reproduccion.md),
+la [reproducción de estrés][b5-limites] y los protocolos del índice temático conservan los
 requisitos y comandos históricos. Los runners pueden escribir estados:
 nunca deben apuntar al paquete sellado. Una comprobación offline no equivale
 a reproducir el motor. La [guía de datos](descarga_d.md) documenta adquisición
@@ -192,23 +191,28 @@ algunas necesitan datos o rutas de evidencia indicadas en sus fixtures.
 Comprueba codificación y enlaces locales de una lista explícita de documentos
 activos. No verifica economía ni todos los documentos históricos o sellados.
 
-## Recuperación de antecedentes
+## Procedencia y dependencias
 
-El respaldo completo previo a esta limpieza se conserva en
-`../Backtesting_antecedentes/limpieza_final_20261010/originales/`, con inventario
-SHA-256 externo y recuperación comprobada. Los paquetes originales mantienen
-sus bytes, manifiestos y certificados históricos. Su conservación no constituye
-una nueva validación. Las distribuciones actuales incluyen herramientas y fuentes
-compactas para su comprobación, con las dependencias explícitas indicadas arriba.
-Recuperar originales siempre en destinos nuevos; los constructores históricos
-requieren su contexto y herramientas originales. Los antecedentes retirados antes
-de este respaldo se recuperan de
-`b5bf5909c1793c684a0acd110b6fab2e90718cca` o de los respaldos anteriores
-`../Backtesting_antecedentes/segunda_limpieza_20261010/` y
-`../Backtesting_antecedentes/limpieza_20261010/bytes_git/`.
-Los originales que necesitan documentos internos se recuperan completos desde
-esos respaldos. La presentación continua E3, el archivo histórico E3 y los bloques
-Riesgo/B1–B6 tienen distribuciones documentales identificadas en sus índices.
+Las evidencias temáticas incluyen sus datos compactos, herramientas, fuentes y
+manifiestos de procedencia. BASE requiere el padre completo en
+`data/evidence/reglas_historicas`; riesgo requiere ese padre y la corrección
+`results/base/evidencia`; SOFR requiere `results/capital/evidencia`.
+La referencia continua se conserva en `data/evidence/carteras_continuas.zip`
+y las ventanas independientes en `data/evidence/ventanas_independientes`.
+La comprobación compacta no requiere respaldos privados ni rutas archivadas.
+Los certificados originales conservan su fecha y alcance histórico; una
+adaptación de ubicación no acredita una nueva ejecución económica.
 
-[capital-guia]: ../entregas/entrega_4/retorno_capital/20260927T143928Z/distribucion_20261010/README.md
-[b5-limites]: ../entregas/entrega_4/estres_contrafactual/20260930T214617Z/distribucion_20261010/reproducibilidad.md
+Comprobar navegación, distribución del producto y sus dependencias:
+
+```powershell
+python -B -X utf8 -m scripts.verify_product
+python -B -X utf8 -m scripts.verify_documentation
+```
+
+El PDF final conserva el contenido y la portada histórica. No se dispone de
+una fuente editable final autenticada; la presentación se entrega sin
+reconstrucción del documento desde el PDF.
+
+[capital-guia]: ../results/capital/README.md
+[b5-limites]: ../results/estres/evidencia/reproducibilidad.md

@@ -17,9 +17,9 @@ import matplotlib.pyplot as plt
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
-DELIVERY = ROOT / "entregas/entrega_3"
-ARCHIVE = DELIVERY / "paquete_actualizacion_entrega_3_continua.zip"
-PUBLISHED = DELIVERY / "continua_distribucion_20261010"
+DELIVERY = ROOT / "data/evidence"
+ARCHIVE = DELIVERY / "carteras_continuas.zip"
+PUBLISHED = ROOT / "results/base/continuo"
 TABLES = (
     "resultados_periodos",
     "actividad",
@@ -233,7 +233,7 @@ def readme(files):
             strict=True,
         )
     )
-    return f"""# Resultados continuos de la Entrega 3
+    return f"""# Resultados de las carteras continuas
 
 **01/01/2022–31/08/2026 UTC**, ambas carteras con `futures_scaled`. Los cortes
 2022–2023 y 2024–agosto de 2026 pertenecen a las mismas trayectorias: sus saldos
@@ -284,7 +284,7 @@ condicional; H3 es contraria a una caída de oportunidad y CAGR entre estos cort
   [H3 diario conjunto](tablas/h3_diario_conjunto.csv).
 - [Sensibilidad de los 15 marks](../../../data/research/continuous-marks-20260919/README.md)
   y [sensibilidad del precio de funding](../../../data/research/funding-price-sensitivity-20260920/README.md).
-- [ZIP con evidencia completa](../paquete_actualizacion_entrega_3_continua.zip),
+- [ZIP con evidencia completa](../../../data/evidence/carteras_continuas.zip),
   [metodología](../../../docs/methodology.md) y [manifiesto de esta vista](manifest.json).
 
 Las tablas de resumen conservan los bytes del ZIP. `equity_diario.csv` es una

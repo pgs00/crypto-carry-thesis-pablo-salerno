@@ -15,19 +15,20 @@ from crypto_carry.config import Config  # noqa: E402
 from crypto_carry.reporting import _code_identity, verify_run  # noqa: E402
 from scripts.distribution_integrity import original_manifest_path  # noqa: E402
 from scripts.execution_delays import BASES, scenario_configs, validate_variant  # noqa: E402
+from scripts.project_paths import resolve_recorded_path  # noqa: E402
 from scripts.return_capital.common import read_json, write_json  # noqa: E402
 from scripts.verify_rules_sensitivity_package import sha256  # noqa: E402
 
-PREVIOUS = ROOT / "entregas/entrega_4/senal_entradas/20260927T170230Z"
+PREVIOUS = ROOT / "results/senal/evidencia"
 
 
 def authenticate(work, data):
-    refs = read_json(PREVIOUS / "autenticacion_referencias.json")
-    refs.append(dict(dependency="block2", path=str(PREVIOUS / "distribucion_20261010")))
-    refs.append(dict(dependency="block3_current", path=str(ROOT / "entregas/entrega_4/costos_capacidad/20260927T200204Z/distribucion_20261010")))
+    refs = read_json(PREVIOUS / "documentos/autenticacion_referencias.json")
+    refs.append(dict(dependency="block2", path=str(PREVIOUS)))
+    refs.append(dict(dependency="block3_current", path=str(ROOT / "results/costos_capacidad/evidencia")))
     checked = []
     for ref in refs:
-        path = Path(ref["path"])
+        path = resolve_recorded_path(ref["path"], ROOT)
         distribution = path.parent / "distribucion_20261010"
         if distribution.is_dir():
             path = distribution
@@ -58,7 +59,7 @@ def authenticate(work, data):
                          manifest_sha256=sha256(run / "run_manifest.json")))
     assert runs[0]["config"] == runs[1]["config"]
     write_json(work / "verificacion_base_previa.json", dict(runs=runs))
-    inputs = read_json(PREVIOUS / "input_hashes.json")
+    inputs = read_json(PREVIOUS / "documentos/input_hashes.json")
     errors = []
     for n, wanted in inputs.items():
         if n.startswith("data/") and sha256(data / n) != wanted:
@@ -74,7 +75,7 @@ def authenticate(work, data):
     for name, config in configs.items():
         text = config.to_toml()
         (work / "configuraciones" / f"{name}.toml").write_text(text, encoding="utf8")
-        target = ROOT / "configs/entrega_4/ejecucion_demoras" / work.name / f"{name}.toml"
+        target = ROOT / "configs/ejecucion" / work.name / f"{name}.toml"
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(text, encoding="utf8")
         for strategy in BASES:

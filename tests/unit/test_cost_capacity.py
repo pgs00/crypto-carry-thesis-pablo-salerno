@@ -12,7 +12,7 @@ from crypto_carry.data.prescribed import prescribed_rules, research_assumptions
 from crypto_carry.diagnostics import signal_diagnostics
 from crypto_carry.execution import minute_capacity
 
-BASE = Path(__file__).resolve().parents[2] / "configs/entrega_4/reglas_historicas/BASE_E3.toml"
+BASE = Path(__file__).resolve().parents[2] / "configs/reglas_historicas/BASE_E3.toml"
 
 
 def base():

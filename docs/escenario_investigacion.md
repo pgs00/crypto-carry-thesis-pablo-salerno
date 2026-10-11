@@ -1,6 +1,6 @@
 # Protocolo del estudio
 
-**Protocolo histórico de pilotos y ventanas independientes.** La metodología vigente de las carteras continuas está en [methodology.md](methodology.md) y sus resultados en [índice E4](../entregas/entrega_4/README.md). Los comandos de este antecedente no son necesarios para reproducir la presentación actual.
+**Protocolo histórico de pilotos y ventanas independientes.** La metodología vigente de las carteras continuas está en [methodology.md](methodology.md) y sus resultados en [índice temático](../results/README.md). Los comandos de este antecedente no son necesarios para reproducir la presentación actual.
 
 La revisión de ejecución por minuto reemplaza el contrato `minute_open`
 por `next_minute_vwap` con sizing conjunto
@@ -133,7 +133,7 @@ completa pasó 302 pruebas. Las dos corridas anuales ya terminaron: 310,14 y
 
 Una auditoría independiente reconstruyó el equity final de las cuatro carteras
 y verificó los 106 fills contra sus precios fuente, costos y tiempos de orden.
-Los resultados de estas ventanas se conservan en el [archivo E3](../entregas/entrega_3/archivo/README.md).
+Los resultados de estas ventanas se conservan en el [ventanas independientes](../data/evidence/ventanas_independientes/LEEME.md).
 Las siete sensibilidades priorizadas —costos 2x/3x, fee Futures 0,04 %,
 proxy ±10 bps, mantenimiento 2x y cargo de liquidación 3 %— terminaron para
 ambas ventanas. Los índices y sus corridas vinculadas están verificados.

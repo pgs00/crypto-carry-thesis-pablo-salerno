@@ -1,6 +1,6 @@
 # Auditoría del basis — 19/09/2026
 
-**Antecedente histórico:** esta auditoría corresponde a las ventanas independientes. Los [resultados vigentes son continuos](../../../entregas/entrega_3/continua_distribucion_20261010/README.md).
+**Antecedente histórico:** esta auditoría corresponde a las ventanas independientes. Los [resultados vigentes son continuos](../../../results/base/README.md).
 
 Se aplicó la [metodología de auditoría](../../../docs/basis_audit_methodology.md)
 sobre el escenario `vwap_joint` de las dos ventanas anuales. El basis negativo
@@ -23,8 +23,8 @@ permanente estaba rotulada y agregada como rechazo aunque esa estrategia omite
 el filtro. Ahora se informa como `diagnostic_fail_not_applied`, fuera de la
 unión de rechazos. Las decisiones reales, operaciones y resultados no cambian.
 
-Los informes se conservan en la [distribución histórica E3](../../../entregas/entrega_3/archivo/distribucion_20261010/LEEME.md).
-La [guía de verificación](../../../docs/reproduction.md#entrega-3-presentación-y-extracción-autenticada)
+Los informes se conservan en la [evidencia de ventanas independientes](../../evidence/ventanas_independientes/LEEME.md).
+La [guía de verificación](../../../docs/reproduction.md#referencia-continua-y-extracción-autenticada)
 comprueba directamente esa carpeta. Desde su raíz se pueden abrir:
 
 - Reporte completo: `evidencia/basis_audit_report.md`.

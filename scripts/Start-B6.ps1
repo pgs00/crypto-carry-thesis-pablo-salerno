@@ -1,5 +1,5 @@
 param(
-    [string]$Candidate = 'entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/candidato',
+    [string]$Candidate = 'results/estabilidad/candidatos/20261001T215423Z',
     [string]$DataRoot = 'D:/Backtesting',
     [string]$RawRoot = 'D:/Backtesting/outputs/estabilidad_incertidumbre/20261001T215423Z'
 )

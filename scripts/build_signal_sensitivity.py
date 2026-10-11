@@ -19,6 +19,7 @@ sys.path.insert(0, str(TOOLS_ROOT/"src"))
 from crypto_carry.config import Config  # noqa: E402
 from crypto_carry.reporting import verify_run  # noqa: E402
 from scripts import verify_rules_sensitivity_package as core  # noqa: E402
+from scripts.project_paths import resolve_recorded_path  # noqa: E402
 from scripts.report_historical_rules_sensitivity import write_csv  # noqa: E402
 from scripts.return_capital.common import parquet, read_csv, read_json, write_json  # noqa: E402
 from scripts.rules_sensitivity_h2 import h2_comparison  # noqa: E402
@@ -181,7 +182,7 @@ def snapshot_tools(destination):
     scripts = [
         "build_signal_sensitivity.py", "signal_sensitivity.py", "signal_sensitivity_report.py",
         "signal_sensitivity_hypotheses.py", "signal_sensitivity_docs.py", "verify_signal_sensitivity.py",
-        "signal_sensitivity_delivery.py", "distribution_integrity.py",
+        "signal_sensitivity_delivery.py", "distribution_integrity.py", "project_paths.py",
         "run_signal_sensitivity.py", "signal_sensitivity_integrity.py", "run_historical_rules_sensitivity.py",
         "verify_rules_sensitivity_package.py", "report_historical_rules_sensitivity.py",
         "rules_sensitivity_exposure.py", "rules_sensitivity_h2.py",
@@ -206,9 +207,9 @@ def snapshot_tools(destination):
         shutil.copyfile(source, target)
     target = destination/"herramientas/tests/conftest.py"
     shutil.copyfile(TOOLS_ROOT/"tests/conftest.py", target)
-    target = destination/"herramientas/configs/entrega_4/reglas_historicas/BASE_E3.toml"
+    target = destination/"herramientas/configs/reglas_historicas/BASE_E3.toml"
     target.parent.mkdir(parents=True, exist_ok=True)
-    shutil.copyfile(TOOLS_ROOT/"configs/entrega_4/reglas_historicas/BASE_E3.toml", target)
+    shutil.copyfile(TOOLS_ROOT/"configs/reglas_historicas/BASE_E3.toml", target)
 
 
 def seal(destination):
@@ -254,7 +255,7 @@ def build(work, data_root, destination, *, draft=False):
             raise ValueError("Original run differs from predeclared economic code")
     base_config = Config.load(Path(runs[0]["path"])/"effective_config.toml")
     destination.mkdir(parents=True)
-    parent = Path(next(r["path"] for r in dependencies if r["dependency"] == "parent"))
+    parent = resolve_recorded_path(next(r["path"] for r in dependencies if r["dependency"] == "parent"), TOOLS_ROOT)
     base_manifest = read_json(Path(runs[0]["path"])/"run_manifest.json")
     for name, sha in base_manifest["code_files"].items():
         source = parent/"codigo_base"/name

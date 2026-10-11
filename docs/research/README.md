@@ -1,7 +1,7 @@
 # Investigación histórica y auditorías
 
 Este índice conserva fuentes y exploraciones de 2026-09-18/19. El estudio vigente
-son las [carteras continuas de 2022–agosto de 2026](../../entregas/entrega_3/continua_distribucion_20261010/README.md).
+son las [carteras continuas de 2022–agosto de 2026](../../results/base/README.md).
 Los alcances y conteos fechados de esta página son antecedentes; no reemplazan
 los resultados actuales. El [catálogo de evidencia](../../data/research/README.md)
 identifica qué respalda el estudio continuo y qué corresponde a pilotos o ventanas.
@@ -78,7 +78,7 @@ La auditoría exige el esquema y ancho de columnas esperados, vuelve a comprobar
 Las fuentes sustentan las limitaciones y sensibilidades del escenario aprobado.
 Se conserva su procedencia; no se reclasifican reglas parciales o proxies como
 historia exacta. Las dos ventanas por minuto son antecedentes ejecutados y
-conservados en el [archivo de Entrega 3](../../entregas/entrega_3/archivo/README.md).
-[Resultados E4](../../entregas/entrega_4/README.md) describe las carteras continuas vigentes.
+conservados en el [ventanas independientes](../../data/evidence/ventanas_independientes/LEEME.md).
+[Resultados por tema](../../results/README.md) describe las carteras continuas vigentes.
 Las fuentes de esta investigación fueron públicas y no requirieron contactar
 soporte ni contratar proveedores de datos.

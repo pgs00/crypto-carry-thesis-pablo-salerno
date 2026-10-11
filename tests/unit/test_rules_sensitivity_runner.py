@@ -29,10 +29,10 @@ def load_runner(path=RUNNER):
 def orchestration(tmp_path, monkeypatch):
     module = load_runner()
     project, destination, data = (tmp_path / name for name in ("snapshot", "new-output", "data"))
-    config = Config.load(ROOT / f"configs/entrega_4/reglas_historicas/{SCENARIO}.toml").changed(
+    config = Config.load(ROOT / f"configs/reglas_historicas/{SCENARIO}.toml").changed(
         start="2022-08-01T00:00:00Z", end="2022-08-02T00:00:00Z"
     )
-    relative = f"configs/entrega_4/reglas_historicas/{SCENARIO}.toml"
+    relative = f"configs/reglas_historicas/{SCENARIO}.toml"
     put(project / relative, config.to_toml())
     put(destination / "protocolo_previo.json", {
         "files": {relative: hashlib.sha256((project / relative).read_bytes()).hexdigest()}

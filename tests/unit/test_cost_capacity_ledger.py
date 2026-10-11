@@ -11,7 +11,7 @@ from crypto_carry.models import Fill
 
 
 def fixture():
-    config = Config.load(Path(__file__).resolve().parents[2]/"configs/entrega_4/reglas_historicas/BASE_E3.toml").changed(cost_multiplier=D(2))
+    config = Config.load(Path(__file__).resolve().parents[2]/"configs/reglas_historicas/BASE_E3.toml").changed(cost_multiplier=D(2))
     ledger = Ledger(config, "conditional")
     now = timestamp(config.start)
     rule = prescribed_rules(config).get("BTCUSDT", "spot", now)

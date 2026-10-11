@@ -124,4 +124,4 @@ Las reglas y comisiones prescritas mantienen sus limitaciones anteriores.
 No se elige entre métodos según cuál produzca mayor rentabilidad.
 
 Los datos masivos siguen locales y excluidos de Git. Esta extensión no modifica
-el paquete sellado de la Entrega 3 ni su evidencia histórica.
+el paquete sellado de referencia continua ni su evidencia histórica.

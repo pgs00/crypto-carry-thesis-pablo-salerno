@@ -45,7 +45,7 @@ from scripts.signal_sensitivity_integrity import (  # noqa: E402
     reject_sealed_ancestor,
 )
 
-PREVIOUS = ROOT/"entregas/entrega_4/senal_entradas/20260927T170230Z/distribucion_20261010"
+PREVIOUS = ROOT/"results/senal/evidencia"
 FILES = RAW_FILES + ("forecast_evaluation.csv",)
 
 

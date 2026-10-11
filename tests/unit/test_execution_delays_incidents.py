@@ -11,7 +11,7 @@ from crypto_carry.config import SECOND, Config, timestamp
 def test_top_five_are_preselected_by_duration_time_and_symbol():
     from scripts.execution_delays_incidents import select_cases
     cfg=Config.load(Path(__file__).resolve().parents[2]/
-        'configs/entrega_4/reglas_historicas/BASE_E3.toml')
+        'configs/reglas_historicas/BASE_E3.toml')
     t=timestamp(cfg.start)
     episodes=[dict(episode_id=str(i),symbol='ETHUSDT' if i%2 else 'BTCUSDT',
         start_ns=t+i*SECOND,end_ns=t+(i+10)*SECOND,seconds=D(10)) for i in range(7)]
@@ -23,7 +23,7 @@ def test_top_five_are_preselected_by_duration_time_and_symbol():
 def test_incident_end_uses_pre_close_and_no_margin_after_short_closed():
     from scripts.execution_delays_incidents import value_case
     cfg=Config.load(Path(__file__).resolve().parents[2]/
-        'configs/entrega_4/reglas_historicas/BASE_E3.toml')
+        'configs/reglas_historicas/BASE_E3.toml')
     t=timestamp(cfg.start)
     common=dict(symbol='BTCUSDT',free_futures='0',debt='0',short='0',average='0',collateral='0')
     ledger=[dict(common,time_ns=t,event_id='buy',kind='spot_buy',free_spot='9000',spot='10'),
@@ -53,7 +53,7 @@ def test_carried_spot_is_not_labeled_observed_executable_price():
 def test_march_day_is_selected_for_covered_exposure_too():
     from scripts.execution_delays_incidents import select_cases
     cfg=Config.load(Path(__file__).resolve().parents[2]/
-        'configs/entrega_4/reglas_historicas/BASE_E3.toml')
+        'configs/reglas_historicas/BASE_E3.toml')
     t=timestamp('2023-03-24T00:00:00Z')
     cases=select_cases([], [dict(symbol='BTCUSDT',exposure='covered',start_ns=t,
                                  end_ns=t+60*SECOND)],cfg)
@@ -63,7 +63,7 @@ def test_march_day_is_selected_for_covered_exposure_too():
 def test_march_day_retains_dust_price_exposure_without_counting_it_as_active():
     from scripts.execution_delays_incidents import select_cases
     cfg=Config.load(Path(__file__).resolve().parents[2]/
-        'configs/entrega_4/reglas_historicas/BASE_E3.toml')
+        'configs/reglas_historicas/BASE_E3.toml')
     t=timestamp('2023-03-24T00:00:00Z')
     cases=select_cases([], [dict(symbol='BTCUSDT',exposure='dust',start_ns=t,
                                  end_ns=t+60*SECOND)],cfg)
@@ -74,7 +74,7 @@ def test_march_day_retains_dust_price_exposure_without_counting_it_as_active():
 def test_missing_valuation_start_cannot_be_reported_as_zero_loss():
     from scripts.execution_delays_incidents import value_case
     cfg=Config.load(Path(__file__).resolve().parents[2]/
-        'configs/entrega_4/reglas_historicas/BASE_E3.toml')
+        'configs/reglas_historicas/BASE_E3.toml')
     t=timestamp(cfg.start)
     ledger=[dict(symbol='BTCUSDT',free_futures='0',debt='0',short='0',average='0',
         collateral='0',time_ns=t,event_id='buy',kind='spot_buy',free_spot='9000',spot='10')]
@@ -89,7 +89,7 @@ def test_missing_valuation_start_cannot_be_reported_as_zero_loss():
 
 def boundary_fixture():
     cfg=Config.load(Path(__file__).resolve().parents[2]/
-        'configs/entrega_4/reglas_historicas/BASE_E3.toml')
+        'configs/reglas_historicas/BASE_E3.toml')
     t=timestamp(cfg.start)
     prices={(s,label):dict(available_at=np.array([t,t+60*SECOND],dtype=np.int64),
         close=np.array([100.,100.]),base_volume=np.array([1.,1.]),

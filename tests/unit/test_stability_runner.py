@@ -24,7 +24,7 @@ def contract():
 
 def test_closed_matrix_changes_only_start_and_rejects_extra_variants():
     api = contract()
-    base = Config.load(ROOT / "configs/entrega_4/reglas_historicas/BASE_E3.toml")
+    base = Config.load(ROOT / "configs/reglas_historicas/BASE_E3.toml")
     configs = api.scenario_configs(base)
     assert list(configs) == ["I2023", "I2024"]
     for name, cfg in configs.items():
@@ -51,7 +51,7 @@ def test_changed_input_is_detected_before_resume(tmp_path):
 
 def test_replay_reader_window_contract_uses_360_hours(monkeypatch, start):
     api = contract()
-    cfg = Config.load(ROOT / "configs/entrega_4/reglas_historicas/BASE_E3.toml").changed(
+    cfg = Config.load(ROOT / "configs/reglas_historicas/BASE_E3.toml").changed(
         start=iso(start), end=iso(start + 600 * SECOND)
     )
     observed = {}
@@ -81,7 +81,7 @@ def test_real_cash_restart_no_prewarm_operations_first_fill_and_exclusive_end(
     start, rules, strategy
 ):
     contract()
-    base = Config.load(ROOT / "configs/entrega_4/reglas_historicas/BASE_E3.toml")
+    base = Config.load(ROOT / "configs/reglas_historicas/BASE_E3.toml")
     cfg = base.changed(start=iso(start), end=iso(start + 600 * SECOND))
     bt = GapAuditedBacktest(cfg, rules, strategy, strategy == "conditional")
     assert bt.equity() == D(10000)

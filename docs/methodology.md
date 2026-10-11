@@ -3,10 +3,11 @@
 ## Alcance vigente
 
 Esta página describe el contrato de la **BASE continua**. La
-[Entrega 4](../entregas/entrega_4/README.md) reúne la corrección de exposición/H2,
-el riesgo intradía y los protocolos particulares de los bloques 1–6.
-Las variantes se interpretan dentro de su bloque y escenario; sus parámetros
-no se incorporan a BASE ni se combinan entre bloques por defecto.
+[Índice de resultados](../results/README.md) reúne la corrección de exposición/H2,
+el riesgo intradía y los protocolos de capital, señal, costos, ejecución,
+estrés y estabilidad.
+Las variantes se interpretan dentro de su tema y escenario; sus parámetros
+no se incorporan a BASE ni se combinan entre temas por defecto.
 
 Se comparan dos carteras independientes entre sí, condicional y permanente,
 desde **01/01/2022 hasta 31/08/2026 UTC**, intervalo
@@ -18,11 +19,11 @@ los saldos de entrada de la trayectoria continua.
 Las corridas principales son `run_ad71d751b20623006c195ff3` (condicional) y
 `run_dfea4b7ac1475668d5968c97` (permanente), con `futures_scaled`. Sus parámetros
 provienen de `configs/download_minutes_2022_2026_d.toml` y de las configuraciones
-efectivas conservadas en el [ZIP vigente](../entregas/entrega_3/paquete_actualizacion_entrega_3_continua.zip).
+efectivas conservadas en el [ZIP vigente](../data/evidence/carteras_continuas.zip).
 
 Las ventanas independientes de septiembre de 2022–agosto de 2023 y septiembre
 de 2025–agosto de 2026, cada una iniciada con capital nuevo, son
-[antecedentes archivados](../entregas/entrega_3/archivo/README.md). La ampliación
+[antecedentes archivados](../data/evidence/ventanas_independientes/LEEME.md). La ampliación
 continua conserva `next_minute_vwap` y `joint_quantity` de la revisión por minuto.
 
 ## Datos y causalidad
@@ -200,7 +201,7 @@ al permanente, también finito, para el mismo escenario y período. Con los
 componentes evaluables y alguna condición incumplida es `no_favorable`;
 con métricas ND o ventanas no comparables es `no_concluyente`, conservando
 el motivo. No se sustituye el Sharpe de volatilidad nula por cero. La
-[guía corregida de métricas](../entregas/entrega_4/reglas_historicas/correccion_exposicion_h2_20260925T150139Z/paquete_20260926T204312Z/documentos/guia_metricas.md)
+[guía corregida de métricas](../results/base/evidencia/documentos/guia_metricas.md)
 fija la clasificación y la exclusión de polvo de exposición/actividad.
 H3 contrasta
 oportunidad y CAGR condicional entre ambos regímenes. Son comparaciones descriptivas,
@@ -209,27 +210,27 @@ no pruebas causales ni garantías de rentabilidad. El
 cuantifica efectos con posiciones fijas y escenarios P95 ilustrativos; no incluye
 cambios de decisiones o margen ni garantiza extrapolación a los precios ausentes.
 
-Los [resultados conservados de E3](../entregas/entrega_3/continua_distribucion_20261010/README.md) se regeneran
+Los [resultados continuos conservados](../results/base/README.md) se regeneran
 desde el ZIP verificado, sin nuevas simulaciones. Los datos masivos y corridas
 completas siguen locales; hashes y configuraciones preservan su trazabilidad.
 
-## Alcances adicionales de Entrega 4
+## Capital, sensibilidades y riesgo
 
 El drawdown de cierres diarios, la reconstrucción intradía global de
-BASE/MARGEN_2X y las ventanas locales B4/B5 tienen poblaciones distintas.
+BASE/MARGEN_2X y las ventanas locales de ejecución y estrés tienen poblaciones distintas.
 Las ventanas locales no acreditan máximos intradía globales. La suspensión
 spot conserva la distinción entre precio antiguo y proxy hipotético.
 
 El comparador SOFR aprobado es una cuenta hipotética bruta USD, ACT/360,
 con paridad nominal 1 USDT = 1 USD y CAGR365. No remunera caja o garantías
 del carry ni representa un producto accesible o una rentabilidad realizada
-libre de riesgo. B3 mantiene la selección ex ante a 34 pb mientras varía
-costos, participación o capital. B4 distingue la demora de órdenes desde
-`eligible_at` de la liquidación, que conserva prioridad. B5 interviene
+libre de riesgo. La sensibilidad de costos/capacidad mantiene la selección ex ante a 34 pb mientras varía
+costos, participación o capital. La sensibilidad de ejecución distingue la demora de órdenes desde
+`eligible_at` de la liquidación, que conserva prioridad. El análisis de estrés interviene
 trayectorias hipotéticas aprobadas; su recuperación impuesta y sus anclas
 fijas no identifican el costo causal histórico de una interrupción.
 
-B6 compara cuentas nuevas desde I2023/I2024 con sus pares, separadas de los
+El análisis de estabilidad compara cuentas nuevas desde I2023/I2024 con sus pares, separadas de los
 cortes BASE con saldos heredados. Es una evaluación retrospectiva. El
 bootstrap de BASE usa bloques circulares emparejados dentro de año/segmento,
 28 días principal y 14/56 como sensibilidad, 5.000 réplicas por longitud e
@@ -238,14 +239,14 @@ de los supuestos de remuestreo y no constituyen una prueba conjunta al 95%
 de H2 ni probabilidades de ganancia futura. No ejecutan el motor.
 
 Los protocolos, límites y la síntesis integrable se consultan desde el
-[índice único E4](../entregas/entrega_4/README.md). La verificación de hashes,
+[índice temático](../results/README.md). La verificación de hashes,
 la recomputación de evidencia compacta y el replay económico son alcances
 distintos; ninguno convierte reglas prescritas en historia certificada.
 
 La [guía única de reproducción](reproduction.md) distingue lectura, evidencia
 compacta y datos masivos. `configs/base.toml` y `configs/robustness.toml` son
 perfiles anteriores del CLI con `first_trade`; no son las configuraciones
-efectivas de BASE continua/E4. Se conservan sin cambiar sus parámetros.
+efectivas de BASE continua. Se conservan sin cambiar sus parámetros.
 
 ## Limitaciones e interpretación
 

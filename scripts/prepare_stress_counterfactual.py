@@ -154,7 +154,7 @@ def prepare(candidate, data):
         base_manifest_sha256=digest(data / "outputs" / BASES["conditional"] / "run_manifest.json")))
     specs = {s: encode(load_spec(candidate, s)) for s in CONTROLS + SCENARIOS}
     immutable_json(candidate / "especificaciones_ejecutables.json", specs)
-    config_dir = ROOT / "configs/entrega_4/estres_contrafactual" / candidate.parent.name
+    config_dir = ROOT / "configs/estres" / candidate.parent.name
     config_dir.mkdir(parents=True, exist_ok=True)
     for strategy in STRATEGIES:
         target = config_dir / f"BASE__{strategy}.toml"

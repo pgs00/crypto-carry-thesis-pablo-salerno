@@ -52,7 +52,7 @@ def test_missing_margin_mark_is_nd_instead_of_zero():
     from crypto_carry.config import Config, timestamp
     from scripts.cost_capacity_report import margin_observations
 
-    config = Config.load(Path(__file__).resolve().parents[2]/"configs/entrega_4/reglas_historicas/BASE_E3.toml")
+    config = Config.load(Path(__file__).resolve().parents[2]/"configs/reglas_historicas/BASE_E3.toml")
     result = margin_observations([dict(symbol="BTCUSDT", time_ns=timestamp(config.start),
                                       short=Decimal(1), mark_price=None)], config)[0]
     assert result["short_notional"] is None
@@ -67,7 +67,7 @@ def test_missing_margin_has_no_evaluable_change_or_false_flat_label():
     from scripts.cost_capacity_docs import margin_tier_label
     from scripts.cost_capacity_report import margin_observations, summarize_margin
 
-    config = Config.load(Path(__file__).resolve().parents[2]/"configs/entrega_4/reglas_historicas/BASE_E3.toml")
+    config = Config.load(Path(__file__).resolve().parents[2]/"configs/reglas_historicas/BASE_E3.toml")
     rows = margin_observations([dict(symbol="BTCUSDT", time_ns=timestamp(config.start),
                                     short="1", mark_price=None)], config)
     result = next(r for r in summarize_margin(rows, config)
@@ -88,7 +88,7 @@ def test_daily_margin_uses_saved_quantity_mark_and_resets_missing_flat_or_gap():
     from crypto_carry.config import DAY, Config, timestamp
     from scripts.cost_capacity_report import daily_margin_observations, summarize_margin
 
-    config = Config.load(Path(__file__).resolve().parents[2]/"configs/entrega_4/reglas_historicas/BASE_E3.toml")
+    config = Config.load(Path(__file__).resolve().parents[2]/"configs/reglas_historicas/BASE_E3.toml")
     start = timestamp(config.start)+DAY-1
     fixtures = [(0, "1", "40000"), (1, "1", "50000"), (2, "1", "60000"),
                 (3, "0", ""), (4, "1", "60000"), (5, "1", ""),
@@ -121,7 +121,7 @@ def test_snapshot_packages_sources_tests_and_configs_without_progress_helper(tmp
     shutil.copytree(project / "scripts", source / "scripts",
                     ignore=shutil.ignore_patterns("cost_capacity_progress.py", "__pycache__"))
     for name in ("pyproject.toml", "uv.lock", "tests/conftest.py",
-                 "configs/entrega_4/reglas_historicas/BASE_E3.toml"):
+                 "configs/reglas_historicas/BASE_E3.toml"):
         target = source / name
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(project / name, target)

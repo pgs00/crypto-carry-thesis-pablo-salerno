@@ -1,17 +1,6 @@
 # This verified package contains both LF and CRLF sources. Preserve exact bytes
 # through add/checkout on every platform; its SHA-256 values are not normalized.
-/entregas/entrega_3/archivo/paquete_redaccion/** -text whitespace=cr-at-eol
 # Matplotlib emits spaces at the ends of SVG path lines; keep those source bytes.
-/entregas/entrega_3/archivo/paquete_redaccion/figuras/*.svg whitespace=-blank-at-eol,cr-at-eol
-/entregas/entrega_3/*.zip -text
-/entregas/entrega_3/*.sha256 -text whitespace=cr-at-eol
-/entregas/entrega_3/archivo/*.zip -text
-/entregas/entrega_3/archivo/*.sha256 -text whitespace=cr-at-eol
-/entregas/entrega_3/archivo/*.txt -text whitespace=cr-at-eol
-/entregas/entrega_3/continua/** -text whitespace=cr-at-eol
-/entregas/entrega_3/continua/figuras/*.svg whitespace=-blank-at-eol,cr-at-eol
-/entregas/entrega_3/continua_distribucion_20261010/** -text whitespace=cr-at-eol
-/entregas/entrega_3/continua_distribucion_20261010/figuras/*.svg whitespace=-blank-at-eol,cr-at-eol
 /data/manifests/archive/** -text whitespace=cr-at-eol
 /docs/archive/*.txt -text whitespace=cr-at-eol
 /docs/repository_cleanup_manifest.json -text
@@ -30,47 +19,12 @@
 /data/research/fee-archive-followup-20260918/A1.html -text
 /data/research/fee-archive-followup-20260918/A2.html -text
 /data/research/fee-archive-followup-20260918/A3.html -text
-# New protocol, configurations and evidence are hashed without newline conversion.
-/configs/entrega_4/reglas_historicas/** -text whitespace=cr-at-eol
-/docs/entrega_4/reglas_historicas/** -text whitespace=cr-at-eol
-/entregas/entrega_4/reglas_historicas/** -text whitespace=cr-at-eol
-/entregas/entrega_4/reglas_historicas/**/*.svg whitespace=-blank-at-eol,cr-at-eol
-# Keep the intraday evidence package byte-identical on later checkouts.
-/entregas/entrega_4/riesgo_intradia/** -text whitespace=cr-at-eol
-/entregas/entrega_4/riesgo_intradia/**/*.svg whitespace=-blank-at-eol,cr-at-eol
-# Preserve this new derivative and its public-source originals without Git EOL conversion.
-/entregas/entrega_4/retorno_capital/** -text whitespace=cr-at-eol
-/entregas/entrega_4/retorno_capital/**/*.svg whitespace=-blank-at-eol,cr-at-eol
-# Preserve only the new block-2 evidence, configurations and hashed tooling.
-/entregas/entrega_4/senal_entradas/** -text whitespace=cr-at-eol
-/entregas/entrega_4/senal_entradas/**/*.svg whitespace=-blank-at-eol,cr-at-eol
-/configs/entrega_4/senal_entradas/** -text whitespace=cr-at-eol
+# Preserve hashed signal-sensitivity tools and tests.
 /scripts/*signal_sensitivity*.py -text whitespace=cr-at-eol
 /tests/unit/test_signal_sensitivity*.py -text whitespace=cr-at-eol
 /tests/integration/test_signal_sensitivity*.py -text whitespace=cr-at-eol
 
-# Preserve only the new cost/capacity evidence across Git EOL conversion.
-/entregas/entrega_4/costos_capacidad/** -text whitespace=cr-at-eol
-/entregas/entrega_4/costos_capacidad/**/*.svg whitespace=-blank-at-eol,cr-at-eol
-# Unified diffs retain the space prefix on empty context lines.
-/entregas/entrega_4/costos_capacidad/**/*.patch whitespace=-blank-at-eol,cr-at-eol
-
-# Preserve only new execution/delay evidence across Git EOL conversion.
-/entregas/entrega_4/ejecucion_demoras/** -text whitespace=cr-at-eol
-/entregas/entrega_4/ejecucion_demoras/**/*.svg whitespace=-blank-at-eol,cr-at-eol
-/entregas/entrega_4/ejecucion_demoras/**/*.patch whitespace=-blank-at-eol,cr-at-eol
-# Stored diagnostic logs retain their original whitespace.
-/entregas/entrega_4/ejecucion_demoras/**/*.txt whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
-# Preserve whitespace in the archived first candidate and its original failure log.
-/entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/controles/revision_independiente.md whitespace=-blank-at-eof,cr-at-eol
-/entregas/entrega_4/ejecucion_demoras/20260929T221620Z/paquete_20260930T012056Z/documentos/controles/revision_independiente.md whitespace=-blank-at-eof,cr-at-eol
-/entregas/entrega_4/ejecucion_demoras/20260929T221620Z/verificacion_final/adulteraciones_1.xml whitespace=-blank-at-eol,cr-at-eol
-# Preserve the approved block-5 protocol, compact evidence and new hashed tools.
-/entregas/entrega_4/estres_contrafactual/** -text whitespace=cr-at-eol
-/entregas/entrega_4/estres_contrafactual/**/*.svg whitespace=-blank-at-eol,cr-at-eol
-/entregas/entrega_4/estres_contrafactual/**/*.patch whitespace=-blank-at-eol,cr-at-eol
-/entregas/entrega_4/estres_contrafactual/**/*.txt whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
-/configs/entrega_4/estres_contrafactual/** -text whitespace=cr-at-eol
+# Preserve hashed stress-analysis tools and tests.
 /scripts/*stress_counterfactual*.py -text whitespace=cr-at-eol
 /scripts/check_stress_verifier_case.py -text whitespace=cr-at-eol
 /src/crypto_carry/stress_counterfactual.py -text whitespace=cr-at-eol
@@ -78,10 +32,67 @@
 /tests/unit/test_stress_*.py -text whitespace=cr-at-eol
 /tests/integration/test_stress_*.py -text whitespace=cr-at-eol
 
-# B6's verified seal covers mixed LF/CRLF bytes. Preserve this exact publication.
-/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/paquete_final_verificado/** -text whitespace=cr-at-eol
+# Final thematic packages retain every authenticated byte.
+/results/*/evidencia/** -text whitespace=cr-at-eol
+/results/base/continuo/** -text whitespace=cr-at-eol
+/data/evidence/** -text whitespace=cr-at-eol
+/results/**/*.svg whitespace=-blank-at-eol,cr-at-eol
+/results/**/*.patch whitespace=-blank-at-eol,cr-at-eol
+/results/**/*.txt whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+/data/evidence/**/*.svg whitespace=-blank-at-eol,cr-at-eol
+/data/evidence/**/*.patch whitespace=-blank-at-eol,cr-at-eol
+/data/evidence/**/*.txt whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+/docs/reglas_historicas/** -text whitespace=cr-at-eol
+/configs/reglas_historicas/** -text whitespace=cr-at-eol
+/configs/senal/** -text whitespace=cr-at-eol
+/configs/costos_capacidad/** -text whitespace=cr-at-eol
+/configs/ejecucion/** -text whitespace=cr-at-eol
+/configs/estres/** -text whitespace=cr-at-eol
+/configs/estabilidad/** -text whitespace=cr-at-eol
 
-# Documentary distributions retain the original scientific bytes, including mixed EOL.
-/entregas/entrega_3/archivo/distribucion_20261010/** -text whitespace=cr-at-eol
-/entregas/entrega_3/archivo/distribucion_20261010/figuras/*.svg whitespace=-blank-at-eol,cr-at-eol
-/entregas/entrega_4/estabilidad_incertidumbre/20261001T215423Z/distribucion_20261010/** -text whitespace=cr-at-eol
+# The product catalog authenticates these editorial files without EOL conversion.
+/README.md -text
+/data/manifests/README.md -text
+/data/manifests/data_quality_report.md -text
+/data/research/README.md -text
+/data/research/basis-audit-20260919/README.md -text
+/docs/basis_audit_methodology.md -text
+/docs/continuous_mark_gaps.md -text
+/docs/data_dictionary.md -text
+/docs/descarga_d.md -text
+/docs/escenario_investigacion.md -text
+/docs/methodology.md -text
+/docs/procedencia/README.md -text
+/docs/procedencia/rutas.json -text
+/docs/reglas_historicas/decisiones_integracion.md -text
+/docs/reglas_historicas/lectura_resultados.md -text
+/docs/reglas_historicas/protocolo.md -text
+/docs/reglas_historicas/reproduccion.md -text
+/docs/reglas_historicas/verificacion_publicacion.md -text
+/docs/reproduction.md -text
+/docs/research/README.md -text
+/docs/research/binance_historical_access_20260918.md -text
+/docs/research/fees_followup_20260918.md -text
+/docs/research/funding_followup_20260918.md -text
+/docs/research/funding_h1_preliminary_20260918.md -text
+/docs/research/funding_provider_access_20260918.md -text
+/docs/research/funding_proxy_feasibility_20260918.md -text
+/docs/research/historical_fees.md -text
+/docs/research/historical_market_rules.md -text
+/docs/research/implementation_verification_20260918.md -text
+/docs/research/metadata_provider_access_20260918.md -text
+/docs/research/methodology_two_days_20260918.md -text
+/docs/research/public_rules_alternatives_20260918.md -text
+/docs/research/rules_followup_20260918.md -text
+/results/README.md -text
+/results/base/README.md -text
+/results/benchmark_sofr/README.md -text
+/results/capital/README.md -text
+/results/costos_capacidad/README.md -text
+/results/ejecucion/README.md -text
+/results/estabilidad/README.md -text
+/results/estres/README.md -text
+/results/matriz_resultados.csv -text
+/results/riesgo/README.md -text
+/results/senal/README.md -text
+/docs/procedencia/producto.json -text

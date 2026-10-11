@@ -16,7 +16,7 @@ from scripts.distribution_integrity import (
 from scripts.stress_counterfactual_contract import load_spec
 
 APPROVED = Path(__file__).resolve().parents[2] / (
-    "entregas/entrega_4/estres_contrafactual/20260930T214617Z/distribucion_20261010")
+    "results/estres/evidencia")
 
 
 @pytest.fixture

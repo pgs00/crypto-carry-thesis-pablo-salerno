@@ -17,7 +17,7 @@ from crypto_carry.mark_gap_study import GapAuditedBacktest
 from crypto_carry.reporting import _code_identity, verify_run
 
 ROOT = Path(__file__).resolve().parents[1]
-B5 = ROOT / "entregas/entrega_4/estres_contrafactual/20260930T214617Z/distribucion_20261010"
+B5 = ROOT / "results/estres/evidencia"
 BASES = {"conditional": "run_ad71d751b20623006c195ff3", "permanent": "run_dfea4b7ac1475668d5968c97"}
 STARTS = {"I2023": "2023-01-01T00:00:00Z", "I2024": "2024-01-01T00:00:00Z"}
 TASKS = [(s, strategy) for s in STARTS for strategy in BASES]
@@ -168,7 +168,7 @@ def prepare(candidate, data_root):
     shutil.copyfile(
         candidate / "fuentes/b5/indice_referencias.json", candidate / "indice_referencias.json"
     )
-    audit = read(B5.parent / "controles_finales_20261001T211248Z/verificacion_sello.json")
+    audit = read(ROOT / "data/evidence/controles_historicos/estres/verificacion_sello.json")
     if not audit["passed"]:
         raise ValueError("Final B5 offline verification has not passed")
     immutable(candidate / "fuentes/b5/verificacion_sello_externa.json", audit)
@@ -228,7 +228,7 @@ def prepare(candidate, data_root):
         target.write_text(cfg.to_toml(), encoding="utf-8", newline="\n")
         external = (
             ROOT
-            / "configs/entrega_4/estabilidad_incertidumbre"
+            / "configs/estabilidad"
             / candidate.parent.name
             / target.name
         )

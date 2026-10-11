@@ -251,7 +251,7 @@ def readme(tables, verification):
         "Para regenerar el paquete desde el repositorio y las fuentes locales:",
         "",
         "```powershell",
-        "& '.\\.venv\\Scripts\\python.exe' -m scripts.continuous_delivery.build --root 'D:\\Backtesting' --destination 'D:\\Backtesting\\outputs\\entrega3_continua_nueva' --zip '.\\entregas\\entrega_3\\paquete_actualizacion_continua_nuevo.zip'",
+        "& '.\\.venv\\Scripts\\python.exe' -m scripts.continuous_delivery.build --root 'D:\\Backtesting' --destination 'D:\\Backtesting\\outputs\\entrega3_continua_nueva' --zip '.\\data\\evidence\\carteras_continuas_nuevas.zip'",
         "```",
         "",
         "Usar destinos nuevos conserva las evidencias anteriores. El código incluido en",

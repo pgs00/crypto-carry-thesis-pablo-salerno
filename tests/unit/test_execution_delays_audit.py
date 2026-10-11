@@ -11,7 +11,7 @@ from crypto_carry.config import SECOND, Config, timestamp
 
 def fixture(model='ohlc4', delay=0, scope='all_client', purpose='open_spot'):
     cfg=Config.load(Path(__file__).resolve().parents[2]/
-        'configs/entrega_4/reglas_historicas/BASE_E3.toml').changed(
+        'configs/reglas_historicas/BASE_E3.toml').changed(
             research_minute_price_model=model,research_execution_delay_seconds=delay,
             research_execution_delay_scope=scope)
     t=timestamp(cfg.start)

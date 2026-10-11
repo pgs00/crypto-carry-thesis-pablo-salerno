@@ -1,4 +1,0 @@
-LAUNCHED E_OHLC4/conditional pid=16508
-LAUNCHED E_OHLC4/permanent pid=1500
-FINISHED E_OHLC4/conditional exit=0
-FINISHED E_OHLC4/permanent exit=0

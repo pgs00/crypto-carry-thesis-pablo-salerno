@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[2]
 
 
 def configured(name):
-    return Config.load(ROOT / "configs/entrega_4/reglas_historicas" / f"{name}.toml")
+    return Config.load(ROOT / "configs/reglas_historicas" / f"{name}.toml")
 
 
 @pytest.mark.parametrize(
@@ -61,7 +61,7 @@ def test_schedule_and_decision_modes_are_opt_in_and_strict_mode_stays_strict():
     assert "research_spot_fee_schedule" not in legacy.to_dict()
     assert "research_decision_fee_mode" not in legacy.to_dict()
     assert legacy.to_toml() == (
-        ROOT / "configs/entrega_4/reglas_historicas/BASE_E3.toml"
+        ROOT / "configs/reglas_historicas/BASE_E3.toml"
     ).read_text(encoding="utf-8")
     with pytest.raises(ValueError):
         Config(research_spot_fee_schedule="btc_promo_2022_2023")

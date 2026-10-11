@@ -24,14 +24,14 @@ def historical_tables():
     inputs = [
         Path(os.environ.get(key, ROOT / default))
         for key, default in (
-            ("RETURN_CAPITAL_PARENT", "entregas/entrega_4/reglas_historicas/20260925T005436Z"),
+            ("RETURN_CAPITAL_PARENT", "data/evidence/reglas_historicas"),
             (
                 "RETURN_CAPITAL_CORRECTION",
-                "entregas/entrega_4/reglas_historicas/correccion_exposicion_h2_20260925T150139Z/paquete_20260926T204312Z",
+                "results/base/evidencia",
             ),
             (
                 "RETURN_CAPITAL_INTRADAY",
-                "entregas/entrega_4/riesgo_intradia/20260926T214118Z/distribucion_20261010",
+                "results/riesgo/evidencia",
             ),
         )
     ]

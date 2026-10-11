@@ -251,7 +251,7 @@ def copy_final(candidate, final):
 
 
 def update_indices(candidate, final, audit):
-    matrix = ROOT / "docs/entrega_4/matriz_avance.csv"
+    matrix = ROOT / "results/matriz_resultados.csv"
     with matrix.open(encoding="utf-8-sig", newline="") as stream:
         reader = csv.DictReader(stream)
         fields = reader.fieldnames
@@ -301,7 +301,7 @@ def update_indices(candidate, final, audit):
         writer.writeheader()
         writer.writerows(rows)
     os.replace(temp, matrix)
-    index = ROOT / "entregas/entrega_4/estabilidad_incertidumbre/indice_versiones.json"
+    index = ROOT / "results/estabilidad/indice_versiones.json"
     if index.exists():
         shutil.copyfile(index, audit / "indice_versiones_previo.json")
     save(
