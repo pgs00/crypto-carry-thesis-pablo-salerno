@@ -20,11 +20,36 @@ vigentes. Comprueban la identidad de cada distribución y conservan los controle
 científicos de sus fuentes; no requieren Git.
 Requieren Python 3.14 y las dependencias de [pyproject.toml](../pyproject.toml)
 y [uv.lock](../uv.lock); el entorno local de referencia usa Python 3.14.3
-en Windows. En Linux se comprobó una diferencia de últimos dígitos que hace
-fallar la comparación literal del CSV de intervalos de estabilidad, aunque sus controles
-numéricos pasaron en esa comprobación histórica. La diferencia máxima fue
-`6.938893903907228e-18`; no se relaja la comparación ni se afirma un PASS
-integral en Linux.
+en Windows.
+
+**Verificación local del 11/10/2026:** se ejecutaron completos los nueve
+comandos de esta sección en Windows 11 nativo (`sys.platform=win32`), con
+CPython 3.14.3 de 64 bits y las versiones de `uv.lock`. BASE, riesgo intradía,
+capital, SOFR, señal, costos/capacidad, ejecución, estrés y estabilidad e
+incertidumbre terminaron cada uno con código 0 y JSON final positivo
+(`status: passed` o `passed: true`). La preparación con
+`uv sync --frozen --python 3.14.3` encontró acceso denegado a la caché global; el comando con
+la caché local indicado abajo terminó con código 0, sin modificar el lock.
+Las versiones efectivas, rutas resueltas desde la matriz, comandos, JSON,
+stdout, stderr y códigos de salida quedaron en la carpeta externa
+`%TEMP%/tesina_revision_windows_20261011_7c6770a0/`. No se ejecutaron nuevos
+backtests ni se descargaron mercados. Este pase corresponde a los alcances
+compactos descritos abajo y no acredita la revisión del whitepaper ni del
+executive briefing externos.
+
+**Antecedente externo en Linux, aportado para esta revisión:** con Python
+3.14.3 y dependencias del lock pasaron BASE, riesgo, capital y SOFR. Señal,
+costos/capacidad, ejecución y estrés fallaron en comparaciones exactas de
+métricas. En los cuatro se identificó, para BASE_E3 condicional de 2024, un
+CAGR publicado de `0.0522270351463172` frente al recalculado
+`0.05222703514631721`; ambos se muestran como `5,2227 %`. Estabilidad falló
+en la comparación literal de `bootstrap_intervalos.csv`, con diferencias de
+últimos decimales de hasta `6.938893903907228e-18`; sus controles numéricos
+pasaron en aquella comprobación. Estos ejemplos no delimitan todas las
+divergencias posibles ni acreditan un PASS integral en Linux. Esta revisión
+no repitió la auditoría Linux y conserva las comparaciones exactas, las
+tolerancias, las cifras y los sellos existentes.
+
 Preparar el entorno desde la raíz del checkout, antes de la verificación:
 
 ```powershell

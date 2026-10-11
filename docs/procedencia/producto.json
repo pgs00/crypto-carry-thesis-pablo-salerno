@@ -435,8 +435,8 @@
   "editorial_files": [
     {
       "path": "README.md",
-      "bytes": 2613,
-      "sha256": "aaeddcc775d561a836e956807c42306b20b6f490e74df5f9d060376d5e64cc5c",
+      "bytes": 2716,
+      "sha256": "bf8aace1c3a46a15808d4f197b39315c0a0bb755f5837e2a4fc857558c716357",
       "original_path": "README.md",
       "original_sha256": "c647063398fa60915920b259f684088f57e9780a0c5aa407bb6e19eb0cf2c32a",
       "adaptation": "Presentacion tematica y localizacion de fuentes; sin cambios de calculo."
@@ -573,8 +573,8 @@
     },
     {
       "path": "docs/reproduction.md",
-      "bytes": 11826,
-      "sha256": "677cf4d32e29c54f2e6fcb5307ed129063fe358f2b939f9cd4bb80c31f4a1c7c",
+      "bytes": 13375,
+      "sha256": "45b75b084ce7817c5e9488f145c802b35156e076dde8751eb1e34b1b3d5fc09d",
       "original_path": "docs/reproduction.md",
       "original_sha256": "34028db4e119e5d6d14daa1ef49fed47c8f083fd6a6c3ab5d0fb74cac04ad73f",
       "adaptation": "Presentacion tematica y localizacion de fuentes; sin cambios de calculo."
@@ -693,13 +693,13 @@
     },
     {
       "path": "results/README.md",
-      "bytes": 4056,
-      "sha256": "ad10764ce11d7b85f2b27811f2fd464307e5e81656bb4b21c597a66cc16de462"
+      "bytes": 4187,
+      "sha256": "8b165d9da8ce9281d14ebb76313f36c6473228d54b23a413e771b13cb4205bc5"
     },
     {
       "path": "results/base/README.md",
-      "bytes": 14461,
-      "sha256": "7cc1fd95da8ce2a877bc09788daf0c105ce9255bdb9aeedbbdad9c0de69f759b",
+      "bytes": 14679,
+      "sha256": "7f30bc4801ee130206d197d195e34120f5e4635cc05c0a06818297f2c59be92b",
       "source_path": "results/base/evidencia/comparacion/reporte.md",
       "adaptation": "Proyeccion editorial; tablas, formulas, escenarios y limites preservados."
     },
@@ -747,8 +747,8 @@
     },
     {
       "path": "results/matriz_resultados.csv",
-      "bytes": 8205,
-      "sha256": "52026ee21126d7d9ed2060cc494e0bea029c2a000508e6ac180647dcefad5237",
+      "bytes": 8322,
+      "sha256": "fe67837ac457e75ff952d2385254a1522e9e7856b5d8fd6df37506b8734700c5",
       "original_path": "docs/entrega_4/matriz_avance.csv",
       "original_sha256": "5051f8a870fe2c744bf7a31501a970c79498f9c9e44037c77640000560b90063",
       "adaptation": "Presentacion tematica y localizacion de fuentes; sin cambios de calculo."

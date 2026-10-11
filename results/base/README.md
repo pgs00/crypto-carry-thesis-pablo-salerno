@@ -5,6 +5,10 @@ tiempo activo y aplica el criterio conjunto de CAGR y Sharpe de H2. No cambia
 las trayectorias económicas. El paquete padre y la referencia continua
 conservan sus bytes originales.
 
+Las [tablas y figuras de las carteras continuas](continuo/README.md) reúnen
+rentabilidad, riesgo, H1 y H3 de la referencia. Este informe desarrolla la
+corrección de exposición/H2 y su contraste con esa referencia.
+
 ## Qué se corrigió y por qué
 
 El informe padre calculó exposición desde cantidades del ledger y contó cualquier

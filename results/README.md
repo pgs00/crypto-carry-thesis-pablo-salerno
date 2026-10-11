@@ -14,7 +14,7 @@ heredados de BASE.
 
 | Tema | Lectura y pregunta | Límite principal |
 |---|---|---|
-| [BASE](base/README.md) | Carteras continuas, reglas prescritas y exposición/H2 corregidos | Reglas prescritas y observaciones parciales no certifican la historia completa del exchange. |
+| [BASE](base/README.md) | [Tablas y figuras continuas](base/continuo/README.md), reglas prescritas y exposición/H2 corregidos | Reglas prescritas y observaciones parciales no certifican la historia completa del exchange. |
 | [Riesgo intradía](riesgo/README.md) | Pérdidas transitorias y garantías de BASE/MARGEN_2X | La verificación compacta no reconstruye extremos globales por minuto. |
 | [Capital](capital/README.md) | Capital utilizado, concentración y rechazos | Análisis descriptivo; no CAGR contrafáctico quitando mejores ciclos. |
 | [Benchmark SOFR](benchmark_sofr/README.md) | Costo de oportunidad del capital completo | Cuenta hipotética bruta USD, ACT/360 y paridad nominal; no remuneración de caja carry. |
@@ -25,8 +25,10 @@ heredados de BASE.
 | [Estabilidad e incertidumbre](estabilidad/README.md) | Fechas iniciales alternativas, bootstrap y evaluación conjunta | Inicios retrospectivos e intervalos marginales con supuestos por año. |
 
 Cada tema conserva su evidencia en `evidencia/`, con tablas, figuras,
-protocolos, herramientas y procedencia. La presentación continua está en
-[BASE y resultados continuos](base/README.md); las ventanas independientes son
+protocolos, herramientas y procedencia. La presentación de las
+[carteras continuas](base/continuo/README.md) reúne sus tablas y figuras;
+el [informe BASE](base/README.md) desarrolla la corrección de exposición/H2.
+Las ventanas independientes son
 [antecedentes científicos](../data/evidence/ventanas_independientes/LEEME.md).
 Los protocolos conservan sus fechas y alcances originales.
 

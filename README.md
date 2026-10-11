@@ -19,7 +19,8 @@ y límites de interpretación de las tres hipótesis.
 - [Metodología vigente](docs/methodology.md): contrato científico y limitaciones.
 - [Resultados por tema](results/README.md): BASE, riesgo, capital y sensibilidades.
 - [Guía única de reproducción](docs/reproduction.md): lectura, verificadores compactos, referencia continua y datos masivos.
-- [BASE y resultados continuos](results/base/README.md): tablas, figuras y corridas de referencia.
+- [Carteras continuas](results/base/continuo/README.md): tablas y figuras de la referencia.
+- [BASE y corrección de exposición/H2](results/base/README.md): reglas prescritas y corridas de referencia.
 
 Desde la raíz del repositorio, preparar el entorno y comprobar el producto final:
 
