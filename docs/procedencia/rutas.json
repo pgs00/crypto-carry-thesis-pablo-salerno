@@ -39,7 +39,8 @@
     "entregas/entrega_4/senal_entradas/20260927T170230Z/input_hashes.json": "results/senal/evidencia/documentos/input_hashes.json",
     "entregas/entrega_4/riesgo_intradia/20260926T214118Z/paquete_20260926T220400Z": "results/riesgo/evidencia",
     "entregas/entrega_4/retorno_capital/20260927T143928Z/paquete_20260927T152732Z": "results/capital/evidencia",
-    "entregas/entrega_4/retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z": "results/benchmark_sofr/evidencia"
+    "entregas/entrega_4/retorno_capital/20260927T154653Z_sofr/paquete_20260927T162350Z": "results/benchmark_sofr/evidencia",
+    "data/research/historical-rules-followup-20260924T234206Z": "data/evidence/reglas_historicas/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z"
   },
   "scope": "Runtime resolution only; original evidence bytes, paths and hashes remain unchanged."
 }

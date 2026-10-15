@@ -36,6 +36,7 @@ CURRENT_DOCS = (
     'docs/research/methodology_two_days_20260918.md',
     'docs/research/public_rules_alternatives_20260918.md',
     'docs/research/rules_followup_20260918.md',
+    'results/complementaria/README.md',
     'results/base/README.md',
     'results/base/continuo/README.md',
     'results/riesgo/README.md',

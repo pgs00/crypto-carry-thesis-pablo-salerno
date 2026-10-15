@@ -1,104 +1,29 @@
 # Estabilidad temporal e incertidumbre
 
-Se comparan cuatro cuentas nuevas desde 10.000 USDT, sin posiciones heredadas, con
-los tramos coincidentes de BASE continua iniciada en 2022. Las cuentas continuas
-conservan el patrimonio, el inventario, los ciclos y los costos acumulados reales.
-El índice 100 facilita la lectura; no representa una nueva cartera ni vuelve
-directamente comparables los P&L monetarios. Toda la historia ya fue examinada:
-los inicios alternativos no son una validación fuera de muestra.
+Cambiar la fecha inicial permite examinar cuánto dependen los resultados del recorrido previo. Se abren cuentas nuevas con 10.000 USDT desde enero de 2023 y enero de 2024, sin posiciones heredadas, y se comparan con sus tramos coincidentes de BASE. Todas terminan el 31/08/2026 UTC y operan BTCUSDT/ETHUSDT.
 
-## Muestra disponible y denominadores
+| Cuenta | CAGR condicional | CAGR incondicional | Sharpe condicional menos incondicional |
+|---|---:|---:|---:|
+| BASE desde 2022 | 1,63% | 3,38% | −1,57 |
+| Cuenta nueva desde 2023 | 2,08% | 3,85% | −2,83 |
+| Cuenta nueva desde 2024 | 2,24% | 3,66% | −3,86 |
 
-| Cuenta / tramo | Estrategia | Días | Denominador USDT | Retorno | CAGR365 | Sharpe RF=0 | DD diario | Capital/equity medio |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| I2023 | conditional | 1,339.00 | 10,000.00 | 7.86% | 2.08% | 5.65 | -0.21% | 25.21% |
-| I2023 | permanent | 1,339.00 | 10,000.00 | 14.86% | 3.85% | 8.48 | -0.32% | 82.92% |
-| I2024 | conditional | 974.00 | 10,000.00 | 6.10% | 2.24% | 6.82 | -0.17% | 30.31% |
-| I2024 | permanent | 974.00 | 10,000.00 | 10.08% | 3.66% | 10.68 | -0.20% | 83.63% |
-| BASE_E3 | conditional | 1,704.00 | 10,000.00 | 7.86% | 1.63% | 4.96 | -0.21% | 19.81% |
-| BASE_CONTINUA_I2023 | conditional | 1,339.00 | 10,000.00 | 7.86% | 2.08% | 5.65 | -0.21% | 25.21% |
-| BASE_CONTINUA_I2024 | conditional | 974.00 | 10,217.44 | 5.56% | 2.05% | 6.18 | -0.21% | 26.84% |
-| BASE_E3 | permanent | 1,704.00 | 10,000.00 | 16.80% | 3.38% | 6.53 | -0.48% | 82.63% |
-| BASE_CONTINUA_I2023 | permanent | 1,339.00 | 10,109.16 | 15.54% | 4.02% | 7.46 | -0.32% | 83.76% |
-| BASE_CONTINUA_I2024 | permanent | 974.00 | 10,616.66 | 10.02% | 3.64% | 9.61 | -0.32% | 83.59% |
+## Resultados
 
-Las fechas observadas, nominales y solicitadas constan en [métricas](evidencia/tablas/metricas.csv).
-Se publican sólo años con evidencia; 2026 termina el 1 de septiembre exclusivo.
-Los cortes originales incompletos llevan el sufijo `disponible`. La tabla de
-[saldos iniciales](evidencia/tablas/saldos_iniciales.csv) conserva efectivo, deuda, spot,
-cortos, collateral y costos heredados. No se imputan filas cero anteriores al inicio.
+- Los inicios alternativos no revierten H2 en sus muestras completas. Los CAGR condicionales son positivos, pero sus Sharpes diarios, con RF=0, siguen por debajo de los incondicionales. Los tramos coincidentes heredados de BASE también son no favorables.
+- Reiniciar una cuenta no equivale a recortar una trayectoria. Desde 2024, la condicional nueva obtiene CAGR 2,24%, frente a 2,05% del tramo BASE que hereda patrimonio y posiciones. Cada comparación usa su saldo inicial real. Toda la historia ya había sido examinada: los inicios alternativos no son validación fuera de muestra.
+- El remuestreo cuantifica incertidumbre bajo supuestos explícitos. Para BASE completa, el bootstrap principal de bloques de 28 días produce un intervalo marginal nominal del 95% de −4,23 a −0,23 para la diferencia de Sharpe, y de 0,96% a 2,39% para el CAGR condicional. Son intervalos separados, no una prueba conjunta de H2 al 95% ni probabilidades de ganancias futuras.
 
-![Cuentas nuevas y tramos heredados](evidencia/figuras/01_cuentas_nuevas_y_heredadas.png)
+![Incertidumbre de BASE](evidencia/figuras/04_incertidumbre_base.png)
 
-## Retorno, capital y actividad
+## Alcance
 
-El P&L concilia patrimonio final menos inicial con spot, futuros, funding, fees y
-cargos de liquidación a 1E-8 USDT. El slippage es informativo y no se descuenta dos
-veces. CAGR usa 365 días; Sharpe RF=0 usa retornos diarios, días inactivos y varianza
-muestral (ddof=1). Sharpe sin volatilidad evaluable permanece ND.
-El capital utilizado es valor spot más collateral al cierre diario; su media es
-descriptiva y no mide el pico intradía. La exposición activa excluye polvo y conserva
-por separado el inventario bruto y su riesgo de precio.
+Se usan bloques circulares emparejados dentro de año y segmento, 5.000 réplicas y longitudes alternativas de 14 y 56 días. La estabilidad dentro de cada estrato, la dependencia entre años, los pocos ciclos y los días inactivos limitan la inferencia. Menos del 95% de réplicas válidas deja el intervalo principal ND; la evidencia conserva esos casos.
 
-![Retornos anuales](evidencia/figuras/02_retornos_anuales.png)
+H3 original permanece en BASE: las cuentas nuevas no cubren todo su primer régimen. No se agregan sensibilidades como observaciones independientes. Las excepciones de H2 en [señal](../senal/README.md), [capital y costos](../costos_capacidad/README.md), [demoras](../ejecucion/README.md) y [escenario sin interrupción](../estres/README.md) conservan sus períodos propios. Los drawdowns de este análisis son diarios.
 
-![Capital utilizado y actividad](evidencia/figuras/03_retorno_capital_actividad.png)
+## Evidencia y detalle
 
-## Hipótesis y dependencia de la fecha inicial
-
-| Cuenta / tramo | H2 muestra disponible | CAGR condicional | Diferencia de Sharpe | Criterio |
-| --- | --- | --- | --- | --- |
-| BASE_CONTINUA_I2023 | no_favorable | 2.08% | -1.81 | sharpe_not_superior |
-| BASE_CONTINUA_I2024 | no_favorable | 2.05% | -3.43 | sharpe_not_superior |
-| BASE_E3 | no_favorable | 1.63% | -1.57 | sharpe_not_superior |
-| I2023 | no_favorable | 2.08% | -2.83 | sharpe_not_superior |
-| I2024 | no_favorable | 2.24% | -3.86 | sharpe_not_superior |
-
-H2 compara estrategias con el mismo inicio y período: requiere CAGR condicional
-positivo y Sharpe superior. La [tabla completa H2](evidencia/tablas/h2.csv) conserva todos los
-cortes y años, incluidos los favorables y no evaluables. H3 original permanece en
-BASE continua: I2023/I2024 carecen de parte o todo el régimen 2022–2023 y son ND
-para ese contraste. Ver [cobertura H3](evidencia/tablas/h3_cobertura.csv) y
-[comparación de inicios](evidencia/tablas/comparacion_inicios.csv).
-
-## Incertidumbre de BASE y síntesis
-
-El bootstrap utiliza exclusivamente BASE autenticada; los inicios y escenarios
-hipotéticos no se agregan como observaciones. Bloques circulares emparejados de 28
-días, sensibilidades 14/56, estratos anuales y segmentos contiguos; 5.000 réplicas por
-longitud, PCG64/SeedSequence raíz 20261001 e intervalos percentiles marginales
-nominales del 95%, cuantiles lineales. Son decisiones del estudio. La circularidad
-no es contigüidad histórica; estratificar supone estabilidad aproximada dentro del
-estrato y corta dependencia entre años. La selección histórica, los pocos ciclos y
-los días inactivos limitan la inferencia. Dos intervalos marginales al 95% no son un
-contraste conjunto al 95%; las frecuencias no son probabilidades de verdad ni de
-ganancia futura. Menos del 95% de réplicas válidas deja el intervalo principal ND;
-los cuantiles finitos se identifican como condicionales a evaluabilidad.
-
-Ver [efectos, intervalos y degeneración](evidencia/tablas/bootstrap_intervalos.csv),
-[protocolo y cobertura estadística](evidencia/estadistica/protocolo.json) y [síntesis](evidencia/sintesis.md).
-Las excepciones favorables H336, A100, L01 y contrafactuales deben conservarse por
-período. El diagnóstico de logs y estados de señal y costos/capacidad (identidad histórica B2/B3) registra 28 corridas con la rama de liquidación no activada y ninguna afectada dentro de esa cobertura. Su criterio y cobertura constan en la síntesis; no se ejecutaron replays históricos ni se demuestra equivalencia universal. SOFR es una comparación hipotética bruta;
-no es una cuenta realizada comparable en riesgo. El drawdown de este informe es
-diario: riesgo intradía global y ventanas locales permanecen separados en sus fuentes.
-
-## Trazabilidad y verificación
-
-[Conciliaciones](evidencia/tablas/conciliaciones.csv), [componentes por activo](evidencia/tablas/componentes_periodo.csv),
-[actividad](evidencia/tablas/actividad.csv) y [ejecución](evidencia/tablas/ejecucion_resumen.csv).
-La evidencia financiera contiene bytes originales comprimidos sin pérdida y
-manifiestos de seis carteras únicas; los dos tramos de cada BASE son vistas de la
-misma cuenta. Las ventanas mínimas de ejecución conservan identidad de partición,
-volumen y precio. El verificador recalcula contabilidad, funding, fees, posiciones,
-actividad, exposición, métricas y H2 desde esos insumos; comparte helpers auditados
-con el constructor. No relee particiones masivas ni ejecuta el motor offline.
-
-Mecanismo estadístico: [CircularBlockBootstrap](https://bashtage.github.io/arch/bootstrap/generated/arch.bootstrap.CircularBlockBootstrap.html),
-[bootstrap de series](https://bashtage.github.io/arch/bootstrap/timeseries-bootstraps.html),
-[flujos NumPy](https://numpy.org/doc/stable/reference/random/parallel.html),
-[compatibilidad NumPy](https://numpy.org/doc/stable/reference/global_state.html).
-La documentación respalda el mecanismo, no los parámetros ni la estratificación elegidos.
-
-![Incertidumbre BASE](evidencia/figuras/04_incertidumbre_base.png)
-
-Procedencia: [reporte original](evidencia/reporte.md) y [autenticación](../../docs/procedencia/README.md).
+- [Informe completo](evidencia/reporte.md) y [síntesis transversal](evidencia/sintesis.md).
+- [Métricas y denominadores](evidencia/tablas/metricas.csv), [saldos iniciales](evidencia/tablas/saldos_iniciales.csv), [H2 por período](evidencia/tablas/h2.csv), [intervalos y casos no evaluables](evidencia/tablas/bootstrap_intervalos.csv) y [protocolo estadístico](evidencia/estadistica/protocolo.json).
+- [Verificación del paquete](evidencia/README.md) e [índice del estudio](../README.md).

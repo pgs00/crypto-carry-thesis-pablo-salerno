@@ -1,11 +1,23 @@
 # Evidencia complementaria
 
-Este paquete acompaña las versiones finales de la tesina y del Executive Briefing de Pablo Salerno.
+Este paquete respalda los análisis exploratorios de la [tesina](../../Tesina_Pablo_Salerno.pdf) y del [Executive Briefing](../../Executive_Briefing_Pablo_Salerno.pdf).
 
-- [Descargar evidencia completa, ZIP de 13,6 MB](Evidencia_complementaria_Pablo_Salerno.zip?raw=1)
+- [Descargar evidencia completa, ZIP de 13,6 MB](Evidencia_complementaria_Pablo_Salerno.zip)
 - [Parche técnico para revisión](reproducibility.patch)
 - [Resultados de verificación y versiones por bloque](verification_summary.json)
 - [SHA256 del archivo](SHA256SUMS.txt)
+
+## Hallazgos principales
+
+| Análisis | Resultado | Interpretación |
+|---|---|---|
+| H1, muestra completa emparejada | MAE del EWMA: 6,2990 pb; última tasa: 8,7033 pb; media de 7 días: 6,5764 pb. | La mejora es 27,63% frente a la última tasa y 4,22% frente a la media de 7 días. No implica una ventaja económica del filtro. |
+| H3 por año | Oportunidad media por 168 horas: 0; 2,6808; 10,6972; 0; 0 pb en 2022–2026, respectivamente. | La concentración en 2024 queda oculta al agrupar subperíodos. Cero oportunidades nuevas no equivale a cero posiciones heredadas. |
+| Caja a SOFR | Con 100% del saldo contable libre remunerado: CAGR 4,6853% condicional y 3,7529% incondicional. | El ranking se invierte bajo este supuesto; con 50%, sigue siendo inferior el CAGR condicional (3,2008% frente a 3,5683%). |
+
+2026 abarca enero a agosto. La oportunidad de H3 es el indicador definido por
+la regla, no el funding medio ni el rendimiento de la cartera. El análisis
+anual complementa el test original sin sustituirlo.
 
 ## Contenido y alcance
 
@@ -41,12 +53,6 @@ Para las comprobaciones del repositorio, consultar `verification/README_VERIFICA
 
 ## Publicación e integridad
 
-El parche se incorpora como evidencia para revisión; esta publicación no lo aplica al motor, a sus pruebas ni a los paquetes sellados. Las fechas editoriales se omiten en esta presentación. Los datos, las fuentes y sus identidades permanecen sin cambios.
+El parche se conserva como evidencia; no está aplicado al motor ni a sus pruebas. Los datos, las fuentes y los paquetes sellados mantienen sus identidades.
 
-SHA256 del ZIP:
-
-```text
-03d0b1c8cdef9105a11a4fa5537f51a40d3a787374c14fb19653f579a34501be
-```
-
-El archivo `SHA256SUMS.json` dentro del ZIP inventaría sus 128 archivos restantes. Las referencias a `8b39534` identifican la versión fuente examinada, y permiten reproducir la evidencia complementaria sobre esa base.
+El SHA256 externo y el [catálogo del producto](../../docs/procedencia/producto.json) autentican el ZIP. El archivo `SHA256SUMS.json` dentro del ZIP inventaría sus 128 archivos restantes. Las referencias a `8b39534` identifican la versión fuente examinada, y permiten reproducir la evidencia complementaria sobre esa base.

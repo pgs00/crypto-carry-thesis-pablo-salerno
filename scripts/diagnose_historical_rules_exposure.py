@@ -18,7 +18,8 @@ from pathlib import Path
 import pandas as pd
 
 D = Decimal
-PACKAGE = "data/research/historical-rules-followup-20260924T234206Z"
+PACKAGE = ("data/evidence/reglas_historicas/evidencia_historica/"
+           "data/research/historical-rules-followup-20260924T234206Z")
 RUN_IDS = ("run_ad71d751b20623006c195ff3", "run_dfea4b7ac1475668d5968c97")
 SYMBOLS = ("BTCUSDT", "ETHUSDT")
 INVENTORY: dict[str, dict] = {}

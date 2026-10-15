@@ -430,13 +430,45 @@
       "sha256": "86be35d85b3c5c00aa4c6f8c4c462a9246c83968ed07ea8ea06c7aae42672ccb",
       "original_path": "configs/entrega_4/estabilidad_incertidumbre/20261001T215423Z/I2024.toml",
       "original_sha256": "86be35d85b3c5c00aa4c6f8c4c462a9246c83968ed07ea8ea06c7aae42672ccb"
+    },
+    {
+      "path": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "bytes": 13664548,
+      "sha256": "03d0b1c8cdef9105a11a4fa5537f51a40d3a787374c14fb19653f579a34501be",
+      "original_path": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "original_sha256": "03d0b1c8cdef9105a11a4fa5537f51a40d3a787374c14fb19653f579a34501be",
+      "source_commit": "88c7a07582daa8c560e50d4ee9b5ff91caca9b06"
+    },
+    {
+      "path": "results/complementaria/SHA256SUMS.txt",
+      "bytes": 109,
+      "sha256": "83322c709473b3be6f055e70a43cbc5b86b3682d8d6e8993510b6dbb42388ec8",
+      "original_path": "results/complementaria/SHA256SUMS.txt",
+      "original_sha256": "83322c709473b3be6f055e70a43cbc5b86b3682d8d6e8993510b6dbb42388ec8",
+      "source_commit": "88c7a07582daa8c560e50d4ee9b5ff91caca9b06"
+    },
+    {
+      "path": "results/complementaria/reproducibility.patch",
+      "bytes": 31003,
+      "sha256": "d58ed1e60b9d9052acafc981f787d408a33c2de5372f19f2f5dd047908c074fb",
+      "original_path": "results/complementaria/reproducibility.patch",
+      "original_sha256": "d58ed1e60b9d9052acafc981f787d408a33c2de5372f19f2f5dd047908c074fb",
+      "source_commit": "88c7a07582daa8c560e50d4ee9b5ff91caca9b06"
+    },
+    {
+      "path": "results/complementaria/verification_summary.json",
+      "bytes": 9139,
+      "sha256": "1eaa549a79e965a8ec292f1f8224d7e2663e682c1bcf41dadfcc54de76ae0a0a",
+      "original_path": "results/complementaria/verification_summary.json",
+      "original_sha256": "1eaa549a79e965a8ec292f1f8224d7e2663e682c1bcf41dadfcc54de76ae0a0a",
+      "source_commit": "88c7a07582daa8c560e50d4ee9b5ff91caca9b06"
     }
   ],
   "editorial_files": [
     {
       "path": "README.md",
-      "bytes": 2890,
-      "sha256": "3f561bbf8092c75d9cbb42fb4cd21f309fcdf1537c017ba3efb698f151fa1aaa",
+      "bytes": 2519,
+      "sha256": "7a4d07bd0b35e560f11398fd32e1a38b8ae8369a4c9b29351b88800692c99479",
       "original_path": "README.md",
       "original_sha256": "c647063398fa60915920b259f684088f57e9780a0c5aa407bb6e19eb0cf2c32a",
       "adaptation": "Presentacion tematica y localizacion de fuentes; sin cambios de calculo."
@@ -499,8 +531,8 @@
     },
     {
       "path": "docs/descarga_d.md",
-      "bytes": 12807,
-      "sha256": "1b312095aa40f93c1be84e563465b032f9b2158ed2eb6a32d8e52347f1d6d437",
+      "bytes": 10350,
+      "sha256": "0393ecd5ba5d972f4a15faef34c472a731ac5fda7067d9aeccec021cc6037b20",
       "original_path": "docs/descarga_d.md",
       "original_sha256": "dedc40281577ad6da3c50c46dfebe65b31cdf8edfe4e8fa673c24aa870149e6c",
       "adaptation": "Presentacion tematica y localizacion de fuentes; sin cambios de calculo."
@@ -515,26 +547,26 @@
     },
     {
       "path": "docs/methodology.md",
-      "bytes": 16362,
-      "sha256": "0c23fbbdebe8fb238f2a3b0a8dcd4bc137d1b8e8795927a25ccf8e54350fecb9",
+      "bytes": 15195,
+      "sha256": "12f5f5f636cdb44591d76d0458c14fb5d98a2b4b8dba262407c9f2df90cae62e",
       "original_path": "docs/methodology.md",
       "original_sha256": "a92c56446d2f2f11332dadeb3dec89bbbad24e9fea7795f2f326004bb2bc7316",
       "adaptation": "Presentacion tematica y localizacion de fuentes; sin cambios de calculo."
     },
     {
       "path": "docs/procedencia/README.md",
-      "bytes": 4015,
-      "sha256": "b7b014b8debf5622f05ddd1a5642d98bf1a3afe7e05acb1dcb49cd19e38878b1"
+      "bytes": 2466,
+      "sha256": "b4e7d9447c11af80a5260d9104b96c17b000a7fa2070f91be17d1264e48b7936"
     },
     {
       "path": "docs/procedencia/rutas.json",
-      "bytes": 4426,
-      "sha256": "e5aba45848d1aed575277a45d885a4bcb3cacec0bb1b854ae1356ca9d740a651"
+      "bytes": 4602,
+      "sha256": "6e8bcc0eb5d5995b146d97bbf225c2ec2552356f07cc464c1ccec6daaabcdb4c"
     },
     {
       "path": "docs/reglas_historicas/decisiones_integracion.md",
-      "bytes": 12131,
-      "sha256": "234448c684ed0ee2d58d5891046295967a0fa10530289f58ca0c4efbc7d5350b",
+      "bytes": 12339,
+      "sha256": "5babaa733b419375193df74096d16800cc6e2ed5df5839983586dd54e3e95493",
       "original_path": "docs/entrega_4/reglas_historicas/decisiones_integracion.md",
       "original_sha256": "4c729a6bec7bcd827381bf8f9aa1da0e0a76fd6a999e9ef455a238c11c039d17",
       "adaptation": "Presentacion tematica y localizacion de fuentes; sin cambios de calculo."
@@ -565,16 +597,16 @@
     },
     {
       "path": "docs/reglas_historicas/verificacion_publicacion.md",
-      "bytes": 6742,
-      "sha256": "6711d15ed841cd84c897522e7c11595d64390471e3f77d1b0276ed1f75cb6aee",
+      "bytes": 7151,
+      "sha256": "24d5640d56be71ed4f9e47642e82632f02d9285bc12d8c6ca11df5e9c5fa902a",
       "original_path": "docs/entrega_4/reglas_historicas/verificacion_publicacion.md",
       "original_sha256": "6856c4a94e963827f76d320011b130920981f708b18edecbd494ea810c7c6f1f",
       "adaptation": "Presentacion tematica y localizacion de fuentes; sin cambios de calculo."
     },
     {
       "path": "docs/reproduction.md",
-      "bytes": 13360,
-      "sha256": "3c273ceceac8a02abbff6aaa9e61f386f2e4b31bc560537d216c1214ebc7d6c6",
+      "bytes": 11178,
+      "sha256": "af8cbe5a4f90cc921c4f85fb0dfc99ee42694876d18c492f691b7ef44372b392",
       "original_path": "docs/reproduction.md",
       "original_sha256": "34028db4e119e5d6d14daa1ef49fed47c8f083fd6a6c3ab5d0fb74cac04ad73f",
       "adaptation": "Presentacion tematica y localizacion de fuentes; sin cambios de calculo."
@@ -693,57 +725,57 @@
     },
     {
       "path": "results/README.md",
-      "bytes": 4187,
-      "sha256": "8b165d9da8ce9281d14ebb76313f36c6473228d54b23a413e771b13cb4205bc5"
+      "bytes": 3015,
+      "sha256": "8075067bb8018aaa1b78e9d08ea51cf928f5a240b07dee37d16a304e6501f667"
     },
     {
       "path": "results/base/README.md",
-      "bytes": 14679,
-      "sha256": "7f30bc4801ee130206d197d195e34120f5e4635cc05c0a06818297f2c59be92b",
+      "bytes": 3436,
+      "sha256": "1e2133299c54b1f1dcb9e964c43c1cf07a69b4f37fdb445a60a990198d0586d2",
       "source_path": "results/base/evidencia/comparacion/reporte.md",
-      "adaptation": "Proyeccion editorial; tablas, formulas, escenarios y limites preservados."
+      "adaptation": "Síntesis financiera; el informe completo, las tablas y las figuras permanecen en la evidencia enlazada sin modificación."
     },
     {
       "path": "results/benchmark_sofr/README.md",
-      "bytes": 11101,
-      "sha256": "af00c843c4975d6064c7b71543636fd119c3099a12f3707dfcb522b2c895dff5",
+      "bytes": 2723,
+      "sha256": "ed5208190d66594d30a2f6d448f39fae757785048aa52caca51f7bfa6e55c10c",
       "source_path": "results/benchmark_sofr/evidencia/reporte.md",
-      "adaptation": "Proyeccion editorial; tablas, formulas, escenarios y limites preservados."
+      "adaptation": "Síntesis financiera; el informe completo, las tablas y las figuras permanecen en la evidencia enlazada sin modificación."
     },
     {
       "path": "results/capital/README.md",
-      "bytes": 17520,
-      "sha256": "68e977a5b0f51ddc077d363171c26101990ad195de8913045f719ebcb1b19797",
+      "bytes": 3567,
+      "sha256": "0ec09fe1fe2f02c9bd5531dea02a0d99448f85b292168a4d5434aa134b9dc5a3",
       "source_path": "results/capital/evidencia/reporte.md",
-      "adaptation": "Proyeccion editorial; tablas, formulas, escenarios y limites preservados."
+      "adaptation": "Síntesis financiera; el informe completo, las tablas y las figuras permanecen en la evidencia enlazada sin modificación."
     },
     {
       "path": "results/costos_capacidad/README.md",
-      "bytes": 29237,
-      "sha256": "43ac3c07c710986dcbcfde3c048eef630f9adba87aa452fb8f88fe090c09d6ad",
+      "bytes": 3347,
+      "sha256": "fcb509c451feabeb0a7017f47797a09167b455b6534ff8d5daafc96e5b8dcb7a",
       "source_path": "results/costos_capacidad/evidencia/reporte.md",
-      "adaptation": "Proyeccion editorial; tablas, formulas, escenarios y limites preservados."
+      "adaptation": "Síntesis financiera; el informe completo, las tablas y las figuras permanecen en la evidencia enlazada sin modificación."
     },
     {
       "path": "results/ejecucion/README.md",
-      "bytes": 15020,
-      "sha256": "159672ee1629150f6deddaba746e7472d00bc363034472934336aca227b8ffe6",
+      "bytes": 3149,
+      "sha256": "23032e79fc8458152f2763fbba74ca6c755fe5831ad76b16396dd329f392b1d5",
       "source_path": "results/ejecucion/evidencia/reporte.md",
-      "adaptation": "Proyeccion editorial; tablas, formulas, escenarios y limites preservados."
+      "adaptation": "Síntesis financiera; el informe completo, las tablas y las figuras permanecen en la evidencia enlazada sin modificación."
     },
     {
       "path": "results/estabilidad/README.md",
-      "bytes": 7131,
-      "sha256": "6483a3777b433b5fa165e42918de3b62259d0f5591b00268c308efaa875dfa73",
+      "bytes": 2979,
+      "sha256": "c335977b7b6c3de7f7c7ab13d9a020e016d7e945ed357b8ddd787d0fe23d1680",
       "source_path": "results/estabilidad/evidencia/reporte.md",
-      "adaptation": "Proyeccion editorial; tablas, formulas, escenarios y limites preservados."
+      "adaptation": "Síntesis financiera; el informe completo, las tablas y las figuras permanecen en la evidencia enlazada sin modificación."
     },
     {
       "path": "results/estres/README.md",
-      "bytes": 17991,
-      "sha256": "7235eb72b3581006ebbf221cf5aa04779b99f23702292eabf8980c580ba21dc5",
+      "bytes": 3311,
+      "sha256": "3ce9aa305fc46bd36dfccc1cf32b3ae908196cc3cafdf46ddb175525bff87361",
       "source_path": "results/estres/evidencia/reporte.md",
-      "adaptation": "Proyeccion editorial; tablas, formulas, escenarios y limites preservados."
+      "adaptation": "Síntesis financiera; el informe completo, las tablas y las figuras permanecen en la evidencia enlazada sin modificación."
     },
     {
       "path": "results/matriz_resultados.csv",
@@ -755,31 +787,40 @@
     },
     {
       "path": "results/riesgo/README.md",
-      "bytes": 51792,
-      "sha256": "68ca337b53810a9548f8c47a329aa3d574c50a6d21d8ece2868ebc00e8f8f53c",
+      "bytes": 3208,
+      "sha256": "8293feb26797f68c580009a4c0f237463dac62dd8172d1ab3276439337a085ac",
       "source_path": "results/riesgo/evidencia/reporte.md",
-      "adaptation": "Proyeccion editorial; tablas, formulas, escenarios y limites preservados."
+      "adaptation": "Síntesis financiera; el informe completo, las tablas y las figuras permanecen en la evidencia enlazada sin modificación."
     },
     {
       "path": "results/senal/README.md",
-      "bytes": 24542,
-      "sha256": "22ba0d6babd5babbf30aaf5f9a5bb9f426f3fb7e371f95d585ec65f1322d270b",
+      "bytes": 3077,
+      "sha256": "39ba7f6fd13a0161a9e663e032ebc0fce0944652b8fc52c1c5d5abcb638f6944",
       "source_path": "results/senal/evidencia/reporte.md",
-      "adaptation": "Proyeccion editorial; tablas, formulas, escenarios y limites preservados."
+      "adaptation": "Síntesis financiera; el informe completo, las tablas y las figuras permanecen en la evidencia enlazada sin modificación."
     },
     {
       "path": "Tesina_Pablo_Salerno.pdf",
-      "bytes": 579013,
-      "sha256": "30165213296893aaad279e6535c171d3a12901ea1a39b77accc1b3360a6757f0",
-      "original_path": "entregas/entrega_4/documento_final/Tesina_Entregas_3_y_4_Pablo_Salerno.pdf",
-      "original_sha256": "f98df37bee61164948e2b26537c6aadebf77335aa60b37ceace27ffa029ea3fb",
-      "adaptation": "Exportación desde DOCX correspondiente al PDF original: presentación final, redacción, viñetas, navegación y declaración de IA; tablas, fórmulas y figuras preservadas.",
-      "editable_source": {
-        "path_outside_repository": "../Informes/Tesina_Pablo_Salerno.docx",
-        "sha256": "b3b26628f175e6372643766adbb62523ac10f1c9cb1db3d7f9c682bd0082982d"
-      },
-      "pages": 24
+      "bytes": 840980,
+      "sha256": "665c6b4d74d44ea7bcbd9bd747b37f2011e79eeea004beaf7b4b8dd9eb5c6c7f",
+      "source_filename": "Tesina Crypto Carry Binance - Pablo Salerno.pdf",
+      "pages": 37,
+      "adaptation": "PDF final proporcionado por el autor; contenido y bytes conservados sin modificación."
+    },
+    {
+      "path": "Executive_Briefing_Pablo_Salerno.pdf",
+      "bytes": 216717,
+      "sha256": "8eb09388346da08b26a889403f35d455c9bd1a1c3a0be40fed1dd602698e8aa9",
+      "source_filename": "Executive Briefing - Pablo Salerno.pdf",
+      "pages": 2,
+      "adaptation": "PDF final proporcionado por el autor; contenido y bytes conservados sin modificación."
+    },
+    {
+      "path": "results/complementaria/README.md",
+      "bytes": 3994,
+      "sha256": "58d52caf0cd522f7d095afd3c62659ebb85662ccc1730fe2557bea4827335e38",
+      "adaptation": "Síntesis de los análisis exploratorios y guía de acceso a su evidencia congelada."
     }
   ],
-  "editorial_revision": "presentacion_final_v2"
+  "editorial_revision": "presentacion_final_v3"
 }

@@ -21,7 +21,9 @@ from email.utils import parsedate_to_datetime
 from pathlib import Path, PurePosixPath, PureWindowsPath
 from types import SimpleNamespace
 
+# This is the published Git path, not the location of the preserved checkout copy.
 EVIDENCE_RELATIVE = "data/research/historical-rules-followup-20260924T234206Z"
+PRESERVED_EVIDENCE_RELATIVE = "data/evidence/reglas_historicas/evidencia_historica/" + EVIDENCE_RELATIVE
 PUBLICATION_COMMIT = "894059e4ce318e51f25211d04be9f0202de90ae7"
 PARENT_COMMIT = "80feefc45872d2c48c33f3fbc3ebc9eb402eee6a"
 ORIGINAL_SCRIPT_SHA256 = "36793185c648a6b2029a04a7c90f422f008b0d1e84f4333020bfc69cc30049fb"
@@ -38,6 +40,14 @@ DATA_ERRORS = (OSError, ValueError, KeyError, TypeError, IndexError, ArithmeticE
 
 class VerificationError(ValueError):
     """An invalid documentary input, never a successful verification."""
+
+
+def resolve_evidence(root: Path, evidence: Path) -> Path:
+    """Accept the retired repository address without changing historical identities."""
+    root, evidence = Path(root).resolve(), Path(evidence).resolve()
+    if evidence == root / EVIDENCE_RELATIVE and not evidence.exists():
+        return (root / PRESERVED_EVIDENCE_RELATIVE).resolve()
+    return evidence
 
 
 def safe_path(base: Path, relative: str) -> Path:
@@ -196,7 +206,8 @@ def git_provenance(root, evidence, manifest, sources, baseline, errors):
 
 def verify(*, root: Path, evidence: Path, temp_dir: Path) -> dict:
     """Return three separate audits. Never write evidence, Git state or temp files."""
-    root, evidence, temp_dir = Path(root).resolve(), Path(evidence).resolve(), Path(temp_dir).resolve()
+    root, temp_dir = Path(root).resolve(), Path(temp_dir).resolve()
+    evidence = resolve_evidence(root, evidence)
     errors = []
     result = {"schema": "historical_rules_publication_v1", "checked_at_utc":
               dt.datetime.now(dt.timezone.utc).isoformat(), "root": str(root), "evidence": str(evidence),
@@ -317,6 +328,7 @@ def main(argv=None):
                         help="Existing directory outside evidence; checks currently need no temp files.")
     parser.add_argument("--output", type=Path, help="Optional NEW JSON file outside evidence (exclusive create).")
     args = parser.parse_args(argv)
+    args.evidence = resolve_evidence(args.root, args.evidence)
     if args.output:
         output = args.output.resolve()
         if output.is_relative_to(args.evidence.resolve()) or output.exists():

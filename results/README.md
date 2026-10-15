@@ -1,57 +1,37 @@
 # Resultados del estudio
 
-La [tesina final](../Tesina_Pablo_Salerno.pdf) presenta el estudio de carry
-condicional y permanente. La [matriz de resultados](matriz_resultados.csv)
-identifica escenarios, evidencia, dependencias y límites. Los identificadores
-BASE_E3 y B1–B6 conservan el linaje de los experimentos; la navegación se
-organiza por preguntas científicas.
+La [tesina](../Tesina_Pablo_Salerno.pdf) y el
+[Executive Briefing](../Executive_Briefing_Pablo_Salerno.pdf) presentan la
+interpretación financiera. Las páginas siguientes resumen cada pregunta y
+enlazan la evidencia completa, sin repetir todas sus tablas.
 
-En BASE total, H2 es `no_favorable` y la dirección descriptiva de H3 es
-`contraria`. H1 depende del horizonte y activo; H2 conserva resultados por
-escenario y período, ND y excepciones. Estas etiquetas no se extienden a
-todos los años o variantes. Las cuentas nuevas de estabilidad no son cortes
-heredados de BASE.
-
-| Tema | Lectura y pregunta | Límite principal |
+| Tema | Pregunta | Límite principal |
 |---|---|---|
-| [BASE](base/README.md) | [Tablas y figuras continuas](base/continuo/README.md), reglas prescritas y exposición/H2 corregidos | Reglas prescritas y observaciones parciales no certifican la historia completa del exchange. |
-| [Riesgo intradía](riesgo/README.md) | Pérdidas transitorias y garantías de BASE/MARGEN_2X | La verificación compacta no reconstruye extremos globales por minuto. |
-| [Capital](capital/README.md) | Capital utilizado, concentración y rechazos | Análisis descriptivo; no CAGR contrafáctico quitando mejores ciclos. |
-| [Benchmark SOFR](benchmark_sofr/README.md) | Costo de oportunidad del capital completo | Cuenta hipotética bruta USD, ACT/360 y paridad nominal; no remuneración de caja carry. |
-| [Señal y entradas](senal/README.md) | Horizonte/tenencia, semivida EWMA y techo del basis | Seis variantes aisladas; MAE comparable dentro del mismo horizonte. |
-| [Costos y capacidad](costos_capacidad/README.md) | Fricciones, participación y capital inicial | Ocho variantes aisladas, selección a 34 pb; capacidad de velas 1m sin impacto ni colas. |
-| [Ejecución](ejecucion/README.md) | Convención de precio y demoras | Seis variantes aisladas; LC causal global y casos intradía acotados. |
-| [Estrés y contrafactual](estres/README.md) | Movimientos adversos y trayectoria hipotética sin interrupción | Recuperación impuesta y anclas fijas; no identifica causalidad histórica. |
-| [Estabilidad e incertidumbre](estabilidad/README.md) | Fechas iniciales alternativas, bootstrap y evaluación conjunta | Inicios retrospectivos e intervalos marginales con supuestos por año. |
+| [BASE](base/README.md) | ¿El filtro mejora el desempeño? | Caja sin remuneración; nueve ciclos cerrados de la condicional. |
+| [Riesgo intradía](riesgo/README.md) | ¿Qué pérdidas transitorias y necesidades de garantías aparecen? | Los extremos globales por minuto requieren datos masivos. |
+| [Capital](capital/README.md) | ¿Cuánto patrimonio se utiliza y dónde se concentra el resultado? | Descripción de las operaciones, sin resimular la eliminación de ciclos. |
+| [Benchmark SOFR](benchmark_sofr/README.md) | ¿Se supera el costo de oportunidad del patrimonio completo? | Cuenta hipotética bruta en USD; no es la remuneración de caja del carry. |
+| [Señal y entradas](senal/README.md) | ¿Qué cambia con horizonte, semivida y techo del basis? | Variantes aisladas; MAE comparable dentro del mismo horizonte. |
+| [Costos y capacidad](costos_capacidad/README.md) | ¿Cómo afectan las fricciones y el tamaño? | Selección fija a 34 pb; capacidad estimada con velas de un minuto. |
+| [Ejecución](ejecucion/README.md) | ¿Qué cambia con precios y demoras alternativos? | No reproduce toda la microestructura intradiaria. |
+| [Estrés](estres/README.md) | ¿Qué ocurre ante shocks o una trayectoria sin interrupción? | Escenarios hipotéticos; no identifican causalidad histórica. |
+| [Estabilidad](estabilidad/README.md) | ¿Qué depende del inicio de la muestra y de la incertidumbre? | Inicios retrospectivos e intervalos sujetos a sus supuestos. |
+| [Complementos](complementaria/README.md) | ¿Qué aportan otros comparadores H1, H3 por año y caja SOFR? | Análisis exploratorios separados del caso base. |
 
-Cada tema conserva su evidencia en `evidencia/`, con tablas, figuras,
-protocolos, herramientas y procedencia. La presentación de las
-[carteras continuas](base/continuo/README.md) reúne sus tablas y figuras;
-el [informe BASE](base/README.md) desarrolla la corrección de exposición/H2.
-Las ventanas independientes son
-[antecedentes científicos](../data/evidence/ventanas_independientes/LEEME.md).
-Los protocolos conservan sus fechas y alcances originales.
+Las [tablas y figuras continuas](base/continuo/README.md) son la referencia
+para el desempeño total y anual. En BASE no se cumple H2; la dirección
+descriptiva de H3 es contraria a la compresión preespecificada. Estas
+conclusiones no se extrapolan a todos los períodos o variantes. Cada síntesis
+conserva sus excepciones y resultados no definidos.
 
-El informe padre de reglas se lee junto con la corrección BASE. La
-[segunda tanda propuesta](../docs/reglas_historicas/decisiones_integracion.md#segunda-tanda-propuesta--no-ejecutada)
-permanece fuera de los resultados ejecutados. Las sensibilidades no se cruzan ni se adoptan en BASE
-por rentabilidad. Remunerar o reinvertir caja y garantías del carry permanece
-fuera del estudio; SOFR es una cuenta separada.
+La remuneración de caja queda fuera de BASE y se explora por separado en el
+complemento, sin reinvertir los intereses en nuevas posiciones. El benchmark
+SOFR sigue siendo una cuenta alternativa sobre el patrimonio completo.
 
-La [guía de reproducción](../docs/reproduction.md) contiene los nueve
-verificadores compactos y los requisitos para datos masivos. BASE requiere
-el [padre completo](../data/evidence/reglas_historicas/README.md); riesgo
-requiere padre y corrección BASE; SOFR requiere capital. Capital puede
-autenticar además esas dependencias, riesgo y la referencia continua extraída.
-Las demás dependencias compactas se incluyen en sus evidencias temáticas.
-
-Los certificados históricos conservan su alcance; no sustituyen la
-comprobación del producto actual ni acreditan una nueva ejecución del motor.
-Windows es el entorno de referencia. La comparación literal del CSV de
-intervalos tuvo un fallo integral histórico en Linux, con diferencia máxima
-`6.938893903907228e-18` y controles numéricos aprobados en esa comprobación.
-
-```powershell
-python -B -X utf8 -m scripts.verify_product
-python -B -X utf8 -m scripts.verify_documentation
-```
+La [matriz de resultados](matriz_resultados.csv) identifica escenarios y
+dependencias. Los [informes sellados](../docs/procedencia/README.md) conservan
+sus tablas, configuraciones y fuentes; las
+[ventanas independientes](../data/evidence/ventanas_independientes/LEEME.md)
+son antecedentes con reinicios de capital, distintos de las cuentas continuas.
+La [guía de reproducción](../docs/reproduction.md) reúne los comandos y el
+alcance de las comprobaciones.

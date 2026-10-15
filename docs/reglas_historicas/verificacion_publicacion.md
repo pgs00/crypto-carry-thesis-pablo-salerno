@@ -6,12 +6,17 @@ El comando verifica offline el paquete histórico publicado en
 HEAD, rama, índice y motor. Ninguno de esos estados actuales debe coincidir con la
 sesión de investigación para conservar la validez documental del paquete.
 
+La investigación se conserva íntegra dentro del paquete sellado de reglas
+históricas. La ruta anterior `data/research/historical-rules-followup-20260924T234206Z`
+sigue identificando los blobs publicados; el verificador resuelve esa dirección
+al archivo preservado cuando no existe la copia anterior.
+
 Desde la raíz del repositorio, en PowerShell:
 
 ```powershell
 .venv/Scripts/python.exe -B scripts/verify_historical_rules_publication.py `
   --root . `
-  --evidence data/research/historical-rules-followup-20260924T234206Z `
+  --evidence data/evidence/reglas_historicas/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z `
   --temp-dir $env:TEMP
 ```
 
@@ -61,7 +66,7 @@ fuentes, metadatos, extracciones y registros web; se rechazan escapes mediante
 Una exportación mínima completa necesita:
 
 - `scripts/verify_historical_rules_publication.py`;
-- íntegro `data/research/historical-rules-followup-20260924T234206Z/`;
+- íntegro `data/evidence/reglas_historicas/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/`;
 - `data/research/fee-archive-followup-20260918/A1.html`, `A2.html` y `A3.html`.
 
 Puede ubicarse bajo otra raíz. No requiere datos de mercado ni resultados de

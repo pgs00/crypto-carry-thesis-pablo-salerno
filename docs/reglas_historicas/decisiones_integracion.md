@@ -7,8 +7,8 @@ campos documentados, `fact_id`, `source_id`, conocimiento y aplicabilidad origin
 Fue generada antes de modificar el comportamiento económico. No modifica
 `loadable_by_rulebook=false`, los estados documentales ni los hashes originales.
 
-El [registro](../../data/research/historical-rules-followup-20260924T234206Z/reglas_historicas.json)
-y el [catálogo de fuentes](../../data/research/historical-rules-followup-20260924T234206Z/fuentes.json)
+El [registro](../../data/evidence/reglas_historicas/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/reglas_historicas.json)
+y el [catálogo de fuentes](../../data/evidence/reglas_historicas/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/fuentes.json)
 distinguen `intervalo_respaldado`, `evento_respaldado`, `observacion_puntual`,
 `derivado`, `supuesto`, `contradictorio`, `pendiente` y `fuera_de_alcance`.
 El estado `contradictorio` tiene cero hechos en este paquete; se conserva como
@@ -24,8 +24,8 @@ categoría admisible y no se usa para diferencias legítimas antes/después.
 | FUT4 a lo largo de la muestra | `FEE_A1_BTCUSDT`, `FEE_A1_ETHUSDT`, `FEE_A2_BTCUSDT`, `FEE_A4_BTCUSDT`, `FEE_A3_BTCUSDT`; `A1–A4` | Comparación experimental de 4 frente a 5 pb. `PENDING_FEE_DATE_BTCUSDT/ETHUSDT` sigue pendiente. Una FAQ o la pista `LEAD_OCT` no fecha la transición. |
 | Doble mantenimiento | Supuesto experimental del protocolo | `MM_estres(N)=2*MM_base(N)`, preservando pisos y techos, escalando tasas y deducciones; apalancamiento inicial 2x sin cambio. No es tabla histórica Binance. |
 
-Los [textos de inicio](../../data/research/historical-rules-followup-20260924T234206Z/extraidos/PROMO_START_web.txt)
-y [fin](../../data/research/historical-rules-followup-20260924T234206Z/extraidos/PROMO_END_web.txt)
+Los [textos de inicio](../../data/evidence/reglas_historicas/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/extraidos/PROMO_START_web.txt)
+y [fin](../../data/evidence/reglas_historicas/evidencia_historica/data/research/historical-rules-followup-20260924T234206Z/extraidos/PROMO_END_web.txt)
 contienen UTC explícito en los extremos operativos. Sus etiquetas de publicación
 `2022-07-06 14:00` y `2023-03-15 06:10` no tienen zona acreditada; los cuerpos
 actuales tienen enmiendas. No se convierten esas etiquetas en `known_from`.

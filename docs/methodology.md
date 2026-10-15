@@ -17,9 +17,11 @@ Los cortes `[2022-01-01, 2024-01-01)` y `[2024-01-01, 2026-09-01)` conservan
 los saldos de entrada de la trayectoria continua.
 
 Las corridas principales son `run_ad71d751b20623006c195ff3` (condicional) y
-`run_dfea4b7ac1475668d5968c97` (permanente), con `futures_scaled`. Sus parámetros
-provienen de `configs/download_minutes_2022_2026_d.toml` y de las configuraciones
-efectivas conservadas en el [ZIP vigente](../data/evidence/carteras_continuas.zip).
+`run_dfea4b7ac1475668d5968c97` (permanente). Las configuraciones efectivas del
+[paquete continuo](../data/evidence/carteras_continuas.zip) fijan la referencia:
+`next_minute_vwap`, `joint_quantity`, señales de minuto cerrado y `futures_scaled`.
+Los perfiles CLI `configs/base.toml` y `configs/robustness.toml` son anteriores;
+sus valores predeterminados no reproducen esta BASE.
 
 Las ventanas independientes de septiembre de 2022–agosto de 2023 y septiembre
 de 2025–agosto de 2026, cada una iniciada con capital nuevo, son
@@ -30,9 +32,9 @@ continua conserva `next_minute_vwap` y `joint_quantity` de la revisión por minu
 
 Universo: spot y perpetuos USD-M de BTCUSDT y ETHUSDT. Se usan OHLC y volúmenes
 de un minuto, tasas de funding en sus timestamps reales y mark prices de un
-minuto. Los timestamps internos son UTC en nanosegundos. Los datos spot desde
-2025 se normalizan desde microsegundos; los anteriores y futuros desde milisegundos.
-El calentamiento de diciembre de 2021 informa los pronósticos y no genera P&L.
+minuto, conservando sus timestamps UTC efectivos. El calentamiento de diciembre
+de 2021 informa los pronósticos y no genera P&L. El [diccionario de datos](data_dictionary.md)
+detalla unidades, normalización y disponibilidad temporal.
 
 Una vela se conoce al cerrar, en el límite del minuto siguiente; no se utiliza
 su high, low o close antes. El basis usa cierres spot/perpetuo alineados del
@@ -40,7 +42,9 @@ mismo minuto cerrado, con actividad positiva y frescura máxima de 60 segundos:
 `basis = futures_close / spot_close − 1`. El mark valúa el riesgo; no es un
 precio ejecutable. Las ausencias desconocidas bloquean cobertura. El calendario
 documentado de interrupción spot del 24/03/2023 clasifica cobertura, sin anunciar
-anticipadamente la suspensión a la estrategia.
+anticipadamente la suspensión a la estrategia. Ante datos indispensables
+desconocidos con exposición, se detiene la corrida conservando posición, deuda
+y estado; no se fabrica una curva de efectivo.
 
 La cobertura estricta original tiene 15 marks ausentes. La opción explícita
 `futures_scaled` estima `mark[t] = futures_close[t] × mark_close[s] / futures_close[s]`,
@@ -103,8 +107,7 @@ instrumento/minuto/cartera es 1% del volumen base observado, compartida entre
 La secuencia de entrada es spot → futuro, enviando la segunda pata después de
 completar la primera; los cierres son futuro → spot. Los parciales, cancelaciones,
 remanentes y reintentos se concilian con el inventario real. Una apertura parcial
-fallida se desarma; no se presupone una cobertura completa. NautilusTrader mantiene
-órdenes y fills; el ledger Decimal concilia cantidades y economía.
+fallida se desarma; no se presupone una cobertura completa.
 
 Orden temporal: incorporar datos → liquidar funding sobre el short previo →
 contabilizar fills comprometidos → riesgo/estado → vencimientos y reintentos →
@@ -112,38 +115,13 @@ decisiones. Un riesgo detectado al cierre no borra un fill del intervalo acabado
 Se mantienen tenencias de 168 horas, renovables; se rebalancea al renovar si el
 desvío del objetivo supera 5%. No se aplica el filtro de basis de entrada a la renovación.
 
-Las reservas de ambos activos usan un snapshot común del equity y prioridad
-BTC→ETH. Una primera pata de rebalanceo fallida sin fills conserva el par en
-HOLDING, libera la reserva y bloquea ampliaciones durante 24 horas; permite
-renovar la tenencia existente si cumple sus controles. En `next_minute_vwap`,
-una primera pata parcialmente ejecutada que falla se desarma; una falla de
-segunda pata también desarma el par. Una suspensión conserva inventario e
-intención de cierre hasta poder negociar. Polvo es cantidad inferior a los
-filtros de cantidad o nocional mínimo, y sigue valuado.
-
-## Motor y reproducción de estado
-
-[NautilusTrader](../pyproject.toml) 1.231.0 gestiona órdenes, fills y posiciones
-nativas. El adaptador deshabilita el matching automático de trades/barras y
-usa órdenes límite inertes como portadoras del ciclo de vida. Sus precios
-límite no son precios económicos: el motor del estudio determina elegibilidad
-y precio de cada fill. La cuenta nativa permanece congelada y sus comisiones
-son cero; sólo el ledger del proyecto contabiliza dinero y funding.
-
-La posición spot nativa bruta se concilia con spot neto más comisiones
-acumuladas en unidades base; el futuro nativo se concilia con el short del
-ledger. Cada fill exige coincidencia de cantidad, precio y reloj. El equity
-nativo no es el resultado de la tesina. Dinero y cantidades usan Decimal;
-la tolerancia contable de 1e-8 USDT no amplía los umbrales de riesgo. Las
-portadoras nativas tienen ocho decimales y una divergencia visible falla.
-
-`manage_stop=False` evita liquidaciones terminales. Los timers se conservan
-entre particiones. Los checkpoints JSON vinculan hashes de configuración,
-reglas, inputs y código; reconstruyen las portadoras sin nuevos movimientos
-del ledger y no usan pickle. Cambiar esa identidad requiere otra corrida.
-Ante datos indispensables desconocidos con exposición, la estrategia se
-detiene conservando posición, deuda y estado. La validación estricta fallida
-produce un diagnóstico, sin fabricar una curva de efectivo.
+Las reservas usan el mismo equity observado y prioridad BTC→ETH. Si la primera
+pata del rebalanceo falla sin fills, se conserva el par, se libera la reserva
+y se bloquean ampliaciones durante 24 horas; puede renovarse la tenencia si
+cumple sus controles. Si falla tras fills parciales o falla la segunda pata,
+se desarma el par. Una suspensión conserva inventario e intención de cierre
+hasta poder negociar. Polvo es cantidad inferior a los filtros de cantidad
+o nocional mínimo, y sigue valuado.
 
 ## Riesgo y contabilidad
 
@@ -171,6 +149,8 @@ las liquidaciones independientes conservan prioridad.
 La atribución concilia P&L spot y futuros (realizado/no realizado), funding,
 comisiones y cargos de liquidación con el cambio de equity. Slippage ya está en
 los precios y sólo se muestra como diagnóstico; no se resta dos veces.
+El ledger propio determina el resultado económico; la tolerancia contable de
+1e-8 USDT no amplía los umbrales de riesgo.
 
 ## Evaluación
 
@@ -210,10 +190,6 @@ no pruebas causales ni garantías de rentabilidad. El
 cuantifica efectos con posiciones fijas y escenarios P95 ilustrativos; no incluye
 cambios de decisiones o margen ni garantiza extrapolación a los precios ausentes.
 
-Los [resultados continuos conservados](../results/base/README.md) se regeneran
-desde el ZIP verificado, sin nuevas simulaciones. Los datos masivos y corridas
-completas siguen locales; hashes y configuraciones preservan su trazabilidad.
-
 ## Capital, sensibilidades y riesgo
 
 El drawdown de cierres diarios, la reconstrucción intradía global de
@@ -221,7 +197,7 @@ BASE/MARGEN_2X y las ventanas locales de ejecución y estrés tienen poblaciones
 Las ventanas locales no acreditan máximos intradía globales. La suspensión
 spot conserva la distinción entre precio antiguo y proxy hipotético.
 
-El comparador SOFR es una cuenta hipotética bruta USD, ACT/360,
+El comparador SOFR del estudio base es una cuenta hipotética bruta USD, ACT/360,
 con paridad nominal 1 USDT = 1 USD y CAGR365. No remunera caja o garantías
 del carry ni representa un producto accesible o una rentabilidad realizada
 libre de riesgo. La sensibilidad de costos/capacidad mantiene la selección ex ante a 34 pb mientras varía
@@ -238,15 +214,19 @@ intervalos percentiles marginales nominales 95%. Esos intervalos dependen
 de los supuestos de remuestreo y no constituyen una prueba conjunta al 95%
 de H2 ni probabilidades de ganancia futura. No ejecutan el motor.
 
-Los protocolos, límites y la síntesis de resultados se consultan desde el
-[índice temático](../results/README.md). La verificación de hashes,
-la recomputación de evidencia compacta y el replay económico son alcances
-distintos; ninguno convierte reglas prescritas en historia certificada.
+La [evidencia complementaria](../results/complementaria/README.md) añade
+comparadores de H1, desagregaciones de H3, estadísticas de basis/funding y una
+sensibilidad ex post de caja a SOFR. Conserva el caso base y no vuelve a simular
+operaciones. El saldo contable usado en esa sensibilidad no descuenta reservas
+de órdenes pendientes ni acredita acceso real a la tasa.
 
-La [guía única de reproducción](reproduction.md) distingue lectura, evidencia
-compacta y datos masivos. `configs/base.toml` y `configs/robustness.toml` son
-perfiles anteriores del CLI con `first_trade`; no son las configuraciones
-efectivas de BASE continua. Se conservan sin cambiar sus parámetros.
+Los protocolos y resultados se consultan desde el [índice temático](../results/README.md).
+La [guía de reproducción](reproduction.md) distingue verificación de integridad,
+recálculo compacto y replay económico. Para auditar la implementación, el
+[adaptador](../src/crypto_carry/nautilus_adapter.py) documenta el papel de
+NautilusTrader y la [estrategia](../src/crypto_carry/strategy.py) conserva las
+reglas de reanudación e identidad de estado. Esos controles no convierten
+reglas prescritas en historia certificada.
 
 ## Limitaciones e interpretación
 

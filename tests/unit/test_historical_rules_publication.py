@@ -13,7 +13,8 @@ from pathlib import Path
 import pytest
 
 ROOT = Path(__file__).resolve().parents[2]
-REL = Path("data/research/historical-rules-followup-20260924T234206Z")
+HISTORICAL_REL = Path("data/research/historical-rules-followup-20260924T234206Z")
+REL = Path("data/evidence/reglas_historicas/evidencia_historica") / HISTORICAL_REL
 EXTERNAL = Path("data/research/fee-archive-followup-20260918")
 SCRIPT = ROOT / "scripts/verify_historical_rules_publication.py"
 REFERENCE = "894059e4ce318e51f25211d04be9f0202de90ae7"
@@ -60,6 +61,14 @@ def snapshot(root):
 
 def check(verifier, root, tmp_path):
     return verifier.verify(root=root, evidence=root / REL, temp_dir=tmp_path)
+
+
+def test_retired_repository_path_resolves_to_preserved_evidence(verifier, export, tmp_path):
+    before = snapshot(export)
+    result = verifier.verify(root=export, evidence=export / HISTORICAL_REL, temp_dir=tmp_path)
+    assert result["passed"], result
+    assert Path(result["evidence"]) == export / REL
+    assert snapshot(export) == before
 
 
 def test_intact_relocated_export_is_read_only_and_git_is_unchecked(verifier, export, tmp_path):
@@ -245,20 +254,20 @@ def test_later_unrelated_commit_and_code_change_preserve_published_provenance(ve
     subprocess.run(["git", "-C", str(clone), "-c", "core.autocrlf=false", "checkout", "--quiet", REFERENCE],
                    check=True, capture_output=True)
     (clone / "unrelated.txt").write_text("legitimate later work\n", encoding="utf-8")
-    protected = read(clone / REL / "estado_inicial.json")["protected_files"]
+    protected = read(clone / HISTORICAL_REL / "estado_inicial.json")["protected_files"]
     code = next(f["path"] for f in protected if f["path"].startswith("src/") and f["path"].endswith(".py"))
     with (clone / code).open("ab") as handle:
         handle.write(b"\n# legitimate later code evolution\n")
     subprocess.run(["git", "-C", str(clone), "add", "--", "unrelated.txt", code], check=True)
     subprocess.run(["git", "-C", str(clone), "-c", "user.name=Fixture", "-c", "user.email=fixture@example.invalid",
                     "commit", "--quiet", "-m", "Temporary acceptance fixture only"], check=True)
-    before = snapshot(clone / REL)
+    before = snapshot(clone / HISTORICAL_REL)
     index = (clone / ".git/index").read_bytes()
     head = subprocess.check_output(["git", "-C", str(clone), "rev-parse", "HEAD"])
-    result = check(verifier, clone, tmp_path)
+    result = verifier.verify(root=clone, evidence=clone / HISTORICAL_REL, temp_dir=tmp_path)
     assert result["passed"], result
     assert result["provenance"]["git_status"] == "verified"
     assert result["provenance"]["protected_reference_paths"] == 717
-    assert snapshot(clone / REL) == before
+    assert snapshot(clone / HISTORICAL_REL) == before
     assert (clone / ".git/index").read_bytes() == index
     assert subprocess.check_output(["git", "-C", str(clone), "rev-parse", "HEAD"]) == head

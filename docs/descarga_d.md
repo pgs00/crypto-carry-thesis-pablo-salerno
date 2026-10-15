@@ -1,23 +1,21 @@
-# Descarga de velas de un minuto en D:
+# Adquisición y preparación de datos
 
 Estudio vigente: BTCUSDT y ETHUSDT, spot y perpetuos USD-M, **01/01/2022–31/08/2026
 UTC**, con diciembre de 2021 como calentamiento. Se usan fuentes públicas de
 Binance. Las instrucciones de las ventanas independientes se conservan más
 abajo como antecedentes. Para leer o reproducir las tablas publicadas no hace
 falta descargar datos: ver la [guía principal](reproduction.md).
+Los ejemplos PowerShell parten de la raíz del repositorio y usan
+`D:\Backtesting` como destino de mercados; adaptar esa ruta a la instalación.
+Ejecutar una sola descarga por destino y mantener las salidas fuera de los paquetes sellados.
 
 ## Ampliación continua: enero de 2022 a agosto de 2026
 
-La descarga y el procesamiento continuo ya están disponibles en este equipo.
 Para ejecutar ambas carteras con los dos tratamientos explícitos de los 15
 marks faltantes, seguir [la guía de cartera continua](continuous_mark_gaps.md).
 Los pasos de adquisición siguientes se conservan para reproducir la preparación.
 
-Para descargar el historial continuo de BTCUSDT y ETHUSDT, desde el
-01/01/2022 hasta el 31/08/2026 UTC inclusive, ejecutar una sola copia:
-
 ```powershell
-Set-Location 'C:\Users\pablo\Documentos\UCEMA\Tesina\Backtesting'
 & '.\.venv\Scripts\python.exe' -u '.\scripts\download_continuous.py' --root 'D:\Backtesting'
 ```
 
@@ -28,36 +26,18 @@ Este comando adquiere datos; la normalización, la validación de cobertura y la
 corridas del período ampliado son pasos posteriores.
 
 El plan comprende **456 ZIP mensuales y dos consultas paginadas de funding**.
-Con las dos ventanas actuales presentes, reutiliza **208 ZIP** y sus seis
+Con las dos ventanas archivadas presentes, reutiliza **208 ZIP** y sus seis
 suplementos diarios de mark, después de verificar SHA-256 y CRC. Hace copias
 independientes en el destino nuevo y conserva intactas las fuentes anuales.
-Faltan **248 ZIP mensuales**, unos **311 MB** comprimidos según las cabeceras
-oficiales consultadas el 19/09/2026, más las respuestas pequeñas de funding
-y checksums. Las copias locales agregan unos 257 MB en disco, sin tráfico de
-descarga. No copia los Parquet anuales ni concatena sus snapshots de la API:
-consulta el funding para todo el intervalo nuevo.
+No copia los Parquet anuales ni concatena sus snapshots de la API: consulta
+el funding para todo el intervalo nuevo. `--plan-only` muestra el plan sin
+descargar ni escribir datos. No requiere API key.
 
-Primero muestra `CACHE LOCAL [n/208]` mientras prepara las copias. Después:
-
-```text
-[100/458]  21.83% verificado | faltan 358 | downloaded | ...
-```
-
-El contador incluye descargas y archivos locales por verificar, y se actualiza
-al terminar cada archivo o consulta. `cached` significa que reutilizó el ZIP;
-solo volvió a consultar su checksum. Los fallos quedan pendientes y no suman
-al porcentaje. Es progreso por archivos/respuestas, no por bytes ni una
-estimación de tiempo restante. La descarga termina correctamente al mostrar:
-
-```text
-DESCARGA COMPLETA: 458/458 (100%). Integridad verificada; cobertura y normalizacion pendientes.
-```
-
-Si se interrumpe con `Ctrl+C` o informa `DESCARGA INCOMPLETA`, repetir exactamente
-el mismo comando: conserva los completos y reanuda los parciales cuando el
-servidor admite HTTP Range. Mantener el equipo sin suspensión. No hace falta
-API key. Para consultar el plan sin descargar ni escribir datos, agregar
-`--plan-only` al comando.
+El progreso cuenta archivos y respuestas verificados, no bytes ni tiempo
+restante; `cached` indica reutilización verificada. La finalización continua
+es `DESCARGA COMPLETA: 458/458 (100%)`; todavía falta normalizar y validar
+cobertura. Si se interrumpe o informa `DESCARGA INCOMPLETA`, repetir el mismo
+comando: conserva los completos y reanuda parciales cuando hay soporte HTTP Range.
 
 ### Procesar y validar el período continuo
 
@@ -67,7 +47,6 @@ un día de mark BTC recuperable desde el diario oficial (31/07/2022) y 15 minuto
 ausentes también de los diarios y de la API. El procedimiento reproducible es:
 
 ```powershell
-Set-Location 'C:\Users\pablo\Documentos\UCEMA\Tesina\Backtesting'
 & '.\.venv\Scripts\python.exe' -u '.\data\research\continuous-preparation-20260919\repair_sources.py' --root 'D:\Backtesting'
 $configContinuo = (Resolve-Path '.\configs\download_minutes_2022_2026_d.toml').Path
 & '.\.venv\Scripts\python.exe' -u -m crypto_carry --root 'D:\Backtesting' validate-data --config $configContinuo --scope full --clip-price-warmup
@@ -95,22 +74,23 @@ ausentes no se rellenan ni se reclasifican como cierres del mercado.
 La investigación y sus fuentes se conservan en
 [preparación continua](../data/research/continuous-preparation-20260919/README.md).
 
-## Ejecutar o reanudar las dos ventanas anuales
+## Antecedente archivado: dos ventanas independientes
 
-Ejecutar una sola copia. Si ya está descargando, dejarla continuar.
+Las ventanas septiembre de 2022–agosto de 2023 y septiembre de 2025–agosto de
+2026 reinician capital por separado. Los comandos de esta sección reproducen
+ese antecedente, no la BASE continua. Su [paquete conservado](../data/evidence/ventanas_independientes/LEEME.md)
+identifica resultados, configuraciones y procedencia.
+
+### Descargar y validar
 
 ```powershell
-Set-Location 'C:\Users\pablo\Documentos\UCEMA\Tesina\Backtesting'
 $configsMinuto = @('.\configs\download_minutes_2022_2023_d.toml', '.\configs\download_minutes_2025_2026_d.toml')
 & '.\.venv\Scripts\python.exe' -u -m crypto_carry.data.minute_download --root 'D:\Backtesting' --config $configsMinuto
 ```
 
-El comando es el mismo que antes de la limpieza del proyecto. Guarda los datos
-en `D:\Backtesting\data\minutes\2022_2023` y
+Guarda los datos en `D:\Backtesting\data\minutes\2022_2023` y
 `D:\Backtesting\data\minutes\2025_2026`. El límite de **20 GB es compartido**
 por ambas carpetas e incluye crudos, temporales y manifiestos.
-
-## Contenido y tamaño
 
 | Dataset | ZIP mensuales, ambas ventanas y activos |
 |---|---:|
@@ -124,44 +104,14 @@ los ZIP. El funding se consulta desde 30 días antes de cada inicio, para permit
 28 días de calentamiento más antecedentes. Ese mes extra no cambia las fechas
 de evaluación económica.
 
-Verificación del 18/09/2026: 208/208 ZIP mensuales descargados, **257.252.762 bytes
-(257,25 MB)** comprimidos. Los seis suplementos diarios de mark suman otros
-206.818 bytes. Las dos ventanas completas, incluyendo API, checksums, Parquet
-y manifiestos de cobertura, ocupan aproximadamente **643 MB**.
-[Registro de preparación](../data/research/minute-download-20260918/preparation.json).
+El [registro de preparación](../data/research/minute-download-20260918/preparation.json)
+conserva las mediciones de descarga. La finalización es
+`DESCARGA COMPLETA: 212/212 (100%)`; se aplican las mismas reglas de reanudación
+y verificación anteriores. Los manifiestos `manifests\download.json` se
+actualizan durante la descarga. No extraer ni convertir los ZIP manualmente.
 
-La revisión recuperó OHLC y ambos volúmenes de los ZIP existentes,
-sin descargas adicionales. Agregó 104 particiones compartidas de `minute_bars`,
-con **260.960.966 bytes** de Parquet. Las dos carpetas, incluidos originales,
-formatos de referencia y manifiestos conservados, ocupan **956.984.856 bytes**
-(956,98 MB decimales) en la medición posterior a la migración.
-
-## Progreso, finalización e interrupciones
-
-La consola muestra el porcentaje de **archivos/respuestas verificados**:
-`[53/212] 25.00% verificado`. No es porcentaje de bytes ni tiempo restante.
-`cached` significa que un archivo existente pasó sus comprobaciones.
-
-Terminó correctamente al aparecer:
-
-```text
-DESCARGA COMPLETA: 212/212 (100%). Integridad verificada; cobertura y normalizacion pendientes.
-```
-
-Si aparece `DESCARGA INCOMPLETA`, revisar los errores y repetir el mismo comando.
-Con `Ctrl+C` puede interrumpirse; reanuda parciales cuando el servidor admite
-HTTP Range y verifica los completos mediante SHA-256 y CRC antes de reutilizarlos.
-
-Los manifiestos `manifests\download.json` de ambas carpetas se actualizan durante
-la descarga. No extraer los ZIP ni convertirlos manualmente. Mantener el equipo
-sin suspensión.
-
-## Después de descargar
-
-La descarga y la validación de ambas ventanas ya terminaron en este equipo.
-Los siguientes comandos permiten reproducirlas en una instalación nueva.
-El motor por minuto usa los mismos TOML. Antes de ejecutar, incorporar los seis
-ZIP diarios de mark que completan omisiones de los mensuales y validar:
+Antes de simular, incorporar los seis ZIP diarios de mark que completan
+omisiones de los mensuales y validar con los mismos TOML:
 
 ```powershell
 & '.\.venv\Scripts\python.exe' -u '.\data\research\minute-download-20260918\repair_sources.py' --root 'D:\Backtesting'
@@ -176,11 +126,12 @@ foreach ($perfilMinuto in $configsMinuto) {
 La recuperación conserva los ZIP mensuales originales y verifica los diarios
 contra sus checksums oficiales. La suspensión spot del 24/03/2023 se documenta
 como período sin negociación; no se inventan precios ni volúmenes.
-El [protocolo vigente](escenario_investigacion.md) declara estas convenciones.
+El [protocolo del antecedente](escenario_investigacion.md) declara estas convenciones;
+la [metodología vigente](methodology.md) corresponde a la trayectoria continua.
 
-## Reproducir las corridas
+### Reproducir las corridas archivadas
 
-Para la revisión vigente, que incluye el escenario principal `vwap_joint` y
+Para la revisión por minuto archivada, que incluye el escenario `vwap_joint` y
 los controles sobre ambas ventanas:
 
 ```powershell
@@ -193,7 +144,7 @@ La preparación anterior con `validate-data` recupera las barras completas desde
 la caché. La revisión valida cada política de datos antes de simular y escribe
 `outputs/revision_<id>/execution_revision_report.md`.
 
-### Corridas individuales del modelo de referencia
+### Corridas individuales y sensibilidades del antecedente
 
 Desde la raíz del proyecto, ejecutar ambas carteras de cada ventana:
 
@@ -206,9 +157,8 @@ foreach ($perfilMinuto in $configsMinuto) {
 }
 ```
 
-Cada ventana base tardó entre cuatro y seis minutos en este equipo, incluyendo
-validación e informes. La consola devuelve su carpeta `outputs\run_<id>` al
-terminar. Los resultados existentes se verifican antes de reutilizarlos.
+La consola devuelve `outputs\run_<id>` al terminar. Los resultados existentes
+se verifican antes de reutilizarlos.
 
 Para repetir los siete escenarios priorizados, con las mismas configuraciones:
 
@@ -222,10 +172,9 @@ foreach ($perfilMinuto in $configsMinuto) {
 
 Este segundo comando vuelve a ejecutar el baseline y luego cada escenario;
 imprime un avance por escenario terminado. Mantiene resultados separados y
-guarda el índice en `outputs\robustness-<id>`. Las tablas, figuras y auditorías
-vigentes se identifican en [resultados por tema](../results/README.md).
+guarda el índice en `outputs\robustness-<id>`.
 
-Para reconstruir el informe conjunto de las corridas verificadas actuales:
+Para reconstruir el informe conjunto de las corridas archivadas identificadas:
 
 ```powershell
 & '.\.venv\Scripts\python.exe' '.\data\research\minute-download-20260918\build_study_report.py' --root 'D:\Backtesting' --early run_8fb22fa8b377466cff981b99 --late run_0cb21afbec7cdba1e5848df6 --early-robustness robustness-25034b88ecfa92b9 --late-robustness robustness-c252528c4dd8d7a3
@@ -235,10 +184,6 @@ Verifica fuentes de resultados, auditorías e índices antes de guardar el estud
 Si se cambian datos, parámetros o código, usar los nuevos identificadores que
 devuelva la ejecución correspondiente; el comparador exige el perfil aprobado
 y una auditoría que corresponda a los baselines seleccionados.
-
-La carpeta antigua `D:\Backtesting\data\raw` ya fue eliminada por el usuario.
-Conservar `D:\Backtesting\data\minutes` y el `data` del proyecto en C:, que
-contiene la muestra, el funding y las auditorías.
 
 Fuente: [Binance Public Data](https://github.com/binance/binance-public-data).
 Los timestamps de spot desde enero de 2025 vienen en microsegundos; el

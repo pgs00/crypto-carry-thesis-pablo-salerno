@@ -1,50 +1,46 @@
-# Crypto carry: backtesting de la tesina
+# Crypto carry condicional en Binance
 
-¿Una cartera que filtra entradas y renovaciones por un pronóstico de funding
-mejora el desempeño de una cartera de carry permanente? El estudio compara
-compra spot y venta de perpetuos USD-M en **BTCUSDT y ETHUSDT**. La permanente
-omite sólo el filtro de funding; comparte las reglas de basis, ejecución,
-capital y riesgo.
+Tesina de Pablo Salerno, Maestría en Finanzas, UCEMA.
 
-El período vigente es **01/01/2022–31/08/2026 UTC**, continuo y sin reinicios
-anuales, con 10.000 USDT iniciales por cartera. Usa velas de un minuto,
-`next_minute_vwap`, sizing conjunto y `futures_scaled` para 15 marks ausentes.
+- [Tesina final, PDF de 37 páginas](Tesina_Pablo_Salerno.pdf)
+- [Executive Briefing, PDF de 2 páginas](Executive_Briefing_Pablo_Salerno.pdf)
 
-**[Tesina final (PDF, 24 páginas)](Tesina_Pablo_Salerno.pdf)**
+El estudio compara dos carteras que compran BTC y ETH en el mercado spot y
+venden futuros perpetuos USD-M. La condicional exige un pronóstico de funding
+suficiente para entrar; la incondicional omite ese filtro. Ambas comparten
+las restricciones de basis, ejecución, capital y riesgo. Cada cuenta parte de
+10.000 USDT y se mantiene continua entre enero de 2022 y agosto de 2026.
 
-En BASE total la condicional no supera el Sharpe de la permanente (H2
-`no_favorable`). Los reportes conservan las cifras, excepciones por escenario
-y límites de interpretación de las tres hipótesis.
+El EWMA mejora el pronóstico, pero esa mejora no se traduce en una ventaja
+consistente del filtro. En el caso base, sin remuneración de caja, el retorno
+anual compuesto es 1,6335% para la condicional y 3,3825% para la incondicional.
+Ambas quedan por debajo de una cuenta hipotética a SOFR (4,0928%). El Sharpe
+publicado usa tasa libre de riesgo cero. Una sensibilidad separada de
+remuneración de caja puede invertir el ranking; no acredita acceso efectivo
+a SOFR ni vuelve a simular las operaciones.
 
-- [Evidencia complementaria](results/complementaria/README.md): cálculos adicionales de H1/H3, basis, funding, caja SOFR y parche de reproducción, con fuentes y controles.
-- [Metodología vigente](docs/methodology.md): contrato científico y limitaciones.
-- [Resultados por tema](results/README.md): BASE, riesgo, capital y sensibilidades.
-- [Guía única de reproducción](docs/reproduction.md): lectura, verificadores compactos, referencia continua y datos masivos.
-- [Carteras continuas](results/base/continuo/README.md): tablas y figuras de la referencia.
-- [BASE y corrección de exposición/H2](results/base/README.md): reglas prescritas y corridas de referencia.
+## Recorrido de lectura
 
-Desde la raíz del repositorio, preparar el entorno y comprobar el producto final:
+| Para consultar | Ubicación |
+|---|---|
+| Resultados principales y evolución anual | [Carteras continuas](results/base/continuo/README.md) |
+| Riesgo, capital y sensibilidades | [Resultados por tema](results/README.md) |
+| Reglas y supuestos del estudio | [Metodología](docs/methodology.md) |
+| Comparadores H1, oportunidad anual H3 y caja SOFR | [Evidencia complementaria](results/complementaria/README.md) |
+| Comprobar los archivos o reproducir los cálculos | [Guía de reproducción](docs/reproduction.md) |
 
-```powershell
-uv --cache-dir .uv-cache sync --frozen --python 3.14.3
-& '.\.venv\Scripts\python.exe' -B -X utf8 -m scripts.verify_product
-& '.\.venv\Scripts\python.exe' -B -X utf8 -m scripts.verify_documentation
-```
+## Código y evidencia
 
-La [guía](docs/reproduction.md) publica los nueve verificadores compactos,
-las pruebas y los requisitos para reproducir el motor.
+`src/crypto_carry/` contiene el motor. La configuración de referencia es
+[`configs/reglas_historicas/BASE_E3.toml`](configs/reglas_historicas/BASE_E3.toml).
+Los perfiles `configs/base.toml` y `configs/robustness.toml` son anteriores y
+no reproducen la BASE de la tesina. Las fuentes masivas y corridas completas
+requieren la preparación descrita en la guía; los paquetes compactos de
+evidencia están incluidos.
 
-`src/crypto_carry/` contiene el motor; las configuraciones efectivas de cada
-corrida y paquete fijan los experimentos. `configs/base.toml` y
-`configs/robustness.toml` son perfiles anteriores del CLI (`first_trade`),
-conservados por sus usos y pruebas; no identifican la BASE vigente.
-Las fuentes masivas, corridas completas, entornos y cachés permanecen locales.
+Los informes breves enlazan las tablas, figuras e informes completos originales.
+La [procedencia](docs/procedencia/README.md) documenta sus identidades y controles.
 
-Las distribuciones conservan los datos, figuras y código de cálculo originales.
-Las herramientas de empaquetado y verificación incorporan las adaptaciones
-documentadas en la [guía de reproducción](docs/reproduction.md), que detalla
-la procedencia, las dependencias y los alcances de cada comprobación.
-
-El trabajo utilizó asistencia de IA mediante Codex en código, documentación y
-verificaciones. El motor integra NautilusTrader; las fuentes de Binance y las
-atribuciones académicas se conservan en la tesina y los paquetes de evidencia.
+Se utilizó IA como asistente para desarrollar código, generar gráficos y tablas
+y apoyar la revisión y edición. El análisis, la interpretación y las decisiones
+finales corresponden al autor. La declaración completa figura en la tesina.
