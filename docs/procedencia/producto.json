@@ -23,9 +23,9 @@
       "path": "results/base/continuo",
       "original_path": "entregas/entrega_3/continua_distribucion_20261010",
       "manifest": "manifest.json",
-      "manifest_sha256": "eceeaaa444a237c613c9a18d1bcfaedf99884f5315093cc9ed485a0bb457c0fa",
+      "manifest_sha256": "554007181381bbb9c381b112dfd97217f8fe19d1700933576613d17e5c46d253",
       "members_relocated_without_modification": false,
-      "sidecar_sha256": "a33b78a5b76ab09a2def5def257a9d7a9c3728263c8fb76d897aeeb69fcb64a4",
+      "sidecar_sha256": "a13740dbb5e92684a1d3ff9909cd21a9cb1299550b9a794a850b09943b81aa3e",
       "original_manifest_sha256": "d2ab7b53cdd8b5ccffee21e5a319c4f55536ae35e210511d9acfaf98c475e0f7",
       "original_sidecar_sha256": "d6ae2051a28503c2c49bf52b86b0470c3f475c3ee3eeb80799b28e9c8c5c2a63",
       "original_manifest_path": "results/base/continuo/procedencia/distribucion_20261010/manifest.json",
@@ -435,8 +435,8 @@
   "editorial_files": [
     {
       "path": "README.md",
-      "bytes": 2716,
-      "sha256": "bf8aace1c3a46a15808d4f197b39315c0a0bb755f5837e2a4fc857558c716357",
+      "bytes": 2890,
+      "sha256": "3f561bbf8092c75d9cbb42fb4cd21f309fcdf1537c017ba3efb698f151fa1aaa",
       "original_path": "README.md",
       "original_sha256": "c647063398fa60915920b259f684088f57e9780a0c5aa407bb6e19eb0cf2c32a",
       "adaptation": "Presentacion tematica y localizacion de fuentes; sin cambios de calculo."
@@ -499,8 +499,8 @@
     },
     {
       "path": "docs/descarga_d.md",
-      "bytes": 12822,
-      "sha256": "6ad9ebc5755d23a7cc7ad4037f4b81eb15118e325716c92a87093f353d2929a7",
+      "bytes": 12807,
+      "sha256": "1b312095aa40f93c1be84e563465b032f9b2158ed2eb6a32d8e52347f1d6d437",
       "original_path": "docs/descarga_d.md",
       "original_sha256": "dedc40281577ad6da3c50c46dfebe65b31cdf8edfe4e8fa673c24aa870149e6c",
       "adaptation": "Presentacion tematica y localizacion de fuentes; sin cambios de calculo."
@@ -523,8 +523,8 @@
     },
     {
       "path": "docs/procedencia/README.md",
-      "bytes": 4030,
-      "sha256": "dfc5b5f1817ed2328fa546300d404d24b2aaade7d7c57ff932f5491da816b530"
+      "bytes": 4015,
+      "sha256": "b7b014b8debf5622f05ddd1a5642d98bf1a3afe7e05acb1dcb49cd19e38878b1"
     },
     {
       "path": "docs/procedencia/rutas.json",
@@ -541,8 +541,8 @@
     },
     {
       "path": "docs/reglas_historicas/lectura_resultados.md",
-      "bytes": 10900,
-      "sha256": "0f0550c11f2773f4944c66f08303e96c4f8a7418fd4d4ba669bd2d5dab8c35eb",
+      "bytes": 10885,
+      "sha256": "33675b7e0a9bb5317805558588fc9697976412709a9aaed2f4bf618defce4829",
       "original_path": "docs/entrega_4/reglas_historicas/lectura_resultados.md",
       "original_sha256": "5b4b3b68742351c37145fa6ba3d963c1c18e45b879b52760bb747681b2b30085",
       "adaptation": "Presentacion tematica y localizacion de fuentes; sin cambios de calculo."
@@ -573,8 +573,8 @@
     },
     {
       "path": "docs/reproduction.md",
-      "bytes": 13375,
-      "sha256": "45b75b084ce7817c5e9488f145c802b35156e076dde8751eb1e34b1b3d5fc09d",
+      "bytes": 13360,
+      "sha256": "3c273ceceac8a02abbff6aaa9e61f386f2e4b31bc560537d216c1214ebc7d6c6",
       "original_path": "docs/reproduction.md",
       "original_sha256": "34028db4e119e5d6d14daa1ef49fed47c8f083fd6a6c3ab5d0fb74cac04ad73f",
       "adaptation": "Presentacion tematica y localizacion de fuentes; sin cambios de calculo."
@@ -781,5 +781,5 @@
       "pages": 24
     }
   ],
-  "editorial_revision": "presentacion_final_20261011"
+  "editorial_revision": "presentacion_final_v2"
 }

@@ -1,6 +1,6 @@
-# Evidencia complementaria, revisión del 15/10/2026
+# Evidencia complementaria
 
-Este paquete acompaña la revisión de la tesina y del Executive Briefing de Pablo Salerno del 15 de octubre de 2026. Conserva exactamente el archivo entregado con los Word.
+Este paquete acompaña las versiones finales de la tesina y del Executive Briefing de Pablo Salerno.
 
 - [Descargar evidencia completa, ZIP de 13,6 MB](Evidencia_complementaria_Pablo_Salerno.zip?raw=1)
 - [Parche técnico para revisión](reproducibility.patch)
@@ -41,12 +41,12 @@ Para las comprobaciones del repositorio, consultar `verification/README_VERIFICA
 
 ## Publicación e integridad
 
-Publicado en el repositorio el 15/10/2026. El parche se incorpora aquí como evidencia para revisión; esta publicación no lo aplica al motor, a sus pruebas ni a los paquetes sellados. La frase interna del ZIP que indica que el parche todavía no estaba publicado describe el estado previo a esta subida.
+El parche se incorpora como evidencia para revisión; esta publicación no lo aplica al motor, a sus pruebas ni a los paquetes sellados. Las fechas editoriales se omiten en esta presentación. Los datos, las fuentes y sus identidades permanecen sin cambios.
 
 SHA256 del ZIP:
 
 ```text
-2acfc3b72b2027dbab441295b90b7fc690b37a3e38b811c036b7da2257a1e1ec
+03d0b1c8cdef9105a11a4fa5537f51a40d3a787374c14fb19653f579a34501be
 ```
 
-El archivo `SHA256SUMS.json` dentro del ZIP inventaría sus 128 archivos restantes. Las referencias a `8b39534` identifican la versión fuente examinada, mientras esta carpeta registra la publicación posterior de la evidencia complementaria.
+El archivo `SHA256SUMS.json` dentro del ZIP inventaría sus 128 archivos restantes. Las referencias a `8b39534` identifican la versión fuente examinada, y permiten reproducir la evidencia complementaria sobre esa base.

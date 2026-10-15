@@ -34,7 +34,7 @@ verificación actual produce una salida nueva fuera de los paquetes; no se
 reutilizan certificados anteriores como aprobación de esta organización.
 
 La [vista de carteras continuas](../../results/base/continuo/README.md) conserva
-sus 12 tablas y 6 figuras originales. Su adaptación editorial del 11/10/2026
+sus 12 tablas y 6 figuras originales. Su adaptación editorial
 actualiza título y navegación con un manifiesto nuevo. El
 [manifiesto anterior](../../results/base/continuo/procedencia/distribucion_20261010/manifest.json),
 su sidecar y el README previo permanecen íntegros; `scripts.publish_thesis --verify`

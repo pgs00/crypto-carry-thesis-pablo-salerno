@@ -4,15 +4,15 @@
       "README.md"
     ],
     "data_and_figures_regenerated": false,
-    "identifier": "continua_editorial_20261011",
+    "identifier": "continua_editorial_v4",
     "kind": "editorial",
     "original_manifest_sha256": "d2ab7b53cdd8b5ccffee21e5a319c4f55536ae35e210511d9acfaf98c475e0f7",
     "original_path": "procedencia/distribucion_20261010",
     "schema": "continuous_editorial_view_v1"
   },
-  "distribution_revision": 3,
+  "distribution_revision": 4,
   "file_hashes": {
-    "README.md": "7b070f46fa9e3de104801956dd73d7e9fdb84cbcc8e233b945c578813ab8d8e8",
+    "README.md": "0211e41575936b1ca1119f0ce1da71b4777243fe81409750eca25de5e5ea9068",
     "figuras/composicion_pnl.png": "5783a74e7c226597bedacbcb1318366200733cf78776cd3420f9d69e40eb0db5",
     "figuras/composicion_pnl.svg": "f26296d0f91f24025e260f8c12ac8c840f8207394b41b29d49d2f1a91c2be1d1",
     "figuras/equity_drawdown.png": "a2f138e4c24fc9c3b6f1551328ca8969ae84582c65a5d8ad7d99a2206cfd64ad",

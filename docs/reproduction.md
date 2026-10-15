@@ -22,7 +22,7 @@ Requieren Python 3.14 y las dependencias de [pyproject.toml](../pyproject.toml)
 y [uv.lock](../uv.lock); el entorno local de referencia usa Python 3.14.3
 en Windows.
 
-**Verificación local del 11/10/2026:** se ejecutaron completos los nueve
+**Verificación local:** se ejecutaron completos los nueve
 comandos de esta sección en Windows 11 nativo (`sys.platform=win32`), con
 CPython 3.14.3 de 64 bits y las versiones de `uv.lock`. BASE, riesgo intradía,
 capital, SOFR, señal, costos/capacidad, ejecución, estrés y estabilidad e

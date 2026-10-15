@@ -10,17 +10,17 @@
       "exit_code": 0,
       "seconds": 21.68122948599921,
       "command": [
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/.venv/bin/python",
+        "repo/.venv/bin/python",
         "-B",
         "-X",
         "utf8",
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/base/evidencia/herramientas/verify_rules_sensitivity_correction.py",
+        "repo/results/base/evidencia/herramientas/verify_rules_sensitivity_correction.py",
         "--package",
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/base/evidencia",
+        "repo/results/base/evidencia",
         "--parent",
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/data/evidence/reglas_historicas",
+        "repo/data/evidence/reglas_historicas",
         "--output",
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/logs/BASE_original.json"
+        "logs/BASE_original.json"
       ]
     },
     {
@@ -28,21 +28,21 @@
       "exit_code": 0,
       "seconds": 2.6077757220009516,
       "command": [
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/.venv/bin/python",
+        "repo/.venv/bin/python",
         "-B",
         "-X",
         "utf8",
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/riesgo/evidencia/herramientas/scripts/verify_intraday_risk.py",
+        "repo/results/riesgo/evidencia/herramientas/scripts/verify_intraday_risk.py",
         "--scope",
         "compact",
         "--package",
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/riesgo/evidencia",
+        "repo/results/riesgo/evidencia",
         "--parent",
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/data/evidence/reglas_historicas",
+        "repo/data/evidence/reglas_historicas",
         "--correction",
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/base/evidencia",
+        "repo/results/base/evidencia",
         "--output",
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/logs/RIESGO_original.json"
+        "logs/RIESGO_original.json"
       ]
     },
     {
@@ -50,15 +50,15 @@
       "exit_code": 0,
       "seconds": 5.662841952002054,
       "command": [
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/.venv/bin/python",
+        "repo/.venv/bin/python",
         "-B",
         "-X",
         "utf8",
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/capital/evidencia/herramientas/scripts/verify_return_capital.py",
+        "repo/results/capital/evidencia/herramientas/scripts/verify_return_capital.py",
         "--package",
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/capital/evidencia",
+        "repo/results/capital/evidencia",
         "--output",
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/logs/B1_CAPITAL_original.json"
+        "logs/B1_CAPITAL_original.json"
       ]
     },
     {
@@ -66,17 +66,17 @@
       "exit_code": 0,
       "seconds": 0.4189264540000295,
       "command": [
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/.venv/bin/python",
+        "repo/.venv/bin/python",
         "-B",
         "-X",
         "utf8",
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/benchmark_sofr/evidencia/herramientas/scripts/verify_sofr_benchmark.py",
+        "repo/results/benchmark_sofr/evidencia/herramientas/scripts/verify_sofr_benchmark.py",
         "--package",
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/benchmark_sofr/evidencia",
+        "repo/results/benchmark_sofr/evidencia",
         "--previous",
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/capital/evidencia",
+        "repo/results/capital/evidencia",
         "--output",
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/logs/B1_SOFR_original.json"
+        "logs/B1_SOFR_original.json"
       ]
     },
     {
@@ -84,15 +84,15 @@
       "exit_code": 1,
       "seconds": 221.7626722410023,
       "command": [
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/.venv/bin/python",
+        "repo/.venv/bin/python",
         "-B",
         "-X",
         "utf8",
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/senal/evidencia/herramientas/scripts/verify_signal_sensitivity.py",
+        "repo/results/senal/evidencia/herramientas/scripts/verify_signal_sensitivity.py",
         "--package",
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/senal/evidencia",
+        "repo/results/senal/evidencia",
         "--output",
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/logs/B2_original.json"
+        "logs/B2_original.json"
       ]
     },
     {
@@ -100,15 +100,15 @@
       "exit_code": 1,
       "seconds": 87.31831618999786,
       "command": [
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/.venv/bin/python",
+        "repo/.venv/bin/python",
         "-B",
         "-X",
         "utf8",
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/costos_capacidad/evidencia/herramientas/scripts/verify_cost_capacity.py",
+        "repo/results/costos_capacidad/evidencia/herramientas/scripts/verify_cost_capacity.py",
         "--package",
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/costos_capacidad/evidencia",
+        "repo/results/costos_capacidad/evidencia",
         "--output",
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/logs/B3_original.json"
+        "logs/B3_original.json"
       ]
     },
     {
@@ -116,15 +116,15 @@
       "exit_code": 1,
       "seconds": 87.723317046999,
       "command": [
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/.venv/bin/python",
+        "repo/.venv/bin/python",
         "-B",
         "-X",
         "utf8",
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/ejecucion/evidencia/herramientas/scripts/verify_execution_delays.py",
+        "repo/results/ejecucion/evidencia/herramientas/scripts/verify_execution_delays.py",
         "--package",
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/ejecucion/evidencia",
+        "repo/results/ejecucion/evidencia",
         "--output",
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/logs/B4_original.json"
+        "logs/B4_original.json"
       ]
     },
     {
@@ -132,14 +132,14 @@
       "exit_code": -9,
       "seconds": 195.0912029329993,
       "command": [
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/.venv/bin/python",
+        "repo/.venv/bin/python",
         "-B",
         "-X",
         "utf8",
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/estres/evidencia/herramientas/scripts/verify_stress_counterfactual.py",
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/estres/evidencia",
+        "repo/results/estres/evidencia/herramientas/scripts/verify_stress_counterfactual.py",
+        "repo/results/estres/evidencia",
         "--output",
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/logs/B5_original.json"
+        "logs/B5_original.json"
       ]
     },
     {
@@ -147,18 +147,18 @@
       "exit_code": 1,
       "seconds": 29.47525601400048,
       "command": [
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/.venv/bin/python",
+        "repo/.venv/bin/python",
         "-B",
         "-X",
         "utf8",
         "-I",
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/estabilidad/evidencia/herramientas/scripts/verify_stability_uncertainty.py",
+        "repo/results/estabilidad/evidencia/herramientas/scripts/verify_stability_uncertainty.py",
         "--candidate",
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/estabilidad/evidencia",
+        "repo/results/estabilidad/evidencia",
         "--forbid-root",
         "D:/Backtesting",
         "--output",
-        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/logs/B6_original.json"
+        "logs/B6_original.json"
       ]
     }
   ],

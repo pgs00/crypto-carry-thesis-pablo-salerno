@@ -16,7 +16,7 @@ En BASE total la condicional no supera el Sharpe de la permanente (H2
 `no_favorable`). Los reportes conservan las cifras, excepciones por escenario
 y límites de interpretación de las tres hipótesis.
 
-- [Evidencia complementaria del 15/10/2026](results/complementaria_2026_10_15/README.md): cálculos adicionales de H1/H3, basis, funding, caja SOFR y parche de reproducción, con fuentes y controles.
+- [Evidencia complementaria](results/complementaria/README.md): cálculos adicionales de H1/H3, basis, funding, caja SOFR y parche de reproducción, con fuentes y controles.
 - [Metodología vigente](docs/methodology.md): contrato científico y limitaciones.
 - [Resultados por tema](results/README.md): BASE, riesgo, capital y sensibilidades.
 - [Guía única de reproducción](docs/reproduction.md): lectura, verificadores compactos, referencia continua y datos masivos.

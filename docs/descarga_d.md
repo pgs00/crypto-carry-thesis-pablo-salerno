@@ -130,7 +130,7 @@ Verificación del 18/09/2026: 208/208 ZIP mensuales descargados, **257.252.762 b
 y manifiestos de cobertura, ocupan aproximadamente **643 MB**.
 [Registro de preparación](../data/research/minute-download-20260918/preparation.json).
 
-La revisión del 19/09/2026 recuperó OHLC y ambos volúmenes de los ZIP existentes,
+La revisión recuperó OHLC y ambos volúmenes de los ZIP existentes,
 sin descargas adicionales. Agregó 104 particiones compartidas de `minute_bars`,
 con **260.960.966 bytes** de Parquet. Las dos carpetas, incluidos originales,
 formatos de referencia y manifiestos conservados, ocupan **956.984.856 bytes**

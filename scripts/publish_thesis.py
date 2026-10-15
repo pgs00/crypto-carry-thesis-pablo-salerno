@@ -29,7 +29,7 @@ HISTORICAL_SIDECAR_SHA256 = "d6ae2051a28503c2c49bf52b86b0470c3f475c3ee3eeb80799b
 HISTORICAL_GENERATOR_SHA256 = "e4ca01f6759235a155b8d8ace1b290da12264c9979d72b9426ff4398470fed36"
 EDITORIAL_DERIVATION = {
     "schema": "continuous_editorial_view_v1",
-    "identifier": "continua_editorial_20261011",
+    "identifier": "continua_editorial_v4",
     "kind": "editorial",
     "original_path": HISTORICAL_VIEW,
     "original_manifest_sha256": HISTORICAL_MANIFEST_SHA256,
@@ -359,7 +359,7 @@ def editorial_readme(original):
         "../../../data/evidence/carteras_continuas.zip", 1,
     ) + """## Procedencia
 
-Adaptación editorial del 11/10/2026: se actualizan el título y los enlaces de consulta.
+Adaptación editorial: se actualizan el título y los enlaces de consulta.
 Las 12 tablas y las 6 figuras conservan sus bytes; no se regeneraron resultados.
 El [manifiesto vigente](manifest.json) identifica esta vista y conserva el
 [README anterior](procedencia/distribucion_20261010/README.md), el
@@ -387,7 +387,7 @@ def verify_editorial_derivation(destination, manifest):
         return None
     require(manifest.get("distribution") == EDITORIAL_DERIVATION,
             "Unknown editorial derivation")
-    require(manifest.get("distribution_revision") == 3, "Unknown editorial revision")
+    require(manifest.get("distribution_revision") == 4, "Unknown editorial revision")
     require(all((historical / name).is_file()
                 for name in ("README.md", "manifest.json", "manifest.sha256")),
             "Historical snapshot is missing")

@@ -6,7 +6,7 @@ El paquete de reglas es `data/evidence/reglas_historicas/`. `indice_corridas.jso
 
 ## Corrección editorial v2: exposición y H2
 
-La revisión del 26/09/2026 corrige el indicador operativo para excluir polvo conforme a la referencia continua y completa H2 con el requisito de CAGR condicional positivo. Las doce carteras existentes y el paquete padre sellado permanecen intactos. Las herramientas archivadas conservan soporte v1; los comandos activos construyen la corrección v2 en otro destino.
+La revisión corrige el indicador operativo para excluir polvo conforme a la referencia continua y completa H2 con el requisito de CAGR condicional positivo. Las doce carteras existentes y el paquete padre sellado permanecen intactos. Las herramientas archivadas conservan soporte v1; los comandos activos construyen la corrección v2 en otro destino.
 
 ## Construcción y sello
 

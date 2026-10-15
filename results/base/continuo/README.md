@@ -86,7 +86,7 @@ o decisiones; extrapolan errores de períodos con precios conocidos a otros per�
 
 ## Procedencia
 
-Adaptación editorial del 11/10/2026: se actualizan el título y los enlaces de consulta.
+Adaptación editorial: se actualizan el título y los enlaces de consulta.
 Las 12 tablas y las 6 figuras conservan sus bytes; no se regeneraron resultados.
 El [manifiesto vigente](manifest.json) identifica esta vista y conserva el
 [README anterior](procedencia/distribucion_20261010/README.md), el
