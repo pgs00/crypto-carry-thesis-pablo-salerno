@@ -1,0 +1,276 @@
+{
+  "reviewed_commit": "8b395342b7e3a9dd1fbb59f72bee6b5e6efebb49",
+  "status": "completed",
+  "economic_engine_replayed": false,
+  "financial_outputs_modified": false,
+  "sealed_package_paths_modified": false,
+  "original_runs": [
+    {
+      "name": "BASE",
+      "exit_code": 0,
+      "seconds": 21.68122948599921,
+      "command": [
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/.venv/bin/python",
+        "-B",
+        "-X",
+        "utf8",
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/base/evidencia/herramientas/verify_rules_sensitivity_correction.py",
+        "--package",
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/base/evidencia",
+        "--parent",
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/data/evidence/reglas_historicas",
+        "--output",
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/logs/BASE_original.json"
+      ]
+    },
+    {
+      "name": "RIESGO",
+      "exit_code": 0,
+      "seconds": 2.6077757220009516,
+      "command": [
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/.venv/bin/python",
+        "-B",
+        "-X",
+        "utf8",
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/riesgo/evidencia/herramientas/scripts/verify_intraday_risk.py",
+        "--scope",
+        "compact",
+        "--package",
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/riesgo/evidencia",
+        "--parent",
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/data/evidence/reglas_historicas",
+        "--correction",
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/base/evidencia",
+        "--output",
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/logs/RIESGO_original.json"
+      ]
+    },
+    {
+      "name": "B1_CAPITAL",
+      "exit_code": 0,
+      "seconds": 5.662841952002054,
+      "command": [
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/.venv/bin/python",
+        "-B",
+        "-X",
+        "utf8",
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/capital/evidencia/herramientas/scripts/verify_return_capital.py",
+        "--package",
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/capital/evidencia",
+        "--output",
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/logs/B1_CAPITAL_original.json"
+      ]
+    },
+    {
+      "name": "B1_SOFR",
+      "exit_code": 0,
+      "seconds": 0.4189264540000295,
+      "command": [
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/.venv/bin/python",
+        "-B",
+        "-X",
+        "utf8",
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/benchmark_sofr/evidencia/herramientas/scripts/verify_sofr_benchmark.py",
+        "--package",
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/benchmark_sofr/evidencia",
+        "--previous",
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/capital/evidencia",
+        "--output",
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/logs/B1_SOFR_original.json"
+      ]
+    },
+    {
+      "name": "B2",
+      "exit_code": 1,
+      "seconds": 221.7626722410023,
+      "command": [
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/.venv/bin/python",
+        "-B",
+        "-X",
+        "utf8",
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/senal/evidencia/herramientas/scripts/verify_signal_sensitivity.py",
+        "--package",
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/senal/evidencia",
+        "--output",
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/logs/B2_original.json"
+      ]
+    },
+    {
+      "name": "B3",
+      "exit_code": 1,
+      "seconds": 87.31831618999786,
+      "command": [
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/.venv/bin/python",
+        "-B",
+        "-X",
+        "utf8",
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/costos_capacidad/evidencia/herramientas/scripts/verify_cost_capacity.py",
+        "--package",
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/costos_capacidad/evidencia",
+        "--output",
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/logs/B3_original.json"
+      ]
+    },
+    {
+      "name": "B4",
+      "exit_code": 1,
+      "seconds": 87.723317046999,
+      "command": [
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/.venv/bin/python",
+        "-B",
+        "-X",
+        "utf8",
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/ejecucion/evidencia/herramientas/scripts/verify_execution_delays.py",
+        "--package",
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/ejecucion/evidencia",
+        "--output",
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/logs/B4_original.json"
+      ]
+    },
+    {
+      "name": "B5",
+      "exit_code": -9,
+      "seconds": 195.0912029329993,
+      "command": [
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/.venv/bin/python",
+        "-B",
+        "-X",
+        "utf8",
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/estres/evidencia/herramientas/scripts/verify_stress_counterfactual.py",
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/estres/evidencia",
+        "--output",
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/logs/B5_original.json"
+      ]
+    },
+    {
+      "name": "B6",
+      "exit_code": 1,
+      "seconds": 29.47525601400048,
+      "command": [
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/.venv/bin/python",
+        "-B",
+        "-X",
+        "utf8",
+        "-I",
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/estabilidad/evidencia/herramientas/scripts/verify_stability_uncertainty.py",
+        "--candidate",
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/repo/results/estabilidad/evidencia",
+        "--forbid-root",
+        "D:/Backtesting",
+        "--output",
+        "/workspace/scratch/e5c350fd5c52/feedback_applied_20261015/verification/logs/B6_original.json"
+      ]
+    }
+  ],
+  "compact_success_modes": {
+    "BASE": "original",
+    "RIESGO": "original",
+    "B1_CAPITAL": "original",
+    "B1_SOFR": "original",
+    "B2": "portable comparator overlay",
+    "B3": "portable comparator overlay",
+    "B4": "portable comparator overlay",
+    "B5": "portable comparator overlay",
+    "B6": "portable comparator overlay"
+  },
+  "blocks": {
+    "B2": {
+      "passed": true,
+      "exit_code": 0,
+      "report": "logs/B2_overlay.json",
+      "numeric_policy_source": "audit_code_v1/scripts/compact_numeric_policy.py",
+      "numeric_policy_sha256": "ea5cd8b5ee333186755dfddd155fc7e4bdba15a78bfaddc1fe0a5edd5792583c",
+      "overlay_sha256": "3be697759b84093c322e5d28ee3256370be23909c43da1aa3afcc7ee9b5edfd1",
+      "frozen_verifier_sha256": "de402f5f05aa7754dc19c35223a1c4d65d9d6e76f1c5c8b442716498aede2470",
+      "manifest_sha256": "e3f15d7754043fa956404ae79734115527cc3d798275bbbaf838d827dad68837",
+      "authenticated_members": 500,
+      "accepted_roundoff_count": 196,
+      "max_absolute_difference": "1.5E-17"
+    },
+    "B3": {
+      "passed": true,
+      "exit_code": 0,
+      "report": "logs/B3_sequential_overlay.json",
+      "numeric_policy_source": "audit_code_v1/scripts/compact_numeric_policy.py",
+      "numeric_policy_sha256": "ea5cd8b5ee333186755dfddd155fc7e4bdba15a78bfaddc1fe0a5edd5792583c",
+      "overlay_sha256": "3be697759b84093c322e5d28ee3256370be23909c43da1aa3afcc7ee9b5edfd1",
+      "frozen_verifier_sha256": "6c08bb7f0fd054ec48d9c403e4782951b682c16eeb7e27ef9aef00ae20c2b619",
+      "manifest_sha256": "4a945144d83b3311c942a104d2dc5ebdac0d2ecfde6b40a5691adae558ab93f4",
+      "authenticated_members": 882,
+      "accepted_roundoff_count": 244,
+      "max_absolute_difference": "2E-17"
+    },
+    "B4": {
+      "passed": true,
+      "exit_code": 0,
+      "report": "logs/B4_final_overlay.json",
+      "numeric_policy_source": "patched_files/scripts/compact_numeric_policy.py",
+      "numeric_policy_sha256": "e6c9483f1050ed0c295ae0c60d98e2c71baa038c49d82b993a30b4e92c931368",
+      "overlay_sha256": "3be697759b84093c322e5d28ee3256370be23909c43da1aa3afcc7ee9b5edfd1",
+      "frozen_verifier_sha256": "1b8a9e76f78292478269d250688a21bf329216baba063362a4f750e6320d8e2b",
+      "manifest_sha256": "41a4c05b36be6c4d42878b7755f18b3ade7c0c94700fc38db43aa1a548e93eba",
+      "authenticated_members": 1200,
+      "accepted_roundoff_count": 454,
+      "max_absolute_difference": "1.4E-17"
+    },
+    "B5": {
+      "passed": true,
+      "exit_code": 0,
+      "report": "logs/B5_final_overlay.json",
+      "numeric_policy_source": "patched_files/scripts/compact_numeric_policy.py",
+      "numeric_policy_sha256": "e6c9483f1050ed0c295ae0c60d98e2c71baa038c49d82b993a30b4e92c931368",
+      "overlay_sha256": "3be697759b84093c322e5d28ee3256370be23909c43da1aa3afcc7ee9b5edfd1",
+      "frozen_verifier_sha256": "bedfd206a97b929343c5d0d88a75733a1e26c1e1671a57c38d2e79687c0660e3",
+      "manifest_sha256": "ab22322dfa512221fecdccb5f01bf1aca98bca8c11130b6abc1537a082d35072",
+      "authenticated_members": 1179,
+      "accepted_roundoff_count": 97,
+      "max_absolute_difference": "1E-17"
+    },
+    "B6": {
+      "passed": true,
+      "exit_code": 0,
+      "report": "logs/B6_overlay.json",
+      "numeric_policy_source": "audit_code_v1/scripts/compact_numeric_policy.py",
+      "numeric_policy_sha256": "ea5cd8b5ee333186755dfddd155fc7e4bdba15a78bfaddc1fe0a5edd5792583c",
+      "overlay_sha256": "3be697759b84093c322e5d28ee3256370be23909c43da1aa3afcc7ee9b5edfd1",
+      "frozen_verifier_sha256": "5671c23fa72007833813beb0e05e1d8a9b67787ee02afcf891c733377a82a8ed",
+      "manifest_sha256": "dafd82aaa77ed419298bcae0a4eaec5f8465a98b70b4892566e1a49aeb4e8f77",
+      "authenticated_members": 664,
+      "accepted_roundoff_count": 26,
+      "max_absolute_difference": "7E-18"
+    }
+  },
+  "tests": {
+    "default_suite": {
+      "passed": 1409,
+      "failed": 2,
+      "skipped": 48,
+      "log": "logs/suite_verified.log"
+    },
+    "prepared_suite": {
+      "passed": 1411,
+      "failed": 0,
+      "skipped": 48,
+      "log": "logs/suite_prepared_complete.log",
+      "context": "spawn",
+      "git_references_complete": true,
+      "numeric_policy_revision": "audit_code_v1"
+    },
+    "final_targeted": {
+      "passed": 30,
+      "failed": 0,
+      "log": "logs/final_policy_targeted_tests.log"
+    }
+  },
+  "resource_limit_bytes": 8589934592,
+  "original_B5_limit": "Initial complete original B5 process was interrupted with exit -9 under concurrent memory pressure; not claimed as a completed original check.",
+  "patch_sha256": "d58ed1e60b9d9052acafc981f787d408a33c2de5372f19f2f5dd047908c074fb",
+  "environment": {
+    "python": "3.14.3 (main, Mar 24 2026, 22:50:36) [Clang 22.1.1 ]",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "pyarrow": "25.0.1",
+    "nautilus_trader": "1.231.0"
+  }
+}
