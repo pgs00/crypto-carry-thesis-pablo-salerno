@@ -56,6 +56,12 @@ def warmup(start, rate=".001", interval=8):
     ]
 
 
+@pytest.fixture
+def warmup_factory():
+    """Share funding samples through pytest without importing conftest modules."""
+    return warmup
+
+
 def prices(start, seconds, spot="100", future="100.3", mark=None):
     rows = []
     for second in seconds:

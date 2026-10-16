@@ -1,0 +1,6043 @@
+{
+  "schema": "thesis_table_baseline_v1",
+  "pdf": {
+    "path": "Tesina_Pablo_Salerno.pdf",
+    "sha256": "665c6b4d74d44ea7bcbd9bd747b37f2011e79eeea004beaf7b4b8dd9eb5c6c7f",
+    "pages": 37
+  },
+  "rounding": "ROUND_HALF_UP at displayed precision; numbers normalized to decimal point; percent/pp/bp scales explicit",
+  "coverage": "22 numbered PDF tables; numerical result cells, Table 1 numeric coverage note, Table 2 numerical rules and Table 22 repeated claims; qualitative content remains anchored to the immutable PDF; no simulation rerun",
+  "tables": [
+    {
+      "number": 1,
+      "title": "Datos utilizados y función en la simulación",
+      "pdf_page": 7,
+      "numeric_cells": 4,
+      "independently_recomputed_cells": 0,
+      "nature": "methodology_or_synthesis; all numerical claims mapped; qualitative wording anchored by immutable PDF"
+    },
+    {
+      "number": 2,
+      "title": "Síntesis de las reglas de las carteras",
+      "pdf_page": 9,
+      "numeric_cells": 14,
+      "independently_recomputed_cells": 0,
+      "nature": "methodology_or_synthesis; all numerical claims mapped; qualitative wording anchored by immutable PDF"
+    },
+    {
+      "number": 3,
+      "title": "Resultados de las carteras en la muestra completa",
+      "pdf_page": 12,
+      "numeric_cells": 10,
+      "independently_recomputed_cells": 10
+    },
+    {
+      "number": 4,
+      "title": "Resultados por subperíodo de las carteras continuas",
+      "pdf_page": 12,
+      "numeric_cells": 16,
+      "independently_recomputed_cells": 16
+    },
+    {
+      "number": 5,
+      "title": "Atribución del resultado neto de las carteras",
+      "pdf_page": 13,
+      "numeric_cells": 10,
+      "independently_recomputed_cells": 10
+    },
+    {
+      "number": 6,
+      "title": "Actividad operativa y utilización del capital",
+      "pdf_page": 13,
+      "numeric_cells": 18,
+      "independently_recomputed_cells": 18
+    },
+    {
+      "number": 7,
+      "title": "H1: error absoluto medio del pronóstico de funding",
+      "pdf_page": 14,
+      "numeric_cells": 12,
+      "independently_recomputed_cells": 12
+    },
+    {
+      "number": 8,
+      "title": "H1: comparadores adicionales del pronóstico de funding",
+      "pdf_page": 14,
+      "numeric_cells": 15,
+      "independently_recomputed_cells": 15
+    },
+    {
+      "number": 9,
+      "title": "H3: oportunidad de carry y resultados por subperíodo",
+      "pdf_page": 16,
+      "numeric_cells": 10,
+      "independently_recomputed_cells": 10
+    },
+    {
+      "number": 10,
+      "title": "H3: indicador de oportunidad por año",
+      "pdf_page": 16,
+      "numeric_cells": 15,
+      "independently_recomputed_cells": 15
+    },
+    {
+      "number": 11,
+      "title": "Diagnóstico simultáneo de los filtros de entrada",
+      "pdf_page": 17,
+      "numeric_cells": 12,
+      "independently_recomputed_cells": 12
+    },
+    {
+      "number": 12,
+      "title": "Basis observado en los momentos de señal",
+      "pdf_page": 18,
+      "numeric_cells": 18,
+      "independently_recomputed_cells": 18
+    },
+    {
+      "number": 13,
+      "title": "Retorno anual y utilización media del patrimonio",
+      "pdf_page": 18,
+      "numeric_cells": 20,
+      "independently_recomputed_cells": 20
+    },
+    {
+      "number": 14,
+      "title": "Sensibilidad al horizonte y a la ponderación del funding",
+      "pdf_page": 20,
+      "numeric_cells": 15,
+      "independently_recomputed_cells": 0
+    },
+    {
+      "number": 15,
+      "title": "Sensibilidad a los costos y a la capacidad de ejecución",
+      "pdf_page": 21,
+      "numeric_cells": 28,
+      "independently_recomputed_cells": 0
+    },
+    {
+      "number": 16,
+      "title": "Sensibilidad al precio de ejecución y a las demoras",
+      "pdf_page": 22,
+      "numeric_cells": 24,
+      "independently_recomputed_cells": 0
+    },
+    {
+      "number": 17,
+      "title": "Drawdown máximo según la frecuencia y la valoración",
+      "pdf_page": 23,
+      "numeric_cells": 6,
+      "independently_recomputed_cells": 0
+    },
+    {
+      "number": 18,
+      "title": "Comparación del carry con una cuenta SOFR hipotética",
+      "pdf_page": 24,
+      "numeric_cells": 9,
+      "independently_recomputed_cells": 9
+    },
+    {
+      "number": 19,
+      "title": "Sensibilidad a la remuneración hipotética de caja",
+      "pdf_page": 25,
+      "numeric_cells": 20,
+      "independently_recomputed_cells": 20
+    },
+    {
+      "number": 20,
+      "title": "Resultados de las cuentas con inicios alternativos",
+      "pdf_page": 25,
+      "numeric_cells": 8,
+      "independently_recomputed_cells": 0
+    },
+    {
+      "number": 21,
+      "title": "Incertidumbre de las hipótesis: bootstrap principal",
+      "pdf_page": 26,
+      "numeric_cells": 15,
+      "independently_recomputed_cells": 0
+    },
+    {
+      "number": 22,
+      "title": "Síntesis de las hipótesis originales",
+      "pdf_page": 28,
+      "numeric_cells": 5,
+      "independently_recomputed_cells": 5,
+      "nature": "methodology_or_synthesis; all numerical claims mapped; qualitative wording anchored by immutable PDF"
+    }
+  ],
+  "cells": [
+    {
+      "table": 1,
+      "row": "Mark price",
+      "column": "observaciones faltantes",
+      "expected_published": "15",
+      "source": "data/evidence/carteras_continuas.zip",
+      "selector": {},
+      "field": "__count__",
+      "multiplier": "1",
+      "decimals": 0,
+      "member": "data/research/continuous-preparation-20260919/unresolved_mark_minutes.csv"
+    },
+    {
+      "table": 1,
+      "row": "nota",
+      "column": "eventos económicos",
+      "expected_published": "10224",
+      "source": "data/evidence/carteras_continuas.zip",
+      "selector": {
+        "economic_window": "True"
+      },
+      "field": "__count__",
+      "multiplier": "1",
+      "decimals": 0,
+      "member": "evidencia/funding_mercado_y_marks.csv",
+      "source_row_count": 10224
+    },
+    {
+      "table": 1,
+      "row": "nota",
+      "column": "precio oficial",
+      "expected_published": "6214",
+      "source": "data/evidence/carteras_continuas.zip",
+      "selector": {
+        "economic_window": "True",
+        "settlement_mark_method": "exact"
+      },
+      "field": "__count__",
+      "multiplier": "1",
+      "decimals": 0,
+      "member": "evidencia/funding_mercado_y_marks.csv",
+      "source_row_count": 6214
+    },
+    {
+      "table": 1,
+      "row": "nota",
+      "column": "cierre previo",
+      "expected_published": "4010",
+      "source": "data/evidence/carteras_continuas.zip",
+      "selector": {
+        "economic_window": "True",
+        "settlement_mark_method": "previous_closed_1m"
+      },
+      "field": "__count__",
+      "multiplier": "1",
+      "decimals": 0,
+      "member": "evidencia/funding_mercado_y_marks.csv",
+      "source_row_count": 4010
+    },
+    {
+      "table": 2,
+      "row": "horizonte",
+      "column": "parámetro",
+      "expected_published": "168",
+      "source": "configs/reglas_historicas/BASE_E3.toml",
+      "selector": {},
+      "field": "horizon_hours",
+      "multiplier": "1",
+      "decimals": 0,
+      "source_format": "toml"
+    },
+    {
+      "table": 2,
+      "row": "basis mínimo",
+      "column": "parámetro",
+      "expected_published": "0",
+      "source": "configs/reglas_historicas/BASE_E3.toml",
+      "selector": {},
+      "field": "basis_min",
+      "multiplier": "100",
+      "decimals": 0,
+      "source_format": "toml"
+    },
+    {
+      "table": 2,
+      "row": "basis máximo",
+      "column": "parámetro",
+      "expected_published": "0.50",
+      "source": "configs/reglas_historicas/BASE_E3.toml",
+      "selector": {},
+      "field": "basis_max",
+      "multiplier": "100",
+      "decimals": 2,
+      "source_format": "toml"
+    },
+    {
+      "table": 2,
+      "row": "tenencia",
+      "column": "parámetro",
+      "expected_published": "168",
+      "source": "configs/reglas_historicas/BASE_E3.toml",
+      "selector": {},
+      "field": "holding_hours",
+      "multiplier": "1",
+      "decimals": 0,
+      "source_format": "toml"
+    },
+    {
+      "table": 2,
+      "row": "objetivo spot",
+      "column": "parámetro",
+      "expected_published": "30",
+      "source": "configs/reglas_historicas/BASE_E3.toml",
+      "selector": {},
+      "field": "target_fraction",
+      "multiplier": "100",
+      "decimals": 0,
+      "source_format": "toml"
+    },
+    {
+      "table": 2,
+      "row": "apalancamiento",
+      "column": "parámetro",
+      "expected_published": "2",
+      "source": "configs/reglas_historicas/BASE_E3.toml",
+      "selector": {},
+      "field": "leverage",
+      "multiplier": "1",
+      "decimals": 0,
+      "source_format": "toml"
+    },
+    {
+      "table": 2,
+      "row": "rebalanceo",
+      "column": "parámetro",
+      "expected_published": "5",
+      "source": "configs/reglas_historicas/BASE_E3.toml",
+      "selector": {},
+      "field": "rebalance_threshold",
+      "multiplier": "100",
+      "decimals": 0,
+      "source_format": "toml"
+    },
+    {
+      "table": 2,
+      "row": "mantenimiento/saldo",
+      "column": "parámetro",
+      "expected_published": "50",
+      "source": "configs/reglas_historicas/BASE_E3.toml",
+      "selector": {},
+      "field": "margin_exit_ratio",
+      "multiplier": "100",
+      "decimals": 0,
+      "source_format": "toml"
+    },
+    {
+      "table": 2,
+      "row": "distancia liquidación",
+      "column": "parámetro",
+      "expected_published": "15",
+      "source": "configs/reglas_historicas/BASE_E3.toml",
+      "selector": {},
+      "field": "liquidation_distance",
+      "multiplier": "100",
+      "decimals": 0,
+      "source_format": "toml"
+    },
+    {
+      "table": 2,
+      "row": "ampliación basis",
+      "column": "parámetro",
+      "expected_published": "2",
+      "source": "configs/reglas_historicas/BASE_E3.toml",
+      "selector": {},
+      "field": "basis_exit",
+      "multiplier": "100",
+      "decimals": 0,
+      "source_format": "toml"
+    },
+    {
+      "table": 2,
+      "row": "descalce disparador",
+      "column": "parámetro",
+      "expected_published": "2",
+      "source": "configs/reglas_historicas/BASE_E3.toml",
+      "selector": {},
+      "field": "hedge_trigger",
+      "multiplier": "100",
+      "decimals": 0,
+      "source_format": "toml"
+    },
+    {
+      "table": 2,
+      "row": "descalce tolerancia",
+      "column": "parámetro",
+      "expected_published": "0.5",
+      "source": "configs/reglas_historicas/BASE_E3.toml",
+      "selector": {},
+      "field": "hedge_tolerance",
+      "multiplier": "100",
+      "decimals": 1,
+      "source_format": "toml"
+    },
+    {
+      "table": 2,
+      "row": "inactividad minutos",
+      "column": "parámetro",
+      "expected_published": "30",
+      "source": "configs/reglas_historicas/BASE_E3.toml",
+      "selector": {},
+      "field": "inactivity_seconds",
+      "multiplier": "0.016666666666666666666666666666666666666666666666667",
+      "decimals": 0,
+      "source_format": "toml"
+    },
+    {
+      "table": 2,
+      "row": "Funding de entrada",
+      "column": "umbral pb",
+      "expected_published": "34",
+      "source": "data/evidence/carteras_continuas.zip",
+      "selector": {
+        "strategy": "conditional"
+      },
+      "field": "estimated_cycle_cost",
+      "multiplier": "10000",
+      "decimals": 0,
+      "member": "evidencia/signals.csv",
+      "aggregation": "unique",
+      "source_row_count": 10224
+    },
+    {
+      "table": 3,
+      "row": "conditional",
+      "column": "final_equity_usdt",
+      "expected_published": "10785.76",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "full",
+        "strategy": "conditional"
+      },
+      "field": "final_equity_usdt",
+      "multiplier": "1",
+      "decimals": 2,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "full",
+        "strategy": "conditional",
+        "field": "final_equity_usdt"
+      }
+    },
+    {
+      "table": 3,
+      "row": "conditional",
+      "column": "net_return",
+      "expected_published": "7.8576",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "full",
+        "strategy": "conditional"
+      },
+      "field": "net_return",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "full",
+        "strategy": "conditional",
+        "field": "net_return"
+      }
+    },
+    {
+      "table": 3,
+      "row": "conditional",
+      "column": "cagr",
+      "expected_published": "1.6335",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "full",
+        "strategy": "conditional"
+      },
+      "field": "cagr",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "full",
+        "strategy": "conditional",
+        "field": "cagr"
+      }
+    },
+    {
+      "table": 3,
+      "row": "conditional",
+      "column": "sharpe",
+      "expected_published": "4.9624",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "full",
+        "strategy": "conditional"
+      },
+      "field": "sharpe",
+      "multiplier": "1",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "full",
+        "strategy": "conditional",
+        "field": "sharpe"
+      }
+    },
+    {
+      "table": 3,
+      "row": "conditional",
+      "column": "max_drawdown",
+      "expected_published": "-0.2062",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "full",
+        "strategy": "conditional"
+      },
+      "field": "max_drawdown",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "full",
+        "strategy": "conditional",
+        "field": "max_drawdown"
+      }
+    },
+    {
+      "table": 3,
+      "row": "permanent",
+      "column": "final_equity_usdt",
+      "expected_published": "11680.07",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "full",
+        "strategy": "permanent"
+      },
+      "field": "final_equity_usdt",
+      "multiplier": "1",
+      "decimals": 2,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "full",
+        "strategy": "permanent",
+        "field": "final_equity_usdt"
+      }
+    },
+    {
+      "table": 3,
+      "row": "permanent",
+      "column": "net_return",
+      "expected_published": "16.8007",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "full",
+        "strategy": "permanent"
+      },
+      "field": "net_return",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "full",
+        "strategy": "permanent",
+        "field": "net_return"
+      }
+    },
+    {
+      "table": 3,
+      "row": "permanent",
+      "column": "cagr",
+      "expected_published": "3.3825",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "full",
+        "strategy": "permanent"
+      },
+      "field": "cagr",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "full",
+        "strategy": "permanent",
+        "field": "cagr"
+      }
+    },
+    {
+      "table": 3,
+      "row": "permanent",
+      "column": "sharpe",
+      "expected_published": "6.5336",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "full",
+        "strategy": "permanent"
+      },
+      "field": "sharpe",
+      "multiplier": "1",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "full",
+        "strategy": "permanent",
+        "field": "sharpe"
+      }
+    },
+    {
+      "table": 3,
+      "row": "permanent",
+      "column": "max_drawdown",
+      "expected_published": "-0.4827",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "full",
+        "strategy": "permanent"
+      },
+      "field": "max_drawdown",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "full",
+        "strategy": "permanent",
+        "field": "max_drawdown"
+      }
+    },
+    {
+      "table": 4,
+      "row": "2022-2023/conditional",
+      "column": "net_return",
+      "expected_published": "2.1744",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "2022-2023",
+        "strategy": "conditional"
+      },
+      "field": "net_return",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "2022-2023",
+        "strategy": "conditional",
+        "field": "net_return"
+      }
+    },
+    {
+      "table": 4,
+      "row": "2022-2023/conditional",
+      "column": "cagr",
+      "expected_published": "1.0814",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "2022-2023",
+        "strategy": "conditional"
+      },
+      "field": "cagr",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "2022-2023",
+        "strategy": "conditional",
+        "field": "cagr"
+      }
+    },
+    {
+      "table": 4,
+      "row": "2022-2023/conditional",
+      "column": "sharpe",
+      "expected_published": "3.3374",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "2022-2023",
+        "strategy": "conditional"
+      },
+      "field": "sharpe",
+      "multiplier": "1",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "2022-2023",
+        "strategy": "conditional",
+        "field": "sharpe"
+      }
+    },
+    {
+      "table": 4,
+      "row": "2022-2023/conditional",
+      "column": "max_drawdown",
+      "expected_published": "-0.1224",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "2022-2023",
+        "strategy": "conditional"
+      },
+      "field": "max_drawdown",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "2022-2023",
+        "strategy": "conditional",
+        "field": "max_drawdown"
+      }
+    },
+    {
+      "table": 4,
+      "row": "2022-2023/permanent",
+      "column": "net_return",
+      "expected_published": "6.1666",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "2022-2023",
+        "strategy": "permanent"
+      },
+      "field": "net_return",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "2022-2023",
+        "strategy": "permanent",
+        "field": "net_return"
+      }
+    },
+    {
+      "table": 4,
+      "row": "2022-2023/permanent",
+      "column": "cagr",
+      "expected_published": "3.0372",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "2022-2023",
+        "strategy": "permanent"
+      },
+      "field": "cagr",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "2022-2023",
+        "strategy": "permanent",
+        "field": "cagr"
+      }
+    },
+    {
+      "table": 4,
+      "row": "2022-2023/permanent",
+      "column": "sharpe",
+      "expected_published": "4.6165",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "2022-2023",
+        "strategy": "permanent"
+      },
+      "field": "sharpe",
+      "multiplier": "1",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "2022-2023",
+        "strategy": "permanent",
+        "field": "sharpe"
+      }
+    },
+    {
+      "table": 4,
+      "row": "2022-2023/permanent",
+      "column": "max_drawdown",
+      "expected_published": "-0.4827",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "2022-2023",
+        "strategy": "permanent"
+      },
+      "field": "max_drawdown",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "2022-2023",
+        "strategy": "permanent",
+        "field": "max_drawdown"
+      }
+    },
+    {
+      "table": 4,
+      "row": "2024-2026-08/conditional",
+      "column": "net_return",
+      "expected_published": "5.5623",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "2024-2026-08",
+        "strategy": "conditional"
+      },
+      "field": "net_return",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "2024-2026-08",
+        "strategy": "conditional",
+        "field": "net_return"
+      }
+    },
+    {
+      "table": 4,
+      "row": "2024-2026-08/conditional",
+      "column": "cagr",
+      "expected_published": "2.0492",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "2024-2026-08",
+        "strategy": "conditional"
+      },
+      "field": "cagr",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "2024-2026-08",
+        "strategy": "conditional",
+        "field": "cagr"
+      }
+    },
+    {
+      "table": 4,
+      "row": "2024-2026-08/conditional",
+      "column": "sharpe",
+      "expected_published": "6.1811",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "2024-2026-08",
+        "strategy": "conditional"
+      },
+      "field": "sharpe",
+      "multiplier": "1",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "2024-2026-08",
+        "strategy": "conditional",
+        "field": "sharpe"
+      }
+    },
+    {
+      "table": 4,
+      "row": "2024-2026-08/conditional",
+      "column": "max_drawdown",
+      "expected_published": "-0.2062",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "2024-2026-08",
+        "strategy": "conditional"
+      },
+      "field": "max_drawdown",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "2024-2026-08",
+        "strategy": "conditional",
+        "field": "max_drawdown"
+      }
+    },
+    {
+      "table": 4,
+      "row": "2024-2026-08/permanent",
+      "column": "net_return",
+      "expected_published": "10.0165",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "2024-2026-08",
+        "strategy": "permanent"
+      },
+      "field": "net_return",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "2024-2026-08",
+        "strategy": "permanent",
+        "field": "net_return"
+      }
+    },
+    {
+      "table": 4,
+      "row": "2024-2026-08/permanent",
+      "column": "cagr",
+      "expected_published": "3.6420",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "2024-2026-08",
+        "strategy": "permanent"
+      },
+      "field": "cagr",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "2024-2026-08",
+        "strategy": "permanent",
+        "field": "cagr"
+      }
+    },
+    {
+      "table": 4,
+      "row": "2024-2026-08/permanent",
+      "column": "sharpe",
+      "expected_published": "9.6135",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "2024-2026-08",
+        "strategy": "permanent"
+      },
+      "field": "sharpe",
+      "multiplier": "1",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "2024-2026-08",
+        "strategy": "permanent",
+        "field": "sharpe"
+      }
+    },
+    {
+      "table": 4,
+      "row": "2024-2026-08/permanent",
+      "column": "max_drawdown",
+      "expected_published": "-0.3232",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "2024-2026-08",
+        "strategy": "permanent"
+      },
+      "field": "max_drawdown",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "2024-2026-08",
+        "strategy": "permanent",
+        "field": "max_drawdown"
+      }
+    },
+    {
+      "table": 5,
+      "row": "spot_pnl_usdt",
+      "column": "conditional",
+      "expected_published": "2211.19",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "full",
+        "strategy": "conditional"
+      },
+      "field": "spot_pnl_usdt",
+      "multiplier": "1",
+      "decimals": 2,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "full",
+        "strategy": "conditional",
+        "field": "spot_pnl_usdt"
+      }
+    },
+    {
+      "table": 5,
+      "row": "spot_pnl_usdt",
+      "column": "permanent",
+      "expected_published": "2428.91",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "full",
+        "strategy": "permanent"
+      },
+      "field": "spot_pnl_usdt",
+      "multiplier": "1",
+      "decimals": 2,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "full",
+        "strategy": "permanent",
+        "field": "spot_pnl_usdt"
+      }
+    },
+    {
+      "table": 5,
+      "row": "futures_pnl_usdt",
+      "column": "conditional",
+      "expected_published": "-2161.49",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "full",
+        "strategy": "conditional"
+      },
+      "field": "futures_pnl_usdt",
+      "multiplier": "1",
+      "decimals": 2,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "full",
+        "strategy": "conditional",
+        "field": "futures_pnl_usdt"
+      }
+    },
+    {
+      "table": 5,
+      "row": "futures_pnl_usdt",
+      "column": "permanent",
+      "expected_published": "-2316.05",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "full",
+        "strategy": "permanent"
+      },
+      "field": "futures_pnl_usdt",
+      "multiplier": "1",
+      "decimals": 2,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "full",
+        "strategy": "permanent",
+        "field": "futures_pnl_usdt"
+      }
+    },
+    {
+      "table": 5,
+      "row": "funding_usdt",
+      "column": "conditional",
+      "expected_published": "850.96",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "full",
+        "strategy": "conditional"
+      },
+      "field": "funding_usdt",
+      "multiplier": "1",
+      "decimals": 2,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "full",
+        "strategy": "conditional",
+        "field": "funding_usdt"
+      }
+    },
+    {
+      "table": 5,
+      "row": "funding_usdt",
+      "column": "permanent",
+      "expected_published": "1796.42",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "full",
+        "strategy": "permanent"
+      },
+      "field": "funding_usdt",
+      "multiplier": "1",
+      "decimals": 2,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "full",
+        "strategy": "permanent",
+        "field": "funding_usdt"
+      }
+    },
+    {
+      "table": 5,
+      "row": "fees_usdt",
+      "column": "conditional",
+      "expected_published": "-114.90",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "full",
+        "strategy": "conditional"
+      },
+      "field": "fees_usdt",
+      "multiplier": "1",
+      "decimals": 2,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "full",
+        "strategy": "conditional",
+        "field": "fees_usdt"
+      }
+    },
+    {
+      "table": 5,
+      "row": "fees_usdt",
+      "column": "permanent",
+      "expected_published": "-229.21",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "full",
+        "strategy": "permanent"
+      },
+      "field": "fees_usdt",
+      "multiplier": "1",
+      "decimals": 2,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "full",
+        "strategy": "permanent",
+        "field": "fees_usdt"
+      }
+    },
+    {
+      "table": 5,
+      "row": "net_pnl_usdt",
+      "column": "conditional",
+      "expected_published": "785.76",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "full",
+        "strategy": "conditional"
+      },
+      "field": "net_pnl_usdt",
+      "multiplier": "1",
+      "decimals": 2,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "full",
+        "strategy": "conditional",
+        "field": "net_pnl_usdt"
+      }
+    },
+    {
+      "table": 5,
+      "row": "net_pnl_usdt",
+      "column": "permanent",
+      "expected_published": "1680.07",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "full",
+        "strategy": "permanent"
+      },
+      "field": "net_pnl_usdt",
+      "multiplier": "1",
+      "decimals": 2,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "full",
+        "strategy": "permanent",
+        "field": "net_pnl_usdt"
+      }
+    },
+    {
+      "table": 6,
+      "row": "opening_attempts",
+      "column": "conditional",
+      "expected_published": "10",
+      "source": "results/base/continuo/tablas/actividad.csv",
+      "selector": {
+        "period": "full",
+        "symbol": "PORTFOLIO",
+        "strategy": "conditional"
+      },
+      "field": "opening_attempts",
+      "multiplier": "1",
+      "decimals": 0,
+      "recompute": {
+        "kind": "activity",
+        "strategy": "conditional",
+        "field": "opening_attempts"
+      }
+    },
+    {
+      "table": 6,
+      "row": "completed_openings",
+      "column": "conditional",
+      "expected_published": "9",
+      "source": "results/base/continuo/tablas/actividad.csv",
+      "selector": {
+        "period": "full",
+        "symbol": "PORTFOLIO",
+        "strategy": "conditional"
+      },
+      "field": "completed_openings",
+      "multiplier": "1",
+      "decimals": 0,
+      "recompute": {
+        "kind": "activity",
+        "strategy": "conditional",
+        "field": "completed_openings"
+      }
+    },
+    {
+      "table": 6,
+      "row": "completed_cycles",
+      "column": "conditional",
+      "expected_published": "9",
+      "source": "results/base/continuo/tablas/actividad.csv",
+      "selector": {
+        "period": "full",
+        "symbol": "PORTFOLIO",
+        "strategy": "conditional"
+      },
+      "field": "completed_cycles",
+      "multiplier": "1",
+      "decimals": 0,
+      "recompute": {
+        "kind": "activity",
+        "strategy": "conditional",
+        "field": "completed_cycles"
+      }
+    },
+    {
+      "table": 6,
+      "row": "failed_cycles",
+      "column": "conditional",
+      "expected_published": "1",
+      "source": "results/base/continuo/tablas/actividad.csv",
+      "selector": {
+        "period": "full",
+        "symbol": "PORTFOLIO",
+        "strategy": "conditional"
+      },
+      "field": "failed_cycles",
+      "multiplier": "1",
+      "decimals": 0,
+      "recompute": {
+        "kind": "activity",
+        "strategy": "conditional",
+        "field": "failed_cycles"
+      }
+    },
+    {
+      "table": 6,
+      "row": "fills",
+      "column": "conditional",
+      "expected_published": "138",
+      "source": "results/base/continuo/tablas/actividad.csv",
+      "selector": {
+        "period": "full",
+        "symbol": "PORTFOLIO",
+        "strategy": "conditional"
+      },
+      "field": "fills",
+      "multiplier": "1",
+      "decimals": 0,
+      "recompute": {
+        "kind": "activity",
+        "strategy": "conditional",
+        "field": "fills"
+      }
+    },
+    {
+      "table": 6,
+      "row": "partial_fills",
+      "column": "conditional",
+      "expected_published": "3",
+      "source": "results/base/continuo/tablas/actividad.csv",
+      "selector": {
+        "period": "full",
+        "symbol": "PORTFOLIO",
+        "strategy": "conditional"
+      },
+      "field": "partial_fills",
+      "multiplier": "1",
+      "decimals": 0,
+      "recompute": {
+        "kind": "activity",
+        "strategy": "conditional",
+        "field": "partial_fills"
+      }
+    },
+    {
+      "table": 6,
+      "row": "opening_attempts",
+      "column": "permanent",
+      "expected_published": "20",
+      "source": "results/base/continuo/tablas/actividad.csv",
+      "selector": {
+        "period": "full",
+        "symbol": "PORTFOLIO",
+        "strategy": "permanent"
+      },
+      "field": "opening_attempts",
+      "multiplier": "1",
+      "decimals": 0,
+      "recompute": {
+        "kind": "activity",
+        "strategy": "permanent",
+        "field": "opening_attempts"
+      }
+    },
+    {
+      "table": 6,
+      "row": "completed_openings",
+      "column": "permanent",
+      "expected_published": "17",
+      "source": "results/base/continuo/tablas/actividad.csv",
+      "selector": {
+        "period": "full",
+        "symbol": "PORTFOLIO",
+        "strategy": "permanent"
+      },
+      "field": "completed_openings",
+      "multiplier": "1",
+      "decimals": 0,
+      "recompute": {
+        "kind": "activity",
+        "strategy": "permanent",
+        "field": "completed_openings"
+      }
+    },
+    {
+      "table": 6,
+      "row": "completed_cycles",
+      "column": "permanent",
+      "expected_published": "15",
+      "source": "results/base/continuo/tablas/actividad.csv",
+      "selector": {
+        "period": "full",
+        "symbol": "PORTFOLIO",
+        "strategy": "permanent"
+      },
+      "field": "completed_cycles",
+      "multiplier": "1",
+      "decimals": 0,
+      "recompute": {
+        "kind": "activity",
+        "strategy": "permanent",
+        "field": "completed_cycles"
+      }
+    },
+    {
+      "table": 6,
+      "row": "failed_cycles",
+      "column": "permanent",
+      "expected_published": "3",
+      "source": "results/base/continuo/tablas/actividad.csv",
+      "selector": {
+        "period": "full",
+        "symbol": "PORTFOLIO",
+        "strategy": "permanent"
+      },
+      "field": "failed_cycles",
+      "multiplier": "1",
+      "decimals": 0,
+      "recompute": {
+        "kind": "activity",
+        "strategy": "permanent",
+        "field": "failed_cycles"
+      }
+    },
+    {
+      "table": 6,
+      "row": "fills",
+      "column": "permanent",
+      "expected_published": "332",
+      "source": "results/base/continuo/tablas/actividad.csv",
+      "selector": {
+        "period": "full",
+        "symbol": "PORTFOLIO",
+        "strategy": "permanent"
+      },
+      "field": "fills",
+      "multiplier": "1",
+      "decimals": 0,
+      "recompute": {
+        "kind": "activity",
+        "strategy": "permanent",
+        "field": "fills"
+      }
+    },
+    {
+      "table": 6,
+      "row": "partial_fills",
+      "column": "permanent",
+      "expected_published": "4",
+      "source": "results/base/continuo/tablas/actividad.csv",
+      "selector": {
+        "period": "full",
+        "symbol": "PORTFOLIO",
+        "strategy": "permanent"
+      },
+      "field": "partial_fills",
+      "multiplier": "1",
+      "decimals": 0,
+      "recompute": {
+        "kind": "activity",
+        "strategy": "permanent",
+        "field": "partial_fills"
+      }
+    },
+    {
+      "table": 6,
+      "row": "tiempo invertido",
+      "column": "conditional",
+      "expected_published": "28.3178",
+      "source": "results/base/continuo/tablas/tiempo_invertido.csv",
+      "selector": {
+        "period": "full",
+        "symbol": "PORTFOLIO",
+        "strategy": "conditional"
+      },
+      "field": "invested_seconds",
+      "multiplier": "100",
+      "decimals": 4,
+      "divide_by": "calendar_seconds",
+      "recompute": {
+        "kind": "exposure",
+        "strategy": "conditional",
+        "field": "invested_fraction"
+      }
+    },
+    {
+      "table": 6,
+      "row": "capital_deployed_daily_mean_usdt",
+      "column": "conditional",
+      "expected_published": "2074.62",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "full",
+        "strategy": "conditional"
+      },
+      "field": "capital_deployed_daily_mean_usdt",
+      "multiplier": "1",
+      "decimals": 2,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "full",
+        "strategy": "conditional",
+        "field": "capital_deployed_daily_mean_usdt"
+      }
+    },
+    {
+      "table": 6,
+      "row": "capital_utilization_daily_mean",
+      "column": "conditional",
+      "expected_published": "19.8068",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "full",
+        "strategy": "conditional"
+      },
+      "field": "capital_utilization_daily_mean",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "full",
+        "strategy": "conditional",
+        "field": "capital_utilization_daily_mean"
+      }
+    },
+    {
+      "table": 6,
+      "row": "tiempo invertido",
+      "column": "permanent",
+      "expected_published": "98.2083",
+      "source": "results/base/continuo/tablas/tiempo_invertido.csv",
+      "selector": {
+        "period": "full",
+        "symbol": "PORTFOLIO",
+        "strategy": "permanent"
+      },
+      "field": "invested_seconds",
+      "multiplier": "100",
+      "decimals": 4,
+      "divide_by": "calendar_seconds",
+      "recompute": {
+        "kind": "exposure",
+        "strategy": "permanent",
+        "field": "invested_fraction"
+      }
+    },
+    {
+      "table": 6,
+      "row": "capital_deployed_daily_mean_usdt",
+      "column": "permanent",
+      "expected_published": "8972.08",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "full",
+        "strategy": "permanent"
+      },
+      "field": "capital_deployed_daily_mean_usdt",
+      "multiplier": "1",
+      "decimals": 2,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "full",
+        "strategy": "permanent",
+        "field": "capital_deployed_daily_mean_usdt"
+      }
+    },
+    {
+      "table": 6,
+      "row": "capital_utilization_daily_mean",
+      "column": "permanent",
+      "expected_published": "82.6309",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "full",
+        "strategy": "permanent"
+      },
+      "field": "capital_utilization_daily_mean",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "full",
+        "strategy": "permanent",
+        "field": "capital_utilization_daily_mean"
+      }
+    },
+    {
+      "table": 7,
+      "row": "full",
+      "column": "mae_ewma",
+      "expected_published": "6.2990",
+      "source": "results/base/continuo/tablas/h1_resumen.csv",
+      "selector": {
+        "period": "full",
+        "symbol": "EQUAL_WEIGHT"
+      },
+      "field": "mae_ewma",
+      "multiplier": "10000",
+      "decimals": 4,
+      "recompute": {
+        "kind": "h1",
+        "period": "full",
+        "field": "mae_ewma"
+      }
+    },
+    {
+      "table": 7,
+      "row": "full",
+      "column": "mae_no_change",
+      "expected_published": "8.7033",
+      "source": "results/base/continuo/tablas/h1_resumen.csv",
+      "selector": {
+        "period": "full",
+        "symbol": "EQUAL_WEIGHT"
+      },
+      "field": "mae_no_change",
+      "multiplier": "10000",
+      "decimals": 4,
+      "recompute": {
+        "kind": "h1",
+        "period": "full",
+        "field": "mae_no_change"
+      }
+    },
+    {
+      "table": 7,
+      "row": "full",
+      "column": "valid_observations",
+      "expected_published": "10180",
+      "source": "results/base/continuo/tablas/h1_resumen.csv",
+      "selector": {
+        "period": "full",
+        "symbol": "EQUAL_WEIGHT"
+      },
+      "field": "valid_observations",
+      "multiplier": "1",
+      "decimals": 0,
+      "recompute": {
+        "kind": "h1",
+        "period": "full",
+        "field": "valid_observations"
+      }
+    },
+    {
+      "table": 7,
+      "row": "full",
+      "column": "excluded_observations",
+      "expected_published": "44",
+      "source": "results/base/continuo/tablas/h1_resumen.csv",
+      "selector": {
+        "period": "full",
+        "symbol": "EQUAL_WEIGHT"
+      },
+      "field": "excluded_observations",
+      "multiplier": "1",
+      "decimals": 0,
+      "recompute": {
+        "kind": "h1",
+        "period": "full",
+        "field": "excluded_observations"
+      }
+    },
+    {
+      "table": 7,
+      "row": "2022-2023",
+      "column": "mae_ewma",
+      "expected_published": "7.3842",
+      "source": "results/base/continuo/tablas/h1_resumen.csv",
+      "selector": {
+        "period": "2022-2023",
+        "symbol": "EQUAL_WEIGHT"
+      },
+      "field": "mae_ewma",
+      "multiplier": "10000",
+      "decimals": 4,
+      "recompute": {
+        "kind": "h1",
+        "period": "2022-2023",
+        "field": "mae_ewma"
+      }
+    },
+    {
+      "table": 7,
+      "row": "2022-2023",
+      "column": "mae_no_change",
+      "expected_published": "10.2765",
+      "source": "results/base/continuo/tablas/h1_resumen.csv",
+      "selector": {
+        "period": "2022-2023",
+        "symbol": "EQUAL_WEIGHT"
+      },
+      "field": "mae_no_change",
+      "multiplier": "10000",
+      "decimals": 4,
+      "recompute": {
+        "kind": "h1",
+        "period": "2022-2023",
+        "field": "mae_no_change"
+      }
+    },
+    {
+      "table": 7,
+      "row": "2022-2023",
+      "column": "valid_observations",
+      "expected_published": "4380",
+      "source": "results/base/continuo/tablas/h1_resumen.csv",
+      "selector": {
+        "period": "2022-2023",
+        "symbol": "EQUAL_WEIGHT"
+      },
+      "field": "valid_observations",
+      "multiplier": "1",
+      "decimals": 0,
+      "recompute": {
+        "kind": "h1",
+        "period": "2022-2023",
+        "field": "valid_observations"
+      }
+    },
+    {
+      "table": 7,
+      "row": "2022-2023",
+      "column": "excluded_observations",
+      "expected_published": "0",
+      "source": "results/base/continuo/tablas/h1_resumen.csv",
+      "selector": {
+        "period": "2022-2023",
+        "symbol": "EQUAL_WEIGHT"
+      },
+      "field": "excluded_observations",
+      "multiplier": "1",
+      "decimals": 0,
+      "recompute": {
+        "kind": "h1",
+        "period": "2022-2023",
+        "field": "excluded_observations"
+      }
+    },
+    {
+      "table": 7,
+      "row": "2024-2026-08",
+      "column": "mae_ewma",
+      "expected_published": "5.4794",
+      "source": "results/base/continuo/tablas/h1_resumen.csv",
+      "selector": {
+        "period": "2024-2026-08",
+        "symbol": "EQUAL_WEIGHT"
+      },
+      "field": "mae_ewma",
+      "multiplier": "10000",
+      "decimals": 4,
+      "recompute": {
+        "kind": "h1",
+        "period": "2024-2026-08",
+        "field": "mae_ewma"
+      }
+    },
+    {
+      "table": 7,
+      "row": "2024-2026-08",
+      "column": "mae_no_change",
+      "expected_published": "7.5153",
+      "source": "results/base/continuo/tablas/h1_resumen.csv",
+      "selector": {
+        "period": "2024-2026-08",
+        "symbol": "EQUAL_WEIGHT"
+      },
+      "field": "mae_no_change",
+      "multiplier": "10000",
+      "decimals": 4,
+      "recompute": {
+        "kind": "h1",
+        "period": "2024-2026-08",
+        "field": "mae_no_change"
+      }
+    },
+    {
+      "table": 7,
+      "row": "2024-2026-08",
+      "column": "valid_observations",
+      "expected_published": "5800",
+      "source": "results/base/continuo/tablas/h1_resumen.csv",
+      "selector": {
+        "period": "2024-2026-08",
+        "symbol": "EQUAL_WEIGHT"
+      },
+      "field": "valid_observations",
+      "multiplier": "1",
+      "decimals": 0,
+      "recompute": {
+        "kind": "h1",
+        "period": "2024-2026-08",
+        "field": "valid_observations"
+      }
+    },
+    {
+      "table": 7,
+      "row": "2024-2026-08",
+      "column": "excluded_observations",
+      "expected_published": "44",
+      "source": "results/base/continuo/tablas/h1_resumen.csv",
+      "selector": {
+        "period": "2024-2026-08",
+        "symbol": "EQUAL_WEIGHT"
+      },
+      "field": "excluded_observations",
+      "multiplier": "1",
+      "decimals": 0,
+      "recompute": {
+        "kind": "h1",
+        "period": "2024-2026-08",
+        "field": "excluded_observations"
+      }
+    },
+    {
+      "table": 8,
+      "row": "EWMA",
+      "column": "Muestra completa",
+      "field": "mae_ewma_bps",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "quant_h1/outputs/h1_mae_summary.csv",
+      "selector": {
+        "period": "full",
+        "symbol": "EQUAL_WEIGHT"
+      },
+      "expected_published": "6.2990",
+      "published_display": "6,2990",
+      "role": "result",
+      "recompute": {
+        "kind": "supplemental_h1",
+        "period": "full",
+        "field": "mae_ewma_bps"
+      }
+    },
+    {
+      "table": 8,
+      "row": "EWMA",
+      "column": "2022–2023",
+      "field": "mae_ewma_bps",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "quant_h1/outputs/h1_mae_summary.csv",
+      "selector": {
+        "period": "2022-2023",
+        "symbol": "EQUAL_WEIGHT"
+      },
+      "expected_published": "7.3842",
+      "published_display": "7,3842",
+      "role": "result",
+      "recompute": {
+        "kind": "supplemental_h1",
+        "period": "2022-2023",
+        "field": "mae_ewma_bps"
+      }
+    },
+    {
+      "table": 8,
+      "row": "EWMA",
+      "column": "2024–ago. 2026",
+      "field": "mae_ewma_bps",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "quant_h1/outputs/h1_mae_summary.csv",
+      "selector": {
+        "period": "2024-2026-08",
+        "symbol": "EQUAL_WEIGHT"
+      },
+      "expected_published": "5.4794",
+      "published_display": "5,4794",
+      "role": "result",
+      "recompute": {
+        "kind": "supplemental_h1",
+        "period": "2024-2026-08",
+        "field": "mae_ewma_bps"
+      }
+    },
+    {
+      "table": 8,
+      "row": "Última tasa (sin cambio)",
+      "column": "Muestra completa",
+      "field": "mae_no_change_bps",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "quant_h1/outputs/h1_mae_summary.csv",
+      "selector": {
+        "period": "full",
+        "symbol": "EQUAL_WEIGHT"
+      },
+      "expected_published": "8.7033",
+      "published_display": "8,7033",
+      "role": "result",
+      "recompute": {
+        "kind": "supplemental_h1",
+        "period": "full",
+        "field": "mae_no_change_bps"
+      }
+    },
+    {
+      "table": 8,
+      "row": "Última tasa (sin cambio)",
+      "column": "2022–2023",
+      "field": "mae_no_change_bps",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "quant_h1/outputs/h1_mae_summary.csv",
+      "selector": {
+        "period": "2022-2023",
+        "symbol": "EQUAL_WEIGHT"
+      },
+      "expected_published": "10.2765",
+      "published_display": "10,2765",
+      "role": "result",
+      "recompute": {
+        "kind": "supplemental_h1",
+        "period": "2022-2023",
+        "field": "mae_no_change_bps"
+      }
+    },
+    {
+      "table": 8,
+      "row": "Última tasa (sin cambio)",
+      "column": "2024–ago. 2026",
+      "field": "mae_no_change_bps",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "quant_h1/outputs/h1_mae_summary.csv",
+      "selector": {
+        "period": "2024-2026-08",
+        "symbol": "EQUAL_WEIGHT"
+      },
+      "expected_published": "7.5153",
+      "published_display": "7,5153",
+      "role": "result",
+      "recompute": {
+        "kind": "supplemental_h1",
+        "period": "2024-2026-08",
+        "field": "mae_no_change_bps"
+      }
+    },
+    {
+      "table": 8,
+      "row": "Media simple de 7 días",
+      "column": "Muestra completa",
+      "field": "mae_rolling_7d_bps",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "quant_h1/outputs/h1_mae_summary.csv",
+      "selector": {
+        "period": "full",
+        "symbol": "EQUAL_WEIGHT"
+      },
+      "expected_published": "6.5764",
+      "published_display": "6,5764",
+      "role": "result",
+      "recompute": {
+        "kind": "supplemental_h1",
+        "period": "full",
+        "field": "mae_rolling_7d_bps"
+      }
+    },
+    {
+      "table": 8,
+      "row": "Media simple de 7 días",
+      "column": "2022–2023",
+      "field": "mae_rolling_7d_bps",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "quant_h1/outputs/h1_mae_summary.csv",
+      "selector": {
+        "period": "2022-2023",
+        "symbol": "EQUAL_WEIGHT"
+      },
+      "expected_published": "7.3668",
+      "published_display": "7,3668",
+      "role": "result",
+      "recompute": {
+        "kind": "supplemental_h1",
+        "period": "2022-2023",
+        "field": "mae_rolling_7d_bps"
+      }
+    },
+    {
+      "table": 8,
+      "row": "Media simple de 7 días",
+      "column": "2024–ago. 2026",
+      "field": "mae_rolling_7d_bps",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "quant_h1/outputs/h1_mae_summary.csv",
+      "selector": {
+        "period": "2024-2026-08",
+        "symbol": "EQUAL_WEIGHT"
+      },
+      "expected_published": "5.9795",
+      "published_display": "5,9795",
+      "role": "result",
+      "recompute": {
+        "kind": "supplemental_h1",
+        "period": "2024-2026-08",
+        "field": "mae_rolling_7d_bps"
+      }
+    },
+    {
+      "table": 8,
+      "row": "Media simple de 14 días",
+      "column": "Muestra completa",
+      "field": "mae_rolling_14d_bps",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "quant_h1/outputs/h1_mae_summary.csv",
+      "selector": {
+        "period": "full",
+        "symbol": "EQUAL_WEIGHT"
+      },
+      "expected_published": "7.0443",
+      "published_display": "7,0443",
+      "role": "result",
+      "recompute": {
+        "kind": "supplemental_h1",
+        "period": "full",
+        "field": "mae_rolling_14d_bps"
+      }
+    },
+    {
+      "table": 8,
+      "row": "Media simple de 14 días",
+      "column": "2022–2023",
+      "field": "mae_rolling_14d_bps",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "quant_h1/outputs/h1_mae_summary.csv",
+      "selector": {
+        "period": "2022-2023",
+        "symbol": "EQUAL_WEIGHT"
+      },
+      "expected_published": "7.4922",
+      "published_display": "7,4922",
+      "role": "result",
+      "recompute": {
+        "kind": "supplemental_h1",
+        "period": "2022-2023",
+        "field": "mae_rolling_14d_bps"
+      }
+    },
+    {
+      "table": 8,
+      "row": "Media simple de 14 días",
+      "column": "2024–ago. 2026",
+      "field": "mae_rolling_14d_bps",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "quant_h1/outputs/h1_mae_summary.csv",
+      "selector": {
+        "period": "2024-2026-08",
+        "symbol": "EQUAL_WEIGHT"
+      },
+      "expected_published": "6.7061",
+      "published_display": "6,7061",
+      "role": "result",
+      "recompute": {
+        "kind": "supplemental_h1",
+        "period": "2024-2026-08",
+        "field": "mae_rolling_14d_bps"
+      }
+    },
+    {
+      "table": 8,
+      "row": "Constante: 0,01% cada 8 h",
+      "column": "Muestra completa",
+      "field": "mae_constant_001pct_8h_bps",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "quant_h1/outputs/h1_mae_summary.csv",
+      "selector": {
+        "period": "full",
+        "symbol": "EQUAL_WEIGHT"
+      },
+      "expected_published": "13.1949",
+      "published_display": "13,1949",
+      "role": "result",
+      "recompute": {
+        "kind": "supplemental_h1",
+        "period": "full",
+        "field": "mae_constant_001pct_8h_bps"
+      }
+    },
+    {
+      "table": 8,
+      "row": "Constante: 0,01% cada 8 h",
+      "column": "2022–2023",
+      "field": "mae_constant_001pct_8h_bps",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "quant_h1/outputs/h1_mae_summary.csv",
+      "selector": {
+        "period": "2022-2023",
+        "symbol": "EQUAL_WEIGHT"
+      },
+      "expected_published": "13.1744",
+      "published_display": "13,1744",
+      "role": "result",
+      "recompute": {
+        "kind": "supplemental_h1",
+        "period": "2022-2023",
+        "field": "mae_constant_001pct_8h_bps"
+      }
+    },
+    {
+      "table": 8,
+      "row": "Constante: 0,01% cada 8 h",
+      "column": "2024–ago. 2026",
+      "field": "mae_constant_001pct_8h_bps",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "quant_h1/outputs/h1_mae_summary.csv",
+      "selector": {
+        "period": "2024-2026-08",
+        "symbol": "EQUAL_WEIGHT"
+      },
+      "expected_published": "13.2103",
+      "published_display": "13,2103",
+      "role": "result",
+      "recompute": {
+        "kind": "supplemental_h1",
+        "period": "2024-2026-08",
+        "field": "mae_constant_001pct_8h_bps"
+      }
+    },
+    {
+      "table": 9,
+      "row": "2022-2023",
+      "column": "opportunity_mean",
+      "expected_published": "1.3404",
+      "source": "results/base/continuo/tablas/h3_resumen.csv",
+      "selector": {
+        "period": "2022-2023",
+        "symbol": "EQUAL_WEIGHT"
+      },
+      "field": "opportunity_mean",
+      "multiplier": "10000",
+      "decimals": 4,
+      "recompute": {
+        "kind": "h3",
+        "period": "2022-2023",
+        "field": "opportunity_mean"
+      }
+    },
+    {
+      "table": 9,
+      "row": "2022-2023",
+      "column": "eligible_fraction",
+      "expected_published": "2.4951",
+      "source": "results/base/continuo/tablas/h3_resumen.csv",
+      "selector": {
+        "period": "2022-2023",
+        "symbol": "EQUAL_WEIGHT"
+      },
+      "field": "eligible_fraction",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "h3",
+        "period": "2022-2023",
+        "field": "eligible_fraction"
+      }
+    },
+    {
+      "table": 9,
+      "row": "2022-2023",
+      "column": "conditional_cagr",
+      "expected_published": "1.0814",
+      "source": "results/base/continuo/tablas/h3_resumen.csv",
+      "selector": {
+        "period": "2022-2023",
+        "symbol": "EQUAL_WEIGHT"
+      },
+      "field": "conditional_cagr",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "h3",
+        "period": "2022-2023",
+        "field": "conditional_cagr"
+      }
+    },
+    {
+      "table": 9,
+      "row": "2022-2023",
+      "column": "valid_days",
+      "expected_published": "730",
+      "source": "results/base/continuo/tablas/h3_resumen.csv",
+      "selector": {
+        "period": "2022-2023",
+        "symbol": "EQUAL_WEIGHT"
+      },
+      "field": "valid_days",
+      "multiplier": "1",
+      "decimals": 0,
+      "recompute": {
+        "kind": "h3",
+        "period": "2022-2023",
+        "field": "valid_days"
+      }
+    },
+    {
+      "table": 9,
+      "row": "2022-2023",
+      "column": "excluded_days",
+      "expected_published": "0",
+      "source": "results/base/continuo/tablas/h3_resumen.csv",
+      "selector": {
+        "period": "2022-2023",
+        "symbol": "EQUAL_WEIGHT"
+      },
+      "field": "excluded_days",
+      "multiplier": "1",
+      "decimals": 0,
+      "recompute": {
+        "kind": "h3",
+        "period": "2022-2023",
+        "field": "excluded_days"
+      }
+    },
+    {
+      "table": 9,
+      "row": "2024-2026-08",
+      "column": "opportunity_mean",
+      "expected_published": "4.0197",
+      "source": "results/base/continuo/tablas/h3_resumen.csv",
+      "selector": {
+        "period": "2024-2026-08",
+        "symbol": "EQUAL_WEIGHT"
+      },
+      "field": "opportunity_mean",
+      "multiplier": "10000",
+      "decimals": 4,
+      "recompute": {
+        "kind": "h3",
+        "period": "2024-2026-08",
+        "field": "opportunity_mean"
+      }
+    },
+    {
+      "table": 9,
+      "row": "2024-2026-08",
+      "column": "eligible_fraction",
+      "expected_published": "6.3584",
+      "source": "results/base/continuo/tablas/h3_resumen.csv",
+      "selector": {
+        "period": "2024-2026-08",
+        "symbol": "EQUAL_WEIGHT"
+      },
+      "field": "eligible_fraction",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "h3",
+        "period": "2024-2026-08",
+        "field": "eligible_fraction"
+      }
+    },
+    {
+      "table": 9,
+      "row": "2024-2026-08",
+      "column": "conditional_cagr",
+      "expected_published": "2.0492",
+      "source": "results/base/continuo/tablas/h3_resumen.csv",
+      "selector": {
+        "period": "2024-2026-08",
+        "symbol": "EQUAL_WEIGHT"
+      },
+      "field": "conditional_cagr",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "h3",
+        "period": "2024-2026-08",
+        "field": "conditional_cagr"
+      }
+    },
+    {
+      "table": 9,
+      "row": "2024-2026-08",
+      "column": "valid_days",
+      "expected_published": "974",
+      "source": "results/base/continuo/tablas/h3_resumen.csv",
+      "selector": {
+        "period": "2024-2026-08",
+        "symbol": "EQUAL_WEIGHT"
+      },
+      "field": "valid_days",
+      "multiplier": "1",
+      "decimals": 0,
+      "recompute": {
+        "kind": "h3",
+        "period": "2024-2026-08",
+        "field": "valid_days"
+      }
+    },
+    {
+      "table": 9,
+      "row": "2024-2026-08",
+      "column": "excluded_days",
+      "expected_published": "0",
+      "source": "results/base/continuo/tablas/h3_resumen.csv",
+      "selector": {
+        "period": "2024-2026-08",
+        "symbol": "EQUAL_WEIGHT"
+      },
+      "field": "excluded_days",
+      "multiplier": "1",
+      "decimals": 0,
+      "recompute": {
+        "kind": "h3",
+        "period": "2024-2026-08",
+        "field": "excluded_days"
+      }
+    },
+    {
+      "table": 10,
+      "row": "2022",
+      "column": "Días válidos",
+      "field": "valid_days",
+      "multiplier": 1,
+      "decimals": 0,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "cash_review/h3_annual_and_period.csv",
+      "selector": {
+        "period": "2022"
+      },
+      "expected_published": "365",
+      "published_display": "365",
+      "role": "result",
+      "recompute": {
+        "kind": "annual_h3",
+        "period": "2022",
+        "field": "valid_days"
+      }
+    },
+    {
+      "table": 10,
+      "row": "2022",
+      "column": "Oportunidad media (pb / 168 h)",
+      "field": "opportunity_bps_per_168h",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "cash_review/h3_annual_and_period.csv",
+      "selector": {
+        "period": "2022"
+      },
+      "expected_published": "0.0000",
+      "published_display": "0,0000",
+      "role": "result",
+      "recompute": {
+        "kind": "annual_h3",
+        "period": "2022",
+        "field": "opportunity_bps_per_168h"
+      }
+    },
+    {
+      "table": 10,
+      "row": "2022",
+      "column": "Minutos elegibles",
+      "field": "eligible_minutes_percent",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "cash_review/h3_annual_and_period.csv",
+      "selector": {
+        "period": "2022"
+      },
+      "expected_published": "0.0000",
+      "published_display": "0,0000",
+      "role": "result",
+      "recompute": {
+        "kind": "annual_h3",
+        "period": "2022",
+        "field": "eligible_minutes_percent"
+      }
+    },
+    {
+      "table": 10,
+      "row": "2023",
+      "column": "Días válidos",
+      "field": "valid_days",
+      "multiplier": 1,
+      "decimals": 0,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "cash_review/h3_annual_and_period.csv",
+      "selector": {
+        "period": "2023"
+      },
+      "expected_published": "365",
+      "published_display": "365",
+      "role": "result",
+      "recompute": {
+        "kind": "annual_h3",
+        "period": "2023",
+        "field": "valid_days"
+      }
+    },
+    {
+      "table": 10,
+      "row": "2023",
+      "column": "Oportunidad media (pb / 168 h)",
+      "field": "opportunity_bps_per_168h",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "cash_review/h3_annual_and_period.csv",
+      "selector": {
+        "period": "2023"
+      },
+      "expected_published": "2.6808",
+      "published_display": "2,6808",
+      "role": "result",
+      "recompute": {
+        "kind": "annual_h3",
+        "period": "2023",
+        "field": "opportunity_bps_per_168h"
+      }
+    },
+    {
+      "table": 10,
+      "row": "2023",
+      "column": "Minutos elegibles",
+      "field": "eligible_minutes_percent",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "cash_review/h3_annual_and_period.csv",
+      "selector": {
+        "period": "2023"
+      },
+      "expected_published": "4.9903",
+      "published_display": "4,9903",
+      "role": "result",
+      "recompute": {
+        "kind": "annual_h3",
+        "period": "2023",
+        "field": "eligible_minutes_percent"
+      }
+    },
+    {
+      "table": 10,
+      "row": "2024",
+      "column": "Días válidos",
+      "field": "valid_days",
+      "multiplier": 1,
+      "decimals": 0,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "cash_review/h3_annual_and_period.csv",
+      "selector": {
+        "period": "2024"
+      },
+      "expected_published": "366",
+      "published_display": "366",
+      "role": "result",
+      "recompute": {
+        "kind": "annual_h3",
+        "period": "2024",
+        "field": "valid_days"
+      }
+    },
+    {
+      "table": 10,
+      "row": "2024",
+      "column": "Oportunidad media (pb / 168 h)",
+      "field": "opportunity_bps_per_168h",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "cash_review/h3_annual_and_period.csv",
+      "selector": {
+        "period": "2024"
+      },
+      "expected_published": "10.6972",
+      "published_display": "10,6972",
+      "role": "result",
+      "recompute": {
+        "kind": "annual_h3",
+        "period": "2024",
+        "field": "opportunity_bps_per_168h"
+      }
+    },
+    {
+      "table": 10,
+      "row": "2024",
+      "column": "Minutos elegibles",
+      "field": "eligible_minutes_percent",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "cash_review/h3_annual_and_period.csv",
+      "selector": {
+        "period": "2024"
+      },
+      "expected_published": "16.9209",
+      "published_display": "16,9209",
+      "role": "result",
+      "recompute": {
+        "kind": "annual_h3",
+        "period": "2024",
+        "field": "eligible_minutes_percent"
+      }
+    },
+    {
+      "table": 10,
+      "row": "2025",
+      "column": "Días válidos",
+      "field": "valid_days",
+      "multiplier": 1,
+      "decimals": 0,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "cash_review/h3_annual_and_period.csv",
+      "selector": {
+        "period": "2025"
+      },
+      "expected_published": "365",
+      "published_display": "365",
+      "role": "result",
+      "recompute": {
+        "kind": "annual_h3",
+        "period": "2025",
+        "field": "valid_days"
+      }
+    },
+    {
+      "table": 10,
+      "row": "2025",
+      "column": "Oportunidad media (pb / 168 h)",
+      "field": "opportunity_bps_per_168h",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "cash_review/h3_annual_and_period.csv",
+      "selector": {
+        "period": "2025"
+      },
+      "expected_published": "0.0000",
+      "published_display": "0,0000",
+      "role": "result",
+      "recompute": {
+        "kind": "annual_h3",
+        "period": "2025",
+        "field": "opportunity_bps_per_168h"
+      }
+    },
+    {
+      "table": 10,
+      "row": "2025",
+      "column": "Minutos elegibles",
+      "field": "eligible_minutes_percent",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "cash_review/h3_annual_and_period.csv",
+      "selector": {
+        "period": "2025"
+      },
+      "expected_published": "0.0000",
+      "published_display": "0,0000",
+      "role": "result",
+      "recompute": {
+        "kind": "annual_h3",
+        "period": "2025",
+        "field": "eligible_minutes_percent"
+      }
+    },
+    {
+      "table": 10,
+      "row": "Ene.–ago. 2026",
+      "column": "Días válidos",
+      "field": "valid_days",
+      "multiplier": 1,
+      "decimals": 0,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "cash_review/h3_annual_and_period.csv",
+      "selector": {
+        "period": "2026"
+      },
+      "expected_published": "243",
+      "published_display": "243",
+      "role": "result",
+      "recompute": {
+        "kind": "annual_h3",
+        "period": "2026",
+        "field": "valid_days"
+      }
+    },
+    {
+      "table": 10,
+      "row": "Ene.–ago. 2026",
+      "column": "Oportunidad media (pb / 168 h)",
+      "field": "opportunity_bps_per_168h",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "cash_review/h3_annual_and_period.csv",
+      "selector": {
+        "period": "2026"
+      },
+      "expected_published": "0.0000",
+      "published_display": "0,0000",
+      "role": "result",
+      "recompute": {
+        "kind": "annual_h3",
+        "period": "2026",
+        "field": "opportunity_bps_per_168h"
+      }
+    },
+    {
+      "table": 10,
+      "row": "Ene.–ago. 2026",
+      "column": "Minutos elegibles",
+      "field": "eligible_minutes_percent",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "cash_review/h3_annual_and_period.csv",
+      "selector": {
+        "period": "2026"
+      },
+      "expected_published": "0.0000",
+      "published_display": "0,0000",
+      "role": "result",
+      "recompute": {
+        "kind": "annual_h3",
+        "period": "2026",
+        "field": "eligible_minutes_percent"
+      }
+    },
+    {
+      "table": 11,
+      "row": "2022-2023/BTCUSDT",
+      "column": "evaluaciones",
+      "expected_published": "2190",
+      "source": "results/base/continuo/tablas/filtros_entrada.csv",
+      "selector": {
+        "period": "2022-2023",
+        "symbol": "BTCUSDT",
+        "strategy": "conditional",
+        "scope": "simultaneous",
+        "state": "pass",
+        "filter": "funding"
+      },
+      "field": "denominator",
+      "multiplier": "1",
+      "decimals": 0,
+      "recompute": {
+        "kind": "entry",
+        "period": "2022-2023",
+        "symbol": "BTCUSDT",
+        "field": "evaluaciones"
+      }
+    },
+    {
+      "table": 11,
+      "row": "2022-2023/BTCUSDT",
+      "column": "basis entre 0 y 0.50%",
+      "expected_published": "229",
+      "source": "results/base/continuo/tablas/filtros_entrada.csv",
+      "selector": {
+        "period": "2022-2023",
+        "symbol": "BTCUSDT",
+        "strategy": "conditional",
+        "scope": "simultaneous",
+        "state": "pass",
+        "filter": "basis_negative"
+      },
+      "field": "count",
+      "multiplier": "1",
+      "decimals": 0,
+      "recompute": {
+        "kind": "entry",
+        "period": "2022-2023",
+        "symbol": "BTCUSDT",
+        "field": "basis entre 0 y 0.50%"
+      }
+    },
+    {
+      "table": 11,
+      "row": "2022-2023/BTCUSDT",
+      "column": "funding supera costo",
+      "expected_published": "45",
+      "source": "results/base/continuo/tablas/filtros_entrada.csv",
+      "selector": {
+        "period": "2022-2023",
+        "symbol": "BTCUSDT",
+        "strategy": "conditional",
+        "scope": "simultaneous",
+        "state": "pass",
+        "filter": "funding"
+      },
+      "field": "count",
+      "multiplier": "1",
+      "decimals": 0,
+      "recompute": {
+        "kind": "entry",
+        "period": "2022-2023",
+        "symbol": "BTCUSDT",
+        "field": "funding supera costo"
+      }
+    },
+    {
+      "table": 11,
+      "row": "2022-2023/ETHUSDT",
+      "column": "evaluaciones",
+      "expected_published": "2190",
+      "source": "results/base/continuo/tablas/filtros_entrada.csv",
+      "selector": {
+        "period": "2022-2023",
+        "symbol": "ETHUSDT",
+        "strategy": "conditional",
+        "scope": "simultaneous",
+        "state": "pass",
+        "filter": "funding"
+      },
+      "field": "denominator",
+      "multiplier": "1",
+      "decimals": 0,
+      "recompute": {
+        "kind": "entry",
+        "period": "2022-2023",
+        "symbol": "ETHUSDT",
+        "field": "evaluaciones"
+      }
+    },
+    {
+      "table": 11,
+      "row": "2022-2023/ETHUSDT",
+      "column": "basis entre 0 y 0.50%",
+      "expected_published": "285",
+      "source": "results/base/continuo/tablas/filtros_entrada.csv",
+      "selector": {
+        "period": "2022-2023",
+        "symbol": "ETHUSDT",
+        "strategy": "conditional",
+        "scope": "simultaneous",
+        "state": "pass",
+        "filter": "basis_negative"
+      },
+      "field": "count",
+      "multiplier": "1",
+      "decimals": 0,
+      "recompute": {
+        "kind": "entry",
+        "period": "2022-2023",
+        "symbol": "ETHUSDT",
+        "field": "basis entre 0 y 0.50%"
+      }
+    },
+    {
+      "table": 11,
+      "row": "2022-2023/ETHUSDT",
+      "column": "funding supera costo",
+      "expected_published": "65",
+      "source": "results/base/continuo/tablas/filtros_entrada.csv",
+      "selector": {
+        "period": "2022-2023",
+        "symbol": "ETHUSDT",
+        "strategy": "conditional",
+        "scope": "simultaneous",
+        "state": "pass",
+        "filter": "funding"
+      },
+      "field": "count",
+      "multiplier": "1",
+      "decimals": 0,
+      "recompute": {
+        "kind": "entry",
+        "period": "2022-2023",
+        "symbol": "ETHUSDT",
+        "field": "funding supera costo"
+      }
+    },
+    {
+      "table": 11,
+      "row": "2024-2026-08/BTCUSDT",
+      "column": "evaluaciones",
+      "expected_published": "2922",
+      "source": "results/base/continuo/tablas/filtros_entrada.csv",
+      "selector": {
+        "period": "2024-2026-08",
+        "symbol": "BTCUSDT",
+        "strategy": "conditional",
+        "scope": "simultaneous",
+        "state": "pass",
+        "filter": "funding"
+      },
+      "field": "denominator",
+      "multiplier": "1",
+      "decimals": 0,
+      "recompute": {
+        "kind": "entry",
+        "period": "2024-2026-08",
+        "symbol": "BTCUSDT",
+        "field": "evaluaciones"
+      }
+    },
+    {
+      "table": 11,
+      "row": "2024-2026-08/BTCUSDT",
+      "column": "basis entre 0 y 0.50%",
+      "expected_published": "431",
+      "source": "results/base/continuo/tablas/filtros_entrada.csv",
+      "selector": {
+        "period": "2024-2026-08",
+        "symbol": "BTCUSDT",
+        "strategy": "conditional",
+        "scope": "simultaneous",
+        "state": "pass",
+        "filter": "basis_negative"
+      },
+      "field": "count",
+      "multiplier": "1",
+      "decimals": 0,
+      "recompute": {
+        "kind": "entry",
+        "period": "2024-2026-08",
+        "symbol": "BTCUSDT",
+        "field": "basis entre 0 y 0.50%"
+      }
+    },
+    {
+      "table": 11,
+      "row": "2024-2026-08/BTCUSDT",
+      "column": "funding supera costo",
+      "expected_published": "179",
+      "source": "results/base/continuo/tablas/filtros_entrada.csv",
+      "selector": {
+        "period": "2024-2026-08",
+        "symbol": "BTCUSDT",
+        "strategy": "conditional",
+        "scope": "simultaneous",
+        "state": "pass",
+        "filter": "funding"
+      },
+      "field": "count",
+      "multiplier": "1",
+      "decimals": 0,
+      "recompute": {
+        "kind": "entry",
+        "period": "2024-2026-08",
+        "symbol": "BTCUSDT",
+        "field": "funding supera costo"
+      }
+    },
+    {
+      "table": 11,
+      "row": "2024-2026-08/ETHUSDT",
+      "column": "evaluaciones",
+      "expected_published": "2922",
+      "source": "results/base/continuo/tablas/filtros_entrada.csv",
+      "selector": {
+        "period": "2024-2026-08",
+        "symbol": "ETHUSDT",
+        "strategy": "conditional",
+        "scope": "simultaneous",
+        "state": "pass",
+        "filter": "funding"
+      },
+      "field": "denominator",
+      "multiplier": "1",
+      "decimals": 0,
+      "recompute": {
+        "kind": "entry",
+        "period": "2024-2026-08",
+        "symbol": "ETHUSDT",
+        "field": "evaluaciones"
+      }
+    },
+    {
+      "table": 11,
+      "row": "2024-2026-08/ETHUSDT",
+      "column": "basis entre 0 y 0.50%",
+      "expected_published": "428",
+      "source": "results/base/continuo/tablas/filtros_entrada.csv",
+      "selector": {
+        "period": "2024-2026-08",
+        "symbol": "ETHUSDT",
+        "strategy": "conditional",
+        "scope": "simultaneous",
+        "state": "pass",
+        "filter": "basis_negative"
+      },
+      "field": "count",
+      "multiplier": "1",
+      "decimals": 0,
+      "recompute": {
+        "kind": "entry",
+        "period": "2024-2026-08",
+        "symbol": "ETHUSDT",
+        "field": "basis entre 0 y 0.50%"
+      }
+    },
+    {
+      "table": 11,
+      "row": "2024-2026-08/ETHUSDT",
+      "column": "funding supera costo",
+      "expected_published": "195",
+      "source": "results/base/continuo/tablas/filtros_entrada.csv",
+      "selector": {
+        "period": "2024-2026-08",
+        "symbol": "ETHUSDT",
+        "strategy": "conditional",
+        "scope": "simultaneous",
+        "state": "pass",
+        "filter": "funding"
+      },
+      "field": "count",
+      "multiplier": "1",
+      "decimals": 0,
+      "recompute": {
+        "kind": "entry",
+        "period": "2024-2026-08",
+        "symbol": "ETHUSDT",
+        "field": "funding supera costo"
+      }
+    },
+    {
+      "table": 12,
+      "row": "2022–2023 / BTC",
+      "column": "Media (pb)",
+      "field": "mean_basis_bps",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "quant_h1/outputs/basis_summary.csv",
+      "selector": {
+        "period": "2022-2023",
+        "symbol": "BTCUSDT"
+      },
+      "expected_published": "-3.4129",
+      "published_display": "-3,4129",
+      "role": "result",
+      "recompute": {
+        "kind": "basis",
+        "period": "2022-2023",
+        "symbol": "BTCUSDT",
+        "field": "mean_basis_bps"
+      }
+    },
+    {
+      "table": 12,
+      "row": "2022–2023 / BTC",
+      "column": "Mediana (pb)",
+      "field": "median_basis_bps",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "quant_h1/outputs/basis_summary.csv",
+      "selector": {
+        "period": "2022-2023",
+        "symbol": "BTCUSDT"
+      },
+      "expected_published": "-4.2258",
+      "published_display": "-4,2258",
+      "role": "result",
+      "recompute": {
+        "kind": "basis",
+        "period": "2022-2023",
+        "symbol": "BTCUSDT",
+        "field": "median_basis_bps"
+      }
+    },
+    {
+      "table": 12,
+      "row": "2022–2023 / BTC",
+      "column": "Basis negativo",
+      "field": "negative_pct",
+      "multiplier": 1,
+      "decimals": 2,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "quant_h1/outputs/basis_summary.csv",
+      "selector": {
+        "period": "2022-2023",
+        "symbol": "BTCUSDT"
+      },
+      "expected_published": "89.54",
+      "published_display": "89,54",
+      "role": "result",
+      "recompute": {
+        "kind": "basis",
+        "period": "2022-2023",
+        "symbol": "BTCUSDT",
+        "field": "negative_pct"
+      }
+    },
+    {
+      "table": 12,
+      "row": "2022–2023 / ETH",
+      "column": "Media (pb)",
+      "field": "mean_basis_bps",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "quant_h1/outputs/basis_summary.csv",
+      "selector": {
+        "period": "2022-2023",
+        "symbol": "ETHUSDT"
+      },
+      "expected_published": "-3.4506",
+      "published_display": "-3,4506",
+      "role": "result",
+      "recompute": {
+        "kind": "basis",
+        "period": "2022-2023",
+        "symbol": "ETHUSDT",
+        "field": "mean_basis_bps"
+      }
+    },
+    {
+      "table": 12,
+      "row": "2022–2023 / ETH",
+      "column": "Mediana (pb)",
+      "field": "median_basis_bps",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "quant_h1/outputs/basis_summary.csv",
+      "selector": {
+        "period": "2022-2023",
+        "symbol": "ETHUSDT"
+      },
+      "expected_published": "-4.3185",
+      "published_display": "-4,3185",
+      "role": "result",
+      "recompute": {
+        "kind": "basis",
+        "period": "2022-2023",
+        "symbol": "ETHUSDT",
+        "field": "median_basis_bps"
+      }
+    },
+    {
+      "table": 12,
+      "row": "2022–2023 / ETH",
+      "column": "Basis negativo",
+      "field": "negative_pct",
+      "multiplier": 1,
+      "decimals": 2,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "quant_h1/outputs/basis_summary.csv",
+      "selector": {
+        "period": "2022-2023",
+        "symbol": "ETHUSDT"
+      },
+      "expected_published": "86.99",
+      "published_display": "86,99",
+      "role": "result",
+      "recompute": {
+        "kind": "basis",
+        "period": "2022-2023",
+        "symbol": "ETHUSDT",
+        "field": "negative_pct"
+      }
+    },
+    {
+      "table": 12,
+      "row": "2024–ago. 2026 / BTC",
+      "column": "Media (pb)",
+      "field": "mean_basis_bps",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "quant_h1/outputs/basis_summary.csv",
+      "selector": {
+        "period": "2024-2026-08",
+        "symbol": "BTCUSDT"
+      },
+      "expected_published": "-2.9135",
+      "published_display": "-2,9135",
+      "role": "result",
+      "recompute": {
+        "kind": "basis",
+        "period": "2024-2026-08",
+        "symbol": "BTCUSDT",
+        "field": "mean_basis_bps"
+      }
+    },
+    {
+      "table": 12,
+      "row": "2024–ago. 2026 / BTC",
+      "column": "Mediana (pb)",
+      "field": "median_basis_bps",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "quant_h1/outputs/basis_summary.csv",
+      "selector": {
+        "period": "2024-2026-08",
+        "symbol": "BTCUSDT"
+      },
+      "expected_published": "-4.3022",
+      "published_display": "-4,3022",
+      "role": "result",
+      "recompute": {
+        "kind": "basis",
+        "period": "2024-2026-08",
+        "symbol": "BTCUSDT",
+        "field": "median_basis_bps"
+      }
+    },
+    {
+      "table": 12,
+      "row": "2024–ago. 2026 / BTC",
+      "column": "Basis negativo",
+      "field": "negative_pct",
+      "multiplier": 1,
+      "decimals": 2,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "quant_h1/outputs/basis_summary.csv",
+      "selector": {
+        "period": "2024-2026-08",
+        "symbol": "BTCUSDT"
+      },
+      "expected_published": "85.25",
+      "published_display": "85,25",
+      "role": "result",
+      "recompute": {
+        "kind": "basis",
+        "period": "2024-2026-08",
+        "symbol": "BTCUSDT",
+        "field": "negative_pct"
+      }
+    },
+    {
+      "table": 12,
+      "row": "2024–ago. 2026 / ETH",
+      "column": "Media (pb)",
+      "field": "mean_basis_bps",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "quant_h1/outputs/basis_summary.csv",
+      "selector": {
+        "period": "2024-2026-08",
+        "symbol": "ETHUSDT"
+      },
+      "expected_published": "-2.9104",
+      "published_display": "-2,9104",
+      "role": "result",
+      "recompute": {
+        "kind": "basis",
+        "period": "2024-2026-08",
+        "symbol": "ETHUSDT",
+        "field": "mean_basis_bps"
+      }
+    },
+    {
+      "table": 12,
+      "row": "2024–ago. 2026 / ETH",
+      "column": "Mediana (pb)",
+      "field": "median_basis_bps",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "quant_h1/outputs/basis_summary.csv",
+      "selector": {
+        "period": "2024-2026-08",
+        "symbol": "ETHUSDT"
+      },
+      "expected_published": "-4.2981",
+      "published_display": "-4,2981",
+      "role": "result",
+      "recompute": {
+        "kind": "basis",
+        "period": "2024-2026-08",
+        "symbol": "ETHUSDT",
+        "field": "median_basis_bps"
+      }
+    },
+    {
+      "table": 12,
+      "row": "2024–ago. 2026 / ETH",
+      "column": "Basis negativo",
+      "field": "negative_pct",
+      "multiplier": 1,
+      "decimals": 2,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "quant_h1/outputs/basis_summary.csv",
+      "selector": {
+        "period": "2024-2026-08",
+        "symbol": "ETHUSDT"
+      },
+      "expected_published": "85.35",
+      "published_display": "85,35",
+      "role": "result",
+      "recompute": {
+        "kind": "basis",
+        "period": "2024-2026-08",
+        "symbol": "ETHUSDT",
+        "field": "negative_pct"
+      }
+    },
+    {
+      "table": 12,
+      "row": "2024 / BTC",
+      "column": "Media (pb)",
+      "field": "mean_basis_bps",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "quant_h1/outputs/basis_summary.csv",
+      "selector": {
+        "period": "2024",
+        "symbol": "BTCUSDT"
+      },
+      "expected_published": "-0.3218",
+      "published_display": "-0,3218",
+      "role": "result",
+      "recompute": {
+        "kind": "basis",
+        "period": "2024",
+        "symbol": "BTCUSDT",
+        "field": "mean_basis_bps"
+      }
+    },
+    {
+      "table": 12,
+      "row": "2024 / BTC",
+      "column": "Mediana (pb)",
+      "field": "median_basis_bps",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "quant_h1/outputs/basis_summary.csv",
+      "selector": {
+        "period": "2024",
+        "symbol": "BTCUSDT"
+      },
+      "expected_published": "-2.7089",
+      "published_display": "-2,7089",
+      "role": "result",
+      "recompute": {
+        "kind": "basis",
+        "period": "2024",
+        "symbol": "BTCUSDT",
+        "field": "median_basis_bps"
+      }
+    },
+    {
+      "table": 12,
+      "row": "2024 / BTC",
+      "column": "Basis negativo",
+      "field": "negative_pct",
+      "multiplier": 1,
+      "decimals": 2,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "quant_h1/outputs/basis_summary.csv",
+      "selector": {
+        "period": "2024",
+        "symbol": "BTCUSDT"
+      },
+      "expected_published": "62.20",
+      "published_display": "62,20",
+      "role": "result",
+      "recompute": {
+        "kind": "basis",
+        "period": "2024",
+        "symbol": "BTCUSDT",
+        "field": "negative_pct"
+      }
+    },
+    {
+      "table": 12,
+      "row": "2024 / ETH",
+      "column": "Media (pb)",
+      "field": "mean_basis_bps",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "quant_h1/outputs/basis_summary.csv",
+      "selector": {
+        "period": "2024",
+        "symbol": "ETHUSDT"
+      },
+      "expected_published": "-0.1515",
+      "published_display": "-0,1515",
+      "role": "result",
+      "recompute": {
+        "kind": "basis",
+        "period": "2024",
+        "symbol": "ETHUSDT",
+        "field": "mean_basis_bps"
+      }
+    },
+    {
+      "table": 12,
+      "row": "2024 / ETH",
+      "column": "Mediana (pb)",
+      "field": "median_basis_bps",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "quant_h1/outputs/basis_summary.csv",
+      "selector": {
+        "period": "2024",
+        "symbol": "ETHUSDT"
+      },
+      "expected_published": "-2.9983",
+      "published_display": "-2,9983",
+      "role": "result",
+      "recompute": {
+        "kind": "basis",
+        "period": "2024",
+        "symbol": "ETHUSDT",
+        "field": "median_basis_bps"
+      }
+    },
+    {
+      "table": 12,
+      "row": "2024 / ETH",
+      "column": "Basis negativo",
+      "field": "negative_pct",
+      "multiplier": 1,
+      "decimals": 2,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "quant_h1/outputs/basis_summary.csv",
+      "selector": {
+        "period": "2024",
+        "symbol": "ETHUSDT"
+      },
+      "expected_published": "61.84",
+      "published_display": "61,84",
+      "role": "result",
+      "recompute": {
+        "kind": "basis",
+        "period": "2024",
+        "symbol": "ETHUSDT",
+        "field": "negative_pct"
+      }
+    },
+    {
+      "table": 13,
+      "row": "2022",
+      "column": "conditional/net_return",
+      "expected_published": "0.0000",
+      "source": "results/benchmark_sofr/evidencia/tablas/comparacion_periodos.csv",
+      "selector": {
+        "period": "2022",
+        "portfolio": "conditional"
+      },
+      "field": "net_return",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "2022",
+        "strategy": "conditional",
+        "field": "net_return"
+      }
+    },
+    {
+      "table": 13,
+      "row": "2022",
+      "column": "permanent/net_return",
+      "expected_published": "1.0916",
+      "source": "results/benchmark_sofr/evidencia/tablas/comparacion_periodos.csv",
+      "selector": {
+        "period": "2022",
+        "portfolio": "permanent"
+      },
+      "field": "net_return",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "2022",
+        "strategy": "permanent",
+        "field": "net_return"
+      }
+    },
+    {
+      "table": 13,
+      "row": "2022",
+      "column": "conditional/capital_utilization_daily_mean",
+      "expected_published": "0.0000",
+      "source": "results/benchmark_sofr/evidencia/tablas/comparacion_periodos.csv",
+      "selector": {
+        "period": "2022",
+        "portfolio": "conditional"
+      },
+      "field": "capital_utilization_daily_mean",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "2022",
+        "strategy": "conditional",
+        "field": "capital_utilization_daily_mean"
+      }
+    },
+    {
+      "table": 13,
+      "row": "2022",
+      "column": "permanent/capital_utilization_daily_mean",
+      "expected_published": "78.4727",
+      "source": "results/benchmark_sofr/evidencia/tablas/comparacion_periodos.csv",
+      "selector": {
+        "period": "2022",
+        "portfolio": "permanent"
+      },
+      "field": "capital_utilization_daily_mean",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "2022",
+        "strategy": "permanent",
+        "field": "capital_utilization_daily_mean"
+      }
+    },
+    {
+      "table": 13,
+      "row": "2023",
+      "column": "conditional/net_return",
+      "expected_published": "2.1744",
+      "source": "results/benchmark_sofr/evidencia/tablas/comparacion_periodos.csv",
+      "selector": {
+        "period": "2023",
+        "portfolio": "conditional"
+      },
+      "field": "net_return",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "2023",
+        "strategy": "conditional",
+        "field": "net_return"
+      }
+    },
+    {
+      "table": 13,
+      "row": "2023",
+      "column": "permanent/net_return",
+      "expected_published": "5.0202",
+      "source": "results/benchmark_sofr/evidencia/tablas/comparacion_periodos.csv",
+      "selector": {
+        "period": "2023",
+        "portfolio": "permanent"
+      },
+      "field": "net_return",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "2023",
+        "strategy": "permanent",
+        "field": "net_return"
+      }
+    },
+    {
+      "table": 13,
+      "row": "2023",
+      "column": "conditional/capital_utilization_daily_mean",
+      "expected_published": "20.8441",
+      "source": "results/benchmark_sofr/evidencia/tablas/comparacion_periodos.csv",
+      "selector": {
+        "period": "2023",
+        "portfolio": "conditional"
+      },
+      "field": "capital_utilization_daily_mean",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "2023",
+        "strategy": "conditional",
+        "field": "capital_utilization_daily_mean"
+      }
+    },
+    {
+      "table": 13,
+      "row": "2023",
+      "column": "permanent/capital_utilization_daily_mean",
+      "expected_published": "84.2354",
+      "source": "results/benchmark_sofr/evidencia/tablas/comparacion_periodos.csv",
+      "selector": {
+        "period": "2023",
+        "portfolio": "permanent"
+      },
+      "field": "capital_utilization_daily_mean",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "2023",
+        "strategy": "permanent",
+        "field": "capital_utilization_daily_mean"
+      }
+    },
+    {
+      "table": 13,
+      "row": "2024",
+      "column": "conditional/net_return",
+      "expected_published": "5.2374",
+      "source": "results/benchmark_sofr/evidencia/tablas/comparacion_periodos.csv",
+      "selector": {
+        "period": "2024",
+        "portfolio": "conditional"
+      },
+      "field": "net_return",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "2024",
+        "strategy": "conditional",
+        "field": "net_return"
+      }
+    },
+    {
+      "table": 13,
+      "row": "2024",
+      "column": "permanent/net_return",
+      "expected_published": "6.4691",
+      "source": "results/benchmark_sofr/evidencia/tablas/comparacion_periodos.csv",
+      "selector": {
+        "period": "2024",
+        "portfolio": "permanent"
+      },
+      "field": "net_return",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "2024",
+        "strategy": "permanent",
+        "field": "net_return"
+      }
+    },
+    {
+      "table": 13,
+      "row": "2024",
+      "column": "conditional/capital_utilization_daily_mean",
+      "expected_published": "55.9750",
+      "source": "results/benchmark_sofr/evidencia/tablas/comparacion_periodos.csv",
+      "selector": {
+        "period": "2024",
+        "portfolio": "conditional"
+      },
+      "field": "capital_utilization_daily_mean",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "2024",
+        "strategy": "conditional",
+        "field": "capital_utilization_daily_mean"
+      }
+    },
+    {
+      "table": 13,
+      "row": "2024",
+      "column": "permanent/capital_utilization_daily_mean",
+      "expected_published": "87.8768",
+      "source": "results/benchmark_sofr/evidencia/tablas/comparacion_periodos.csv",
+      "selector": {
+        "period": "2024",
+        "portfolio": "permanent"
+      },
+      "field": "capital_utilization_daily_mean",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "2024",
+        "strategy": "permanent",
+        "field": "capital_utilization_daily_mean"
+      }
+    },
+    {
+      "table": 13,
+      "row": "2025",
+      "column": "conditional/net_return",
+      "expected_published": "0.3096",
+      "source": "results/benchmark_sofr/evidencia/tablas/comparacion_periodos.csv",
+      "selector": {
+        "period": "2025",
+        "portfolio": "conditional"
+      },
+      "field": "net_return",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "2025",
+        "strategy": "conditional",
+        "field": "net_return"
+      }
+    },
+    {
+      "table": 13,
+      "row": "2025",
+      "column": "permanent/net_return",
+      "expected_published": "2.7261",
+      "source": "results/benchmark_sofr/evidencia/tablas/comparacion_periodos.csv",
+      "selector": {
+        "period": "2025",
+        "portfolio": "permanent"
+      },
+      "field": "net_return",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "2025",
+        "strategy": "permanent",
+        "field": "net_return"
+      }
+    },
+    {
+      "table": 13,
+      "row": "2025",
+      "column": "conditional/capital_utilization_daily_mean",
+      "expected_published": "15.4917",
+      "source": "results/benchmark_sofr/evidencia/tablas/comparacion_periodos.csv",
+      "selector": {
+        "period": "2025",
+        "portfolio": "conditional"
+      },
+      "field": "capital_utilization_daily_mean",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "2025",
+        "strategy": "conditional",
+        "field": "capital_utilization_daily_mean"
+      }
+    },
+    {
+      "table": 13,
+      "row": "2025",
+      "column": "permanent/capital_utilization_daily_mean",
+      "expected_published": "86.4822",
+      "source": "results/benchmark_sofr/evidencia/tablas/comparacion_periodos.csv",
+      "selector": {
+        "period": "2025",
+        "portfolio": "permanent"
+      },
+      "field": "capital_utilization_daily_mean",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "2025",
+        "strategy": "permanent",
+        "field": "capital_utilization_daily_mean"
+      }
+    },
+    {
+      "table": 13,
+      "row": "2026",
+      "column": "conditional/net_return",
+      "expected_published": "-0.0008",
+      "source": "results/benchmark_sofr/evidencia/tablas/comparacion_periodos.csv",
+      "selector": {
+        "period": "2026",
+        "portfolio": "conditional"
+      },
+      "field": "net_return",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "2026",
+        "strategy": "conditional",
+        "field": "net_return"
+      }
+    },
+    {
+      "table": 13,
+      "row": "2026",
+      "column": "permanent/net_return",
+      "expected_published": "0.5896",
+      "source": "results/benchmark_sofr/evidencia/tablas/comparacion_periodos.csv",
+      "selector": {
+        "period": "2026",
+        "portfolio": "permanent"
+      },
+      "field": "net_return",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "2026",
+        "strategy": "permanent",
+        "field": "net_return"
+      }
+    },
+    {
+      "table": 13,
+      "row": "2026",
+      "column": "conditional/capital_utilization_daily_mean",
+      "expected_published": "0.0059",
+      "source": "results/benchmark_sofr/evidencia/tablas/comparacion_periodos.csv",
+      "selector": {
+        "period": "2026",
+        "portfolio": "conditional"
+      },
+      "field": "capital_utilization_daily_mean",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "2026",
+        "strategy": "conditional",
+        "field": "capital_utilization_daily_mean"
+      }
+    },
+    {
+      "table": 13,
+      "row": "2026",
+      "column": "permanent/capital_utilization_daily_mean",
+      "expected_published": "72.7804",
+      "source": "results/benchmark_sofr/evidencia/tablas/comparacion_periodos.csv",
+      "selector": {
+        "period": "2026",
+        "portfolio": "permanent"
+      },
+      "field": "capital_utilization_daily_mean",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "2026",
+        "strategy": "permanent",
+        "field": "capital_utilization_daily_mean"
+      }
+    },
+    {
+      "table": 14,
+      "row": "BASE, horizonte 168 h",
+      "column": "CAGR condicional",
+      "expected_published": "1.6335",
+      "published_display": "1,6335%",
+      "source": "results/senal/evidencia/tablas/metricas.csv",
+      "field": "cagr",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "BASE_E3",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 14,
+      "row": "BASE, horizonte 168 h",
+      "column": "CAGR incondicional",
+      "expected_published": "3.3825",
+      "published_display": "3,3825%",
+      "source": "results/senal/evidencia/tablas/metricas.csv",
+      "field": "cagr",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "BASE_E3",
+        "strategy": "permanent",
+        "period": "full"
+      }
+    },
+    {
+      "table": 14,
+      "row": "BASE, horizonte 168 h",
+      "column": "Utilización condicional",
+      "expected_published": "19.8068",
+      "published_display": "19,8068%",
+      "source": "results/senal/evidencia/tablas/metricas.csv",
+      "field": "capital_utilization_daily_mean",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "BASE_E3",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 14,
+      "row": "Horizonte 72 h",
+      "column": "CAGR condicional",
+      "expected_published": "1.0254",
+      "published_display": "1,0254%",
+      "source": "results/senal/evidencia/tablas/metricas.csv",
+      "field": "cagr",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "H072",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 14,
+      "row": "Horizonte 72 h",
+      "column": "CAGR incondicional",
+      "expected_published": "3.2933",
+      "published_display": "3,2933%",
+      "source": "results/senal/evidencia/tablas/metricas.csv",
+      "field": "cagr",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "H072",
+        "strategy": "permanent",
+        "period": "full"
+      }
+    },
+    {
+      "table": 14,
+      "row": "Horizonte 72 h",
+      "column": "Utilización condicional",
+      "expected_published": "11.7509",
+      "published_display": "11,7509%",
+      "source": "results/senal/evidencia/tablas/metricas.csv",
+      "field": "capital_utilization_daily_mean",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "H072",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 14,
+      "row": "Horizonte 336 h",
+      "column": "CAGR condicional",
+      "expected_published": "2.5025",
+      "published_display": "2,5025%",
+      "source": "results/senal/evidencia/tablas/metricas.csv",
+      "field": "cagr",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "H336",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 14,
+      "row": "Horizonte 336 h",
+      "column": "CAGR incondicional",
+      "expected_published": "3.3965",
+      "published_display": "3,3965%",
+      "source": "results/senal/evidencia/tablas/metricas.csv",
+      "field": "cagr",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "H336",
+        "strategy": "permanent",
+        "period": "full"
+      }
+    },
+    {
+      "table": 14,
+      "row": "Horizonte 336 h",
+      "column": "Utilización condicional",
+      "expected_published": "47.8552",
+      "published_display": "47,8552%",
+      "source": "results/senal/evidencia/tablas/metricas.csv",
+      "field": "capital_utilization_daily_mean",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "H336",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 14,
+      "row": "Vida media 12 h",
+      "column": "CAGR condicional",
+      "expected_published": "1.7191",
+      "published_display": "1,7191%",
+      "source": "results/senal/evidencia/tablas/metricas.csv",
+      "field": "cagr",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "V012",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 14,
+      "row": "Vida media 12 h",
+      "column": "CAGR incondicional",
+      "expected_published": "3.3825",
+      "published_display": "3,3825%",
+      "source": "results/senal/evidencia/tablas/metricas.csv",
+      "field": "cagr",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "V012",
+        "strategy": "permanent",
+        "period": "full"
+      }
+    },
+    {
+      "table": 14,
+      "row": "Vida media 12 h",
+      "column": "Utilización condicional",
+      "expected_published": "23.5398",
+      "published_display": "23,5398%",
+      "source": "results/senal/evidencia/tablas/metricas.csv",
+      "field": "capital_utilization_daily_mean",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "V012",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 14,
+      "row": "Vida media 48 h",
+      "column": "CAGR condicional",
+      "expected_published": "1.6460",
+      "published_display": "1,6460%",
+      "source": "results/senal/evidencia/tablas/metricas.csv",
+      "field": "cagr",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "V048",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 14,
+      "row": "Vida media 48 h",
+      "column": "CAGR incondicional",
+      "expected_published": "3.3825",
+      "published_display": "3,3825%",
+      "source": "results/senal/evidencia/tablas/metricas.csv",
+      "field": "cagr",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "V048",
+        "strategy": "permanent",
+        "period": "full"
+      }
+    },
+    {
+      "table": 14,
+      "row": "Vida media 48 h",
+      "column": "Utilización condicional",
+      "expected_published": "20.8138",
+      "published_display": "20,8138%",
+      "source": "results/senal/evidencia/tablas/metricas.csv",
+      "field": "capital_utilization_daily_mean",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "V048",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 15,
+      "row": "BASE",
+      "column": "Retorno condicional",
+      "expected_published": "7.8576",
+      "published_display": "7,8576%",
+      "source": "results/costos_capacidad/evidencia/tablas/metricas.csv",
+      "field": "net_return",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "BASE_E3",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 15,
+      "row": "BASE",
+      "column": "Retorno incondicional",
+      "expected_published": "16.8007",
+      "published_display": "16,8007%",
+      "source": "results/costos_capacidad/evidencia/tablas/metricas.csv",
+      "field": "net_return",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "BASE_E3",
+        "strategy": "permanent",
+        "period": "full"
+      }
+    },
+    {
+      "table": 15,
+      "row": "BASE",
+      "column": "Sharpe condicional",
+      "expected_published": "4.9624",
+      "published_display": "4,9624",
+      "source": "results/costos_capacidad/evidencia/tablas/metricas.csv",
+      "field": "sharpe",
+      "multiplier": 1,
+      "decimals": 4,
+      "selector": {
+        "scenario": "BASE_E3",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 15,
+      "row": "BASE",
+      "column": "Sharpe incondicional",
+      "expected_published": "6.5336",
+      "published_display": "6,5336",
+      "source": "results/costos_capacidad/evidencia/tablas/metricas.csv",
+      "field": "sharpe",
+      "multiplier": 1,
+      "decimals": 4,
+      "selector": {
+        "scenario": "BASE_E3",
+        "strategy": "permanent",
+        "period": "full"
+      }
+    },
+    {
+      "table": 15,
+      "row": "Comisiones y deslizamiento × 2",
+      "column": "Retorno condicional",
+      "expected_published": "6.3783",
+      "published_display": "6,3783%",
+      "source": "results/costos_capacidad/evidencia/tablas/metricas.csv",
+      "field": "net_return",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "C02",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 15,
+      "row": "Comisiones y deslizamiento × 2",
+      "column": "Retorno incondicional",
+      "expected_published": "14.0495",
+      "published_display": "14,0495%",
+      "source": "results/costos_capacidad/evidencia/tablas/metricas.csv",
+      "field": "net_return",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "C02",
+        "strategy": "permanent",
+        "period": "full"
+      }
+    },
+    {
+      "table": 15,
+      "row": "Comisiones y deslizamiento × 2",
+      "column": "Sharpe condicional",
+      "expected_published": "3.5448",
+      "published_display": "3,5448",
+      "source": "results/costos_capacidad/evidencia/tablas/metricas.csv",
+      "field": "sharpe",
+      "multiplier": 1,
+      "decimals": 4,
+      "selector": {
+        "scenario": "C02",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 15,
+      "row": "Comisiones y deslizamiento × 2",
+      "column": "Sharpe incondicional",
+      "expected_published": "5.1656",
+      "published_display": "5,1656",
+      "source": "results/costos_capacidad/evidencia/tablas/metricas.csv",
+      "field": "sharpe",
+      "multiplier": 1,
+      "decimals": 4,
+      "selector": {
+        "scenario": "C02",
+        "strategy": "permanent",
+        "period": "full"
+      }
+    },
+    {
+      "table": 15,
+      "row": "Comisiones y deslizamiento × 3",
+      "column": "Retorno condicional",
+      "expected_published": "5.0058",
+      "published_display": "5,0058%",
+      "source": "results/costos_capacidad/evidencia/tablas/metricas.csv",
+      "field": "net_return",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "C03",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 15,
+      "row": "Comisiones y deslizamiento × 3",
+      "column": "Retorno incondicional",
+      "expected_published": "9.9984",
+      "published_display": "9,9984%",
+      "source": "results/costos_capacidad/evidencia/tablas/metricas.csv",
+      "field": "net_return",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "C03",
+        "strategy": "permanent",
+        "period": "full"
+      }
+    },
+    {
+      "table": 15,
+      "row": "Comisiones y deslizamiento × 3",
+      "column": "Sharpe condicional",
+      "expected_published": "2.3672",
+      "published_display": "2,3672",
+      "source": "results/costos_capacidad/evidencia/tablas/metricas.csv",
+      "field": "sharpe",
+      "multiplier": 1,
+      "decimals": 4,
+      "selector": {
+        "scenario": "C03",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 15,
+      "row": "Comisiones y deslizamiento × 3",
+      "column": "Sharpe incondicional",
+      "expected_published": "3.1213",
+      "published_display": "3,1213",
+      "source": "results/costos_capacidad/evidencia/tablas/metricas.csv",
+      "field": "sharpe",
+      "multiplier": 1,
+      "decimals": 4,
+      "selector": {
+        "scenario": "C03",
+        "strategy": "permanent",
+        "period": "full"
+      }
+    },
+    {
+      "table": 15,
+      "row": "Cupo 0,50%",
+      "column": "Retorno condicional",
+      "expected_published": "7.7105",
+      "published_display": "7,7105%",
+      "source": "results/costos_capacidad/evidencia/tablas/metricas.csv",
+      "field": "net_return",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "P050",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 15,
+      "row": "Cupo 0,50%",
+      "column": "Retorno incondicional",
+      "expected_published": "16.3871",
+      "published_display": "16,3871%",
+      "source": "results/costos_capacidad/evidencia/tablas/metricas.csv",
+      "field": "net_return",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "P050",
+        "strategy": "permanent",
+        "period": "full"
+      }
+    },
+    {
+      "table": 15,
+      "row": "Cupo 0,50%",
+      "column": "Sharpe condicional",
+      "expected_published": "4.8053",
+      "published_display": "4,8053",
+      "source": "results/costos_capacidad/evidencia/tablas/metricas.csv",
+      "field": "sharpe",
+      "multiplier": 1,
+      "decimals": 4,
+      "selector": {
+        "scenario": "P050",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 15,
+      "row": "Cupo 0,50%",
+      "column": "Sharpe incondicional",
+      "expected_published": "6.1629",
+      "published_display": "6,1629",
+      "source": "results/costos_capacidad/evidencia/tablas/metricas.csv",
+      "field": "sharpe",
+      "multiplier": 1,
+      "decimals": 4,
+      "selector": {
+        "scenario": "P050",
+        "strategy": "permanent",
+        "period": "full"
+      }
+    },
+    {
+      "table": 15,
+      "row": "Cupo 0,25%",
+      "column": "Retorno condicional",
+      "expected_published": "6.1510",
+      "published_display": "6,1510%",
+      "source": "results/costos_capacidad/evidencia/tablas/metricas.csv",
+      "field": "net_return",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "P025",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 15,
+      "row": "Cupo 0,25%",
+      "column": "Retorno incondicional",
+      "expected_published": "15.3055",
+      "published_display": "15,3055%",
+      "source": "results/costos_capacidad/evidencia/tablas/metricas.csv",
+      "field": "net_return",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "P025",
+        "strategy": "permanent",
+        "period": "full"
+      }
+    },
+    {
+      "table": 15,
+      "row": "Cupo 0,25%",
+      "column": "Sharpe condicional",
+      "expected_published": "4.6387",
+      "published_display": "4,6387",
+      "source": "results/costos_capacidad/evidencia/tablas/metricas.csv",
+      "field": "sharpe",
+      "multiplier": 1,
+      "decimals": 4,
+      "selector": {
+        "scenario": "P025",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 15,
+      "row": "Cupo 0,25%",
+      "column": "Sharpe incondicional",
+      "expected_published": "5.9087",
+      "published_display": "5,9087",
+      "source": "results/costos_capacidad/evidencia/tablas/metricas.csv",
+      "field": "sharpe",
+      "multiplier": 1,
+      "decimals": 4,
+      "selector": {
+        "scenario": "P025",
+        "strategy": "permanent",
+        "period": "full"
+      }
+    },
+    {
+      "table": 15,
+      "row": "Capital 50.000 USDT",
+      "column": "Retorno condicional",
+      "expected_published": "6.1813",
+      "published_display": "6,1813%",
+      "source": "results/costos_capacidad/evidencia/tablas/metricas.csv",
+      "field": "net_return",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "A050",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 15,
+      "row": "Capital 50.000 USDT",
+      "column": "Retorno incondicional",
+      "expected_published": "12.5623",
+      "published_display": "12,5623%",
+      "source": "results/costos_capacidad/evidencia/tablas/metricas.csv",
+      "field": "net_return",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "A050",
+        "strategy": "permanent",
+        "period": "full"
+      }
+    },
+    {
+      "table": 15,
+      "row": "Capital 50.000 USDT",
+      "column": "Sharpe condicional",
+      "expected_published": "4.8327",
+      "published_display": "4,8327",
+      "source": "results/costos_capacidad/evidencia/tablas/metricas.csv",
+      "field": "sharpe",
+      "multiplier": 1,
+      "decimals": 4,
+      "selector": {
+        "scenario": "A050",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 15,
+      "row": "Capital 50.000 USDT",
+      "column": "Sharpe incondicional",
+      "expected_published": "4.9840",
+      "published_display": "4,9840",
+      "source": "results/costos_capacidad/evidencia/tablas/metricas.csv",
+      "field": "sharpe",
+      "multiplier": 1,
+      "decimals": 4,
+      "selector": {
+        "scenario": "A050",
+        "strategy": "permanent",
+        "period": "full"
+      }
+    },
+    {
+      "table": 15,
+      "row": "Capital 100.000 USDT",
+      "column": "Retorno condicional",
+      "expected_published": "4.8786",
+      "published_display": "4,8786%",
+      "source": "results/costos_capacidad/evidencia/tablas/metricas.csv",
+      "field": "net_return",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "A100",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 15,
+      "row": "Capital 100.000 USDT",
+      "column": "Retorno incondicional",
+      "expected_published": "5.4635",
+      "published_display": "5,4635%",
+      "source": "results/costos_capacidad/evidencia/tablas/metricas.csv",
+      "field": "net_return",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "A100",
+        "strategy": "permanent",
+        "period": "full"
+      }
+    },
+    {
+      "table": 15,
+      "row": "Capital 100.000 USDT",
+      "column": "Sharpe condicional",
+      "expected_published": "4.2093",
+      "published_display": "4,2093",
+      "source": "results/costos_capacidad/evidencia/tablas/metricas.csv",
+      "field": "sharpe",
+      "multiplier": 1,
+      "decimals": 4,
+      "selector": {
+        "scenario": "A100",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 15,
+      "row": "Capital 100.000 USDT",
+      "column": "Sharpe incondicional",
+      "expected_published": "2.7626",
+      "published_display": "2,7626",
+      "source": "results/costos_capacidad/evidencia/tablas/metricas.csv",
+      "field": "sharpe",
+      "multiplier": 1,
+      "decimals": 4,
+      "selector": {
+        "scenario": "A100",
+        "strategy": "permanent",
+        "period": "full"
+      }
+    },
+    {
+      "table": 16,
+      "row": "BASE, VWAP",
+      "column": "Retorno condicional",
+      "expected_published": "7.8576",
+      "published_display": "7,8576%",
+      "source": "results/ejecucion/evidencia/tablas/metricas.csv",
+      "field": "net_return",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "BASE_E3",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 16,
+      "row": "BASE, VWAP",
+      "column": "Retorno incondicional",
+      "expected_published": "16.8007",
+      "published_display": "16,8007%",
+      "source": "results/ejecucion/evidencia/tablas/metricas.csv",
+      "field": "net_return",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "BASE_E3",
+        "strategy": "permanent",
+        "period": "full"
+      }
+    },
+    {
+      "table": 16,
+      "row": "BASE, VWAP",
+      "column": "Sharpe condicional",
+      "expected_published": "4.9624",
+      "published_display": "4,9624",
+      "source": "results/ejecucion/evidencia/tablas/metricas.csv",
+      "field": "sharpe",
+      "multiplier": 1,
+      "decimals": 4,
+      "selector": {
+        "scenario": "BASE_E3",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 16,
+      "row": "BASE, VWAP",
+      "column": "Sharpe incondicional",
+      "expected_published": "6.5336",
+      "published_display": "6,5336",
+      "source": "results/ejecucion/evidencia/tablas/metricas.csv",
+      "field": "sharpe",
+      "multiplier": 1,
+      "decimals": 4,
+      "selector": {
+        "scenario": "BASE_E3",
+        "strategy": "permanent",
+        "period": "full"
+      }
+    },
+    {
+      "table": 16,
+      "row": "OHLC4",
+      "column": "Retorno condicional",
+      "expected_published": "7.9309",
+      "published_display": "7,9309%",
+      "source": "results/ejecucion/evidencia/tablas/metricas.csv",
+      "field": "net_return",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "E_OHLC4",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 16,
+      "row": "OHLC4",
+      "column": "Retorno incondicional",
+      "expected_published": "16.5744",
+      "published_display": "16,5744%",
+      "source": "results/ejecucion/evidencia/tablas/metricas.csv",
+      "field": "net_return",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "E_OHLC4",
+        "strategy": "permanent",
+        "period": "full"
+      }
+    },
+    {
+      "table": 16,
+      "row": "OHLC4",
+      "column": "Sharpe condicional",
+      "expected_published": "4.6804",
+      "published_display": "4,6804",
+      "source": "results/ejecucion/evidencia/tablas/metricas.csv",
+      "field": "sharpe",
+      "multiplier": 1,
+      "decimals": 4,
+      "selector": {
+        "scenario": "E_OHLC4",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 16,
+      "row": "OHLC4",
+      "column": "Sharpe incondicional",
+      "expected_published": "6.0784",
+      "published_display": "6,0784",
+      "source": "results/ejecucion/evidencia/tablas/metricas.csv",
+      "field": "sharpe",
+      "multiplier": 1,
+      "decimals": 4,
+      "selector": {
+        "scenario": "E_OHLC4",
+        "strategy": "permanent",
+        "period": "full"
+      }
+    },
+    {
+      "table": 16,
+      "row": "Demora general 1 min",
+      "column": "Retorno condicional",
+      "expected_published": "8.0546",
+      "published_display": "8,0546%",
+      "source": "results/ejecucion/evidencia/tablas/metricas.csv",
+      "field": "net_return",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "L01",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 16,
+      "row": "Demora general 1 min",
+      "column": "Retorno incondicional",
+      "expected_published": "15.1850",
+      "published_display": "15,1850%",
+      "source": "results/ejecucion/evidencia/tablas/metricas.csv",
+      "field": "net_return",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "L01",
+        "strategy": "permanent",
+        "period": "full"
+      }
+    },
+    {
+      "table": 16,
+      "row": "Demora general 1 min",
+      "column": "Sharpe condicional",
+      "expected_published": "4.7413",
+      "published_display": "4,7413",
+      "source": "results/ejecucion/evidencia/tablas/metricas.csv",
+      "field": "sharpe",
+      "multiplier": 1,
+      "decimals": 4,
+      "selector": {
+        "scenario": "L01",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 16,
+      "row": "Demora general 1 min",
+      "column": "Sharpe incondicional",
+      "expected_published": "4.2051",
+      "published_display": "4,2051",
+      "source": "results/ejecucion/evidencia/tablas/metricas.csv",
+      "field": "sharpe",
+      "multiplier": 1,
+      "decimals": 4,
+      "selector": {
+        "scenario": "L01",
+        "strategy": "permanent",
+        "period": "full"
+      }
+    },
+    {
+      "table": 16,
+      "row": "Demora general 5 min",
+      "column": "Retorno condicional",
+      "expected_published": "6.1645",
+      "published_display": "6,1645%",
+      "source": "results/ejecucion/evidencia/tablas/metricas.csv",
+      "field": "net_return",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "L05",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 16,
+      "row": "Demora general 5 min",
+      "column": "Retorno incondicional",
+      "expected_published": "15.4495",
+      "published_display": "15,4495%",
+      "source": "results/ejecucion/evidencia/tablas/metricas.csv",
+      "field": "net_return",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "L05",
+        "strategy": "permanent",
+        "period": "full"
+      }
+    },
+    {
+      "table": 16,
+      "row": "Demora general 5 min",
+      "column": "Sharpe condicional",
+      "expected_published": "2.6082",
+      "published_display": "2,6082",
+      "source": "results/ejecucion/evidencia/tablas/metricas.csv",
+      "field": "sharpe",
+      "multiplier": 1,
+      "decimals": 4,
+      "selector": {
+        "scenario": "L05",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 16,
+      "row": "Demora general 5 min",
+      "column": "Sharpe incondicional",
+      "expected_published": "5.9355",
+      "published_display": "5,9355",
+      "source": "results/ejecucion/evidencia/tablas/metricas.csv",
+      "field": "sharpe",
+      "multiplier": 1,
+      "decimals": 4,
+      "selector": {
+        "scenario": "L05",
+        "strategy": "permanent",
+        "period": "full"
+      }
+    },
+    {
+      "table": 16,
+      "row": "Demora de cierre 5 min",
+      "column": "Retorno condicional",
+      "expected_published": "7.3841",
+      "published_display": "7,3841%",
+      "source": "results/ejecucion/evidencia/tablas/metricas.csv",
+      "field": "net_return",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "LC05",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 16,
+      "row": "Demora de cierre 5 min",
+      "column": "Retorno incondicional",
+      "expected_published": "14.2123",
+      "published_display": "14,2123%",
+      "source": "results/ejecucion/evidencia/tablas/metricas.csv",
+      "field": "net_return",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "LC05",
+        "strategy": "permanent",
+        "period": "full"
+      }
+    },
+    {
+      "table": 16,
+      "row": "Demora de cierre 5 min",
+      "column": "Sharpe condicional",
+      "expected_published": "4.5852",
+      "published_display": "4,5852",
+      "source": "results/ejecucion/evidencia/tablas/metricas.csv",
+      "field": "sharpe",
+      "multiplier": 1,
+      "decimals": 4,
+      "selector": {
+        "scenario": "LC05",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 16,
+      "row": "Demora de cierre 5 min",
+      "column": "Sharpe incondicional",
+      "expected_published": "5.3324",
+      "published_display": "5,3324",
+      "source": "results/ejecucion/evidencia/tablas/metricas.csv",
+      "field": "sharpe",
+      "multiplier": 1,
+      "decimals": 4,
+      "selector": {
+        "scenario": "LC05",
+        "strategy": "permanent",
+        "period": "full"
+      }
+    },
+    {
+      "table": 16,
+      "row": "Demora de cierre 15 min",
+      "column": "Retorno condicional",
+      "expected_published": "6.0449",
+      "published_display": "6,0449%",
+      "source": "results/ejecucion/evidencia/tablas/metricas.csv",
+      "field": "net_return",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "LC15",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 16,
+      "row": "Demora de cierre 15 min",
+      "column": "Retorno incondicional",
+      "expected_published": "15.1201",
+      "published_display": "15,1201%",
+      "source": "results/ejecucion/evidencia/tablas/metricas.csv",
+      "field": "net_return",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "LC15",
+        "strategy": "permanent",
+        "period": "full"
+      }
+    },
+    {
+      "table": 16,
+      "row": "Demora de cierre 15 min",
+      "column": "Sharpe condicional",
+      "expected_published": "2.5099",
+      "published_display": "2,5099",
+      "source": "results/ejecucion/evidencia/tablas/metricas.csv",
+      "field": "sharpe",
+      "multiplier": 1,
+      "decimals": 4,
+      "selector": {
+        "scenario": "LC15",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 16,
+      "row": "Demora de cierre 15 min",
+      "column": "Sharpe incondicional",
+      "expected_published": "5.7604",
+      "published_display": "5,7604",
+      "source": "results/ejecucion/evidencia/tablas/metricas.csv",
+      "field": "sharpe",
+      "multiplier": 1,
+      "decimals": 4,
+      "selector": {
+        "scenario": "LC15",
+        "strategy": "permanent",
+        "period": "full"
+      }
+    },
+    {
+      "table": 17,
+      "row": "Condicional",
+      "column": "Valoración diaria",
+      "expected_published": "-0.2062",
+      "published_display": "−0,2062%",
+      "source": "results/riesgo/evidencia/tablas/drawdown_comparativo.csv",
+      "field": "daily_drawdown",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "BASE_E3",
+        "strategy": "conditional",
+        "period": "full",
+        "peak_policy": "period_reset",
+        "valuation": "original_reconstructed"
+      }
+    },
+    {
+      "table": 17,
+      "row": "Condicional",
+      "column": "Intradía original",
+      "expected_published": "-0.5689",
+      "published_display": "−0,5689%",
+      "source": "results/riesgo/evidencia/tablas/drawdown_comparativo.csv",
+      "field": "intraday_drawdown",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "BASE_E3",
+        "strategy": "conditional",
+        "period": "full",
+        "peak_policy": "period_reset",
+        "valuation": "original_reconstructed"
+      }
+    },
+    {
+      "table": 17,
+      "row": "Condicional",
+      "column": "Intradía con precio estimado",
+      "expected_published": "-0.5313",
+      "published_display": "−0,5313%",
+      "source": "results/riesgo/evidencia/tablas/drawdown_comparativo.csv",
+      "field": "intraday_drawdown",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "BASE_E3",
+        "strategy": "conditional",
+        "period": "full",
+        "peak_policy": "period_reset",
+        "valuation": "valoracion_proxy_hipotetica"
+      }
+    },
+    {
+      "table": 17,
+      "row": "Incondicional",
+      "column": "Valoración diaria",
+      "expected_published": "-0.4827",
+      "published_display": "−0,4827%",
+      "source": "results/riesgo/evidencia/tablas/drawdown_comparativo.csv",
+      "field": "daily_drawdown",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "BASE_E3",
+        "strategy": "permanent",
+        "period": "full",
+        "peak_policy": "period_reset",
+        "valuation": "original_reconstructed"
+      }
+    },
+    {
+      "table": 17,
+      "row": "Incondicional",
+      "column": "Intradía original",
+      "expected_published": "-1.0081",
+      "published_display": "−1,0081%",
+      "source": "results/riesgo/evidencia/tablas/drawdown_comparativo.csv",
+      "field": "intraday_drawdown",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "BASE_E3",
+        "strategy": "permanent",
+        "period": "full",
+        "peak_policy": "period_reset",
+        "valuation": "original_reconstructed"
+      }
+    },
+    {
+      "table": 17,
+      "row": "Incondicional",
+      "column": "Intradía con precio estimado",
+      "expected_published": "-1.0081",
+      "published_display": "−1,0081%",
+      "source": "results/riesgo/evidencia/tablas/drawdown_comparativo.csv",
+      "field": "intraday_drawdown",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "BASE_E3",
+        "strategy": "permanent",
+        "period": "full",
+        "peak_policy": "period_reset",
+        "valuation": "valoracion_proxy_hipotetica"
+      }
+    },
+    {
+      "table": 18,
+      "row": "conditional",
+      "column": "closing_balance",
+      "expected_published": "10785.76",
+      "source": "results/benchmark_sofr/evidencia/tablas/comparacion_periodos.csv",
+      "selector": {
+        "period": "full",
+        "portfolio": "conditional"
+      },
+      "field": "closing_balance",
+      "multiplier": "1",
+      "decimals": 2,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "full",
+        "strategy": "conditional",
+        "field": "final_equity_usdt"
+      }
+    },
+    {
+      "table": 18,
+      "row": "conditional",
+      "column": "net_return",
+      "expected_published": "7.8576",
+      "source": "results/benchmark_sofr/evidencia/tablas/comparacion_periodos.csv",
+      "selector": {
+        "period": "full",
+        "portfolio": "conditional"
+      },
+      "field": "net_return",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "full",
+        "strategy": "conditional",
+        "field": "net_return"
+      }
+    },
+    {
+      "table": 18,
+      "row": "conditional",
+      "column": "cagr365",
+      "expected_published": "1.6335",
+      "source": "results/benchmark_sofr/evidencia/tablas/comparacion_periodos.csv",
+      "selector": {
+        "period": "full",
+        "portfolio": "conditional"
+      },
+      "field": "cagr365",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "full",
+        "strategy": "conditional",
+        "field": "cagr"
+      }
+    },
+    {
+      "table": 18,
+      "row": "permanent",
+      "column": "closing_balance",
+      "expected_published": "11680.07",
+      "source": "results/benchmark_sofr/evidencia/tablas/comparacion_periodos.csv",
+      "selector": {
+        "period": "full",
+        "portfolio": "permanent"
+      },
+      "field": "closing_balance",
+      "multiplier": "1",
+      "decimals": 2,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "full",
+        "strategy": "permanent",
+        "field": "final_equity_usdt"
+      }
+    },
+    {
+      "table": 18,
+      "row": "permanent",
+      "column": "net_return",
+      "expected_published": "16.8007",
+      "source": "results/benchmark_sofr/evidencia/tablas/comparacion_periodos.csv",
+      "selector": {
+        "period": "full",
+        "portfolio": "permanent"
+      },
+      "field": "net_return",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "full",
+        "strategy": "permanent",
+        "field": "net_return"
+      }
+    },
+    {
+      "table": 18,
+      "row": "permanent",
+      "column": "cagr365",
+      "expected_published": "3.3825",
+      "source": "results/benchmark_sofr/evidencia/tablas/comparacion_periodos.csv",
+      "selector": {
+        "period": "full",
+        "portfolio": "permanent"
+      },
+      "field": "cagr365",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "full",
+        "strategy": "permanent",
+        "field": "cagr"
+      }
+    },
+    {
+      "table": 18,
+      "row": "sofr",
+      "column": "closing_balance",
+      "expected_published": "12059.50",
+      "source": "results/benchmark_sofr/evidencia/tablas/comparacion_periodos.csv",
+      "selector": {
+        "period": "full",
+        "portfolio": "sofr"
+      },
+      "field": "closing_balance",
+      "multiplier": "1",
+      "decimals": 2,
+      "recompute": {
+        "kind": "sofr",
+        "period": "full",
+        "strategy": "sofr",
+        "field": "final_equity_usdt"
+      }
+    },
+    {
+      "table": 18,
+      "row": "sofr",
+      "column": "net_return",
+      "expected_published": "20.5950",
+      "source": "results/benchmark_sofr/evidencia/tablas/comparacion_periodos.csv",
+      "selector": {
+        "period": "full",
+        "portfolio": "sofr"
+      },
+      "field": "net_return",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "sofr",
+        "period": "full",
+        "strategy": "sofr",
+        "field": "net_return"
+      }
+    },
+    {
+      "table": 18,
+      "row": "sofr",
+      "column": "cagr365",
+      "expected_published": "4.0928",
+      "source": "results/benchmark_sofr/evidencia/tablas/comparacion_periodos.csv",
+      "selector": {
+        "period": "full",
+        "portfolio": "sofr"
+      },
+      "field": "cagr365",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "sofr",
+        "period": "full",
+        "strategy": "sofr",
+        "field": "cagr"
+      }
+    },
+    {
+      "table": 19,
+      "row": "0%",
+      "column": "CAGR condicional",
+      "field": "conditional_CAGR365_percent",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "cash_review/availability_sensitivity.csv",
+      "selector": {
+        "cash_fraction": "0"
+      },
+      "expected_published": "1.6335",
+      "published_display": "1,6335",
+      "role": "result",
+      "recompute": {
+        "kind": "cash",
+        "fraction": "0",
+        "field": "conditional_CAGR365_percent"
+      }
+    },
+    {
+      "table": 19,
+      "row": "0%",
+      "column": "CAGR incondicional",
+      "field": "permanent_CAGR365_percent",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "cash_review/availability_sensitivity.csv",
+      "selector": {
+        "cash_fraction": "0"
+      },
+      "expected_published": "3.3825",
+      "published_display": "3,3825",
+      "role": "result",
+      "recompute": {
+        "kind": "cash",
+        "fraction": "0",
+        "field": "permanent_CAGR365_percent"
+      }
+    },
+    {
+      "table": 19,
+      "row": "0%",
+      "column": "Sharpe condicional",
+      "field": "conditional_Sharpe_rf0",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "cash_review/availability_sensitivity.csv",
+      "selector": {
+        "cash_fraction": "0"
+      },
+      "expected_published": "4.9624",
+      "published_display": "4,9624",
+      "role": "result",
+      "recompute": {
+        "kind": "cash",
+        "fraction": "0",
+        "field": "conditional_Sharpe_rf0"
+      }
+    },
+    {
+      "table": 19,
+      "row": "0%",
+      "column": "Sharpe incondicional",
+      "field": "permanent_Sharpe_rf0",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "cash_review/availability_sensitivity.csv",
+      "selector": {
+        "cash_fraction": "0"
+      },
+      "expected_published": "6.5336",
+      "published_display": "6,5336",
+      "role": "result",
+      "recompute": {
+        "kind": "cash",
+        "fraction": "0",
+        "field": "permanent_Sharpe_rf0"
+      }
+    },
+    {
+      "table": 19,
+      "row": "0%",
+      "column": "Fracción remunerada",
+      "field": "cash_fraction",
+      "multiplier": 100,
+      "decimals": 0,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "cash_review/availability_sensitivity.csv",
+      "selector": {
+        "cash_fraction": "0"
+      },
+      "expected_published": "0",
+      "published_display": "0",
+      "role": "parameter_row_label",
+      "recompute": {
+        "kind": "cash",
+        "fraction": "0",
+        "field": "cash_fraction"
+      }
+    },
+    {
+      "table": 19,
+      "row": "50%",
+      "column": "CAGR condicional",
+      "field": "conditional_CAGR365_percent",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "cash_review/availability_sensitivity.csv",
+      "selector": {
+        "cash_fraction": "0.5"
+      },
+      "expected_published": "3.2008",
+      "published_display": "3,2008",
+      "role": "result",
+      "recompute": {
+        "kind": "cash",
+        "fraction": "0.5",
+        "field": "conditional_CAGR365_percent"
+      }
+    },
+    {
+      "table": 19,
+      "row": "50%",
+      "column": "CAGR incondicional",
+      "field": "permanent_CAGR365_percent",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "cash_review/availability_sensitivity.csv",
+      "selector": {
+        "cash_fraction": "0.5"
+      },
+      "expected_published": "3.5683",
+      "published_display": "3,5683",
+      "role": "result",
+      "recompute": {
+        "kind": "cash",
+        "fraction": "0.5",
+        "field": "permanent_CAGR365_percent"
+      }
+    },
+    {
+      "table": 19,
+      "row": "50%",
+      "column": "Sharpe condicional",
+      "field": "conditional_Sharpe_rf0",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "cash_review/availability_sensitivity.csv",
+      "selector": {
+        "cash_fraction": "0.5"
+      },
+      "expected_published": "10.2306",
+      "published_display": "10,2306",
+      "role": "result",
+      "recompute": {
+        "kind": "cash",
+        "fraction": "0.5",
+        "field": "conditional_Sharpe_rf0"
+      }
+    },
+    {
+      "table": 19,
+      "row": "50%",
+      "column": "Sharpe incondicional",
+      "field": "permanent_Sharpe_rf0",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "cash_review/availability_sensitivity.csv",
+      "selector": {
+        "cash_fraction": "0.5"
+      },
+      "expected_published": "6.8864",
+      "published_display": "6,8864",
+      "role": "result",
+      "recompute": {
+        "kind": "cash",
+        "fraction": "0.5",
+        "field": "permanent_Sharpe_rf0"
+      }
+    },
+    {
+      "table": 19,
+      "row": "50%",
+      "column": "Fracción remunerada",
+      "field": "cash_fraction",
+      "multiplier": 100,
+      "decimals": 0,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "cash_review/availability_sensitivity.csv",
+      "selector": {
+        "cash_fraction": "0.5"
+      },
+      "expected_published": "50",
+      "published_display": "50",
+      "role": "parameter_row_label",
+      "recompute": {
+        "kind": "cash",
+        "fraction": "0.5",
+        "field": "cash_fraction"
+      }
+    },
+    {
+      "table": 19,
+      "row": "75%",
+      "column": "CAGR condicional",
+      "field": "conditional_CAGR365_percent",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "cash_review/availability_sensitivity.csv",
+      "selector": {
+        "cash_fraction": "0.75"
+      },
+      "expected_published": "3.9528",
+      "published_display": "3,9528",
+      "role": "result",
+      "recompute": {
+        "kind": "cash",
+        "fraction": "0.75",
+        "field": "conditional_CAGR365_percent"
+      }
+    },
+    {
+      "table": 19,
+      "row": "75%",
+      "column": "CAGR incondicional",
+      "field": "permanent_CAGR365_percent",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "cash_review/availability_sensitivity.csv",
+      "selector": {
+        "cash_fraction": "0.75"
+      },
+      "expected_published": "3.6607",
+      "published_display": "3,6607",
+      "role": "result",
+      "recompute": {
+        "kind": "cash",
+        "fraction": "0.75",
+        "field": "permanent_CAGR365_percent"
+      }
+    },
+    {
+      "table": 19,
+      "row": "75%",
+      "column": "Sharpe condicional",
+      "field": "conditional_Sharpe_rf0",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "cash_review/availability_sensitivity.csv",
+      "selector": {
+        "cash_fraction": "0.75"
+      },
+      "expected_published": "12.8513",
+      "published_display": "12,8513",
+      "role": "result",
+      "recompute": {
+        "kind": "cash",
+        "fraction": "0.75",
+        "field": "conditional_Sharpe_rf0"
+      }
+    },
+    {
+      "table": 19,
+      "row": "75%",
+      "column": "Sharpe incondicional",
+      "field": "permanent_Sharpe_rf0",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "cash_review/availability_sensitivity.csv",
+      "selector": {
+        "cash_fraction": "0.75"
+      },
+      "expected_published": "7.0584",
+      "published_display": "7,0584",
+      "role": "result",
+      "recompute": {
+        "kind": "cash",
+        "fraction": "0.75",
+        "field": "permanent_Sharpe_rf0"
+      }
+    },
+    {
+      "table": 19,
+      "row": "75%",
+      "column": "Fracción remunerada",
+      "field": "cash_fraction",
+      "multiplier": 100,
+      "decimals": 0,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "cash_review/availability_sensitivity.csv",
+      "selector": {
+        "cash_fraction": "0.75"
+      },
+      "expected_published": "75",
+      "published_display": "75",
+      "role": "parameter_row_label",
+      "recompute": {
+        "kind": "cash",
+        "fraction": "0.75",
+        "field": "cash_fraction"
+      }
+    },
+    {
+      "table": 19,
+      "row": "100%",
+      "column": "CAGR condicional",
+      "field": "conditional_CAGR365_percent",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "cash_review/availability_sensitivity.csv",
+      "selector": {
+        "cash_fraction": "1"
+      },
+      "expected_published": "4.6853",
+      "published_display": "4,6853",
+      "role": "result",
+      "recompute": {
+        "kind": "cash",
+        "fraction": "1",
+        "field": "conditional_CAGR365_percent"
+      }
+    },
+    {
+      "table": 19,
+      "row": "100%",
+      "column": "CAGR incondicional",
+      "field": "permanent_CAGR365_percent",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "cash_review/availability_sensitivity.csv",
+      "selector": {
+        "cash_fraction": "1"
+      },
+      "expected_published": "3.7529",
+      "published_display": "3,7529",
+      "role": "result",
+      "recompute": {
+        "kind": "cash",
+        "fraction": "1",
+        "field": "permanent_CAGR365_percent"
+      }
+    },
+    {
+      "table": 19,
+      "row": "100%",
+      "column": "Sharpe condicional",
+      "field": "conditional_Sharpe_rf0",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "cash_review/availability_sensitivity.csv",
+      "selector": {
+        "cash_fraction": "1"
+      },
+      "expected_published": "15.4049",
+      "published_display": "15,4049",
+      "role": "result",
+      "recompute": {
+        "kind": "cash",
+        "fraction": "1",
+        "field": "conditional_Sharpe_rf0"
+      }
+    },
+    {
+      "table": 19,
+      "row": "100%",
+      "column": "Sharpe incondicional",
+      "field": "permanent_Sharpe_rf0",
+      "multiplier": 1,
+      "decimals": 4,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "cash_review/availability_sensitivity.csv",
+      "selector": {
+        "cash_fraction": "1"
+      },
+      "expected_published": "7.2274",
+      "published_display": "7,2274",
+      "role": "result",
+      "recompute": {
+        "kind": "cash",
+        "fraction": "1",
+        "field": "permanent_Sharpe_rf0"
+      }
+    },
+    {
+      "table": 19,
+      "row": "100%",
+      "column": "Fracción remunerada",
+      "field": "cash_fraction",
+      "multiplier": 100,
+      "decimals": 0,
+      "source": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "member": "cash_review/availability_sensitivity.csv",
+      "selector": {
+        "cash_fraction": "1"
+      },
+      "expected_published": "100",
+      "published_display": "100",
+      "role": "parameter_row_label",
+      "recompute": {
+        "kind": "cash",
+        "fraction": "1",
+        "field": "cash_fraction"
+      }
+    },
+    {
+      "table": 20,
+      "row": "Inicio 2023",
+      "column": "CAGR condicional",
+      "expected_published": "2.0833",
+      "published_display": "2,0833%",
+      "source": "results/estabilidad/evidencia/tablas/comparacion_inicios.csv",
+      "field": "new_cagr",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "I2023",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 20,
+      "row": "Inicio 2023",
+      "column": "CAGR incondicional",
+      "expected_published": "3.8476",
+      "published_display": "3,8476%",
+      "source": "results/estabilidad/evidencia/tablas/comparacion_inicios.csv",
+      "field": "new_cagr",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "I2023",
+        "strategy": "permanent",
+        "period": "full"
+      }
+    },
+    {
+      "table": 20,
+      "row": "Inicio 2023",
+      "column": "Sharpe condicional",
+      "expected_published": "5.6498",
+      "published_display": "5,6498",
+      "source": "results/estabilidad/evidencia/tablas/comparacion_inicios.csv",
+      "field": "new_sharpe",
+      "multiplier": 1,
+      "decimals": 4,
+      "selector": {
+        "scenario": "I2023",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 20,
+      "row": "Inicio 2023",
+      "column": "Sharpe incondicional",
+      "expected_published": "8.4791",
+      "published_display": "8,4791",
+      "source": "results/estabilidad/evidencia/tablas/comparacion_inicios.csv",
+      "field": "new_sharpe",
+      "multiplier": 1,
+      "decimals": 4,
+      "selector": {
+        "scenario": "I2023",
+        "strategy": "permanent",
+        "period": "full"
+      }
+    },
+    {
+      "table": 20,
+      "row": "Inicio 2024",
+      "column": "CAGR condicional",
+      "expected_published": "2.2431",
+      "published_display": "2,2431%",
+      "source": "results/estabilidad/evidencia/tablas/comparacion_inicios.csv",
+      "field": "new_cagr",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "I2024",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 20,
+      "row": "Inicio 2024",
+      "column": "CAGR incondicional",
+      "expected_published": "3.6639",
+      "published_display": "3,6639%",
+      "source": "results/estabilidad/evidencia/tablas/comparacion_inicios.csv",
+      "field": "new_cagr",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "scenario": "I2024",
+        "strategy": "permanent",
+        "period": "full"
+      }
+    },
+    {
+      "table": 20,
+      "row": "Inicio 2024",
+      "column": "Sharpe condicional",
+      "expected_published": "6.8156",
+      "published_display": "6,8156",
+      "source": "results/estabilidad/evidencia/tablas/comparacion_inicios.csv",
+      "field": "new_sharpe",
+      "multiplier": 1,
+      "decimals": 4,
+      "selector": {
+        "scenario": "I2024",
+        "strategy": "conditional",
+        "period": "full"
+      }
+    },
+    {
+      "table": 20,
+      "row": "Inicio 2024",
+      "column": "Sharpe incondicional",
+      "expected_published": "10.6784",
+      "published_display": "10,6784",
+      "source": "results/estabilidad/evidencia/tablas/comparacion_inicios.csv",
+      "field": "new_sharpe",
+      "multiplier": 1,
+      "decimals": 4,
+      "selector": {
+        "scenario": "I2024",
+        "strategy": "permanent",
+        "period": "full"
+      }
+    },
+    {
+      "table": 21,
+      "row": "H1: MAE EWMA menos sin cambio",
+      "column": "Estimación",
+      "expected_published": "-2.4043",
+      "published_display": "−2,4043",
+      "source": "results/estabilidad/evidencia/tablas/bootstrap_intervalos.csv",
+      "field": "point_estimate",
+      "multiplier": 1,
+      "decimals": 4,
+      "selector": {
+        "metric": "h1_mae_delta_bps",
+        "period": "full",
+        "symbol": "EQUAL_WEIGHT",
+        "block_length_days": "28",
+        "block_role": "principal"
+      }
+    },
+    {
+      "table": 21,
+      "row": "H1: MAE EWMA menos sin cambio",
+      "column": "IC marginal 95% (inferior)",
+      "expected_published": "-2.7263",
+      "published_display": "−2,7263",
+      "source": "results/estabilidad/evidencia/tablas/bootstrap_intervalos.csv",
+      "field": "interval_low",
+      "multiplier": 1,
+      "decimals": 4,
+      "selector": {
+        "metric": "h1_mae_delta_bps",
+        "period": "full",
+        "symbol": "EQUAL_WEIGHT",
+        "block_length_days": "28",
+        "block_role": "principal"
+      }
+    },
+    {
+      "table": 21,
+      "row": "H1: MAE EWMA menos sin cambio",
+      "column": "IC marginal 95% (superior)",
+      "expected_published": "-2.0905",
+      "published_display": "−2,0905",
+      "source": "results/estabilidad/evidencia/tablas/bootstrap_intervalos.csv",
+      "field": "interval_high",
+      "multiplier": 1,
+      "decimals": 4,
+      "selector": {
+        "metric": "h1_mae_delta_bps",
+        "period": "full",
+        "symbol": "EQUAL_WEIGHT",
+        "block_length_days": "28",
+        "block_role": "principal"
+      }
+    },
+    {
+      "table": 21,
+      "row": "H2: CAGR condicional",
+      "column": "Estimación",
+      "expected_published": "1.6335",
+      "published_display": "1,6335",
+      "source": "results/estabilidad/evidencia/tablas/bootstrap_intervalos.csv",
+      "field": "point_estimate",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "metric": "h2_conditional_cagr",
+        "period": "full",
+        "symbol": "PORTFOLIO",
+        "block_length_days": "28",
+        "block_role": "principal"
+      }
+    },
+    {
+      "table": 21,
+      "row": "H2: CAGR condicional",
+      "column": "IC marginal 95% (inferior)",
+      "expected_published": "0.9610",
+      "published_display": "0,9610",
+      "source": "results/estabilidad/evidencia/tablas/bootstrap_intervalos.csv",
+      "field": "interval_low",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "metric": "h2_conditional_cagr",
+        "period": "full",
+        "symbol": "PORTFOLIO",
+        "block_length_days": "28",
+        "block_role": "principal"
+      }
+    },
+    {
+      "table": 21,
+      "row": "H2: CAGR condicional",
+      "column": "IC marginal 95% (superior)",
+      "expected_published": "2.3861",
+      "published_display": "2,3861",
+      "source": "results/estabilidad/evidencia/tablas/bootstrap_intervalos.csv",
+      "field": "interval_high",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "metric": "h2_conditional_cagr",
+        "period": "full",
+        "symbol": "PORTFOLIO",
+        "block_length_days": "28",
+        "block_role": "principal"
+      }
+    },
+    {
+      "table": 21,
+      "row": "H2: Sharpe condicional menos incondicional",
+      "column": "Estimación",
+      "expected_published": "-1.5713",
+      "published_display": "−1,5713",
+      "source": "results/estabilidad/evidencia/tablas/bootstrap_intervalos.csv",
+      "field": "point_estimate",
+      "multiplier": 1,
+      "decimals": 4,
+      "selector": {
+        "metric": "h2_sharpe_delta",
+        "period": "full",
+        "symbol": "PORTFOLIO",
+        "block_length_days": "28",
+        "block_role": "principal"
+      }
+    },
+    {
+      "table": 21,
+      "row": "H2: Sharpe condicional menos incondicional",
+      "column": "IC marginal 95% (inferior)",
+      "expected_published": "-4.2294",
+      "published_display": "−4,2294",
+      "source": "results/estabilidad/evidencia/tablas/bootstrap_intervalos.csv",
+      "field": "interval_low",
+      "multiplier": 1,
+      "decimals": 4,
+      "selector": {
+        "metric": "h2_sharpe_delta",
+        "period": "full",
+        "symbol": "PORTFOLIO",
+        "block_length_days": "28",
+        "block_role": "principal"
+      }
+    },
+    {
+      "table": 21,
+      "row": "H2: Sharpe condicional menos incondicional",
+      "column": "IC marginal 95% (superior)",
+      "expected_published": "-0.2309",
+      "published_display": "−0,2309",
+      "source": "results/estabilidad/evidencia/tablas/bootstrap_intervalos.csv",
+      "field": "interval_high",
+      "multiplier": 1,
+      "decimals": 4,
+      "selector": {
+        "metric": "h2_sharpe_delta",
+        "period": "full",
+        "symbol": "PORTFOLIO",
+        "block_length_days": "28",
+        "block_role": "principal"
+      }
+    },
+    {
+      "table": 21,
+      "row": "H3: diferencia de oportunidad",
+      "column": "Estimación",
+      "expected_published": "2.6793",
+      "published_display": "2,6793",
+      "source": "results/estabilidad/evidencia/tablas/bootstrap_intervalos.csv",
+      "field": "point_estimate",
+      "multiplier": 1,
+      "decimals": 4,
+      "selector": {
+        "metric": "h3_opportunity_delta_bps",
+        "period": "2024+ minus 2022-2023",
+        "symbol": "PORTFOLIO",
+        "block_length_days": "28",
+        "block_role": "principal"
+      }
+    },
+    {
+      "table": 21,
+      "row": "H3: diferencia de oportunidad",
+      "column": "IC marginal 95% (inferior)",
+      "expected_published": "-1.0766",
+      "published_display": "−1,0766",
+      "source": "results/estabilidad/evidencia/tablas/bootstrap_intervalos.csv",
+      "field": "interval_low",
+      "multiplier": 1,
+      "decimals": 4,
+      "selector": {
+        "metric": "h3_opportunity_delta_bps",
+        "period": "2024+ minus 2022-2023",
+        "symbol": "PORTFOLIO",
+        "block_length_days": "28",
+        "block_role": "principal"
+      }
+    },
+    {
+      "table": 21,
+      "row": "H3: diferencia de oportunidad",
+      "column": "IC marginal 95% (superior)",
+      "expected_published": "7.3166",
+      "published_display": "7,3166",
+      "source": "results/estabilidad/evidencia/tablas/bootstrap_intervalos.csv",
+      "field": "interval_high",
+      "multiplier": 1,
+      "decimals": 4,
+      "selector": {
+        "metric": "h3_opportunity_delta_bps",
+        "period": "2024+ minus 2022-2023",
+        "symbol": "PORTFOLIO",
+        "block_length_days": "28",
+        "block_role": "principal"
+      }
+    },
+    {
+      "table": 21,
+      "row": "H3: diferencia de CAGR condicional",
+      "column": "Estimación",
+      "expected_published": "0.9679",
+      "published_display": "0,9679",
+      "source": "results/estabilidad/evidencia/tablas/bootstrap_intervalos.csv",
+      "field": "point_estimate",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "metric": "h3_conditional_cagr_delta",
+        "period": "2024+ minus 2022-2023",
+        "symbol": "PORTFOLIO",
+        "block_length_days": "28",
+        "block_role": "principal"
+      }
+    },
+    {
+      "table": 21,
+      "row": "H3: diferencia de CAGR condicional",
+      "column": "IC marginal 95% (inferior)",
+      "expected_published": "-0.4132",
+      "published_display": "−0,4132",
+      "source": "results/estabilidad/evidencia/tablas/bootstrap_intervalos.csv",
+      "field": "interval_low",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "metric": "h3_conditional_cagr_delta",
+        "period": "2024+ minus 2022-2023",
+        "symbol": "PORTFOLIO",
+        "block_length_days": "28",
+        "block_role": "principal"
+      }
+    },
+    {
+      "table": 21,
+      "row": "H3: diferencia de CAGR condicional",
+      "column": "IC marginal 95% (superior)",
+      "expected_published": "2.3881",
+      "published_display": "2,3881",
+      "source": "results/estabilidad/evidencia/tablas/bootstrap_intervalos.csv",
+      "field": "interval_high",
+      "multiplier": 100,
+      "decimals": 4,
+      "selector": {
+        "metric": "h3_conditional_cagr_delta",
+        "period": "2024+ minus 2022-2023",
+        "symbol": "PORTFOLIO",
+        "block_length_days": "28",
+        "block_role": "principal"
+      }
+    },
+    {
+      "table": 22,
+      "row": "H1",
+      "column": "MAE EWMA",
+      "expected_published": "6.2990",
+      "source": "results/base/continuo/tablas/h1_resumen.csv",
+      "selector": {
+        "period": "full",
+        "symbol": "EQUAL_WEIGHT"
+      },
+      "field": "mae_ewma",
+      "multiplier": "10000",
+      "decimals": 4,
+      "recompute": {
+        "kind": "h1",
+        "period": "full",
+        "field": "mae_ewma"
+      }
+    },
+    {
+      "table": 22,
+      "row": "H1",
+      "column": "MAE sin cambio",
+      "expected_published": "8.7033",
+      "source": "results/base/continuo/tablas/h1_resumen.csv",
+      "selector": {
+        "period": "full",
+        "symbol": "EQUAL_WEIGHT"
+      },
+      "field": "mae_no_change",
+      "multiplier": "10000",
+      "decimals": 4,
+      "recompute": {
+        "kind": "h1",
+        "period": "full",
+        "field": "mae_no_change"
+      }
+    },
+    {
+      "table": 22,
+      "row": "H2",
+      "column": "CAGR",
+      "expected_published": "1.6335",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "full",
+        "strategy": "conditional"
+      },
+      "field": "cagr",
+      "multiplier": "100",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "full",
+        "strategy": "conditional",
+        "field": "cagr"
+      }
+    },
+    {
+      "table": 22,
+      "row": "H2",
+      "column": "Sharpe condicional",
+      "expected_published": "4.9624",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "full",
+        "strategy": "conditional"
+      },
+      "field": "sharpe",
+      "multiplier": "1",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "full",
+        "strategy": "conditional",
+        "field": "sharpe"
+      }
+    },
+    {
+      "table": 22,
+      "row": "H2",
+      "column": "Sharpe incondicional",
+      "expected_published": "6.5336",
+      "source": "results/base/continuo/tablas/resultados_periodos.csv",
+      "selector": {
+        "period": "full",
+        "strategy": "permanent"
+      },
+      "field": "sharpe",
+      "multiplier": "1",
+      "decimals": 4,
+      "recompute": {
+        "kind": "portfolio",
+        "period": "full",
+        "strategy": "permanent",
+        "field": "sharpe"
+      }
+    }
+  ],
+  "source_files": [
+    {
+      "path": "configs/reglas_historicas/BASE_E3.toml",
+      "sha256": "de8388f6ec90913fab195452ffadb749aafedb461e498b4188f0a38d1bcf66e5"
+    },
+    {
+      "path": "data/evidence/carteras_continuas.zip",
+      "sha256": "48485e691f7ae4b479d25766ee46aeac199cf4ea022a36d01cde177e87770916"
+    },
+    {
+      "path": "results/base/continuo/tablas/actividad.csv",
+      "sha256": "8b9362621ae7f0265583c4e44a099746da7ed102d7c0175a280b05acc384b871"
+    },
+    {
+      "path": "results/base/continuo/tablas/filtros_entrada.csv",
+      "sha256": "27acecd2a0c8868f704447559c5c64540d9142cf53c3bc81ad13b4d0f08fced1"
+    },
+    {
+      "path": "results/base/continuo/tablas/h1_resumen.csv",
+      "sha256": "4409c54134eb6affc0f74202b6e2524c6da12d0b18be4ae483b128853d6ad899"
+    },
+    {
+      "path": "results/base/continuo/tablas/h3_resumen.csv",
+      "sha256": "0ced29faba09bf6f27bdac08ee5fe75ae77b59f4928751e6c18d49bfca846e76"
+    },
+    {
+      "path": "results/base/continuo/tablas/resultados_periodos.csv",
+      "sha256": "d58d6107e09d70e335418cd90348d90903d5e915ba79a69c59deab480a370581"
+    },
+    {
+      "path": "results/base/continuo/tablas/tiempo_invertido.csv",
+      "sha256": "9c35e6b80db80acef78ea6b11fe7666532b8c0ad9ac46c62880ac542ddd3a5f0"
+    },
+    {
+      "path": "results/benchmark_sofr/evidencia/tablas/cartera_sofr_diaria.csv",
+      "sha256": "1312f000c2a36818a925a8573d2c34fdc69822e65f05c0d810f199acc6872b8d"
+    },
+    {
+      "path": "results/benchmark_sofr/evidencia/tablas/comparacion_periodos.csv",
+      "sha256": "2ebee4298bbb11bcf48f9c47266f60ac09ecf61aee40c2079973a6b61557a7bd"
+    },
+    {
+      "path": "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+      "sha256": "03d0b1c8cdef9105a11a4fa5537f51a40d3a787374c14fb19653f579a34501be"
+    },
+    {
+      "path": "results/costos_capacidad/evidencia/tablas/metricas.csv",
+      "sha256": "4bf336fa4ab5281165df3c68510307b5f511babf05121be3434492cc976252b1"
+    },
+    {
+      "path": "results/ejecucion/evidencia/tablas/metricas.csv",
+      "sha256": "be6f8b449d204df91aba60908807bd1effbc842614f788641b302bc91346bbf8"
+    },
+    {
+      "path": "results/estabilidad/evidencia/tablas/bootstrap_intervalos.csv",
+      "sha256": "1c3bd2ac314e87e947fcc4bef474bbb8d185879bf9f66d67fce56f76badbb1c1"
+    },
+    {
+      "path": "results/estabilidad/evidencia/tablas/comparacion_inicios.csv",
+      "sha256": "731c9f9c81b67c87f4b5a95a249f0383628baaa941287d56a9c0ef9709fcce60"
+    },
+    {
+      "path": "results/riesgo/evidencia/tablas/drawdown_comparativo.csv",
+      "sha256": "dcc50b674c39765afecc075dd037e8b348171d000e767fd83883832bbc0de10e"
+    },
+    {
+      "path": "results/senal/evidencia/tablas/metricas.csv",
+      "sha256": "1acc9392a9ff49dd2158959386520afcda86d66e9c4517870e9ee26f2215c409"
+    },
+    {
+      "path": "Executive_Briefing_Pablo_Salerno.pdf",
+      "sha256": "8eb09388346da08b26a889403f35d455c9bd1a1c3a0be40fed1dd602698e8aa9"
+    },
+    {
+      "path": "src/crypto_carry/data/prescribed.py",
+      "sha256": "89349f2a5e189648bf32ed645d5045cc87adfb48a1c5328cbde52235215a9f4f"
+    }
+  ],
+  "required_paths": [
+    "Executive_Briefing_Pablo_Salerno.pdf",
+    "Tesina_Pablo_Salerno.pdf",
+    "configs/reglas_historicas/BASE_E3.toml",
+    "data/evidence/carteras_continuas.zip",
+    "data/evidence/reglas_historicas/cobertura_pendiente.md",
+    "data/research/continuous-marks-20260919/README.md",
+    "data/research/funding-price-sensitivity-20260920/README.md",
+    "docs/methodology.md",
+    "docs/reproduction.md",
+    "results/README.md",
+    "results/base/continuo/tablas/actividad.csv",
+    "results/base/continuo/tablas/equity_diario.csv",
+    "results/base/continuo/tablas/filtros_entrada.csv",
+    "results/base/continuo/tablas/h1_resumen.csv",
+    "results/base/continuo/tablas/h3_diario_conjunto.csv",
+    "results/base/continuo/tablas/h3_resumen.csv",
+    "results/base/continuo/tablas/resultados_periodos.csv",
+    "results/base/continuo/tablas/tiempo_invertido.csv",
+    "results/base/evidencia/comparacion/reporte.md",
+    "results/benchmark_sofr/evidencia/reporte.md",
+    "results/benchmark_sofr/evidencia/tablas/cartera_sofr_diaria.csv",
+    "results/benchmark_sofr/evidencia/tablas/comparacion_periodos.csv",
+    "results/capital/evidencia/reporte.md",
+    "results/complementaria/Evidencia_complementaria_Pablo_Salerno.zip",
+    "results/costos_capacidad/evidencia/reporte.md",
+    "results/costos_capacidad/evidencia/tablas/metricas.csv",
+    "results/ejecucion/evidencia/reporte.md",
+    "results/ejecucion/evidencia/tablas/metricas.csv",
+    "results/estabilidad/evidencia/reporte.md",
+    "results/estabilidad/evidencia/tablas/bootstrap_intervalos.csv",
+    "results/estabilidad/evidencia/tablas/comparacion_inicios.csv",
+    "results/estres/evidencia/reporte.md",
+    "results/riesgo/evidencia/reporte.md",
+    "results/riesgo/evidencia/tablas/drawdown_comparativo.csv",
+    "results/senal/evidencia/reporte.md",
+    "results/senal/evidencia/tablas/metricas.csv",
+    "src/crypto_carry/data/prescribed.py"
+  ],
+  "ai_disclosure": "Se utilizó IA como asistente para desarrollar código, generar gráficos y tablas\ny apoyar la revisión y edición. El análisis, la interpretación y las decisiones\nfinales corresponden al autor. La declaración completa figura en la tesina."
+}

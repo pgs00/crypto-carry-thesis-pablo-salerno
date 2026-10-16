@@ -1,6 +1,7 @@
 """B6 statistical contracts: literal fixtures catch weighting, gaps and RNG drift."""
 
 from concurrent.futures import ProcessPoolExecutor
+from multiprocessing import get_context
 from importlib import import_module
 from pathlib import Path
 
@@ -157,7 +158,7 @@ def test_scalar_vectorized_and_serial_parallel_identity():
             assert vectorized[name][row] == pytest.approx(scalar[name], abs=2e-11, nan_ok=True)
     serial = draw_fixture([0, 7, 13, 29])
     serial_statistics = statistics_fixture([0, 7, 13, 29])
-    with ProcessPoolExecutor(max_workers=2) as executor:
+    with ProcessPoolExecutor(max_workers=2, mp_context=get_context("spawn")) as executor:
         parallel = list(executor.map(draw_fixture, ([13, 29], [0, 7])))
         parallel_statistics = list(executor.map(statistics_fixture, ([13, 29], [0, 7])))
     assert np.array_equal(serial, np.concatenate([parallel[1], parallel[0]]))

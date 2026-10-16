@@ -5,7 +5,6 @@ from decimal import Decimal as D
 from pathlib import Path
 
 import pytest
-from conftest import warmup
 
 from crypto_carry.config import HOUR, SECOND, Config, iso
 from crypto_carry.events import event_key
@@ -78,7 +77,7 @@ def test_replay_reader_window_contract_uses_360_hours(monkeypatch, start):
 
 @pytest.mark.parametrize("strategy", ["conditional", "permanent"])
 def test_real_cash_restart_no_prewarm_operations_first_fill_and_exclusive_end(
-    start, rules, strategy
+    start, rules, strategy, warmup_factory
 ):
     contract()
     base = Config.load(ROOT / "configs/reglas_historicas/BASE_E3.toml")
@@ -87,7 +86,7 @@ def test_real_cash_restart_no_prewarm_operations_first_fill_and_exclusive_end(
     assert bt.equity() == D(10000)
     assert all(p.spot == p.short == p.collateral == 0 for p in bt.ledger.positions.values())
     assert not bt.orders and not bt.reservations
-    rows = warmup(start)
+    rows = warmup_factory(start)
     # Real engine receives funding preload; normal entry waits for available information.
     for offset in range(-60, 661, 60):
         end = start + offset * SECOND
