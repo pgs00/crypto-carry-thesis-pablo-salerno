@@ -7,6 +7,7 @@ import sys
 from pathlib import Path
 
 from .config import Config, timestamp
+from .data.prepared import verify_prepared_inputs
 from .data.prescribed import prescribed_rules
 from .data.replay import input_hashes, iter_records
 from .data.rules import RuleBook
@@ -54,6 +55,7 @@ def main(argv=None):
         rules = (prescribed_rules(config) if config.analysis_mode == "prescribed_research"
                  else RuleBook.load(root / config.rules_file))
         inputs = input_hashes(root, config)
+        verify_prepared_inputs(root, config, quality, inputs)
         inputs["prepared_coverage"] = hashlib.sha256(quality_path.read_bytes()).hexdigest()
         engine = GapAuditedBacktest if config.mark_gap_method != "strict" else Backtest
         results = []

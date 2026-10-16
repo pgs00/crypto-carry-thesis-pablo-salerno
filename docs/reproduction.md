@@ -163,8 +163,14 @@ Preparar la convención `futures_scaled` de BASE y validar la capa derivada:
 
 ```bash
 uv run python -m crypto_carry prepare-mark-gaps --config configs/download_minutes_2022_2026_d.toml --method futures_scaled
-uv run python -m crypto_carry validate-data --config configs/reglas_historicas/BASE_E3.toml --scope full --skip-normalize
+uv run python ../crypto-carry-thesis-pablo-salerno/scripts/validate_prepared_data.py --root . --config configs/reglas_historicas/BASE_E3.toml
 ```
+
+El segundo comando usa el entorno original para ejecutar `validate-data` con
+`--scope full --skip-normalize`. Si pasa, vincula el informe con el hash del
+manifiesto preparado. El [script de validación](../scripts/validate_prepared_data.py)
+no descarga datos ni ejecuta carteras. Adaptar la ruta si la clonación tiene
+otro nombre; no reemplazar este paso por la copia de un informe antiguo.
 
 La validación derivada debe devolver código 0 y `status: complete`. El archivo
 `data/minutes/2022_2026_continuous/derived_marks/futures_scaled/manifests/coverage.json`
@@ -202,6 +208,13 @@ Desde `simplify`, usar los datos preparados y una salida nueva:
 ```bash
 uv run python -m crypto_carry --root ../crypto-carry-replay backtest --config configs/reglas_historicas/BASE_E3.toml --strategy both --output ../crypto-carry-runs
 ```
+
+Antes de iniciar, el comando comprueba la vinculación entre cobertura y
+manifiesto, contrasta los hashes de los Parquet declarados y exige cobertura completa para las series, el período y el
+calentamiento de funding requeridos. Si se modifican los datos o la ventana
+de estimación excede la validada, hay que repetir la preparación o validación
+correspondiente del paso 3. Este control reutiliza la validación existente;
+el contraste con las fuentes originales es el paso 4.
 
 Se ejecutan las carteras condicional e incondicional del período completo.
 La consola informa la ruta `run_<id>`. El identificador depende del código,
