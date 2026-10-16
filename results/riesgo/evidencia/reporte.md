@@ -4,7 +4,7 @@ Informe técnico preliminar · Entrega 4 · Construcción y conciliación ejecut
 
 Este bloque responde a la devolución recibida sobre pérdidas transitorias y garantías. Conserva la desagregación anual y el vínculo entre retorno y capital utilizado. La comparación remunerada y las nuevas trayectorias hipotéticas siguen pendientes; no completa toda la Entrega 4.
 
-Documentos de alcance: [Feedback literal](documentos/feedback_e3.md) · [Protocolo previo](documentos/protocolo.md) · [Matriz de cobertura](documentos/matriz_cobertura_feedback.csv)
+Documentos de alcance: [Feedback literal](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/riesgo/evidencia/documentos/feedback_e3.md) · [Protocolo previo](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/riesgo/evidencia/documentos/protocolo.md) · [Matriz de cobertura](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/riesgo/evidencia/documentos/matriz_cobertura_feedback.csv)
 
 ## Hallazgos principales
 
@@ -40,7 +40,7 @@ Se conservan el funding_time exacto y los milisegundos originales: funding sobre
 
 Equity = caja spot + caja futuros + garantías + valor spot + P&L no realizado de futuros − deuda. Las transferencias y movimientos de garantía no crean equity. Funding, comisiones y slippage no se duplican. El polvo conserva su riesgo de precio, aunque se distingue de una posición activa.
 
-Evidencia de reconstrucción: [Metadatos y conciliación](reconstruccion.json) · [Todos los residuos diarios](tablas/conciliaciones_diarias.csv) · [Dependencia de la serie local completa](series_locales.json)
+Evidencia de reconstrucción: [Metadatos y conciliación](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/riesgo/evidencia/reconstruccion.json) · [Todos los residuos diarios](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/riesgo/evidencia/tablas/conciliaciones_diarias.csv) · [Dependencia de la serie local completa](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/riesgo/evidencia/series_locales.json)
 
 ## Drawdown comparable: muestra, años y cortes
 
@@ -211,7 +211,7 @@ La ventana publicada cubre 23–25 de marzo de 2023. La última vela spot/perpet
 
 Los 121 minutos de exposición activa descubierta se controlan por unión de cartera, sin sumar BTC y ETH simultáneos. En ese tramo los futuros afectados ya están cerrados: no se les asigna mantenimiento por llamarse incidente operativo. La garantía se analiza antes del cierre y el riesgo posterior corresponde al inventario spot. La constancia de su precio original no demuestra ausencia de pérdida intradía.
 
-Controles de exposición ejecutados: [Duraciones por cartera y activos](tablas/controles_exposicion.csv) · [Resultado de controles](controles_exposicion.json)
+Controles de exposición ejecutados: [Duraciones por cartera y activos](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/riesgo/evidencia/tablas/controles_exposicion.csv) · [Resultado de controles](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/riesgo/evidencia/controles_exposicion.json)
 
 | Cartera | Mayor reducción de equity al usar proxy (USDT) | Instante UTC | Interpretación |
 | --- | --- | --- | --- |
@@ -235,7 +235,7 @@ Detalle intradiario de BASE · Condicional: valoración, referencia spot, exposi
 Detalle intradiario de BASE · Permanente: valoración, referencia spot, exposición neta y mantenimiento. La línea vertical de las 12:00 facilita localizar el tramo descubierto.
 [Datos de la figura](figuras/fuentes/marzo_detalle_permanent.csv) · [SVG](figuras/marzo_detalle_permanent.svg)
 
-Evidencia íntegra del detalle: [marzo_2023.parquet](evidencia/marzo_2023.parquet) · [Catálogo de incidentes](tablas/catalogo_incidentes.csv)
+Evidencia íntegra del detalle: [marzo_2023.parquet](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/riesgo/evidencia/evidencia/marzo_2023.parquet) · [Catálogo de incidentes](tablas/catalogo_incidentes.csv)
 
 ## Catálogo completo y selección de episodios
 
@@ -257,7 +257,7 @@ El catálogo conserva secuencias normales, parciales/desarmes, correcciones, cie
 
 El peor estado transitorio y el resultado final del episodio no son la misma magnitud. La malla conserva el estado PRE de la primera operación y cada estado POST del ledger, ordenados por secuencia, aunque compartan hora y tengan duración cronológica cero. En la reapertura de marzo, la valoración PRE incorpora el primer spot nuevo antes de vender; el POST incorpora el precio VWAP, efectivo y comisiones de la ejecución original. Así puede observarse una pérdida transitoria mayor que la pérdida final sin que exista una contradicción contable. Estos estados no se convierten en minutos adicionales de exposición.
 
-Todos los episodios, incluidos los que finalizan con ganancia: [Catálogo legible completo](catalogo_completo.html) · [CSV de precisión completa](tablas/catalogo_incidentes.csv) · [Estados de cada episodio](evidencia/episodios.parquet)
+Todos los episodios, incluidos los que finalizan con ganancia: [Catálogo legible completo](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/riesgo/evidencia/catalogo_completo.html) · [CSV de precisión completa](tablas/catalogo_incidentes.csv) · [Estados de cada episodio](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/riesgo/evidencia/evidencia/episodios.parquet)
 
 ## Garantías, prevención y liquidez
 
@@ -283,7 +283,7 @@ Las necesidades se suman entre contratos sólo en el mismo instante y se compara
 
 Las cotas no declaran que toda la caja bruta estuviera libre: la cota inferior resta como máximo esa caja y la superior conserva la necesidad cuando la reserva no es acreditable. Son cotas del máximo instantáneo, no una trayectoria de aportes. Si la necesidad es cero, el déficit correspondiente puede ser cero aun cuando falte precisión sobre la disponibilidad. La igualdad de mantenimiento no acredita evitar todo cargo, liquidación o salida preventiva.
 
-Detalle por período, día y contrato: [Garantías por período](tablas/garantias_periodo.csv) · [Garantías diarias por activo](tablas/garantias_diarias_activo.csv) · [Puntos extremos](tablas/puntos_extremos.csv)
+Detalle por período, día y contrato: [Garantías por período](tablas/garantias_periodo.csv) · [Garantías diarias por activo](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/riesgo/evidencia/tablas/garantias_diarias_activo.csv) · [Puntos extremos](tablas/puntos_extremos.csv)
 
 ## Peor drawdown y menor holgura de cada cartera
 
@@ -467,7 +467,7 @@ Retorno, utilización y drawdown anual BASE. Los drawdowns del gráfico reinicia
 
 H1 conserva pronósticos y ponderaciones; H2 conserva su criterio corregido y el Sharpe diario publicado, incluido ND cuando no existe volatilidad muestral; H3 conserva los cortes originales y su lectura descriptiva. Los nuevos indicadores intradía no cambian retrospectivamente esos contrastes.
 
-Tablas originales reutilizadas: [H1](tablas/h1_resumen.csv) · [Invariancia H1](tablas/h1_invariancia.csv) · [H2](tablas/h2.csv) · [H3](tablas/h3_regimen.csv) · [Invariancia H3](tablas/h3_invariancia.csv) · [Métricas financieras completas](tablas/metricas_reutilizadas.csv)
+Tablas originales reutilizadas: [H1](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/riesgo/evidencia/tablas/h1_resumen.csv) · [Invariancia H1](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/riesgo/evidencia/tablas/h1_invariancia.csv) · [H2](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/riesgo/evidencia/tablas/h2.csv) · [H3](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/riesgo/evidencia/tablas/h3_regimen.csv) · [Invariancia H3](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/riesgo/evidencia/tablas/h3_invariancia.csv) · [Métricas financieras completas](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/riesgo/evidencia/tablas/metricas_reutilizadas.csv)
 
 ## Bloque siguiente: propuestas todavía no ejecutadas
 
@@ -482,7 +482,7 @@ Para dar escala a los escenarios, el catálogo BASE contiene 233 episodios por a
 
 La escala anterior mide max(0,1−mínimo spot/precio spot inicial) dentro de cada episodio activo, desde inicio post hasta fin pre, conservando ceros. Usa precios observados o, separadamente, el proxy de valoración; no es P&L de cartera. Los episodios tienen distinta duración y pueden compartir observaciones de mercado entre carteras: no son ensayos independientes, tasas por minuto ni probabilidades. Se propone usar P90 y máximo de la valoración original como dos magnitudes de caída spot y mostrar la sensibilidad de calibrarlas con el proxy por separado.
 
-Cálculos descriptivos de la escala propuesta: [Cada episodio](figuras/fuentes/calibracion_episodios.csv) · [Percentiles y máximos](figuras/fuentes/calibracion_escenarios_pendientes.csv)
+Cálculos descriptivos de la escala propuesta: [Cada episodio](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/riesgo/evidencia/figuras/fuentes/calibracion_episodios.csv) · [Percentiles y máximos](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/riesgo/evidencia/figuras/fuentes/calibracion_escenarios_pendientes.csv)
 
 | Tanda pequeña pendiente | Comparador y magnitud | Justificación | Nueva trayectoria requerida |
 | --- | --- | --- | --- |
@@ -502,4 +502,4 @@ La serie completa comprimida permanece local en la ruta indicada por --series-ro
 
 Persisten incertidumbre del precio spot durante la interrupción, las excepciones de marks y funding declaradas, disponibilidad neta ND en estados con compromisos no acreditables y ausencia de trayectoria intravela. No se combinan mínimos spot y máximos mark de una vela como si fueran simultáneos. No se afirma haber leído un PDF E3 ausente. Este reporte no sustituye un contrafactual de ejecución ni una comparación remunerada.
 
-Archivos para reproducir y revisar: [Procedencia de tablas](tablas_procedencia.json) · [Índice de figuras](figuras/indice_figuras.csv) · [Comando y procedencia del reporte](generacion_reporte.json)
+Archivos para reproducir y revisar: [Procedencia de tablas](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/riesgo/evidencia/tablas_procedencia.json) · [Índice de figuras](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/riesgo/evidencia/figuras/indice_figuras.csv) · [Comando y procedencia del reporte](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/riesgo/evidencia/generacion_reporte.json)

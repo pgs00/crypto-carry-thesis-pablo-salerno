@@ -7,7 +7,7 @@
 **CF_SIN_INTERRUPCION.** condicional: equity final 10730.61 USDT (diferencia -55.15 USDT), retorno 7.306% y CAGR 1.522%; permanente: equity final 11535.16 USDT (diferencia -144.91 USDT), retorno 15.352% y CAGR 3.106%.
 ## Alcance y supuestos aprobados
 
-La [aprobación registrada](aprobacion_recibida.json) remite a la [ficha](ficha_decision.md), al [protocolo técnico](protocolo_tecnico.md) y a sus hashes. Sus textos históricos pendientes se conservan; la respuesta posterior del usuario autoriza las dos familias. Magnitudes, calendario, recuperación, anclas y volumen quedaron fijados antes del primer replay. No se eligieron escenarios por rendimiento.
+La [aprobación registrada](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/estres/evidencia/aprobacion_recibida.json) remite a la [ficha](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/estres/evidencia/ficha_decision.md), al [protocolo técnico](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/estres/evidencia/protocolo_tecnico.md) y a sus hashes. Sus textos históricos pendientes se conservan; la respuesta posterior del usuario autoriza las dos familias. Magnitudes, calendario, recuperación, anclas y volumen quedaron fijados antes del primer replay. No se eligieron escenarios por rendimiento.
 
 Las carteras comienzan con 10.000 USDT y siguen `[2022-01-01,2026-09-01)` UTC. Los ocho cortes son full, 2022, 2023, 2024, 2025, 2026 parcial, 2022–2023 y 2024+. Cada corte hereda inventario y saldos; no reinicia el capital. Se mantienen VWAP, tasas, marks, costos, cupo bruto compartido del 1%, secuencia, reservas y controles de BASE; las demoras de investigación están apagadas.
 
@@ -28,7 +28,7 @@ SH_P90 y SH_MAX reducen sólo spot respecto del perpetuo. No son shocks conjunto
 
 El P&L concilia equity final menos equity inicial con spot + futuros + funding + fees + liquidación a `1E-8` USDT por cierre y por período. El slippage ya está en precios de fills; su diagnóstico informativo no se resta por segunda vez. ND conserva su motivo, incluido Sharpe con volatilidad muestral cero. El cuadro principal mide drawdown **diario**.
 
-[Ocho períodos y utilización](resultados/metricas.csv) · [Componentes por activo](resultados/componentes_periodo.csv) · [Ejecución y cupo](resultados/ejecucion_resumen.csv) · [Eventos, deuda y liquidaciones](resultados/eventos.csv) · [Actividad y ciclos](resultados/actividad.csv) · [Conciliación](resultados/conciliacion_ledger.csv).
+[Ocho períodos y utilización](resultados/metricas.csv) · [Componentes por activo](resultados/componentes_periodo.csv) · [Ejecución y cupo](resultados/ejecucion_resumen.csv) · [Eventos, deuda y liquidaciones](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/estres/evidencia/resultados/eventos.csv) · [Actividad y ciclos](resultados/actividad.csv) · [Conciliación](resultados/conciliacion_ledger.csv).
 
 ![Equity y drawdown diario bajo shocks](figuras/shocks.png)
 
@@ -56,17 +56,17 @@ La atribución utiliza cantidad spot previa `q`, precio original `S` y factor `f
 | SH_MAX | Condicional | -392.8848 | -112.1633 | -505.0481 | 1.5765 |
 | SH_MAX | Permanente | -587.6131 | -218.3350 | -805.9481 | 3.6001 |
 
-[Operaciones por ventana](resultados/operaciones_ventanas.csv) incluye eventos del ledger en los intervalos observados, con preludio y bordes explícitos. Excluye cambios no realizados. Estos resultados no son el P&L total de equity y no se les suma la atribución del factor, pues eso contaría valoración dos veces. El slippage ya está en el precio de cada fill.
+[Operaciones por ventana](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/estres/evidencia/resultados/operaciones_ventanas.csv) incluye eventos del ledger en los intervalos observados, con preludio y bordes explícitos. Excluye cambios no realizados. Estos resultados no son el P&L total de equity y no se les suma la atribución del factor, pues eso contaría valoración dos veces. El slippage ya está en el precio de cada fill.
 
 La pérdida transitoria incluye movimientos del mercado y las operaciones de la trayectoria; se informa separadamente del factor impuesto y del P&L realizado, funding y comisiones del ledger. Los extremos se limitan a ventanas intervenidas y sus bordes, a cierres de minuto y eventos financieros; no son máximos intradía de toda la muestra. Su base es el estado anterior al primer evento de cada ventana; se conserva su timestamp. La valoración sobre spot antiguo durante la suspensión se identifica por fuente y antigüedad, sin habilitar fills ni renovar su disponibilidad.
 
-**El calendario BASE permanece fijo.** No estresa automáticamente exposiciones nuevas que aparezcan en las trayectorias modificadas. Una posición cerrada antes tampoco elimina el pulso. [Cobertura de episodios modificados](resultados/cobertura_calendario_fijo.parquet) cuantifica los segundos dentro y fuera del calendario revelado, sin agregar shocks.
+**El calendario BASE permanece fijo.** No estresa automáticamente exposiciones nuevas que aparezcan en las trayectorias modificadas. Una posición cerrada antes tampoco elimina el pulso. [Cobertura de episodios modificados](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/estres/evidencia/resultados/cobertura_calendario_fijo.parquet) cuantifica los segundos dentro y fuera del calendario revelado, sin agregar shocks.
 
 ## Garantías y caja
 
-[Garantías por activo y fase](resultados/garantias_ventanas.parquet) separa saldo de margen, mantenimiento, holgura, distancia a liquidación y necesidad preventiva. Tras cerrar el corto, su margen es ND/no aplicable y su requerimiento es cero. Se observan estados anteriores a fills con el mark recién disponible, además de los estados posteriores. No se combinan extremos de velas como si hubieran ocurrido simultáneamente.
+[Garantías por activo y fase](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/estres/evidencia/resultados/garantias_ventanas.parquet) separa saldo de margen, mantenimiento, holgura, distancia a liquidación y necesidad preventiva. Tras cerrar el corto, su margen es ND/no aplicable y su requerimiento es cero. Se observan estados anteriores a fills con el mark recién disponible, además de los estados posteriores. No se combinan extremos de velas como si hubieran ocurrido simultáneamente.
 
-[Necesidad conjunta](resultados/garantias_simultaneas.parquet) suma requerimientos **simultáneos**, descuenta caja libre de reservas y conserva deuda. No reutiliza colateral aislado ni suma máximos de distintos instantes. La cifra preventiva es un ínfimo: el límite de ratio exige desigualdad estricta cuando resulta vinculante. No se inyectan esos importes al backtest.
+[Necesidad conjunta](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/estres/evidencia/resultados/garantias_simultaneas.parquet) suma requerimientos **simultáneos**, descuenta caja libre de reservas y conserva deuda. No reutiliza colateral aislado ni suma máximos de distintos instantes. La cifra preventiva es un ínfimo: el límite de ratio exige desigualdad estricta cuando resulta vinculante. No se inyectan esos importes al backtest.
 
 | Escenario | Cartera | Máximo preventivo conjunto (ínfimo USDT) | Máximo faltante externo conocido (ínfimo USDT) | Observaciones ND |
 |---|---|---|---|---|
@@ -109,7 +109,7 @@ El volumen es la mediana spot por hora UTC de los dos días completos anteriores
 | Permanente | Día intervenido | 2023-03-24 | -71.1031 | -71.1031 |
 | Permanente | Fin de muestra | 2026-08-31 | -144.9133 | -0.0074 |
 
-[Contraste diario completo](resultados/cf_contraste_diario.csv) conserva los cambios posteriores; la diferencia final no se atribuye íntegramente al día de la intervención.
+[Contraste diario completo](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/estres/evidencia/resultados/cf_contraste_diario.csv) conserva los cambios posteriores; la diferencia final no se atribuye íntegramente al día de la intervención.
 
 | Cartera | Tramo | Registro | BASE / CF | Claves comunes modificadas | Sólo BASE / sólo CF |
 |---|---|---|---|---|---|
@@ -149,13 +149,13 @@ H3 se obtiene del replay del mercado modificado, independiente de inventario y f
 | SH_MAX | no_favorable | contraria | 2.853926 |
 | SH_P90 | no_favorable | contraria | 2.871957 |
 
-[H1 por períodos](resultados/h1_resumen.csv) · [H2 por ocho cortes](resultados/h2.csv) · [H3 por períodos](resultados/h3_resumen.csv) · [Deltas frente a BASE](resultados/deltas.csv). Los resultados anuales no se suman ni se imponen relaciones monótonas entre shocks.
+[H1 por períodos](resultados/h1_resumen.csv) · [H2 por ocho cortes](resultados/h2.csv) · [H3 por períodos](resultados/h3_resumen.csv) · [Deltas frente a BASE](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/estres/evidencia/resultados/deltas.csv). Los resultados anuales no se suman ni se imponen relaciones monótonas entre shocks.
 
 ## Evidencia, reproducción y pendientes
 
-[Índice de corridas](indice_corridas.json) distingue referencias, controles y seis carteras nuevas. [Contrato congelado](protocolo_ejecucion.json), [exportaciones exactas](fuentes_exportadas.json) y [catálogo de resultados](resultados/catalogo.json) identifican sus fuentes. Las corridas originales permanecen intactas; la evaluación CSV grande se incluye comprimida sin pérdida y se coteja descomprimida contra su hash original. No se duplicaron las bases de minutos por escenario.
+[Índice de corridas](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/estres/evidencia/indice_corridas.json) distingue referencias, controles y seis carteras nuevas. [Contrato congelado](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/estres/evidencia/protocolo_ejecucion.json), [exportaciones exactas](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/estres/evidencia/fuentes_exportadas.json) y [catálogo de resultados](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/estres/evidencia/resultados/catalogo.json) identifican sus fuentes. Las corridas originales permanecen intactas; la evaluación CSV grande se incluye comprimida sin pérdida y se coteja descomprimida contra su hash original. No se duplicaron las bases de minutos por escenario.
 
-Hubo además cuatro intentos técnicos iniciales preservados. El control de shock cero detuvo el avance por cuatro celdas de precio con valor numérico idéntico y distinta representación Decimal. Se corrigió la identidad cuando el factor vale uno y se repitieron los cuatro controles con código nuevo, antes de ejecutar economía. No se relajó la comparación ni se cambiaron referencias o supuestos. [Incidente y corrección](controles/incidente_control_cero.md) · [Identidades de los intentos previos](intentos_tecnicos_previos.json).
+Hubo además cuatro intentos técnicos iniciales preservados. El control de shock cero detuvo el avance por cuatro celdas de precio con valor numérico idéntico y distinta representación Decimal. Se corrigió la identidad cuando el factor vale uno y se repitieron los cuatro controles con código nuevo, antes de ejecutar economía. No se relajó la comparación ni se cambiaron referencias o supuestos. [Incidente y corrección](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/estres/evidencia/controles/incidente_control_cero.md) · [Identidades de los intentos previos](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/estres/evidencia/intentos_tecnicos_previos.json).
 
 El verificador offline recalcula contabilidad, ejecución, fórmulas de intervención, diagnósticos de ventanas y agregados H1/H2/H3. Comparte helpers de reporte con el constructor; no es otro motor económico independiente. Las ecuaciones de transformación del auditor son separadas de la capa de replay. Los minutos de H3 fuera de los testigos se autentican como salida persistida y se agregan; no se reejecutan millones de minutos offline. Las pertenencias a particiones masivas se autenticaron al extraer; reproducirlas exige las 1.731 entradas locales identificadas.
 
@@ -163,6 +163,6 @@ El verificador offline recalcula contabilidad, ejecución, fórmulas de interven
 python -B herramientas/scripts/verify_stress_counterfactual.py . --output ../verificacion_bloque5.json
 ```
 
-La [guía de reproducción](reproducibilidad.md) declara dependencias y alcance. Las auditorías finales se guardan fuera del sello. El índice Git no fue modificado por este trabajo; no se hizo commit ni push. No se ejecutó limpieza, borrado ni archivado. El inventario previo conserva carácter de propuesta separada.
+La [guía de reproducción](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/estres/evidencia/reproducibilidad.md) declara dependencias y alcance. Las auditorías finales se guardan fuera del sello. El índice Git no fue modificado por este trabajo; no se hizo commit ni push. No se ejecutó limpieza, borrado ni archivado. El inventario previo conserva carácter de propuesta separada.
 
 Bloque 6, revisión transversal y redacción final siguen pendientes. El alcance de la reparación de liquidación sobre variantes de bloques 2/3 continúa pendiente y separado: la equivalencia BASE no lo resuelve. Este bloque no declara completa toda Entrega 4.

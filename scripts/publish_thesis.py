@@ -66,7 +66,7 @@ def require(value, message):
 def load_source():
     content = ARCHIVE.read_bytes()
     require(
-        digest(content) == ARCHIVE.with_suffix(".zip.sha256").read_text().split()[0],
+        digest(content) == next(row["sha256"] for row in json.loads((ROOT / "data/evidence/thesis_baseline.json").read_text())["source_files"] if row["path"] == "data/evidence/carteras_continuas.zip"),
         "Continuous ZIP checksum mismatch",
     )
     with zipfile.ZipFile(io.BytesIO(content)) as archive:

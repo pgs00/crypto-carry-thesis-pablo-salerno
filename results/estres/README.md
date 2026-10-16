@@ -25,6 +25,6 @@ El escenario sin interrupción usa anclas y volumen hipotéticos predefinidos. S
 
 ## Evidencia y detalle
 
-- [Informe completo](evidencia/reporte.md), [ficha de supuestos](evidencia/ficha_decision.md) y [protocolo técnico](evidencia/protocolo_tecnico.md).
-- [Métricas por período](evidencia/resultados/metricas.csv), [H2 con excepciones](evidencia/resultados/h2.csv), [H3](evidencia/resultados/h3_resumen.csv), [contraste diario sin interrupción](evidencia/resultados/cf_contraste_diario.csv) y [garantías en las ventanas](evidencia/resultados/garantias_resumen.csv).
-- [Verificación del paquete](evidencia/README.md), [reproducción](evidencia/reproducibilidad.md) e [índice del estudio](../README.md).
+- [Informe completo](evidencia/reporte.md), [ficha de supuestos](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/estres/evidencia/ficha_decision.md) y [protocolo técnico](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/estres/evidencia/protocolo_tecnico.md).
+- [Métricas por período](evidencia/resultados/metricas.csv), [H2 con excepciones](evidencia/resultados/h2.csv), [H3](evidencia/resultados/h3_resumen.csv), [contraste diario sin interrupción](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/estres/evidencia/resultados/cf_contraste_diario.csv) y [garantías en las ventanas](evidencia/resultados/garantias_resumen.csv).
+- [Verificación del paquete](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/estres/evidencia/README.md), [reproducción](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/estres/evidencia/reproducibilidad.md) e [índice del estudio](../README.md).

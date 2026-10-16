@@ -1,7 +1,0 @@
-{
-  "sha256": "fa719917b057a172e8752d621af212b6dfa182e36316dc98b36595feb5bbd5e4",
-  "rows": 55788,
-  "evidence_manifest_sha256": "dc361216b14055e52dc887876f63dd07f45d515a1b581fa65484d3e6a5d3f2ad",
-  "original_partitions_rehashed": true,
-  "scope": "Exact small source windows consumed by persisted price and H3 witnesses; not a full market copy"
-}

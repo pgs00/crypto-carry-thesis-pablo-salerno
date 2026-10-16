@@ -1,4 +1,0 @@
-START SH_P90 permanent 20261001T021837685505Z
-[futures_scaled/permanent] 4.9% | UTC 2022-03-25T16:31:00.000000000Z | fills 10
-[futures_scaled/permanent] 10.3% | UTC 2022-06-24T19:16:00.000000000Z | fills 26
-[futures_scaled/permanent] 15.5% | UTC 2022-09-21T10:31:00.000000000Z | fills 48

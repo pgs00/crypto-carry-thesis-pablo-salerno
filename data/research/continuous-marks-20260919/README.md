@@ -30,11 +30,11 @@ ninguno de los métodos. Las solicitudes de margen de la tabla ocurrieron fuera
 de los huecos y fueron iguales entre métodos.
 
 El drawdown se mide sobre equity diario, como en las corridas anteriores;
-no es un drawdown intraminuto. Las [métricas por año y régimen](period_metrics.csv)
+no es un drawdown intraminuto. Las [métricas por año y régimen](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/continuous-marks-20260919/period_metrics.csv)
 son cortes de las mismas carteras continuas, sin reiniciar su capital.
-El [informe generado por el estudio](mark_gap_report.md), la
-[tabla de cuatro corridas](comparison.csv) y el
-[contraste de decisiones](method_differences.json) conservan los valores fuente.
+El [informe generado por el estudio](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/continuous-marks-20260919/mark_gap_report.md), la
+[tabla de cuatro corridas](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/continuous-marks-20260919/comparison.csv) y el
+[contraste de decisiones](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/continuous-marks-20260919/method_differences.json) conservan los valores fuente.
 
 ## Posiciones durante los huecos
 
@@ -55,13 +55,13 @@ cero; la permanente conservaba además **0,0000690 ETH spot residual, sin short
 ni colateral ETH**. Los marks de BTC eran oficiales en esos instantes: el
 faltante de ETH no implicaba una cartera completamente cerrada.
 
-El [detalle de las 104 posiciones](portfolio_positions_during_gaps.csv) cubre
+El [detalle de las 104 posiciones](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/continuous-marks-20260919/portfolio_positions_during_gaps.csv) cubre
 ambos activos en los 13 timestamps distintos, para las cuatro carteras.
 Se reconstruyó desde el ledger persistido y los marks causalmente disponibles.
 `runtime_position_match = True` indica contraste adicional con el control
 grabado durante el replay del activo afectado; `False` identifica al BTC sin
 hueco en julio, reconstruido sin ese registro especial. No indica una discrepancia.
-Los [116 controles observados](gap_risk_checks.csv) incluyen por corrida los
+Los [116 controles observados](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/continuous-marks-20260919/gap_risk_checks.csv) incluyen por corrida los
 15 marks estimados, siete anclas y siete primeras recuperaciones oficiales.
 
 ## Margen, liquidación y diferencias entre métodos
@@ -81,7 +81,7 @@ El BTC oficial de la permanente durante los huecos de ETH en julio tuvo un
 ratio máximo de 0,353839% y distancia mínima de 112,1970%, iguales en ambos
 métodos. En ninguna observación se activó el predicado de liquidación o cierre
 preventivo. Precios de liquidación, balances, mantenimiento y estados están
-en los CSV; el [resumen por hueco](gap_positions_summary.csv) conserva los siete grupos.
+en los CSV; el [resumen por hueco](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/continuous-marks-20260919/gap_positions_summary.csv) conserva los siete grupos.
 
 Sí cambiaron las valoraciones intradía. La máxima diferencia absoluta de
 equity entre métodos fue **1,968728 USDT** para la condicional y
@@ -89,18 +89,18 @@ equity entre métodos fue **1,968728 USDT** para la condicional y
 (velas abiertas a las 10:03). La máxima diferencia de ratio fue 0,001080 y
 0,002382 puntos porcentuales, respectivamente; la de distancia a liquidación,
 0,102780 y 0,268685 puntos. No se trasladaron a operaciones ni a equity diario.
-El [resumen recalculable](sensitivity_summary.json) registra esos extremos.
+El [resumen recalculable](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/continuous-marks-20260919/sensitivity_summary.json) registra esos extremos.
 
 ## Integridad, verificación y reproducción
 
 Se preservaron los originales, las corridas anteriores y el paquete de la
 Entrega 3. Cada capa derivada reemplaza únicamente tres particiones de mark;
 las otras 797 entradas siguen referenciando los Parquet originales. Las
-auditorías [escalada](marks_futures_scaled.json) y [constante](marks_last_official.json)
+auditorías [escalada](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/continuous-marks-20260919/marks_futures_scaled.json) y [constante](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/continuous-marks-20260919/marks_last_official.json)
 contienen activo, timestamps de apertura/disponibilidad, ancla, OHLC estimados,
 insumos y hashes. No se alteraron los parámetros económicos.
 
-La [verificación independiente](verification.json) comprobó **1.735 archivos
+La [verificación independiente](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/continuous-marks-20260919/verification.json) comprobó **1.735 archivos
 fuente**, recalculó ambos métodos y los retornos/drawdowns, y contrastó las
 104 posiciones. La conciliación contable difiere como máximo en `1E-24 USDT`,
 dentro de la tolerancia vigente `1E-8`. Se conserva el funding: por corrida,
@@ -109,12 +109,12 @@ exacto y 4.010 usan `previous_closed_1m`. Pasaron **455 pruebas y Ruff**.
 
 Esta carpeta contiene sólo evidencia compacta. El estudio y las cuatro corridas
 completas permanecen en `D:\Backtesting\outputs`; el
-[índice](study_index.json) identifica sus rutas. La
-[copia del manifiesto fuente](source_study_manifest.json) conserva referencias
+[índice](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/continuous-marks-20260919/study_index.json) identifica sus rutas. La
+[copia del manifiesto fuente](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/continuous-marks-20260919/source_study_manifest.json) conserva referencias
 locales, incluida la validación estricta, y no pretende incluir esos datos
-masivos aquí. [Proveniencia de las copias](copy_provenance.json) conserva sus
-hashes originales; [manifiesto compacto](evidence_manifest.json) y su
-[SHA-256](evidence_manifest.sha256) protegen los archivos publicados.
+masivos aquí. [Proveniencia de las copias](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/continuous-marks-20260919/copy_provenance.json) conserva sus
+hashes originales; [manifiesto compacto](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/continuous-marks-20260919/evidence_manifest.json) y su
+[SHA-256](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/continuous-marks-20260919/evidence_manifest.sha256) protegen los archivos publicados.
 `.gitattributes` preserva sus bytes entre plataformas.
 
 Desde la raíz del repositorio, verificar esta evidencia y recalcular sus

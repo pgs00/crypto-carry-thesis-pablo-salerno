@@ -2,7 +2,7 @@
 
 Entrega 4 · Bloque técnico local · Muestra continua [01/01/2022,01/09/2026) UTC. Sólo las dos BASE_E3, 10.000 USDT iniciales cada una. Concentración y restricciones: **ejecutado**. Benchmark: **pendiente_aprobacion_benchmark**. Este bloque no completa toda la Entrega 4.
 
-[Protocolo](documentos/protocolo.md) · [Mapa de fuentes](documentos/mapa_fuentes.md) · [Propuesta remunerada](documentos/propuesta_benchmark.md) · [Ficha exacta](documentos/ficha_benchmark.json)
+[Protocolo](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/capital/evidencia/documentos/protocolo.md) · [Mapa de fuentes](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/capital/evidencia/documentos/mapa_fuentes.md) · [Propuesta remunerada](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/capital/evidencia/documentos/propuesta_benchmark.md) · [Ficha exacta](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/capital/evidencia/documentos/ficha_benchmark.json)
 
 ## Resultado y concentración
 
@@ -68,7 +68,7 @@ Cada jornada aparece una sola vez por cartera, aunque operen ambos activos. Se r
 
 ![Concentración diaria y por ciclo, denominadores separados](figuras/concentracion.png)
 
-[Fechas seleccionadas y denominadores de todos los períodos](tablas/concentracion_dias.csv) · [Todos los días originales](tablas/diario_reutilizado.csv)
+[Fechas seleccionadas y denominadores de todos los períodos](tablas/concentracion_dias.csv) · [Todos los días originales](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/capital/evidencia/tablas/diario_reutilizado.csv)
 
 ## Contabilidad, ciclos y remanentes
 
@@ -83,7 +83,7 @@ Un intento fallido de orden no es necesariamente una apertura fallida: puede ser
 
 Las filas por período atribuyen cambios económicos dentro de cada corte, aunque el ciclo haya comenzado antes o termine después. No son agrupaciones por año de cierre. Tiempo activo excluye polvo según la corrección vigente. Una variación de realizado/no realizado puede ser una reclasificación de una ganancia anterior; sólo su suma es contribución neta nueva.
 
-[Fronteras y precios trazables](tablas/fronteras_contables.csv) · [Segmentos contables](tablas/atribuciones_segmentos.csv) · [Movimientos con event_id/order_id/fill_id](tablas/movimientos_ciclo.csv) · [Conciliaciones](tablas/conciliaciones.csv)
+[Fronteras y precios trazables](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/capital/evidencia/tablas/fronteras_contables.csv) · [Segmentos contables](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/capital/evidencia/tablas/atribuciones_segmentos.csv) · [Movimientos con event_id/order_id/fill_id](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/capital/evidencia/tablas/movimientos_ciclo.csv) · [Conciliaciones](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/capital/evidencia/tablas/conciliaciones.csv)
 
 ## Restricciones: tres poblaciones que no deben confundirse
 
@@ -169,7 +169,7 @@ Las acciones sin evaluación exacta acreditable permanecen como unreconciled en 
 
 Renovación se analiza aparte: 103 evaluaciones condicionales y 458 permanentes. Su umbral es forecast positivo, sin costo ni basis de entrada; el registro de resultado puede carecer de causa textual y se contrasta con las transiciones. La cobertura de emparejamiento se entrega sin forzar igualdad. Ninguno de estos conteos equivale a minutos elegibles de H3.
 
-[Registros clasificados](tablas/decisiones_clasificadas.csv) · [Diagnóstico frente a decisión](tablas/diagnostico_vs_decision.csv) · [Acciones y enlaces, incluidos los no reconciliados](tablas/acciones_y_enlaces.csv) · [Entradas acreditadas](tablas/entradas_acreditadas.csv) · [Emparejamiento](tablas/emparejamiento.csv)
+[Registros clasificados](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/capital/evidencia/tablas/decisiones_clasificadas.csv) · [Diagnóstico frente a decisión](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/capital/evidencia/tablas/diagnostico_vs_decision.csv) · [Acciones y enlaces, incluidos los no reconciliados](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/capital/evidencia/tablas/acciones_y_enlaces.csv) · [Entradas acreditadas](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/capital/evidencia/tablas/entradas_acreditadas.csv) · [Emparejamiento](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/capital/evidencia/tablas/emparejamiento.csv)
 
 ## Retorno anual y capital utilizado
 
@@ -211,16 +211,16 @@ La mejora de precisión de H1 no garantiza superar el umbral económico ni perma
 
 H1, H2 corregida y H3 se reutilizan sin redefinirlos. H2 sigue no favorable en muestra completa y ambos cortes por Sharpe condicional inferior. En 2022 el Sharpe condicional permanece ND por volatilidad muestral cero. El análisis anual complementa los cortes H3; no sustituye su serie por rechazos. No se rehizo riesgo intradía.
 
-[Resumen completo y capital en USDT](tablas/resumen_integrado.csv) · [Componentes por activo originales](tablas/componentes_por_activo_periodo_reutilizado.csv) · [H1](tablas/h1_resumen_reutilizado.csv) · [H2](tablas/h2_reutilizado.csv) · [H3](tablas/h3_regimen_reutilizado.csv)
+[Resumen completo y capital en USDT](tablas/resumen_integrado.csv) · [Componentes por activo originales](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/capital/evidencia/tablas/componentes_por_activo_periodo_reutilizado.csv) · [H1](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/capital/evidencia/tablas/h1_resumen_reutilizado.csv) · [H2](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/capital/evidencia/tablas/h2_reutilizado.csv) · [H3](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/capital/evidencia/tablas/h3_regimen_reutilizado.csv)
 
 ## Propuesta remunerada y límites
 
 Se recomienda someter a aprobación una cuenta hipotética bruta USD ligada a SOFR realizada, ACT/360, con paridad nominal 1 USDT=1 USD. SGOV fue la única alternativa real examinada. La serie oficial SOFR descargada contiene 1.166 observaciones entre 30/12/2021 y 01/09/2026; se comprobó cobertura, sin calcular retornos. La ficha enumera supuestos, costos excluidos, acceso hipotético, calendario por acreditar y reglas de frontera. No es una cuenta remunerada disponible para el inversor ni una tasa pagada por el exchange.
 
-[Propuesta, fuentes primarias y aprobación puntual](documentos/propuesta_benchmark.md). Estado pendiente_aprobacion_benchmark. Una aprobación posterior habilitará sólo ese componente en otra versión; no sumará intereses al carry ni cambiará H2.
+[Propuesta, fuentes primarias y aprobación puntual](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/capital/evidencia/documentos/propuesta_benchmark.md). Estado pendiente_aprobacion_benchmark. Una aprobación posterior habilitará sólo ese componente en otra versión; no sumará intereses al carry ni cambiará H2.
 
 ## Verificación y portabilidad
 
-El paquete contiene código, pruebas, manifiesto y fuentes con hashes. El verificador compacto recalcula aritmética, segmentos, denominadores y clasificaciones. El completo autentica las dependencias por rutas explícitas y vuelve a derivar todas las tablas desde los movimientos originales; comparte los módulos de posprocesamiento y no es una validación independiente del motor. No consulta Git ni escribe en los paquetes fuente. Ver comandos en [README](README.md).
+El paquete contiene código, pruebas, manifiesto y fuentes con hashes. El verificador compacto recalcula aritmética, segmentos, denominadores y clasificaciones. El completo autentica las dependencias por rutas explícitas y vuelve a derivar todas las tablas desde los movimientos originales; comparte los módulos de posprocesamiento y no es una validación independiente del motor. No consulta Git ni escribe en los paquetes fuente. Ver comandos en [README](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/capital/evidencia/README.md).
 
 Se conserva la incertidumbre de valoración spot durante la suspensión de marzo de 2023 y las aproximaciones de mark/funding del estudio. Las fronteras de cierre reutilizan precios del paquete intradía compacto, sin nuevas series masivas. No se afirma leer un PDF E3 ausente. La aprobación del benchmark, su ejecución y el PDF final quedan pendientes. No se hizo commit, push ni publicación GitHub.

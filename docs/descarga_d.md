@@ -72,13 +72,13 @@ Para repetir solamente la validación, agregar `--skip-normalize` al segundo
 comando. Un estado `incomplete_data` impide iniciar el backtest; los minutos
 ausentes no se rellenan ni se reclasifican como cierres del mercado.
 La investigación y sus fuentes se conservan en
-[preparación continua](../data/research/continuous-preparation-20260919/README.md).
+[preparación continua](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/continuous-preparation-20260919/README.md).
 
 ## Antecedente archivado: dos ventanas independientes
 
 Las ventanas septiembre de 2022–agosto de 2023 y septiembre de 2025–agosto de
 2026 reinician capital por separado. Los comandos de esta sección reproducen
-ese antecedente, no la BASE continua. Su [paquete conservado](../data/evidence/ventanas_independientes/LEEME.md)
+ese antecedente, no la BASE continua. Su [paquete conservado](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/evidence/ventanas_independientes/LEEME.md)
 identifica resultados, configuraciones y procedencia.
 
 ### Descargar y validar
@@ -104,7 +104,7 @@ los ZIP. El funding se consulta desde 30 días antes de cada inicio, para permit
 28 días de calentamiento más antecedentes. Ese mes extra no cambia las fechas
 de evaluación económica.
 
-El [registro de preparación](../data/research/minute-download-20260918/preparation.json)
+El [registro de preparación](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/minute-download-20260918/preparation.json)
 conserva las mediciones de descarga. La finalización es
 `DESCARGA COMPLETA: 212/212 (100%)`; se aplican las mismas reglas de reanudación
 y verificación anteriores. Los manifiestos `manifests\download.json` se

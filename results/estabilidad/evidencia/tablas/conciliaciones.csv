@@ -1,7 +1,0 @@
-scenario,strategy,run_id,ledger_checked,ledger_rows,daily_links,position_links,funding_amounts_checked,fills_checked,orders_checked,tolerance_usdt,daily_max_residual_usdt,daily_max_balance_residual_usdt
-I2023,conditional,run_0128030f40d9b67c8f659eba,True,2372,1339,3070,2234,138,258,1E-8,1.0462E-23,7.442E-24
-I2023,permanent,run_0e538f9f2262e1a8bb2ec15d,True,8033,1339,3403,7757,276,551,1E-8,1.0790E-23,8.480E-24
-I2024,conditional,run_40685bce287664d539d105fe,True,2096,974,2309,1971,125,126,1E-8,1.0470E-23,9.463E-24
-I2024,permanent,run_4097eb208f8c04030f52b0d4,True,5985,974,2358,5795,190,277,1E-8,1.0400E-23,9.463E-24
-BASE_E3,conditional,run_ad71d751b20623006c195ff3,True,2372,1704,3800,2234,138,258,1E-8,1.0462E-23,7.442E-24
-BASE_E3,permanent,run_dfea4b7ac1475668d5968c97,True,10159,1704,4128,9827,332,735,1E-8,1.0210E-23,8.912E-24

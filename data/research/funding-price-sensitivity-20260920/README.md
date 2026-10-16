@@ -102,19 +102,19 @@ no valida la exactitud histórica de reglas, comisiones ni ejecución.
 
 ## Archivos y reproducción
 
-- [Observaciones de precios](prices.csv): una fila por activo/liquidación, valores,
+- [Observaciones de precios](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/funding-price-sensitivity-20260920/prices.csv): una fila por activo/liquidación, valores,
   error y tiempos/procedencia del mark. Los errores sin oficial quedan vacíos.
-- [Resumen de precios](price_summary.csv): cobertura y errores por activo/año y
+- [Resumen de precios](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/funding-price-sensitivity-20260920/price_summary.csv): cobertura y errores por activo/año y
   `all`. Precios en USDT por unidad base; errores en bps.
-- [Eventos con posición](funding_events.csv): cantidades base previas, pago original,
+- [Eventos con posición](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/funding-price-sensitivity-20260920/funding_events.csv): cantidades base previas, pago original,
   diferencia conocida y escenarios; importes en USDT. No incluye eventos sin posición.
-- [Impacto por cartera, activo y año](economic_summary.csv): conteos de precios y
+- [Impacto por cartera, activo y año](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/funding-price-sensitivity-20260920/economic_summary.csv): conteos de precios y
   posiciones por separado; `ALL` suma BTC/ETH y `all` agrupa la muestra completa.
-- [Escenarios de cartera](portfolio_scenarios.csv): equity, funding y retorno final;
+- [Escenarios de cartera](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/funding-price-sensitivity-20260920/portfolio_scenarios.csv): equity, funding y retorno final;
   `net_return` es fracción, `delta_return_bps` bps y
   `delta_return_percentage_points` puntos porcentuales.
-- [Verificación y fuentes](sources.json): 1735 archivos
-  de entrada verificados, hashes originales y controles. [Manifiesto](manifest.json)
+- [Verificación y fuentes](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/funding-price-sensitivity-20260920/sources.json): 1735 archivos
+  de entrada verificados, hashes originales y controles. [Manifiesto](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/funding-price-sensitivity-20260920/manifest.json)
   y `manifest.sha256` preservan los bytes de esta evidencia compacta.
 
 Los CSV usan UTF-8, separador coma y punto decimal. El análisis conserva precisión

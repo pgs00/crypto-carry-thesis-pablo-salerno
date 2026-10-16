@@ -29,6 +29,6 @@ H2 conserva el Sharpe diario con RF=0 y es no favorable en la muestra completa y
 
 ## Evidencia y detalle
 
-- [Informe completo](evidencia/reporte.md), [protocolo](evidencia/documentos/protocolo.md) y [fuentes](evidencia/documentos/mapa_fuentes.md).
-- [Resultados anuales y capital en USDT](evidencia/tablas/resumen_integrado.csv), [concentración por ciclo](evidencia/tablas/concentracion_ciclos.csv), [entradas acreditadas](evidencia/tablas/entradas_acreditadas.csv) y [motivos simultáneos](evidencia/tablas/motivos_simultaneos.csv).
-- [Verificación del paquete](evidencia/README.md) e [índice del estudio](../README.md).
+- [Informe completo](evidencia/reporte.md), [protocolo](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/capital/evidencia/documentos/protocolo.md) y [fuentes](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/capital/evidencia/documentos/mapa_fuentes.md).
+- [Resultados anuales y capital en USDT](evidencia/tablas/resumen_integrado.csv), [concentración por ciclo](evidencia/tablas/concentracion_ciclos.csv), [entradas acreditadas](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/capital/evidencia/tablas/entradas_acreditadas.csv) y [motivos simultáneos](evidencia/tablas/motivos_simultaneos.csv).
+- [Verificación del paquete](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/capital/evidencia/README.md) e [índice del estudio](../README.md).

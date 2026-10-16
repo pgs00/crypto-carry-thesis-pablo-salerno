@@ -2,7 +2,7 @@
 
 Fecha: 18/09/2026. Documento de decisión, sin ejecutar escenarios ni cambiar código, configuración, datos o descargas. Las recomendaciones siguientes son propuestas, no resultados. Se revisaron la consigna, la metodología, las configuraciones, el forecast y la evaluación existentes, y los informes de funding, tarifas y reglas.
 
-Actualización posterior del mismo día: se completó por separado el [H1 con tasas observadas](funding_h1_preliminary_20260918.md), sin imputar marks ni modificar el motor. Su MAE equiponderado fue 6,299 bps para EWMA frente a 8,703 bps para no-change, con 10.180 observaciones válidas. Tiene [recalculo independiente de todos los pronósticos y objetivos válidos](../../data/research/funding-calendar-h1-20260918/independent-verification.json). El escenario económico propuesto aquí no fue ejecutado.
+Actualización posterior del mismo día: se completó por separado el [H1 con tasas observadas](funding_h1_preliminary_20260918.md), sin imputar marks ni modificar el motor. Su MAE equiponderado fue 6,299 bps para EWMA frente a 8,703 bps para no-change, con 10.180 observaciones válidas. Tiene [recalculo independiente de todos los pronósticos y objetivos válidos](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/funding-calendar-h1-20260918/independent-verification.json). El escenario económico propuesto aquí no fue ejecutado.
 
 ## Recomendación
 

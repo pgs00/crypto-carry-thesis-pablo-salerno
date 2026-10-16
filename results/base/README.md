@@ -24,5 +24,5 @@ Los resultados usan reglas y tarifas prescritas, ejecución por minuto y aproxim
 ## Tablas, figuras y evidencia
 
 - [Vista continua: resultados, gráficos y P&L](continuo/README.md).
-- [Informe completo de la corrección](evidencia/comparacion/reporte.md), [métricas financieras](evidencia/comparacion/preservacion_financiera.csv), [H2 por escenario y período](evidencia/comparacion/h2.csv) y [exposición corregida](evidencia/comparacion/antes_despues.csv).
-- [Guía de métricas](evidencia/documentos/guia_metricas.md), [verificación del paquete](evidencia/README.md) e [índice del estudio](../README.md).
+- [Informe completo de la corrección](evidencia/comparacion/reporte.md), [métricas financieras](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/base/evidencia/comparacion/preservacion_financiera.csv), [H2 por escenario y período](evidencia/comparacion/h2.csv) y [exposición corregida](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/base/evidencia/comparacion/antes_despues.csv).
+- [Guía de métricas](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/base/evidencia/documentos/guia_metricas.md), [verificación del paquete](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/base/evidencia/README.md) e [índice del estudio](../README.md).

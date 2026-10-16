@@ -1,9 +1,0 @@
-{
-  "passed": true,
-  "tests": 6,
-  "skipped": 0,
-  "utc": "2026-10-01T22:02:38.256605+00:00",
-  "command": ".venv/Scripts/python.exe -B -X utf8 -m pytest tests/unit/test_stability_runner.py -q -p no:cacheprovider",
-  "result": "6 passed in 1.91s",
-  "scope": "Closed start-only matrix; 360h reader contract; engine cash restart/preload/first fill/end; drift guard; resource budget"
-}

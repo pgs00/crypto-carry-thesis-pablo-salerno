@@ -58,7 +58,7 @@ H2 compara estrategias con el mismo inicio y período: requiere CAGR condicional
 positivo y Sharpe superior. La [tabla completa H2](tablas/h2.csv) conserva todos los
 cortes y años, incluidos los favorables y no evaluables. H3 original permanece en
 BASE continua: I2023/I2024 carecen de parte o todo el régimen 2022–2023 y son ND
-para ese contraste. Ver [cobertura H3](tablas/h3_cobertura.csv) y
+para ese contraste. Ver [cobertura H3](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/estabilidad/evidencia/tablas/h3_cobertura.csv) y
 [comparación de inicios](tablas/comparacion_inicios.csv).
 
 ## Incertidumbre de BASE y síntesis
@@ -76,7 +76,7 @@ ganancia futura. Menos del 95% de réplicas válidas deja el intervalo principal
 los cuantiles finitos se identifican como condicionales a evaluabilidad.
 
 Ver [efectos, intervalos y degeneración](tablas/bootstrap_intervalos.csv),
-[protocolo y cobertura estadística](estadistica/protocolo.json) y [síntesis](sintesis.md).
+[protocolo y cobertura estadística](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/estabilidad/evidencia/estadistica/protocolo.json) y [síntesis](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/estabilidad/evidencia/sintesis.md).
 Las excepciones favorables H336, A100, L01 y contrafactuales deben conservarse por
 período. El diagnóstico de logs y estados B2/B3 registra {'rama_no_activada': 28}. Corridas pendientes o afectadas: ninguna según la cobertura documentada. Su criterio y cobertura constan en la síntesis; no se ejecutaron replays históricos. SOFR es una comparación hipotética bruta;
 no es una cuenta realizada comparable en riesgo. El drawdown de este informe es
@@ -84,8 +84,8 @@ diario: riesgo intradía global y ventanas locales permanecen separados en sus f
 
 ## Trazabilidad y verificación
 
-[Conciliaciones](tablas/conciliaciones.csv), [componentes por activo](tablas/componentes_periodo.csv),
-[actividad](tablas/actividad.csv) y [ejecución](tablas/ejecucion_resumen.csv).
+[Conciliaciones](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/estabilidad/evidencia/tablas/conciliaciones.csv), [componentes por activo](tablas/componentes_periodo.csv),
+[actividad](tablas/actividad.csv) y [ejecución](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/estabilidad/evidencia/tablas/ejecucion_resumen.csv).
 La evidencia financiera contiene bytes originales comprimidos sin pérdida y
 manifiestos de seis carteras únicas; los dos tramos de cada BASE son vistas de la
 misma cuenta. Las ventanas mínimas de ejecución conservan identidad de partición,

@@ -24,6 +24,6 @@ La cuenta SOFR no acredita un producto accesible ni una tasa pagada por Binance.
 
 ## Evidencia y detalle
 
-- [Informe completo](evidencia/reporte.md), [protocolo](evidencia/documentos/protocolo.md) y [mapa de fuentes](evidencia/documentos/mapa_fuentes.md).
-- [Comparación por año y subperíodo](evidencia/tablas/comparacion_periodos.csv), [diferencias](evidencia/tablas/diferencias_periodos.csv), [cuenta diaria](evidencia/tablas/cartera_sofr_diaria.csv) y [contrastes con SOFR Index](evidencia/tablas/control_sofr_index.csv).
-- [Verificación del paquete](evidencia/README.md) e [índice del estudio](../README.md).
+- [Informe completo](evidencia/reporte.md), [protocolo](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/benchmark_sofr/evidencia/documentos/protocolo.md) y [mapa de fuentes](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/benchmark_sofr/evidencia/documentos/mapa_fuentes.md).
+- [Comparación por año y subperíodo](evidencia/tablas/comparacion_periodos.csv), [diferencias](evidencia/tablas/diferencias_periodos.csv), [cuenta diaria](evidencia/tablas/cartera_sofr_diaria.csv) y [contrastes con SOFR Index](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/benchmark_sofr/evidencia/tablas/control_sofr_index.csv).
+- [Verificación del paquete](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/benchmark_sofr/evidencia/README.md) e [índice del estudio](../README.md).

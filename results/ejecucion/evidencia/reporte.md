@@ -1,10 +1,10 @@
 # Bloque 4: precio de ejecución y demoras
 
-[Lectura comparada de precio, actividad, capital, riesgo e hipótesis](lectura_resultados.md).
+[Lectura comparada de precio, actividad, capital, riesgo e hipótesis](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/ejecucion/evidencia/lectura_resultados.md).
 
 **Seis variantes separadas, doce carteras nuevas y dos BASE reutilizadas verificadas.** BTCUSDT/ETHUSDT, UTC [01/01/2022,01/09/2026), 10.000 USDT por cartera. Cada trayectoria es continua y conserva saldos entre los ocho períodos. Las cifras y archivos son locales; no acreditan publicación en GitHub ni completan toda la Entrega 4.
 
-[Síntesis](sintesis.md) · [Protocolo](documentos/protocolo.md) · [Corridas y comandos](indice_corridas.json) · [Auditoría](auditoria_ejecucion.md) · [Casos](incidentes.md) · [Reproducción](README.md)
+[Síntesis](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/ejecucion/evidencia/sintesis.md) · [Protocolo](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/ejecucion/evidencia/documentos/protocolo.md) · [Corridas y comandos](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/ejecucion/evidencia/indice_corridas.json) · [Auditoría](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/ejecucion/evidencia/auditoria_ejecucion.md) · [Casos](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/ejecucion/evidencia/incidentes.md) · [Reproducción](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/ejecucion/evidencia/README.md)
 
 ## Resultados principales
 
@@ -36,7 +36,7 @@ Las sensibilidades no son estimaciones probabilísticas ni seleccionan una polí
 | LC15 | conditional | 10000.00 | 10604.49 | 604.49 | 6.0449% | 1.2651% | 2.5099 | 0.5014% | -0.8990% |
 | LC15 | permanent | 10000.00 | 11512.01 | 1512.01 | 15.1201% | 3.0620% | 5.7604 | 0.5238% | -0.9257% |
 
-[Todos los períodos y motivos ND](tablas/metricas.csv) · [Componentes diarios](tablas/diario.csv) · [Diferencias con BASE](tablas/deltas.csv). 2026 comprende enero–agosto; los retornos anuales no se suman. El drawdown principal es diario. Slippage y redondeo ya integran los precios; no se deducen otra vez. Garantías y transferencias no son P&L. La conciliación conserva 1E-8 USDT.
+[Todos los períodos y motivos ND](tablas/metricas.csv) · [Componentes diarios](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/ejecucion/evidencia/tablas/diario.csv) · [Diferencias con BASE](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/ejecucion/evidencia/tablas/deltas.csv). 2026 comprende enero–agosto; los retornos anuales no se suman. El drawdown principal es diario. Slippage y redondeo ya integran los precios; no se deducen otra vez. Garantías y transferencias no son P&L. La conciliación conserva 1E-8 USDT.
 
 ## Contrato económico y temporal
 
@@ -56,7 +56,7 @@ Generación significa creación de la orden y coincide con su envío; la decisi�
 
 Durante la espera siguen funding, garantías, reservas, inventario, deuda y controles de riesgo. Funding precede al fill simultáneo. No se trasladan holding, cooldown ni correction_deadline. Una corrección cancelada por su plazo preventivo no es una expiración contra una ventana antigua. Cancelar antes o exactamente al inicio anula el intento; dentro de una ventana comprometida se conserva la política diferida original, sin nueva latencia de cancelación. Ningún fill se admite en o después del final exclusivo.
 
-La liquidación BASE sigue usando ventana y cupo de volumen: no es un motor independiente del exchange. Se aprobó reparar la prioridad de los reintentos ya escalados a liquidación; se congeló una identidad nueva y se ejecutaron controles BASE completos separados. [Descripción de la reparación histórica](protocolo_distribucion.md) · [Comparación exacta de controles](documentos/control_compatibilidad_base_completa.json). Las referencias selladas se conservan.
+La liquidación BASE sigue usando ventana y cupo de volumen: no es un motor independiente del exchange. Se aprobó reparar la prioridad de los reintentos ya escalados a liquidación; se congeló una identidad nueva y se ejecutaron controles BASE completos separados. [Descripción de la reparación histórica](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/ejecucion/evidencia/protocolo_distribucion.md) · [Comparación exacta de controles](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/ejecucion/evidencia/documentos/control_compatibilidad_base_completa.json). Las referencias selladas se conservan.
 
 ![Curvas y drawdown diario: precio](figuras/precio.png)
 
@@ -89,7 +89,7 @@ La liquidación BASE sigue usando ventana y cupo de volumen: no es un motor inde
 | LC15 | conditional | 28.3223% | 0.0128% | 2053.95 | 19.8257% | 698.46 | 0.00 |
 | LC15 | permanent | 98.2273% | 0.0208% | 8880.94 | 82.6795% | 3267.15 | 0.00 |
 
-La actividad integra la unión BTC/ETH sobre toda la trayectoria antes de recortar períodos. El polvo sigue valorado, pero no cuenta como tiempo activo. El capital utilizado proviene de cada cartera, no de escalar la referencia. [Actividad, renovaciones y fallos](tablas/actividad.csv), [eventos y liquidaciones](tablas/eventos.csv), [motivos de cierre](tablas/motivos_cierre.csv), [ciclos](tablas/ciclos.csv), [demoras de apertura/cierre](tablas/demoras_ciclos.csv), [órdenes completas](tablas/ordenes.csv), [capacidad](tablas/capacidad.csv), [faltantes](tablas/causas_faltantes.csv) y [conciliación del ledger](tablas/conciliacion_ledger.csv).
+La actividad integra la unión BTC/ETH sobre toda la trayectoria antes de recortar períodos. El polvo sigue valorado, pero no cuenta como tiempo activo. El capital utilizado proviene de cada cartera, no de escalar la referencia. [Actividad, renovaciones y fallos](tablas/actividad.csv), [eventos y liquidaciones](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/ejecucion/evidencia/tablas/eventos.csv), [motivos de cierre](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/ejecucion/evidencia/tablas/motivos_cierre.csv), [ciclos](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/ejecucion/evidencia/tablas/ciclos.csv), [demoras de apertura/cierre](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/ejecucion/evidencia/tablas/demoras_ciclos.csv), [órdenes completas](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/ejecucion/evidencia/tablas/ordenes.csv), [capacidad](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/ejecucion/evidencia/tablas/capacidad.csv), [faltantes](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/ejecucion/evidencia/tablas/causas_faltantes.csv) y [conciliación del ledger](tablas/conciliacion_ledger.csv).
 
 | Escenario | Cartera | Órdenes | Completas | Parciales | Sin fill | Canceladas | Expiradas | Pendientes | Reintentos |
 |---|---|---|---|---|---|---|---|---|---|
@@ -112,19 +112,19 @@ Cada pata y cada nuevo intento tienen envío y demora propios. La capacidad usa 
 
 ![Distribución de latencia realizada](figuras/cronologia.png)
 
-[Cronología por propósito y período](tablas/cronologia_resumen.csv): percentiles sólo sobre órdenes con fill; una orden no ejecutada conserva latencia ND. La elegibilidad no equivale a ejecución ni a confirmación del exchange.
+[Cronología por propósito y período](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/ejecucion/evidencia/tablas/cronologia_resumen.csv): percentiles sólo sobre órdenes con fill; una orden no ejecutada conserva latencia ND. La elegibilidad no equivale a ejecución ni a confirmación del exchange.
 
 [L frente a LC de igual demora](tablas/comparacion_L_LC.csv) presenta ambos valores y LC−L. Es una comparación descriptiva de políticas con trayectorias distintas, no un efecto aditivo aislado de la apertura.
 
 ## Incidentes y límites de valoración
 
-El [catálogo completo](tablas/episodios_descubiertos.csv) acompaña la selección previa de los cinco episodios de mayor duración por cartera, con desempate por inicio y activo. Se agrega el 24/03/2023 cuando existe inventario en esa variante, incluso polvo con riesgo de precio; las clases se registran sin convertir polvo en tiempo activo. No se impone una duración de 121 minutos. [Detalle e interpretación](incidentes.md).
+El [catálogo completo](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/ejecucion/evidencia/tablas/episodios_descubiertos.csv) acompaña la selección previa de los cinco episodios de mayor duración por cartera, con desempate por inicio y activo. Se agrega el 24/03/2023 cuando existe inventario en esa variante, incluso polvo con riesgo de precio; las clases se registran sin convertir polvo en tiempo activo. No se impone una duración de 121 minutos. [Detalle e interpretación](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/ejecucion/evidencia/incidentes.md).
 
 Los casos usan minutos y cada estado del ledger original. El episodio comienza después del movimiento de su activo y termina antes del movimiento que lo cierra, conservando funding y movimientos simultáneos intermedios. Las fronteras sin cambio de cantidades y la ventana calendario tienen políticas explícitas en el resumen. La valoración usa precios disponibles causalmente y reglas BASE. La pérdida desde el inicio corresponde al patrimonio de la cartera; spot/corto y holgura se muestran por el activo del caso. No se infiere un máximo intradía global. Un spot arrastrado acredita valoración, no venta durante una suspensión. La estimación futures_scaled del mark se identifica por separado; no se trata como mark oficial. Al extinguirse el corto, margen de ese contrato es ND.
 
 ## H1, H2 y H3
 
-H1 reutiliza una sola evaluación BASE autenticada, después de comparar forecast, historia, targets y disponibilidad por corrida. No multiplica el tamaño de muestra por las variantes. La oportunidad H3 mantiene forecast, basis, umbral y operatividad, independientemente de llegada de órdenes, fondos o posiciones. [Invariancias](tablas/invariancias.csv) · [H1 original](hipotesis_base/h1_resumen.csv).
+H1 reutiliza una sola evaluación BASE autenticada, después de comparar forecast, historia, targets y disponibilidad por corrida. No multiplica el tamaño de muestra por las variantes. La oportunidad H3 mantiene forecast, basis, umbral y operatividad, independientemente de llegada de órdenes, fondos o posiciones. [Invariancias](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/ejecucion/evidencia/tablas/invariancias.csv) · [H1 original](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/ejecucion/evidencia/hipotesis_base/h1_resumen.csv).
 
 H2 compara ambas estrategias del mismo escenario y período: CAGR condicional finito, definido y positivo; Sharpe definido y superior al permanente. RF sigue en cero. H3 conserva los cortes 2022–2023 y enero 2024–agosto 2026: ambos indicadores bajan = favorable; ambos suben = contraria; otros casos evaluables = mixta; faltantes = no concluyente.
 
@@ -144,6 +144,6 @@ H2 compara ambas estrategias del mismo escenario y período: CAGR condicional fi
 
 CSV y Parquet preservan precisión textual; las tablas de decisiones voluminosas se incluyen sólo en Parquet. El verificador incluido recalcula resultados desde registros y extractos compactos; comparte funciones con el constructor. La opción con raíz de datos vuelve a extraer ventanas y casos desde fuentes masivas; el modo offline no afirma leer archivos ausentes. Los hashes, código, configuraciones, pruebas y logs enlazan las identidades. La incompatibilidad histórica de inventario/config permanece separada de los cambios nuevos autorizados.
 
-No se recalcularon SOFR, concentración completa ni la serie intradía sellada. Shocks y contrafactual sin interrupción no se ejecutaron: bloques 5 y 6 pendientes, igual que la revisión transversal/redacción. [Matriz de cumplimiento](matriz_cumplimiento.md) · [Fuentes de figuras](figuras/fuentes.json).
+No se recalcularon SOFR, concentración completa ni la serie intradía sellada. Shocks y contrafactual sin interrupción no se ejecutaron: bloques 5 y 6 pendientes, igual que la revisión transversal/redacción. [Matriz de cumplimiento](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/ejecucion/evidencia/matriz_cumplimiento.md) · [Fuentes de figuras](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/ejecucion/evidencia/figuras/fuentes.json).
 
-[Revision tecnica de esta version](documentos/revision_tecnica_paquete.md).
+[Revision tecnica de esta version](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/ejecucion/evidencia/documentos/revision_tecnica_paquete.md).

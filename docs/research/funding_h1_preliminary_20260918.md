@@ -64,11 +64,11 @@ La última señal evaluable es del **24/08/2026 a las 08:01:00.002 UTC**, en amb
 
 El [resultado JSON](funding_h1_preliminary_20260918.json) contiene configuración efectiva, cobertura, resumen, exclusiones, hashes del código y referencias de las páginas API. Los decimales de los pronósticos se conservan como strings en las señales; el evaluador original produce estadísticas en float.
 
-- [Manifiesto de calendarios](../../data/research/funding-calendar-h1-20260918/manifest.json): 114 URL, hashes, checksums, tamaños y fecha de descarga/verificación.
-- [Resumen H1](../../data/research/funding-calendar-h1-20260918/h1_summary.json): nueve filas, sin el redondeo de presentación de la tabla.
+- [Manifiesto de calendarios](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/funding-calendar-h1-20260918/manifest.json): 114 URL, hashes, checksums, tamaños y fecha de descarga/verificación.
+- [Resumen H1](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/funding-calendar-h1-20260918/h1_summary.json): nueve filas, sin el redondeo de presentación de la tabla.
 - Señales JSON comprimidas (`signals.json.gz`): 10.224 pronósticos, tiempos, antecedentes y validez.
 - Evaluación JSON comprimida (`forecast_evaluation.json.gz`): objetivos, errores y exclusiones por señal.
-- [Script reproducible](../../data/research/funding-calendar-h1-20260918/run_h1.py): descarga acotada, verificación y llamada a las funciones originales.
+- [Script reproducible](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/funding-calendar-h1-20260918/run_h1.py): descarga acotada, verificación y llamada a las funciones originales.
 
 Los dos archivos `.gz` están disponibles localmente en
 `data/research/funding-calendar-h1-20260918/`, pero están excluidos de Git y no
@@ -84,6 +84,6 @@ La primera ejecución tardó **69,154 segundos** en este equipo. La carpeta de i
 
 Como control posterior, se verificaron **138 hashes** —fuentes API, calendarios, código, script y artefactos— y los **114 checksums** de calendarios. Se recontaron las 10.224 señales y 10.180 objetivos válidos, y se recalcularon directamente desde las páginas originales seis objetivos: primer evento, inicio de 2024 y último evento válido, para cada activo. Coincidieron con la evaluación guardada.
 
-Una [verificación independiente adicional](../../data/research/funding-calendar-h1-20260918/independent-verification.json) recalculó los **10.224 pronósticos** con una fórmula vectorial y los **10.180 horizontes válidos**, y verificó **253 hashes** contando archivos de checksum. Las diferencias máximas fueron `6,94e-18` en pronósticos y `3,47e-18` en objetivos, compatibles con la representación numérica de las estadísticas. Los tres resúmenes agregados coincidieron. Este control no modificó el script ni el JSON original de resultados.
+Una [verificación independiente adicional](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/funding-calendar-h1-20260918/independent-verification.json) recalculó los **10.224 pronósticos** con una fórmula vectorial y los **10.180 horizontes válidos**, y verificó **253 hashes** contando archivos de checksum. Las diferencias máximas fueron `6,94e-18` en pronósticos y `3,47e-18` en objetivos, compatibles con la representación numérica de las estadísticas. Los tres resúmenes agregados coincidieron. Este control no modificó el script ni el JSON original de resultados.
 
 Este entregable aporta evidencia real para H1 y puede incorporarse a resultados preliminares. Los faltantes de marks, reglas y costos siguen siendo relevantes para la simulación económica; no impiden este cálculo de capacidad predictiva.

@@ -44,11 +44,11 @@ condicional; H3 es contraria a una caída de oportunidad y CAGR entre estos cort
 
 - [Resultados y P&L por tramo](tablas/resultados_periodos.csv),
   [equity diario](tablas/equity_diario.csv), [actividad](tablas/actividad.csv),
-  [tiempo invertido](tablas/tiempo_invertido.csv) y [ciclos](tablas/ciclos.csv).
+  [tiempo invertido](tablas/tiempo_invertido.csv) y [ciclos](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/base/continuo/tablas/ciclos.csv).
 - [Filtros de entrada](tablas/filtros_entrada.csv) y
-  [eventos por causa](tablas/eventos_por_causa.csv).
-- 24/03/2023: [impacto diario](tablas/episodio_2023_03_24_resumen.csv) y
-  [exposición sin cobertura](tablas/episodio_2023_03_24_exposicion.csv).
+  [eventos por causa](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/base/continuo/tablas/eventos_por_causa.csv).
+- 24/03/2023: [impacto diario](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/base/continuo/tablas/episodio_2023_03_24_resumen.csv) y
+  [exposición sin cobertura](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/base/continuo/tablas/episodio_2023_03_24_exposicion.csv).
   Ambas carteras tuvieron 121 minutos sin cobertura; P&L diario de 35,908876 USDT
   en la condicional y 73,859494 USDT en la permanente.
 - [H1 por activo y período](tablas/h1_resumen.csv),
@@ -57,7 +57,7 @@ condicional; H3 es contraria a una caída de oportunidad y CAGR entre estos cort
 - [Sensibilidad de los 15 marks](../../../data/research/continuous-marks-20260919/README.md)
   y [sensibilidad del precio de funding](../../../data/research/funding-price-sensitivity-20260920/README.md).
 - [ZIP con evidencia completa](../../../data/evidence/carteras_continuas.zip),
-  [metodología](../../../docs/methodology.md) y [manifiesto de esta vista](manifest.json).
+  [metodología](../../../docs/methodology.md) y [manifiesto de esta vista](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/base/continuo/manifest.json).
 
 Las tablas de resumen conservan los bytes del ZIP. `equity_diario.csv` es una
 proyección de cinco columnas sin redondear sus valores. Las tablas Markdown
@@ -88,8 +88,8 @@ o decisiones; extrapolan errores de períodos con precios conocidos a otros per�
 
 Adaptación editorial: se actualizan el título y los enlaces de consulta.
 Las 12 tablas y las 6 figuras conservan sus bytes; no se regeneraron resultados.
-El [manifiesto vigente](manifest.json) identifica esta vista y conserva el
-[README anterior](procedencia/distribucion_20261010/README.md), el
-[manifiesto anterior](procedencia/distribucion_20261010/manifest.json) y su
-[sello](procedencia/distribucion_20261010/manifest.sha256), sin modificaciones.
+El [manifiesto vigente](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/base/continuo/manifest.json) identifica esta vista y conserva el
+[README anterior](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/base/continuo/procedencia/distribucion_20261010/README.md), el
+[manifiesto anterior](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/base/continuo/procedencia/distribucion_20261010/manifest.json) y su
+[sello](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/base/continuo/procedencia/distribucion_20261010/manifest.sha256), sin modificaciones.
 El verificador autentica ese sello y comprueba todos los miembros originales.

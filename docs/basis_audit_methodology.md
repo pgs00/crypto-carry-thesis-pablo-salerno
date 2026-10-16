@@ -3,7 +3,7 @@
 La auditoría contrasta el escenario histórico `vwap_joint` en las ventanas UTC
 `[2022-09-01, 2023-09-01)` y `[2025-09-01, 2026-09-01)`, para BTCUSDT y ETHUSDT
 spot frente a sus perpetuos lineales USD-M. No representa el período continuo
-de la BASE vigente. Los [resultados y fuentes](../data/research/basis-audit-20260919/README.md)
+de la BASE vigente. Los [resultados y fuentes](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/basis-audit-20260919/README.md)
 identifican las corridas, la cobertura y sus límites.
 
 El auditor separado lee las columnas originales de las velas de un minuto y

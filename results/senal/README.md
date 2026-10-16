@@ -26,6 +26,6 @@ Los drawdowns de estas sensibilidades son diarios. Se mantienen costos y reglas 
 
 ## Evidencia y detalle
 
-- [Informe completo](evidencia/reporte.md), [protocolo](evidencia/documentos/protocolo.md) e [índice de corridas](evidencia/indice_corridas.json).
-- [Métricas por año y corte](evidencia/tablas/metricas.csv), [H2 con motivos y ND](evidencia/tablas/h2.csv), [H3](evidencia/tablas/h3_resumen.csv), [diferencias entre hipótesis](evidencia/tablas/deltas_hipotesis.csv) e [invariancias](evidencia/tablas/invariancias.csv).
-- [Verificación del paquete](evidencia/README.md) e [índice del estudio](../README.md).
+- [Informe completo](evidencia/reporte.md), [protocolo](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/senal/evidencia/documentos/protocolo.md) e [índice de corridas](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/senal/evidencia/indice_corridas.json).
+- [Métricas por año y corte](evidencia/tablas/metricas.csv), [H2 con motivos y ND](evidencia/tablas/h2.csv), [H3](evidencia/tablas/h3_resumen.csv), [diferencias entre hipótesis](evidencia/tablas/deltas_hipotesis.csv) e [invariancias](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/senal/evidencia/tablas/invariancias.csv).
+- [Verificación del paquete](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/senal/evidencia/README.md) e [índice del estudio](../README.md).

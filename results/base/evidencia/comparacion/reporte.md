@@ -31,7 +31,7 @@ anterior describen aquella sesión, no el estado de publicación actual.
 ## Comparación de las doce carteras
 
 Muestra completa `[2022-01-01, 2026-09-01)` UTC. Porcentajes sólo redondeados para
-esta vista; segundos exactos y todos los cortes en [antes_despues.csv](antes_despues.csv).
+esta vista; segundos exactos y todos los cortes en [antes_despues.csv](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/base/evidencia/comparacion/antes_despues.csv).
 Cada fila conserva el run_id original en ese CSV y en el registro de corridas.
 Bruto y activo son uniones temporales de BTC y ETH, sin doble conteo.
 
@@ -57,7 +57,7 @@ Se mantienen por separado el bruto con cualquier cantidad positiva, tiempo activ
 tiempo con algún residuo, tiempo únicamente con polvo y tiempo sin inventario.
 «Sin posición activa» admite residuos y no equivale a efectivo puro. El contador
 de algún activo cubierto puede solaparse con el de algún activo sin cobertura:
-su suma no es el tiempo invertido. La [guía](../documentos/guia_metricas.md) explicita
+su suma no es el tiempo invertido. La [guía](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/base/evidencia/documentos/guia_metricas.md) explicita
 particiones, unidades y fracciones.
 
 ## Equivalencia exacta con E3
@@ -81,7 +81,7 @@ terminal ocurre un nanosegundo antes. No hay discrepancia terminal con E3.
 Usar erróneamente el timestamp terminal como final exclusivo perdería 1 ns:
 polvo/sin actividad en la condicional y cobertura/actividad en la permanente.
 
-El [episodio del 24/03/2023](episodio_2023_03_24.csv) conserva 7260 segundos
+El [episodio del 24/03/2023](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/base/evidencia/comparacion/episodio_2023_03_24.csv) conserva 7260 segundos
 (121 minutos) activos sin cobertura en ETH condicional y BTC/ETH permanente.
 La unión de cartera es 7260 segundos en cada una. No se confunde este episodio
 con toda la exposición sin cobertura de la muestra.
@@ -92,7 +92,7 @@ Se evaluaron 48 pares, seis escenarios y ocho períodos: {'no_concluyente': 5, '
 Cambiaron 0 veredictos respecto del padre. Las cifras completas,
 ambos run_id, límites, CAGR condicional, Sharpes, diferencia, booleanos y motivos
 figuran en [h2.csv](h2.csv); la comparación de todos los veredictos está en
-[h2_cambios.csv](h2_cambios.csv).
+[h2_cambios.csv](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/base/evidencia/comparacion/h2_cambios.csv).
 
 | scenario | conditional_cagr | conditional_sharpe | permanent_sharpe | cagr_positive | sharpe_superior | verdict | reason |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -142,23 +142,23 @@ reglas históricas certificadas. Se comprueban fechas y registros diarios efecti
 Los 96 registros cartera/período conservan
 literalmente todas las columnas no afectadas: equity, P&L y componentes, retornos,
 CAGR, Sharpe, volatilidad, drawdown, utilización diaria, margen y eventos.
-[preservacion_financiera.csv](preservacion_financiera.csv) compara los valores
-antes/después; [preservacion_tablas.csv](preservacion_tablas.csv) compara bytes de
+[preservacion_financiera.csv](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/base/evidencia/comparacion/preservacion_financiera.csv) compara los valores
+antes/después; [preservacion_tablas.csv](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/base/evidencia/comparacion/preservacion_tablas.csv) compara bytes de
 las tablas preservadas y del índice de corridas. Excluir polvo del tiempo operativo
 no elimina unidades, valuación ni riesgo de precio de equity y P&L.
 
-[H1 resumen](h1_resumen.csv), [H1 invariancia](h1_invariancia.csv),
-[H3 diario](h3_diario.csv), [H3 invariancia](h3_invariancia.csv) y
+[H1 resumen](h1_resumen.csv), [H1 invariancia](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/base/evidencia/comparacion/h1_invariancia.csv),
+[H3 diario](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/base/evidencia/comparacion/h3_diario.csv), [H3 invariancia](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/base/evidencia/comparacion/h3_invariancia.csv) y
 [H3 por régimen](h3_regimen.csv) son copias binarias del padre, con sus valores
 y procedencias originales. Los estados descriptivos H3 conservados son
 contraria, not_used_for_H3_cagr. No se reinterpretan como resultados fuera de muestra.
-Los [deltas](deltas.csv) conservan las comparaciones financieras; sólo se actualizan
+Los [deltas](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/base/evidencia/comparacion/deltas.csv) conservan las comparaciones financieras; sólo se actualizan
 los indicadores operativos afectados y se agregan los diagnósticos de residuos.
 
 ## Evidencia, supuestos y límites
 
 Evidencia: trayectorias, metadatos y resultados ejecutados conservados en el padre;
-tablas y código editorial E3 autenticados en [referencia_e3](../referencia_e3/).
+tablas y código editorial E3 autenticados en [referencia_e3](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/tree/634c88fcf985da742cfa55d83bc4c0f99e082610/results/base/evidencia/referencia_e3).
 Supuestos: siguen vigentes las reglas prescritas, aproximaciones `futures_scaled`,
 promoción observada y límites de ejecución de minuto del protocolo padre. FUT4
 continúa siendo un supuesto constante, no una fecha histórica inferida.
@@ -174,16 +174,16 @@ para cerrar fechas históricas ni constituye una nueva tanda de sensibilidad.
 ## Procedencia y verificación
 
 Manifiesto padre SHA-256: `77f1cfcaf4fb13044dbcb3b242a2eb19749cf7e88806db023a08bbe4ec272057`.
-[procedencia.json](../procedencia.json) fija entradas y versión `exposure_h2_v2`;
-[procedencia_corridas.csv](procedencia_corridas.csv) separa el hash del motor
+[procedencia.json](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/base/evidencia/procedencia.json) fija entradas y versión `exposure_h2_v2`;
+[procedencia_corridas.csv](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/base/evidencia/comparacion/procedencia_corridas.csv) separa el hash del motor
 original de la identidad del posprocesador actual. El producto requiere el padre
 íntegro por argumento; no es autocontenido. No necesita datos masivos de mercado,
 Git, red ni el motor. La verificación v2 requiere PyArrow para leer las posiciones.
 
-El [resultado de construcción](../verificacion_construccion.json) conserva las
+El [resultado de construcción](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/base/evidencia/verificacion_construccion.json) conserva las
 comparaciones realizadas al construir. La verificación independiente se ejecuta
 después del sello y guarda su resultado en una ruta nueva externa. Comprueba
 semántica de H2, clasificación, duraciones, uniones, cuadros y preservación,
 además de hashes. El verificador archivado del padre conserva su alcance v1;
 su aprobación por sí sola no acredita esta corrección. Véanse los comandos y
-dependencias en el [README](../README.md).
+dependencias en el [README](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/base/evidencia/README.md).

@@ -1,8 +1,0 @@
-{
-  "passed": true,
-  "path": "C:\\Users\\pablo\\AppData\\Local\\Temp\\b5_codigo_20260930T2323Z",
-  "stdout": "{\"outside_copy\": []}\n",
-  "stderr": "",
-  "returncode": 0,
-  "scope": "Importaci?n efectiva del runner desde copia real de s?lo c?digo, sin HEAD/?ndice; no backtest portable ni verificador final todav?a"
-}

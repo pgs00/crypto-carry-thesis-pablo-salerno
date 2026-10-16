@@ -50,7 +50,7 @@ La vía de Internet Archive produjo estos resultados verificables:
 - CDX de la FAQ con su slug encontró las capturas A2/A3. La ruta corta devolvió un índice vacío. Otras consultas por idioma, blog y spot 2025–2026 terminaron por timeout o 503.
 - El endpoint de disponibilidad de Archive respondió 429. Se cambió al índice CDX; no se esperó indefinidamente ni se hicieron descargas masivas.
 
-Los hashes SHA-256 seleccionados corresponden al HTML **decodificado y vuelto a codificar como UTF-8**, no a bytes de transporte ni al digest CDX. En la validación posterior se recuperaron nuevamente A1, A2 y A3: coincidieron los tres hashes y sus fechas `Memento-Datetime`. Se conservaron las copias UTF-8 en `data/research/fee-archive-followup-20260918/`, con [manifiesto de procedencia](../../data/research/fee-archive-followup-20260918/manifest.json). Total: 1.701.226 bytes. Las copias permiten auditar exactamente el contenido revisado sin depender de una nueva descarga del archivo web.
+Los hashes SHA-256 seleccionados corresponden al HTML **decodificado y vuelto a codificar como UTF-8**, no a bytes de transporte ni al digest CDX. En la validación posterior se recuperaron nuevamente A1, A2 y A3: coincidieron los tres hashes y sus fechas `Memento-Datetime`. Se conservaron las copias UTF-8 en `data/research/fee-archive-followup-20260918/`, con [manifiesto de procedencia](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/fee-archive-followup-20260918/manifest.json). Total: 1.701.226 bytes. Las copias permiten auditar exactamente el contenido revisado sin depender de una nueva descarga del archivo web.
 
 ## Pendientes y decisión necesaria
 

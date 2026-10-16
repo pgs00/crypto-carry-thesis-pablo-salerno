@@ -28,10 +28,10 @@ La remuneración de caja queda fuera de BASE y se explora por separado en el
 complemento, sin reinvertir los intereses en nuevas posiciones. El benchmark
 SOFR sigue siendo una cuenta alternativa sobre el patrimonio completo.
 
-La [matriz de resultados](matriz_resultados.csv) identifica escenarios y
+La [matriz de resultados](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/matriz_resultados.csv) identifica escenarios y
 dependencias. Los [informes sellados](../docs/procedencia/README.md) conservan
 sus tablas, configuraciones y fuentes; las
-[ventanas independientes](../data/evidence/ventanas_independientes/LEEME.md)
+[ventanas independientes](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/evidence/ventanas_independientes/LEEME.md)
 son antecedentes con reinicios de capital, distintos de las cuentas continuas.
 La [guía de reproducción](../docs/reproduction.md) reúne los comandos y el
 alcance de las comprobaciones.

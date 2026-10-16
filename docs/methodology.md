@@ -25,7 +25,7 @@ sus valores predeterminados no reproducen esta BASE.
 
 Las ventanas independientes de septiembre de 2022–agosto de 2023 y septiembre
 de 2025–agosto de 2026, cada una iniciada con capital nuevo, son
-[antecedentes archivados](../data/evidence/ventanas_independientes/LEEME.md). La ampliación
+[antecedentes archivados](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/evidence/ventanas_independientes/LEEME.md). La ampliación
 continua conserva `next_minute_vwap` y `joint_quantity` de la revisión por minuto.
 
 ## Datos y causalidad
@@ -181,7 +181,7 @@ al permanente, también finito, para el mismo escenario y período. Con los
 componentes evaluables y alguna condición incumplida es `no_favorable`;
 con métricas ND o ventanas no comparables es `no_concluyente`, conservando
 el motivo. No se sustituye el Sharpe de volatilidad nula por cero. La
-[guía corregida de métricas](../results/base/evidencia/documentos/guia_metricas.md)
+[guía corregida de métricas](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/base/evidencia/documentos/guia_metricas.md)
 fija la clasificación y la exclusión de polvo de exposición/actividad.
 H3 contrasta
 oportunidad y CAGR condicional entre ambos regímenes. Son comparaciones descriptivas,

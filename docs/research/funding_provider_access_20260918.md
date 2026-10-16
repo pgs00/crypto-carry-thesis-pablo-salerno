@@ -11,7 +11,7 @@ Tardis permite consultar gratuitamente el primer día de cada mes mediante su [A
 - 2022-01-01: cuatro eventos cuyo mark de cobro falta en Binance.
 - 2023-11-01, 2024-01-01 y 2024-02-01: doce eventos con mark de cobro publicado por Binance, usados como contraste.
 
-Las ocho consultas respondieron HTTP 200. Se guardaron 427.200 bytes de respuestas descomprimidas, URL, fecha de consulta, cabeceras y SHA-256. El [resultado completo](../../data/research/funding-provider-access-20260918/sample-comparison.json) conserva cada candidato, timestamp de emisión y recepción, diferencia temporal y comparación decimal. El [índice de evidencia](funding_provider_access_20260918.json) también referencia las copias de documentación consultadas.
+Las ocho consultas respondieron HTTP 200. Se guardaron 427.200 bytes de respuestas descomprimidas, URL, fecha de consulta, cabeceras y SHA-256. El [resultado completo](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/funding-provider-access-20260918/sample-comparison.json) conserva cada candidato, timestamp de emisión y recepción, diferencia temporal y comparación decimal. El [índice de evidencia](funding_provider_access_20260918.json) también referencia las copias de documentación consultadas.
 
 ## Resultado del contraste
 
@@ -51,6 +51,6 @@ Esto evalúa los endpoints documentados, no demuestra que los proveedores carezc
 
 ## Condición de aceptación
 
-La fuente candidata debe entregar `symbol`, timestamp efectivo con precisión original, tasa y **precio realmente utilizado para liquidar funding**, junto con procedencia, tratamiento de correcciones y cobertura. Se validará primero contra los cobros conocidos, incluido el contraejemplo anterior, y después contra el [inventario exacto de eventos ausentes](../../data/research/funding-followup-20260918/missing-economic-settlement-marks.json).
+La fuente candidata debe entregar `symbol`, timestamp efectivo con precisión original, tasa y **precio realmente utilizado para liquidar funding**, junto con procedencia, tratamiento de correcciones y cobertura. Se validará primero contra los cobros conocidos, incluido el contraejemplo anterior, y después contra el [inventario exacto de eventos ausentes](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/funding-followup-20260918/missing-economic-settlement-marks.json).
 
 Los mensajes de 2022 descargados quedan como evidencia separada. No completan el requisito estricto y no se copian a los inputs operativos.

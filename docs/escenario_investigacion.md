@@ -80,7 +80,7 @@ IDs en futuros. El piloto certificado utiliza únicamente
 cartera y diferencia contable cero. Esa muestra breve no valida renovaciones
 semanales ni representatividad de ambos años.
 
-El [contraste de trades y minutos](../data/research/research-scenario-20260918/tick-minute-comparison.json)
+El [contraste de trades y minutos](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/research-scenario-20260918/tick-minute-comparison.json)
 usa esos mismos trades: seis fills por cartera en ambos modelos y conciliación
 cero. El equity terminal es 9.985,5135 USDT con trades y 9.988,4700 USDT con
 aperturas por minuto, una diferencia de 2,9564 USDT sobre 10.000 iniciales.
@@ -93,7 +93,7 @@ El diagnóstico documenta la suspensión y la sensibilidad del precio de
 reapertura, que concentra buena parte de la ganancia del baseline temprano.
 Es una verificación posterior al resultado, identificada como tal; no cambia
 los parámetros predeclarados ni sustituye el baseline. Los números y sus
-límites están en la [auditoría de la suspensión](../data/research/minute-download-20260918/outage-trades-validation.json).
+límites están en la [auditoría de la suspensión](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/minute-download-20260918/outage-trades-validation.json).
 
 El resolver se contrastó con 10.224 eventos del horizonte original:
 6.214 marks exactos y 4.010 proxies causales. Esas cifras **no son los conteos
@@ -133,7 +133,7 @@ completa pasó 302 pruebas. Las dos corridas anuales ya terminaron: 310,14 y
 
 Una auditoría independiente reconstruyó el equity final de las cuatro carteras
 y verificó los 106 fills contra sus precios fuente, costos y tiempos de orden.
-Los resultados de estas ventanas se conservan en el [ventanas independientes](../data/evidence/ventanas_independientes/LEEME.md).
+Los resultados de estas ventanas se conservan en el [ventanas independientes](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/evidence/ventanas_independientes/LEEME.md).
 Las siete sensibilidades priorizadas —costos 2x/3x, fee Futures 0,04 %,
 proxy ±10 bps, mantenimiento 2x y cargo de liquidación 3 %— terminaron para
 ambas ventanas. Los índices y sus corridas vinculadas están verificados.

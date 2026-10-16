@@ -26,7 +26,7 @@ continuas se conserva en [`data/evidence/`](../../data/evidence/).
 
 La [vista continua](../../results/base/continuo/README.md) reúne 12 tablas y
 6 figuras originales. Su adaptación editorial conserva el
-[manifiesto anterior](../../results/base/continuo/procedencia/distribucion_20261010/manifest.json),
+[manifiesto anterior](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/base/continuo/procedencia/distribucion_20261010/manifest.json),
 su sidecar y su README. `scripts.publish_thesis --verify` autentica los
 19 miembros originales y la adaptación.
 

@@ -145,7 +145,7 @@ $v2 = Join-Path $repo 'data/evidence/ventanas_independientes'
 
 Los verificadores internos comprueban inventario y evidencia. La distribución
 de ventanas independientes es un antecedente archivado; su
-[LEEME original autenticado](../data/evidence/ventanas_independientes/LEEME.md) documenta
+[LEEME original autenticado](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/evidence/ventanas_independientes/LEEME.md) documenta
 herramientas, fuentes y límites.
 
 La corrección BASE recibe una ruta de directorio mediante `--e3-reference`,
@@ -199,5 +199,5 @@ adaptación de ubicación o un pase de pruebas no acredita una nueva corrida eco
 La [procedencia documental](procedencia/README.md) identifica los PDF finales
 proporcionados por el autor y los controles de los archivos publicados.
 
-[capital-guia]: ../results/capital/evidencia/README.md
-[b5-limites]: ../results/estres/evidencia/reproducibilidad.md
+[capital-guia]: https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/capital/evidencia/README.md
+[b5-limites]: https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/estres/evidencia/reproducibilidad.md

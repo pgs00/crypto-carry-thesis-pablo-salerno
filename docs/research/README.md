@@ -3,12 +3,12 @@
 Este índice conserva fuentes y exploraciones de 2026-09-18/19. El estudio vigente
 son las [carteras continuas de 2022–agosto de 2026](../../results/base/README.md).
 Los alcances y conteos fechados de esta página son antecedentes; no reemplazan
-los resultados actuales. El [catálogo de evidencia](../../data/research/README.md)
+los resultados actuales. El [catálogo de evidencia](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/README.md)
 identifica qué respalda el estudio continuo y qué corresponde a pilotos o ventanas.
 
 ## Evidencia obtenida
 
-La [auditoría del basis del 19/09/2026](../../data/research/basis-audit-20260919/README.md)
+La [auditoría del basis del 19/09/2026](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/basis-audit-20260919/README.md)
 corresponde a las ventanas independientes históricas: 4.380 observaciones contrastadas con sus
 velas originales. Confirma el basis y documenta la corrección de presentación
 del funding omitido por la permanente, sin modificar resultados económicos.
@@ -78,7 +78,7 @@ La auditoría exige el esquema y ancho de columnas esperados, vuelve a comprobar
 Las fuentes sustentan las limitaciones y sensibilidades del escenario aprobado.
 Se conserva su procedencia; no se reclasifican reglas parciales o proxies como
 historia exacta. Las dos ventanas por minuto son antecedentes ejecutados y
-conservados en el [ventanas independientes](../../data/evidence/ventanas_independientes/LEEME.md).
+conservados en el [ventanas independientes](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/evidence/ventanas_independientes/LEEME.md).
 [Resultados por tema](../../results/README.md) describe las carteras continuas vigentes.
 Las fuentes de esta investigación fueron públicas y no requirieron contactar
 soporte ni contratar proveedores de datos.

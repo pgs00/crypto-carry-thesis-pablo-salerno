@@ -26,6 +26,6 @@ H1 reutiliza la evaluación BASE autenticada. H3 conserva la oportunidad indepen
 
 ## Evidencia y detalle
 
-- [Informe completo](evidencia/reporte.md), [lectura financiera ampliada](evidencia/lectura_resultados.md), [protocolo](evidencia/documentos/protocolo.md) e [incidentes](evidencia/incidentes.md).
-- [Métricas por período](evidencia/tablas/metricas.csv), [H2 y motivos](evidencia/tablas/h2.csv), [diferencias frente a BASE](evidencia/tablas/deltas.csv) y [cronología de ejecución](evidencia/tablas/cronologia_resumen.csv).
-- [Verificación del paquete](evidencia/README.md), [estrés](../estres/README.md) e [índice del estudio](../README.md).
+- [Informe completo](evidencia/reporte.md), [lectura financiera ampliada](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/ejecucion/evidencia/lectura_resultados.md), [protocolo](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/ejecucion/evidencia/documentos/protocolo.md) e [incidentes](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/ejecucion/evidencia/incidentes.md).
+- [Métricas por período](evidencia/tablas/metricas.csv), [H2 y motivos](evidencia/tablas/h2.csv), [diferencias frente a BASE](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/ejecucion/evidencia/tablas/deltas.csv) y [cronología de ejecución](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/ejecucion/evidencia/tablas/cronologia_resumen.csv).
+- [Verificación del paquete](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/ejecucion/evidencia/README.md), [estrés](../estres/README.md) e [índice del estudio](../README.md).

@@ -4,7 +4,7 @@ Esta investigación se puede realizar sin terminar la descarga de trades. Se usa
 
 ## Resultado
 
-**Siguen faltando 2.005 marks por activo dentro de la ventana económica; no se recuperó ninguno mediante estas consultas.** Se preparó un [inventario de los 4.010 eventos](../../data/research/funding-followup-20260918/missing-economic-settlement-marks.json) con símbolo, timestamp original en milisegundos, hora UTC, tasa y página de procedencia. El [informe de evidencia](funding_followup_20260918.json) incluye SHA-256, resultados y comparaciones.
+**Siguen faltando 2.005 marks por activo dentro de la ventana económica; no se recuperó ninguno mediante estas consultas.** Se preparó un [inventario de los 4.010 eventos](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/funding-followup-20260918/missing-economic-settlement-marks.json) con símbolo, timestamp original en milisegundos, hora UTC, tasa y página de procedencia. El [informe de evidencia](funding_followup_20260918.json) incluye SHA-256, resultados y comparaciones.
 
 | Alcance por activo | BTCUSDT | ETHUSDT |
 |---|---:|---:|

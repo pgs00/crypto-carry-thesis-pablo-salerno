@@ -24,6 +24,6 @@ H3 original permanece en BASE: las cuentas nuevas no cubren todo su primer régi
 
 ## Evidencia y detalle
 
-- [Informe completo](evidencia/reporte.md) y [síntesis transversal](evidencia/sintesis.md).
-- [Métricas y denominadores](evidencia/tablas/metricas.csv), [saldos iniciales](evidencia/tablas/saldos_iniciales.csv), [H2 por período](evidencia/tablas/h2.csv), [intervalos y casos no evaluables](evidencia/tablas/bootstrap_intervalos.csv) y [protocolo estadístico](evidencia/estadistica/protocolo.json).
-- [Verificación del paquete](evidencia/README.md) e [índice del estudio](../README.md).
+- [Informe completo](evidencia/reporte.md) y [síntesis transversal](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/estabilidad/evidencia/sintesis.md).
+- [Métricas y denominadores](evidencia/tablas/metricas.csv), [saldos iniciales](evidencia/tablas/saldos_iniciales.csv), [H2 por período](evidencia/tablas/h2.csv), [intervalos y casos no evaluables](evidencia/tablas/bootstrap_intervalos.csv) y [protocolo estadístico](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/estabilidad/evidencia/estadistica/protocolo.json).
+- [Verificación del paquete](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/estabilidad/evidencia/README.md) e [índice del estudio](../README.md).

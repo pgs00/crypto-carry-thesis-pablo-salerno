@@ -8,7 +8,7 @@ Se descargaron 114 archivos mensuales oficiales de mark de un minuto: BTCUSDT y 
 
 Los archivos mensuales presentaban 10.095 minutos ausentes. Once archivos diarios oficiales recuperaron 10.080. Quedan **15 minutos ausentes**, también ausentes en cuatro consultas a `/fapi/v1/markPriceKlines`. Ninguno coincide con los minutos necesarios para este contraste de funding. No se rellenaron: limitan la cobertura de un eventual replay de riesgo durante todo el período.
 
-Se conservaron archivos, respuestas, hashes y verificaciones en [el directorio de investigación](../../data/research/funding-proxy-audit-20260918/manifest.json). Los ZIP quedan locales y excluidos de Git. El [script de investigación](../../data/research/funding-proxy-audit-20260918/audit_probe.py) vuelve a comprobarlos y reproduce las tablas; no modifica la entrada operativa del proyecto.
+Se conservaron archivos, respuestas, hashes y verificaciones en [el directorio de investigación](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/funding-proxy-audit-20260918/manifest.json). Los ZIP quedan locales y excluidos de Git. El [script de investigación](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/funding-proxy-audit-20260918/audit_probe.py) vuelve a comprobarlos y reproduce las tablas; no modifica la entrada operativa del proyecto.
 
 ## Contraste con cobros de precio conocido
 
@@ -64,7 +64,7 @@ La aproximación puede evaluarse sin soporte ni una API comercial. No hace falta
 
 Siguen separados los problemas de ejecución, precios ausentes fuera de los cobros, comisiones y reglas históricas. Descargar velas no reconstruye operaciones individuales ni una demora de un segundo entre patas. Una evaluación por barras necesita reglas de ejecución propias y no se presentaría como el replay original.
 
-Evidencia: [resumen verificable](funding_proxy_feasibility_20260918.json), [comparaciones por evento](../../data/research/funding-proxy-audit-20260918/comparison.json), [recuperación diaria](../../data/research/funding-proxy-audit-20260918/daily-gap-recovery-manifest.json), [consultas REST de huecos restantes](../../data/research/funding-proxy-audit-20260918/rest-gap-recovery-manifest.json). Los datos y reglas ejecutables permanecen separados de esta investigación.
+Evidencia: [resumen verificable](funding_proxy_feasibility_20260918.json), [comparaciones por evento](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/funding-proxy-audit-20260918/comparison.json), [recuperación diaria](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/funding-proxy-audit-20260918/daily-gap-recovery-manifest.json), [consultas REST de huecos restantes](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/data/research/funding-proxy-audit-20260918/rest-gap-recovery-manifest.json). Los datos y reglas ejecutables permanecen separados de esta investigación.
 
 ## Otras ofertas de autoservicio revisadas
 

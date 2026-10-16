@@ -1,57 +1,34 @@
-"""Check encoding and local links in an explicit list of active documentation."""
+"""Check encoding and local links throughout the retained Markdown documents."""
 
 import json
+import os
 import re
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
-CURRENT_DOCS = (
-    'README.md',
-    'results/README.md',
-    'docs/procedencia/README.md',
-    'docs/basis_audit_methodology.md',
-    'docs/continuous_mark_gaps.md',
-    'docs/data_dictionary.md',
-    'docs/descarga_d.md',
-    'docs/escenario_investigacion.md',
-    'docs/methodology.md',
-    'docs/reglas_historicas/decisiones_integracion.md',
-    'docs/reglas_historicas/lectura_resultados.md',
-    'docs/reglas_historicas/protocolo.md',
-    'docs/reglas_historicas/reproduccion.md',
-    'docs/reglas_historicas/verificacion_publicacion.md',
-    'docs/reproduction.md',
-    'docs/research/README.md',
-    'docs/research/binance_historical_access_20260918.md',
-    'docs/research/fees_followup_20260918.md',
-    'docs/research/funding_followup_20260918.md',
-    'docs/research/funding_h1_preliminary_20260918.md',
-    'docs/research/funding_provider_access_20260918.md',
-    'docs/research/funding_proxy_feasibility_20260918.md',
-    'docs/research/historical_fees.md',
-    'docs/research/historical_market_rules.md',
-    'docs/research/implementation_verification_20260918.md',
-    'docs/research/metadata_provider_access_20260918.md',
-    'docs/research/methodology_two_days_20260918.md',
-    'docs/research/public_rules_alternatives_20260918.md',
-    'docs/research/rules_followup_20260918.md',
-    'results/complementaria/README.md',
-    'results/base/README.md',
-    'results/base/continuo/README.md',
-    'results/riesgo/README.md',
-    'results/capital/README.md',
-    'results/benchmark_sofr/README.md',
-    'results/senal/README.md',
-    'results/costos_capacidad/README.md',
-    'results/ejecucion/README.md',
-    'results/estres/README.md',
-    'results/estabilidad/README.md',
-    'data/research/README.md',
-    'data/manifests/README.md',
-    'data/manifests/data_quality_report.md',
-    'data/research/basis-audit-20260919/README.md',
-)
+IGNORED_DIRECTORIES = {
+    ".git",
+    ".venv",
+    ".pytest_cache",
+    ".ruff_cache",
+    "__pycache__",
+    "node_modules",
+}
+
+
+def markdown_documents(root):
+    """Discover repository documentation without scanning environments or caches."""
+    documents = []
+    for directory, folders, files in os.walk(root):
+        folders[:] = sorted(name for name in folders if name not in IGNORED_DIRECTORIES)
+        documents.extend(
+            (Path(directory) / name).relative_to(root).as_posix()
+            for name in files
+            if name.lower().endswith(".md")
+        )
+    return sorted(documents)
+
 
 DESTINATION = r"(<[^>]+>|[^\s)]+)"
 DIRECT = re.compile(r"!?\[[^\]\n]*\]\(\s*" + DESTINATION + r'(?:\s+["\'][^\n]*?["\'])?\s*\)')
@@ -72,8 +49,9 @@ def check_document_encoding(content, name):
 
 
 def without_fences(content):
-    return re.sub(r"^ {0,3}(`{3,}|~{3,})[^\n]*\n.*?^ {0,3}\1[^\n]*$", "", content,
-                  flags=re.M | re.S)
+    return re.sub(
+        r"^ {0,3}(`{3,}|~{3,})[^\n]*\n.*?^ {0,3}\1[^\n]*$", "", content, flags=re.M | re.S
+    )
 
 
 def heading_anchors(content):
@@ -89,6 +67,7 @@ def heading_anchors(content):
 
 def local_targets(content, name):
     content = re.sub(r"`+[^`\n]*`+", "", without_fences(content))
+
     def label(value):
         return " ".join(value.lower().split())
 
@@ -110,9 +89,9 @@ def local_targets(content, name):
 
 
 def check_links(root=None, documents=None):
-    """Frozen snapshots are excluded by selection; links may target files or directories."""
+    """Links may target files, directories, or headings in Markdown documents."""
     root = ROOT if root is None else Path(root)
-    documents = CURRENT_DOCS if documents is None else documents
+    documents = markdown_documents(root) if documents is None else documents
     checked = 0
     for name in documents:
         path = root / name
@@ -129,15 +108,26 @@ def check_links(root=None, documents=None):
             destination = (path.parent / relative).resolve() if relative else path
             require(destination.exists(), f"Broken link in {name}: {target}")
             if fragment and destination.suffix.lower() == ".md" and destination.is_file():
-                require(fragment in heading_anchors(destination.read_text(encoding="utf-8")),
-                        f"Broken heading in {name}: {target}")
+                require(
+                    fragment in heading_anchors(destination.read_text(encoding="utf-8")),
+                    f"Broken heading in {name}: {target}",
+                )
             checked += 1
     return checked
 
 
 def main():
-    print(json.dumps(dict(status="verified", documents=len(CURRENT_DOCS),
-                         local_links=check_links()), indent=2))
+    documents = markdown_documents(ROOT)
+    print(
+        json.dumps(
+            dict(
+                status="verified",
+                documents=len(documents),
+                local_links=check_links(documents=documents),
+            ),
+            indent=2,
+        )
+    )
 
 
 if __name__ == "__main__":

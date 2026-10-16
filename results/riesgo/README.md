@@ -23,7 +23,7 @@ H2 conserva el Sharpe diario con RF=0 y su resultado no favorable en BASE y mant
 
 ## Evidencia y detalle
 
-- [Informe completo](evidencia/reporte.md) y [protocolo](evidencia/documentos/protocolo.md).
+- [Informe completo](evidencia/reporte.md) y [protocolo](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/riesgo/evidencia/documentos/protocolo.md).
 - [Drawdowns por cartera, período y convención](evidencia/tablas/drawdown_comparativo.csv), [garantías](evidencia/tablas/garantias_periodo.csv) y [catálogo de episodios](evidencia/tablas/catalogo_incidentes.csv).
-- [Verificación y fuentes](evidencia/README.md). El paquete compacto comprueba la evidencia exportada; recalcular los máximos globales exige la serie completa y sus fuentes locales.
+- [Verificación y fuentes](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/riesgo/evidencia/README.md). El paquete compacto comprueba la evidencia exportada; recalcular los máximos globales exige la serie completa y sus fuentes locales.
 - [Índice del estudio](../README.md).

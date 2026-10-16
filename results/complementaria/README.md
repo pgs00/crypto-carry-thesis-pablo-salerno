@@ -3,9 +3,9 @@
 Este paquete respalda los análisis exploratorios de la [tesina](../../Tesina_Pablo_Salerno.pdf) y del [Executive Briefing](../../Executive_Briefing_Pablo_Salerno.pdf).
 
 - [Descargar evidencia completa, ZIP de 13,6 MB](Evidencia_complementaria_Pablo_Salerno.zip)
-- [Parche técnico para revisión](reproducibility.patch)
-- [Resultados de verificación y versiones por bloque](verification_summary.json)
-- [SHA256 del archivo](SHA256SUMS.txt)
+- [Parche técnico para revisión](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/complementaria/reproducibility.patch)
+- [Resultados de verificación y versiones por bloque](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/complementaria/verification_summary.json)
+- [SHA256 del archivo](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/results/complementaria/SHA256SUMS.txt)
 
 ## Hallazgos principales
 

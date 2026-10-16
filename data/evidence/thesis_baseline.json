@@ -5998,6 +5998,726 @@
     {
       "path": "src/crypto_carry/data/prescribed.py",
       "sha256": "89349f2a5e189648bf32ed645d5045cc87adfb48a1c5328cbde52235215a9f4f"
+    },
+    {
+      "path": "Tesina_Pablo_Salerno.pdf",
+      "sha256": "665c6b4d74d44ea7bcbd9bd747b37f2011e79eeea004beaf7b4b8dd9eb5c6c7f"
+    },
+    {
+      "path": "data/evidence/reglas_historicas/cobertura_pendiente.md",
+      "sha256": "207e677b2685215d15271cb08088c4d7229a5f82a929a07a8766a069de42bb0e"
+    },
+    {
+      "path": "data/evidence/ventanas_independientes/antecedentes/Entrega 1 - Crypto Carry Binance (Salerno Pablo & Rodriguez Facundo).pdf",
+      "sha256": "9e2d9c1f73d5a3ce90b68ec4ad23ec4ca8a155473b551f7d955d0e7d7b5e5516"
+    },
+    {
+      "path": "data/evidence/ventanas_independientes/antecedentes/Entrega 2 Crypto Carry Binance Pablo Salerno.pdf",
+      "sha256": "af40aaa6fd8068403201de0f160ff4cef77bd7bae7a5de2f63e5e9cea7d1c08d"
+    },
+    {
+      "path": "data/research/continuous-marks-20260919/README.md",
+      "sha256": "b4ef84167d004ca52f4baca8a11516481ac14ab45321f0df9397f540ddf13c5b"
+    },
+    {
+      "path": "data/research/continuous-preparation-20260919/unresolved_mark_minutes.csv",
+      "sha256": "4137a6ee0b11be543d9ddcbf52ab8fef463e0f666b959b84b08b5067b6ae68c5"
+    },
+    {
+      "path": "data/research/funding-price-sensitivity-20260920/README.md",
+      "sha256": "733920e0b90729f073c5289bb8a9d90afddee6c2540f028dc9f36aec472fa152"
+    },
+    {
+      "path": "results/base/continuo/figuras/composicion_pnl.png",
+      "sha256": "5783a74e7c226597bedacbcb1318366200733cf78776cd3420f9d69e40eb0db5"
+    },
+    {
+      "path": "results/base/continuo/figuras/equity_drawdown.png",
+      "sha256": "a2f138e4c24fc9c3b6f1551328ca8969ae84582c65a5d8ad7d99a2206cfd64ad"
+    },
+    {
+      "path": "results/base/continuo/figuras/hipotesis.png",
+      "sha256": "756aa207079323fd59047102685da991a000908427b393e923ee4d37fb401c7b"
+    },
+    {
+      "path": "results/base/continuo/tablas/equity_diario.csv",
+      "sha256": "0fdc3fcb489dbe39a027a0baeca699a0808c5a37b8d1659a110180d84ab83c3c"
+    },
+    {
+      "path": "results/base/continuo/tablas/h3_diario_conjunto.csv",
+      "sha256": "cf91790e23a7b036afd8744d87ceff3fbc634338b52c19ce8d8efcfeb77307dc"
+    },
+    {
+      "path": "results/base/evidencia/comparacion/componentes_por_activo_periodo.csv",
+      "sha256": "f13d2c4f2103036fd78adbaa88565659d092189e0f78b020652490c1f278ac67"
+    },
+    {
+      "path": "results/base/evidencia/comparacion/diario_carteras.csv",
+      "sha256": "57447b3f445769aab4ef6ea3b7a07eaa3c4a67e6a89412e5385e3d0d821df348"
+    },
+    {
+      "path": "results/base/evidencia/comparacion/eventos_periodo.csv",
+      "sha256": "93a96a7f36f0bd0729449c712b023d25b32c95d16e366ab6291174a973289c7f"
+    },
+    {
+      "path": "results/base/evidencia/comparacion/exposicion_periodo.csv",
+      "sha256": "269e041865df44f70d9b4899d0befec7b00a9006207efaea16331879f40f14ef"
+    },
+    {
+      "path": "results/base/evidencia/comparacion/figuras/exposicion.png",
+      "sha256": "786c19509c794e2d963a819ea5d3b681d7d8c1cb63d1af461ae33f0230324812"
+    },
+    {
+      "path": "results/base/evidencia/comparacion/h1_resumen.csv",
+      "sha256": "dc7d0c145d2b3784084c75ca458d27a0d4326c17377016b5fb82af8dfa2b1047"
+    },
+    {
+      "path": "results/base/evidencia/comparacion/h2.csv",
+      "sha256": "42691b183cd5889812cdcdc8454a08d20b51a0c17c476fc714be5ba9e83bdc18"
+    },
+    {
+      "path": "results/base/evidencia/comparacion/h3_regimen.csv",
+      "sha256": "398608c088ea973ceadc111288766117304499b436b17fe7ad92edd2724b8d0c"
+    },
+    {
+      "path": "results/base/evidencia/comparacion/metricas_cartera_periodo.csv",
+      "sha256": "480ac5950cd5e26b6f3502502338db4c2aefce1334d8543f654f77425a13188c"
+    },
+    {
+      "path": "results/base/evidencia/comparacion/reporte.md",
+      "sha256": "00e78123be25d6088f09e68d62ec286aa051c0de84175aae2f8b0936b4be3db6"
+    },
+    {
+      "path": "results/benchmark_sofr/evidencia/figuras/capital.png",
+      "sha256": "f0b402e77da6681e3de699c7a95b19bc923cb488601e42fefa4695ce48026b53"
+    },
+    {
+      "path": "results/benchmark_sofr/evidencia/figuras/control_index.png",
+      "sha256": "f13efea56547a1532afafb7ab36939a8eae967dc4ce39825f9b5194c22a1542e"
+    },
+    {
+      "path": "results/benchmark_sofr/evidencia/figuras/fuentes/capital.csv",
+      "sha256": "df56b41c925350320bba3bc2e933e98d7cee84e2d3d8f19aba401a453cdf0e18"
+    },
+    {
+      "path": "results/benchmark_sofr/evidencia/figuras/fuentes/control_index.csv",
+      "sha256": "926b5ebefb3ee4f70038b9c75ed45d606d72bc3c904af4e801dbc49039d39f7f"
+    },
+    {
+      "path": "results/benchmark_sofr/evidencia/figuras/fuentes/resultados_anuales.csv",
+      "sha256": "c0efd3fee2d986f6fb09cf9df4f5a0a2d7a84477bc13a4a530d4c46f9db02a97"
+    },
+    {
+      "path": "results/benchmark_sofr/evidencia/figuras/resultados_anuales.png",
+      "sha256": "931b60aa2d92e92caa21f0b8bc1715d3f0570969ca63801e7ef53b714f203435"
+    },
+    {
+      "path": "results/benchmark_sofr/evidencia/fuentes_publicas/excepciones.json",
+      "sha256": "e2a852b9a6fdfd19f29d9140915d2b772ae60ca57d55f7a22f084c00cca06db2"
+    },
+    {
+      "path": "results/benchmark_sofr/evidencia/fuentes_publicas/index_serie.json",
+      "sha256": "83798c2d2001f6b81ccc21c0c760f3614d3c2c16c46ce43651d9d50ecb3624cd"
+    },
+    {
+      "path": "results/benchmark_sofr/evidencia/fuentes_publicas/sofr_serie.json",
+      "sha256": "a121afce74fbc966509dc9660a55d6c6d9f1a8f14d646691a24f63dc81657f3a"
+    },
+    {
+      "path": "results/benchmark_sofr/evidencia/reporte.md",
+      "sha256": "3f93e8bae85569ef706663ca7801fa2420a9665330291174074e114e4fae6b49"
+    },
+    {
+      "path": "results/benchmark_sofr/evidencia/tablas/calendario_sifma.csv",
+      "sha256": "b7019f4fddfc20a72a2113f98e779c5fe97f66cfa9533d276fcfe22f086b2078"
+    },
+    {
+      "path": "results/benchmark_sofr/evidencia/tablas/diferencias_periodos.csv",
+      "sha256": "ec1ca03e873a12078865dea16a8bffad2e1ef8af11674c9f6d77aab05fef408d"
+    },
+    {
+      "path": "results/benchmark_sofr/evidencia/tablas/metricas_sofr_periodos.csv",
+      "sha256": "edc3267046f6f88f04c13e10603760daf202b1a442e2066832a10bbab114a2dd"
+    },
+    {
+      "path": "results/capital/evidencia/figuras/ciclos.png",
+      "sha256": "58275c5b7fee253b33174c8082450da0535d057e0f09427906f029037c463b98"
+    },
+    {
+      "path": "results/capital/evidencia/figuras/concentracion.png",
+      "sha256": "6f04d1f4b6d6d66542979c0930e8f76ee6d602dec7c7c387092d209ddf43330d"
+    },
+    {
+      "path": "results/capital/evidencia/figuras/filtros_mercado.png",
+      "sha256": "321d2fe94c4da75e7c3436d1f76d63424eff1dbb7f2b1ac3476f1b003c1ef505"
+    },
+    {
+      "path": "results/capital/evidencia/figuras/fuentes/ciclos.csv",
+      "sha256": "554e49545036686ad2a2fea3bbcd11e1ebc72617e73591a3fc6ce56ee9e772b3"
+    },
+    {
+      "path": "results/capital/evidencia/figuras/fuentes/concentracion.csv",
+      "sha256": "9dcea9bd653ebdf38ddc6b5f0ed58d0b5c1dd4a24a71ea214c42937833b227dd"
+    },
+    {
+      "path": "results/capital/evidencia/figuras/fuentes/filtros_mercado.csv",
+      "sha256": "5b06894b0a989e33412d67d507dac0457b7d5c8d111fbdcdee0c73d6ed528d51"
+    },
+    {
+      "path": "results/capital/evidencia/figuras/fuentes/resumen_anual.csv",
+      "sha256": "b04aaf5877825b6d0aa18823619ca74eeb4698b3ac472a2049fd2dd9c50bcd70"
+    },
+    {
+      "path": "results/capital/evidencia/figuras/resumen_anual.png",
+      "sha256": "2edb47055245b75facc7b321d1b190c47d4f2793e1490a505c0af0f28123fb47"
+    },
+    {
+      "path": "results/capital/evidencia/reporte.md",
+      "sha256": "6c990dd3460d3940d6e060691be2c58b80746bc347d5c99e1b08b1c5f32b7fef"
+    },
+    {
+      "path": "results/capital/evidencia/tablas/ciclos_vida.csv",
+      "sha256": "554e49545036686ad2a2fea3bbcd11e1ebc72617e73591a3fc6ce56ee9e772b3"
+    },
+    {
+      "path": "results/capital/evidencia/tablas/concentracion_ciclos.csv",
+      "sha256": "2ae7b6504e1583db47396fd4976c626ebab986866c54b7cf4b0705913330dd9d"
+    },
+    {
+      "path": "results/capital/evidencia/tablas/concentracion_dias.csv",
+      "sha256": "4b3b607bbaccf1a281cb4c8de6980960f1ebd28a649dd80d3520f2c157fa85c4"
+    },
+    {
+      "path": "results/capital/evidencia/tablas/conteo_ciclos_periodo.csv",
+      "sha256": "499cd2f2fc13433f283b790d8cab9bf4603912c8707ea8dd62d5aa6aece7213d"
+    },
+    {
+      "path": "results/capital/evidencia/tablas/contribuciones_ciclo_periodo.csv",
+      "sha256": "94650ea23af9cde1473a2dae7ab41ffd916fd8b0dc1523f6ff656890d0609149"
+    },
+    {
+      "path": "results/capital/evidencia/tablas/grupos_excluyentes.csv",
+      "sha256": "781d46b64484f528ab66df982622d7cee0f66a242d245798a708179c2fae634e"
+    },
+    {
+      "path": "results/capital/evidencia/tablas/motivos_simultaneos.csv",
+      "sha256": "dc771591de485506b9ea1e0dcf88206527c96018b12fdd48df3493f781f12bda"
+    },
+    {
+      "path": "results/capital/evidencia/tablas/resumen_integrado.csv",
+      "sha256": "62a8a0e9a7a69393d90ddb46b87ed97be80e6c41d3aa4b5d42587f46d2062a6e"
+    },
+    {
+      "path": "results/costos_capacidad/evidencia/figuras/capacidad_distribucion.png",
+      "sha256": "848488ec496d290d6a5ff5c07830b00cb8ce2f491f2929a8629fb2611019ffc3"
+    },
+    {
+      "path": "results/costos_capacidad/evidencia/figuras/capital.png",
+      "sha256": "54bd796d7f747dbbb8b033ff7edc250ce6009ce0216c463a1b5c27fb696a8c4b"
+    },
+    {
+      "path": "results/costos_capacidad/evidencia/figuras/costos.png",
+      "sha256": "fb28701dcedfcf998266855659d9f7aca1634b9fd77c61bd4acc4154189ae777"
+    },
+    {
+      "path": "results/costos_capacidad/evidencia/figuras/participacion.png",
+      "sha256": "743530d8d2219ab4bf49316af6bd2fd9e397c1bb1ccfc73676af11943d69d3a4"
+    },
+    {
+      "path": "results/costos_capacidad/evidencia/reporte.md",
+      "sha256": "e897b5a937e60a773a72fc79a6e79e00a0efe2bf440638b67831d73c748ba098"
+    },
+    {
+      "path": "results/costos_capacidad/evidencia/tablas/actividad.csv",
+      "sha256": "03424545c014c48a1fcbe274efcff16202c2dadda34544124e7e3ef4ff8fc6f4"
+    },
+    {
+      "path": "results/costos_capacidad/evidencia/tablas/componentes_periodo.csv",
+      "sha256": "5252dde5b76e490ebdf572d808b16c6f0c167a374f8a7ef983600259e57935b7"
+    },
+    {
+      "path": "results/costos_capacidad/evidencia/tablas/conciliacion_ledger.csv",
+      "sha256": "c0b3ff3b3c66f31b07969f2881abaa703dd612fcde5af7cde1c3463dab805ec4"
+    },
+    {
+      "path": "results/costos_capacidad/evidencia/tablas/diario.csv",
+      "sha256": "6d212ab6c02668954c18ff266deef2f56d6fc7a6cc018760e97ad8e3b54ed167"
+    },
+    {
+      "path": "results/costos_capacidad/evidencia/tablas/ejecucion_resumen.csv",
+      "sha256": "cd0b6c98c2045aa68fa57a4d3b71e72c758f250bcac418fd8c130199d53400c1"
+    },
+    {
+      "path": "results/costos_capacidad/evidencia/tablas/exposicion_periodo.csv",
+      "sha256": "54aadd2044017a29ac889251c1d4c2419afaa8d3ceefd6a9aa678bf76c977503"
+    },
+    {
+      "path": "results/costos_capacidad/evidencia/tablas/h2.csv",
+      "sha256": "cf89d0114530f99ab058b7b914597e3698d3982ad4cdec154652d385376001b5"
+    },
+    {
+      "path": "results/costos_capacidad/evidencia/tablas/h3_resumen.csv",
+      "sha256": "5abb894eef9788c2399446cd19a3a7279cac63f8926d7684007600ecc90d6b2a"
+    },
+    {
+      "path": "results/ejecucion/evidencia/figuras/cierre.png",
+      "sha256": "51b9208a670af715773f671097cf2d9b99c550acbfdb8ebb1e6d78664680d0c8"
+    },
+    {
+      "path": "results/ejecucion/evidencia/figuras/cierre_diferencia.png",
+      "sha256": "80c5b06955b8a25fc01e1b1c548dc7ec302b8982730a3fb0f585ffb3b9f274db"
+    },
+    {
+      "path": "results/ejecucion/evidencia/figuras/cronologia.png",
+      "sha256": "1b6fbbc4ec0024e538e28ad6f31f362c6430fee6f6a3f81f46515dc13c6bbd59"
+    },
+    {
+      "path": "results/ejecucion/evidencia/figuras/general.png",
+      "sha256": "88fd112dc7209493e8c81ae916f58f692cdeba69c61e8d010d2515142a852d54"
+    },
+    {
+      "path": "results/ejecucion/evidencia/figuras/general_diferencia.png",
+      "sha256": "34ed3fe0b9801b0fe9a38676c9dbe9956f0baf2b4df1722701ab673f74b7b401"
+    },
+    {
+      "path": "results/ejecucion/evidencia/figuras/precio.png",
+      "sha256": "a4264ad7302da782c04ddfd77d1ab80d99bacf77cf034de690abe60fefc6ae6b"
+    },
+    {
+      "path": "results/ejecucion/evidencia/figuras/precio_diferencia.png",
+      "sha256": "9bfbfb5a31ce7d85ca3d11dd127399d90fd6a9367d43e6ecbbd479608f5bc056"
+    },
+    {
+      "path": "results/ejecucion/evidencia/reporte.md",
+      "sha256": "18efced6ba4ceb33139904b193b7600d17dee90ab84091fbdacdced7151459db"
+    },
+    {
+      "path": "results/ejecucion/evidencia/tablas/actividad.csv",
+      "sha256": "22e1ef219d7b21d7da3327d39db4ea865f297ae5aa7f1481cd838d6dd27867bd"
+    },
+    {
+      "path": "results/ejecucion/evidencia/tablas/comparacion_L_LC.csv",
+      "sha256": "5babb799807b3a258d31faabe6da5bc827e6ac11010ecfcf2f3367de24b2e9a0"
+    },
+    {
+      "path": "results/ejecucion/evidencia/tablas/componentes_periodo.csv",
+      "sha256": "acb04a5e52909456da546f1971d90d52a59891d7fa3106f626da9194cd5c9e96"
+    },
+    {
+      "path": "results/ejecucion/evidencia/tablas/conciliacion_ledger.csv",
+      "sha256": "8c39af52876358f56b39c4816d7cbd251683ca9749ee56839a857938c20b3059"
+    },
+    {
+      "path": "results/ejecucion/evidencia/tablas/diario.parquet",
+      "sha256": "81619641ba46e92cb6c7747681300ebef4e3fa6f00489364b5b0da7c7e7044ab"
+    },
+    {
+      "path": "results/ejecucion/evidencia/tablas/ejecucion_resumen.csv",
+      "sha256": "8f3cfed9e64b3f61b2571e63813ddb13a3fc182c59aede958ea23ff00bf811be"
+    },
+    {
+      "path": "results/ejecucion/evidencia/tablas/exposicion_periodo.csv",
+      "sha256": "069f7a845ff124fbc9afb153efaa1b8259ef07db07f5d30eb2da325e5ec0a880"
+    },
+    {
+      "path": "results/ejecucion/evidencia/tablas/h2.csv",
+      "sha256": "ae02c92f3a72e3488e0ca25d44c40b68d3a9f9f4a0e889fa34101ef45f9295c4"
+    },
+    {
+      "path": "results/ejecucion/evidencia/tablas/h3_resumen.csv",
+      "sha256": "45b305b0d2de291746c9e789214c607423d3e8002a37ef3c477e38b499f7b26d"
+    },
+    {
+      "path": "results/ejecucion/evidencia/tablas/incidentes_resumen.csv",
+      "sha256": "3093decca916c164795beeeb2206aca3ab422a3e994805a116882ccc6e7bca98"
+    },
+    {
+      "path": "results/estabilidad/evidencia/estadistica/carteras_base.parquet",
+      "sha256": "fcea72413bf6620f40a567585a735e3588190149b88ea6aca7b505e9b6d844ef"
+    },
+    {
+      "path": "results/estabilidad/evidencia/estadistica/h1_base.parquet",
+      "sha256": "465b2c184c8c1794078ac50a849bf775276a835d6fecf9144a889c04c214a412"
+    },
+    {
+      "path": "results/estabilidad/evidencia/estadistica/oportunidad_base.parquet",
+      "sha256": "7bc5cadf535c997f3fcb968df4da54916b3e1a0a4636395a069d191adfb3c371"
+    },
+    {
+      "path": "results/estabilidad/evidencia/figuras/01_cuentas_nuevas_y_heredadas.png",
+      "sha256": "202c128c1283b74bf25e5e11b19c5025527a19a18f88c572da232abc1e8ab904"
+    },
+    {
+      "path": "results/estabilidad/evidencia/figuras/02_retornos_anuales.png",
+      "sha256": "0f99454c02a18280b2313df7a7db50e1cc73506d840915c34feb9e07db399343"
+    },
+    {
+      "path": "results/estabilidad/evidencia/figuras/03_retorno_capital_actividad.png",
+      "sha256": "8f865611f2c7a30f2d78a037e1f8a45a6644e8ec3eed7702367a83688a2f8a0b"
+    },
+    {
+      "path": "results/estabilidad/evidencia/figuras/04_incertidumbre_base.png",
+      "sha256": "fa5725f1c45f2b275def2bc2fc9d6881a28f176579b0bd816bd64eb35a3dd081"
+    },
+    {
+      "path": "results/estabilidad/evidencia/reporte.md",
+      "sha256": "d5607ef66f4cd0ae7ba6340ee98b97bc34a6781df0f49cf1a8a5f7255a1f79cd"
+    },
+    {
+      "path": "results/estabilidad/evidencia/tablas/actividad.csv",
+      "sha256": "a678494cad7901f6946a1cff8beee8bd25991f8725b8d3d7c8933224323e9f5d"
+    },
+    {
+      "path": "results/estabilidad/evidencia/tablas/bootstrap_puntos.csv",
+      "sha256": "b9a2e83b9aae374180c3c8e19958f41821eeab3ea6bd9b69fcc7596b046b6f88"
+    },
+    {
+      "path": "results/estabilidad/evidencia/tablas/componentes_periodo.csv",
+      "sha256": "9b537feed45edeb3e6bb2391261ed20a2beb546ed1e32788c65883622f45d56e"
+    },
+    {
+      "path": "results/estabilidad/evidencia/tablas/diario.csv",
+      "sha256": "c4ce8a0c01ee2439200d12c67a988c155448cd68ed633be5b7c97802fe7a1807"
+    },
+    {
+      "path": "results/estabilidad/evidencia/tablas/exposicion_periodo.csv",
+      "sha256": "575e8fd63b15bf3bbd2f5a502ef7c44d0ea3db61eed95fa53e1aa4eaa63a6718"
+    },
+    {
+      "path": "results/estabilidad/evidencia/tablas/h2.csv",
+      "sha256": "23b00bf96f0704c81c0725e66ca528a400b2b5ff6e23411ef10f38fea06fd70e"
+    },
+    {
+      "path": "results/estabilidad/evidencia/tablas/metricas.csv",
+      "sha256": "e6937645a60a05e3dc82e6bd25b422c86768d4c371add1587acbcfccbd3255f8"
+    },
+    {
+      "path": "results/estabilidad/evidencia/tablas/saldos_iniciales.csv",
+      "sha256": "69dbf00b95494ab6162137fa90b531ae7196fe2d172e14e2067b52496fbe2955"
+    },
+    {
+      "path": "results/estres/evidencia/figuras/atribucion_factor.png",
+      "sha256": "e14c8920510d0f97be44ca3a666591e20784f51d0db492c42635864c3ec74d0e"
+    },
+    {
+      "path": "results/estres/evidencia/figuras/cf_ventana.png",
+      "sha256": "65e5d98048b56b3df685f30b2ee5284821ad3711db95987b014f7b2eeaec7d24"
+    },
+    {
+      "path": "results/estres/evidencia/figuras/fuentes/atribucion_factor.csv",
+      "sha256": "8a71b1dd876c46c19226d5d3dffacb2bb52c42ff81e97ca9ff91877953136d5a"
+    },
+    {
+      "path": "results/estres/evidencia/figuras/fuentes/cf_ventana.csv",
+      "sha256": "87f8e214b7e1b622e7929892c834cc09be6f56258726a53264e3cc0a015b953a"
+    },
+    {
+      "path": "results/estres/evidencia/figuras/fuentes/shocks.csv",
+      "sha256": "ceb39fa9655af475f936566a61d04f0cfdb46a3607c0d7c7f313ee1a0e0da674"
+    },
+    {
+      "path": "results/estres/evidencia/figuras/fuentes/sin_interrupcion.csv",
+      "sha256": "d6b709661b60f3b49f513e1e6ecfed2cc8ca9028316d4392c4e8f289aecb1712"
+    },
+    {
+      "path": "results/estres/evidencia/figuras/shocks.png",
+      "sha256": "8aab884f96fe901161530d7e99e2ae9e3143bde64175b33e8e6b08ae1235c72e"
+    },
+    {
+      "path": "results/estres/evidencia/figuras/sin_interrupcion.png",
+      "sha256": "835b16d5915061cc67b3dd45e84494728abb3cd5d203b42c6840bf93fe5b45bf"
+    },
+    {
+      "path": "results/estres/evidencia/reporte.md",
+      "sha256": "8941b2574822abf457a9a7c2b549622403a3ae8e3c93244adbbadc07f214651b"
+    },
+    {
+      "path": "results/estres/evidencia/resultados/actividad.csv",
+      "sha256": "ca18718b1e5aa962d423ccd74095e744ee2f86d4fdff5e5d0d25d27b35201eac"
+    },
+    {
+      "path": "results/estres/evidencia/resultados/cf_decisiones_ejecuciones.csv",
+      "sha256": "aacec118b0cd6e0e734f2f5934d1bf8e8b09d669724a78cfc6cab06304491b23"
+    },
+    {
+      "path": "results/estres/evidencia/resultados/componentes_periodo.csv",
+      "sha256": "a91177b631410143812ed505a1119307495efdd95a2a3ce573e571ab9e304eeb"
+    },
+    {
+      "path": "results/estres/evidencia/resultados/conciliacion_ledger.csv",
+      "sha256": "d4eb6935e6b92a0ae25c0984fe8d55ee0457323064c20fd38a6608d94af6b4a0"
+    },
+    {
+      "path": "results/estres/evidencia/resultados/diario.parquet",
+      "sha256": "59caafdaf09c72cf4aa7619634544fed0ba7a29d2644c90dd0b887067c1f17f6"
+    },
+    {
+      "path": "results/estres/evidencia/resultados/ejecucion_resumen.csv",
+      "sha256": "768ea2513ca63f03fa338060f5e14fcc20d254d2270e9af41a1868216d325796"
+    },
+    {
+      "path": "results/estres/evidencia/resultados/garantias_resumen.csv",
+      "sha256": "17e4f3e4b74d023a3c50f423f65b704ddf9cc10bb8e934d32a566adf1a4fc782"
+    },
+    {
+      "path": "results/estres/evidencia/resultados/h1_resumen.csv",
+      "sha256": "bf314de3a6fe3751d2d9faa12b74329aedbae43c38d9c191f35543878dcc2528"
+    },
+    {
+      "path": "results/estres/evidencia/resultados/h2.csv",
+      "sha256": "59fb071c3f774a5678523cb7920ffb511584d6564eb0a7bfb97bb9f0a1bbe4a4"
+    },
+    {
+      "path": "results/estres/evidencia/resultados/h3_resumen.csv",
+      "sha256": "817adb314c6c0ec7ec828510a91bd816f2e1f89bbb3fcfe8dc7262537a2aaef3"
+    },
+    {
+      "path": "results/estres/evidencia/resultados/metricas.csv",
+      "sha256": "c837a097b40da0d669232e4af0deb32f5e7d6ff781ccf75d02028badd71feb8d"
+    },
+    {
+      "path": "results/riesgo/evidencia/figuras/drawdown_muestra_completa.png",
+      "sha256": "801b888d19785ed13edf4b1955f9bf5822fa025596e18218e41c09999e86eec6"
+    },
+    {
+      "path": "results/riesgo/evidencia/figuras/drawdown_muestra_completa.svg",
+      "sha256": "ed48bbbaef3980dbb257464c27819f1fd2f2f63bf71f014733c5e99952ddd814"
+    },
+    {
+      "path": "results/riesgo/evidencia/figuras/fuentes/drawdown_muestra_completa.csv",
+      "sha256": "b1013df257bf94a0813f7c279d36f903bce0e81af67b0fa244f819c319683f81"
+    },
+    {
+      "path": "results/riesgo/evidencia/figuras/fuentes/marzo_detalle_conditional.csv",
+      "sha256": "7ee00dd4007eef66644a61a9ebb89eaeb0111e7c7a88ceb00a72ba72408ce3cc"
+    },
+    {
+      "path": "results/riesgo/evidencia/figuras/fuentes/marzo_detalle_permanent.csv",
+      "sha256": "597664047c874dd41aa2edf9fe01756489d955477887d24b7c60dd268b4a7bef"
+    },
+    {
+      "path": "results/riesgo/evidencia/figuras/fuentes/marzo_tres_dias.csv",
+      "sha256": "463b75f9f82314bf3f324a2178c5e63e74051bbb83df0b6fa5e42f3f901197af"
+    },
+    {
+      "path": "results/riesgo/evidencia/figuras/fuentes/menor_holgura_run_3f5d9cce8ff1c2ba5447e3b6.csv",
+      "sha256": "d7e335845fe2dbf5afd2bfa1ec780a95de1a0682103019c47a91d858a03a6354"
+    },
+    {
+      "path": "results/riesgo/evidencia/figuras/fuentes/menor_holgura_run_70383794701c4f0fc157b2ed.csv",
+      "sha256": "86125021e3af2f56d3fff7acfe60f83a27e34b2a2272a3a9eccb7b5c573012a1"
+    },
+    {
+      "path": "results/riesgo/evidencia/figuras/fuentes/menor_holgura_run_ad71d751b20623006c195ff3.csv",
+      "sha256": "f4a4b5946737af8aabd5636e4e7a3972a4b5c338a4b78534ccbdfc7533cfc216"
+    },
+    {
+      "path": "results/riesgo/evidencia/figuras/fuentes/menor_holgura_run_dfea4b7ac1475668d5968c97.csv",
+      "sha256": "a8ff914c81322f83a8790c540595d4135164af961464c21c85bd0ad314dfe061"
+    },
+    {
+      "path": "results/riesgo/evidencia/figuras/fuentes/peor_drawdown_run_3f5d9cce8ff1c2ba5447e3b6.csv",
+      "sha256": "58b999cf90d579143aa16b0007e5cb9d13c17ede1de33f22e5e4e82e8bce6cc6"
+    },
+    {
+      "path": "results/riesgo/evidencia/figuras/fuentes/peor_drawdown_run_70383794701c4f0fc157b2ed.csv",
+      "sha256": "ead3931859d855fc17383ff168b5be1e4eca28725f02a11eadb18c3017146b06"
+    },
+    {
+      "path": "results/riesgo/evidencia/figuras/fuentes/peor_drawdown_run_ad71d751b20623006c195ff3.csv",
+      "sha256": "5f0e82d518382da23b576f1f6e5cf72a79625212454bb2280fd05251d92a944e"
+    },
+    {
+      "path": "results/riesgo/evidencia/figuras/fuentes/peor_drawdown_run_dfea4b7ac1475668d5968c97.csv",
+      "sha256": "1a7ccf15af7b3eb81e7bd6679b33ce7bb0fd0cb378ae4e7dafab3b4a5ba2b9a6"
+    },
+    {
+      "path": "results/riesgo/evidencia/figuras/fuentes/resumen_anual_base.csv",
+      "sha256": "e746c16638c3bfd0c2bd7bc3d32fa6864c99afeaabbaa5e1be0150b8ab0647a7"
+    },
+    {
+      "path": "results/riesgo/evidencia/figuras/marzo_detalle_conditional.png",
+      "sha256": "3974084270653c6d58e8a805566ffa82e2110860944153397c5cb1098e31018a"
+    },
+    {
+      "path": "results/riesgo/evidencia/figuras/marzo_detalle_conditional.svg",
+      "sha256": "ae54496df2e8310e3a520e6ac5e0b6da3e247eaef95a9176fd5b5df29eb02503"
+    },
+    {
+      "path": "results/riesgo/evidencia/figuras/marzo_detalle_permanent.png",
+      "sha256": "1244851f76e8c950206864658067ef944ddefe03e532ce1325c0ff36097607fc"
+    },
+    {
+      "path": "results/riesgo/evidencia/figuras/marzo_detalle_permanent.svg",
+      "sha256": "67810831f0bd439e9f891f9575a6a1fe2f874a960b8389d104f4960032e76e24"
+    },
+    {
+      "path": "results/riesgo/evidencia/figuras/marzo_tres_dias.png",
+      "sha256": "7f66ab1be5df104aa6f5a867561d34c2da189a3be1afdc75a2bcbcbad41c043b"
+    },
+    {
+      "path": "results/riesgo/evidencia/figuras/marzo_tres_dias.svg",
+      "sha256": "29f1ea613f487e8cc1982557a47a4a3cef1b44562fbe0e57464bfc31de1a2c89"
+    },
+    {
+      "path": "results/riesgo/evidencia/figuras/menor_holgura_run_3f5d9cce8ff1c2ba5447e3b6.png",
+      "sha256": "c8f7be9e6edbbe567de4c0a3fe7a1fde38cb1f065ec90c9ab9fbaa669b7cc92e"
+    },
+    {
+      "path": "results/riesgo/evidencia/figuras/menor_holgura_run_3f5d9cce8ff1c2ba5447e3b6.svg",
+      "sha256": "a9d753b8bd548d69312631ed1bc1685811a02eb3d1fcae0ffc4a8d7a829f19a5"
+    },
+    {
+      "path": "results/riesgo/evidencia/figuras/menor_holgura_run_70383794701c4f0fc157b2ed.png",
+      "sha256": "ec65951fca473cdd7b1cc1f4f7c06e11e8d2e5b1be2808890c71ffd757bfe011"
+    },
+    {
+      "path": "results/riesgo/evidencia/figuras/menor_holgura_run_70383794701c4f0fc157b2ed.svg",
+      "sha256": "42b4acbdeedf7cb6f2c3725cf080ad34635153051b54cff4f170a2519a217111"
+    },
+    {
+      "path": "results/riesgo/evidencia/figuras/menor_holgura_run_ad71d751b20623006c195ff3.png",
+      "sha256": "01b73b3481d7b22f44f6c3caee9dee26a4417d29930d1d856ed44cefc956c125"
+    },
+    {
+      "path": "results/riesgo/evidencia/figuras/menor_holgura_run_ad71d751b20623006c195ff3.svg",
+      "sha256": "6a8f70d84d7cf8ead5c48df9bb21d201bad65f048b3ffd4f0eba821ff080fcec"
+    },
+    {
+      "path": "results/riesgo/evidencia/figuras/menor_holgura_run_dfea4b7ac1475668d5968c97.png",
+      "sha256": "e6b5064c8ccb49114fbf5cc3163f7f6caaf65eb7183705b60b222d2779b0e17b"
+    },
+    {
+      "path": "results/riesgo/evidencia/figuras/menor_holgura_run_dfea4b7ac1475668d5968c97.svg",
+      "sha256": "04622071b03c22342a450f131d8deeb6900533889d66d33550aaf711b162aac2"
+    },
+    {
+      "path": "results/riesgo/evidencia/figuras/peor_drawdown_run_3f5d9cce8ff1c2ba5447e3b6.png",
+      "sha256": "b4b2f989bffc3e52025287e61930f367bacbc1af4c9d441ec80e401835de60a1"
+    },
+    {
+      "path": "results/riesgo/evidencia/figuras/peor_drawdown_run_3f5d9cce8ff1c2ba5447e3b6.svg",
+      "sha256": "07d6cc730e66232d49996c8c1bfc019d1e2f9f4d408c9d5e98617719dc73016b"
+    },
+    {
+      "path": "results/riesgo/evidencia/figuras/peor_drawdown_run_70383794701c4f0fc157b2ed.png",
+      "sha256": "19ccc005a6e56c9201e1add4df7e641f08ce4d2bd96e7a14fbb15ce506dd370c"
+    },
+    {
+      "path": "results/riesgo/evidencia/figuras/peor_drawdown_run_70383794701c4f0fc157b2ed.svg",
+      "sha256": "f2bff34f3ddfefb0005c3456afb2b5785eb49b6d3885a56ede3d7e9c84d6f335"
+    },
+    {
+      "path": "results/riesgo/evidencia/figuras/peor_drawdown_run_ad71d751b20623006c195ff3.png",
+      "sha256": "79b7580458da6eee29bd7d04efe2f0a7601166e87b358923ef2900356f9f5aa5"
+    },
+    {
+      "path": "results/riesgo/evidencia/figuras/peor_drawdown_run_ad71d751b20623006c195ff3.svg",
+      "sha256": "ce7163723445bf10d9e1a4d20991a79eeb1e4e3a78fce7abff618c56f89b9d17"
+    },
+    {
+      "path": "results/riesgo/evidencia/figuras/peor_drawdown_run_dfea4b7ac1475668d5968c97.png",
+      "sha256": "abc523a4a3e265d60c86465209fc30180feea7b211150cf88a0af9a8b95334f5"
+    },
+    {
+      "path": "results/riesgo/evidencia/figuras/peor_drawdown_run_dfea4b7ac1475668d5968c97.svg",
+      "sha256": "f487a0414d72200e10624ec1bd27409d09e86a1be4152963b70717e5e5918eb6"
+    },
+    {
+      "path": "results/riesgo/evidencia/figuras/resumen_anual_base.png",
+      "sha256": "3abb6052f4f7d6cc33e0630b7744fe7afff62c38603b3d854741ff6251e791a2"
+    },
+    {
+      "path": "results/riesgo/evidencia/figuras/resumen_anual_base.svg",
+      "sha256": "e6ac169a93867ff365c581869cc2afe31df0c5d307596afe1715198bd355f565"
+    },
+    {
+      "path": "results/riesgo/evidencia/reporte.md",
+      "sha256": "4bd3ecaf5a6895b8502f12341159288e3d3bad7276d13ebca4426d3bf939b220"
+    },
+    {
+      "path": "results/riesgo/evidencia/tablas/catalogo_incidentes.csv",
+      "sha256": "4bbbe4014aef9d25c155dba352d227fa20fe3c4ad826037fe7f73374c129ba71"
+    },
+    {
+      "path": "results/riesgo/evidencia/tablas/garantias_periodo.csv",
+      "sha256": "1775784ddb429b36ed80643089b902ca2a53f7b04d76a2f3cd9bedc6df5f56c1"
+    },
+    {
+      "path": "results/riesgo/evidencia/tablas/puntos_extremos.csv",
+      "sha256": "181326fb7a42c837b034edfa467a9fc3f6f24be88daca2fc50a5d5afd6c9a499"
+    },
+    {
+      "path": "results/senal/evidencia/figuras/anual_capital.png",
+      "sha256": "ed4455ffc80acb75e0e3bfa274bd196037032314619b486da14da59a82fd407a"
+    },
+    {
+      "path": "results/senal/evidencia/figuras/basis.png",
+      "sha256": "367ae7999a8efd35d8b0e521e1e145db084cf21892e2131cf16ab20567bce3ec"
+    },
+    {
+      "path": "results/senal/evidencia/figuras/fuentes/anual_capital.csv",
+      "sha256": "0c21cacb2ca3acc852bb06488c263846a7423107015a1c87b9f7c776b9699dd4"
+    },
+    {
+      "path": "results/senal/evidencia/figuras/fuentes/basis.csv",
+      "sha256": "f7acd3bb64974b88c1071e700347d2e4aaab67e2dafe9b1ae31c432aabba1174"
+    },
+    {
+      "path": "results/senal/evidencia/figuras/fuentes/horizonte.csv",
+      "sha256": "40ed93e934e756feb4c639b6960b3d8e9b20d8c86b04d0a0dfe977e839ee4907"
+    },
+    {
+      "path": "results/senal/evidencia/figuras/fuentes/vida_media.csv",
+      "sha256": "9cd2ee7bde3e99c345346dc654a3104973529db4390e881049afc490d981b1d0"
+    },
+    {
+      "path": "results/senal/evidencia/figuras/horizonte.png",
+      "sha256": "77a7ab50ad4a89e82c0653beb7dc9b982d3bf0c94df44aa557d8616cded63d91"
+    },
+    {
+      "path": "results/senal/evidencia/figuras/vida_media.png",
+      "sha256": "bf4448569657dda85ad3acd82d5eaf2f5c494baeca4de6c6f923fd89b63ab251"
+    },
+    {
+      "path": "results/senal/evidencia/reporte.md",
+      "sha256": "f0b4621d779623a7a278bdc05cb05357320f6c50b4e1fb41758eb7b66f35c323"
+    },
+    {
+      "path": "results/senal/evidencia/tablas/actividad.csv",
+      "sha256": "3c2b9952dc2e9cc6bbe8b444ce0736e5ebc504a708834ae87f294f4f1f92d81f"
+    },
+    {
+      "path": "results/senal/evidencia/tablas/componentes_periodo.csv",
+      "sha256": "c1f90ae72b39bfcf1c7e4d07d0a90b5ce34491725f0aa202a3681669e8494e67"
+    },
+    {
+      "path": "results/senal/evidencia/tablas/deltas_hipotesis.csv",
+      "sha256": "c6edeeeeb0c517432d88d62caebee6d537834768effecef328eb23bd0590ecbb"
+    },
+    {
+      "path": "results/senal/evidencia/tablas/diario.csv",
+      "sha256": "ba43d69edb2986199a9eb5a490dcda56a21d7f7a85ba60cc89e05416729284b0"
+    },
+    {
+      "path": "results/senal/evidencia/tablas/exposicion_periodo.csv",
+      "sha256": "5795976e0ba80870d42a12e51b0e5594f33dc133c46c456cc3b474fbcc9a5715"
+    },
+    {
+      "path": "results/senal/evidencia/tablas/h1_resumen.csv",
+      "sha256": "bb6ab579ae3fd8e19c563d367a041b2f216e604db0b775d73e1c24208182a49c"
+    },
+    {
+      "path": "results/senal/evidencia/tablas/h2.csv",
+      "sha256": "8f58d0c4bb8e3a951fe122efd225b018490d3de2270e446eb26530afa824b551"
+    },
+    {
+      "path": "results/senal/evidencia/tablas/h3_resumen.csv",
+      "sha256": "cf450a5822d825917f7bdb2a7a810eb3b93f3687b1b9d6702375948725f2a8e2"
+    },
+    {
+      "path": "data/research/basis-audit-20260919/verify_basis.py",
+      "sha256": "e349d136a1611631eedfd8ded596a9072f3d615a3335670cfcac67b74e0b0ab4"
     }
   ],
   "required_paths": [
