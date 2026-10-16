@@ -5,7 +5,7 @@ from collections import Counter
 
 import pytest
 
-from scripts.return_capital.decisions import classify, identify, link_actions
+from scripts.analysis.capital import classify, identify, link_actions
 
 
 def entry(funding="pass", negative="pass", high="pass", **extra):

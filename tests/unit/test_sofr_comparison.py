@@ -6,8 +6,8 @@ from decimal import Decimal as D
 
 import pytest
 
-from scripts.return_capital.common import RUNS, utc_ns
-from scripts.sofr_benchmark.comparison import align_daily, compare_periods
+from scripts.analysis.capital import RUNS, utc_ns
+from scripts.analysis.sofr import align_daily, compare_periods
 
 
 def fixture():

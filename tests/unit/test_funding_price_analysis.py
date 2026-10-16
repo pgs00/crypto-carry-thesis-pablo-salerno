@@ -6,7 +6,7 @@ import pytest
 from crypto_carry.config import Config, timestamp
 from crypto_carry.data.funding_proxy import MINUTE
 from crypto_carry.models import Funding, Mark
-from scripts.funding_price_analysis import (
+from scripts.analysis.stress import (
     event_impact,
     paired_proxy,
     positions_before,

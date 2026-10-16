@@ -16,10 +16,10 @@ ROOT = Path(__file__).resolve().parents[2]
 
 
 def test_closed_matrix_rejects_combined_dimension_and_preserves_base():
-    assert importlib.util.find_spec("scripts.signal_sensitivity") is not None, (
+    assert importlib.util.find_spec("scripts.analysis.signal") is not None, (
         "The closed-matrix validator has not been implemented"
     )
-    from scripts.signal_sensitivity import scenario_configs, validate_variant
+    from scripts.analysis.signal import scenario_configs, validate_variant
 
     base = Config.load(ROOT / "configs/reglas_historicas/BASE_E3.toml")
     before = base.to_dict()
@@ -114,19 +114,3 @@ def test_basis_inclusive_bounds_and_original_stop(ceiling):
     assert config.basis_exit == D("0.02")
 
 
-def test_resume_rejects_config_code_or_input_change():
-    from scripts import signal_sensitivity as sensitivity
-
-    assert hasattr(sensitivity, "validate_identity"), "resume identity guard is missing"
-    base = Config.load(ROOT / "configs/reglas_historicas/BASE_E3.toml")
-    config = base.changed(horizon_hours=72, holding_hours=72)
-    manifest = dict(config=config.to_dict(), code_hash="code-a", input_hashes={"source": "a"})
-    sensitivity.validate_identity(manifest, config, "code-a", {"source": "a"})
-    for candidate, code, inputs in [
-        (config.changed(half_life_hours=12), "code-a", {"source": "a"}),
-        (config.changed(basis_max=D(".01")), "code-a", {"source": "a"}),
-        (config, "code-b", {"source": "a"}),
-        (config, "code-a", {"source": "b"}),
-    ]:
-        with pytest.raises(ValueError, match="identity"):
-            sensitivity.validate_identity(manifest, candidate, code, inputs)

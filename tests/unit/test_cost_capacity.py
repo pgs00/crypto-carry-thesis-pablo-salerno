@@ -139,7 +139,7 @@ def test_new_cost_mode_preserves_renewal_contract(enabled, value, wanted):
 
 
 def test_closed_matrix_rejects_crosses_and_preserves_every_other_field():
-    from scripts.cost_capacity import CHANGES, scenario_configs, validate_variant
+    from scripts.analysis.costs import CHANGES, scenario_configs, validate_variant
 
     configs = scenario_configs(base())
     assert set(configs) == {"C02", "C03", "S02", "S05", "P050", "P025", "A050", "A100"}

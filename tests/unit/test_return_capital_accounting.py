@@ -4,12 +4,12 @@ from decimal import Decimal as D
 
 import pytest
 
-from scripts.return_capital.accounting import Account, components, cycle_catalog, segment_changes
-from scripts.return_capital.concentration import concentration
+from scripts.analysis.capital import Account, components, cycle_catalog, segment_changes
+from scripts.analysis.capital import concentration
 
 
 def test_attribution_rejects_ambiguous_same_asset_fill_at_entry(monkeypatch, tmp_path):
-    from scripts.return_capital import attribution
+    from scripts.analysis import capital as attribution
 
     entry = dict(symbol="BTCUSDT", cycle_id="A", kind="transition", cause="entry", time_ns=1)
     fill = movement("spot_buy", time_ns=1, quantity="1", price="100", fee="1")
@@ -26,7 +26,7 @@ def test_attribution_rejects_ambiguous_same_asset_fill_at_entry(monkeypatch, tmp
 
 
 def test_entry_guard_allows_other_asset_and_zero_funding():
-    from scripts.return_capital.accounting import validate_entry_timing
+    from scripts.analysis.capital import validate_entry_timing
 
     cycles = [dict(symbol="BTCUSDT", cycle_id="A", entry_ns=1)]
     validate_entry_timing(

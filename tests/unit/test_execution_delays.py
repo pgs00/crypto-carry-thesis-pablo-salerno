@@ -78,7 +78,7 @@ def test_ohlc4_has_its_own_reference_without_mutating_close_or_volumes():
 
 
 def test_matrix_is_closed_and_derived_without_other_economic_changes():
-    from scripts.execution_delays import CHANGES, scenario_configs, validate_variant
+    from scripts.analysis.execution import CHANGES, scenario_configs, validate_variant
     base = Config.load(BASE)
     assert set(CHANGES) == {'E_OHLC4','L01','L05','LC01','LC05','LC15'}
     for name, cfg in scenario_configs(base).items():

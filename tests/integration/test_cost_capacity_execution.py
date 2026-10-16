@@ -10,7 +10,7 @@ from test_next_minute_vwap import bars
 from crypto_carry.config import SECOND, Config, iso
 from crypto_carry.events import event_key
 from crypto_carry.strategy import Backtest
-from scripts.cost_capacity import CHANGES, scenario_configs
+from scripts.analysis.costs import CHANGES, scenario_configs
 
 
 @pytest.mark.parametrize("scenario", list(CHANGES))

@@ -16,7 +16,7 @@ ETH = [
 
 
 def risk():
-    return importlib.import_module("scripts.intraday_risk_math")
+    return importlib.import_module("scripts.analysis.risk")
 
 
 def test_intraday_loss_is_visible_even_when_daily_drawdown_is_zero():

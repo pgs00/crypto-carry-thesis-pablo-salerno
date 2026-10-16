@@ -108,7 +108,7 @@ liquidación o su cobro simultáneo con la comisión regular.
 
 ## Diagnóstico ejecutado y límites
 
-El comando [diagnose_historical_rules_exposure.py](../../scripts/diagnose_historical_rules_exposure.py)
+El comando [diagnose_historical_rules_exposure.py](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/scripts/diagnose_historical_rules_exposure.py)
 no importa el motor, no hace backtests y sólo escribe en una carpeta nueva.
 Lee las corridas originales `run_ad71d751b20623006c195ff3` y
 `run_dfea4b7ac1475668d5968c97`, comprueba manifiestos y hashes, y conserva

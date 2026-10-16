@@ -7,7 +7,7 @@ from decimal import Decimal as D
 import pytest
 
 from crypto_carry.config import timestamp
-from scripts.rules_sensitivity_exposure import exposure_intervals, exposure_summary
+from scripts.analysis.signal import exposure_intervals, exposure_summary
 
 SECOND = 1_000_000_000
 

@@ -8,7 +8,7 @@ from decimal import Decimal as D
 
 import pytest
 
-from scripts import rules_sensitivity_h2 as h2
+from scripts.analysis import signal as h2
 
 
 def metrics(cagr=-0.01, conditional_sharpe=-0.5, permanent_sharpe=-1):
@@ -205,7 +205,7 @@ def test_literal_contract_catches_joint_constructor_and_verifier_mutation():
             return node
 
     mutant = ast.fix_missing_locations(AllowNegative().visit(ast.parse(inspect.getsource(h2))))
-    namespace = {"__name__": "mutated_h2"}
+    namespace = {"__package__": "scripts.analysis", "__name__": "mutated_h2"}
     exec(compile(mutant, "<joint_h2_mutation>", "exec"), namespace)
     result = namespace["h2_comparison"](metrics())
     namespace["validate_h2_rows"](result, metrics())

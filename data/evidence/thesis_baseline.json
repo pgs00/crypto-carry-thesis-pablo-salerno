@@ -6714,10 +6714,6 @@
     {
       "path": "results/senal/evidencia/tablas/h3_resumen.csv",
       "sha256": "cf450a5822d825917f7bdb2a7a810eb3b93f3687b1b9d6702375948725f2a8e2"
-    },
-    {
-      "path": "data/research/basis-audit-20260919/verify_basis.py",
-      "sha256": "e349d136a1611631eedfd8ded596a9072f3d615a3335670cfcac67b74e0b0ab4"
     }
   ],
   "required_paths": [

@@ -4,7 +4,7 @@ from datetime import date
 
 import pytest
 
-from scripts.sofr_benchmark.calendar import calendar_rows, parse_sifma, validate_coverage
+from scripts.analysis.sofr import calendar_rows, parse_sifma, validate_coverage
 
 
 def test_sifma_full_and_early_close_are_distinct_and_uk_is_excluded():

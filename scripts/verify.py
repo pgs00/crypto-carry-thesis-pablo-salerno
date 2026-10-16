@@ -1,6 +1,6 @@
 """Read-only verification of published thesis numbers against retained evidence.
 
-Uses only the Python standard library. Never executes the backtest, downloads data,
+Uses the retained compact observations. Never executes the backtest, downloads data,
 or trusts a previously generated verification result as an observation.
 """
 
@@ -10,17 +10,24 @@ import csv
 import hashlib
 import io
 import json
-import math
-import re
 import statistics
 import sys
 import tomllib
 import zipfile
 from collections import defaultdict
-from decimal import ROUND_HALF_UP, localcontext
+from decimal import ROUND_HALF_UP
 from decimal import Decimal as D
 from functools import lru_cache
 from pathlib import Path
+
+if __package__:
+    from .analysis.capital import published_portfolio
+    from .analysis.common import recalculate
+    from .analysis.sofr import cash_sensitivity, published_sofr
+else:
+    from analysis.capital import published_portfolio
+    from analysis.common import recalculate
+    from analysis.sofr import cash_sensitivity, published_sofr
 
 COMPACT = "data/evidence/carteras_continuas.zip"
 SOFR = "results/benchmark_sofr/evidencia/tablas/cartera_sofr_diaria.csv"
@@ -99,59 +106,7 @@ class Evidence:
             ),
             key=lambda r: r["date"],
         )
-        opening = D(rows[0]["starting_equity_usdt"])
-        equity = [opening] + [D(r["equity_usdt"]) for r in rows]
-        # Reconstruct returns from balances, not the provided daily_return column.
-        returns = [float(b / a - 1) for a, b in zip(equity, equity[1:])]
-        final = equity[-1]
-        peak = opening
-        maxdd = D(0)
-        for value in equity:
-            peak = max(peak, value)
-            maxdd = min(maxdd, value / peak - 1)
-        out = {
-            "final_equity_usdt": final,
-            "net_pnl_usdt": final - opening,
-            "net_return": final / opening - 1,
-            "cagr": math.expm1(math.log(float(final / opening)) * 365 / len(rows)),
-            "sharpe": statistics.mean(returns) / statistics.stdev(returns) * math.sqrt(365)
-            if statistics.stdev(returns)
-            else 0,
-            "max_drawdown": maxdd,
-            "days": len(rows),
-        }
-        for field in [
-            "spot_pnl_usdt",
-            "futures_pnl_usdt",
-            "funding_usdt",
-            "fees_usdt",
-            "liquidation_fees_usdt",
-        ]:
-            out[field] = sum((D(r[field]) for r in rows), D(0))
-        out["capital_deployed_daily_mean_usdt"] = sum(
-            (D(r["capital_deployed_usdt"]) for r in rows), D(0)
-        ) / len(rows)
-        out["capital_utilization_daily_mean"] = sum(
-            (D(r["capital_deployed_usdt"]) / D(r["equity_usdt"]) for r in rows), D(0)
-        ) / len(rows)
-        # Accounting is checked day by day, independently of the aggregate table.
-        for r in rows:
-            pnl = sum(
-                (
-                    D(r[f])
-                    for f in [
-                        "spot_pnl_usdt",
-                        "futures_pnl_usdt",
-                        "funding_usdt",
-                        "fees_usdt",
-                        "liquidation_fees_usdt",
-                    ]
-                ),
-                D(0),
-            )
-            if abs(D(r["equity_usdt"]) - D(r["starting_equity_usdt"]) - pnl) > D("1e-8"):
-                raise ValueError("Daily accounting mismatch " + r["date"])
-        return out
+        return published_portfolio(rows)
 
     @lru_cache(None)
     def h1(self, period):
@@ -253,20 +208,7 @@ class Evidence:
 
     @lru_cache(None)
     def sofr(self):
-        rows = self.rows(SOFR)
-        principal = D(10000)
-        pending = D(0)
-        for r in rows:
-            pending += principal * D(r["annual_decimal_rate"]) / D(360)
-            if r["capitalized_at_close"] == "True":
-                principal += pending
-                pending = D(0)
-        final = principal + pending
-        return {
-            "final_equity_usdt": final,
-            "net_return": final / D(10000) - 1,
-            "cagr": math.expm1(math.log(float(final / D(10000))) * 365 / len(rows)),
-        }
+        return published_sofr(self.rows(SOFR))
 
     @lru_cache(None)
     def supplemental_h1(self, period):
@@ -344,45 +286,9 @@ class Evidence:
 
     @lru_cache(None)
     def cash(self, fraction):
-        rates = {r["date"]: r for r in self.rows(SOFR)}
-        out = {"cash_fraction": D(fraction)}
-        for strategy in ["conditional", "permanent"]:
-            rows = sorted(
-                [
-                    r
-                    for r in self.compact("tablas/equity_pnl_diario.csv")
-                    if r["strategy"] == strategy
-                ],
-                key=lambda r: r["date"],
-            )
-            with localcontext() as context:
-                context.prec = 50
-                capitalized = D(0)
-                pending = D(0)
-                lagged_cash = D(10000)
-                prior_equity = D(10000)
-                returns = []
-                for row in rows:
-                    rate = rates[row["date"]]
-                    pending += (
-                        (D(fraction) * lagged_cash + capitalized)
-                        * D(rate["annual_decimal_rate"])
-                        / 360
-                    )
-                    adjusted = D(row["equity_usdt"]) + capitalized + pending
-                    returns.append(float(adjusted / prior_equity - 1))
-                    prior_equity = adjusted
-                    if rate["capitalized_at_close"] == "True":
-                        capitalized += pending
-                        pending = D(0)
-                    lagged_cash = max(D(row["free_cash_usdt"]) - D(row["debt_usdt"]), D(0))
-                out[strategy + "_CAGR365_percent"] = (
-                    (adjusted / 10000) ** (D(365) / len(rows)) - 1
-                ) * 100
-                out[strategy + "_Sharpe_rf0"] = (
-                    statistics.mean(returns) / statistics.stdev(returns) * math.sqrt(365)
-                )
-        return out
+        return cash_sensitivity(
+            self.compact("tablas/equity_pnl_diario.csv"), self.rows(SOFR), fraction
+        )
 
     def recompute(self, c):
         r = c["recompute"]
@@ -423,6 +329,11 @@ def verify(root, baseline):
     evidence = Evidence(root)
     checks = []
     integrity = []
+    try:
+        rebuilt = recalculate(root)
+    except Exception as exc:
+        rebuilt = {}
+        integrity.append({"path": "analysis", "error": str(exc)})
     for source in baseline.get("source_files", []) + (
         [baseline["pdf"]] if baseline.get("pdf") else []
     ):
@@ -449,8 +360,20 @@ def verify(root, baseline):
             result["matches_published"] = D(result["actual_published"]) == D(
                 c["expected_published"]
             )
-            if c.get("recompute"):
-                independent = evidence.recompute(c)
+            if c.get("recompute") or c["source"] in rebuilt:
+                if c["source"] in rebuilt:
+                    rows = [
+                        r
+                        for r in rebuilt[c["source"]]
+                        if matches(r, c.get("selector", c.get("filter", {})))
+                    ]
+                    if len(rows) != 1:
+                        raise ValueError("Recalculated table has ambiguous or missing row")
+                    independent = D(str(rows[0][c["field"]]))
+                    if c["table"] == 17 and c["field"] == "intraday_drawdown":
+                        result["recalculation_scope"] = "archived_peak_trough_witness_arithmetic"
+                else:
+                    independent = evidence.recompute(c)
                 result["recomputed_value"] = str(independent)
                 result["recomputed_published"] = rounded(
                     independent * D(str(c["multiplier"])), c["decimals"]
@@ -471,7 +394,16 @@ def verify(root, baseline):
     return {
         "tables": len(set(c["table"] for c in baseline["cells"])),
         "numeric_cells": len(checks),
-        "independently_recomputed_cells": sum("recomputed_value" in r for r in checks),
+        "recomputed_cells": sum("recomputed_value" in r for r in checks),
+        "independently_recomputed_cells": sum(
+            "recomputed_value" in r
+            and r.get("recalculation_scope") != "archived_peak_trough_witness_arithmetic"
+            for r in checks
+        ),
+        "witness_arithmetic_cells": sum(
+            r.get("recalculation_scope") == "archived_peak_trough_witness_arithmetic"
+            for r in checks
+        ),
         "integrity_failures": integrity,
         "failure_count": len(failures) + len(integrity),
         "failures": failures,

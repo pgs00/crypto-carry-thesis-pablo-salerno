@@ -44,9 +44,9 @@ def cash(t, value):
 
 def load_module():
     # This assertion produces a deliberate RED before implementation exists.
-    module_path = Path(__file__).parents[1] / "scripts" / "intraday_risk_reservations.py"
+    module_path = Path(__file__).parents[1] / "scripts" / "analysis" / "risk.py"
     assert module_path.exists(), "reservation_grid implementation does not exist yet"
-    from scripts.intraday_risk_reservations import reservation_grid
+    from scripts.analysis.risk import reservation_grid
     return reservation_grid
 
 

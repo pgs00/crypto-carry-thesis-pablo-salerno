@@ -6,13 +6,13 @@ from decimal import localcontext
 
 import pytest
 
-from scripts.sofr_benchmark.accrual import (
+from scripts.analysis.sofr import (
     build_account,
     index_checks,
     period_summary,
     rounding_interval,
 )
-from scripts.sofr_benchmark.calendar import calendar_rows
+from scripts.analysis.sofr import calendar_rows
 
 
 def dates(*strings):

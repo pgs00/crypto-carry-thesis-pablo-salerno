@@ -23,7 +23,7 @@ def fixture():
 
 
 def test_ledger_audit_reconciles_base_fee_and_gross_cash():
-    from scripts.cost_capacity_ledger import audit_ledger
+    from scripts.analysis.costs import audit_ledger
 
     config, ledger = fixture()
     result = audit_ledger(config, ledger, [], [])
@@ -34,7 +34,7 @@ def test_ledger_audit_reconciles_base_fee_and_gross_cash():
 
 @pytest.mark.parametrize("field", ["cash_spot_change", "free_spot", "spot", "collateral", "debt", "fee"])
 def test_ledger_audit_rejects_mutation(field):
-    from scripts.cost_capacity_ledger import audit_ledger
+    from scripts.analysis.costs import audit_ledger
 
     config, ledger = fixture()
     ledger[0][field] = D(123456789)
@@ -43,7 +43,7 @@ def test_ledger_audit_rejects_mutation(field):
 
 
 def test_intermediate_pre_fill_snapshot_allowed_but_effective_final_state_must_match():
-    from scripts.cost_capacity_ledger import audit_ledger
+    from scripts.analysis.costs import audit_ledger
 
     config, ledger = fixture()
     initial=dict(symbol="BTCUSDT",time_ns=ledger[0]["time_ns"],spot=D(0),short=D(0),average=D(0),collateral=D(0))

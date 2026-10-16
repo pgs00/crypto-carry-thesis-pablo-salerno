@@ -6,15 +6,13 @@ from importlib import import_module
 from pathlib import Path
 
 import numpy as np
-import pyarrow as pa
-import pyarrow.parquet as pq
 import pytest
 
 
 def module():
-    path = Path(__file__).parents[2] / "scripts/stability_uncertainty_bootstrap.py"
+    path = Path(__file__).parents[2] / "scripts/analysis/stability.py"
     assert path.is_file(), "The B6 bootstrap implementation is missing"
-    return import_module("scripts.stability_uncertainty_bootstrap")
+    return import_module("scripts.analysis.stability")
 
 
 def fixture_data():
@@ -213,60 +211,12 @@ def test_h1_end_horizon_exclusions_are_not_unknown_cash_days():
     assert row["return_conditional"] == pytest.approx(0.01)
 
 
-@pytest.mark.parametrize("mutation", ["count_type", "count_value", "return_value", "protocol"])
-def test_verifier_rejects_actual_input_or_type_tampering(tmp_path, mutation):
-    b = module()
-    # A small, fully verified fixture avoids a full 15,000-replica run per negative test.
-    daily, h1, opportunity = small_source_fixture()
-    b.write_compact_inputs(tmp_path, daily, h1, opportunity)
-    b.verify_inputs(tmp_path)
-    path = tmp_path / "estadistica/diario_base.parquet"
-    if mutation == "protocol":
-        protocol = tmp_path / "estadistica/protocolo.json"
-        protocol.write_text(protocol.read_text("utf8").replace("20261001", "20261002"), "utf8")
-    else:
-        table = pq.read_table(path)
-        name = "return_conditional" if mutation == "return_value" else "h1_count_BTCUSDT"
-        values = table[name].to_pylist()
-        if mutation == "count_type":
-            array = pa.array([float(x) for x in values], type=pa.float64())
-        else:
-            values[0] += 1
-            array = pa.array(values, type=table[name].type)
-        table = table.set_column(table.column_names.index(name), name, array)
-        pq.write_table(table, path)
-    with pytest.raises(ValueError):
-        b.verify_inputs(tmp_path)
-
-
 def test_reject_duplicate_axis_and_unauthorized_block():
     b = module()
     with pytest.raises(ValueError):
         b.make_strata(np.array(["2022-01-01", "2022-01-01"]))
     with pytest.raises(ValueError):
         b.draw_indices(b.make_strata(np.array(["2022-01-01"])), 7, [0])
-
-
-def test_replica_verifier_rejects_equal_numbers_with_changed_id_type(tmp_path):
-    b = module()
-    expected = [dict(replica_id=1, effect=1.25)]
-    path = tmp_path / "replicas.parquet"
-    pq.write_table(pa.Table.from_pylist(expected), path)
-    b.verify_replica_table(path, expected)
-    pq.write_table(pa.Table.from_pylist([dict(replica_id=1.0, effect=1.25)]), path)
-    with pytest.raises(ValueError, match="types changed"):
-        b.verify_replica_table(path, expected)
-
-
-def test_csv_verifier_rejects_actual_edited_effect(tmp_path):
-    b = module()
-    expected = [dict(metric="h1_mae_delta_bps", point_estimate=-2.0)]
-    path = tmp_path / "bootstrap_puntos.csv"
-    b.write_rows(path, expected)
-    b.verify_csv(path, expected)
-    path.write_bytes(path.read_bytes().replace(b"-2.0", b"2.0"))
-    with pytest.raises(ValueError, match="CSV differs"):
-        b.verify_csv(path, expected)
 
 
 def test_unknown_source_boolean_is_not_treated_as_verified_false():

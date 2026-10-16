@@ -1,21 +1,15 @@
+"""Independent literal H1/H3 causal and equal-weight contracts."""
 from decimal import Decimal as D
 
 import numpy as np
-import pytest
 
-from crypto_carry.config import DAY, SECOND, Config, timestamp
+from crypto_carry.config import SECOND, Config, timestamp
 from crypto_carry.models import Funding
-from scripts.continuous_delivery.hypotheses import (
+from scripts.analysis.signal import (
     h1_observations,
     h1_summaries,
     minute_flags,
     summarize_day,
-)
-from scripts.continuous_delivery.portfolio import (
-    cycle_rows,
-    exposure_intervals,
-    financial_daily,
-    period_financials,
 )
 
 MINUTE = 60 * SECOND
@@ -129,57 +123,6 @@ def test_h1_weights_assets_equally_despite_different_valid_counts():
     assert equal["excluded_observations"] == 1
 
 
-def test_exposure_intervals_carry_positions_across_regime_boundary_and_ignore_dust():
-    split = timestamp("2024-01-01T00:00:00Z")
-    rows = [
-        dict(time_ns=split - MINUTE, symbol="BTCUSDT", spot="1", short="1", state="HOLDING"),
-        dict(time_ns=split + MINUTE, symbol="BTCUSDT", spot="1", short="0", state="CLOSING_SPOT"),
-        dict(
-            time_ns=split + 2 * MINUTE,
-            symbol="BTCUSDT",
-            spot=".000001",
-            short="0",
-            state="COOLDOWN",
-        ),
-    ]
-    result = exposure_intervals(rows, split, split + 3 * MINUTE, D(".005"), symbols=("BTCUSDT",))
-    assert [(r["exposure"], r["seconds"]) for r in result] == [
-        ("covered", D(60)),
-        ("unhedged", D(60)),
-        ("dust", D(60)),
-    ]
-
-
-def test_regime_pnl_uses_incoming_equity_and_differences_cumulative_components():
-    split = timestamp("2024-01-01T00:00:00Z")
-    config = Config(start="2023-12-31T00:00:00Z", end="2024-01-02T00:00:00Z")
-    rows = [
-        dict(
-            time_ns=split - 1,
-            equity="10100",
-            free_spot="10100",
-            free_futures="0",
-            debt="0",
-            BTCUSDT_realized_spot="100",
-        ),
-        dict(
-            time_ns=split + DAY - 1,
-            equity="10150",
-            free_spot="10150",
-            free_futures="0",
-            debt="0",
-            BTCUSDT_realized_spot="150",
-        ),
-    ]
-    daily, assets = financial_daily(rows, config)
-    assert daily[1]["net_pnl_usdt"] == D(50)
-    assert daily[1]["spot_pnl_usdt"] == D(50)
-    periods = period_financials(daily, assets, config, [("late", split, split + DAY)])
-    assert periods[0]["starting_equity_usdt"] == D(10100)
-    assert periods[0]["net_pnl_usdt"] == D(50)
-    assert periods[0]["net_return"] == pytest.approx(50 / 10100)
-
-
 def test_h1_labels_exclude_funding_at_signal_and_keep_cross_regime_horizons():
     start = timestamp("2023-12-31T23:00:00Z")
     config = Config(start="2023-12-31T00:00:00Z", end="2024-01-03T00:00:00Z", horizon_hours=2)
@@ -215,70 +158,3 @@ def test_h1_labels_exclude_funding_at_signal_and_keep_cross_regime_horizons():
     assert row["realized"] == D(".002")
     assert row["absolute_error_ewma"] == 0
     assert row["absolute_error_no_change"] == D(".001")
-
-
-def test_cycle_closes_at_first_terminal_event_not_later_repeated_dust_unwind():
-    events = [
-        dict(
-            symbol="BTCUSDT", cycle_id="one", time_ns=t, kind="transition", cause=cause, state=state
-        )
-        for t, cause, state in (
-            (1, "entry", "OPENING_SPOT"),
-            (2, "opening_complete", "HOLDING"),
-            (3, "unwind_complete", "COOLDOWN"),
-            (100, "unwind_complete", "COOLDOWN"),
-        )
-    ]
-    row = cycle_rows(events, 101)[0]
-    assert row["closed_ns"] == 3
-
-
-def test_cycle_keeps_close_request_cause_without_a_cycle_id():
-    events = [
-        dict(
-            symbol="BTCUSDT",
-            cycle_id="one",
-            time_ns=1,
-            kind="transition",
-            cause="entry",
-            state="OPENING_SPOT",
-        ),
-        dict(
-            symbol="BTCUSDT",
-            cycle_id="one",
-            time_ns=2,
-            kind="transition",
-            cause="opening_complete",
-            state="HOLDING",
-        ),
-        dict(symbol="BTCUSDT", cycle_id=None, time_ns=3, kind="close_requested", cause="margin"),
-        dict(
-            symbol="BTCUSDT",
-            cycle_id="one",
-            time_ns=4,
-            kind="transition",
-            cause="unwind_complete",
-            state="COOLDOWN",
-        ),
-        dict(
-            symbol="BTCUSDT",
-            cycle_id=None,
-            time_ns=10,
-            kind="close_requested",
-            cause="real_market_inactivity",
-        ),
-    ]
-    assert cycle_rows(events, 20)[0]["close_causes"] == ["margin"]
-
-
-def test_episode_profit_share_is_not_assigned_to_a_period_excluding_its_date():
-    from scripts.continuous_delivery.diagnostics import outage_summary
-
-    event = timestamp("2023-03-24T00:00:00Z")
-    later = timestamp("2024-01-01T00:00:00Z")
-    daily = [
-        dict(date="2023-03-24", time_ns=event + DAY - 1, net_pnl_usdt=D(10)),
-        dict(date="2024-01-01", time_ns=later + DAY - 1, net_pnl_usdt=D(100)),
-    ]
-    result, _ = outage_summary(daily, [], [("late", later, later + DAY)])
-    assert result["daily_share_of_positive_profit_late"] is None
