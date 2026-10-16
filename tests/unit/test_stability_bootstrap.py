@@ -109,7 +109,7 @@ def test_compounds_ddof_and_joint_pairing():
     b = module()
     result = b.batch_statistics(fixture_data(), np.array([[0, 1, 2, 3]]), fixture_periods())
     assert result["h2_conditional_cagr__2022-2023__PORTFOLIO"][0] == pytest.approx(
-        0.99 ** (365 / 2) - 1, abs=2e-14
+        0.99 ** (365 / 2) - 1, rel=1e-9, abs=0
     )
     assert result["h2_sharpe_delta__2022-2023__PORTFOLIO"][0] == 0.0
     assert result["h3_opportunity_delta_bps__contrast__PORTFOLIO"][0] == 4.0

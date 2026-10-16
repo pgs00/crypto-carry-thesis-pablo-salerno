@@ -1,3 +1,7 @@
+import hashlib
+import json
+import zipfile
+from pathlib import Path
 from decimal import Decimal as D
 
 import pytest
@@ -56,12 +60,6 @@ def warmup(start, rate=".001", interval=8):
     ]
 
 
-@pytest.fixture
-def warmup_factory():
-    """Share funding samples through pytest without importing conftest modules."""
-    return warmup
-
-
 def prices(start, seconds, spot="100", future="100.3", mark=None):
     rows = []
     for second in seconds:
@@ -93,3 +91,15 @@ def prices(start, seconds, spot="100", future="100.3", mark=None):
                     )
                 )
     return rows
+
+
+@pytest.fixture(scope="session")
+def authenticated_e3():
+    root = Path(__file__).resolve().parents[1]
+    path = "data/evidence/carteras_continuas.zip"
+    sources = json.loads((root / "data/evidence/thesis_baseline.json").read_text())["source_files"]
+    expected = next(row["sha256"] for row in sources if row["path"] == path)
+    assert hashlib.sha256((root / path).read_bytes()).hexdigest() == expected
+    with zipfile.ZipFile(root / path) as archive:
+        assert archive.testzip() is None
+        return {name: archive.read(name) for name in archive.namelist() if not name.endswith("/")}
