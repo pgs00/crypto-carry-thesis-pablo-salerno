@@ -25,6 +25,7 @@ delimitan estas conclusiones.
 | Conocer las reglas de las carteras | [Metodología](docs/methodology.md) y [configuración BASE](configs/reglas_historicas/BASE_E3.toml). |
 | Ubicar tablas, series y unidades | [Diccionario de datos](docs/data_dictionary.md). |
 | Comprobar las cifras publicadas | [Reproducción](docs/reproduction.md). |
+| Descargar los mercados y volver a ejecutar BASE | [Descarga y ejecución desde cero](docs/reproduction.md#descargar-y-preparar-los-datos-desde-cero). |
 
 Desde la raíz del repositorio:
 
@@ -36,6 +37,13 @@ uv run pytest -q
 
 La verificación lee la evidencia incluida, recalcula las tablas y compara sus
 valores al redondeo publicado. No necesita descargar datos de mercado.
+
+Los datos completos se descargan localmente desde Binance siguiendo la guía:
+fuentes, período, siete suplementos diarios, normalización, tratamiento de los
+15 marks faltantes y ejecución del motor. El control
+[`scripts/check_market_sources.py`](scripts/check_market_sources.py) contrasta
+los archivos descargados con los hashes históricos. La guía distingue la
+verificación de las tablas archivadas de una nueva ejecución de las carteras.
 
 ## Mapa del código
 
