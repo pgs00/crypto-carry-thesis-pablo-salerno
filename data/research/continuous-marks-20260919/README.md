@@ -130,7 +130,7 @@ Verificar también fuentes masivas, fórmulas, parámetros y corridas guardadas:
 & '.\.venv\Scripts\python.exe' '.\scripts\verify_continuous_marks.py' --root 'D:\Backtesting' --study 'D:\Backtesting\outputs\continuous_marks_b417d512a416058238193c79'
 ```
 
-La [guía de ejecución](../../../docs/continuous_mark_gaps.md) documenta la
+La [guía de ejecución](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/blob/634c88fcf985da742cfa55d83bc4c0f99e082610/docs/continuous_mark_gaps.md) documenta la
 preparación optativa y la repetición de las cuatro carteras.
 
 ## Limitaciones
