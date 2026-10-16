@@ -140,7 +140,8 @@ contable libre del día anterior, sin cambiar las operaciones ni sus tamaños.
 - Riesgo intradía y reproducción: la evidencia compacta conserva las
   observaciones que originan los picos y valles publicados. Permite recalcular
   su aritmética; verificar de forma independiente que son extremos globales
-  requiere la historia completa por minuto, que queda fuera de este checkout.
+  requiere la historia completa por minuto, que ya estaba fuera del repositorio
+  original y no está incluida en esta versión.
   Durante la suspensión se distinguen precios antiguos y escenarios
   hipotéticos. Las ventanas locales de ejecución y estrés tienen otro alcance.
 

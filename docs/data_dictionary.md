@@ -59,3 +59,16 @@ Las particiones Parquet conservan precios, tasas y cantidades como texto decimal
 bloquea cobertura; los cierres documentados de mercado se distinguen de esos
 faltantes. Los archivos de mercado completos se requieren solamente para
 repetir el motor, como explica [reproducción](reproduction.md#repetir-el-motor-con-datos-preparados).
+
+## Calidad de las referencias de precio
+
+Los códigos de calidad conservan estas definiciones originales. El cálculo permanece en `scripts/analysis/risk.py::quality_codes`.
+
+| Código | Nombre | Definición |
+|---|---|---|
+| 0 | `causal_current` | La última barra de minuto completamente disponible es válida para esta referencia. |
+| 1 | `no_causal_valid_reference` | No hay ningún cierre válido causal disponible; no se inventa precio ni causa de arrastre. |
+| 2 | `carried_expected_minute_absent` | Existe una referencia válida anterior, pero falta el registro de la última barra esperada. |
+| 3 | `carried_zero_volume_omitted` | La última barra esperada tiene precio válido y volumen cero: se omite según la política original. |
+| 4 | `carried_invalid_price_omitted` | La última barra esperada tiene cierre no finito o no positivo: se mantiene una referencia válida anterior. |
+| 5 | `carried_invalid_volume_omitted` | La última barra esperada tiene precio válido pero volumen negativo o NaN; no satisface volumen > 0. |

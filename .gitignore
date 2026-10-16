@@ -4,14 +4,11 @@ __pycache__/
 .pytest_cache/
 .ruff_cache/
 *.egg-info/
-data/raw/**
-data/processed/**
-data/minutes/**
-outputs/**
-# Local market downloads used by historical research remain outside Git.
-data/research/**/*.zip
-data/research/**/*.CHECKSUM
-data/research/**/*.parquet
-!data/raw/.gitkeep
-!data/processed/.gitkeep
-!outputs/.gitkeep
+.coverage
+htmlcov/
+*.log
+# Datos masivos y salidas locales de corridas nuevas.
+/data/raw/
+/data/processed/
+/data/minutes/
+/outputs/

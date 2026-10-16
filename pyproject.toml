@@ -11,9 +11,7 @@ dependencies = [
   "nautilus_trader==1.231.0",
   "pandas>=2.3.3,<3",
   "numpy>=2.3,<2.4",
-  "matplotlib>=3.10,<4",
   "pyarrow>=25,<26",
-  "httpx>=0.28,<1",
 ]
 
 [dependency-groups]
@@ -24,6 +22,7 @@ packages = ["src/crypto_carry"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+pythonpath = ["."]
 addopts = "-ra"
 
 [tool.ruff]

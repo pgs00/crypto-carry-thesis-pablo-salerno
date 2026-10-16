@@ -8,11 +8,11 @@ import pytest
 
 from scripts.analysis.sofr import (
     build_account,
+    calendar_rows,
     index_checks,
     period_summary,
     rounding_interval,
 )
-from scripts.analysis.sofr import calendar_rows
 
 
 def dates(*strings):

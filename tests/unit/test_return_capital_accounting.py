@@ -4,8 +4,13 @@ from decimal import Decimal as D
 
 import pytest
 
-from scripts.analysis.capital import Account, components, cycle_catalog, segment_changes
-from scripts.analysis.capital import concentration
+from scripts.analysis.capital import (
+    Account,
+    components,
+    concentration,
+    cycle_catalog,
+    segment_changes,
+)
 
 
 def test_attribution_rejects_ambiguous_same_asset_fill_at_entry(monkeypatch, tmp_path):

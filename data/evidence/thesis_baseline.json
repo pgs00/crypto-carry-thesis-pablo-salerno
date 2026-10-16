@@ -6152,10 +6152,6 @@
       "sha256": "321d2fe94c4da75e7c3436d1f76d63424eff1dbb7f2b1ac3476f1b003c1ef505"
     },
     {
-      "path": "results/capital/evidencia/figuras/fuentes/ciclos.csv",
-      "sha256": "554e49545036686ad2a2fea3bbcd11e1ebc72617e73591a3fc6ce56ee9e772b3"
-    },
-    {
       "path": "results/capital/evidencia/figuras/fuentes/concentracion.csv",
       "sha256": "9dcea9bd653ebdf38ddc6b5f0ed58d0b5c1dd4a24a71ea214c42937833b227dd"
     },

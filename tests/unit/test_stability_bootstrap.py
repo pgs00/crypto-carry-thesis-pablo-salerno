@@ -1,8 +1,8 @@
 """B6 statistical contracts: literal fixtures catch weighting, gaps and RNG drift."""
 
 from concurrent.futures import ProcessPoolExecutor
-from multiprocessing import get_context
 from importlib import import_module
+from multiprocessing import get_context
 from pathlib import Path
 
 import numpy as np

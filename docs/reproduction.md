@@ -16,14 +16,16 @@ uv run pytest -q
 El primer comando instala el entorno de [uv.lock](../uv.lock). `verify` lee la
 evidencia retenida, recalcula los resultados y compara 304 cifras de las 22
 tablas de la tesina al redondeo publicado. También comprueba los parámetros,
-las rutas protegidas y los hashes SHA-256 de las fuentes. Los valores esperados
+las rutas protegidas, los enlaces internos y los hashes SHA-256 de las fuentes. Los valores esperados
 y el registro único de integridad están en
 [thesis_baseline.json](../data/evidence/thesis_baseline.json).
 
 La salida identifica las comprobaciones y cualquier divergencia; un fallo
 produce un código de salida distinto de cero. Los cálculos utilizan las
 observaciones, series diarias, ciclos, señales y tasas incluidas en la evidencia.
-Los parámetros declarados se contrastan con sus fuentes, y el alcance
+De las 304 cifras, 282 se recalculan desde las observaciones retenidas y cuatro
+comprueban la aritmética de extremos intradiarios archivados. Las otras 18
+corresponden a parámetros y recuentos contrastados con sus fuentes. El alcance
 intradiario se describe en metodología. El comando funciona sin descargar
 mercados ni ejecutar nuevamente las carteras.
 

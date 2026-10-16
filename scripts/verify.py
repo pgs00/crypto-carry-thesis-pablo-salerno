@@ -24,10 +24,12 @@ if __package__:
     from .analysis.capital import published_portfolio
     from .analysis.common import recalculate
     from .analysis.sofr import cash_sensitivity, published_sofr
+    from .verify_documentation import check_links
 else:
     from analysis.capital import published_portfolio
     from analysis.common import recalculate
     from analysis.sofr import cash_sensitivity, published_sofr
+    from verify_documentation import check_links
 
 COMPACT = "data/evidence/carteras_continuas.zip"
 SOFR = "results/benchmark_sofr/evidencia/tablas/cartera_sofr_diaria.csv"
@@ -329,6 +331,11 @@ def verify(root, baseline):
     evidence = Evidence(root)
     checks = []
     integrity = []
+    local_links = None
+    try:
+        local_links = check_links(root)
+    except Exception as exc:
+        integrity.append({"path": "documentation", "error": str(exc)})
     try:
         rebuilt = recalculate(root)
     except Exception as exc:
@@ -392,6 +399,7 @@ def verify(root, baseline):
         or not r.get("recomputed_matches_published", True)
     ]
     return {
+        "local_links": local_links,
         "tables": len(set(c["table"] for c in baseline["cells"])),
         "numeric_cells": len(checks),
         "recomputed_cells": sum("recomputed_value" in r for r in checks),

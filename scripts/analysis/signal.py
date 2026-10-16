@@ -7,6 +7,7 @@ from decimal import Decimal, InvalidOperation, localcontext
 from decimal import Decimal as D
 
 import numpy as np
+
 from crypto_carry.config import HOUR, Config, timestamp
 
 from .common import scenario_metrics

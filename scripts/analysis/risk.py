@@ -895,34 +895,6 @@ def reservation_grid(run_path, times_ns, phases=None) -> dict:
     return result
 
 
-REASON_DICTIONARY = {
-    "0": {
-        "name": "causal_current",
-        "description": "La última barra de minuto completamente disponible es válida para esta referencia.",
-    },
-    "1": {
-        "name": "no_causal_valid_reference",
-        "description": "No hay ningún cierre válido causal disponible; no se inventa precio ni causa de arrastre.",
-    },
-    "2": {
-        "name": "carried_expected_minute_absent",
-        "description": "Existe una referencia válida anterior, pero falta el registro de la última barra esperada.",
-    },
-    "3": {
-        "name": "carried_zero_volume_omitted",
-        "description": "La última barra esperada tiene precio válido y volumen cero: se omite según la política original.",
-    },
-    "4": {
-        "name": "carried_invalid_price_omitted",
-        "description": "La última barra esperada tiene cierre no finito o no positivo: se mantiene una referencia válida anterior.",
-    },
-    "5": {
-        "name": "carried_invalid_volume_omitted",
-        "description": "La última barra esperada tiene precio válido pero volumen negativo o NaN; no satisface volumen > 0.",
-    },
-}
-
-
 def quality_codes(prices, times, *, require_volume):
     """Explain the last expected available bar, using only records available at t.
 
