@@ -77,13 +77,13 @@ conserva URLs, intervalos y hashes de cada archivo y suplemento.
 
 ### 1. Recuperar las herramientas originales
 
-Los siguientes comandos parten de una clonación Git de `simplify` llamada
+Los siguientes comandos parten de una clonación Git de `main` llamada
 `crypto-carry-thesis-pablo-salerno`. Si la carpeta tiene otro nombre, adaptar
 el comando de regreso del paso 4. Una descarga ZIP de GitHub no contiene el
 historial necesario; en ese caso, clonar primero:
 
 ```bash
-git clone --branch simplify https://github.com/pgs00/crypto-carry-thesis-pablo-salerno.git crypto-carry-thesis-pablo-salerno
+git clone --branch main https://github.com/pgs00/crypto-carry-thesis-pablo-salerno.git crypto-carry-thesis-pablo-salerno
 cd crypto-carry-thesis-pablo-salerno
 ```
 
@@ -137,7 +137,7 @@ el mismo comando; reutiliza archivos verificados. La última investigación
 puede terminar con código 2 por los 15 minutos documentados: revisar el
 informe antes de continuar. Cualquier otro error detiene el procedimiento.
 La reparación anual escribe su auditoría en esta copia de trabajo separada;
-los commits históricos y la evidencia de `simplify` permanecen intactos.
+los commits históricos y la evidencia de `main` permanecen intactos.
 
 ### 3. Normalizar y validar la cobertura
 
@@ -181,7 +181,7 @@ reglas económicas de esta convención están en [metodología](methodology.md).
 
 ### 4. Contrastar la descarga con los insumos de la tesina
 
-Regresar a `simplify` y ejecutar:
+Regresar al directorio del repositorio en `main` y ejecutar:
 
 ```bash
 cd ../crypto-carry-thesis-pablo-salerno
@@ -203,7 +203,7 @@ Los hashes identifican esa copia, pero no reemplazan su contenido.
 
 ## Repetir el motor con datos preparados
 
-Desde `simplify`, usar los datos preparados y una salida nueva:
+Desde el directorio del repositorio en `main`, usar los datos preparados y una salida nueva:
 
 ```bash
 uv run python -m crypto_carry --root ../crypto-carry-replay backtest --config configs/reglas_historicas/BASE_E3.toml --strategy both --output ../crypto-carry-runs

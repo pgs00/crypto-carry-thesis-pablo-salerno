@@ -54,9 +54,31 @@ verificación de las tablas archivadas de una nueva ejecución de las carteras.
 | Infraestructura | [`nautilus_adapter.py`](src/crypto_carry/nautilus_adapter.py) integra NautilusTrader; [`data/replay.py`](src/crypto_carry/data/replay.py) ordena los datos preparados; [`reporting.py`](src/crypto_carry/reporting.py) guarda los resultados del motor. |
 
 Los [datos de referencia](data/evidence/carteras_continuas.zip) y los informes
-citados conservan sus rutas. Las versiones anteriores siguen disponibles en
-el historial de Git, incluidos los commits enlazados desde la tesina.
+citados conservan sus rutas.
+
+## Versiones
+
+El Anexo B.1 de la tesina identifica la versión analizada en el commit
+[`8b39534`](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/tree/8b395342b7e3a9dd1fbb59f72bee6b5e6efebb49),
+con los paquetes sellados y los verificadores históricos. Ese commit y
+[`c0b432d`](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/tree/c0b432d8bff7fb86cf86a6bc0b28beffab225516),
+enlazados desde la tesina, siguen disponibles en el historial de Git.
+
+Esta versión simplificada conserva las cifras publicadas. `scripts.verify`
+comprueba 22 tablas y 304 celdas numéricas: recalcula 286, de las cuales 282
+se obtienen de forma independiente y 4 por aritmética de testigo. La suite
+de `pytest` pasa sus 644 casos, sin fallos ni omisiones. El alcance de cada
+comprobación y la ejecución del motor se explican en la
+[guía de reproducción](docs/reproduction.md).
+
+Los tags previstos para identificar las versiones son `version-analizada`,
+sobre el commit `8b39534`, y `tesina-entrega`, sobre el estado final de `main`
+una vez integrada esta revisión. Se publicarán al cerrar la entrega.
+
+## Uso de IA
 
 Se utilizó IA como asistente para desarrollar código, generar gráficos y tablas
 y apoyar la revisión y edición. El análisis, la interpretación y las decisiones
 finales corresponden al autor. La declaración completa figura en la tesina.
+
+Las especificaciones utilizadas con el asistente figuran en el historial de Git.
