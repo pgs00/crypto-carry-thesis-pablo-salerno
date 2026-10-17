@@ -1,10 +1,10 @@
-"""Source-backed market closures used only for data-quality accounting."""
+"""Documented market closures for execution-window checks."""
 
 from __future__ import annotations
 
 from dataclasses import dataclass
 
-from ..config import SECOND, iso, timestamp
+from ..config import SECOND, timestamp
 
 MINUTE = 60 * SECOND
 BINANCE_SPOT_HALT_SOURCE = "https://www.binance.com/en/blog/from-our-ceo/6789340645608890113"
@@ -46,44 +46,3 @@ def closure_for_minute(symbol: str, market: str, open_time: int) -> MarketClosur
         ),
         None,
     )
-
-
-def closed_minute_count(symbol: str, market: str, start: int, end: int) -> int:
-    """Count documented full-minute opens in the half-open interval."""
-    if start >= end:
-        return 0
-    count = 0
-    for closure in DOCUMENTED_CLOSURES:
-        if symbol not in closure.symbols or market != closure.market:
-            continue
-        lower = max(start, closure.start)
-        upper = min(end, closure.end)
-        first = ((lower + MINUTE - 1) // MINUTE) * MINUTE
-        if first < upper:
-            count += (upper - 1 - first) // MINUTE + 1
-    return count
-
-
-def quality_closures(symbols: tuple[str, ...], start: int, end: int) -> list[dict]:
-    """Serialize closure intersections for ex-post data-quality disclosure."""
-    result = []
-    for closure in DOCUMENTED_CLOSURES:
-        affected = tuple(symbol for symbol in symbols if symbol in closure.symbols)
-        lower = max(start, closure.start)
-        upper = min(end, closure.end)
-        if not affected or lower >= upper:
-            continue
-        result.append(
-            {
-                "symbols": list(affected),
-                "market": closure.market,
-                "start": lower,
-                "end": upper,
-                "start_utc": iso(lower),
-                "end_utc": iso(upper),
-                "minutes": closed_minute_count(affected[0], closure.market, lower, upper),
-                "source_url": closure.source_url,
-                "description": closure.description,
-            }
-        )
-    return result
