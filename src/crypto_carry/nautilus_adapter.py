@@ -57,6 +57,7 @@ class DomainModule(SimulationModule):
         self.processed_timestamps = 0
 
     def process(self, ts_now):
+        # ts_now is required by SimulationModule; this callback only counts calls.
         self.processed_timestamps += 1
 
     def log_diagnostics(self, logger):

@@ -918,7 +918,7 @@ def _number(value):
     try:
         result = float(value)
         return result if math.isfinite(result) else None
-    except TypeError, ValueError:
+    except (TypeError, ValueError):
         return None
 
 

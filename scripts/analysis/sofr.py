@@ -204,6 +204,7 @@ class Elements(HTMLParser):
         self.tag, self.parts, self.rows = None, [], []
 
     def handle_starttag(self, tag, attrs):
+        # attrs is required by HTMLParser; the calendar uses tag text only.
         if self.tag is None and tag in {"h2", "h3", "p", "span"}:
             self.tag, self.parts = tag, []
 

@@ -312,7 +312,7 @@ def _number(value):
         return None
     try:
         result = Decimal(str(value))
-    except InvalidOperation, ValueError:
+    except (InvalidOperation, ValueError):
         return None
     return result if result.is_finite() else None
 
@@ -353,7 +353,7 @@ def _valid_window(row):
         start = datetime.fromisoformat(row.get("start_utc", ""))
         end = datetime.fromisoformat(row.get("end_exclusive_utc", ""))
         return start.utcoffset() is not None and end.utcoffset() is not None and start < end
-    except TypeError, ValueError:
+    except (TypeError, ValueError):
         return False
 
 
