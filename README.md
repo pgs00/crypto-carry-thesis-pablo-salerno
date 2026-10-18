@@ -71,9 +71,17 @@ de `pytest` pasa sus 644 casos, sin fallos ni omisiones. El alcance de cada
 comprobación y la ejecución del motor se explican en la
 [guía de reproducción](docs/reproduction.md).
 
-Los tags previstos para identificar las versiones son `version-analizada`,
-sobre el commit `8b39534`, y `tesina-entrega`, sobre el estado final de `main`
-una vez integrada esta revisión. Se publicarán al cerrar la entrega.
+El script [`robustez_sharpe.py`](robustez_sharpe.py) recalcula, con las series
+diarias publicadas, los controles complementarios del Sharpe que citan las
+secciones 4.1 y 4.4 de la tesina: autocorrelación de los retornos, Sharpe
+mensual y Sharpe del exceso de retorno sobre la cuenta SOFR. Se ejecuta con
+`uv run python robustez_sharpe.py`.
+
+Dos tags identifican las versiones:
+[`version-analizada`](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/tree/version-analizada),
+sobre el commit `8b39534`, y
+[`tesina-entrega`](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/tree/tesina-entrega),
+sobre el estado de `main` con los PDF entregados.
 
 ## Uso de IA
 

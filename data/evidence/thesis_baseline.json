@@ -2,8 +2,8 @@
   "schema": "thesis_table_baseline_v1",
   "pdf": {
     "path": "Tesina_Pablo_Salerno.pdf",
-    "sha256": "665c6b4d74d44ea7bcbd9bd747b37f2011e79eeea004beaf7b4b8dd9eb5c6c7f",
-    "pages": 37
+    "sha256": "43981c6874a248865177a8ad55ce11448737fb942c60fd3af2e85f2e9b2408cb",
+    "pages": 31
   },
   "rounding": "ROUND_HALF_UP at displayed precision; numbers normalized to decimal point; percent/pp/bp scales explicit",
   "coverage": "22 numbered PDF tables; numerical result cells, Table 1 numeric coverage note, Table 2 numerical rules and Table 22 repeated claims; qualitative content remains anchored to the immutable PDF; no simulation rerun",
@@ -5993,7 +5993,7 @@
     },
     {
       "path": "Executive_Briefing_Pablo_Salerno.pdf",
-      "sha256": "8eb09388346da08b26a889403f35d455c9bd1a1c3a0be40fed1dd602698e8aa9"
+      "sha256": "a27c5f48a62c537e4a1e5b9350df9b56e17eebd9ab2e80eff85b6dceaa43f0dc"
     },
     {
       "path": "src/crypto_carry/data/prescribed.py",
@@ -6001,15 +6001,15 @@
     },
     {
       "path": "Tesina_Pablo_Salerno.pdf",
-      "sha256": "665c6b4d74d44ea7bcbd9bd747b37f2011e79eeea004beaf7b4b8dd9eb5c6c7f"
+      "sha256": "43981c6874a248865177a8ad55ce11448737fb942c60fd3af2e85f2e9b2408cb"
     },
     {
       "path": "data/evidence/reglas_historicas/cobertura_pendiente.md",
       "sha256": "207e677b2685215d15271cb08088c4d7229a5f82a929a07a8766a069de42bb0e"
     },
     {
-      "path": "data/evidence/ventanas_independientes/antecedentes/Entrega 1 - Crypto Carry Binance (Salerno Pablo & Rodriguez Facundo).pdf",
-      "sha256": "9e2d9c1f73d5a3ce90b68ec4ad23ec4ca8a155473b551f7d955d0e7d7b5e5516"
+      "path": "data/evidence/ventanas_independientes/antecedentes/Entrega 1 Crypto Carry Binance Pablo Salerno.pdf",
+      "sha256": "dde09e6195253626da9a7683c1ed50a8149f3b18987dfb12ea58975ed3b9440e"
     },
     {
       "path": "data/evidence/ventanas_independientes/antecedentes/Entrega 2 Crypto Carry Binance Pablo Salerno.pdf",
