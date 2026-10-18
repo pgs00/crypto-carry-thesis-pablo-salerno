@@ -77,10 +77,6 @@ secciones 4.1 y 4.4 de la tesina: autocorrelación de los retornos, Sharpe
 mensual y Sharpe del exceso de retorno sobre la cuenta SOFR. Se ejecuta con
 `uv run python robustez_sharpe.py`.
 
-Los tags previstos para identificar las versiones son `version-analizada`,
-sobre el commit `8b39534`, y `tesina-entrega`, sobre el estado final de `main`
-una vez integrada esta revisión. Se publicarán al cerrar la entrega.
-
 ## Uso de IA
 
 Se utilizó IA como asistente para desarrollar código, generar gráficos y tablas
