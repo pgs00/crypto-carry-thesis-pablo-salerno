@@ -19,7 +19,7 @@
     {
       "number": 2,
       "title": "Síntesis de las reglas de las carteras",
-      "pdf_page": 9,
+      "pdf_page": 10,
       "numeric_cells": 14,
       "independently_recomputed_cells": 0,
       "nature": "methodology_or_synthesis; all numerical claims mapped; qualitative wording anchored by immutable PDF"
@@ -90,7 +90,7 @@
     {
       "number": 12,
       "title": "Basis observado en los momentos de señal",
-      "pdf_page": 18,
+      "pdf_page": 17,
       "numeric_cells": 18,
       "independently_recomputed_cells": 18
     },
@@ -104,63 +104,63 @@
     {
       "number": 14,
       "title": "Sensibilidad al horizonte y a la ponderación del funding",
-      "pdf_page": 20,
+      "pdf_page": 19,
       "numeric_cells": 15,
       "independently_recomputed_cells": 0
     },
     {
       "number": 15,
       "title": "Sensibilidad a los costos y a la capacidad de ejecución",
-      "pdf_page": 21,
+      "pdf_page": 20,
       "numeric_cells": 28,
       "independently_recomputed_cells": 0
     },
     {
       "number": 16,
       "title": "Sensibilidad al precio de ejecución y a las demoras",
-      "pdf_page": 22,
+      "pdf_page": 21,
       "numeric_cells": 24,
       "independently_recomputed_cells": 0
     },
     {
       "number": 17,
       "title": "Drawdown máximo según la frecuencia y la valoración",
-      "pdf_page": 23,
+      "pdf_page": 21,
       "numeric_cells": 6,
       "independently_recomputed_cells": 0
     },
     {
       "number": 18,
       "title": "Comparación del carry con una cuenta SOFR hipotética",
-      "pdf_page": 24,
+      "pdf_page": 23,
       "numeric_cells": 9,
       "independently_recomputed_cells": 9
     },
     {
       "number": 19,
       "title": "Sensibilidad a la remuneración hipotética de caja",
-      "pdf_page": 25,
+      "pdf_page": 24,
       "numeric_cells": 20,
       "independently_recomputed_cells": 20
     },
     {
       "number": 20,
       "title": "Resultados de las cuentas con inicios alternativos",
-      "pdf_page": 25,
+      "pdf_page": 24,
       "numeric_cells": 8,
       "independently_recomputed_cells": 0
     },
     {
       "number": 21,
       "title": "Incertidumbre de las hipótesis: bootstrap principal",
-      "pdf_page": 26,
+      "pdf_page": 25,
       "numeric_cells": 15,
       "independently_recomputed_cells": 0
     },
     {
       "number": 22,
       "title": "Síntesis de las hipótesis originales",
-      "pdf_page": 28,
+      "pdf_page": 27,
       "numeric_cells": 5,
       "independently_recomputed_cells": 5,
       "nature": "methodology_or_synthesis; all numerical claims mapped; qualitative wording anchored by immutable PDF"
