@@ -77,11 +77,9 @@ secciones 4.1 y 4.4 de la tesina: autocorrelación de los retornos, Sharpe
 mensual y Sharpe del exceso de retorno sobre la cuenta SOFR. Se ejecuta con
 `uv run python robustez_sharpe.py`.
 
-Dos tags identifican las versiones:
-[`version-analizada`](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/tree/version-analizada),
-sobre el commit `8b39534`, y
-[`tesina-entrega`](https://github.com/pgs00/crypto-carry-thesis-pablo-salerno/tree/tesina-entrega),
-sobre el estado de `main` con los PDF entregados.
+Los tags previstos para identificar las versiones son `version-analizada`,
+sobre el commit `8b39534`, y `tesina-entrega`, sobre el estado final de `main`
+una vez integrada esta revisión. Se publicarán al cerrar la entrega.
 
 ## Uso de IA
 
