@@ -2,7 +2,7 @@
   "schema": "thesis_table_baseline_v1",
   "pdf": {
     "path": "Tesina_Pablo_Salerno.pdf",
-    "sha256": "43981c6874a248865177a8ad55ce11448737fb942c60fd3af2e85f2e9b2408cb",
+    "sha256": "635aea571078d1c64b4a6b63cc78d6fe7b46e73f43392879b1f39219c2245b35",
     "pages": 31
   },
   "rounding": "ROUND_HALF_UP at displayed precision; numbers normalized to decimal point; percent/pp/bp scales explicit",
@@ -6001,7 +6001,7 @@
     },
     {
       "path": "Tesina_Pablo_Salerno.pdf",
-      "sha256": "43981c6874a248865177a8ad55ce11448737fb942c60fd3af2e85f2e9b2408cb"
+      "sha256": "635aea571078d1c64b4a6b63cc78d6fe7b46e73f43392879b1f39219c2245b35"
     },
     {
       "path": "data/evidence/reglas_historicas/cobertura_pendiente.md",
